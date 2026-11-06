@@ -1,0 +1,25 @@
+{
+  "name": "company-logos",
+  "version": "0.1.0",
+  "private": true,
+  "description": "收录公司 Logo，提供预览、下载与来源信息，由社区共同维护。",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "build:index": "node scripts/build-index.mjs",
+    "check:index": "node scripts/build-index.mjs --check",
+    "test": "node --test tests/*.test.mjs",
+    "check": "npm run validate && npm run check:index && npm test"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/didilili/company-logos.git"
+  },
+  "dependencies": {
+    "saxes": "6.0.0"
+  }
+}

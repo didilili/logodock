@@ -1,0 +1,42 @@
+{
+  "id": "codeberg",
+  "name": "Codeberg e.V.",
+  "aliases": [
+    "Codeberg"
+  ],
+  "website": "https://codeberg.org/",
+  "assets": [
+    {
+      "file": "icon-blue.png",
+      "variant": "icon",
+      "source": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/logo/icon/png/codeberg-logo_icon_blue-512x512.png",
+      "sourcePage": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
+      "sha256": "9c93808bddc26445e251f723f29b431722352359c4e7ecb206393fcc0fabf39c",
+      "bytes": 20141,
+      "rights": {
+        "status": "permitted",
+        "license": "CC0-1.0",
+        "reference": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
+        "attribution": "Logo by Robert Martinez; published by Codeberg e.V.",
+        "reviewedAt": "2026-11-06",
+        "notes": "原始蓝色版本，未修改。Codeberg e.V. 是非营利组织，此处收录其组织品牌。素材版权采用 CC0；Codeberg 名称与 Logo 商标权保留。遵循官方品牌指南，不变形、不自定义染色，深色背景请选择官方白色版本。"
+      }
+    },
+    {
+      "file": "logo-vertical-blue.png",
+      "variant": "logo",
+      "source": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/logo/vertical/png/codeberg-logo_vertical_blue-512x512.png",
+      "sourcePage": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
+      "sha256": "0e51654c05d7fa30de86947d6a03b99a53784c0e4a40b62ab0c1d15508ebbd82",
+      "bytes": 21116,
+      "rights": {
+        "status": "permitted",
+        "license": "CC0-1.0",
+        "reference": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
+        "attribution": "Logo by Robert Martinez; published by Codeberg e.V.",
+        "reviewedAt": "2026-11-06",
+        "notes": "原始蓝色版本，未修改。Codeberg e.V. 是非营利组织，此处收录其组织品牌。素材版权采用 CC0；Codeberg 名称与 Logo 商标权保留。遵循官方品牌指南，不变形、不自定义染色，深色背景请选择官方白色版本。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+name: 新增 Logo
+description: 建议收录公司或相关组织的 Logo，并提供来源和分发依据。
+title: "[新增] "
+body:
+  - type: input
+    id: company
+    attributes:
+      label: 公司或组织名称与官网
+      placeholder: 名称；官网 URL
+    validations:
+      required: true
+  - type: textarea
+    id: identity
+    attributes:
+      label: Logo 与公司或组织的对应关系
+      description: 如果这是产品或品牌标识，请说明所属公司和关系；不确定时直接说明。
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: 资源和来源页面
+      description: 提供原始文件下载地址及官方品牌资源页等可核对链接。
+    validations:
+      required: true
+  - type: textarea
+    id: permission
+    attributes:
+      label: 允许分发的依据
+      description: 提供许可或授权条款链接，并指出允许再次分发的具体条件；没有找到时请明确说明。
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: 其他说明
+      description: 可补充所需版本、署名要求或使用限制。请勿上传私人授权文件或个人信息。

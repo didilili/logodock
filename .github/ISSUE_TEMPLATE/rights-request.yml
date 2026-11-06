@@ -1,0 +1,26 @@
+name: 权利请求
+description: 由权利人或其代表提出更正、替换或移除请求。
+title: "[权利请求] "
+body:
+  - type: markdown
+    attributes:
+      value: 请先提供具体资源和请求说明。无需公开私人授权文件、身份证明或其他敏感材料；如需非公开核对，只需在下方说明需要协商渠道。
+  - type: textarea
+    id: resources
+    attributes:
+      label: 涉及的资源
+      description: 请列出仓库文件路径或资源页面链接。
+    validations:
+      required: true
+  - type: textarea
+    id: request
+    attributes:
+      label: 请求内容与理由
+      description: 说明希望更正、替换或移除什么，以及相关权利或分发条件问题。
+    validations:
+      required: true
+  - type: textarea
+    id: reference
+    attributes:
+      label: 可公开核对的依据或补充说明
+      description: 可提供官方网站、许可条款等公开链接；也可说明需要通过非公开渠道补充材料。

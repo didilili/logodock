@@ -1,0 +1,25 @@
+name: 资源纠错
+description: 报告名称、标识、来源、许可记录或文件问题。
+title: "[纠错] "
+body:
+  - type: input
+    id: resource
+    attributes:
+      label: 涉及的资源路径
+      placeholder: logos/<id>/<asset-file> 或对应 metadata.json
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 问题与期望修改
+      description: 说明哪里有误，以及建议如何修正。
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 核对依据
+      description: 提供官网、品牌指南、许可页面等公开链接；文件损坏可附复现说明。
+    validations:
+      required: true
