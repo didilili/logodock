@@ -4,6 +4,8 @@
 
 A community-maintained company and organization logo collection with traceable sources and distribution permissions.
 
+**[浏览与搜索 Logo](https://didilili.github.io/company-logos/)**
+
 ## 获取与使用
 
 在仓库页面选择 **Code → Download ZIP**，或克隆仓库：
@@ -64,6 +66,17 @@ npm run check
 ```
 
 `validate` 检查资源与元数据，`build:index` 更新索引与上方资源表，`check` 执行完整的本地检查。直接下载使用 Logo 不需要运行这些脚本。校验器检查许可声明字段是否完整，不代替实际权利核实；SVG 检查采用保守的静态子集规则，不会修改或清洗文件。
+
+## 展示网页
+
+网站按公司归组，可搜索名称、别名、文件名或许可，在详情区切换版本、下载原图或复制固定版本链接。网站从同一份资源元数据生成。
+
+```sh
+npm run build:site
+python3 -m http.server 4173 --directory _site
+```
+
+打开 `http://localhost:4173` 预览。`site/` 为网页源码，`_site/` 是构建结果。主分支的更新会通过 GitHub Actions 部署到 GitHub Pages；资源贡献后无需另行维护网页数据。
 
 ## 许可
 
