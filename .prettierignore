@@ -1,0 +1,11 @@
+node_modules/
+logos/
+index.json
+package-lock.json
+README.md
+static/
+_site/
+.svelte-kit/
+coverage/
+playwright-report/
+test-results/
