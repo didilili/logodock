@@ -1,6 +1,6 @@
 name: 资源纠错
 description: 报告名称、标识、来源、许可记录或文件问题。
-title: "[纠错] "
+title: '[纠错] '
 body:
   - type: input
     id: resource

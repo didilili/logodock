@@ -1,6 +1,6 @@
 name: 权利请求
 description: 由权利人或其代表提出更正、替换或移除请求。
-title: "[权利请求] "
+title: '[权利请求] '
 body:
   - type: markdown
     attributes:

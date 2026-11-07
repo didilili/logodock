@@ -47,34 +47,34 @@
 
 每个 `assets` 条目需要：
 
-| 字段 | 内容 |
-| --- | --- |
-| `file` | 当前目录中的资源文件名 |
-| `label` | 可区分版本的显示名称，例如“蓝色图标”“白色组合标识” |
-| `variant` | `icon`（图形标识）、`wordmark`（文字标识）或 `logo`（组合标识） |
-| `status` | `current`（当前版本）或 `historical`（历史版本），须有来源依据 |
-| `language` | `none`（无文字）、`zh`（中文）、`en`（英文）或 `bilingual`（中英双语） |
-| `layout` | `standalone`（独立图形）、`horizontal`（横版）或 `vertical`（竖版） |
-| `color` | `brand`、`black`、`white`、`monochrome` 或 `other`；不符合当前标准的配色不能默认为品牌标准色 |
-| `provenance` | `sourceType` 为 `official` 或 `commons`，`processing` 为 `original` 或 `rendered`；Commons 的渲染下载不能标成官方原件 |
-| `qualityNotes` | 可选的简短事实数组，例如尺寸偏小、白底、配色差异或与公司横版标识的区别；不替代许可说明 |
-| `background` | 适合浅色背景填写 `light`，适合深色背景填写 `dark`，均适用填写 `any` |
-| `source` | 该文件的原始下载地址 |
-| `sourcePage` | 能够核对文件归属、版本和来源的页面 |
-| `sha256` | 实际文件内容的 SHA-256 摘要 |
-| `bytes` | 实际文件字节数 |
-| `rights` | 下表列出的分发依据 |
+| 字段           | 内容                                                                                                                  |
+| -------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `file`         | 当前目录中的资源文件名                                                                                                |
+| `label`        | 可区分版本的显示名称，例如“蓝色图标”“白色组合标识”                                                                    |
+| `variant`      | `icon`（图形标识）、`wordmark`（文字标识）或 `logo`（组合标识）                                                       |
+| `status`       | `current`（当前版本）或 `historical`（历史版本），须有来源依据                                                        |
+| `language`     | `none`（无文字）、`zh`（中文）、`en`（英文）或 `bilingual`（中英双语）                                                |
+| `layout`       | `standalone`（独立图形）、`horizontal`（横版）或 `vertical`（竖版）                                                   |
+| `color`        | `brand`、`black`、`white`、`monochrome` 或 `other`；不符合当前标准的配色不能默认为品牌标准色                          |
+| `provenance`   | `sourceType` 为 `official` 或 `commons`，`processing` 为 `original` 或 `rendered`；Commons 的渲染下载不能标成官方原件 |
+| `qualityNotes` | 可选的简短事实数组，例如尺寸偏小、白底、配色差异或与公司横版标识的区别；不替代许可说明                                |
+| `background`   | 适合浅色背景填写 `light`，适合深色背景填写 `dark`，均适用填写 `any`                                                   |
+| `source`       | 该文件的原始下载地址                                                                                                  |
+| `sourcePage`   | 能够核对文件归属、版本和来源的页面                                                                                    |
+| `sha256`       | 实际文件内容的 SHA-256 摘要                                                                                           |
+| `bytes`        | 实际文件字节数                                                                                                        |
+| `rights`       | 下表列出的分发依据                                                                                                    |
 
 每份文件的 `rights` 需要：
 
-| 字段 | 内容 |
-| --- | --- |
-| `status` | 已核对允许在本仓库分发时填写 `permitted` |
-| `license` | 适用许可或授权条款的准确名称，不能把仓库的 MIT 许可填作 Logo 许可 |
-| `reference` | 能直接支持分发依据的许可、品牌指南或公开授权页面 |
-| `attribution` | 条款要求的署名文字；无署名要求时按现有记录格式明确填写 |
-| `reviewedAt` | 实际核对日期，格式为 `YYYY-MM-DD` |
-| `notes` | 可选：用途限制、品牌规范或其他需要保留的条件 |
+| 字段          | 内容                                                              |
+| ------------- | ----------------------------------------------------------------- |
+| `status`      | 已核对允许在本仓库分发时填写 `permitted`                          |
+| `license`     | 适用许可或授权条款的准确名称，不能把仓库的 MIT 许可填作 Logo 许可 |
+| `reference`   | 能直接支持分发依据的许可、品牌指南或公开授权页面                  |
+| `attribution` | 条款要求的署名文字；无署名要求时按现有记录格式明确填写            |
+| `reviewedAt`  | 实际核对日期，格式为 `YYYY-MM-DD`                                 |
+| `notes`       | 可选：用途限制、品牌规范或其他需要保留的条件                      |
 
 `sourcePage` 说明文件从哪里来，`rights.reference` 说明为什么可以在这里分发，两者可以是同一页面。若依据只允许使用或展示、未允许再次分发，不应填写 `permitted`。
 
@@ -94,17 +94,49 @@ npm run prepare:asset -- /path/to/icon.svg --id example --name Example --output 
 
 ### 本地检查
 
-需要 Node.js 22.17+（22 LTS 系列）或 24+，在仓库根目录执行：
+推荐使用 Node.js 22.22.3，与 `.node-version` 和 CI 保持一致。在仓库根目录安装依赖并初始化本地钩子：
 
 ```sh
 npm ci --ignore-scripts
-npm test
-npm run validate
+npm run hooks:install
+```
+
+修改资源或元数据后，更新生成文件，再运行完整检查：
+
+```sh
 npm run build:index
 npm run check
 ```
 
+`npm run check` 包含 ESLint、格式、资源数据、索引、Svelte/TypeScript、构建和 Node 回归检查。仅检查资源数据时可单独运行 `npm run validate`。完整检查与浏览器回归按需手动运行，CI 会执行同样的完整检查；本地提交钩子不运行完整测试。
+
 PR 中简要说明新增或修改了什么、公司与 Logo 的对应关系、来源及分发依据，并附检查结果。不要把私人授权文件、身份证明或其他个人信息放进公开 PR。
+
+### 代码检查与格式化
+
+- `npm run lint`：检查 ESLint 规则，警告也会导致失败。
+- `npm run lint:fix`：主动修复可自动修复的 ESLint 问题。
+- `npm run format:check`：只检查格式。
+- `npm run format`：主动格式化配置允许的源码、脚本、测试、文档与配置文件。
+- `npm run check:staged`：只检查暂存文件，不自动修复文件、不修改暂存区。
+
+`logos/` 的原始素材与元数据、生成的 `index.json` 和 README 资源表均不参与自动格式化；README 整体跳过自动格式化。资源表与索引仍由 `npm run build:index` 更新。
+
+`prepare` 生命周期脚本和 `npm run hooks:install` 都用于初始化 Husky。由于推荐安装命令使用 `--ignore-scripts`，安装后需显式运行 `npm run hooks:install`。pre-commit 运行暂存文件检查，commit-msg 检查提交信息。可用 `HUSKY=0` 跳过本地钩子；CI 独立检查代码、格式和提交信息。
+
+### 提交信息
+
+使用 `type(scope): 中文说明`，例如：
+
+```text
+feat(site): 增加品牌详情页
+fix(search): 修正中文别名匹配
+chore(tooling): 更新开发工具配置
+```
+
+常用类型为 `feat`（功能）、`fix`（修复）、`docs`（文档）、`style`（格式）、`refactor`（重构）、`perf`（性能）、`test`（测试）、`build`（构建）、`ci`（工作流）、`chore`（维护）和 `revert`（回退）。scope 必填，用于说明改动范围，可按内容使用 `catalog`、`site`、`project`、`search`、`scripts`、`tooling` 或 `ci`。
+
+CI 会检查 PR 的全部提交和每次 push 新增的全部提交；新建分支会检查其完整历史。
 
 ## 纠错与权利请求
 

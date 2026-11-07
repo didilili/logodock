@@ -8,10 +8,11 @@ A community-maintained company and organization logo collection with traceable s
 
 ## 本地开发
 
-需要 Node.js 22.17+（22 LTS 系列）或 24+：
+推荐使用 Node.js 22.22.3，与 `.node-version` 和 CI 保持一致：
 
 ```sh
 npm ci --ignore-scripts
+npm run hooks:install
 npm run dev
 ```
 
@@ -29,7 +30,7 @@ npm run dev
 - `scripts/`：素材准备、校验、索引、静态构建与预览工具。
 - `static/`：构建前从已校验素材生成的暂存目录，不能手工维护；`_site/` 是最终部署产物。两者均由 Git 忽略。
 
-`npm run check` 执行数据、索引、Svelte/TypeScript、构建及 Node 回归检查。浏览器测试另运行 `npx playwright install chromium`、`npm run test:browser`（需要先完成构建）。
+`npm run check` 执行 ESLint、格式检查、数据、索引、Svelte/TypeScript、构建及 Node 回归检查。完整检查按需手动运行，CI 也会执行；本地提交钩子只检查暂存文件和提交信息。浏览器测试另运行 `npx playwright install chromium`、`npm run test:browser`（需要先完成构建）。
 
 ## 获取与使用
 
@@ -148,17 +149,19 @@ index.json
 
 欢迎通过 Issue 提交收录建议、报告错误或提出权利请求；提交资源前请阅读 [贡献指南](CONTRIBUTING.md)。新资源需要说明所属公司、可靠来源，以及允许在本仓库分发的依据。
 
-网站与维护脚本需要 **Node.js 22.17+（22 LTS 系列）或 24+**。在仓库根目录运行：
+网站与维护脚本推荐使用 **Node.js 22.22.3**（见 `.node-version`）。在仓库根目录运行：
 
 ```sh
 npm ci --ignore-scripts
-npm test
-npm run validate
+npm run hooks:install
+# 修改资源或元数据后，更新索引与资源表
 npm run build:index
 npm run check
 ```
 
-`validate` 检查资源与元数据，`build:index` 更新索引与上方资源表，`check` 执行完整的本地检查。直接下载使用 Logo 不需要运行这些脚本。校验器检查许可声明字段是否完整，不代替实际权利核实；SVG 检查采用保守的静态子集规则，不会修改或清洗文件。
+`validate` 可单独检查资源与元数据，`build:index` 更新索引与上方资源表，`check` 执行完整的本地检查。直接下载使用 Logo 不需要运行这些脚本。校验器检查许可声明字段是否完整，不代替实际权利核实；SVG 检查采用保守的静态子集规则，不会修改或清洗文件。
+
+`npm run lint`、`npm run format:check` 只检查；需要主动修复时使用 `npm run lint:fix`、`npm run format`。格式化限于配置允许的源码、脚本、测试、文档与配置文件，不处理 `logos/`、`index.json` 或 README 生成资源表；README 整体跳过自动格式化。提交格式和钩子行为见[贡献指南](CONTRIBUTING.md)。
 
 ## 展示网页
 

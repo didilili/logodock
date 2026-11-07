@@ -1,6 +1,6 @@
 name: 新增 Logo
 description: 建议收录公司、产品或组织的 Logo，并提供身份、版本、来源和分发依据。
-title: "[新增] "
+title: '[新增] '
 body:
   - type: input
     id: company
