@@ -1,12 +1,12 @@
 import assert from 'node:assert/strict';
-import { createHash } from 'node:crypto';
-import { access, mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
+import { execFileSync } from 'node:child_process';
+import { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
+import { publishedSourceCommit } from '../scripts/lib/published-source.mjs';
 
-const search = () => import('../site/catalog-search.mjs');
-const build = async (root) => (await import('../scripts/build-site.mjs')).buildSite(root);
+const search = () => import('../src/lib/catalog-search.mjs');
 const brands = [
   { id: 'example', name: 'Example Inc.', aliases: ['示例公司', 'Example Company'],
     assets: [{ file: 'icon.svg', rights: { license: 'MIT' } }] },
@@ -14,26 +14,38 @@ const brands = [
     assets: [{ file: 'wordmark.svg', rights: { license: 'CC BY 4.0' } }] },
 ];
 
-async function fixture(t, patch = {}) {
-  const root = await mkdtemp(join(tmpdir(), 'company-logos-site-'));
+// Git snapshot guards are pure source checks. They must not launch a Vite build
+// for each temporary repository.
+async function fixture(t) {
+  const root = await mkdtemp(join(tmpdir(), 'logodock-source-'));
   t.after(() => rm(root, { recursive: true, force: true }));
   await mkdir(join(root, 'logos/example'), { recursive: true });
-  await mkdir(join(root, 'site/assets'), { recursive: true });
-  const svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"><path d="M0 0h8v8H0z"/></svg>';
-  const metadata = { id: 'example', name: '示例公司', aliases: ['Example'], website: 'https://example.com/',
-    assets: ['icon', 'wordmark'].map((variant) => ({ file: `${variant}.svg`, variant,
-      source: 'https://example.com/icon.svg', sourcePage: 'https://example.com/',
-      sha256: createHash('sha256').update(svg).digest('hex'), bytes: Buffer.byteLength(svg),
-      rights: { status: 'permitted', license: 'MIT', reference: 'https://example.com/license',
-        attribution: 'Example', reviewedAt: '2026-11-06' } })), ...patch };
+  await mkdir(join(root, 'src'), { recursive: true });
+  const metadata = { id: 'example', aliases: [], assets: [
+    { file: 'icon.svg', path: 'logos/example/icon.svg' },
+    { file: 'wordmark.svg', path: 'logos/example/wordmark.svg' },
+  ] };
   await writeFile(join(root, 'logos/example/metadata.json'), JSON.stringify(metadata));
-  for (const asset of metadata.assets) await writeFile(join(root, 'logos/example', asset.file), svg);
-  await writeFile(join(root, 'site/index.html'), '<!doctype html><link rel="stylesheet" href="./assets/style.css">'
-    + '<p>__BRAND_COUNT__ / __ASSET_COUNT__</p><meta name="source" content="__SOURCE_COMMIT__">'
-    + '<script id="catalog" type="application/json">__CATALOG_JSON__</script><script type="module" src="./app.mjs"></script>');
-  await writeFile(join(root, 'site/assets/style.css'), 'body { color: black; }');
-  await writeFile(join(root, 'site/app.mjs'), 'export const ready = true;');
-  return root;
+  for (const asset of metadata.assets) await writeFile(join(root, asset.path),
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"><path d="M0 0h8v8H0z"/></svg>');
+  await writeFile(join(root, 'src/app.mjs'), 'export const ready = true;');
+  return { root, catalog: { brands: [metadata] } };
+}
+
+function git(root, ...args) {
+  return execFileSync('git', args, { cwd: root, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }).trim();
+}
+
+function commitAssets(root, { published = true, origin = 'https://github.com/didilili/logodock.git' } = {}) {
+  git(root, 'init', '--quiet');
+  git(root, 'add', 'logos');
+  git(root, '-c', 'user.name=LogoDock test', '-c', 'user.email=test@example.com', 'commit', '--quiet', '-m', 'fixture assets');
+  const commit = git(root, 'rev-parse', 'HEAD');
+  if (published) {
+    git(root, 'remote', 'add', 'origin', origin);
+    git(root, 'update-ref', 'refs/remotes/origin/main', commit);
+  }
+  return commit;
 }
 
 test('normalizes Unicode, casing, and repeated whitespace', async () => {
@@ -69,55 +81,87 @@ test('search preserves input data and returns original brand objects', async () 
   assert.deepEqual(input, snapshot);
 });
 
-test('builds from validated source files and copies static files, assets, and metadata', async (t) => {
-  const root = await fixture(t);
-  await writeFile(join(root, 'index.json'), '{"stale":true}');
-  await build(root);
-  const output = join(root, '_site');
-  const catalog = JSON.parse(await readFile(join(output, 'index.json'), 'utf8'));
-  assert.equal(catalog.brands[0].name, '示例公司');
-  for (const path of ['logos/example/icon.svg', 'logos/example/wordmark.svg', 'logos/example/metadata.json',
-    'assets/style.css', 'app.mjs']) {
-    const source = path.startsWith('logos/') ? path : `site/${path}`;
-    assert.deepEqual(await readFile(join(output, path)), await readFile(join(root, source)));
-  }
-  const html = await readFile(join(output, 'index.html'), 'utf8');
-  assert.match(html, /<p>1 \/ 2<\/p>/);
-  assert.match(html, /name="source" content=""/);
-  assert.doesNotMatch(html, /__(?:CATALOG_JSON|BRAND_COUNT|ASSET_COUNT|SOURCE_COMMIT)__/);
-  assert.equal(await readFile(join(output, '.nojekyll'), 'utf8'), '');
+test('fixed links use HEAD only when source assets are tracked and unchanged', async (t) => {
+  const { root, catalog } = await fixture(t);
+  const commit = commitAssets(root);
+  assert.equal(publishedSourceCommit(root, catalog), commit);
+  const path = join(root, 'logos/example/metadata.json');
+  const metadata = JSON.parse(await readFile(path, 'utf8'));
+  metadata.aliases.push('另一个名字');
+  await writeFile(path, JSON.stringify(metadata));
+  assert.equal(publishedSourceCommit(root, catalog), '');
+  git(root, 'add', 'logos');
+  assert.equal(publishedSourceCommit(root, catalog), '');
 });
 
-test('inline catalog JSON cannot close its script element', async (t) => {
-  const name = '</script><img src=x onerror="alert(1)">\u2028\u2029';
-  const root = await fixture(t, { name });
-  await build(root);
-  const html = await readFile(join(root, '_site/index.html'), 'utf8');
-  const json = html.match(/<script id="catalog" type="application\/json">([\s\S]*?)<\/script>/)[1];
-  assert.doesNotMatch(json, /[<\u2028\u2029]/);
-  assert.match(json, /\\u003c\/script>/);
-  assert.equal(JSON.parse(json).brands[0].name, name);
+test('uncommitted new asset content never gets a misleading fixed remote URL', async (t) => {
+  const { root, catalog } = await fixture(t);
+  commitAssets(root);
+  catalog.brands[0].assets.push({ file: 'new-icon.svg', path: 'logos/example/new-icon.svg' });
+  await writeFile(join(root, 'logos/example/new-icon.svg'), await readFile(join(root, 'logos/example/icon.svg')));
+  assert.equal(publishedSourceCommit(root, catalog), '');
 });
 
-test('output asset paths resolve below a repository subpath', async (t) => {
-  const root = await fixture(t);
-  await build(root);
-  const catalog = JSON.parse(await readFile(join(root, '_site/index.json'), 'utf8'));
-  for (const asset of catalog.brands[0].assets) {
-    const url = new URL(asset.path, 'https://example.com/company-logos/');
-    assert.equal(url.pathname, `/company-logos/${asset.path}`);
-    await access(join(root, '_site', asset.path));
-  }
+test('ignored asset files absent from HEAD do not produce fixed links', async (t) => {
+  const { root, catalog } = await fixture(t);
+  await writeFile(join(root, '.gitignore'), 'logos/example/wordmark.svg\n');
+  commitAssets(root);
+  assert.equal(publishedSourceCommit(root, catalog), '');
 });
 
-test('rebuild removes stale output without changing repository source files', async (t) => {
-  const root = await fixture(t);
-  await build(root);
-  await writeFile(join(root, '_site/stale.txt'), 'old output');
-  const template = await readFile(join(root, 'site/index.html'), 'utf8');
-  const metadata = await readFile(join(root, 'logos/example/metadata.json'), 'utf8');
-  await build(root);
-  await assert.rejects(access(join(root, '_site/stale.txt')), { code: 'ENOENT' });
-  assert.equal(await readFile(join(root, 'site/index.html'), 'utf8'), template);
-  assert.equal(await readFile(join(root, 'logos/example/metadata.json'), 'utf8'), metadata);
+test('uncommitted website edits do not invalidate an unchanged asset snapshot', async (t) => {
+  const { root, catalog } = await fixture(t);
+  const commit = commitAssets(root);
+  await writeFile(join(root, 'src/app.mjs'), 'export const ready = false;');
+  assert.equal(publishedSourceCommit(root, catalog), commit);
+});
+
+test('clean local commits without a known published snapshot do not produce fixed links', async (t) => {
+  const { root, catalog } = await fixture(t);
+  commitAssets(root, { published: false });
+  assert.equal(publishedSourceCommit(root, catalog), '');
+});
+
+test('unpushed commits do not become fixed remote links', async (t) => {
+  const { root, catalog } = await fixture(t);
+  commitAssets(root);
+  await writeFile(join(root, 'logos/example/metadata.json'), '{"id":"example","aliases":["本地新提交"]}');
+  git(root, 'add', 'logos');
+  git(root, '-c', 'user.name=LogoDock test', '-c', 'user.email=test@example.com', 'commit', '--quiet', '-m', 'local changes');
+  assert.equal(publishedSourceCommit(root, catalog), '');
+});
+
+test('a different repository remote cannot produce links to the canonical repository', async (t) => {
+  const { root, catalog } = await fixture(t);
+  commitAssets(root, { origin: 'https://github.com/example/logodock.git' });
+  assert.equal(publishedSourceCommit(root, catalog), '');
+});
+
+test('source archives without Git do not advertise a fixed published commit', async (t) => {
+  const { root, catalog } = await fixture(t);
+  assert.equal(publishedSourceCommit(root, catalog), '');
+});
+
+test('shape and format filters intersect on files without changing the original catalog', async () => {
+  const { matchingBrands } = await import('../src/lib/catalog-presentation.mjs');
+  const assets = [
+    { file: 'icon.svg', variant: 'icon' },
+    { file: 'wordmark.png', variant: 'wordmark' },
+  ];
+  const brand = { ...brands[0], assets };
+  assert.equal(matchingBrands([brand], { shape: 'icon', format: 'PNG' }).length, 0);
+  assert.deepEqual(matchingBrands([brand], { shape: 'wordmark', format: 'PNG' })[0].assets, [assets[1]]);
+  assert.equal(brand.assets.length, 2);
+});
+
+test('directory URL state round-trips only available filters without adding a brand selection', async () => {
+  const { directoryUrl, readDirectoryState } = await import('../src/lib/catalog-presentation.mjs');
+  const available = [{ ...brands[0], entityType: 'company', assets: [{ file: 'icon.svg', variant: 'icon' }] }];
+  const state = { q: 'Example & 示例', type: 'company', shape: 'icon', format: 'SVG' };
+  const url = directoryUrl('https://example.com/logodock/?other=1', state);
+  assert.equal(url.pathname, '/logodock/');
+  assert.equal(url.searchParams.get('brand'), null);
+  assert.equal(url.searchParams.get('other'), '1');
+  assert.deepEqual(readDirectoryState(url, available), state);
+  assert.deepEqual(readDirectoryState('https://example.com/?shape=fake&type=bad&format=EXE', available), { q: '', type: '', format: '', shape: '' });
 });

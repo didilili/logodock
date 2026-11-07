@@ -1,26 +1,50 @@
 {
-  "name": "company-logos",
+  "name": "logodock",
   "version": "0.1.0",
   "private": true,
   "description": "收录公司 Logo，提供预览、下载与来源信息，由社区共同维护。",
   "type": "module",
   "engines": {
-    "node": ">=22"
+    "node": "^22.17.0 || >=24.0.0"
   },
   "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "preview": "node scripts/preview.mjs",
+    "prepare:asset": "node scripts/prepare-asset.mjs",
     "validate": "node scripts/validate.mjs",
     "build:index": "node scripts/build-index.mjs",
     "check:index": "node scripts/build-index.mjs --check",
     "build:site": "node scripts/build-site.mjs",
     "test": "node --test tests/*.test.mjs",
-    "check": "npm run validate && npm run check:index && npm test"
+    "check": "npm run validate && npm run check:index && npm run check:types && npm test",
+    "build": "node scripts/build-site.mjs",
+    "check:types": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "test:browser": "playwright test",
+    "pretest": "npm run build:site"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/didilili/company-logos.git"
+    "url": "https://github.com/didilili/logodock.git"
   },
   "dependencies": {
+    "bits-ui": "2.20.6",
     "saxes": "6.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.0",
+    "@sveltejs/adapter-static": "4.0.1",
+    "@sveltejs/kit": "3.1.1",
+    "@sveltejs/vite-plugin-svelte": "7.3.1",
+    "@tailwindcss/vite": "4.3.5",
+    "@types/node": "22.20.5",
+    "svelte": "5.57.3",
+    "svelte-check": "4.7.8",
+    "tailwindcss": "4.3.5",
+    "typescript": "6.0.3",
+    "vite": "8.3.6"
+  },
+  "imports": {
+    "#lib/*": "./src/lib/*"
   }
 }

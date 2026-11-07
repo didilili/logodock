@@ -5,3 +5,7 @@ node_modules/
 .env.*
 coverage/
 _site/
+.svelte-kit/
+static/
+playwright-report/
+test-results/
