@@ -1,7 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { resolve } from '$app/paths';
-  const base = resolve('/').replace(/\/$/, '');
   import Icon from '#lib/components/Icon.svelte';
   import ActionButton from '#lib/components/ActionButton.svelte';
   import '../app.css';
@@ -15,25 +14,51 @@
   }
   onMount(() => {
     ready = true;
-    try { applyTheme(localStorage.getItem('logodock:theme')); } catch { applyTheme(); }
+    try {
+      applyTheme(localStorage.getItem('logodock:theme'));
+    } catch {
+      applyTheme();
+    }
     const media = matchMedia('(prefers-color-scheme: dark)');
-    const changed = () => { if (!document.documentElement.dataset.theme) applyTheme(); };
+    const changed = () => {
+      if (!document.documentElement.dataset.theme) applyTheme();
+    };
     media.addEventListener('change', changed);
     return () => media.removeEventListener('change', changed);
   });
   function toggleTheme() {
     const next = dark ? 'light' : 'dark';
     applyTheme(next);
-    try { localStorage.setItem('logodock:theme', next); } catch { /* Preference remains active for this page. */ }
+    try {
+      localStorage.setItem('logodock:theme', next);
+    } catch {
+      /* Preference remains active for this page. */
+    }
   }
 </script>
+
 <a class="skip-link" href="#main">跳到内容</a>
 <header class="site-header shell">
-  <a class="wordmark" href={`${base}/`} data-sveltekit-reload>LogoDock<span class="wordmark-description">Logo 资源目录</span></a>
+  <a class="wordmark" href={resolve('/')} data-sveltekit-reload
+    >LogoDock<span class="wordmark-description">Logo 资源目录</span></a
+  >
   <nav aria-label="主导航">
-    <a href="https://github.com/didilili/logodock/issues/new/choose" target="_blank" rel="noopener noreferrer">建议收录<Icon name="external" /></a>
-    <a href="https://github.com/didilili/logodock" target="_blank" rel="noopener noreferrer">GitHub<Icon name="external" /></a>
-    <ActionButton id="theme-toggle" variant="icon" disabled={!ready} onclick={toggleTheme} aria-label={dark ? '切换到浅色主题' : '切换到深色主题'} title={dark ? '切换到浅色主题' : '切换到深色主题'}><Icon name="theme" /></ActionButton>
+    <a
+      href="https://github.com/didilili/logodock/issues/new/choose"
+      target="_blank"
+      rel="noopener noreferrer">建议收录<Icon name="external" /></a
+    >
+    <a href="https://github.com/didilili/logodock" target="_blank" rel="noopener noreferrer"
+      >GitHub<Icon name="external" /></a
+    >
+    <ActionButton
+      id="theme-toggle"
+      variant="icon"
+      disabled={!ready}
+      onclick={toggleTheme}
+      aria-label={dark ? '切换到浅色主题' : '切换到深色主题'}
+      title={dark ? '切换到浅色主题' : '切换到深色主题'}><Icon name="theme" /></ActionButton
+    >
   </nav>
 </header>
 {@render children()}

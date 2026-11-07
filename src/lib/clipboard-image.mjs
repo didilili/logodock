@@ -2,12 +2,23 @@
 // retain their original download / URL / SVG-code actions instead of conversion.
 export function canCopyPngImage(clipboard, ClipboardItemType) {
   try {
-    return typeof clipboard?.write === 'function' && typeof ClipboardItemType === 'function'
-      && (typeof ClipboardItemType.supports !== 'function' || ClipboardItemType.supports('image/png'));
-  } catch { return false; }
+    return (
+      typeof clipboard?.write === 'function' &&
+      typeof ClipboardItemType === 'function' &&
+      (typeof ClipboardItemType.supports !== 'function' || ClipboardItemType.supports('image/png'))
+    );
+  } catch {
+    return false;
+  }
 }
 
-export async function copyPngImage({ url, clipboard, ClipboardItemType, fetcher = globalThis.fetch, isCurrent = () => true }) {
+export async function copyPngImage({
+  url,
+  clipboard,
+  ClipboardItemType,
+  fetcher = globalThis.fetch,
+  isCurrent = () => true,
+}) {
   if (!canCopyPngImage(clipboard, ClipboardItemType)) return 'unsupported';
   if (!isCurrent()) return 'stale';
   try {
@@ -27,5 +38,7 @@ export async function copyPngImage({ url, clipboard, ClipboardItemType, fetcher 
     originalPng.catch(() => {});
     await clipboard.write([new ClipboardItemType({ 'image/png': originalPng })]);
     return isCurrent() ? 'copied' : 'stale';
-  } catch { return isCurrent() ? 'failed' : 'stale'; }
+  } catch {
+    return isCurrent() ? 'failed' : 'stale';
+  }
 }

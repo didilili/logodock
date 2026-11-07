@@ -57,7 +57,10 @@
     const token = reset();
     const copied = await copyText(value, navigator.clipboard);
     if (!isCurrent(token)) return;
-    await show(copied ? `已复制${label}。` : '无法自动复制，已选中内容，请手动复制。', copied ? undefined : value);
+    await show(
+      copied ? `已复制${label}。` : '无法自动复制，已选中内容，请手动复制。',
+      copied ? undefined : value,
+    );
   }
 
   function dismiss() {
@@ -73,7 +76,20 @@
   <p id="action-status" role="status" aria-live="polite">{message}</p>
   <div id="manual-copy" hidden={manualValue === undefined}>
     <label for="manual-address">手动复制</label>
-    <textarea id="manual-address" bind:this={manualAddress} value={manualValue ?? ''} readonly rows="2" spellcheck="false" onclick={(event) => event.currentTarget.select()}></textarea>
+    <textarea
+      id="manual-address"
+      bind:this={manualAddress}
+      value={manualValue ?? ''}
+      readonly
+      rows="2"
+      spellcheck="false"
+      onclick={(event) => event.currentTarget.select()}></textarea>
   </div>
-  <ActionButton variant="icon" size="sm" id="dismiss-feedback" aria-label="关闭复制提示" onclick={dismiss}>×</ActionButton>
+  <ActionButton
+    variant="icon"
+    size="sm"
+    id="dismiss-feedback"
+    aria-label="关闭复制提示"
+    onclick={dismiss}>×</ActionButton
+  >
 </div>

@@ -6,10 +6,13 @@ const dev = import.meta.env.DEV;
 
 let snapshot: Promise<{ catalog: Catalog; sourceCommit: string }> | undefined;
 async function readSnapshot() {
-  if (dev && process.env.LOGODOCK_VALIDATION_ERROR) throw new Error(process.env.LOGODOCK_VALIDATION_ERROR);
+  if (dev && process.env.LOGODOCK_VALIDATION_ERROR)
+    throw new Error(process.env.LOGODOCK_VALIDATION_ERROR);
   // prepare-site validates the source before writing this generated snapshot.
   // Reading by cwd also keeps source-relative Node validation code out of SSR bundles.
-  const catalog = JSON.parse(await readFile(join(process.cwd(), 'static/index.json'), 'utf8')) as Catalog;
+  const catalog = JSON.parse(
+    await readFile(join(process.cwd(), 'static/index.json'), 'utf8'),
+  ) as Catalog;
   return { catalog, sourceCommit: publishedSourceCommit(process.cwd(), catalog) };
 }
 export function catalogSnapshot() {

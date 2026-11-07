@@ -10,30 +10,45 @@ export function assetFormat(asset) {
 }
 
 export function defaultAsset(brand, requestedFile) {
-  return brand.assets.find((asset) => asset.file === requestedFile)
-    || brand.assets.find((asset) => asset.file === brand.defaultAsset)
-    || brand.assets.find((asset) => asset.status === 'current')
-    || brand.assets[0];
+  return (
+    brand.assets.find((asset) => asset.file === requestedFile) ||
+    brand.assets.find((asset) => asset.file === brand.defaultAsset) ||
+    brand.assets.find((asset) => asset.status === 'current') ||
+    brand.assets[0]
+  );
 }
 
 export function directoryAsset(brand, query = '') {
   const fallback = defaultAsset(brand);
-  const identity = normalizeQuery([
-    brand.id, brand.name, brand.website, brand.identity?.nameZh, brand.identity?.nameEn,
-    ...(brand.aliases || []), ...(brand.identity?.legalNames || []).map(item => item.name),
-  ].join(' '));
-  const terms = normalizeQuery(query).split(' ').filter(term => term && !identity.includes(term));
+  const identity = normalizeQuery(
+    [
+      brand.id,
+      brand.name,
+      brand.website,
+      brand.identity?.nameZh,
+      brand.identity?.nameEn,
+      ...(brand.aliases || []),
+      ...(brand.identity?.legalNames || []).map((item) => item.name),
+    ].join(' '),
+  );
+  const terms = normalizeQuery(query)
+    .split(' ')
+    .filter((term) => term && !identity.includes(term));
   if (!terms.length) return fallback;
-  const scored = brand.assets.map(asset => {
+  const scored = brand.assets.map((asset) => {
     const text = normalizeQuery([asset.file, asset.label, asset.rights?.license].join(' '));
-    return { asset, score: terms.filter(term => text.includes(term)).length };
+    return { asset, score: terms.filter((term) => text.includes(term)).length };
   });
-  const bestScore = Math.max(0, ...scored.map(item => item.score));
+  const bestScore = Math.max(0, ...scored.map((item) => item.score));
   if (!bestScore) return fallback;
-  const candidates = scored.filter(item => item.score === bestScore).map(item => item.asset);
-  return candidates.find(asset => asset.file === fallback.file)
-    || artworkGroups(brand).map(group => group.defaultAsset).find(asset => candidates.includes(asset))
-    || candidates[0];
+  const candidates = scored.filter((item) => item.score === bestScore).map((item) => item.asset);
+  return (
+    candidates.find((asset) => asset.file === fallback.file) ||
+    artworkGroups(brand)
+      .map((group) => group.defaultAsset)
+      .find((asset) => candidates.includes(asset)) ||
+    candidates[0]
+  );
 }
 
 export function assetLabel(asset) {
@@ -46,7 +61,11 @@ export function assetDisplayLabel(asset) {
     .replace(/\s*[（(](?:Commons (?:原件|渲染)|官方(?:内嵌)?原生 PNG)[）)]/gi, '')
     .replace(/\s*·\s*([^·]+)$/u, (suffix, description) => {
       if (!/\b(?:SVG|PNG|JPEG|JPG)\b/i.test(description)) return suffix;
-      const detail = description.replace(/\b(?:SVG|PNG|JPEG|JPG)\b/gi, '').replace(/原件/g, '').replace(/\s+/g, ' ').trim();
+      const detail = description
+        .replace(/\b(?:SVG|PNG|JPEG|JPG)\b/gi, '')
+        .replace(/原件/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
       return detail ? ` · ${detail}` : '';
     })
     .trim();
@@ -57,8 +76,14 @@ export function assetWarnings(asset) {
   if (asset.status === 'historical') notes.push('历史素材，不代表现行标识');
   if (/(?:^|[-\s])NC(?:[-\s]|$)/i.test(asset.rights?.license || '')) notes.push('仅限非商业用途');
   for (const note of asset.qualityNotes || []) if (note && !notes.includes(note)) notes.push(note);
-  if (assetFormat(asset) !== 'SVG' && asset.width && asset.height && Math.max(asset.width, asset.height) < 256) notes.push('低分辨率原图，请留意实际像素尺寸');
-  return notes;
+  if (
+    assetFormat(asset) !== 'SVG' &&
+    asset.width &&
+    asset.height &&
+    Math.max(asset.width, asset.height) < 256
+  )
+    notes.push('低分辨率原图，请留意实际像素尺寸');
+  return [...new Set(notes)];
 }
 
 export function filterOptions(brands) {
@@ -69,8 +94,19 @@ export function filterOptions(brands) {
 }
 
 export function matchingBrands(brands, { q = '', type = '', format = '', shape = '' } = {}) {
-  const available = sortBrands(brands).filter((brand) => !type || brand.entityType === type)
-    .map((brand) => format || shape ? { ...brand, assets: brand.assets.filter((asset) => (!format || assetFormat(asset) === format) && (!shape || asset.variant === shape)) } : brand)
+  const available = sortBrands(brands)
+    .filter((brand) => !type || brand.entityType === type)
+    .map((brand) =>
+      format || shape
+        ? {
+            ...brand,
+            assets: brand.assets.filter(
+              (asset) =>
+                (!format || assetFormat(asset) === format) && (!shape || asset.variant === shape),
+            ),
+          }
+        : brand,
+    )
     .filter((brand) => brand.assets.length);
   return filterBrands(available, q);
 }
@@ -78,7 +114,9 @@ export function matchingBrands(brands, { q = '', type = '', format = '', shape =
 export function readDirectoryState(url, brands) {
   const params = new URL(url).searchParams;
   const options = filterOptions(brands);
-  const shapes = [...new Set(brands.flatMap(brand => brand.assets.map(asset => asset.variant)))];
+  const shapes = [
+    ...new Set(brands.flatMap((brand) => brand.assets.map((asset) => asset.variant))),
+  ];
   const type = params.get('type') || '';
   const format = params.get('format') || '';
   const shape = params.get('shape') || '';
@@ -116,7 +154,13 @@ export function readCatalogState(url, brands) {
 
 export function catalogUrl(baseUrl, state) {
   const url = directoryUrl(baseUrl, state);
-  for (const [key, value] of Object.entries({ q: state.q, type: state.type, format: state.format, brand: state.brandId, asset: state.assetFile })) {
+  for (const [key, value] of Object.entries({
+    q: state.q,
+    type: state.type,
+    format: state.format,
+    brand: state.brandId,
+    asset: state.assetFile,
+  })) {
     if (value) url.searchParams.set(key, value);
     else url.searchParams.delete(key);
   }

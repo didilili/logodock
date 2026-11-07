@@ -11,23 +11,31 @@
  * @param {(asset: Asset) => string} [labelForAsset]
  * @returns {ArtworkGroup[]}
  */
-export function artworkGroups(brand, labelForAsset = asset => asset.label) {
-  const membership = new Map((brand.artworks ?? []).flatMap(artwork => artwork.files.map(file => [file, artwork])));
+export function artworkGroups(brand, labelForAsset = (asset) => asset.label) {
+  const membership = new Map(
+    (brand.artworks ?? []).flatMap((artwork) => artwork.files.map((file) => [file, artwork])),
+  );
   const seen = new Set();
   const groups = [];
   for (const asset of brand.assets) {
     const artwork = membership.get(asset.file);
     if (!artwork) {
-      groups.push({ id: `file:${asset.file}`, label: labelForAsset(asset), assets: [asset], defaultAsset: asset });
+      groups.push({
+        id: `file:${asset.file}`,
+        label: labelForAsset(asset),
+        assets: [asset],
+        defaultAsset: asset,
+      });
       continue;
     }
     if (seen.has(artwork.id)) continue;
     seen.add(artwork.id);
-    const assets = brand.assets.filter(item => artwork.files.includes(item.file));
-    const defaultAsset = assets.find(item => item.file === artwork.defaultAsset)
-      ?? assets.find(item => item.file === brand.defaultAsset)
-      ?? assets.find(item => item.status === 'current')
-      ?? assets[0];
+    const assets = brand.assets.filter((item) => artwork.files.includes(item.file));
+    const defaultAsset =
+      assets.find((item) => item.file === artwork.defaultAsset) ??
+      assets.find((item) => item.file === brand.defaultAsset) ??
+      assets.find((item) => item.status === 'current') ??
+      assets[0];
     groups.push({ id: artwork.id, label: artwork.label, assets, defaultAsset });
   }
   return groups;
@@ -43,10 +51,11 @@ export function artworkGroups(brand, labelForAsset = asset => asset.label) {
 export function selectedArtwork(brand, assetOrFilename) {
   const groups = artworkGroups(brand);
   const file = typeof assetOrFilename === 'string' ? assetOrFilename : assetOrFilename?.file;
-  const group = groups.find(item => item.assets.some(asset => asset.file === file))
-    ?? groups.find(item => item.assets.some(asset => asset.file === brand.defaultAsset))
-    ?? groups.find(item => item.defaultAsset.status === 'current')
-    ?? groups[0];
+  const group =
+    groups.find((item) => item.assets.some((asset) => asset.file === file)) ??
+    groups.find((item) => item.assets.some((asset) => asset.file === brand.defaultAsset)) ??
+    groups.find((item) => item.defaultAsset.status === 'current') ??
+    groups[0];
   if (!group) throw new Error('Cannot select artwork from a brand without assets.');
   return group;
 }
@@ -61,7 +70,7 @@ export function selectedArtwork(brand, assetOrFilename) {
 export function preferredArtworkAsset(group, preferredFormat) {
   const format = preferredFormat?.toUpperCase();
   /** @param {Asset} asset */
-  const formatOf = asset => asset.file.split('.').pop()?.toUpperCase();
+  const formatOf = (asset) => asset.file.split('.').pop()?.toUpperCase();
   if (!format || formatOf(group.defaultAsset) === format) return group.defaultAsset;
-  return group.assets.find(asset => formatOf(asset) === format) ?? group.defaultAsset;
+  return group.assets.find((asset) => formatOf(asset) === format) ?? group.defaultAsset;
 }

@@ -9,19 +9,20 @@ import { isWithinDirectory } from './scripts/lib/paths.mjs';
 
 const run = promisify(execFile);
 const base = (process.env.BASE_PATH?.replace(/\/$/, '') || '') as '' | `/${string}`;
-if (base && !/^\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+$/.test(base)) throw new Error('BASE_PATH must use simple absolute path segments.');
+if (base && !/^\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+$/.test(base))
+  throw new Error('BASE_PATH must use simple absolute path segments.');
 
 function catalogWatch(): Plugin {
   return {
     name: 'logodock-catalog-watch',
     configureServer(server) {
       const root = process.cwd();
-      const folders = ['logos', 'schema', 'scripts'].map(folder => resolve(root, folder));
+      const folders = ['logos', 'schema', 'scripts'].map((folder) => resolve(root, folder));
       server.watcher.add(folders);
       let timer: ReturnType<typeof setTimeout>;
       let pending = Promise.resolve();
       const onChange = (_event: string, file: string) => {
-        if (!folders.some(folder => isWithinDirectory(file, folder))) return;
+        if (!folders.some((folder) => isWithinDirectory(file, folder))) return;
         clearTimeout(timer);
         timer = setTimeout(() => {
           pending = pending.then(async () => {
@@ -41,16 +42,23 @@ function catalogWatch(): Plugin {
         }, 120);
       };
       server.watcher.on('all', onChange);
-      server.httpServer?.once('close', () => { clearTimeout(timer); server.watcher.off('all', onChange); });
+      server.httpServer?.once('close', () => {
+        clearTimeout(timer);
+        server.watcher.off('all', onChange);
+      });
     },
   };
 }
 
 export default defineConfig({
   cacheDir: '.svelte-kit/vite',
-  plugins: [tailwindcss(), sveltekit({
-    adapter: adapter({ pages: '_site', assets: '_site', strict: true }),
-    paths: { base, relative: false },
-  }), catalogWatch()],
+  plugins: [
+    tailwindcss(),
+    sveltekit({
+      adapter: adapter({ pages: '_site', assets: '_site', strict: true }),
+      paths: { base, relative: false },
+    }),
+    catalogWatch(),
+  ],
   server: { host: '127.0.0.1' },
 });

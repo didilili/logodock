@@ -3,12 +3,22 @@
   import { pushState } from '$app/navigation';
   import type { Brand } from '../types';
   import { assetPath } from '../resource-links.mjs';
-  import { defaultAsset, assetDisplayLabel, assetFormat, entityLabels } from '../catalog-presentation.mjs';
+  import {
+    defaultAsset,
+    assetDisplayLabel,
+    assetFormat,
+    entityLabels,
+  } from '../catalog-presentation.mjs';
   import { brandRoute, identityNames, websiteDomain } from '../catalog-display.mjs';
   import AssetWorkspace from './AssetWorkspace.svelte';
   import CopyFeedback, { type CopyFeedbackApi } from './CopyFeedback.svelte';
 
-  interface Props { brand: Brand; parent?: Brand; sourceCommit: string; basePath: string; }
+  interface Props {
+    brand: Brand;
+    parent?: Brand;
+    sourceCommit: string;
+    basePath: string;
+  }
   let { brand, parent, sourceCommit, basePath }: Props = $props();
   let selectedFile = $state('');
   let pageUrl = $state('');
@@ -52,17 +62,21 @@
     workspaceVersion += 1;
   }
   async function selectAsset(event: MouseEvent, file: string) {
-    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)
+      return;
     event.preventDefault();
     const kind = (event.currentTarget as HTMLAnchorElement).dataset.selectionKind;
     const url = detailHref(brand, file);
+    // eslint-disable-next-line svelte/no-navigation-without-resolve -- detailHref preserves the resolved base path and current query.
     if (url !== location.href) pushState(url, {});
     feedback?.reset();
     selectedFile = file;
     pageUrl = location.href;
     workspaceVersion += 1;
     await tick();
-    const selected = [...(workspace?.querySelectorAll<HTMLAnchorElement>('[data-select-asset]') ?? [])].find((link) => link.dataset.selectAsset === file && link.dataset.selectionKind === kind);
+    const selected = [
+      ...(workspace?.querySelectorAll<HTMLAnchorElement>('[data-select-asset]') ?? []),
+    ].find((link) => link.dataset.selectAsset === file && link.dataset.selectionKind === kind);
     if (kind === 'file') {
       const details = selected?.closest('details');
       if (details) details.open = true;
@@ -78,26 +92,86 @@
 </script>
 
 {#snippet externalIcon()}
-  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 5h6v6m0-6-9 9M9 5H5v14h14v-4" /></svg>
+  <svg
+    viewBox="0 0 24 24"
+    width="18"
+    height="18"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"><path d="M13 5h6v6m0-6-9 9M9 5H5v14h14v-4" /></svg
+  >
 {/snippet}
 
 <main id="main" class="shell detail-main">
-  <a class="back-link" id="back-directory" href={withDirectoryState(`${basePath}/`)} data-sveltekit-reload><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6" /></svg>返回目录</a>
+  <a
+    class="back-link"
+    id="back-directory"
+    href={withDirectoryState(`${basePath}/`)}
+    data-sveltekit-reload
+    ><svg
+      viewBox="0 0 24 24"
+      width="18"
+      height="18"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.6"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6" /></svg
+    >返回目录</a
+  >
   <header class="brand-heading">
     <div>
-      <div class="brand-heading-line"><h1>{names.primary}</h1><span class="entity-tag">{entityLabels[brand.entityType as keyof typeof entityLabels] || '品牌'}</span></div>
+      <div class="brand-heading-line">
+        <h1>{names.primary}</h1>
+        <span class="entity-tag"
+          >{entityLabels[brand.entityType as keyof typeof entityLabels] || '品牌'}</span
+        >
+      </div>
       {#if names.secondary}<p class="detail-english">{names.secondary}</p>{/if}
-      {#if parent}<p class="parent-brand">所属 <a href={detailHref(parent)} data-sveltekit-reload>{identityNames(parent).primary}</a></p>{/if}
+      {#if parent}<p class="parent-brand">
+          所属 <a href={detailHref(parent)} data-sveltekit-reload>{identityNames(parent).primary}</a
+          >
+        </p>{/if}
     </div>
-    <a class="website-link" href={external(brand.website)} target="_blank" rel="noopener noreferrer">{websiteDomain(brand)}{@render externalIcon()}</a>
+    <a class="website-link" href={external(brand.website)} target="_blank" rel="noopener noreferrer"
+      >{websiteDomain(brand)}{@render externalIcon()}</a
+    >
   </header>
   <div id="asset-workspace" bind:this={workspace}>
     {#key `${selectedAsset.file}:${workspaceVersion}`}
-      <AssetWorkspace {brand} asset={selectedAsset} {sourceCommit} {basePath} {pageUrl} {backgroundChoice} {feedback} {assetHref} shareHref={(file) => detailHref(brand, file)} onSelectAsset={selectAsset} onBackgroundChange={(value) => { backgroundChoice = value; }} />
+      <AssetWorkspace
+        {brand}
+        asset={selectedAsset}
+        {sourceCommit}
+        {basePath}
+        {pageUrl}
+        {backgroundChoice}
+        {feedback}
+        {assetHref}
+        shareHref={(file) => detailHref(brand, file)}
+        onSelectAsset={selectAsset}
+        onBackgroundChange={(value) => {
+          backgroundChoice = value;
+        }}
+      />
     {/key}
   </div>
-  <noscript><p class="noscript-note">可直接下载文件。切换预览与复制需要 JavaScript。</p>
-    {#if brand.assets.length > 1}<details class="noscript-files"><summary>全部格式下载</summary><ul>{#each brand.assets as item}<li><a href={`${basePath}/${assetPath(item)}`} download={`${brand.id}-${item.file}`}>{assetDisplayLabel(item)} · {assetFormat(item)}</a></li>{/each}</ul></details>{/if}
+  <noscript
+    ><p class="noscript-note">可直接下载文件。切换预览与复制需要 JavaScript。</p>
+    {#if brand.assets.length > 1}<details class="noscript-files">
+        <summary>全部格式下载</summary>
+        <ul>
+          {#each brand.assets as item (item.file)}<li>
+              <a href={`${basePath}/${assetPath(item)}`} download={`${brand.id}-${item.file}`}
+                >{assetDisplayLabel(item)} · {assetFormat(item)}</a
+              >
+            </li>{/each}
+        </ul>
+      </details>{/if}
   </noscript>
 </main>
 <CopyFeedback bind:this={feedback} />

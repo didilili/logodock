@@ -1,15 +1,29 @@
 export function assetPath(asset) {
   const path = String(asset.path || '');
-  if (!path || /^(?:\/|[a-z][a-z\d+.-]*:)/i.test(path) || path.includes('\\')
-    || path.split('/').some((part) => !part || part === '.' || part === '..')) {
+  if (
+    !path ||
+    /^(?:\/|[a-z][a-z\d+.-]*:)/i.test(path) ||
+    path.includes('\\') ||
+    path.split('/').some((part) => !part || part === '.' || part === '..')
+  ) {
     throw new Error('Asset paths must stay inside the catalog');
   }
-  return path.split('/').map((part) => encodeURIComponent(part)
-    .replace(/[!'()*]/g, (char) => `%${char.charCodeAt(0).toString(16).toUpperCase()}`)).join('/');
+  return path
+    .split('/')
+    .map((part) =>
+      encodeURIComponent(part).replace(
+        /[!'()*]/g,
+        (char) => `%${char.charCodeAt(0).toString(16).toUpperCase()}`,
+      ),
+    )
+    .join('/');
 }
 
 function escapeHtml(value) {
-  return String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
+  return String(value).replace(
+    /[&<>"']/g,
+    (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char],
+  );
 }
 
 export function siteRootUrl(pageUrl, relativeRoot = './') {
@@ -19,7 +33,8 @@ export function siteRootUrl(pageUrl, relativeRoot = './') {
 
 export function fixedAssetUrl(asset, sourceCommit) {
   return /^[a-f\d]{40}$/i.test(sourceCommit || '')
-    ? `https://raw.githubusercontent.com/didilili/logodock/${sourceCommit}/${assetPath(asset)}` : null;
+    ? `https://raw.githubusercontent.com/didilili/logodock/${sourceCommit}/${assetPath(asset)}`
+    : null;
 }
 
 export function resourceLinks({ asset, brand, baseUrl, sourceCommit }) {
@@ -29,7 +44,8 @@ export function resourceLinks({ asset, brand, baseUrl, sourceCommit }) {
   const address = fixed || current;
   const alt = `${brand.name} ${asset.label || 'Logo'}`;
   return {
-    current, fixed,
+    current,
+    fixed,
     html: `<img src="${escapeHtml(address)}" alt="${escapeHtml(alt)}">`,
     markdown: `![${alt.replace(/[\\[\]]/g, '\\$&').replace(/\r?\n/g, ' ')}](${address})`,
   };

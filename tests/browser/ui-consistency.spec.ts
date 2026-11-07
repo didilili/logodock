@@ -4,30 +4,56 @@ const filterIds = ['shape-filter', 'format-filter', 'type-filter'];
 
 async function expectMinimumHeight(controls: Locator, minimum: number) {
   await expect(controls.first()).toBeVisible();
-  const undersized = await controls.evaluateAll((elements, height) => elements.flatMap(element => {
-    const actual = element.getBoundingClientRect().height;
-    return actual < height ? [{ control: element.id || element.getAttribute('aria-label') || element.textContent?.trim(), height: actual }] : [];
-  }), minimum);
+  const undersized = await controls.evaluateAll(
+    (elements, height) =>
+      elements.flatMap((element) => {
+        const actual = element.getBoundingClientRect().height;
+        return actual < height
+          ? [
+              {
+                control:
+                  element.id || element.getAttribute('aria-label') || element.textContent?.trim(),
+                height: actual,
+              },
+            ]
+          : [];
+      }),
+    minimum,
+  );
   expect.soft(undersized, `visible controls should be at least ${minimum}px high`).toEqual([]);
 }
 
 async function expectFilterTypography(page: Page) {
-  const typography = await page.locator(filterIds.map(id => `#${id}`).join(', ')).evaluateAll(elements => {
-    const bodyFont = getComputedStyle(document.body).fontFamily;
-    return elements.map(element => {
-      const style = getComputedStyle(element);
-      return { id: element.id, size: style.fontSize, usesBodyFont: style.fontFamily === bodyFont };
+  const typography = await page
+    .locator(filterIds.map((id) => `#${id}`).join(', '))
+    .evaluateAll((elements) => {
+      const bodyFont = getComputedStyle(document.body).fontFamily;
+      return elements.map((element) => {
+        const style = getComputedStyle(element);
+        return {
+          id: element.id,
+          size: style.fontSize,
+          usesBodyFont: style.fontFamily === bodyFont,
+        };
+      });
     });
-  });
-  expect.soft(typography).toEqual(filterIds.map(id => ({ id, size: '14px', usesBodyFont: true })));
+  expect
+    .soft(typography)
+    .toEqual(filterIds.map((id) => ({ id, size: '14px', usesBodyFont: true })));
 }
 
 async function expectKeyboardFocus(control: Locator) {
   await expect(control).toBeFocused();
   await expect(control).toBeInViewport();
-  const focus = await control.evaluate(element => {
+  const focus = await control.evaluate((element) => {
     const style = getComputedStyle(element);
-    return { visible: element.matches(':focus-visible'), width: Number.parseFloat(style.outlineWidth), style: style.outlineStyle, color: style.outlineColor, background: getComputedStyle(document.documentElement).backgroundColor };
+    return {
+      visible: element.matches(':focus-visible'),
+      width: Number.parseFloat(style.outlineWidth),
+      style: style.outlineStyle,
+      color: style.outlineColor,
+      background: getComputedStyle(document.documentElement).backgroundColor,
+    };
   });
   expect(focus.visible).toBe(true);
   expect(focus.width).toBeGreaterThanOrEqual(2);
@@ -37,18 +63,27 @@ async function expectKeyboardFocus(control: Locator) {
 }
 
 async function expectNoHorizontalOverflow(page: Page) {
-  expect(await page.evaluate(() => ({ content: document.documentElement.scrollWidth, viewport: window.innerWidth })))
-    .toEqual({ content: 390, viewport: 390 });
+  expect(
+    await page.evaluate(() => ({
+      content: document.documentElement.scrollWidth,
+      viewport: window.innerWidth,
+    })),
+  ).toEqual({ content: 390, viewport: 390 });
 }
 
-test('desktop filters use readable control sizing and keyboard focus stays visible in both themes', async ({ page }) => {
+test('desktop filters use readable control sizing and keyboard focus stays visible in both themes', async ({
+  page,
+}) => {
   await page.goto('/');
   await expect(page.locator('#theme-toggle')).toBeEnabled();
   await expectMinimumHeight(page.getByRole('combobox'), 36);
   await expectFilterTypography(page);
   for (const theme of ['light', 'dark']) {
     if (theme === 'dark') await page.locator('#theme-toggle').click();
-    await expect(page.locator('#theme-toggle')).toHaveAttribute('aria-label', theme === 'dark' ? '切换到浅色主题' : '切换到深色主题');
+    await expect(page.locator('#theme-toggle')).toHaveAttribute(
+      'aria-label',
+      theme === 'dark' ? '切换到浅色主题' : '切换到深色主题',
+    );
     await page.locator('#search').focus();
     await page.keyboard.press('Tab');
     await expectKeyboardFocus(page.locator('#shape-filter'));
@@ -66,7 +101,9 @@ test('desktop filters use readable control sizing and keyboard focus stays visib
   }
 });
 
-test('390px home and Alibaba detail retain usable targets without horizontal scrolling', async ({ page }) => {
+test('390px home and Alibaba detail retain usable targets without horizontal scrolling', async ({
+  page,
+}) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/');
   await expect(page.locator('#theme-toggle')).toBeEnabled();
@@ -91,12 +128,16 @@ test('390px home and Alibaba detail retain usable targets without horizontal scr
   await expectNoHorizontalOverflow(page);
 });
 
-test('empty results reset every filter and manual copy remains readonly with recoverable focus', async ({ page }) => {
+test('empty results reset every filter and manual copy remains readonly with recoverable focus', async ({
+  page,
+}) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.addInitScript(() => {
     Object.defineProperty(navigator, 'clipboard', {
       configurable: true,
-      value: { writeText: () => Promise.reject(new DOMException('Permission denied', 'NotAllowedError')) },
+      value: {
+        writeText: () => Promise.reject(new DOMException('Permission denied', 'NotAllowedError')),
+      },
     });
   });
   await page.goto('/?q=NoSuchBrand&type=company&format=SVG&shape=wordmark');
@@ -120,9 +161,15 @@ test('empty results reset every filter and manual copy remains readonly with rec
   await expect(manual).toBeFocused();
   await expect(manual).toHaveJSProperty('readOnly', true);
   const address = await manual.inputValue();
-  expect(address).toBe(new URL(await page.locator('#download-link').getAttribute('href') || '', page.url()).href);
-  expect(await manual.evaluate((element: HTMLTextAreaElement) => [element.selectionStart, element.selectionEnd]))
-    .toEqual([0, address.length]);
+  expect(address).toBe(
+    new URL((await page.locator('#download-link').getAttribute('href')) || '', page.url()).href,
+  );
+  expect(
+    await manual.evaluate((element: HTMLTextAreaElement) => [
+      element.selectionStart,
+      element.selectionEnd,
+    ]),
+  ).toEqual([0, address.length]);
   await manual.press('x');
   await expect(manual).toHaveValue(address);
   await expectMinimumHeight(page.locator('#dismiss-feedback'), 40);
@@ -132,13 +179,19 @@ test('empty results reset every filter and manual copy remains readonly with rec
   await expect(copy).toBeFocused();
 });
 
-test('cards keep usage restrictions visible and disclose useful material differences', async ({ page }) => {
+test('cards keep usage restrictions visible and disclose useful material differences', async ({
+  page,
+}) => {
   await page.goto('/');
-  const gitlab = page.getByRole('article').filter({ has: page.getByRole('link', { name: '查看 GitLab Logo', exact: true }) });
+  const gitlab = page
+    .getByRole('article')
+    .filter({ has: page.getByRole('link', { name: '查看 GitLab Logo', exact: true }) });
   await expect(gitlab.getByText(/历史素材，不代表现行标识/)).toBeVisible();
   await expect.soft(gitlab.getByText(/仅限非商业用途/)).toBeVisible();
 
-  const zte = page.getByRole('article').filter({ has: page.getByRole('link', { name: '查看 中兴通讯 Logo', exact: true }) });
+  const zte = page
+    .getByRole('article')
+    .filter({ has: page.getByRole('link', { name: '查看 中兴通讯 Logo', exact: true }) });
   const disclosure = zte.locator('details');
   const summary = disclosure.locator('summary');
   await expect(summary).toBeVisible();
@@ -164,5 +217,6 @@ test('cards keep usage restrictions visible and disclose useful material differe
   await expect(page.locator('.asset-controls')).not.toContainText(materialNotes[0]);
   await sources.locator('summary').click();
   await expect(sources.locator('.asset-notes li')).toHaveText(materialNotes);
-  for (const note of await sources.locator('.asset-notes li').all()) await expect(note).toBeVisible();
+  for (const note of await sources.locator('.asset-notes li').all())
+    await expect(note).toBeVisible();
 });

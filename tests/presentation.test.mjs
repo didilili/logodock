@@ -3,13 +3,52 @@ import test from 'node:test';
 
 const presentation = () => import('../src/lib/catalog-presentation.mjs');
 const brands = [
-  { id: 'z', name: 'Zoo', aliases: ['动物园'], website: 'https://z.example/', entityType: 'company', categories: ['developer-tools'], defaultAsset: 'new.svg', assets: [
-    { file: 'old.png', path: 'logos/z/old.png', status: 'historical', label: '旧版图形', background: 'any', variant: 'icon' },
-    { file: 'new.svg', path: 'logos/z/new.svg', status: 'current', label: '现行图形', background: 'light', variant: 'icon' },
-  ] },
-  { id: 'a', name: 'Apple Society', aliases: [], website: 'https://a.example/', entityType: 'organization', categories: [], defaultAsset: 'old.png', assets: [
-    { file: 'old.png', path: 'logos/a/old.png', status: 'historical', label: '历史图形', background: 'any', variant: 'icon' },
-  ] },
+  {
+    id: 'z',
+    name: 'Zoo',
+    aliases: ['动物园'],
+    website: 'https://z.example/',
+    entityType: 'company',
+    categories: ['developer-tools'],
+    defaultAsset: 'new.svg',
+    assets: [
+      {
+        file: 'old.png',
+        path: 'logos/z/old.png',
+        status: 'historical',
+        label: '旧版图形',
+        background: 'any',
+        variant: 'icon',
+      },
+      {
+        file: 'new.svg',
+        path: 'logos/z/new.svg',
+        status: 'current',
+        label: '现行图形',
+        background: 'light',
+        variant: 'icon',
+      },
+    ],
+  },
+  {
+    id: 'a',
+    name: 'Apple Society',
+    aliases: [],
+    website: 'https://a.example/',
+    entityType: 'organization',
+    categories: [],
+    defaultAsset: 'old.png',
+    assets: [
+      {
+        file: 'old.png',
+        path: 'logos/a/old.png',
+        status: 'historical',
+        label: '历史图形',
+        background: 'any',
+        variant: 'icon',
+      },
+    ],
+  },
 ];
 
 test('uses the declared default instead of asset order, including historical-only brands', async () => {
@@ -22,16 +61,28 @@ test('uses the declared default instead of asset order, including historical-onl
 
 test('generates only available entity and file-format filters', async () => {
   const { filterOptions } = await presentation();
-  assert.deepEqual(filterOptions(brands), { types: ['company', 'organization'], formats: ['PNG', 'SVG'] });
+  assert.deepEqual(filterOptions(brands), {
+    types: ['company', 'organization'],
+    formats: ['PNG', 'SVG'],
+  });
 });
 
 test('filters by actual file format and entity type while sorting real names', async () => {
   const { matchingBrands, defaultAsset } = await presentation();
   const result = matchingBrands(brands, { type: 'company', format: 'PNG', q: '动物园' });
-  assert.deepEqual(result.map((brand) => brand.id), ['z']);
-  assert.deepEqual(result[0].assets.map((asset) => asset.file), ['old.png']);
+  assert.deepEqual(
+    result.map((brand) => brand.id),
+    ['z'],
+  );
+  assert.deepEqual(
+    result[0].assets.map((asset) => asset.file),
+    ['old.png'],
+  );
   assert.equal(defaultAsset(result[0]).file, 'old.png');
-  assert.deepEqual(matchingBrands(brands, {}).map((brand) => brand.name), ['Apple Society', 'Zoo']);
+  assert.deepEqual(
+    matchingBrands(brands, {}).map((brand) => brand.name),
+    ['Apple Society', 'Zoo'],
+  );
   assert.equal(brands[0].assets.length, 2);
 });
 
@@ -44,19 +95,30 @@ test('directory previews select the matching file while brand-only searches reta
   assert.equal(directoryAsset(brands[0], '').file, 'new.svg');
   const filtered = matchingBrands(brands, { format: 'PNG', q: 'Zoo' });
   assert.equal(directoryAsset(filtered[0], 'Zoo').file, 'old.png');
-  assert.deepEqual(brands, before, 'Selecting a card preview must not rewrite brand defaults or original assets.');
+  assert.deepEqual(
+    brands,
+    before,
+    'Selecting a card preview must not rewrite brand defaults or original assets.',
+  );
 });
 
 test('restores query, filters, selected brand and selected file from a URL', async () => {
   const { readCatalogState } = await presentation();
-  assert.deepEqual(readCatalogState('https://example.com/logodock/?q=动物园&brand=z&asset=old.png&type=company&format=PNG', brands),
-    { q: '动物园', type: 'company', format: 'PNG', brandId: 'z', assetFile: 'old.png' });
+  assert.deepEqual(
+    readCatalogState(
+      'https://example.com/logodock/?q=动物园&brand=z&asset=old.png&type=company&format=PNG',
+      brands,
+    ),
+    { q: '动物园', type: 'company', format: 'PNG', brandId: 'z', assetFile: 'old.png' },
+  );
 });
 
 test('unknown URL selections and filters fall back to available content', async () => {
   const { readCatalogState } = await presentation();
-  assert.deepEqual(readCatalogState('https://example.com/?type=bad&format=EXE&brand=missing&asset=../x', brands),
-    { q: '', type: '', format: '', brandId: 'a', assetFile: 'old.png' });
+  assert.deepEqual(
+    readCatalogState('https://example.com/?type=bad&format=EXE&brand=missing&asset=../x', brands),
+    { q: '', type: '', format: '', brandId: 'a', assetFile: 'old.png' },
+  );
   const empty = readCatalogState('https://example.com/?q=missing&brand=z', brands);
   assert.equal(empty.brandId, '');
   assert.equal(empty.assetFile, '');
@@ -81,8 +143,47 @@ test('share URLs preserve the query and selected asset and round trip safely', a
 test('asset labels come from metadata and history status is not inferred from filenames', async () => {
   const { assetLabel, assetWarnings } = await presentation();
   assert.equal(assetLabel(brands[0].assets[0]), '旧版图形');
-  assert.match(assetWarnings({ status: 'historical', file: 'icon.svg', rights: { license: 'CC-BY-NC-SA-4.0' } }).join(' '), /历史.*非商业/);
-  assert.equal(assetWarnings({ status: 'current', file: 'icon-legacy.svg', rights: { license: 'MIT' } }).length, 0);
+  assert.match(
+    assetWarnings({
+      status: 'historical',
+      file: 'icon.svg',
+      rights: { license: 'CC-BY-NC-SA-4.0' },
+    }).join(' '),
+    /历史.*非商业/,
+  );
+  assert.equal(
+    assetWarnings({ status: 'current', file: 'icon-legacy.svg', rights: { license: 'MIT' } })
+      .length,
+    0,
+  );
+});
+
+test('asset warnings keep the first occurrence when metadata already warns about low resolution', async () => {
+  const { assetWarnings } = await presentation();
+  assert.deepEqual(
+    assetWarnings({
+      status: 'historical',
+      file: 'icon.png',
+      width: 128,
+      height: 64,
+      rights: { license: 'CC-BY-NC-SA-4.0' },
+      qualityNotes: [
+        '原图含白色背景',
+        '低分辨率原图，请留意实际像素尺寸',
+        '原图边缘存在裁切',
+        '历史素材，不代表现行标识',
+        '仅限非商业用途',
+        '原图含白色背景',
+      ],
+    }),
+    [
+      '历史素材，不代表现行标识',
+      '仅限非商业用途',
+      '原图含白色背景',
+      '低分辨率原图，请留意实际像素尺寸',
+      '原图边缘存在裁切',
+    ],
+  );
 });
 
 test('short version titles retain meaningful differences and leave original metadata intact', async () => {
@@ -101,7 +202,11 @@ test('short version titles retain meaningful differences and leave original meta
   for (const [label, expected] of cases) {
     const asset = { label, variant: 'logo' };
     assert.equal(assetDisplayLabel(asset), expected);
-    assert.equal(assetLabel(asset), label, 'Original names remain available to alt text and metadata consumers.');
+    assert.equal(
+      assetLabel(asset),
+      label,
+      'Original names remain available to alt text and metadata consumers.',
+    );
   }
   const { loadCatalog } = await import('../scripts/lib/catalog.mjs');
   for (const brand of (await loadCatalog()).brands) {
@@ -110,7 +215,10 @@ test('short version titles retain meaningful differences and leave original meta
       const label = assetDisplayLabel(asset).trim();
       assert.ok(label, `${brand.id}/${asset.file} still has a version title`);
       const version = `${assetFormat(asset)}: ${label}`;
-      assert.ok(!versions.has(version), `${brand.id}/${asset.file} needs a distinct title within the same format`);
+      assert.ok(
+        !versions.has(version),
+        `${brand.id}/${asset.file} needs a distinct title within the same format`,
+      );
       versions.add(version);
     }
   }
