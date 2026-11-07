@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 3,
+  "id": "git",
+  "name": "Git",
+  "aliases": [],
+  "identity": {
+    "nameZh": null,
+    "nameEn": "Git",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方身份来源",
+        "url": "https://git-scm.com/",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "官方身份来源",
+        "url": "https://git-scm.com/about/trademark",
+        "reviewedAt": "2026-11-07"
+      }
+    ]
+  },
+  "website": "https://git-scm.com/",
+  "entityType": "product",
+  "categories": [
+    "developer-tools"
+  ],
+  "defaultAsset": "icon-orange.svg",
+  "assets": [
+    {
+      "file": "icon-orange.svg",
+      "label": "官方橙色图标",
+      "variant": "icon",
+      "status": "current",
+      "background": "light",
+      "source": "https://raw.githubusercontent.com/git/git-scm.com/f8a81a6dffa8f80450f8688769f9a2a57de1f545/static/images/logos/downloads/Git-Icon-1788C.svg",
+      "sourcePage": "https://git-scm.com/community/logos",
+      "sha256": "1080a5430edb6278dc03e4b04efc16c8bed5b943408d648ad721a28836814220",
+      "bytes": 858,
+      "rights": {
+        "status": "permitted",
+        "license": "CC-BY-3.0",
+        "reference": "https://github.com/git/git-scm.com/blob/f8a81a6dffa8f80450f8688769f9a2a57de1f545/content/community/logos.html",
+        "attribution": "Git Logo by Jason Long, licensed under Creative Commons Attribution 3.0 Unported (CC BY 3.0): https://creativecommons.org/licenses/by/3.0/ . Original file, unmodified.",
+        "reviewedAt": "2026-11-07",
+        "notes": "Git 是版本控制软件产品；此处收录其官方产品标识原件，未修改。官方 Logo 下载页明确采用 CC BY 3.0，可在保留署名和许可链接的条件下再分发。Git 名称和 Logo 的商标权由 Software Freedom Conservancy 代表 Git 项目持有；版权许可不替代商标政策，使用时须遵循 https://git-scm.com/about/trademark ，不得暗示官方背书，商品销售等用途须另行取得许可。"
+      },
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original"
+      }
+    },
+    {
+      "file": "logo-color.svg",
+      "label": "官方双色组合标识",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://raw.githubusercontent.com/git/git-scm.com/f8a81a6dffa8f80450f8688769f9a2a57de1f545/static/images/logos/downloads/Git-Logo-2Color.svg",
+      "sourcePage": "https://git-scm.com/community/logos",
+      "sha256": "c5f6153fc8e226accca81b404961b2bc465baccfb8521d081799eaaf4be3379d",
+      "bytes": 2330,
+      "rights": {
+        "status": "permitted",
+        "license": "CC-BY-3.0",
+        "reference": "https://github.com/git/git-scm.com/blob/f8a81a6dffa8f80450f8688769f9a2a57de1f545/content/community/logos.html",
+        "attribution": "Git Logo by Jason Long, licensed under Creative Commons Attribution 3.0 Unported (CC BY 3.0): https://creativecommons.org/licenses/by/3.0/ . Original file, unmodified.",
+        "reviewedAt": "2026-11-07",
+        "notes": "Git 是版本控制软件产品；此处收录其官方产品标识原件，未修改。官方 Logo 下载页明确采用 CC BY 3.0，可在保留署名和许可链接的条件下再分发。Git 名称和 Logo 的商标权由 Software Freedom Conservancy 代表 Git 项目持有；版权许可不替代商标政策，使用时须遵循 https://git-scm.com/about/trademark ，不得暗示官方背书，商品销售等用途须另行取得许可。"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original"
+      }
+    },
+    {
+      "file": "logo-white.svg",
+      "label": "官方白色组合标识",
+      "variant": "logo",
+      "status": "current",
+      "background": "dark",
+      "source": "https://raw.githubusercontent.com/git/git-scm.com/f8a81a6dffa8f80450f8688769f9a2a57de1f545/static/images/logos/downloads/Git-Logo-White.svg",
+      "sourcePage": "https://git-scm.com/community/logos",
+      "sha256": "4b92d8fe6d9d7fa010a2cb526cb61bc9c7083678f7e9ffb5065d8b899817687f",
+      "bytes": 2312,
+      "rights": {
+        "status": "permitted",
+        "license": "CC-BY-3.0",
+        "reference": "https://github.com/git/git-scm.com/blob/f8a81a6dffa8f80450f8688769f9a2a57de1f545/content/community/logos.html",
+        "attribution": "Git Logo by Jason Long, licensed under Creative Commons Attribution 3.0 Unported (CC BY 3.0): https://creativecommons.org/licenses/by/3.0/ . Original file, unmodified.",
+        "reviewedAt": "2026-11-07",
+        "notes": "Git 是版本控制软件产品；此处收录其官方产品标识原件，未修改。官方 Logo 下载页明确采用 CC BY 3.0，可在保留署名和许可链接的条件下再分发。Git 名称和 Logo 的商标权由 Software Freedom Conservancy 代表 Git 项目持有；版权许可不替代商标政策，使用时须遵循 https://git-scm.com/about/trademark ，不得暗示官方背书，商品销售等用途须另行取得许可。"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original"
+      }
+    }
+  ]
+}

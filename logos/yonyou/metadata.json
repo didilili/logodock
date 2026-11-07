@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 3,
+  "id": "yonyou",
+  "name": "用友",
+  "aliases": [
+    "Yonyou",
+    "用友网络",
+    "用友网络科技股份有限公司",
+    "Yonyou Network Technology Co., Ltd."
+  ],
+  "identity": {
+    "nameZh": "用友",
+    "nameEn": "Yonyou",
+    "legalNames": [
+      {
+        "name": "用友网络科技股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.yonyou.com/about/company.html",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "name": "Yonyou Network Technology Co., Ltd.",
+        "language": "en",
+        "role": "company",
+        "source": "https://www.yonyou.com.hk/about-us/",
+        "reviewedAt": "2026-11-07"
+      }
+    ],
+    "sources": [
+      {
+        "label": "官方身份来源",
+        "url": "https://www.yonyou.com/about/company.html",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "官方身份来源",
+        "url": "https://www.yonyou.com.hk/about-us/",
+        "reviewedAt": "2026-11-07"
+      }
+    ]
+  },
+  "website": "https://www.yonyou.com/",
+  "entityType": "company",
+  "categories": [
+    "software",
+    "enterprise-software"
+  ],
+  "defaultAsset": "wordmark-red-transparent.png",
+  "assets": [
+    {
+      "file": "wordmark-red.jpg",
+      "label": "红色英文字标（Commons 原件）",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Yonyou_logo.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Yonyou_logo.jpg",
+      "sha256": "0f9c8256e507b0e08c7b5e7b23cffa5dc99e4669643dd3896e2a14f46c5ce795",
+      "bytes": 18221,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:Yonyou_logo.jpg&oldid=1279365656",
+        "attribution": "No copyright attribution required under the Wikimedia Commons PD-textlogo assessment. Source credit retained: 用友 / Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Yonyou_logo.jpg . Original file, unmodified.",
+        "reviewedAt": "2026-11-07",
+        "notes": "该文件页使用 PD-textlogo，依据是 Wikimedia Commons 对简单文字或几何图形未达到版权原创性门槛的公共领域判定，不是品牌方授予 Logo 的开放版权许可或再分发授权；不同法域的原创性判断可能不同。商标权及其他使用限制仍然保留，不得暗示官方背书。公司身份由 https://www.yonyou.com/about/company.html 及官网信息核对；当前全球官网 https://www.yonyou.com/global/ 使用 /global/static/logo.png 的同形红色 yonyou 英文字标。本文件仅收录公司英文版本，不是 YonBIP、YonSuite 等产品标识；中文官网另使用红色中文名与灰色英文名组合。 文件特征复核：此 JPG 原生尺寸为366×81，无透明通道，带白色背景；保留来源原件，不通过放大或改后缀充当高清透明图片。更高分辨率、透明及矢量版本尚待补齐。"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "original"
+      },
+      "qualityNotes": [
+        "366 × 81 像素的 JPEG，白色不透明背景，有压缩边缘。"
+      ]
+    },
+    {
+      "file": "wordmark-red-transparent.png",
+      "label": "红色英文字标（官方透明 PNG）",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original"
+      },
+      "source": "https://www.yonyou.com.hk/wp-content/uploads/2024/09/%E7%94%A8%E5%8F%8BEN-Logo.png",
+      "sourcePage": "https://www.yonyou.com.hk/%e7%94%a8%e5%8f%8ben-logo/",
+      "sha256": "166f110477f4a9fc981bda5973503114c2dc6a177b24fa64a7e8eceaa2078929",
+      "bytes": 2643,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:Yonyou_logo.jpg&oldid=1279365656",
+        "attribution": "Yonyou / 香港官网. Source: https://www.yonyou.com.hk/wp-content/uploads/2024/09/%E7%94%A8%E5%8F%8BEN-Logo.png . Original file, unmodified. Commons PD-textlogo assessment for the same simple English wordmark: https://commons.wikimedia.org/w/index.php?title=File:Yonyou_logo.jpg&oldid=1279365656 .",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权依据是 Commons 对同一简单英文 yonyou 字标作品的 PD-textlogo 判定；已逐一核对相同字形结构，不将该判定扩展至中文组合、云图形或产品标识。这不是品牌方的开放许可或官方再分发授权，官方站点仅证明文件来源与现行使用；不同法域的原创性判断可能不同。商标权及其他使用限制仍然保留，不得暗示官方背书。来源文件未裁切、改色、放大、重绘或清理 SVG。\n\n质量核验记录：\n- 686 × 139 像素透明 PNG；保留官方文件字节。"
+      },
+      "qualityNotes": [
+        "686 × 139 像素，透明背景。"
+      ]
+    },
+    {
+      "file": "wordmark-white.svg",
+      "label": "白色英文字标（官方 SVG）",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "dark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original"
+      },
+      "source": "https://www.yonyou.com.tw/wp-content/uploads/2021/06/yonyou-logo-white.svg",
+      "sourcePage": "https://www.yonyou.com.tw/",
+      "sha256": "aef353e800a3c9d3d5ecbcc721acca956f21f4aecc6d6192022b5cbf809a5e86",
+      "bytes": 2743,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:Yonyou_logo.jpg&oldid=1279365656",
+        "attribution": "Yonyou / 台湾官网. Source: https://www.yonyou.com.tw/wp-content/uploads/2021/06/yonyou-logo-white.svg . Original file, unmodified. Commons PD-textlogo assessment for the same simple English wordmark: https://commons.wikimedia.org/w/index.php?title=File:Yonyou_logo.jpg&oldid=1279365656 .",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权依据是 Commons 对同一简单英文 yonyou 字标作品的 PD-textlogo 判定；已逐一核对相同字形结构，不将该判定扩展至中文组合、云图形或产品标识。这不是品牌方的开放许可或官方再分发授权，官方站点仅证明文件来源与现行使用；不同法域的原创性判断可能不同。商标权及其他使用限制仍然保留，不得暗示官方背书。来源文件未裁切、改色、放大、重绘或清理 SVG。\n\n质量核验记录：\n- 原生路径 SVG，viewBox 0 0 125 25；透明背景，适合深色底。"
+      },
+      "qualityNotes": [
+        "透明背景，适合深色背景。"
+      ]
+    },
+    {
+      "file": "wordmark-white-transparent.png",
+      "label": "白色英文字标（官方透明 PNG）",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "dark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original"
+      },
+      "source": "https://yonyou.com.my/wp-content/uploads/2026/03/logo-1.png",
+      "sourcePage": "https://yonyou.com.my/?attachment_id=7193",
+      "sha256": "ad4e98ec8a11619ed6a4f760b900ebe0ad1aceb35ee9148fed1d44048cb7a660",
+      "bytes": 15078,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:Yonyou_logo.jpg&oldid=1279365656",
+        "attribution": "Yonyou / 马来西亚官网. Source: https://yonyou.com.my/wp-content/uploads/2026/03/logo-1.png . Original file, unmodified. Commons PD-textlogo assessment for the same simple English wordmark: https://commons.wikimedia.org/w/index.php?title=File:Yonyou_logo.jpg&oldid=1279365656 .",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权依据是 Commons 对同一简单英文 yonyou 字标作品的 PD-textlogo 判定；已逐一核对相同字形结构，不将该判定扩展至中文组合、云图形或产品标识。这不是品牌方的开放许可或官方再分发授权，官方站点仅证明文件来源与现行使用；不同法域的原创性判断可能不同。商标权及其他使用限制仍然保留，不得暗示官方背书。来源文件未裁切、改色、放大、重绘或清理 SVG。\n\n质量核验记录：\n- 1348 × 423 像素透明 PNG；原画布含透明留白，保留来源原件。"
+      },
+      "qualityNotes": [
+        "1348 × 423 像素，透明背景，画布含留白。"
+      ]
+    }
+  ]
+}

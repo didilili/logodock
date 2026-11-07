@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 3,
+  "id": "trip-com",
+  "name": "携程集团",
+  "aliases": [
+    "Trip.com Group",
+    "Trip.com Group Limited",
+    "携程集团有限公司"
+  ],
+  "identity": {
+    "nameZh": "携程集团",
+    "nameEn": "Trip.com Group",
+    "legalNames": [
+      {
+        "name": "Trip.com Group Limited",
+        "language": "en",
+        "role": "group",
+        "source": "https://investors.trip.com/",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "name": "携程集团有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://investors.trip.com/zh-hans/news-releases/news-release-details/tripcom-group-limited-reports-unaudited-fourth-quarter-and-5/",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "name": "Trip.com Travel Singapore Pte. Ltd.",
+        "language": "en",
+        "role": "website-operator",
+        "source": "https://group.trip.com/",
+        "reviewedAt": "2026-11-07"
+      }
+    ],
+    "sources": [
+      {
+        "label": "携程集团官网",
+        "url": "https://group.trip.com/",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "官方中文2025全年业绩公告（2026-02-25）",
+        "url": "https://investors.trip.com/zh-hans/news-releases/news-release-details/tripcom-group-limited-reports-unaudited-fourth-quarter-and-5/",
+        "reviewedAt": "2026-11-07"
+      }
+    ]
+  },
+  "website": "https://group.trip.com/",
+  "entityType": "company",
+  "categories": [
+    "internet"
+  ],
+  "defaultAsset": "wordmark-color.svg",
+  "artworks": [
+    {
+      "id": "wordmark-color-group",
+      "label": "彩色集团字标",
+      "files": [
+        "wordmark-color.png",
+        "wordmark-color.svg"
+      ],
+      "defaultAsset": "wordmark-color.svg"
+    }
+  ],
+  "assets": [
+    {
+      "file": "wordmark-color.png",
+      "label": "英文集团文字标识 · PNG（Commons 渲染）",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Trip.com_Group_logo.svg/1280px-Trip.com_Group_logo.svg.png",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Trip.com_Group_logo.svg",
+      "sha256": "fda8b0003738f1d7e03e3297bf6f4e35e025bf63f2569a814785b3ee0677a289",
+      "bytes": 25433,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3ATrip.com_Group_logo.svg&oldid=1245285677",
+        "attribution": "No copyright attribution required by the Commons PD-textlogo designation. Logo attributed to 携程集团; trademark rights remain with the respective owner.",
+        "reviewedAt": "2026-11-07",
+        "notes": "分发依据为 Wikimedia Commons 对该具体标识的简单图形/文字公共领域判定（PD-textlogo），不是品牌方的再分发授权。该判定不授予商标权，相关商标权保留；使用时不得暗示品牌方背书。 保存 Commons 文件页正式提供的 PNG 渲染下载，原样保存，未自行修改图形、颜色、比例或透明背景。此项标识含 Group，为携程集团公司标识，非 Trip.com 预订产品标识。公司身份与集团字样已对照 https://group.trip.com/ 和 https://group.trip.com/about/story 核对；集团官网当前页首使用同字形的反白版本。"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "rendered"
+      }
+    },
+    {
+      "file": "wordmark-color.svg",
+      "label": "集团彩色文字标识 · SVG（Commons 原件）",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Trip.com_Group_logo.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Trip.com_Group_logo.svg",
+      "sha256": "bff6216b4ac67ddacd0752cb71df60be9507e6516302f1b956f0d136a4149dd4",
+      "bytes": 3932,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3ATrip.com_Group_logo.svg&oldid=1245285677",
+        "attribution": "No copyright attribution required by the Commons PD-textlogo designation. Logo attributed to 携程集团; trademark rights remain with the respective owner.",
+        "reviewedAt": "2026-11-07",
+        "notes": "依据所引 Wikimedia Commons 对该具体文件的 PD-textlogo 公共领域判定收录；这是第三方对简单文字或几何图形的判断，不是品牌方授予的再分发许可，商标权及其他使用限制仍保留。保存该文件页提供的 SVG 原始字节，未清洗、改色、裁切或重绘；此 SVG 由路径等矢量图形组成，不是内嵌位图容器。"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "original"
+      }
+    }
+  ]
+}

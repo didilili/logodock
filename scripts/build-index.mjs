@@ -12,7 +12,7 @@ function resourceTable(catalog) {
   const rows = ['| 预览 | 品牌 | 文件 / 类型 | 许可 | 说明 |', '| --- | --- | --- | --- | --- |'];
   for (const brand of catalog.brands) for (const asset of brand.assets) {
     const path = assetUrl(asset.path);
-    rows.push(`| <img src="${path}" alt="${brand.id}" width="64" height="64"> | ${escapeText(brand.name)} | `
+    rows.push(`| <img src="${path}" alt="${brand.id}" width="64"> | ${escapeText(brand.name)} | `
       + `[${escapeText(asset.file)}](${path}) / ${asset.variant} | `
       + `[${escapeText(asset.rights.license)}](${externalUrl(asset.rights.reference)}) | ${escapeText(asset.rights.notes ?? '')} |`);
   }

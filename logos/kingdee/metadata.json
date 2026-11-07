@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 3,
+  "id": "kingdee",
+  "name": "金蝶",
+  "aliases": [
+    "Kingdee",
+    "金蝶国际",
+    "Kingdee International Software Group",
+    "金蝶国际软件集团有限公司",
+    "Kingdee International Software Group Company Limited"
+  ],
+  "identity": {
+    "nameZh": "金蝶",
+    "nameEn": "Kingdee",
+    "legalNames": [
+      {
+        "name": "金蝶国际软件集团有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://www.kingdee.com/company",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "name": "Kingdee International Software Group Company Limited",
+        "language": "en",
+        "role": "group",
+        "source": "https://www.kingdee.com/global/company-information/",
+        "reviewedAt": "2026-11-07"
+      }
+    ],
+    "sources": [
+      {
+        "label": "官方身份来源",
+        "url": "https://www.kingdee.com/company",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "官方身份来源",
+        "url": "https://www.kingdee.com/global/company-information/",
+        "reviewedAt": "2026-11-07"
+      }
+    ]
+  },
+  "website": "https://www.kingdee.com/",
+  "entityType": "company",
+  "categories": [
+    "software",
+    "enterprise-software"
+  ],
+  "defaultAsset": "logo-color-english.jpg",
+  "assets": [
+    {
+      "file": "logo-color-english.jpg",
+      "label": "四色圆点英文组合标识（Commons 原件）",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Kingdee_logo_wiki.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Kingdee_logo_wiki.jpg",
+      "sha256": "d7b291e6d80c24aa28774c418ac16b3a12210f1853f5445c9bd8d28ce8a626c8",
+      "bytes": 756221,
+      "rights": {
+        "status": "permitted",
+        "license": "CC-BY-SA-4.0",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:Kingdee_logo_wiki.jpg&oldid=1271741533",
+        "attribution": "Aiko Chung Kingdee. Kingdee logo wiki.jpg. Wikimedia Commons. Licensed under Creative Commons Attribution-ShareAlike 4.0 International: https://creativecommons.org/licenses/by-sa/4.0/ . Source: https://commons.wikimedia.org/wiki/File:Kingdee_logo_wiki.jpg . Original file, unmodified.",
+        "reviewedAt": "2026-11-07",
+        "notes": "按 CC BY-SA 4.0 保留作者署名、文件来源与许可链接，注明未修改；若改编需按相同或兼容许可分享。此逐文件版权许可不转让商标权，也不代表公司背书。Commons 文件描述为 Kingdee Cloud ERP Logo；公司官网 https://www.kingdee.com/newlist/42875 明确这套四色圆点加 Kingdee 字形是2017年发布的集团品牌标识，而非单个软件产品标识。核对日 https://www.kingdee.com/global/ 仍使用同形公司标识 https://global.kingdee.com/wp-content/uploads/2025/07/logo-scaled.png ，其 alt 为 Kingdee International Software Group；公司身份见 https://www.kingdee.com/global/company-information/ 。许可依据为 Commons 上传者对该具体文件的 CC BY-SA 4.0 声明，未推断为全品牌开放授权。 文件特征复核：此 JPG 原生尺寸为2528×1371，采用 CMYK / Coated FOGRA39 (ISO 12647-2:2004) 色彩配置，无透明通道且有明显白底留白。它是按来源保留的原件，不是透明 PNG 或 sRGB 网页优化输出；适合网页的透明版本需另取可靠来源并核对分发条件。"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "original"
+      },
+      "qualityNotes": [
+        "CMYK JPEG，白色不透明背景；显示效果受色彩管理影响。",
+        "原画布含较多留白。"
+      ]
+    }
+  ]
+}

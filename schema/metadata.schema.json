@@ -1,0 +1,401 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LogoDock brand metadata v3",
+  "description": "Public, reviewed metadata. File integrity, default selection and parent graph invariants are checked by the catalog loader.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "name",
+    "aliases",
+    "website",
+    "identity",
+    "entityType",
+    "categories",
+    "defaultAsset",
+    "assets"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "integer",
+      "const": 3
+    },
+    "id": {
+      "$ref": "#/$defs/id"
+    },
+    "name": {
+      "$ref": "#/$defs/nonemptyString"
+    },
+    "aliases": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/nonemptyString"
+      }
+    },
+    "website": {
+      "$ref": "#/$defs/httpsUrl"
+    },
+    "entityType": {
+      "type": "string",
+      "enum": [
+        "company",
+        "product",
+        "organization"
+      ],
+      "default": "company"
+    },
+    "categories": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/nonemptyString"
+      }
+    },
+    "parentId": {
+      "$ref": "#/$defs/id"
+    },
+    "defaultAsset": {
+      "$ref": "#/$defs/imageFile"
+    },
+    "assets": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/asset"
+      }
+    },
+    "identity": {
+      "$ref": "#/$defs/identity"
+    },
+    "artworks": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Reviewed visual artwork groups. Files not listed here remain independent choices.",
+      "items": {
+        "$ref": "#/$defs/artwork"
+      }
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "nonemptyString": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "httpsUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://[^\\s\\\\]+$"
+    },
+    "imageFile": {
+      "type": "string",
+      "pattern": "^(?!\\.)[^/\\\\:\\u0000-\\u001f]+\\.(svg|png|webp|jpg)$"
+    },
+    "rights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "license",
+        "reference",
+        "attribution",
+        "reviewedAt"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "permitted"
+          ]
+        },
+        "license": {
+          "$ref": "#/$defs/nonemptyString"
+        },
+        "reference": {
+          "$ref": "#/$defs/httpsUrl"
+        },
+        "attribution": {
+          "$ref": "#/$defs/nonemptyString"
+        },
+        "reviewedAt": {
+          "$ref": "#/$defs/reviewDate"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "file",
+        "label",
+        "variant",
+        "status",
+        "background",
+        "source",
+        "sourcePage",
+        "sha256",
+        "bytes",
+        "rights",
+        "language",
+        "layout",
+        "color",
+        "provenance"
+      ],
+      "properties": {
+        "file": {
+          "$ref": "#/$defs/imageFile"
+        },
+        "label": {
+          "$ref": "#/$defs/nonemptyString"
+        },
+        "variant": {
+          "type": "string",
+          "enum": [
+            "icon",
+            "wordmark",
+            "logo"
+          ],
+          "default": "icon"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "current",
+            "historical"
+          ],
+          "default": "current"
+        },
+        "background": {
+          "type": "string",
+          "enum": [
+            "light",
+            "dark",
+            "any"
+          ],
+          "default": "any"
+        },
+        "source": {
+          "$ref": "#/$defs/httpsUrl"
+        },
+        "sourcePage": {
+          "$ref": "#/$defs/httpsUrl"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "rights": {
+          "$ref": "#/$defs/rights"
+        },
+        "language": {
+          "type": "string",
+          "enum": [
+            "none",
+            "zh",
+            "en",
+            "bilingual"
+          ],
+          "default": "none"
+        },
+        "layout": {
+          "type": "string",
+          "enum": [
+            "standalone",
+            "horizontal",
+            "vertical"
+          ],
+          "default": "standalone"
+        },
+        "color": {
+          "type": "string",
+          "enum": [
+            "brand",
+            "black",
+            "white",
+            "monochrome",
+            "other"
+          ],
+          "default": "brand"
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        },
+        "qualityNotes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/nonemptyString"
+          }
+        }
+      }
+    },
+    "reviewDate": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "localizedName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "legalName": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "language",
+        "role",
+        "source",
+        "reviewedAt"
+      ],
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/nonemptyString"
+        },
+        "language": {
+          "type": "string",
+          "enum": [
+            "zh",
+            "en",
+            "de"
+          ]
+        },
+        "role": {
+          "type": "string",
+          "enum": [
+            "group",
+            "operating-company",
+            "website-operator",
+            "company",
+            "organization"
+          ]
+        },
+        "source": {
+          "$ref": "#/$defs/httpsUrl"
+        },
+        "reviewedAt": {
+          "$ref": "#/$defs/reviewDate"
+        }
+      }
+    },
+    "identitySource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "url",
+        "reviewedAt"
+      ],
+      "properties": {
+        "label": {
+          "$ref": "#/$defs/nonemptyString"
+        },
+        "url": {
+          "$ref": "#/$defs/httpsUrl"
+        },
+        "reviewedAt": {
+          "$ref": "#/$defs/reviewDate"
+        }
+      }
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "nameZh",
+        "nameEn",
+        "legalNames",
+        "sources"
+      ],
+      "properties": {
+        "nameZh": {
+          "$ref": "#/$defs/localizedName"
+        },
+        "nameEn": {
+          "$ref": "#/$defs/localizedName"
+        },
+        "legalNames": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/legalName"
+          }
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/identitySource"
+          }
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourceType",
+        "processing"
+      ],
+      "properties": {
+        "sourceType": {
+          "type": "string",
+          "enum": [
+            "official",
+            "commons"
+          ]
+        },
+        "processing": {
+          "type": "string",
+          "enum": [
+            "original",
+            "rendered"
+          ]
+        }
+      }
+    },
+    "artwork": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "label",
+        "files",
+        "defaultAsset"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "label": {
+          "$ref": "#/$defs/nonemptyString"
+        },
+        "files": {
+          "type": "array",
+          "minItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/imageFile"
+          }
+        },
+        "defaultAsset": {
+          "$ref": "#/$defs/imageFile"
+        }
+      }
+    }
+  }
+}

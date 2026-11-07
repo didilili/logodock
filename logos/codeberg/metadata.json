@@ -1,10 +1,74 @@
 {
+  "schemaVersion": 3,
   "id": "codeberg",
   "name": "Codeberg e.V.",
   "aliases": [
     "Codeberg"
   ],
+  "identity": {
+    "nameZh": null,
+    "nameEn": "Codeberg",
+    "legalNames": [
+      {
+        "name": "Codeberg e.V.",
+        "language": "de",
+        "role": "organization",
+        "source": "https://docs.codeberg.org/getting-started/what-is-codeberg/",
+        "reviewedAt": "2026-11-07"
+      }
+    ],
+    "sources": [
+      {
+        "label": "官方身份来源",
+        "url": "https://docs.codeberg.org/getting-started/what-is-codeberg/",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "官方身份来源",
+        "url": "https://codeberg.org/Codeberg/Design/raw/branch/main/README.md",
+        "reviewedAt": "2026-11-07"
+      }
+    ]
+  },
   "website": "https://codeberg.org/",
+  "artworks": [
+    {
+      "id": "icon-blue",
+      "label": "蓝色图形",
+      "files": [
+        "icon-blue.png",
+        "icon-blue.svg"
+      ],
+      "defaultAsset": "icon-blue.svg"
+    },
+    {
+      "id": "icon-white",
+      "label": "白色图形",
+      "files": [
+        "icon-white.png",
+        "icon-white.svg"
+      ],
+      "defaultAsset": "icon-white.svg"
+    },
+    {
+      "id": "logo-vertical-blue",
+      "label": "蓝色竖版组合标识",
+      "files": [
+        "logo-vertical-blue.png",
+        "logo-vertical-blue.svg"
+      ],
+      "defaultAsset": "logo-vertical-blue.svg"
+    },
+    {
+      "id": "logo-vertical-white",
+      "label": "白色竖版组合标识",
+      "files": [
+        "logo-vertical-white.png",
+        "logo-vertical-white.svg"
+      ],
+      "defaultAsset": "logo-vertical-white.svg"
+    }
+  ],
   "assets": [
     {
       "file": "icon-blue.png",
@@ -20,6 +84,16 @@
         "attribution": "Logo by Robert Martinez; published by Codeberg e.V.",
         "reviewedAt": "2026-11-06",
         "notes": "原始蓝色版本，未修改。Codeberg e.V. 是非营利组织，此处收录其组织品牌。素材版权采用 CC0；Codeberg 名称与 Logo 商标权保留。遵循官方品牌指南，不变形、不自定义染色，深色背景请选择官方白色版本。"
+      },
+      "label": "官方蓝色图标",
+      "status": "current",
+      "background": "light",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original"
       }
     },
     {
@@ -36,7 +110,179 @@
         "attribution": "Logo by Robert Martinez; published by Codeberg e.V.",
         "reviewedAt": "2026-11-06",
         "notes": "原始蓝色版本，未修改。Codeberg e.V. 是非营利组织，此处收录其组织品牌。素材版权采用 CC0；Codeberg 名称与 Logo 商标权保留。遵循官方品牌指南，不变形、不自定义染色，深色背景请选择官方白色版本。"
+      },
+      "label": "官方蓝色竖版组合标识",
+      "status": "current",
+      "background": "light",
+      "language": "en",
+      "layout": "vertical",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original"
+      }
+    },
+    {
+      "file": "icon-white.png",
+      "label": "官方白色图标",
+      "variant": "icon",
+      "status": "current",
+      "background": "dark",
+      "source": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/logo/icon/png/codeberg-logo_icon_white-512x512.png",
+      "sourcePage": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
+      "sha256": "6faf35af558e958d6d4f8261c895fce0a9999bf538c88b9759c2a015dcb64b1d",
+      "bytes": 14405,
+      "rights": {
+        "status": "permitted",
+        "license": "CC0-1.0",
+        "reference": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
+        "attribution": "Logo by Robert Martinez; published by Codeberg e.V.",
+        "reviewedAt": "2026-11-07",
+        "notes": "官方原始白色版本，未修改；适合深色背景。素材版权采用 CC0；Codeberg 名称与 Logo 商标权保留。遵循官方品牌指南，不变形、不自行染色。"
+      },
+      "language": "none",
+      "layout": "standalone",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original"
+      }
+    },
+    {
+      "file": "logo-vertical-white.png",
+      "label": "官方白色竖版组合标识",
+      "variant": "logo",
+      "status": "current",
+      "background": "dark",
+      "source": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/logo/vertical/png/codeberg-logo_vertical_white-512x512.png",
+      "sourcePage": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
+      "sha256": "6b898560e80e02e2b4519f4ac414b35583d1eda70cbd922fbaed84a600766ca5",
+      "bytes": 15807,
+      "rights": {
+        "status": "permitted",
+        "license": "CC0-1.0",
+        "reference": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
+        "attribution": "Logo by Robert Martinez; published by Codeberg e.V.",
+        "reviewedAt": "2026-11-07",
+        "notes": "官方原始白色版本，未修改；适合深色背景。素材版权采用 CC0；Codeberg 名称与 Logo 商标权保留。遵循官方品牌指南，不变形、不自行染色。"
+      },
+      "language": "en",
+      "layout": "vertical",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original"
+      }
+    },
+    {
+      "file": "icon-blue.svg",
+      "label": "官方蓝色矢量图标",
+      "variant": "icon",
+      "status": "current",
+      "background": "light",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original"
+      },
+      "source": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/logo/icon/svg/codeberg-logo_icon_blue.svg",
+      "sourcePage": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
+      "sha256": "62ef326a0fdfdfd4a5f54fb96d8ecf999b88adb470ddfd8b8e87a5069cb01fbf",
+      "bytes": 5909,
+      "rights": {
+        "status": "permitted",
+        "license": "CC0-1.0",
+        "reference": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
+        "attribution": "Logo by Robert Martinez; published by Codeberg e.V.",
+        "reviewedAt": "2026-11-07",
+        "notes": "官方原始蓝色 SVG，未修改；适合浅色背景，深色背景请选择官方白色版本。Codeberg e.V. 是非营利组织，此处收录其组织品牌。Design 仓库 README 与 LICENSE 明确采用 CC0；Codeberg 名称与 Logo 商标权保留。遵循官方品牌指南，不变形、不自行染色、不拆开重排组合标识。"
+      }
+    },
+    {
+      "file": "icon-white.svg",
+      "label": "官方白色矢量图标",
+      "variant": "icon",
+      "status": "current",
+      "background": "dark",
+      "language": "none",
+      "layout": "standalone",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original"
+      },
+      "source": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/logo/icon/svg/codeberg-logo_icon_white.svg",
+      "sourcePage": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
+      "sha256": "80d07ed966e2233089b11d3cbc17f0771b6f5b63ab3f489cdc61be00e7a5f7c5",
+      "bytes": 5908,
+      "rights": {
+        "status": "permitted",
+        "license": "CC0-1.0",
+        "reference": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
+        "attribution": "Logo by Robert Martinez; published by Codeberg e.V.",
+        "reviewedAt": "2026-11-07",
+        "notes": "官方原始白色 SVG，未修改；适合深色背景。Codeberg e.V. 是非营利组织，此处收录其组织品牌。Design 仓库 README 与 LICENSE 明确采用 CC0；Codeberg 名称与 Logo 商标权保留。遵循官方品牌指南，不变形、不自行染色、不拆开重排组合标识。"
+      }
+    },
+    {
+      "file": "logo-vertical-blue.svg",
+      "label": "官方蓝色矢量竖版组合标识",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "language": "en",
+      "layout": "vertical",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original"
+      },
+      "source": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/logo/vertical/svg/codeberg-logo_vertical_blue.svg",
+      "sourcePage": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
+      "sha256": "c4bc197a0ffbd8f6d77ee84d78d5d9ad4fbaf19b1b836b2faee2d3cfe0f0415e",
+      "bytes": 10416,
+      "rights": {
+        "status": "permitted",
+        "license": "CC0-1.0",
+        "reference": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
+        "attribution": "Logo by Robert Martinez; published by Codeberg e.V.",
+        "reviewedAt": "2026-11-07",
+        "notes": "官方原始蓝色 SVG，未修改；适合浅色背景，深色背景请选择官方白色版本。Codeberg e.V. 是非营利组织，此处收录其组织品牌。Design 仓库 README 与 LICENSE 明确采用 CC0；Codeberg 名称与 Logo 商标权保留。遵循官方品牌指南，不变形、不自行染色、不拆开重排组合标识。"
+      }
+    },
+    {
+      "file": "logo-vertical-white.svg",
+      "label": "官方白色矢量竖版组合标识",
+      "variant": "logo",
+      "status": "current",
+      "background": "dark",
+      "language": "en",
+      "layout": "vertical",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original"
+      },
+      "source": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/logo/vertical/svg/codeberg-logo_vertical_white.svg",
+      "sourcePage": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
+      "sha256": "9077f086124c78910a8e1e0e17955eccde690a24de4483c821158ea7864a5c4d",
+      "bytes": 9975,
+      "rights": {
+        "status": "permitted",
+        "license": "CC0-1.0",
+        "reference": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
+        "attribution": "Logo by Robert Martinez; published by Codeberg e.V.",
+        "reviewedAt": "2026-11-07",
+        "notes": "官方原始白色 SVG，未修改；适合深色背景。Codeberg e.V. 是非营利组织，此处收录其组织品牌。Design 仓库 README 与 LICENSE 明确采用 CC0；Codeberg 名称与 Logo 商标权保留。遵循官方品牌指南，不变形、不自行染色、不拆开重排组合标识。"
       }
     }
-  ]
+  ],
+  "entityType": "organization",
+  "categories": [
+    "code-hosting",
+    "developer-tools"
+  ],
+  "defaultAsset": "icon-blue.svg"
 }

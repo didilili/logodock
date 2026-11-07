@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 3,
+  "id": "bytedance",
+  "name": "字节跳动",
+  "aliases": [
+    "ByteDance"
+  ],
+  "identity": {
+    "nameZh": "字节跳动",
+    "nameEn": "ByteDance",
+    "legalNames": [
+      {
+        "name": "Bytedance Ltd",
+        "language": "en",
+        "role": "website-operator",
+        "source": "https://lf3-static.bytednsdoc.com/obj/eden-cn/shjpmmv_ljuhklafi/ljhwZthlaukjlkulzlp/files/PrivacyPolicy_ByteDance.com.pdf",
+        "reviewedAt": "2026-11-07"
+      }
+    ],
+    "sources": [
+      {
+        "label": "字节跳动官网（中/英）",
+        "url": "https://www.bytedance.com/?locale=en",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "官网页脚隐私政策（2021-03-16版）",
+        "url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/shjpmmv_ljuhklafi/ljhwZthlaukjlkulzlp/files/PrivacyPolicy_ByteDance.com.pdf",
+        "reviewedAt": "2026-11-07"
+      }
+    ]
+  },
+  "website": "https://www.bytedance.com/",
+  "entityType": "company",
+  "categories": [
+    "internet"
+  ],
+  "defaultAsset": "logo-english.svg",
+  "artworks": [
+    {
+      "id": "logo-color-english",
+      "label": "彩色英文组合标识",
+      "files": [
+        "logo-english.png",
+        "logo-english.svg"
+      ],
+      "defaultAsset": "logo-english.svg"
+    }
+  ],
+  "assets": [
+    {
+      "file": "logo-english.png",
+      "label": "英文彩色组合标识 · PNG（Commons 渲染）",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/ByteDance_logo_English.svg/1280px-ByteDance_logo_English.svg.png",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:ByteDance_logo_English.svg",
+      "sha256": "d7c8c58ac84bff71cf5d094913599b6fef91776c12bf4a5ec91acd0836a9bdb6",
+      "bytes": 29260,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AByteDance_logo_English.svg&oldid=1117279263",
+        "attribution": "No copyright attribution required by the Commons PD-textlogo designation. Logo attributed to 字节跳动; trademark rights remain with the respective owner.",
+        "reviewedAt": "2026-11-07",
+        "notes": "分发依据为 Wikimedia Commons 对该具体标识的简单图形/文字公共领域判定（PD-textlogo），不是品牌方的再分发授权。该判定不授予商标权，相关商标权保留；使用时不得暗示品牌方背书。 保存 Commons 文件页正式提供的 PNG 渲染下载，原样保存，未自行修改图形、颜色、比例或透明背景。公司身份与当前图形及英文字样已对照 https://www.bytedance.com/?locale=en 页首内嵌 Logo 核对；此项不是抖音、TikTok 或其他产品标识。"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "rendered"
+      }
+    },
+    {
+      "file": "logo-english.svg",
+      "label": "英文彩色组合标识 · SVG（Commons 原件）",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/0/07/ByteDance_logo_English.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:ByteDance_logo_English.svg",
+      "sha256": "062b0eb7f19fd38d590600a244e61b609c0f76d4578bf464c892b638abee86c2",
+      "bytes": 6886,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AByteDance_logo_English.svg&oldid=1117279263",
+        "attribution": "No copyright attribution required by the Commons PD-textlogo designation. Logo attributed to 字节跳动; trademark rights remain with the respective owner.",
+        "reviewedAt": "2026-11-07",
+        "notes": "依据所引 Wikimedia Commons 对该具体文件的 PD-textlogo 公共领域判定收录；这是第三方对简单文字或几何图形的判断，不是品牌方授予的再分发许可，商标权及其他使用限制仍保留。保存该文件页提供的 SVG 原始字节，未清洗、改色、裁切或重绘；此 SVG 由路径等矢量图形组成，不是内嵌位图容器。"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "original"
+      }
+    }
+  ]
+}

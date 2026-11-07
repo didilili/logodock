@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 3,
+  "id": "tencent",
+  "name": "腾讯",
+  "aliases": [
+    "Tencent",
+    "腾讯控股",
+    "Tencent Holdings Limited",
+    "腾讯控股有限公司"
+  ],
+  "identity": {
+    "nameZh": "腾讯",
+    "nameEn": "Tencent",
+    "legalNames": [
+      {
+        "name": "腾讯控股有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://www.tencent.com/zh-cn/investors/",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "name": "Tencent Holdings Limited",
+        "language": "en",
+        "role": "group",
+        "source": "https://www.tencent.com/investors/",
+        "reviewedAt": "2026-11-07"
+      }
+    ],
+    "sources": [
+      {
+        "label": "腾讯官方媒体资源",
+        "url": "https://www.tencent.com/zh-cn/newsroom/media-resources/",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "腾讯官方投资者页（中/英）",
+        "url": "https://www.tencent.com/zh-cn/investors/",
+        "reviewedAt": "2026-11-07"
+      }
+    ]
+  },
+  "website": "https://www.tencent.com/",
+  "entityType": "company",
+  "categories": [
+    "internet"
+  ],
+  "defaultAsset": "wordmark-blue-official.png",
+  "artworks": [
+    {
+      "id": "wordmark-blue-bilingual",
+      "label": "蓝色中英文字标",
+      "files": [
+        "wordmark-blue.png",
+        "wordmark-blue-official.png"
+      ],
+      "defaultAsset": "wordmark-blue-official.png"
+    }
+  ],
+  "assets": [
+    {
+      "file": "wordmark-blue.png",
+      "label": "蓝色中英文文字标识 · PNG（Commons 渲染）",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Tencent_logo_2017.svg/1280px-Tencent_logo_2017.svg.png",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Tencent_logo_2017.svg",
+      "sha256": "5da4c0faf03b7e812dd27dd2acb3c7d4c2db56727a8029b2d86afcfed545a674",
+      "bytes": 43216,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3ATencent_logo_2017.svg&oldid=1213564805",
+        "attribution": "No copyright attribution required by the Commons PD-textlogo designation. Logo attributed to 腾讯; trademark rights remain with the respective owner.",
+        "reviewedAt": "2026-11-07",
+        "notes": "分发依据为 Wikimedia Commons 对该具体标识的简单图形/文字公共领域判定（PD-textlogo），不是品牌方的再分发授权。该判定不授予商标权，相关商标权保留；使用时不得暗示品牌方背书。 保存 Commons 文件页正式提供的 PNG 渲染下载，原样保存，未自行修改图形、颜色、比例或透明背景。当前中英文蓝色文字样式与 https://www.tencent.com/zh-cn/newsroom/media-resources/ 的腾讯标识核对一致。腾讯官方媒体库注明其素材仅供媒体报道使用；本项未把该媒体库条款写成通用授权，而是采用 Commons 对此具体文件的 PD-textlogo 判定。"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "rendered"
+      }
+    },
+    {
+      "file": "wordmark-blue-official.png",
+      "label": "蓝色中英文文字标识 · 官方高清透明 PNG",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original"
+      },
+      "source": "https://www.tencent.com/wp-content/uploads/2022/12/01_Tencent_Standard-Logo.png",
+      "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/",
+      "sha256": "ceac8b3005bfe401edc8b157f400ce48e3e2dab910cf4b33b40a50e9c2d39a64",
+      "bytes": 99674,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3ATencent_logo_2017.svg&oldid=1213564805",
+        "attribution": "Tencent / 腾讯。保留官方文件来源及 Commons 对相同中英文字标的 PD-textlogo 判断；原文件未经修改，商标权保留。",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权收录依据为 Wikimedia Commons 对相同 Tencent + 腾讯中英文简单字标作品的 PD-textlogo 第三方公共领域判定；已比对斜体英文字形、箭头状 t、中文字形及横向构图，不扩展至其他组合、口号、企鹅图形或产品标识。该 Commons 判定不是本 PNG 的下载来源，也不是腾讯对本图库的开放许可或再分发授权；不同法域的原创性门槛可能不同。官方媒体页 https://www.tencent.com/zh-cn/newsroom/media-resources/ 明确素材仅供媒体报道使用，未将此条款解释为图库镜像授权。官方 https://www.tencent.com/zh-cn/legal-statement/ 保留版权，并说明超越合理使用范畴且未经书面许可的使用可能被追责；其商标声明说明未经许可使用相关注册商标或混淆性近似商标可能侵权。本项不授予商标权或对这些限制的豁免，不得暗示官方背书。文件直接下载原样保存，未裁切、放大、改色、重画或转换格式。\n\n质量核验记录：\n- 2953 × 889 像素官方透明 PNG 原件；实际字形包围框约 2763 × 370，保留较多上下透明留白，未裁切。\n- 原始不透明主色为 #0052D9；保留官方原色。"
+      },
+      "qualityNotes": [
+        "2953 × 889 像素，透明背景，上下留白较多。",
+        "蓝色为 #0052D9。"
+      ]
+    },
+    {
+      "file": "wordmark-black-official.png",
+      "label": "黑色中英文文字标识 · 官方高清透明 PNG",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "black",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original"
+      },
+      "source": "https://www.tencent.com/wp-content/uploads/2022/12/01_Tencent_Logo_Black.png",
+      "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/",
+      "sha256": "513b6d7ef272d915e27dcc325bbcf3d4200efb615aa06b4bd19476c85773c72b",
+      "bytes": 85380,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3ATencent_logo_2017.svg&oldid=1213564805",
+        "attribution": "Tencent / 腾讯。保留官方文件来源及 Commons 对相同中英文字标的 PD-textlogo 判断；原文件未经修改，商标权保留。",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权收录依据为 Wikimedia Commons 对相同 Tencent + 腾讯中英文简单字标作品的 PD-textlogo 第三方公共领域判定；已比对斜体英文字形、箭头状 t、中文字形及横向构图，不扩展至其他组合、口号、企鹅图形或产品标识。该 Commons 判定不是本 PNG 的下载来源，也不是腾讯对本图库的开放许可或再分发授权；不同法域的原创性门槛可能不同。官方媒体页 https://www.tencent.com/zh-cn/newsroom/media-resources/ 明确素材仅供媒体报道使用，未将此条款解释为图库镜像授权。官方 https://www.tencent.com/zh-cn/legal-statement/ 保留版权，并说明超越合理使用范畴且未经书面许可的使用可能被追责；其商标声明说明未经许可使用相关注册商标或混淆性近似商标可能侵权。本项不授予商标权或对这些限制的豁免，不得暗示官方背书。文件直接下载原样保存，未裁切、放大、改色、重画或转换格式。\n\n质量核验记录：\n- 2953 × 889 像素官方透明 PNG 原件；实际字形包围框约 2764 × 370，保留较多上下透明留白，未裁切。\n- 官方媒体页直接提供的黑色版本，非由其他图片在本地改色生成。"
+      },
+      "qualityNotes": [
+        "2953 × 889 像素，透明背景，上下留白较多。"
+      ]
+    },
+    {
+      "file": "wordmark-white-official.png",
+      "label": "白色中英文文字标识 · 官方高清透明 PNG",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "dark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original"
+      },
+      "source": "https://www.tencent.com/wp-content/uploads/2022/12/01_Tencent_Logo_Reverse-type.png",
+      "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/",
+      "sha256": "d1c36ec48ad68f1304ce3aba119bac1215f9c6c18db39ac432935e5bf1b56342",
+      "bytes": 98562,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3ATencent_logo_2017.svg&oldid=1213564805",
+        "attribution": "Tencent / 腾讯。保留官方文件来源及 Commons 对相同中英文字标的 PD-textlogo 判断；原文件未经修改，商标权保留。",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权收录依据为 Wikimedia Commons 对相同 Tencent + 腾讯中英文简单字标作品的 PD-textlogo 第三方公共领域判定；已比对斜体英文字形、箭头状 t、中文字形及横向构图，不扩展至其他组合、口号、企鹅图形或产品标识。该 Commons 判定不是本 PNG 的下载来源，也不是腾讯对本图库的开放许可或再分发授权；不同法域的原创性门槛可能不同。官方媒体页 https://www.tencent.com/zh-cn/newsroom/media-resources/ 明确素材仅供媒体报道使用，未将此条款解释为图库镜像授权。官方 https://www.tencent.com/zh-cn/legal-statement/ 保留版权，并说明超越合理使用范畴且未经书面许可的使用可能被追责；其商标声明说明未经许可使用相关注册商标或混淆性近似商标可能侵权。本项不授予商标权或对这些限制的豁免，不得暗示官方背书。文件直接下载原样保存，未裁切、放大、改色、重画或转换格式。\n\n质量核验记录：\n- 2953 × 889 像素官方透明 PNG 原件；实际字形包围框约 2764 × 371，保留较多上下透明留白，未裁切。\n- 官方媒体页直接提供的白色版本，非由其他图片在本地改色生成。"
+      },
+      "qualityNotes": [
+        "2953 × 889 像素，透明背景，上下留白较多。"
+      ]
+    }
+  ]
+}

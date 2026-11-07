@@ -13,7 +13,7 @@ const website = 'https://example.com/';
 const digest = (data) => createHash('sha256').update(data).digest('hex');
 
 async function fixture(t, ids = ['example']) {
-  const root = await mkdtemp(join(tmpdir(), 'company-logos-'));
+  const root = await mkdtemp(join(tmpdir(), 'logodock-'));
   t.after(() => rm(root, { recursive: true, force: true }));
   await mkdir(join(root, 'logos'));
   for (const id of ids) {
@@ -25,8 +25,11 @@ async function fixture(t, ids = ['example']) {
 
 async function asset(root, id, data, patch = {}) {
   const metadata = {
-    id, name: id, aliases: [], website,
-    assets: [{ file: 'icon.svg', variant: 'icon', source: website, sourcePage: website,
+    schemaVersion: 3, id, name: id, aliases: [], website,
+    identity: { nameZh: null, nameEn: null, legalNames: [], sources: [] },
+    entityType: 'company', categories: [], defaultAsset: 'icon.svg',
+    assets: [{ file: 'icon.svg', label: 'Current icon', variant: 'icon', status: 'current', background: 'any', language: 'none', layout: 'standalone', color: 'brand',
+      provenance: { sourceType: 'official', processing: 'original' }, source: website, sourcePage: website,
       sha256: digest(data), bytes: Buffer.byteLength(data), rights: {
         status: 'permitted', license: 'Example permission', reference: website,
         attribution: 'Example Company', reviewedAt: '2026-11-06',
@@ -47,16 +50,16 @@ async function mutate(root, change, id = 'example') {
 test('valid catalog preserves metadata and adds repository-relative asset paths', async (t) => {
   const root = await fixture(t);
   const result = await loader(root);
-  assert.equal(result.schemaVersion, 1);
+  assert.equal(result.schemaVersion, 3);
   assert.equal(result.brands[0].assets[0].path, 'logos/example/icon.svg');
   assert.equal(result.brands[0].assets[0].rights.status, 'permitted');
 });
 
 test('empty logos directory is a valid initialization state', async (t) => {
   const root = await fixture(t, []);
-  assert.deepEqual(await loader(root), { schemaVersion: 1, brands: [] });
+  assert.deepEqual(await loader(root), { schemaVersion: 3, brands: [] });
   await writeFile(join(root, 'logos/.gitkeep'), '');
-  assert.deepEqual(await loader(root), { schemaVersion: 1, brands: [] });
+  assert.deepEqual(await loader(root), { schemaVersion: 3, brands: [] });
   await writeFile(join(root, 'logos/.gitkeep'), 'hidden content');
   await assert.rejects(loader(root), /Invalid catalog:/);
 });
@@ -137,9 +140,10 @@ test('raster extensions require matching format signatures and basic headers', a
       const root = await fixture(t);
       await rm(join(root, 'logos/example/icon.svg'));
       await writeFile(join(root, `logos/example/icon.${extension}`), data);
-      await mutate(root, (meta) => Object.assign(meta.assets[0], {
-        file: `icon.${extension}`, bytes: data.length, sha256: digest(data),
-      }));
+      await mutate(root, (meta) => {
+        meta.defaultAsset = `icon.${extension}`;
+        Object.assign(meta.assets[0], { file: `icon.${extension}`, bytes: data.length, sha256: digest(data) });
+      });
       if (data === valid) assert.equal((await loader(root)).brands.length, 1);
       else await assert.rejects(loader(root), /image header/i);
     }
@@ -200,8 +204,8 @@ test('rejects malformed SVG, DTD declarations, and processing instructions', asy
   }
 });
 
-test('rejects active SVG elements, event handlers, CSS, and foreign namespaces', async (t) => {
-  for (const body of ['<script/>', '<foreignObject/>', '<animate/>', '<style>path{fill:red}</style>', '<path onload="alert(1)"/>', '<path style="fill:red"/>', '<x:path xmlns:x="https://evil.example"/>']) {
+test('rejects active SVG elements, event handlers, unsafe CSS, and foreign namespaces', async (t) => {
+  for (const body of ['<script/>', '<foreignObject/>', '<animate/>', '<style>@import "https://example.com/x.css";</style>', '<path onload="alert(1)"/>', '<path style="fill:url(https://example.com/x)"/>', '<x:path xmlns:x="https://evil.example"/>']) {
     const root = await fixture(t);
     await asset(root, 'example', `<svg xmlns="http://www.w3.org/2000/svg">${body}</svg>`);
     await assert.rejects(loader(root), /svg/i);
@@ -225,6 +229,7 @@ test('allows fragment references and embedded PNG images in passive SVG', async 
 test('build-index --check detects stale index and scripts work outside repository CWD', async (t) => {
   const root = await fixture(t);
   await cp(new URL('../scripts', import.meta.url), join(root, 'scripts'), { recursive: true });
+  await cp(new URL('../schema', import.meta.url), join(root, 'schema'), { recursive: true });
   await symlink(new URL('../node_modules', import.meta.url).pathname, join(root, 'node_modules'));
   const build = join(root, 'scripts/build-index.mjs');
   const validate = join(root, 'scripts/validate.mjs');
@@ -236,13 +241,15 @@ test('build-index --check detects stale index and scripts work outside repositor
   await mutate(root, (meta) => {
     meta.name = 'Example | <img src=x>\n**bold**';
     meta.assets[0].file = unusualFile;
+    meta.defaultAsset = unusualFile;
     meta.assets[0].rights.license = 'License | [inject](javascript:alert(1))';
     meta.assets[0].rights.notes = 'Historical | <script>\nUse conditions';
   });
   const built = spawnSync(process.execPath, [build], { cwd: tmpdir(), encoding: 'utf8' });
   assert.equal(built.status, 0, built.stderr);
   const generated = await readFile(join(root, 'README.md'), 'utf8');
-  assert.match(generated, /width="64" height="64"/);
+  assert.match(generated, /width="64">/);
+  assert.doesNotMatch(generated, /height="64"/);
   assert.match(generated, /logos\/example\/icon%20%22%281%29.svg/);
   assert.match(generated, /Historical &#124; &lt;script&gt; Use conditions/);
   assert.doesNotMatch(generated, /<img src=x>|\*\*bold\*\*|\[inject\]\(javascript:/);

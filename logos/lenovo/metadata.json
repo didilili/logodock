@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 3,
+  "id": "lenovo",
+  "name": "联想",
+  "aliases": [
+    "Lenovo",
+    "联想集团",
+    "Lenovo Group Limited"
+  ],
+  "identity": {
+    "nameZh": "联想",
+    "nameEn": "Lenovo",
+    "legalNames": [
+      {
+        "name": "聯想集團有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://investor.lenovo.com/en/cg/pdf/articles_of_association.pdf",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "name": "Lenovo Group Limited",
+        "language": "en",
+        "role": "group",
+        "source": "https://investor.lenovo.com/en/cg/pdf/articles_of_association.pdf",
+        "reviewedAt": "2026-11-07"
+      }
+    ],
+    "sources": [
+      {
+        "label": "联想2025年7月17日公司章程",
+        "url": "https://investor.lenovo.com/en/cg/pdf/articles_of_association.pdf",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "联想IR公司资料",
+        "url": "https://investor.lenovo.com/tc/about/corpinfo.php",
+        "reviewedAt": "2026-11-07"
+      }
+    ]
+  },
+  "website": "https://www.lenovo.com/",
+  "entityType": "company",
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "logo-red-official.svg",
+  "assets": [
+    {
+      "file": "logo-red-2015.png",
+      "label": "2015 红底白字标识 · PNG（Commons 渲染）",
+      "variant": "logo",
+      "status": "current",
+      "background": "any",
+      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Lenovo_%282015%29.svg/1280px-Lenovo_%282015%29.svg.png",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Lenovo_(2015).svg",
+      "sha256": "a3166258aadb1cb645d55b82f4153e22ee1fac7f721a6b613160d4b42df61eef",
+      "bytes": 12525,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3ALenovo_%282015%29.svg&oldid=1251613811",
+        "attribution": "Lenovo Group Limited。Commons 文件页标记为公共领域，无版权署名要求；保留来源和商标声明。文件下载原样保存。",
+        "reviewedAt": "2026-11-07",
+        "notes": "依据 Wikimedia Commons 对该文件的 PD-textlogo（简单图形或文字未达到版权独创性门槛）公共领域判定收录；这是 Commons 的第三方判定，不是品牌方对本仓库的再分发授权。商标权仍归相关权利人，使用不得暗示官方背书。保存文件页正式提供的 1280px PNG（Commons 渲染）下载，未在本地转换、改色或裁切；原始 SVG：https://upload.wikimedia.org/wikipedia/commons/c/c9/Lenovo_%282015%29.svg 。2015 年启用的横向红底白字式样；现行官网品牌指南 https://brandworld.lenovo.com/visual-identity/logo/ 仍将 signature red Lenovo logo 列为首选标识，并提供相同字形和红色矩形结构。 配色复核：本 Commons PNG 红底主色为 #E42022；当前官方 https://brandworld.lenovo.com/visual-identity/color/ 的 Logo color / Signature Red 为 RGB(225,37,27)（#E1251B）。字形及矩形结构相符不等于配色完全一致，本文件不标为当前官方标准红色原件，保留下载原色，后续另核对官方标准色文件及分发依据。"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "other",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "rendered"
+      },
+      "qualityNotes": [
+        "本文件红色为 #E42022，与当前官方标准红 #E1251B 有差异。"
+      ]
+    },
+    {
+      "file": "logo-red-official.svg",
+      "label": "标准红标识 · 官方官网 SVG 原件",
+      "variant": "logo",
+      "background": "any",
+      "color": "brand",
+      "source": "https://p3-ofp.static.pub/fes/cms/2023/03/22/8hjmcte754uauw07ypikjkjtx0m5ib450914.svg",
+      "sourcePage": "https://www.lenovo.com/us/en/",
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3ALenovo_%282015%29.svg&oldid=1251613811",
+        "attribution": "Lenovo Group Limited。保留官方文件来源、Commons 公共领域判断及商标声明；下载文件原样保存。",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权收录依据是 Commons 对相同简单 Lenovo 字样与纯色矩形标识的 PD-textlogo 第三方判断，不是联想对本图库的授权。经图形复核，本文件没有新增口号、插画或复杂组合；原色及像素/路径均保留。官方来源只证明文件及现行使用，不证明允许图库镜像或再分发。官方 https://www.lenovo.com/us/en/legal/copytrade/ 说明其他公司使用 Lenovo Logo 需取得书面许可或品牌授权；本条不授予商标使用权，也不构成对该限制的豁免，不得暗示官方背书。品牌资源禁止用于训练 AI 模型，见 https://brandworld.lenovo.com/visual-identity/logo/ 。\n\n质量核验记录：\n- 原始路径使用 #E1251B，与当前官方 Signature Red 一致。\n- 官方官网页头原件为 123.999×40 视口，保留其约 3.1:1 原始比例；未调整为品牌指南的 3:1。"
+      },
+      "qualityNotes": [
+        "标准红 #E1251B。",
+        "长宽比约 3.1:1，与品牌指南的 3:1 不同。"
+      ],
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original"
+      },
+      "sha256": "422f42f97bc8d3d17313dff4781262115246e060b385b6f53ece2ac1ee99a68a",
+      "bytes": 1475
+    },
+    {
+      "file": "logo-red-brandworld.png",
+      "label": "红底白字标识 · 官方 Brand World PNG 原件",
+      "variant": "logo",
+      "background": "any",
+      "color": "other",
+      "source": "https://media.lenovobrandworld.fiestic.com/2022/06/08010946/LenovoLogo_POS-Red-H.png",
+      "sourcePage": "https://brandworld.lenovo.com/visual-identity/logo/",
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3ALenovo_%282015%29.svg&oldid=1251613811",
+        "attribution": "Lenovo Group Limited。保留官方文件来源、Commons 公共领域判断及商标声明；下载文件原样保存。",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权收录依据是 Commons 对相同简单 Lenovo 字样与纯色矩形标识的 PD-textlogo 第三方判断，不是联想对本图库的授权。经图形复核，本文件没有新增口号、插画或复杂组合；原色及像素/路径均保留。官方来源只证明文件及现行使用，不证明允许图库镜像或再分发。官方 https://www.lenovo.com/us/en/legal/copytrade/ 说明其他公司使用 Lenovo Logo 需取得书面许可或品牌授权；本条不授予商标使用权，也不构成对该限制的豁免，不得暗示官方背书。品牌资源禁止用于训练 AI 模型，见 https://brandworld.lenovo.com/visual-identity/logo/ 。\n\n质量核验记录：\n- 2560×854 官方页面原始 PNG，完整红色矩形；文件本身没有透明背景。\n- 原始不透明主色为 #E2211C，未附 ICC，与当前指南 #E1251B 有差异；没有在本地改色。"
+      },
+      "qualityNotes": [
+        "2560 × 854 像素，红色不透明背景。",
+        "红色为 #E2211C，与当前标准红 #E1251B 有差异。"
+      ],
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original"
+      },
+      "sha256": "f769fb55805db720f56d47dc1942362f07e117be33858218d10e3c71c9343ade",
+      "bytes": 12624
+    }
+  ]
+}

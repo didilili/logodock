@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 3,
+  "id": "alibaba",
+  "name": "阿里巴巴集团",
+  "aliases": [
+    "阿里巴巴",
+    "Alibaba Group",
+    "Alibaba Group Holding Limited",
+    "阿里巴巴集团控股有限公司"
+  ],
+  "identity": {
+    "nameZh": "阿里巴巴集团",
+    "nameEn": "Alibaba Group",
+    "legalNames": [
+      {
+        "name": "阿里巴巴集团控股有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://home.alibabagroup.com/zh-CN/document-2026456290057781248",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "name": "Alibaba Group Holding Limited",
+        "language": "en",
+        "role": "group",
+        "source": "https://www.alibabagroup.com/en-US/resource-logos",
+        "reviewedAt": "2026-11-07"
+      }
+    ],
+    "sources": [
+      {
+        "label": "集团官方资源页",
+        "url": "https://www.alibabagroup.com/en-US/resource-logos",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "官方2026年6月季度业绩公告",
+        "url": "https://home.alibabagroup.com/zh-CN/document-2026456290057781248",
+        "reviewedAt": "2026-11-07"
+      }
+    ]
+  },
+  "website": "https://www.alibabagroup.com/",
+  "entityType": "company",
+  "categories": [
+    "internet"
+  ],
+  "defaultAsset": "wordmark-orange.svg",
+  "artworks": [
+    {
+      "id": "wordmark-orange-english",
+      "label": "橙色英文字标",
+      "files": [
+        "wordmark-orange.png",
+        "wordmark-orange.svg"
+      ],
+      "defaultAsset": "wordmark-orange.svg"
+    }
+  ],
+  "assets": [
+    {
+      "file": "wordmark-orange.png",
+      "label": "橙色英文文字标识 · PNG（Commons 渲染）",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Alibaba_en_logo.svg/1280px-Alibaba_en_logo.svg.png",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Alibaba_en_logo.svg",
+      "sha256": "1bbd240af8c5450232f87f82e985e68f831d17dc24d2dd534e0daac3c4135fda",
+      "bytes": 19648,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AAlibaba_en_logo.svg&oldid=1115285514",
+        "attribution": "No copyright attribution required by the Commons PD-textlogo designation. Logo attributed to 阿里巴巴集团; trademark rights remain with the respective owner.",
+        "reviewedAt": "2026-11-07",
+        "notes": "分发依据为 Wikimedia Commons 对该具体标识的简单图形/文字公共领域判定（PD-textlogo），不是品牌方的再分发授权。该判定不授予商标权，相关商标权保留；使用时不得暗示品牌方背书。 保存 Commons 文件页正式提供的 PNG 渲染下载，原样保存，未自行修改图形、颜色、比例或透明背景。此项为 Alibaba Group 的英文文字标识，字形与集团官方资源页 https://www.alibabagroup.com/en-US/resource-logos 所列 Alibaba Group logo (English) 中的文字一致；不是 Alibaba.com 业务标识。Commons 当前文件注明为英文纯文字版本。"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "rendered"
+      },
+      "qualityNotes": [
+        "纯英文字标，未含阿里图形；不是完整的集团组合标识。"
+      ]
+    },
+    {
+      "file": "wordmark-orange.svg",
+      "label": "橙色英文文字标识 · SVG（Commons 原件）",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/4/41/Alibaba_en_logo.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Alibaba_en_logo.svg",
+      "sha256": "7902655038ecf095e3df91423f83a45b1f3815345c4c88ed6a67227ef8563c54",
+      "bytes": 6989,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AAlibaba_en_logo.svg&oldid=1115285514",
+        "attribution": "No copyright attribution required by the Commons PD-textlogo designation. Logo attributed to 阿里巴巴集团; trademark rights remain with the respective owner.",
+        "reviewedAt": "2026-11-07",
+        "notes": "依据所引 Wikimedia Commons 对该具体文件的 PD-textlogo 公共领域判定收录；这是第三方对简单文字或几何图形的判断，不是品牌方授予的再分发许可，商标权及其他使用限制仍保留。保存该文件页提供的 SVG 原始字节，未清洗、改色、裁切或重绘；此 SVG 由路径等矢量图形组成，不是内嵌位图容器。"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "original"
+      },
+      "qualityNotes": [
+        "纯英文字标，未含阿里图形；不是完整的集团组合标识。"
+      ]
+    },
+    {
+      "file": "wordmark-orange-chinese.svg",
+      "label": "橙色中文文字标识 · SVG（Commons 原件）",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/0/03/Alibaba_zh_logo.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Alibaba_zh_logo.svg",
+      "sha256": "c09c884c7e8759484f8ad311da78c0d243a93d7a042eb46443f449af0aba21d5",
+      "bytes": 7471,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/wiki/File:Alibaba_zh_logo.svg",
+        "attribution": "Alibaba Group Holding Limited；Wikimedia Commons 文件 Alibaba zh logo.svg。Commons 标记 PD-textlogo，无版权署名要求；保留来源与商标声明。",
+        "reviewedAt": "2026-11-07",
+        "notes": "依据所引 Wikimedia Commons 对该具体文件的 PD-textlogo 公共领域判定收录；这是第三方对简单文字或几何图形的判断，不是品牌方授予的再分发许可，商标权及其他使用限制仍保留。保存该文件页提供的 SVG 原始字节，未清洗、改色、裁切或重绘；此 SVG 由路径等矢量图形组成，不是内嵌位图容器。"
+      },
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "original"
+      },
+      "qualityNotes": [
+        "纯中文“阿里巴巴”字标，未含阿里图形。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "purpose": "source-review-candidates",
+  "candidates": [
+    {
+      "id": "baidu",
+      "name": "百度",
+      "website": "https://home.baidu.com/",
+      "status": "unreviewed",
+      "sourcePages": []
+    },
+    {
+      "id": "jd",
+      "name": "京东",
+      "website": "https://corporate.jd.com/",
+      "status": "unreviewed",
+      "sourcePages": []
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "website": "https://www.deepseek.com/",
+      "status": "permission-needed",
+      "sourcePages": [
+        "https://github.com/deepseek-ai/awesome-deepseek-integration/blob/main/docs/_logo%20svg/guidelines.md"
+      ],
+      "reviewedAt": "2026-11-07",
+      "note": "官方品牌素材规范限定在实际接入 DeepSeek 模型或 API 的前提下使用。本次核查未确认该范围覆盖独立 Logo 资源库的镜像分发；不将代码或模型许可视为 Logo 许可，不收录文件。"
+    },
+    {
+      "id": "moonshot",
+      "name": "月之暗面",
+      "website": "https://www.moonshot.cn/",
+      "status": "unreviewed",
+      "sourcePages": []
+    },
+    {
+      "id": "stepfun",
+      "name": "阶跃星辰",
+      "website": "https://www.stepfun.com/",
+      "status": "unreviewed",
+      "sourcePages": []
+    },
+    {
+      "id": "baichuan",
+      "name": "百川智能",
+      "website": "https://www.baichuan-ai.com/",
+      "status": "unreviewed",
+      "sourcePages": []
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "website": "https://www.google.com/",
+      "status": "unreviewed",
+      "sourcePages": []
+    },
+    {
+      "id": "microsoft",
+      "name": "Microsoft",
+      "website": "https://www.microsoft.com/",
+      "status": "unreviewed",
+      "sourcePages": []
+    },
+    {
+      "id": "amazon",
+      "name": "Amazon",
+      "website": "https://www.amazon.com/",
+      "status": "unreviewed",
+      "sourcePages": []
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "website": "https://about.meta.com/",
+      "status": "unreviewed",
+      "sourcePages": []
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "website": "https://github.com/",
+      "status": "permission-needed",
+      "sourcePages": [
+        "https://docs.github.com/en/site-policy/other-site-policies/github-logo-policy",
+        "https://brand.github.com/foundations/logo"
+      ],
+      "reviewedAt": "2026-11-07",
+      "note": "官方标识页提供下载与若干展示用途，并保留版权、商标权及书面许可要求。本次核查未确认对独立 Logo 资源库的镜像分发授权，保留候选，不收录文件。"
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare",
+      "website": "https://www.cloudflare.com/",
+      "status": "unreviewed",
+      "sourcePages": []
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "website": "https://openai.com/",
+      "status": "permission-needed",
+      "sourcePages": [
+        "https://openai.com/brand/"
+      ],
+      "reviewedAt": "2026-11-07",
+      "note": "官方设计指南提供下载，但标识使用许可不可转让，须遵循规定用途与指南。本次核查未确认该许可涵盖独立 Logo 资源库的镜像分发，保留候选，不收录文件。"
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "website": "https://www.anthropic.com/",
+      "status": "unreviewed",
+      "sourcePages": []
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "website": "https://x.ai/",
+      "status": "unreviewed",
+      "sourcePages": []
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral AI",
+      "website": "https://mistral.ai/",
+      "status": "unreviewed",
+      "sourcePages": []
+    },
+    {
+      "id": "cohere",
+      "name": "Cohere",
+      "website": "https://cohere.com/",
+      "status": "unreviewed",
+      "sourcePages": []
+    },
+    {
+      "id": "huggingface",
+      "name": "Hugging Face",
+      "website": "https://huggingface.co/",
+      "status": "permission-needed",
+      "sourcePages": [
+        "https://huggingface.co/brand",
+        "https://huggingface.co/datasets/huggingface/brand-assets/tree/main",
+        "https://huggingface.co/terms-of-service"
+      ],
+      "reviewedAt": "2026-11-07",
+      "note": "官方品牌页提供原始文件下载；所查品牌资产目录未见独立 Logo 分发许可，服务条款保留自有素材权利并要求复制、再发布等获得书面许可。本次核查不足以确认镜像分发权，保留候选，不收录文件。"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 3,
+  "id": "honor",
+  "name": "荣耀",
+  "aliases": [
+    "HONOR",
+    "荣耀终端股份有限公司"
+  ],
+  "identity": {
+    "nameZh": "荣耀",
+    "nameEn": "HONOR",
+    "legalNames": [
+      {
+        "name": "荣耀终端股份有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://www.honor.com/cn/company-trademark-policy/",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "name": "Honor Device Co., Ltd.",
+        "language": "en",
+        "role": "operating-company",
+        "source": "https://www.honor.com/cn/company-trademark-policy/",
+        "reviewedAt": "2026-11-07"
+      }
+    ],
+    "sources": [
+      {
+        "label": "荣耀公司商标使用规范",
+        "url": "https://www.honor.com/cn/company-trademark-policy/",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "荣耀品牌标志规范",
+        "url": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+        "reviewedAt": "2026-11-07"
+      }
+    ]
+  },
+  "website": "https://www.honor.com/",
+  "entityType": "company",
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "wordmark-black-2020.svg",
+  "assets": [
+    {
+      "file": "wordmark-black-2020.svg",
+      "label": "2020 黑色文字标识 · SVG",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/2/20/Honor_Logo_%282020%29.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Honor_Logo_(2020).svg",
+      "sha256": "e38997a47a0ebdc4c342efc878fe124b2827ecab9eba599233e69e1942e82ea2",
+      "bytes": 1138,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AHonor_Logo_%282020%29.svg&oldid=1107928605",
+        "attribution": "HONOR。Commons 文件页标记为公共领域，无版权署名要求；保留来源和商标声明。文件下载原样保存。",
+        "reviewedAt": "2026-11-07",
+        "notes": "依据 Wikimedia Commons 对该文件的 PD-textlogo（简单图形或文字未达到版权独创性门槛）公共领域判定收录；这是 Commons 的第三方判定，不是品牌方对本仓库的再分发授权。商标权仍归相关权利人，使用不得暗示官方背书。保存 Commons 提供的原始 SVG，未修改。公司身份和现用黑色字形对照 https://www.honor.com/global/brand/ 及其页头官方文件 https://www-file.honor.com/content/dam/honor/common/logo/honor-logo-black.svg 。现用公司名称见 https://www.honor.com/cn/news/honor-name-change/ ；荣耀已为独立公司，此记录不设华为 parentId。 官方品牌标识指导页 https://www.honor.com/cn/brand-guideline/basics/logo/ 提供 PNG/AI Toolkit，并注明标志须经合同或协议授权后使用；商标说明见 https://www.honor.com/cn/company-trademark-policy/ 。这些入口用于核对品牌规范，不作为本仓库镜像分发的授权依据，本文件仍仅按所引 Commons 特定文件的公共领域判定记录。"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "black",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "original"
+      }
+    }
+  ]
+}
