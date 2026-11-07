@@ -13,23 +13,52 @@
 
 ## 新增资源
 
-1. 建立 `logos/<id>/`，`id` 使用稳定、可读的小写标识，并遵循现有目录命名方式。
+1. 确认所属实体、官网、当前版本及分发依据。可以先在仓库外生成草稿，审核完成后再建立 `logos/<id>/`；`id` 使用稳定、可读的小写标识，发布后避免随显示名称更改。
 2. 保存来源提供的原始文件。不要自动批量抓取、改色、拉伸、裁切重绘或用 AI 描摹；需要其他版本时，寻找来源正式提供的对应文件。
 3. 添加 `metadata.json`，为每个文件填写来源和权利信息。
 4. 运行本地检查并更新索引，提交资源、元数据和生成的索引。
 
-支持 `.svg`、`.png`、`.webp`、`.jpg`，ID 使用小写 kebab-case。每个品牌目录只保留 `metadata.json` 和其中列出的图片；元数据采用下列固定字段。SVG 校验只接受受限的静态元素与属性，不会自动清洗。官方 SVG 被拒绝时，请人工核对原因或选用官方原始 PNG，不要为了通过检查改画 Logo。
+支持 `.svg`、`.png`、`.webp`、`.jpg`，ID 使用小写 kebab-case。每个品牌目录只保留 `metadata.json` 和其中列出的图片；元数据采用下列固定字段。SVG 中若包含位图，须在 `qualityNotes` 说明，不能仅凭 SVG 后缀宣称可无损缩放。SVG 校验只接受受限的静态元素与属性，以及经过白名单检查的绘制样式和非渲染编辑器元数据，不会自动清洗。脚本、事件、外部资源引用、DOCTYPE 和动态内容仍会被拒绝。官方 SVG 被拒绝时，请人工核对原因或选用官方原始 PNG，不要为了通过检查改画 Logo。
 
 ### 元数据
 
-公司记录需要 `id`、`name`、`aliases`、`website` 和 `assets`。没有别名时使用空数组；名称和官网应指向公司本身。
+结构、必填字段和枚举的事实来源为 [schema/metadata.schema.json](schema/metadata.schema.json)，当前严格使用 `schemaVersion: 3`；运行时校验器复用这份契约，再检查文件、关系与许可声明。旧的无版本记录需显式迁移，不能依赖文件名猜测版本状态。
+
+品牌记录需要 `schemaVersion`、`id`、`name`、`identity`、`aliases`、`website`、`entityType`、`categories`、`defaultAsset` 和 `assets`。没有别名或分类时使用空数组；只填写真实名称，不把产品名当作公司同义词。
+
+- `entityType` 为 `company`（公司）、`product`（产品）或 `organization`（组织）。
+- 可选的 `parentId` 必须指向已收录实体，不能指向自身或形成循环；没有可靠对应记录时省略。
+- `categories` 保存简短分类标签，建议复用 `internet`、`ai`、`developer-tools` 等已有标签。
+- `defaultAsset` 必须是本条目登记的文件名。有当前版本时必须默认当前素材；仅有历史文件的条目可以显式默认历史素材，网页会标明历史。
+
+可选的 `artworks` 用于将已核实的同款标识归组，让 SVG、PNG 等文件共用一个标识预览。每组填写稳定的 `id`、简短的 `label`、成员文件名数组 `files` 和首选文件名 `defaultAsset`。
+
+- `files` 至少包含两个不同的已登记文件，每个文件只能属于一组；组内 `defaultAsset` 必须属于该组。
+- 成员的形态、语言、方向、配色类型和当前／历史状态须一致，还需核对实际图稿、颜色与比例；属性相同不等于已经确认是同款。
+- 同一格式可以保留多个来源或质量不同的文件，页面在“更多文件”中选择。来源、尺寸、许可和哈希继续逐文件记录。
+- 未列入 `artworks` 的文件保留独立选择。不确定是否同稿时先保留区别，不按名称或扩展名自动归并。
+
+`identity` 明确区分品牌名称和法人名称：
+
+- `nameZh`、`nameEn` 是核实后的中文与英文品牌名称；没有确认的名称填 `null`，不自行翻译。
+- `legalNames` 是已核实的全称数组。每项填写 `name`、`language`、`role`、`source` 和 `reviewedAt`。没有可核实全称时使用空数组。
+- `language` 为 `zh`、`en` 或 `de`，保留法律名称本身的语言和拼写。`role` 区分 `group`（集团）、`operating-company`（运营公司）、`website-operator`（网站运营主体）、`company`（公司）和 `organization`（组织）；不能由页脚版权文字推断网站运营关系。
+- `sources` 是品牌名称的核对来源，每项填写 `label`、`url` 和 `reviewedAt`。法人名称各自保留对应的直接来源，不能从搜索别名反推全称。
 
 每个 `assets` 条目需要：
 
 | 字段 | 内容 |
 | --- | --- |
 | `file` | 当前目录中的资源文件名 |
-| `variant` | `icon`（图形标识）、`wordmark`（文字标识）或 `logo`（组合标识）；背景适用条件记入 `rights.notes` |
+| `label` | 可区分版本的显示名称，例如“蓝色图标”“白色组合标识” |
+| `variant` | `icon`（图形标识）、`wordmark`（文字标识）或 `logo`（组合标识） |
+| `status` | `current`（当前版本）或 `historical`（历史版本），须有来源依据 |
+| `language` | `none`（无文字）、`zh`（中文）、`en`（英文）或 `bilingual`（中英双语） |
+| `layout` | `standalone`（独立图形）、`horizontal`（横版）或 `vertical`（竖版） |
+| `color` | `brand`、`black`、`white`、`monochrome` 或 `other`；不符合当前标准的配色不能默认为品牌标准色 |
+| `provenance` | `sourceType` 为 `official` 或 `commons`，`processing` 为 `original` 或 `rendered`；Commons 的渲染下载不能标成官方原件 |
+| `qualityNotes` | 可选的简短事实数组，例如尺寸偏小、白底、配色差异或与公司横版标识的区别；不替代许可说明 |
+| `background` | 适合浅色背景填写 `light`，适合深色背景填写 `dark`，均适用填写 `any` |
 | `source` | 该文件的原始下载地址 |
 | `sourcePage` | 能够核对文件归属、版本和来源的页面 |
 | `sha256` | 实际文件内容的 SHA-256 摘要 |
@@ -49,11 +78,23 @@
 
 `sourcePage` 说明文件从哪里来，`rights.reference` 说明为什么可以在这里分发，两者可以是同一页面。若依据只允许使用或展示、未允许再次分发，不应填写 `permitted`。
 
-根目录 `index.json` 中的资源 `path` 由构建脚本补充，不要手工维护索引。修改现有文件时，也要更新摘要、字节数及受影响的来源或权利记录。
+根目录 `index.json` 中的资源 `path` 和能从原文件读取的 PNG/JPEG `width`、`height` 由构建脚本补充，不要手工维护索引；SVG 不标为固定像素尺寸。修改现有文件时，也要更新摘要、字节数及受影响的来源或权利记录。
+
+### 生成待审核草稿
+
+```sh
+npm run prepare:asset -- /path/to/icon.svg --id example --name Example --output /path/to/drafts/example
+```
+
+输出目录的父目录须已存在，输出目录须尚不存在且位于 `logos/` 外。工具复制原文件，检查格式并计算 SHA-256 与体积；不会联网、覆盖已有目录或自动入库。可用 `--entity-type`、`--variant`、`--status`、`--background`、`--label` 和可重复的 `--category` 填写已确认的信息，可用 `--language`、`--layout`、`--color`、`--source-type`、`--processing` 填写已经确认的素材属性；完整选项见 `npm run prepare:asset -- --help`。
+
+草稿中的未确认身份、官网、来源、来源类型与处理方式、权利字段留空，`rights.status` 是 `pending-review`，因此不能通过正式目录校验。人工核对完成后补齐字段，只有确实取得分发依据才改为 `permitted`，再移动到 `logos/<id>/`。不要为了通过检查填写没有核实的声明。
+
+待核对的热门公司可留在 [content/source-candidates.json](content/source-candidates.json) 或收录建议 Issue。候选清单不包含素材、不自动下载，也不计入已收录资源。
 
 ### 本地检查
 
-需要 Node.js 22 或更新版本，在仓库根目录执行：
+需要 Node.js 22.17+（22 LTS 系列）或 24+，在仓库根目录执行：
 
 ```sh
 npm ci --ignore-scripts
@@ -74,3 +115,11 @@ PR 中简要说明新增或修改了什么、公司与 Logo 的对应关系、�
 ## 贡献许可
 
 提交原创脚本或文档，即表示同意以本仓库的 MIT 许可分发这些原创改动。提交第三方 Logo 不改变其原有许可，也不表示你或本仓库获得了相关商标权。
+
+## 网站开发
+
+页面放在 `src/routes/`，共享组件放在 `src/lib/components/`，样式入口为 `src/app.css`。Tailwind 不启用额外的 Preflight 重置，颜色和焦点复用既有 CSS 语义变量。Bits UI 的选择器统一通过 `ui/FilterSelect.svelte` 复用。
+
+`static/` 为 `prepare-site.mjs` 从校验通过的 `logos/` 生成的暂存目录，请勿手工写入素材；原图路径与字节必须保持稳定。`_site/` 和 `.svelte-kit/` 均为生成产物。
+
+涉及页面交互时，先运行 `npm run check`，再运行 `npm run test:browser`。浏览器首次使用须 `npx playwright install chromium`；CI 安装浏览器后执行同一组回归测试。

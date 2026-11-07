@@ -1,19 +1,30 @@
 name: 新增 Logo
-description: 建议收录公司或相关组织的 Logo，并提供来源和分发依据。
+description: 建议收录公司、产品或组织的 Logo，并提供身份、版本、来源和分发依据。
 title: "[新增] "
 body:
   - type: input
     id: company
     attributes:
-      label: 公司或组织名称与官网
-      placeholder: 名称；官网 URL
+      label: 公司、产品或组织名称与官网
+      placeholder: 中文品牌名；英文品牌名；官网 URL
+    validations:
+      required: true
+  - type: dropdown
+    id: entity-type
+    attributes:
+      label: 实体类型
+      options:
+        - 公司
+        - 产品
+        - 组织
+        - 暂不确定
     validations:
       required: true
   - type: textarea
     id: identity
     attributes:
-      label: Logo 与公司或组织的对应关系
-      description: 如果这是产品或品牌标识，请说明所属公司和关系；不确定时直接说明。
+      label: Logo 的身份与版本
+      description: 提供可核实的公司全称与来源，区分集团和运营主体；如果是产品，请说明所属公司。补充图形/字标/组合、语言、配色、当前或历史状态、背景及实际格式。不确定时直接说明。
     validations:
       required: true
   - type: textarea
