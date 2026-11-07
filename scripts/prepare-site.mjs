@@ -13,13 +13,19 @@ export async function prepareSite(root = repositoryRoot) {
     const folder = join(output, 'logos', brand.id);
     await mkdir(folder, { recursive: true });
     await copyFile(join(root, 'logos', brand.id, 'metadata.json'), join(folder, 'metadata.json'));
-    for (const asset of brand.assets) await copyFile(join(root, asset.path), join(folder, asset.file));
+    for (const asset of brand.assets)
+      await copyFile(join(root, asset.path), join(folder, asset.file));
   }
   await writeFile(join(output, 'index.json'), `${JSON.stringify(catalog, null, 2)}\n`);
   await writeFile(join(output, '.nojekyll'), '');
   return catalog;
 }
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  try { const catalog = await prepareSite(); console.log(`Prepared ${catalog.brands.length} brands for SvelteKit.`); }
-  catch (error) { console.error(error.message); process.exitCode = 1; }
+  try {
+    const catalog = await prepareSite();
+    console.log(`Prepared ${catalog.brands.length} brands for SvelteKit.`);
+  } catch (error) {
+    console.error(error.message);
+    process.exitCode = 1;
+  }
 }

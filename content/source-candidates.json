@@ -100,9 +100,7 @@
       "name": "OpenAI",
       "website": "https://openai.com/",
       "status": "permission-needed",
-      "sourcePages": [
-        "https://openai.com/brand/"
-      ],
+      "sourcePages": ["https://openai.com/brand/"],
       "reviewedAt": "2026-11-07",
       "note": "官方设计指南提供下载，但标识使用许可不可转让，须遵循规定用途与指南。本次核查未确认该许可涵盖独立 Logo 资源库的镜像分发，保留候选，不收录文件。"
     },

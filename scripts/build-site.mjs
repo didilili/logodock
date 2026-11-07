@@ -6,4 +6,7 @@ try {
   const builder = await createBuilder();
   await builder.buildApp();
   await writeFile('_site/.nojekyll', '');
-} catch (error) { console.error(error.message); process.exitCode = 1; }
+} catch (error) {
+  console.error(error.message);
+  process.exitCode = 1;
+}

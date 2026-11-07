@@ -8,10 +8,18 @@ import { publishedSourceCommit } from '../scripts/lib/published-source.mjs';
 
 const search = () => import('../src/lib/catalog-search.mjs');
 const brands = [
-  { id: 'example', name: 'Example Inc.', aliases: ['示例公司', 'Example Company'],
-    assets: [{ file: 'icon.svg', rights: { license: 'MIT' } }] },
-  { id: 'another', name: 'Another Company', aliases: ['另一家公司'],
-    assets: [{ file: 'wordmark.svg', rights: { license: 'CC BY 4.0' } }] },
+  {
+    id: 'example',
+    name: 'Example Inc.',
+    aliases: ['示例公司', 'Example Company'],
+    assets: [{ file: 'icon.svg', rights: { license: 'MIT' } }],
+  },
+  {
+    id: 'another',
+    name: 'Another Company',
+    aliases: ['另一家公司'],
+    assets: [{ file: 'wordmark.svg', rights: { license: 'CC BY 4.0' } }],
+  },
 ];
 
 // Git snapshot guards are pure source checks. They must not launch a Vite build
@@ -21,25 +29,49 @@ async function fixture(t) {
   t.after(() => rm(root, { recursive: true, force: true }));
   await mkdir(join(root, 'logos/example'), { recursive: true });
   await mkdir(join(root, 'src'), { recursive: true });
-  const metadata = { id: 'example', aliases: [], assets: [
-    { file: 'icon.svg', path: 'logos/example/icon.svg' },
-    { file: 'wordmark.svg', path: 'logos/example/wordmark.svg' },
-  ] };
+  const metadata = {
+    id: 'example',
+    aliases: [],
+    assets: [
+      { file: 'icon.svg', path: 'logos/example/icon.svg' },
+      { file: 'wordmark.svg', path: 'logos/example/wordmark.svg' },
+    ],
+  };
   await writeFile(join(root, 'logos/example/metadata.json'), JSON.stringify(metadata));
-  for (const asset of metadata.assets) await writeFile(join(root, asset.path),
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"><path d="M0 0h8v8H0z"/></svg>');
+  for (const asset of metadata.assets)
+    await writeFile(
+      join(root, asset.path),
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"><path d="M0 0h8v8H0z"/></svg>',
+    );
   await writeFile(join(root, 'src/app.mjs'), 'export const ready = true;');
   return { root, catalog: { brands: [metadata] } };
 }
 
 function git(root, ...args) {
-  return execFileSync('git', args, { cwd: root, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }).trim();
+  return execFileSync('git', args, {
+    cwd: root,
+    encoding: 'utf8',
+    stdio: ['ignore', 'pipe', 'pipe'],
+  }).trim();
 }
 
-function commitAssets(root, { published = true, origin = 'https://github.com/didilili/logodock.git' } = {}) {
+function commitAssets(
+  root,
+  { published = true, origin = 'https://github.com/didilili/logodock.git' } = {},
+) {
   git(root, 'init', '--quiet');
   git(root, 'add', 'logos');
-  git(root, '-c', 'user.name=LogoDock test', '-c', 'user.email=test@example.com', 'commit', '--quiet', '-m', 'fixture assets');
+  git(
+    root,
+    '-c',
+    'user.name=LogoDock test',
+    '-c',
+    'user.email=test@example.com',
+    'commit',
+    '--quiet',
+    '-m',
+    'fixture assets',
+  );
   const commit = git(root, 'rev-parse', 'HEAD');
   if (published) {
     git(root, 'remote', 'add', 'origin', origin);
@@ -49,7 +81,10 @@ function commitAssets(root, { published = true, origin = 'https://github.com/did
 }
 
 test('normalizes Unicode, casing, and repeated whitespace', async () => {
-  assert.equal((await search()).normalizeQuery('  ＥＸＡＭＰＬＥ\t公司\n  Logo '), 'example 公司 logo');
+  assert.equal(
+    (await search()).normalizeQuery('  ＥＸＡＭＰＬＥ\t公司\n  Logo '),
+    'example 公司 logo',
+  );
 });
 
 test('matches names, IDs, Chinese aliases, and all search terms', async () => {
@@ -72,8 +107,12 @@ test('search preserves input data and returns original brand objects', async () 
   const snapshot = structuredClone(input);
   for (const brand of input) {
     Object.freeze(brand.aliases);
-    for (const asset of brand.assets) { Object.freeze(asset.rights); Object.freeze(asset); }
-    Object.freeze(brand.assets); Object.freeze(brand);
+    for (const asset of brand.assets) {
+      Object.freeze(asset.rights);
+      Object.freeze(asset);
+    }
+    Object.freeze(brand.assets);
+    Object.freeze(brand);
   }
   Object.freeze(input);
   const result = (await search()).filterBrands(input, 'example');
@@ -98,7 +137,10 @@ test('uncommitted new asset content never gets a misleading fixed remote URL', a
   const { root, catalog } = await fixture(t);
   commitAssets(root);
   catalog.brands[0].assets.push({ file: 'new-icon.svg', path: 'logos/example/new-icon.svg' });
-  await writeFile(join(root, 'logos/example/new-icon.svg'), await readFile(join(root, 'logos/example/icon.svg')));
+  await writeFile(
+    join(root, 'logos/example/new-icon.svg'),
+    await readFile(join(root, 'logos/example/icon.svg')),
+  );
   assert.equal(publishedSourceCommit(root, catalog), '');
 });
 
@@ -125,9 +167,22 @@ test('clean local commits without a known published snapshot do not produce fixe
 test('unpushed commits do not become fixed remote links', async (t) => {
   const { root, catalog } = await fixture(t);
   commitAssets(root);
-  await writeFile(join(root, 'logos/example/metadata.json'), '{"id":"example","aliases":["本地新提交"]}');
+  await writeFile(
+    join(root, 'logos/example/metadata.json'),
+    '{"id":"example","aliases":["本地新提交"]}',
+  );
   git(root, 'add', 'logos');
-  git(root, '-c', 'user.name=LogoDock test', '-c', 'user.email=test@example.com', 'commit', '--quiet', '-m', 'local changes');
+  git(
+    root,
+    '-c',
+    'user.name=LogoDock test',
+    '-c',
+    'user.email=test@example.com',
+    'commit',
+    '--quiet',
+    '-m',
+    'local changes',
+  );
   assert.equal(publishedSourceCommit(root, catalog), '');
 });
 
@@ -150,18 +205,25 @@ test('shape and format filters intersect on files without changing the original 
   ];
   const brand = { ...brands[0], assets };
   assert.equal(matchingBrands([brand], { shape: 'icon', format: 'PNG' }).length, 0);
-  assert.deepEqual(matchingBrands([brand], { shape: 'wordmark', format: 'PNG' })[0].assets, [assets[1]]);
+  assert.deepEqual(matchingBrands([brand], { shape: 'wordmark', format: 'PNG' })[0].assets, [
+    assets[1],
+  ]);
   assert.equal(brand.assets.length, 2);
 });
 
 test('directory URL state round-trips only available filters without adding a brand selection', async () => {
   const { directoryUrl, readDirectoryState } = await import('../src/lib/catalog-presentation.mjs');
-  const available = [{ ...brands[0], entityType: 'company', assets: [{ file: 'icon.svg', variant: 'icon' }] }];
+  const available = [
+    { ...brands[0], entityType: 'company', assets: [{ file: 'icon.svg', variant: 'icon' }] },
+  ];
   const state = { q: 'Example & 示例', type: 'company', shape: 'icon', format: 'SVG' };
   const url = directoryUrl('https://example.com/logodock/?other=1', state);
   assert.equal(url.pathname, '/logodock/');
   assert.equal(url.searchParams.get('brand'), null);
   assert.equal(url.searchParams.get('other'), '1');
   assert.deepEqual(readDirectoryState(url, available), state);
-  assert.deepEqual(readDirectoryState('https://example.com/?shape=fake&type=bad&format=EXE', available), { q: '', type: '', format: '', shape: '' });
+  assert.deepEqual(
+    readDirectoryState('https://example.com/?shape=fake&type=bad&format=EXE', available),
+    { q: '', type: '', format: '', shape: '' },
+  );
 });

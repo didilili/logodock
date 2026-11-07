@@ -39,11 +39,7 @@
     },
     "entityType": {
       "type": "string",
-      "enum": [
-        "company",
-        "product",
-        "organization"
-      ],
+      "enum": ["company", "product", "organization"],
       "default": "company"
     },
     "categories": {
@@ -100,19 +96,11 @@
     "rights": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "status",
-        "license",
-        "reference",
-        "attribution",
-        "reviewedAt"
-      ],
+      "required": ["status", "license", "reference", "attribution", "reviewedAt"],
       "properties": {
         "status": {
           "type": "string",
-          "enum": [
-            "permitted"
-          ]
+          "enum": ["permitted"]
         },
         "license": {
           "$ref": "#/$defs/nonemptyString"
@@ -159,28 +147,17 @@
         },
         "variant": {
           "type": "string",
-          "enum": [
-            "icon",
-            "wordmark",
-            "logo"
-          ],
+          "enum": ["icon", "wordmark", "logo"],
           "default": "icon"
         },
         "status": {
           "type": "string",
-          "enum": [
-            "current",
-            "historical"
-          ],
+          "enum": ["current", "historical"],
           "default": "current"
         },
         "background": {
           "type": "string",
-          "enum": [
-            "light",
-            "dark",
-            "any"
-          ],
+          "enum": ["light", "dark", "any"],
           "default": "any"
         },
         "source": {
@@ -202,32 +179,17 @@
         },
         "language": {
           "type": "string",
-          "enum": [
-            "none",
-            "zh",
-            "en",
-            "bilingual"
-          ],
+          "enum": ["none", "zh", "en", "bilingual"],
           "default": "none"
         },
         "layout": {
           "type": "string",
-          "enum": [
-            "standalone",
-            "horizontal",
-            "vertical"
-          ],
+          "enum": ["standalone", "horizontal", "vertical"],
           "default": "standalone"
         },
         "color": {
           "type": "string",
-          "enum": [
-            "brand",
-            "black",
-            "white",
-            "monochrome",
-            "other"
-          ],
+          "enum": ["brand", "black", "white", "monochrome", "other"],
           "default": "brand"
         },
         "provenance": {
@@ -247,44 +209,25 @@
       "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
     },
     "localizedName": {
-      "type": [
-        "string",
-        "null"
-      ],
+      "type": ["string", "null"],
       "minLength": 1,
       "pattern": "\\S"
     },
     "legalName": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "name",
-        "language",
-        "role",
-        "source",
-        "reviewedAt"
-      ],
+      "required": ["name", "language", "role", "source", "reviewedAt"],
       "properties": {
         "name": {
           "$ref": "#/$defs/nonemptyString"
         },
         "language": {
           "type": "string",
-          "enum": [
-            "zh",
-            "en",
-            "de"
-          ]
+          "enum": ["zh", "en", "de"]
         },
         "role": {
           "type": "string",
-          "enum": [
-            "group",
-            "operating-company",
-            "website-operator",
-            "company",
-            "organization"
-          ]
+          "enum": ["group", "operating-company", "website-operator", "company", "organization"]
         },
         "source": {
           "$ref": "#/$defs/httpsUrl"
@@ -297,11 +240,7 @@
     "identitySource": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "label",
-        "url",
-        "reviewedAt"
-      ],
+      "required": ["label", "url", "reviewedAt"],
       "properties": {
         "label": {
           "$ref": "#/$defs/nonemptyString"
@@ -317,12 +256,7 @@
     "identity": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "nameZh",
-        "nameEn",
-        "legalNames",
-        "sources"
-      ],
+      "required": ["nameZh", "nameEn", "legalNames", "sources"],
       "properties": {
         "nameZh": {
           "$ref": "#/$defs/localizedName"
@@ -347,36 +281,22 @@
     "provenance": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "sourceType",
-        "processing"
-      ],
+      "required": ["sourceType", "processing"],
       "properties": {
         "sourceType": {
           "type": "string",
-          "enum": [
-            "official",
-            "commons"
-          ]
+          "enum": ["official", "commons"]
         },
         "processing": {
           "type": "string",
-          "enum": [
-            "original",
-            "rendered"
-          ]
+          "enum": ["original", "rendered"]
         }
       }
     },
     "artwork": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "id",
-        "label",
-        "files",
-        "defaultAsset"
-      ],
+      "required": ["id", "label", "files", "defaultAsset"],
       "properties": {
         "id": {
           "$ref": "#/$defs/id"

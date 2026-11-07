@@ -19,7 +19,11 @@ test('catalog watching keeps directory boundaries on both platforms', () => {
   for (const path of [posix, win32]) {
     const root = path === win32 ? 'C:\\work\\logodock' : '/work/logodock';
     const directory = path.join(root, 'logos');
-    for (const file of [directory, path.join(root, 'logos-archive', 'metadata.json'), path.join(root, 'other', 'metadata.json')]) {
+    for (const file of [
+      directory,
+      path.join(root, 'logos-archive', 'metadata.json'),
+      path.join(root, 'other', 'metadata.json'),
+    ]) {
       assert.equal(isWithinDirectory(file, directory), false, file);
     }
   }
