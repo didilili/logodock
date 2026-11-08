@@ -1,8 +1,8 @@
 # LogoDock
 
-面向社区维护的公司 Logo 资源库，也收录明确标注身份的组织品牌。每个收录文件保留来源、分发依据和 SHA-256 摘要，方便下载、引用和核对。
+由社区维护的品牌 Logo 资源库，收录公司、产品与组织的 Logo。每个收录文件保留来源、分发依据和 SHA-256 摘要，方便下载、引用和核对。
 
-A community-maintained company and organization logo collection with traceable sources and distribution permissions.
+A community-maintained collection of company, product, and organization logos with traceable sources and distribution permissions.
 
 网站可在本地运行，部署输出为 `_site/`。
 
@@ -45,7 +45,7 @@ cd logodock
 
 第三方 Logo 的使用条件以各文件的 `rights` 记录及其引用的许可、品牌指南为准。仓库中的收录许可不替代商标使用要求，使用前请核对用途与品牌规范。
 
-网站支持中英文品牌名、公司全称、真实别名与官网域名搜索，可按实体类型、素材形态和文件格式筛选。每个条目有独立的 `logos/<id>/` 页面，显示已核实的品牌名称、法人名称与来源；可以切换实际存在的素材、选择预览背景、下载原始文件，并复制图片地址、HTML 或 Markdown。
+网站支持中英文品牌名、公司全称、真实别名与官网域名搜索，可按收录类型、Logo 形式和文件格式筛选。每个条目有独立的 `logos/<id>/` 页面，显示品牌名称、收录类型与素材来源；可以切换实际存在的素材、选择预览背景、下载原始文件，并复制图片地址、HTML 或 Markdown。
 
 需要通过 URL 引用时，可以固定到已存在的完整 commit SHA：
 
@@ -165,7 +165,7 @@ npm run check
 
 ## 展示网页
 
-网站首页是可搜索、筛选的资源目录，卡片提供独立详情页入口、原图下载与图片地址复制。详情页区分公司、产品和组织，展示实际变体、当前/历史状态、来源与使用限制。预览背景只改变容器，不改写素材。复制失败时会保留并选中文本供手动复制。静态 HTML 已包含目录和默认素材，关闭 JavaScript 仍可浏览与下载。SVG 可复制源码并按原比例导出 512/1024px 透明 PNG，导出结果明确为派生文件；PNG 素材在浏览器支持时可直接复制原始图片。
+网站首页是可搜索、筛选的资源目录，卡片提供独立详情页入口、原图下载与图片地址复制。详情页区分公司、产品和组织，展示实际变体、当前/历史状态、来源与使用限制。预览背景只改变容器，不改写素材。复制失败时会保留并选中文本供手动复制。静态 HTML 已包含目录和默认素材，关闭 JavaScript 仍可浏览与下载。下载优先使用已收录文件；只有当前图稿缺少 PNG 时，下载菜单才提供由 SVG 等比生成的长边 1024px 透明 PNG。SVG 源码和浏览器支持的原始 PNG 图片复制集中在复制菜单中。
 
 ```sh
 npm run build:site
