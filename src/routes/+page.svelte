@@ -122,10 +122,16 @@
       (brand) => brand.id === new URL(location.href).searchParams.get('brand'),
     );
     if (legacyBrand) {
-      const url = new URL(hrefFor(legacyBrand), location.href);
-      const requested = new URL(location.href).searchParams.get('asset');
-      if (requested && legacyBrand.assets.some((asset) => asset.file === requested))
-        url.searchParams.set('asset', requested);
+      // eslint-disable-next-line svelte/prefer-svelte-reactivity -- A temporary redirect URL, not component state.
+      const url = new URL(location.href);
+      url.pathname = new URL(hrefFor(legacyBrand), location.href).pathname;
+      url.searchParams.delete('brand');
+      const requested = url.searchParams.get('asset');
+      const file =
+        legacyBrand.assets.find((asset) => asset.file === requested)?.file ||
+        directoryAsset(legacyBrand, filters.q).file;
+      if (file === legacyBrand.defaultAsset) url.searchParams.delete('asset');
+      else url.searchParams.set('asset', file);
       location.replace(url);
       return;
     }

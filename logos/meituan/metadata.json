@@ -45,37 +45,8 @@
   "defaultAsset": "logo-chinese-official.png",
   "assets": [
     {
-      "file": "logo-chinese.png",
-      "label": "黄色中文组合标识 · PNG 原件",
-      "variant": "logo",
-      "status": "current",
-      "background": "light",
-      "source": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Meituan_Logo.png",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Meituan_Logo.png",
-      "sha256": "0e86bd9feb4c638442d463bf261350437558159257b6f3a8558803617eba7c04",
-      "bytes": 6288,
-      "rights": {
-        "status": "permitted",
-        "license": "Public domain (textlogo)",
-        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AMeituan_Logo.png&oldid=999835944",
-        "attribution": "No copyright attribution required by the Commons PD-textlogo designation. Logo attributed to 美团; trademark rights remain with the respective owner.",
-        "reviewedAt": "2026-11-07",
-        "notes": "分发依据为 Wikimedia Commons 对该具体标识的简单图形/文字公共领域判定（PD-textlogo），不是品牌方的再分发授权。该判定不授予商标权，相关商标权保留；使用时不得暗示品牌方背书。 公司身份与黄色方形图形、黑色中文字样已对照 https://www.meituan.com/ 当前页首组合标识核对；Commons 文件来源注明美团官网。此 PNG 是 Commons 提供的原始文件，未裁切、改色或重绘。 文件特征复核：本 PNG 原生尺寸仅195×71，保留来源字节，不能视作高清或矢量版本；较大尺寸及 SVG 标识尚待另行核对来源。"
-      },
-      "language": "zh",
-      "layout": "horizontal",
-      "color": "brand",
-      "provenance": {
-        "sourceType": "commons",
-        "processing": "original"
-      },
-      "qualityNotes": [
-        "195 × 71 像素，放大使用会降低清晰度。"
-      ]
-    },
-    {
       "file": "logo-chinese-official.png",
-      "label": "中文组合标识 · 高清透明 PNG 原件",
+      "label": "中文组合标识 · 高清透明 PNG（官方原件）",
       "variant": "logo",
       "status": "current",
       "background": "light",
@@ -97,7 +68,11 @@
         "attribution": "No copyright attribution required under the Commons PD-textlogo assessment of the same Chinese lockup. Source credit retained: 美团 / Meituan; PNG extracted unchanged from the official media download archive.",
         "reviewedAt": "2026-11-07",
         "notes": "原始文件为官方媒体包“美团/美团横式色彩标识.png”，1896 × 687 像素、带透明通道；从官方 ZIP 逐字节提取，未放大、裁切、改色或重绘。已与原库 Commons 195 × 71 版本核对，为同一黄色圆角方形加黑色“美团”的中文组合设计。分发依据是 Commons 对该相同设计的 PD-textlogo 判定，不是新的官方再分发授权。官方媒体页限制图像“仅供个人或编辑使用”；此处没有将该声明当作开放素材库许可。商标权及其他使用限制仍然保留，不得暗示官方背书。"
-      }
+      },
+      "qualityNotes": [
+        "1896 × 687 像素，透明背景，来自官方媒体素材包。",
+        "主黄为 #FFD100。"
+      ]
     },
     {
       "file": "logo-bilingual-commons.png",

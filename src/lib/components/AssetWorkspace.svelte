@@ -12,7 +12,14 @@
     assetDisplayLabel,
     assetWarnings,
   } from '../catalog-presentation.mjs';
-  import { artworkGroups, preferredArtworkAsset, selectedArtwork } from '../catalog-artworks.mjs';
+  import {
+    artworkGroups,
+    primaryArtworkGroups,
+    alternativeArtworkGroups,
+    isAlternativeArtwork,
+    preferredArtworkAsset,
+    selectedArtwork,
+  } from '../catalog-artworks.mjs';
   import { assetPath, fixedAssetUrl, resourceLinks } from '../resource-links.mjs';
   import { escapeHtml, fileInfo, provenanceLabel } from '../catalog-display.mjs';
   import { canCopyPngImage, copyPngImage } from '../clipboard-image.mjs';
@@ -55,7 +62,8 @@
   ] as const;
   let canCopyImage = $state(false);
   let previewStatus = $state('');
-  let dimensions = $state<{ width: number; height: number }>();
+  let dimensions = $state<{ file: string; width: number; height: number }>();
+  let density = $state(1);
   let exporting = $state(false);
   let copyingImage = $state(false);
   let previewImage: HTMLImageElement | undefined;
@@ -64,7 +72,8 @@
 
   const path = $derived(`${basePath}/${assetPath(asset)}`);
   const format = $derived(assetFormat(asset));
-  const artworks = $derived(artworkGroups(brand));
+  const artworks = $derived(primaryArtworkGroups(brand));
+  const alternativeArtworks = $derived(alternativeArtworkGroups(brand));
   const artwork = $derived(selectedArtwork(brand, asset)!);
   const canGeneratePng = $derived(
     format === 'SVG' && !artwork.assets.some((item) => assetFormat(item) === 'PNG'),
@@ -78,8 +87,18 @@
   const fileAlternatives = $derived(artwork.assets.filter((item) => assetFormat(item) === format));
   const alt = $derived(`${brand.name} ${assetLabel(asset)}`);
   const background = $derived(backgroundChoice ?? (asset.background === 'dark' ? 'dark' : 'light'));
-  const warnings = $derived(assetWarnings({ ...asset, qualityNotes: [] }));
-  const notes = $derived(asset.qualityNotes ?? []);
+  const warnings = $derived(assetWarnings(asset));
+  const rasterSize = $derived(dimensions && dimensions.file === asset.file ? dimensions : asset);
+  const rasterWidth = $derived(
+    format === 'SVG' || !rasterSize.width || !rasterSize.height
+      ? undefined
+      : `${rasterSize.width / density}px`,
+  );
+  const rasterHeight = $derived(
+    format === 'SVG' || !rasterSize.width || !rasterSize.height
+      ? undefined
+      : `${rasterSize.height / density}px`,
+  );
   const attribution = $derived(
     /^(?:Public domain\b|CC0(?:-|$))/i.test(asset.rights?.license || '')
       ? ''
@@ -88,7 +107,7 @@
   const license = $derived(
     /^Public domain\b/i.test(asset.rights?.license || '') ? '公共领域' : asset.rights?.license,
   );
-  const info = $derived(fileInfo(dimensions ? { ...asset, ...dimensions } : asset));
+  const info = $derived(fileInfo({ ...asset, width: rasterSize.width, height: rasterSize.height }));
   const links = $derived.by(() => {
     if (pageUrl)
       return resourceLinks({
@@ -123,7 +142,7 @@
     const image = event.currentTarget as HTMLImageElement;
     previewStatus = '';
     if (format !== 'SVG' && image.naturalWidth)
-      dimensions = { width: image.naturalWidth, height: image.naturalHeight };
+      dimensions = { file: asset.file, width: image.naturalWidth, height: image.naturalHeight };
   }
 
   async function downloadGeneratedPng() {
@@ -249,15 +268,56 @@
   ]);
 
   onMount(() => {
+    const updateDensity = () => (density = window.devicePixelRatio || 1);
+    updateDensity();
+    window.addEventListener('resize', updateDensity);
     canCopyImage = canCopyPngImage(navigator.clipboard, globalThis.ClipboardItem);
     if (format !== 'SVG' && previewImage?.complete && previewImage.naturalWidth) {
-      dimensions = { width: previewImage.naturalWidth, height: previewImage.naturalHeight };
+      dimensions = {
+        file: asset.file,
+        width: previewImage.naturalWidth,
+        height: previewImage.naturalHeight,
+      };
     }
+    return () => window.removeEventListener('resize', updateDensity);
   });
   onDestroy(() => {
     alive = false;
   });
 </script>
+
+{#snippet artworkOption(item: Artwork)}
+  {@const file = artworkFile(item)}
+  <a
+    class="variant-option"
+    href={assetHref(file.file)}
+    data-select-artwork={item.id}
+    data-select-asset={file.file}
+    data-selection-kind="artwork"
+    aria-current={item.id === artwork.id ? 'true' : 'false'}
+    onclick={(event) => onSelectAsset(event, file.file)}
+  >
+    <span
+      class="variant-thumb"
+      data-background={item.defaultAsset.background === 'dark' ? 'dark' : 'light'}
+      ><img
+        src={`${basePath}/${assetPath(item.defaultAsset)}`}
+        alt=""
+        width="52"
+        height="36"
+        loading="lazy"
+      /></span
+    >
+    <span class="variant-label"
+      >{artworkLabel(item)}<small
+        >{[...new Set(item.assets.map(assetFormat))].join(' / ')}{item.defaultAsset.status ===
+        'historical'
+          ? ' · 历史'
+          : ''}{isAlternativeArtwork(item) ? ' · 备选' : ''}</small
+      ></span
+    ><span class="variant-check" aria-hidden="true">✓</span>
+  </a>
+{/snippet}
 
 <div class="asset-main">
   <section class="preview-column" aria-label="标识预览">
@@ -275,6 +335,9 @@
           {alt}
           width="640"
           height="360"
+          style:--raster-width={rasterWidth}
+          style:--raster-height={rasterHeight}
+          data-native-size={format !== 'SVG' && !rasterWidth ? 'unknown' : undefined}
           decoding="async"
           onload={imageLoaded}
           onerror={() => {
@@ -309,7 +372,9 @@
   </section>
   <div class="asset-controls">
     <section class="asset-action-panel" aria-label="取用当前文件">
-      <p class="file-info" id="detail-fileinfo">{info}<span>原文件</span></p>
+      <p class="file-info" id="detail-fileinfo">
+        {info}<span>{asset.display === 'alternative' ? '备选文件' : '原文件'}</span>
+      </p>
       {#if warnings.length}<ul class="asset-warnings">
           {#each warnings as note (note)}<li>{note}</li>{/each}
         </ul>{/if}
@@ -376,46 +441,27 @@
       {#if exporting}<p class="download-status" role="status">正在生成 PNG…</p>{/if}
     </section>
     <section class="version-section" aria-label="选择标识">
-      {#if artworks.length > 1}
+      {#if artworks.length > 1 || alternativeArtworks.length}
         <div class="section-heading">
           <h2>选择标识</h2>
           <span>{artworks.length} 项</span>
         </div>
         <div class="variant-list" aria-label="标识样式">
           {#each artworks as item (item.id)}
-            {@const file = artworkFile(item)}
-            <a
-              class="variant-option"
-              href={assetHref(file.file)}
-              data-select-artwork={item.id}
-              data-select-asset={file.file}
-              data-selection-kind="artwork"
-              aria-current={item.id === artwork.id ? 'true' : 'false'}
-              onclick={(event) => onSelectAsset(event, file.file)}
-            >
-              <span
-                class="variant-thumb"
-                data-background={item.defaultAsset.background === 'dark' ? 'dark' : 'light'}
-                ><img
-                  src={`${basePath}/${assetPath(item.defaultAsset)}`}
-                  alt=""
-                  width="52"
-                  height="36"
-                  loading="lazy"
-                /></span
-              >
-              <span class="variant-label"
-                >{artworkLabel(item)}<small
-                  >{[...new Set(item.assets.map(assetFormat))].join(' / ')}{item.defaultAsset
-                    .status === 'historical'
-                    ? ' · 历史'
-                    : ''}</small
-                ></span
-              ><span class="variant-check" aria-hidden="true">✓</span>
-            </a>
+            {@render artworkOption(item)}
           {/each}
         </div>
       {:else}<h2 class="asset-title">{artworkLabel(artwork)}</h2>{/if}
+      {#if alternativeArtworks.length}
+        <details class="artwork-alternatives" open={isAlternativeArtwork(artwork)}>
+          <summary>更多版本 <span>{alternativeArtworks.length} 项</span></summary>
+          <div class="variant-list" aria-label="备选标识">
+            {#each alternativeArtworks as item (item.id)}
+              {@render artworkOption(item)}
+            {/each}
+          </div>
+        </details>
+      {/if}
     </section>
     <section class="file-section" aria-label="文件选择">
       {#if formatChoices.length > 1}
@@ -429,7 +475,8 @@
                 data-select-asset={item.asset.file}
                 data-selection-kind="format"
                 aria-current={item.format === format ? 'true' : 'false'}
-                onclick={(event) => onSelectAsset(event, item.asset.file)}>{item.format}</a
+                onclick={(event) => onSelectAsset(event, item.asset.file)}
+                >{item.format}{#if item.asset.display === 'alternative'}<small>备选</small>{/if}</a
               >
             {/each}
           </div>
@@ -438,7 +485,7 @@
         <div class="single-format"><span>文件格式</span><strong>{format}</strong></div>
       {/if}
       {#if fileAlternatives.length > 1}
-        <details class="file-options">
+        <details class="file-options" open={asset.display === 'alternative'}>
           <summary>更多文件</summary>
           <div class="file-option-list">
             {#each fileAlternatives as item (item.file)}
@@ -449,7 +496,9 @@
                 data-selection-kind="file"
                 aria-current={item.file === asset.file ? 'true' : 'false'}
                 onclick={(event) => onSelectAsset(event, item.file)}
-                ><span>{provenanceLabel(item)}</span><small>{fileInfo(item)}</small></a
+                ><span
+                  >{assetDisplayLabel(item)}{item.display === 'alternative' ? ' · 备选' : ''}</span
+                ><small>{provenanceLabel(item)} · {fileInfo(item)}</small></a
               >
             {/each}
           </div>
@@ -481,9 +530,6 @@
             >
           </dd>
         </dl>
-        {#if notes.length}<ul class="asset-notes">
-            {#each notes as note, index (index)}<li>{note}</li>{/each}
-          </ul>{/if}
         {#if attribution}<div class="attribution">
             <h2>署名</h2>
             <p>{attribution}</p>
@@ -565,13 +611,24 @@
     display: block;
     width: 100%;
     height: 100%;
-    max-height: 224px;
+    max-width: var(--raster-width, 100%);
+    max-height: min(224px, var(--raster-height, 224px));
     object-fit: contain;
   }
   .detail-canvas[data-variant='icon'] img {
     width: 150px;
     height: 150px;
-    max-width: 80%;
+    max-width: min(80%, var(--raster-width, 150px));
+  }
+  .detail-canvas img[data-native-size='unknown'] {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 224px;
+  }
+  .detail-canvas[data-variant='icon'] img[data-native-size='unknown'] {
+    max-width: min(80%, 150px);
+    max-height: 150px;
   }
   .preview-bottom {
     display: flex;
@@ -712,6 +769,20 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
   }
+  .artwork-alternatives {
+    margin-top: 10px;
+  }
+  .artwork-alternatives > summary {
+    width: fit-content;
+    min-height: 42px;
+    padding-block: 10px;
+    color: var(--muted);
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .artwork-alternatives > summary > span {
+    margin-left: 6px;
+  }
   .variant-option {
     position: relative;
     display: grid;
@@ -792,6 +863,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 6px;
     min-width: 62px;
     min-height: 42px;
     padding: 9px 13px;
@@ -804,6 +876,9 @@
   }
   .format-option:hover {
     border-color: var(--line-strong);
+  }
+  .format-option small {
+    font-size: 11px;
   }
   .format-option[aria-current='true'],
   .single-format > strong {
@@ -993,17 +1068,6 @@
     height: 13px;
     flex: 0 0 auto;
   }
-  .asset-notes {
-    margin: 18px 0 0;
-    padding-left: 18px;
-    color: var(--muted);
-    font-size: 13px;
-    line-height: 1.8;
-    overflow-wrap: anywhere;
-  }
-  .asset-notes li + li {
-    margin-top: 6px;
-  }
   .attribution {
     margin-top: 18px;
     padding: 12px;
@@ -1080,11 +1144,20 @@
       padding: 24px;
     }
     .detail-canvas img {
+      max-height: min(120px, var(--raster-height, 120px));
+    }
+    .detail-canvas img[data-native-size='unknown'] {
       max-height: 120px;
     }
     .detail-canvas[data-variant='icon'] img {
       width: 98px;
       height: 98px;
+    }
+    .detail-canvas[data-variant='icon'] img[data-native-size='unknown'] {
+      width: auto;
+      height: auto;
+      max-width: min(80%, 98px);
+      max-height: 98px;
     }
     .preview-bottom {
       min-height: 54px;

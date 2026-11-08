@@ -94,6 +94,54 @@ test('filtered catalog subsets keep group identity and resolve only available fi
   assert.equal(singleton.defaultAsset.file, 'blue-other.png');
 });
 
+test('primary choices lead with the brand default while source alternatives remain selectable', async () => {
+  const { artworkGroups, primaryArtworkGroups, alternativeArtworkGroups, selectedArtwork } =
+    await grouping();
+  const brand = sample();
+  brand.defaultAsset = 'white.svg';
+  brand.assets[0].display = 'alternative';
+  brand.assets[3].display = 'alternative';
+  brand.assets.push({ file: 'old-source.svg', label: 'Source color', display: 'alternative' });
+  assert.deepEqual(
+    artworkGroups(brand).map((group) => group.id),
+    ['file:white.svg', 'blue', 'file:old-source.svg'],
+  );
+  assert.deepEqual(
+    primaryArtworkGroups(brand).map((group) => group.id),
+    ['file:white.svg', 'blue'],
+  );
+  assert.deepEqual(
+    alternativeArtworkGroups(brand).map((group) => group.id),
+    ['file:old-source.svg'],
+  );
+  assert.equal(selectedArtwork(brand, 'old-source.svg').defaultAsset.file, 'old-source.svg');
+  const filtered = { ...brand, assets: [brand.assets.at(-1)] };
+  assert.equal(primaryArtworkGroups(filtered)[0].defaultAsset.file, 'old-source.svg');
+  assert.deepEqual(alternativeArtworkGroups(filtered), []);
+});
+
+test('format fallback favors a primary usable file over an earlier low-quality source', async () => {
+  const { artworkGroups, preferredArtworkAsset } = await grouping();
+  const brand = sample();
+  brand.assets[0].display = 'alternative';
+  const group = artworkGroups(brand)[0];
+  assert.equal(preferredArtworkAsset(group, 'PNG').file, 'blue-other.png');
+  const filtered = { ...brand, assets: [brand.assets[0], brand.assets[3]] };
+  assert.equal(artworkGroups(filtered)[0].defaultAsset.file, 'blue-other.png');
+});
+
+test('a fallback representation favors vector and larger current files without overriding a reviewed default', async () => {
+  const { preferredArtworkAsset } = await grouping();
+  const files = [
+    { file: 'tiny.png', width: 92, height: 44, status: 'current' },
+    { file: 'large.png', width: 1535, height: 907, status: 'current' },
+    { file: 'art.svg', status: 'current' },
+  ];
+  const group = { assets: files, defaultAsset: files[2] };
+  assert.equal(preferredArtworkAsset(group, 'PNG'), files[1]);
+  assert.equal(preferredArtworkAsset({ ...group, defaultAsset: files[0] }, 'PNG'), files[0]);
+});
+
 test('grouping leaves source records untouched and allows UI labels for singleton files', async () => {
   const { artworkGroups } = await grouping();
   const brand = sample();
@@ -214,7 +262,7 @@ test('reviewed repository groups cover proven format pairs while preserving genu
     oppo: 1,
     vivo: 1,
     'trip-com': 1,
-    zte: 4,
+    zte: 3,
     tencent: 3,
   };
   for (const [id, count] of Object.entries(expected))
@@ -223,11 +271,27 @@ test('reviewed repository groups cover proven format pairs while preserving genu
     artworkGroups(brands.tencent).find((group) => group.assets.length === 2).defaultAsset.file,
     'wordmark-blue-official.png',
   );
-  for (const id of ['lenovo', 'meituan', 'minimax', 'yonyou']) {
-    assert.equal(
-      artworkGroups(brands[id]).length,
-      brands[id].assets.length,
-      `${id} needs explicit evidence before grouping`,
+  const { selectedArtwork, primaryArtworkGroups, alternativeArtworkGroups } = await grouping();
+  for (const [id, removed, replacement] of [
+    ['meituan', 'logo-chinese.png', 'logo-chinese-official.png'],
+    ['yonyou', 'wordmark-red.jpg', 'wordmark-red-transparent.png'],
+  ]) {
+    const brand = brands[id];
+    assert.ok(!brand.assets.some((asset) => asset.file === removed));
+    assert.equal(selectedArtwork(brand, replacement).defaultAsset.file, replacement);
+  }
+  assert.equal(
+    selectedArtwork(brands.yonyou, 'wordmark-white-transparent.png').id,
+    selectedArtwork(brands.yonyou, 'wordmark-white.svg').id,
+  );
+  for (const id of ['lenovo', 'minimax', 'zte']) {
+    const brand = brands[id];
+    assert.equal(primaryArtworkGroups(brand)[0].defaultAsset.file, brand.defaultAsset);
+    assert.equal(alternativeArtworkGroups(brand).length, id === 'zte' ? 1 : 0);
+    assert.ok(
+      alternativeArtworkGroups(brand).every((group) =>
+        group.assets.every((asset) => asset.display === 'alternative'),
+      ),
     );
   }
   for (const brand of Object.values(brands)) {
@@ -235,7 +299,7 @@ test('reviewed repository groups cover proven format pairs while preserving genu
     assert.deepEqual(
       [...files].sort(),
       brand.assets.map((asset) => asset.file).sort(),
-      `${brand.id}: every original remains selectable`,
+      `${brand.id}: every active original remains selectable`,
     );
   }
 });

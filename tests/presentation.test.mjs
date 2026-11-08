@@ -219,6 +219,33 @@ test('asset search terms, category, format and shape intersect on a single real 
   assert.deepEqual(alibaba, before);
 });
 
+test('filtering out a brand default still selects the reviewed default of a matching artwork', async () => {
+  const { loadCatalog } = await import('../scripts/lib/catalog.mjs');
+  const { matchingBrands, directoryAsset, defaultAsset } = await presentation();
+  const catalog = (await loadCatalog()).brands;
+  const query = 'codeberg 图标 白色';
+  const [white] = matchingBrands(catalog, { q: query });
+  assert.equal(directoryAsset(white, query).file, 'icon-white.svg');
+  assert.equal(defaultAsset(white).file, 'icon-white.svg');
+  const [png] = matchingBrands(catalog, { q: query, format: 'PNG' });
+  assert.equal(directoryAsset(png, query).file, 'icon-white.png');
+  assert.deepEqual(matchingBrands(catalog, { q: 'ZTE 青色' }), []);
+});
+
+test('small horizontal bitmaps warn even when their long edge exceeds 256 pixels', async () => {
+  const { assetWarnings } = await presentation();
+  assert.ok(
+    assetWarnings({ file: 'wordmark.png', width: 302, height: 92 }).includes(
+      '低分辨率原图，请留意实际像素尺寸',
+    ),
+  );
+  assert.ok(
+    !assetWarnings({ file: 'wordmark.png', width: 1280, height: 203 }).includes(
+      '低分辨率原图，请留意实际像素尺寸',
+    ),
+  );
+});
+
 test('directory URL state round-trips with query and filters and rejects absent categories', async () => {
   const { directoryUrl, readDirectoryState } = await presentation();
   const directory = {

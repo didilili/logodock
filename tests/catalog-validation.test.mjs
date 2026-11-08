@@ -160,3 +160,46 @@ test('an explicit historical default is allowed only when no current asset exist
   });
   assert.equal((await loadCatalog(root)).brands[0].defaultAsset, 'current.svg');
 });
+
+test('display is optional for existing records, preserved for alternatives and cannot replace the brand default', async (t) => {
+  const root = await fixture(t);
+  assert.equal(Object.hasOwn((await loadCatalog(root)).brands[0].assets[0], 'display'), false);
+  await writeFile(join(root, 'logos/example/alternative.svg'), svg);
+  await mutate(root, (m) => {
+    m.assets.push({ ...m.assets[0], file: 'alternative.svg', display: 'alternative' });
+  });
+  const brand = (await loadCatalog(root)).brands[0];
+  assert.equal(
+    brand.assets.find((asset) => asset.file === 'alternative.svg').display,
+    'alternative',
+  );
+  await mutate(root, (m) => {
+    m.defaultAsset = 'alternative.svg';
+  });
+  await assert.rejects(loadCatalog(root), /defaultAsset.*primary/i);
+});
+
+test('an artwork must recommend a primary member when one exists but all-alternative groups are allowed', async (t) => {
+  const root = await fixture(t);
+  for (const file of ['blue.svg', 'blue-small.svg'])
+    await writeFile(join(root, 'logos/example', file), svg);
+  await mutate(root, (m) => {
+    m.assets.push(
+      { ...m.assets[0], file: 'blue.svg' },
+      { ...m.assets[0], file: 'blue-small.svg', display: 'alternative' },
+    );
+    m.artworks = [
+      {
+        id: 'blue',
+        label: 'Blue',
+        files: ['blue.svg', 'blue-small.svg'],
+        defaultAsset: 'blue-small.svg',
+      },
+    ];
+  });
+  await assert.rejects(loadCatalog(root), /defaultAsset.*primary/i);
+  await mutate(root, (m) => {
+    m.assets.find((asset) => asset.file === 'blue.svg').display = 'alternative';
+  });
+  assert.equal((await loadCatalog(root)).brands[0].artworks[0].defaultAsset, 'blue-small.svg');
+});

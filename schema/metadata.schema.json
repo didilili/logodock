@@ -155,6 +155,12 @@
           "enum": ["current", "historical"],
           "default": "current"
         },
+        "display": {
+          "type": "string",
+          "enum": ["primary", "alternative"],
+          "default": "primary",
+          "description": "Reviewed display priority. Alternative files remain accessible through their original paths and file selections."
+        },
         "background": {
           "type": "string",
           "enum": ["light", "dark", "any"],

@@ -5,6 +5,7 @@ export interface Asset {
   path: string;
   variant: 'icon' | 'wordmark' | 'logo';
   status: 'current' | 'historical';
+  display?: 'primary' | 'alternative';
   background: 'light' | 'dark' | 'any';
   language: string;
   layout: string;

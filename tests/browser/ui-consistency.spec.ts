@@ -394,7 +394,12 @@ test('cards keep usage restrictions visible and details disclose useful material
   const zte = page.getByRole('article').filter({ has: page.locator('[data-brand-link="zte"]') });
   await expect(zte.locator('.brand-link')).toHaveAccessibleName(/^查看 中兴通讯，/);
   await expect(zte.locator('.version-thumbnails')).toBeVisible();
-  await expect(zte.locator('.more-versions')).toHaveAccessibleName('查看 中兴通讯 的其他标识');
+  await expect(zte.locator('.version-thumbnail')).toHaveCount(2);
+  await expect(zte.locator('.more-versions')).toHaveCount(0);
+  await expect(zte.locator('.version-thumbnail img').last()).toHaveAttribute(
+    'src',
+    /wordmark-white-official\.png$/,
+  );
   await expect(zte.locator('.card-download')).toHaveAttribute(
     'href',
     /wordmark-blue-official\.png$/,
@@ -408,18 +413,15 @@ test('cards keep usage restrictions visible and details disclose useful material
   );
   const sources = page.locator('.source-details');
   await expect(sources).toHaveJSProperty('open', false);
-  const notes = sources.locator('.asset-notes li');
+  const notes = page.locator('.asset-action-panel .asset-warnings li');
   await expect(notes).not.toHaveCount(0);
-  await expect(notes.first()).toBeHidden();
+  for (const note of await notes.all()) await expect(note).toBeVisible();
+  await expect(page.locator('.asset-action-panel')).toContainText('留白');
+  await expect(page.locator('.asset-action-panel')).toContainText('#0086D1');
+  await expect(page.locator('.asset-action-panel')).toContainText('#008ED3');
   await sources.locator('summary').click();
   await expect(sources).toHaveJSProperty('open', true);
-  await expect(sources).toContainText('留白');
-  await expect(sources).toContainText('#0086D1');
-  await expect(sources).toContainText('#008ED3');
   await expect(sources).not.toContainText('zte_logo_en/');
-  for (const note of await notes.all()) await expect(note).toBeVisible();
-  const materialNotes = await notes.allTextContents();
-  await expect(page.locator('.asset-action-panel')).not.toContainText(materialNotes[0]);
   await sources.locator('summary').click();
-  await expect(notes.first()).toBeHidden();
+  for (const note of await notes.all()) await expect(note).toBeVisible();
 });

@@ -2,6 +2,26 @@
 /** @typedef {import('./types').Brand} Brand */
 /** @typedef {import('./types').ArtworkGroup} ArtworkGroup */
 
+/** Pick a fallback only among files already reviewed as one artwork.
+ * Explicit reviewed defaults always take precedence over this ranking.
+ * @param {Asset[]} assets
+ * @returns {Asset}
+ */
+function bestAvailableAsset(assets) {
+  return [...assets].sort(
+    (a, b) =>
+      Number(a.display === 'alternative') - Number(b.display === 'alternative') ||
+      Number(a.status === 'historical') - Number(b.status === 'historical') ||
+      Number(b.file.endsWith('.svg')) - Number(a.file.endsWith('.svg')) ||
+      (b.width ?? 0) * (b.height ?? 0) - (a.width ?? 0) * (a.height ?? 0),
+  )[0];
+}
+
+/** @param {ArtworkGroup} group */
+export function isAlternativeArtwork(group) {
+  return group.assets.every((asset) => asset.display === 'alternative');
+}
+
 /**
  * Group only explicitly reviewed artwork relationships. Missing declarations
  * stay as single-file choices; matching attributes alone do not establish that
@@ -31,14 +51,44 @@ export function artworkGroups(brand, labelForAsset = (asset) => asset.label) {
     if (seen.has(artwork.id)) continue;
     seen.add(artwork.id);
     const assets = brand.assets.filter((item) => artwork.files.includes(item.file));
+    const primary = assets.filter((item) => item.display !== 'alternative');
+    const preferred = primary.length ? primary : assets;
     const defaultAsset =
-      assets.find((item) => item.file === artwork.defaultAsset) ??
-      assets.find((item) => item.file === brand.defaultAsset) ??
-      assets.find((item) => item.status === 'current') ??
-      assets[0];
+      preferred.find((item) => item.file === artwork.defaultAsset) ??
+      preferred.find((item) => item.file === brand.defaultAsset) ??
+      bestAvailableAsset(preferred);
     groups.push({ id: artwork.id, label: artwork.label, assets, defaultAsset });
   }
-  return groups;
+  return groups.sort(
+    (a, b) =>
+      Number(isAlternativeArtwork(a)) - Number(isAlternativeArtwork(b)) ||
+      Number(b.assets.some((asset) => asset.file === brand.defaultAsset)) -
+        Number(a.assets.some((asset) => asset.file === brand.defaultAsset)) ||
+      Number(a.defaultAsset.status === 'historical') -
+        Number(b.defaultAsset.status === 'historical'),
+  );
+}
+
+/** @param {Brand} brand
+ * @param {(asset: Asset) => string} [labelForAsset]
+ * @returns {ArtworkGroup[]}
+ */
+export function primaryArtworkGroups(brand, labelForAsset) {
+  const groups = artworkGroups(brand, labelForAsset);
+  const primary = groups.filter((group) => !isAlternativeArtwork(group));
+  return primary.length ? primary : groups;
+}
+
+/** When a directory filter leaves only alternatives, keep them in its main list.
+ * @param {Brand} brand
+ * @param {(asset: Asset) => string} [labelForAsset]
+ * @returns {ArtworkGroup[]}
+ */
+export function alternativeArtworkGroups(brand, labelForAsset) {
+  const groups = artworkGroups(brand, labelForAsset);
+  return groups.some((group) => !isAlternativeArtwork(group))
+    ? groups.filter(isAlternativeArtwork)
+    : [];
 }
 
 /**
@@ -72,5 +122,6 @@ export function preferredArtworkAsset(group, preferredFormat) {
   /** @param {Asset} asset */
   const formatOf = (asset) => asset.file.split('.').pop()?.toUpperCase();
   if (!format || formatOf(group.defaultAsset) === format) return group.defaultAsset;
-  return group.assets.find((asset) => formatOf(asset) === format) ?? group.defaultAsset;
+  const matching = group.assets.filter((asset) => formatOf(asset) === format);
+  return matching.length ? bestAvailableAsset(matching) : group.defaultAsset;
 }

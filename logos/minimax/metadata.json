@@ -54,32 +54,6 @@
   "defaultAsset": "logo-gradient-horizontal.png",
   "assets": [
     {
-      "file": "logo-gradient-vertical.png",
-      "label": "渐变竖版组合标识（Commons 原件）",
-      "variant": "logo",
-      "status": "current",
-      "background": "light",
-      "source": "https://upload.wikimedia.org/wikipedia/commons/3/3c/MiniMax.png",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:MiniMax.png",
-      "sha256": "73d242a14bdf7b1272d1fb8361d20c1e181ae9990f2c0eb68572531131990b64",
-      "bytes": 100238,
-      "rights": {
-        "status": "permitted",
-        "license": "Public domain (textlogo)",
-        "reference": "https://commons.wikimedia.org/w/index.php?title=File:MiniMax.png&oldid=1051737129",
-        "attribution": "No copyright attribution required under the Wikimedia Commons PD-textlogo assessment. Source credit retained: MiniMax / Wikimedia Commons, https://commons.wikimedia.org/wiki/File:MiniMax.png . Original file, unmodified.",
-        "reviewedAt": "2026-11-07",
-        "notes": "该文件页使用 PD-textlogo，依据是 Wikimedia Commons 对简单文字或几何图形未达到版权原创性门槛的公共领域判定，不是品牌方授予 Logo 的开放版权许可或再分发授权；不同法域的原创性判断可能不同。商标权及其他使用限制仍然保留，不得暗示官方背书。公司归属由 https://www.minimax.io/about 核对。当前 https://www.minimax.io/brand-vi 的 Logo System/Our Logo 展示相同波形与 MINIMAX 字形；本文件是该公司标识的竖排布局，非海螺等产品图标。官方品牌指南另规定比例、颜色、间距与组合使用，不得歪曲、拆分、转授权或造成误导，未覆盖的使用情境应申请批准；本记录依据 Commons 对这一具体文件的公共领域判定，不将官方下载入口或其有限、不可转让的使用许可解释为再分发授权。"
-      },
-      "language": "en",
-      "layout": "vertical",
-      "color": "brand",
-      "provenance": {
-        "sourceType": "commons",
-        "processing": "original"
-      }
-    },
-    {
       "file": "logo-gradient-vertical-official.png",
       "label": "渐变黑字竖版组合标识（官方原生 PNG）",
       "variant": "logo",

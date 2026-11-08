@@ -2,6 +2,16 @@ import { expect, test, type Page } from '@playwright/test';
 import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 
+const removedSources = [
+  ['meituan', 'logo-chinese.png'],
+  ['yonyou', 'wordmark-red.jpg'],
+  ['minimax', 'logo-gradient-vertical.png'],
+  ['lenovo', 'logo-red-2015.png'],
+  ['lenovo', 'logo-red-brandworld.png'],
+  ['zte', 'wordmark-cyan-2015.png'],
+  ['zte', 'wordmark-cyan-commons.svg'],
+] as const;
+
 function canonicalUrl(value: string) {
   const url = new URL(value);
   url.searchParams.sort();
@@ -70,6 +80,191 @@ async function expectLastCopy(page: Page, value: string) {
     )
     .toBe(value);
 }
+
+test('card preview gives the same Codeberg artwork a consistent size across SVG and PNG', async ({
+  page,
+}) => {
+  const widths: number[] = [];
+  for (const format of ['SVG', 'PNG']) {
+    await page.goto(`/?q=Codeberg&format=${format}`);
+    await expect(page.locator('#theme-toggle')).toBeEnabled();
+    const image = page.locator('[data-brand="codeberg"] .brand-art img');
+    await expect(image).toHaveAttribute('src', new RegExp(`icon-blue\\.${format.toLowerCase()}$`));
+    await image.evaluate((element: HTMLImageElement) => element.decode());
+    const bounds = await image.boundingBox();
+    expect(bounds).not.toBeNull();
+    expect(bounds!.width, `${format} should fill the icon preview target`).toBeGreaterThanOrEqual(
+      60,
+    );
+    widths.push(bounds!.width);
+  }
+  expect(Math.abs(widths[0] - widths[1])).toBeLessThanOrEqual(1);
+});
+
+test('small raster detail previews stay within the available pixels at each display density', async ({
+  browser,
+}) => {
+  for (const density of [1, 2]) {
+    const context = await browser.newContext({
+      viewport: { width: 1280, height: 900 },
+      deviceScaleFactor: density,
+    });
+    try {
+      const page = await context.newPage();
+      await page.goto('/logos/zte/?asset=wordmark-blue-header-official.png');
+      await expect(page.locator('#theme-toggle')).toBeEnabled();
+      const image = page.locator('#detail-image');
+      await image.evaluate((element: HTMLImageElement) => element.decode());
+      const pixels = await image.evaluate((element: HTMLImageElement) => {
+        const bounds = element.getBoundingClientRect();
+        return {
+          width: bounds.width,
+          height: bounds.height,
+          naturalWidth: element.naturalWidth,
+          naturalHeight: element.naturalHeight,
+          density: window.devicePixelRatio,
+        };
+      });
+      expect(pixels.naturalWidth).toBe(92);
+      expect(pixels.width * pixels.density).toBeLessThanOrEqual(pixels.naturalWidth + 1);
+      expect(pixels.height * pixels.density).toBeLessThanOrEqual(pixels.naturalHeight + 1);
+      await page
+        .locator(
+          '.version-section > .variant-list [data-select-asset="wordmark-blue-official.png"]',
+        )
+        .click();
+      await expect(image).toHaveAttribute('src', /wordmark-blue-official\.png$/);
+      await expect
+        .poll(() => image.evaluate((element) => element.getBoundingClientRect().width))
+        .toBeGreaterThan(200);
+      await page.goBack();
+      await expect(image).toHaveAttribute('src', /wordmark-blue-header-official\.png$/);
+      await expect
+        .poll(() =>
+          image.evaluate((element) => element.getBoundingClientRect().width * devicePixelRatio),
+        )
+        .toBeLessThanOrEqual(93);
+    } finally {
+      await context.close();
+    }
+  }
+});
+
+test('primary artwork choices keep source alternatives out of the main list while exact links remain usable', async ({
+  page,
+}) => {
+  await page.goto('/logos/zte/');
+  await expect(page.locator('#theme-toggle')).toBeEnabled();
+  const primary = page.locator('.version-section > .variant-list [data-select-artwork]');
+  await expect(primary).toHaveCount(2);
+  await expect(page.locator('#download-link')).toHaveAttribute(
+    'href',
+    /wordmark-blue-official\.png$/,
+  );
+  const alternatives = page.locator('details.artwork-alternatives');
+  await expect(alternatives).toHaveJSProperty('open', false);
+  await alternatives.locator('summary').click();
+  await expect(alternatives.locator('[data-select-artwork]')).toHaveCount(1);
+  await alternatives.locator('[data-select-asset="wordmark-blue-header-official.png"]').click();
+  await expect(alternatives).toHaveJSProperty('open', true);
+  await expect(alternatives.locator('[aria-current="true"]')).toHaveAttribute(
+    'data-select-asset',
+    'wordmark-blue-header-official.png',
+  );
+  await expect(page.locator('.asset-action-panel')).toContainText('92 × 44');
+  await expect(page.locator('.asset-action-panel')).toContainText('#008ED3');
+  await expect(page.locator('.asset-action-panel')).toContainText('放大易模糊');
+  await page.reload();
+  await expect(page.locator('#theme-toggle')).toBeEnabled();
+  await expect(alternatives).toHaveJSProperty('open', true);
+  await expect(alternatives.locator('[aria-current="true"]')).toHaveAttribute(
+    'data-select-asset',
+    'wordmark-blue-header-official.png',
+  );
+});
+
+test('removed source files leave selection, search and format filters and their former URLs return 404', async ({
+  page,
+  request,
+}) => {
+  for (const [id, file] of removedSources) {
+    await page.goto(`/logos/${id}/`);
+    await expect(page.locator('#theme-toggle')).toBeEnabled();
+    await expect(page.locator(`[data-select-asset="${file}"]`)).toHaveCount(0);
+    await expect(page.locator(`a[download][href$="/${file}"]`)).toHaveCount(0);
+    await page.goto(`/?q=${encodeURIComponent(`${id} ${file}`)}`);
+    await expect(page.locator('#theme-toggle')).toBeEnabled();
+    await expect(page.locator('#brand-grid .brand-card')).toHaveCount(0);
+    const response = await request.get(`/logos/${id}/${file}`);
+    expect(response.status()).toBe(404);
+  }
+  await page.goto('/?q=ZTE%20%E9%9D%92%E8%89%B2');
+  await expect(page.locator('#theme-toggle')).toBeEnabled();
+  await expect(page.locator('#brand-grid .brand-card')).toHaveCount(0);
+  await page.goto('/');
+  await expect(page.locator('#theme-toggle')).toBeEnabled();
+  // Kingdee still has a useful JPG original; Yonyou's removed JPG leaves this filter.
+  await chooseFilter(page, 'format-filter', 'JPG');
+  await expect(page.locator('#brand-grid .brand-card')).toHaveCount(1);
+  await expect(page.locator('[data-brand="kingdee"]')).toHaveCount(1);
+  await expect(page.locator('[data-brand="yonyou"]')).toHaveCount(0);
+});
+
+test('removed file selections fall back to the brand default without a replacement alias', async ({
+  page,
+}) => {
+  for (const legacy of [false, true]) {
+    const query = new URLSearchParams({
+      asset: 'logo-gradient-vertical.png',
+      q: 'minimax',
+      category: 'ai',
+      format: 'PNG',
+      type: 'company',
+      tracking: 'kept',
+    });
+    if (legacy) query.set('brand', 'minimax');
+    await page.goto(`${legacy ? '/' : '/logos/minimax/'}?${query}#preview`);
+    await expect(page.locator('#detail-copy-menu')).toBeEnabled();
+    await expect(page.locator('#download-link')).toHaveAttribute(
+      'href',
+      /\/logos\/minimax\/logo-gradient-horizontal\.png$/,
+    );
+    const result = new URL(page.url());
+    expect(result.pathname).toBe('/logos/minimax/');
+    expect(result.searchParams.get('q')).toBe('minimax');
+    expect(result.searchParams.get('category')).toBe('ai');
+    expect(result.searchParams.get('format')).toBe('PNG');
+    expect(result.searchParams.get('type')).toBe('company');
+    expect(result.searchParams.get('tracking')).toBe('kept');
+    expect(result.searchParams.has('brand')).toBe(false);
+    expect(result.hash).toBe('#preview');
+    await expect(page.locator('[data-select-asset="logo-gradient-vertical.png"]')).toHaveCount(0);
+  }
+});
+
+test('an explicit alternative search keeps the standard-color source and discloses its limitation on the card', async ({
+  page,
+}) => {
+  await page.goto('/?q=ZTE%20%E6%A0%87%E5%87%86%E8%93%9D');
+  await expect(page.locator('#theme-toggle')).toBeEnabled();
+  const card = page.locator('[data-brand="zte"]');
+  await expect(card.locator('.brand-art img')).toHaveAttribute(
+    'src',
+    /wordmark-blue-header-official\.png$/,
+  );
+  await expect(card.locator('.card-alternative')).toContainText('备选');
+  await expect(card.locator('.card-alternative')).toContainText('92 × 44');
+  await expect(card.locator('.card-download')).toHaveAttribute(
+    'href',
+    /wordmark-blue-header-official\.png$/,
+  );
+  await card.locator('.brand-link').click();
+  await expect(page.locator('#detail-image')).toHaveAttribute(
+    'src',
+    /wordmark-blue-header-official\.png$/,
+  );
+  await expect(page.locator('details.artwork-alternatives')).toHaveJSProperty('open', true);
+});
 
 test('search and file filters survive detail navigation, browser back and a reload', async ({
   page,
@@ -889,6 +1084,14 @@ test('without JavaScript the static home, source disclosure and original downloa
     ).toHaveAttribute('href', /\/logos\/alibaba\/wordmark-orange\.png$/);
     await page.locator('#back-directory').click();
     await expect(page.locator('#brand-grid .brand-card')).toHaveCount(23);
+    for (const id of new Set(removedSources.map(([brand]) => brand))) {
+      await page.goto(`/logos/${id}/`);
+      for (const [, file] of removedSources.filter(([brand]) => brand === id)) {
+        await expect(page.locator(`[data-select-asset="${file}"]`)).toHaveCount(0);
+        await expect(page.locator(`a[href$="/${file}"]`)).toHaveCount(0);
+      }
+      await expect(page.locator('#download-link')).toBeVisible();
+    }
   } finally {
     await context.close();
   }
@@ -1134,15 +1337,15 @@ test('grouping combines format renditions while retaining distinct artwork and c
     ['iflytek', 3],
     ['xiaomi', 2],
     ['zhipu', 3],
-    ['lenovo', 3],
-    ['meituan', 3],
-    ['minimax', 5],
-    ['yonyou', 4],
-    ['zte', 4],
+    ['lenovo', 0],
+    ['meituan', 2],
+    ['minimax', 4],
+    ['yonyou', 2],
+    ['zte', 2],
   ] as const) {
     await page.goto(`/logos/${id}/`);
     await expect(
-      page.locator('.variant-list [data-select-artwork]'),
+      page.locator('.version-section > .variant-list [data-select-artwork]'),
       `${id}: retain meaningful visual choices`,
     ).toHaveCount(count);
   }
@@ -1183,6 +1386,7 @@ test('same-format source alternatives remain under one artwork and update exact 
   await expect(alternatives).toHaveJSProperty('open', false);
   await alternatives.locator('summary').click();
   const commons = alternatives.locator('[data-select-asset="wordmark-blue.png"]');
+  await expect(commons.locator(':scope > span')).toContainText('紧凑画布');
   await expect(commons).toContainText('Wikimedia Commons');
   await expect(commons).toContainText('1280 × 172');
   await commons.click();
@@ -1212,4 +1416,12 @@ test('same-format source alternatives remain under one artwork and update exact 
     /\/wordmark-blue-official\.png$/,
   );
   await expect(page.locator('#detail-fileinfo')).toContainText('2953 × 889');
+  // An explicit file choice keeps its list open so focus stays on a visible link.
+  await page.locator('details.file-options > summary').click();
+  await commons.click();
+  await expect(alternatives).toHaveJSProperty('open', true);
+  await expect(commons).toBeFocused();
+  await page.goto('/logos/tencent/');
+  await expect(page.locator('#theme-toggle')).toBeEnabled();
+  await expect(alternatives).toHaveJSProperty('open', false);
 });

@@ -23,22 +23,13 @@ export function defaultAsset(brand, requestedFile) {
   return (
     brand.assets.find((asset) => asset.file === requestedFile) ||
     brand.assets.find((asset) => asset.file === brand.defaultAsset) ||
-    brand.assets.find((asset) => asset.status === 'current') ||
-    brand.assets[0]
+    artworkGroups(brand)[0]?.defaultAsset
   );
 }
 
 export function directoryAsset(brand, query = '') {
-  const fallback = defaultAsset(brand);
   const candidates = matchingAssets(brand, query);
-  if (!candidates.length) return fallback;
-  return (
-    candidates.find((asset) => asset.file === fallback.file) ||
-    artworkGroups(brand)
-      .map((group) => group.defaultAsset)
-      .find((asset) => candidates.includes(asset)) ||
-    candidates[0]
-  );
+  return defaultAsset(candidates.length ? { ...brand, assets: candidates } : brand);
 }
 
 export function assetLabel(asset) {
@@ -66,6 +57,7 @@ export function assetDisplayLabel(asset) {
 
 export function assetWarnings(asset) {
   const notes = [];
+  if (asset.display === 'alternative') notes.push('备选文件，请留意配色、背景与清晰度说明');
   if (asset.status === 'historical') notes.push('历史素材，不代表现行标识');
   if (/(?:^|[-\s])NC(?:[-\s]|$)/i.test(asset.rights?.license || '')) notes.push('仅限非商业用途');
   for (const note of asset.qualityNotes || []) if (note && !notes.includes(note)) notes.push(note);
@@ -73,7 +65,8 @@ export function assetWarnings(asset) {
     assetFormat(asset) !== 'SVG' &&
     asset.width &&
     asset.height &&
-    Math.max(asset.width, asset.height) < 256
+    (Math.max(asset.width, asset.height) < 256 ||
+      (Math.max(asset.width, asset.height) < 512 && Math.min(asset.width, asset.height) < 128))
   )
     notes.push('低分辨率原图，请留意实际像素尺寸');
   return [...new Set(notes)];

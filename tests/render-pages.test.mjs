@@ -73,7 +73,8 @@ test('static index, source metadata and every original file keep their paths and
   const index = await readFile(join(output, 'index.json'));
   assert.deepEqual(index, await readFile(join(repositoryRoot, 'index.json')));
   assert.deepEqual(JSON.parse(index), catalog);
-  let assets = 0;
+  let originals = 0;
+  let active = 0;
   for (const brand of catalog.brands) {
     const path = `logos/${brand.id}/metadata.json`;
     assert.deepEqual(
@@ -81,16 +82,20 @@ test('static index, source metadata and every original file keep their paths and
       await readFile(join(repositoryRoot, path)),
       path,
     );
-    for (const asset of brand.assets) {
-      const original = await readFile(join(repositoryRoot, asset.path));
-      const published = await readFile(join(output, asset.path));
-      assert.deepEqual(published, original, asset.path);
-      assert.equal(published.byteLength, asset.bytes, asset.path);
-      assert.equal(createHash('sha256').update(published).digest('hex'), asset.sha256, asset.path);
-      assets++;
+    const metadata = JSON.parse(await readFile(join(repositoryRoot, path), 'utf8'));
+    for (const asset of metadata.assets) {
+      const assetPath = `logos/${brand.id}/${asset.file}`;
+      const original = await readFile(join(repositoryRoot, assetPath));
+      const published = await readFile(join(output, assetPath));
+      assert.deepEqual(published, original, assetPath);
+      assert.equal(published.byteLength, asset.bytes, assetPath);
+      assert.equal(createHash('sha256').update(published).digest('hex'), asset.sha256, assetPath);
+      originals++;
     }
+    active += brand.assets.length;
   }
-  assert.equal(assets, 63);
+  assert.equal(originals, 56);
+  assert.equal(active, 56);
 });
 
 test('each detail keeps downloads, brand names, sources and rights without exposing maintenance records', async () => {
@@ -171,7 +176,7 @@ test('detail hydration contains only the requested brand, not a serialized whole
   }
 });
 
-test('reviewed artwork groups have one preview each while every original remains directly accessible', async () => {
+test('reviewed artwork groups and no-JavaScript file links contain only active choices', async () => {
   for (const [id, count] of [
     ['alibaba', 2],
     ['codeberg', 4],
@@ -186,9 +191,9 @@ test('reviewed artwork groups have one preview each while every original remains
   }
   for (const brand of catalog.brands) {
     const visible = withoutScripts(await readOutput(`logos/${brand.id}/index.html`));
+    const hrefs = [...visible.matchAll(/\bhref="([^"]+)"/g)].map((match) => match[1]);
     for (const asset of brand.assets) {
       const suffix = `logos/${brand.id}/${asset.file}`;
-      const hrefs = [...visible.matchAll(/\bhref="([^"]+)"/g)].map((match) => match[1]);
       assert.ok(
         hrefs.some((href) => href.endsWith(suffix)),
         `${suffix}: a no-JavaScript original-file link is retained`,

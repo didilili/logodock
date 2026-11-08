@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import type { Asset, ArtworkGroup, Brand } from '../types';
   import { identityNames } from '../catalog-display.mjs';
   import {
@@ -7,7 +8,7 @@
     assetFormat,
     assetWarnings,
   } from '../catalog-presentation.mjs';
-  import { artworkGroups, preferredArtworkAsset } from '../catalog-artworks.mjs';
+  import { primaryArtworkGroups, preferredArtworkAsset } from '../catalog-artworks.mjs';
   import { assetPath } from '../resource-links.mjs';
   import Icon from './Icon.svelte';
   import CopyMenu from './CopyMenu.svelte';
@@ -35,6 +36,8 @@
   } = $props();
 
   let selection = $state<{ key: string; file: string } | null>(null);
+  let density = $state(1);
+  let loadedSize = $state<{ file: string; width: number; height: number }>();
   const selectionKey = $derived(
     JSON.stringify([brand.id, query, brand.assets.map((item) => item.file)]),
   );
@@ -46,7 +49,29 @@
       directoryAsset(brand, query)
     );
   });
-  const artworks = $derived(artworkGroups(brand, assetDisplayLabel));
+  const artworks = $derived(primaryArtworkGroups(brand, assetDisplayLabel));
+  const rasterSize = $derived(
+    loadedSize && loadedSize.file === asset.file
+      ? loadedSize
+      : { width: asset.width, height: asset.height },
+  );
+  const rasterWidth = $derived(
+    assetFormat(asset) === 'SVG' || !rasterSize.width || !rasterSize.height
+      ? undefined
+      : `${rasterSize.width / density}px`,
+  );
+  const rasterHeight = $derived(
+    assetFormat(asset) === 'SVG' || !rasterSize.width || !rasterSize.height
+      ? undefined
+      : `${rasterSize.height / density}px`,
+  );
+  const alternativeSummary = $derived(
+    asset.qualityNotes?.find((note: string) =>
+      /小尺寸|低分辨率|放大|模糊|不透明|裁切/u.test(note),
+    ) ??
+      asset.qualityNotes?.[0] ??
+      '',
+  );
   const artwork = $derived(
     artworks.find((item) => item.assets.some((file) => file.file === asset.file)),
   );
@@ -105,6 +130,13 @@
       file: preferredArtworkAsset(group, assetFormat(asset)).file,
     };
   }
+
+  onMount(() => {
+    const updateDensity = () => (density = window.devicePixelRatio || 1);
+    updateDensity();
+    window.addEventListener('resize', updateDensity);
+    return () => window.removeEventListener('resize', updateDensity);
+  });
 </script>
 
 <article class="brand-card" data-brand={brand.id}>
@@ -128,6 +160,18 @@
         decoding="async"
         width="190"
         height="80"
+        style:--raster-width={rasterWidth}
+        style:--raster-height={rasterHeight}
+        data-native-size={assetFormat(asset) !== 'SVG' && !rasterWidth ? 'unknown' : undefined}
+        onload={(event) => {
+          const image = event.currentTarget as HTMLImageElement;
+          if (assetFormat(asset) !== 'SVG' && image.naturalWidth)
+            loadedSize = {
+              file: asset.file,
+              width: image.naturalWidth,
+              height: image.naturalHeight,
+            };
+        }}
       />
       <span class="asset-format">{assetFormat(asset)}</span>
     </div>
@@ -138,7 +182,15 @@
       <p class="brand-english">{names.secondary || '\u00a0'}</p>
     </div>
     <div class="card-versions">
-      {#if restrictions.length}
+      {#if asset.display === 'alternative'}
+        <p class="card-alternative" title={assetWarnings(asset).join('；')}>
+          <strong
+            >备选 · {asset.width && asset.height
+              ? `${asset.width} × ${asset.height} px`
+              : assetFormat(asset)}{restrictionSummary ? ` · ${restrictionSummary}` : ''}</strong
+          >{alternativeSummary ? ` · ${alternativeSummary}` : ''}
+        </p>
+      {:else if restrictions.length}
         <p class="card-restrictions" title={restrictions.join('；')}>{restrictionSummary}</p>
       {:else if artworks.length > 1}
         <div class="version-thumbnails" aria-label={`${names.primary}的标识版本`}>
@@ -160,6 +212,14 @@
                 decoding="async"
                 width="30"
                 height="22"
+                style:max-width={assetFormat(group.defaultAsset) !== 'SVG' &&
+                group.defaultAsset.width
+                  ? `min(100%, ${group.defaultAsset.width / density}px)`
+                  : undefined}
+                style:max-height={assetFormat(group.defaultAsset) !== 'SVG' &&
+                group.defaultAsset.height
+                  ? `min(24px, ${group.defaultAsset.height / density}px)`
+                  : undefined}
               />
             </a>
           {/each}
@@ -235,14 +295,23 @@
   }
   .brand-art img {
     display: block;
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 68px;
+    width: 190px;
+    height: 68px;
+    max-width: min(100%, var(--raster-width, 190px));
+    max-height: min(68px, var(--raster-height, 68px));
     object-fit: contain;
   }
   .brand-art[data-variant='icon'] img {
-    max-width: 68px;
+    width: 68px;
+  }
+  .brand-art img[data-native-size='unknown'] {
+    width: auto;
+    height: auto;
+    max-width: min(100%, 190px);
+    max-height: 68px;
+  }
+  .brand-art[data-variant='icon'] img[data-native-size='unknown'] {
+    max-width: min(100%, 68px);
   }
   .asset-format {
     position: absolute;
@@ -295,6 +364,20 @@
     min-height: 44px;
     margin-top: 6px;
   }
+  .card-alternative {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    color: var(--muted);
+    font-size: var(--type-caption);
+    line-height: 1.5;
+  }
+  .card-alternative strong {
+    color: var(--warning-ink);
+    font-weight: 600;
+  }
   .version-thumbnails {
     display: flex;
     gap: 4px;
@@ -319,8 +402,8 @@
   }
   .version-thumbnail img {
     display: block;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 24px;
     max-width: 100%;
     max-height: 24px;
     object-fit: contain;
@@ -391,7 +474,17 @@
       padding: 25px 20px;
     }
     .brand-art img {
+      height: 62px;
+      max-height: min(62px, var(--raster-height, 62px));
+    }
+    .brand-art[data-variant='icon'] img {
+      width: 62px;
+    }
+    .brand-art img[data-native-size='unknown'] {
       max-height: 62px;
+    }
+    .brand-art[data-variant='icon'] img[data-native-size='unknown'] {
+      max-width: min(100%, 62px);
     }
     .card-content {
       padding: 8px 9px;

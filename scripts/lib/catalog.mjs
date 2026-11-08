@@ -201,6 +201,7 @@ async function readAsset(asset, folder, id) {
     label: asset.label,
     variant: asset.variant,
     status: asset.status,
+    ...(asset.display === undefined ? {} : { display: asset.display }),
     background: asset.background,
     language: asset.language,
     layout: asset.layout,
@@ -248,6 +249,11 @@ function readArtworks(artworks, assets, context) {
     requireValue(
       artwork.files.includes(artwork.defaultAsset),
       `${context}.${artwork.id}.defaultAsset must reference a member file`,
+    );
+    requireValue(
+      byFile.get(artwork.defaultAsset).display !== 'alternative' ||
+        members.every((member) => member.display === 'alternative'),
+      `${context}.${artwork.id}.defaultAsset must select a primary member when one exists`,
     );
     for (const key of ['variant', 'language', 'layout', 'color', 'status']) {
       requireValue(
@@ -311,6 +317,10 @@ export async function loadCatalog(root = repositoryRoot) {
     const artworks = readArtworks(metadata.artworks, assets, `${folder}.artworks`);
     const selected = assets.find((item) => item.file === metadata.defaultAsset);
     requireValue(selected, `${folder}.defaultAsset must reference a registered asset`);
+    requireValue(
+      selected.display !== 'alternative',
+      `${folder}.defaultAsset must select a primary asset`,
+    );
     requireValue(
       selected.status === 'current' || !assets.some((item) => item.status === 'current'),
       `${folder}.defaultAsset must select a current asset when one exists`,

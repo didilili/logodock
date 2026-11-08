@@ -1423,71 +1423,6 @@
       "defaultAsset": "logo-red-official.svg",
       "assets": [
         {
-          "file": "logo-red-2015.png",
-          "label": "2015 红底白字标识 · PNG（Commons 渲染）",
-          "variant": "logo",
-          "status": "current",
-          "background": "any",
-          "language": "en",
-          "layout": "horizontal",
-          "color": "other",
-          "provenance": {
-            "sourceType": "commons",
-            "processing": "rendered"
-          },
-          "qualityNotes": [
-            "本文件红色为 #E42022，与当前官方标准红 #E1251B 有差异。"
-          ],
-          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Lenovo_%282015%29.svg/1280px-Lenovo_%282015%29.svg.png",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:Lenovo_(2015).svg",
-          "sha256": "a3166258aadb1cb645d55b82f4153e22ee1fac7f721a6b613160d4b42df61eef",
-          "bytes": 12525,
-          "rights": {
-            "status": "permitted",
-            "license": "Public domain (textlogo)",
-            "reference": "https://commons.wikimedia.org/w/index.php?title=File%3ALenovo_%282015%29.svg&oldid=1251613811",
-            "attribution": "Lenovo Group Limited。Commons 文件页标记为公共领域，无版权署名要求；保留来源和商标声明。文件下载原样保存。",
-            "reviewedAt": "2026-11-07",
-            "notes": "依据 Wikimedia Commons 对该文件的 PD-textlogo（简单图形或文字未达到版权独创性门槛）公共领域判定收录；这是 Commons 的第三方判定，不是品牌方对本仓库的再分发授权。商标权仍归相关权利人，使用不得暗示官方背书。保存文件页正式提供的 1280px PNG（Commons 渲染）下载，未在本地转换、改色或裁切；原始 SVG：https://upload.wikimedia.org/wikipedia/commons/c/c9/Lenovo_%282015%29.svg 。2015 年启用的横向红底白字式样；现行官网品牌指南 https://brandworld.lenovo.com/visual-identity/logo/ 仍将 signature red Lenovo logo 列为首选标识，并提供相同字形和红色矩形结构。 配色复核：本 Commons PNG 红底主色为 #E42022；当前官方 https://brandworld.lenovo.com/visual-identity/color/ 的 Logo color / Signature Red 为 RGB(225,37,27)（#E1251B）。字形及矩形结构相符不等于配色完全一致，本文件不标为当前官方标准红色原件，保留下载原色，后续另核对官方标准色文件及分发依据。"
-          },
-          "width": 1280,
-          "height": 427,
-          "path": "logos/lenovo/logo-red-2015.png"
-        },
-        {
-          "file": "logo-red-brandworld.png",
-          "label": "红底白字标识 · 官方 Brand World PNG 原件",
-          "variant": "logo",
-          "status": "current",
-          "background": "any",
-          "language": "en",
-          "layout": "horizontal",
-          "color": "other",
-          "provenance": {
-            "sourceType": "official",
-            "processing": "original"
-          },
-          "qualityNotes": [
-            "2560 × 854 像素，红色不透明背景。",
-            "红色为 #E2211C，与当前标准红 #E1251B 有差异。"
-          ],
-          "source": "https://media.lenovobrandworld.fiestic.com/2022/06/08010946/LenovoLogo_POS-Red-H.png",
-          "sourcePage": "https://brandworld.lenovo.com/visual-identity/logo/",
-          "sha256": "f769fb55805db720f56d47dc1942362f07e117be33858218d10e3c71c9343ade",
-          "bytes": 12624,
-          "rights": {
-            "status": "permitted",
-            "license": "Public domain (textlogo; third-party assessment)",
-            "reference": "https://commons.wikimedia.org/w/index.php?title=File%3ALenovo_%282015%29.svg&oldid=1251613811",
-            "attribution": "Lenovo Group Limited。保留官方文件来源、Commons 公共领域判断及商标声明；下载文件原样保存。",
-            "reviewedAt": "2026-11-07",
-            "notes": "版权收录依据是 Commons 对相同简单 Lenovo 字样与纯色矩形标识的 PD-textlogo 第三方判断，不是联想对本图库的授权。经图形复核，本文件没有新增口号、插画或复杂组合；原色及像素/路径均保留。官方来源只证明文件及现行使用，不证明允许图库镜像或再分发。官方 https://www.lenovo.com/us/en/legal/copytrade/ 说明其他公司使用 Lenovo Logo 需取得书面许可或品牌授权；本条不授予商标使用权，也不构成对该限制的豁免，不得暗示官方背书。品牌资源禁止用于训练 AI 模型，见 https://brandworld.lenovo.com/visual-identity/logo/ 。\n\n质量核验记录：\n- 2560×854 官方页面原始 PNG，完整红色矩形；文件本身没有透明背景。\n- 原始不透明主色为 #E2211C，未附 ICC，与当前指南 #E1251B 有差异；没有在本地改色。"
-          },
-          "width": 2560,
-          "height": 854,
-          "path": "logos/lenovo/logo-red-brandworld.png"
-        },
-        {
           "file": "logo-red-official.svg",
           "label": "标准红标识 · 官方官网 SVG 原件",
           "variant": "logo",
@@ -1597,7 +1532,7 @@
         },
         {
           "file": "logo-chinese-official.png",
-          "label": "中文组合标识 · 高清透明 PNG 原件",
+          "label": "中文组合标识 · 高清透明 PNG（官方原件）",
           "variant": "logo",
           "status": "current",
           "background": "light",
@@ -1608,6 +1543,10 @@
             "sourceType": "official",
             "processing": "original"
           },
+          "qualityNotes": [
+            "1896 × 687 像素，透明背景，来自官方媒体素材包。",
+            "主黄为 #FFD100。"
+          ],
           "source": "https://s3plus.meituan.net/smart/22c45b30-80ba-4aa5-bfad-2bfaed7beb4e.zip",
           "sourcePage": "https://www.meituan.com/media",
           "sha256": "49b41e8adae5547675ca04cded446a613225a821c29d8eec98e2477f06b93a55",
@@ -1623,38 +1562,6 @@
           "width": 1896,
           "height": 687,
           "path": "logos/meituan/logo-chinese-official.png"
-        },
-        {
-          "file": "logo-chinese.png",
-          "label": "黄色中文组合标识 · PNG 原件",
-          "variant": "logo",
-          "status": "current",
-          "background": "light",
-          "language": "zh",
-          "layout": "horizontal",
-          "color": "brand",
-          "provenance": {
-            "sourceType": "commons",
-            "processing": "original"
-          },
-          "qualityNotes": [
-            "195 × 71 像素，放大使用会降低清晰度。"
-          ],
-          "source": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Meituan_Logo.png",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:Meituan_Logo.png",
-          "sha256": "0e86bd9feb4c638442d463bf261350437558159257b6f3a8558803617eba7c04",
-          "bytes": 6288,
-          "rights": {
-            "status": "permitted",
-            "license": "Public domain (textlogo)",
-            "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AMeituan_Logo.png&oldid=999835944",
-            "attribution": "No copyright attribution required by the Commons PD-textlogo designation. Logo attributed to 美团; trademark rights remain with the respective owner.",
-            "reviewedAt": "2026-11-07",
-            "notes": "分发依据为 Wikimedia Commons 对该具体标识的简单图形/文字公共领域判定（PD-textlogo），不是品牌方的再分发授权。该判定不授予商标权，相关商标权保留；使用时不得暗示品牌方背书。 公司身份与黄色方形图形、黑色中文字样已对照 https://www.meituan.com/ 当前页首组合标识核对；Commons 文件来源注明美团官网。此 PNG 是 Commons 提供的原始文件，未裁切、改色或重绘。 文件特征复核：本 PNG 原生尺寸仅195×71，保留来源字节，不能视作高清或矢量版本；较大尺寸及 SVG 标识尚待另行核对来源。"
-          },
-          "width": 195,
-          "height": 71,
-          "path": "logos/meituan/logo-chinese.png"
         }
       ]
     },
@@ -1840,35 +1747,6 @@
           "width": 1600,
           "height": 1600,
           "path": "logos/minimax/logo-gradient-vertical-official.png"
-        },
-        {
-          "file": "logo-gradient-vertical.png",
-          "label": "渐变竖版组合标识（Commons 原件）",
-          "variant": "logo",
-          "status": "current",
-          "background": "light",
-          "language": "en",
-          "layout": "vertical",
-          "color": "brand",
-          "provenance": {
-            "sourceType": "commons",
-            "processing": "original"
-          },
-          "source": "https://upload.wikimedia.org/wikipedia/commons/3/3c/MiniMax.png",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:MiniMax.png",
-          "sha256": "73d242a14bdf7b1272d1fb8361d20c1e181ae9990f2c0eb68572531131990b64",
-          "bytes": 100238,
-          "rights": {
-            "status": "permitted",
-            "license": "Public domain (textlogo)",
-            "reference": "https://commons.wikimedia.org/w/index.php?title=File:MiniMax.png&oldid=1051737129",
-            "attribution": "No copyright attribution required under the Wikimedia Commons PD-textlogo assessment. Source credit retained: MiniMax / Wikimedia Commons, https://commons.wikimedia.org/wiki/File:MiniMax.png . Original file, unmodified.",
-            "reviewedAt": "2026-11-07",
-            "notes": "该文件页使用 PD-textlogo，依据是 Wikimedia Commons 对简单文字或几何图形未达到版权原创性门槛的公共领域判定，不是品牌方授予 Logo 的开放版权许可或再分发授权；不同法域的原创性判断可能不同。商标权及其他使用限制仍然保留，不得暗示官方背书。公司归属由 https://www.minimax.io/about 核对。当前 https://www.minimax.io/brand-vi 的 Logo System/Our Logo 展示相同波形与 MINIMAX 字形；本文件是该公司标识的竖排布局，非海螺等产品图标。官方品牌指南另规定比例、颜色、间距与组合使用，不得歪曲、拆分、转授权或造成误导，未覆盖的使用情境应申请批准；本记录依据 Commons 对这一具体文件的公共领域判定，不将官方下载入口或其有限、不可转让的使用许可解释为再分发授权。"
-          },
-          "width": 481,
-          "height": 518,
-          "path": "logos/minimax/logo-gradient-vertical.png"
         }
       ]
     },
@@ -2130,7 +2008,7 @@
       "assets": [
         {
           "file": "wordmark-black-official.png",
-          "label": "黑色中英文文字标识 · 官方高清透明 PNG",
+          "label": "黑色中英文字标 · 保留留白的官方透明 PNG",
           "variant": "wordmark",
           "status": "current",
           "background": "light",
@@ -2142,7 +2020,7 @@
             "processing": "original"
           },
           "qualityNotes": [
-            "2953 × 889 像素，透明背景，上下留白较多。"
+            "2953 × 889 像素，透明背景，保留原始上下留白。"
           ],
           "source": "https://www.tencent.com/wp-content/uploads/2022/12/01_Tencent_Logo_Black.png",
           "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/",
@@ -2162,7 +2040,7 @@
         },
         {
           "file": "wordmark-blue-official.png",
-          "label": "蓝色中英文文字标识 · 官方高清透明 PNG",
+          "label": "蓝色中英文字标 · 保留留白的官方透明 PNG",
           "variant": "wordmark",
           "status": "current",
           "background": "light",
@@ -2174,7 +2052,8 @@
             "processing": "original"
           },
           "qualityNotes": [
-            "2953 × 889 像素，透明背景，上下留白较多。",
+            "2953 × 889 像素，透明背景，保留原始上下留白。",
+            "有效字形范围约为 2763 × 370 像素。",
             "蓝色为 #0052D9。"
           ],
           "source": "https://www.tencent.com/wp-content/uploads/2022/12/01_Tencent_Standard-Logo.png",
@@ -2195,7 +2074,7 @@
         },
         {
           "file": "wordmark-blue.png",
-          "label": "蓝色中英文文字标识 · PNG（Commons 渲染）",
+          "label": "蓝色中英文字标 · 紧凑画布透明 PNG",
           "variant": "wordmark",
           "status": "current",
           "background": "light",
@@ -2206,6 +2085,10 @@
             "sourceType": "commons",
             "processing": "rendered"
           },
+          "qualityNotes": [
+            "1280 × 172 像素，透明背景，紧凑画布，无额外外沿留白。",
+            "蓝色为 #0052D9，适合直接嵌入与复制。"
+          ],
           "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Tencent_logo_2017.svg/1280px-Tencent_logo_2017.svg.png",
           "sourcePage": "https://commons.wikimedia.org/wiki/File:Tencent_logo_2017.svg",
           "sha256": "5da4c0faf03b7e812dd27dd2acb3c7d4c2db56727a8029b2d86afcfed545a674",
@@ -2224,7 +2107,7 @@
         },
         {
           "file": "wordmark-white-official.png",
-          "label": "白色中英文文字标识 · 官方高清透明 PNG",
+          "label": "白色中英文字标 · 保留留白的官方透明 PNG",
           "variant": "wordmark",
           "status": "current",
           "background": "dark",
@@ -2236,7 +2119,7 @@
             "processing": "original"
           },
           "qualityNotes": [
-            "2953 × 889 像素，透明背景，上下留白较多。"
+            "2953 × 889 像素，透明背景，保留原始上下留白。"
           ],
           "source": "https://www.tencent.com/wp-content/uploads/2022/12/01_Tencent_Logo_Reverse-type.png",
           "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/",
@@ -2658,6 +2541,17 @@
         "software"
       ],
       "defaultAsset": "wordmark-red-transparent.png",
+      "artworks": [
+        {
+          "id": "wordmark-white",
+          "label": "白色英文字标",
+          "files": [
+            "wordmark-white.svg",
+            "wordmark-white-transparent.png"
+          ],
+          "defaultAsset": "wordmark-white.svg"
+        }
+      ],
       "assets": [
         {
           "file": "wordmark-red-transparent.png",
@@ -2673,7 +2567,7 @@
             "processing": "original"
           },
           "qualityNotes": [
-            "686 × 139 像素，透明背景。"
+            "686 × 139 像素，透明背景，原始红色为 #E60013。"
           ],
           "source": "https://www.yonyou.com.hk/wp-content/uploads/2024/09/%E7%94%A8%E5%8F%8BEN-Logo.png",
           "sourcePage": "https://www.yonyou.com.hk/%e7%94%a8%e5%8f%8ben-logo/",
@@ -2692,38 +2586,6 @@
           "path": "logos/yonyou/wordmark-red-transparent.png"
         },
         {
-          "file": "wordmark-red.jpg",
-          "label": "红色英文字标（Commons 原件）",
-          "variant": "wordmark",
-          "status": "current",
-          "background": "light",
-          "language": "en",
-          "layout": "horizontal",
-          "color": "brand",
-          "provenance": {
-            "sourceType": "commons",
-            "processing": "original"
-          },
-          "qualityNotes": [
-            "366 × 81 像素的 JPEG，白色不透明背景，有压缩边缘。"
-          ],
-          "source": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Yonyou_logo.jpg",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:Yonyou_logo.jpg",
-          "sha256": "0f9c8256e507b0e08c7b5e7b23cffa5dc99e4669643dd3896e2a14f46c5ce795",
-          "bytes": 18221,
-          "rights": {
-            "status": "permitted",
-            "license": "Public domain (textlogo)",
-            "reference": "https://commons.wikimedia.org/w/index.php?title=File:Yonyou_logo.jpg&oldid=1279365656",
-            "attribution": "No copyright attribution required under the Wikimedia Commons PD-textlogo assessment. Source credit retained: 用友 / Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Yonyou_logo.jpg . Original file, unmodified.",
-            "reviewedAt": "2026-11-07",
-            "notes": "该文件页使用 PD-textlogo，依据是 Wikimedia Commons 对简单文字或几何图形未达到版权原创性门槛的公共领域判定，不是品牌方授予 Logo 的开放版权许可或再分发授权；不同法域的原创性判断可能不同。商标权及其他使用限制仍然保留，不得暗示官方背书。公司身份由 https://www.yonyou.com/about/company.html 及官网信息核对；当前全球官网 https://www.yonyou.com/global/ 使用 /global/static/logo.png 的同形红色 yonyou 英文字标。本文件仅收录公司英文版本，不是 YonBIP、YonSuite 等产品标识；中文官网另使用红色中文名与灰色英文名组合。 文件特征复核：此 JPG 原生尺寸为366×81，无透明通道，带白色背景；保留来源原件，不通过放大或改后缀充当高清透明图片。更高分辨率、透明及矢量版本尚待补齐。"
-          },
-          "width": 366,
-          "height": 81,
-          "path": "logos/yonyou/wordmark-red.jpg"
-        },
-        {
           "file": "wordmark-white-transparent.png",
           "label": "白色英文字标（官方透明 PNG）",
           "variant": "wordmark",
@@ -2737,7 +2599,7 @@
             "processing": "original"
           },
           "qualityNotes": [
-            "1348 × 423 像素，透明背景，画布含留白。"
+            "1348 × 423 像素，白色为 #FFFFFF，透明背景，画布含留白。"
           ],
           "source": "https://yonyou.com.my/wp-content/uploads/2026/03/logo-1.png",
           "sourcePage": "https://yonyou.com.my/?attachment_id=7193",
@@ -2769,7 +2631,8 @@
             "processing": "original"
           },
           "qualityNotes": [
-            "透明背景，适合深色背景。"
+            "原生路径 SVG，白色为 #FFFFFF，透明背景，适合深色背景。",
+            "原始视口为 125 × 25。"
           ],
           "source": "https://www.yonyou.com.tw/wp-content/uploads/2021/06/yonyou-logo-white.svg",
           "sourcePage": "https://www.yonyou.com.tw/",
@@ -2969,23 +2832,13 @@
         "telecommunications"
       ],
       "defaultAsset": "wordmark-blue-official.png",
-      "artworks": [
-        {
-          "id": "wordmark-cyan",
-          "label": "青色字标",
-          "files": [
-            "wordmark-cyan-2015.png",
-            "wordmark-cyan-commons.svg"
-          ],
-          "defaultAsset": "wordmark-cyan-commons.svg"
-        }
-      ],
       "assets": [
         {
           "file": "wordmark-blue-header-official.png",
-          "label": "标准蓝文字标识 · 官方官网页头 PNG",
+          "label": "标准蓝字标 · 小尺寸 PNG（官方页头）",
           "variant": "wordmark",
           "status": "current",
+          "display": "alternative",
           "background": "light",
           "language": "en",
           "layout": "horizontal",
@@ -3046,68 +2899,6 @@
           "width": 1535,
           "height": 907,
           "path": "logos/zte/wordmark-blue-official.png"
-        },
-        {
-          "file": "wordmark-cyan-2015.png",
-          "label": "圆角文字标识 · Commons 青色版本",
-          "variant": "wordmark",
-          "status": "current",
-          "background": "light",
-          "language": "en",
-          "layout": "horizontal",
-          "color": "other",
-          "provenance": {
-            "sourceType": "commons",
-            "processing": "rendered"
-          },
-          "qualityNotes": [
-            "Commons 青色为 #00BFFE，与官方标准蓝 #008ED3 有差异。"
-          ],
-          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/ZTE-logo.svg/1280px-ZTE-logo.svg.png",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:ZTE-logo.svg",
-          "sha256": "cc572f80f5790f67a1374584f3ae2a2ef534608b98ac8ebdef2f9c4fb4a11145",
-          "bytes": 27787,
-          "rights": {
-            "status": "permitted",
-            "license": "Public domain (textlogo)",
-            "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AZTE-logo.svg&oldid=1281655836",
-            "attribution": "ZTE Corporation；Commons 上传者 Thomas R. Schwarz 的矢量版本。Commons 文件页标记为公共领域，无版权署名要求；保留来源和商标声明。文件下载原样保存。",
-            "reviewedAt": "2026-11-07",
-            "notes": "依据 Wikimedia Commons 对该文件的 PD-textlogo（简单图形或文字未达到版权独创性门槛）公共领域判定收录；这是 Commons 的第三方判定，不是品牌方对本仓库的再分发授权。商标权仍归相关权利人，使用不得暗示官方背书。保存文件页正式提供的 1280px PNG（Commons 渲染）下载，未在本地转换、改色或裁切；原始 SVG：https://upload.wikimedia.org/wikipedia/commons/2/20/ZTE-logo.svg 。圆角 ZTE 字形与现行官网 https://www.zte.com.cn/global/ 页头一致；官方视觉识别手册说明浅蓝色及圆润字形，见 https://www.zte.com.cn/content/dam/zte-site/mediapics/file/ZTE_VI%E8%A7%86%E8%A7%89%E8%AF%86%E5%88%AB%E6%8C%87%E5%AF%BC%E6%89%8B%E5%86%8C_%E8%8B%B1%E6%96%87.pdf 。 配色复核：本文件原始 PNG 的不透明主色为 RGB(0,191,254)（#00BFFE）；所引官方 VI 手册第 6 页规定数字媒体 ZTE Blue 为 RGB(0,142,211)（#008ED3），当前官网页头 https://www.zte.com.cn/content/dam/zte-site/res-www-zte-com-cn/navigator/global/main/img/logo-en.png 也采用后者。因此本文件不是当前官网标准蓝色原件，保留 Commons 下载字节，不在本地改色。圆角字标由中兴于 2014 年 12 月 30 日发布，见官方 https://www.zte.com.cn/content/dam/zte-site/res-www-zte-com-cn/mediares/magazine/publication/tech_en/pdf/201501.pdf 第 4 页；原文件名中的2015不作为准确首发日期。\n\n质量核验记录：\n- 该标识造型于 2014 年发布；文件名保留原有 2015 标记。"
-          },
-          "width": 1280,
-          "height": 619,
-          "path": "logos/zte/wordmark-cyan-2015.png"
-        },
-        {
-          "file": "wordmark-cyan-commons.svg",
-          "label": "青色文字标识 · SVG（Commons 原件）",
-          "variant": "wordmark",
-          "status": "current",
-          "background": "light",
-          "language": "en",
-          "layout": "horizontal",
-          "color": "other",
-          "provenance": {
-            "sourceType": "commons",
-            "processing": "original"
-          },
-          "qualityNotes": [
-            "Commons 青色矢量版本，与官方 VI 指定的标准蓝 #008ED3 不同。"
-          ],
-          "source": "https://upload.wikimedia.org/wikipedia/commons/2/20/ZTE-logo.svg",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:ZTE-logo.svg",
-          "sha256": "085e39623384fb8fba7cc59809e12ff932e4a81af3c6675b3f0e510db43b56b2",
-          "bytes": 5883,
-          "rights": {
-            "status": "permitted",
-            "license": "Public domain (textlogo)",
-            "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AZTE-logo.svg&oldid=1281655836",
-            "attribution": "ZTE Corporation；Commons 上传者 Thomas R. Schwarz 的矢量版本。Commons 文件页标记为公共领域，无版权署名要求；保留来源和商标声明。文件下载原样保存。",
-            "reviewedAt": "2026-11-07",
-            "notes": "依据所引 Commons 对 ZTE-logo.svg 这一具体文件的 PD-textlogo 公共领域判定收录，不是中兴品牌方授予的再分发许可。原样保存该 SVG 文件，未清洗、改色或裁切。此文件为路径矢量，配色属于 Commons 青色版本，与官方 VI 标准蓝 #008ED3 不同；不将其标为标准蓝原件。商标权及其他使用限制仍保留。"
-          },
-          "path": "logos/zte/wordmark-cyan-commons.svg"
         },
         {
           "file": "wordmark-white-official.png",

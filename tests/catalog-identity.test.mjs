@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { mkdtemp, mkdir, rm, writeFile } from 'node:fs/promises';
+import { access, mkdtemp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
@@ -220,10 +220,35 @@ test('repository migration retains all 23 entities, precise identities and asset
   assert.equal(byId.kingdee.assets[0].width, 2528);
   assert.equal(byId.kingdee.assets[0].height, 1371);
   assert.match(byId.kingdee.assets[0].qualityNotes.join(' '), /CMYK/);
-  const oldZte = byId.zte.assets.find((asset) => asset.file === 'wordmark-cyan-2015.png');
-  assert.match(oldZte.qualityNotes.join(' '), /#008ED3/);
-  assert.equal(oldZte.color, 'other');
-  assert.match(byId.lenovo.assets[0].qualityNotes.join(' '), /#E1251B/);
-  assert.equal(byId.lenovo.assets[0].color, 'other');
+  const smallZte = byId.zte.assets.find(
+    (asset) => asset.file === 'wordmark-blue-header-official.png',
+  );
+  assert.equal(smallZte.width, 92);
+  assert.equal(smallZte.height, 44);
+  assert.match(smallZte.qualityNotes.join(' '), /#008ED3/);
   assert.match(byId.zhipu.assets[0].qualityNotes.join(' '), /chat\.z\.ai/);
+});
+
+test('removed redundant originals have no metadata record or repository file', async () => {
+  for (const [id, file] of [
+    ['meituan', 'logo-chinese.png'],
+    ['yonyou', 'wordmark-red.jpg'],
+    ['minimax', 'logo-gradient-vertical.png'],
+    ['lenovo', 'logo-red-2015.png'],
+    ['lenovo', 'logo-red-brandworld.png'],
+    ['zte', 'wordmark-cyan-2015.png'],
+    ['zte', 'wordmark-cyan-commons.svg'],
+  ]) {
+    const metadata = JSON.parse(
+      await readFile(new URL(`../logos/${id}/metadata.json`, import.meta.url), 'utf8'),
+    );
+    assert.equal(
+      metadata.assets.some((asset) => asset.file === file),
+      false,
+      `${id}/${file}: removed from metadata`,
+    );
+    await assert.rejects(access(new URL(`../logos/${id}/${file}`, import.meta.url)), {
+      code: 'ENOENT',
+    });
+  }
 });

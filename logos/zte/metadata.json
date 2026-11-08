@@ -42,47 +42,7 @@
     "telecommunications"
   ],
   "defaultAsset": "wordmark-blue-official.png",
-  "artworks": [
-    {
-      "id": "wordmark-cyan",
-      "label": "青色字标",
-      "files": [
-        "wordmark-cyan-2015.png",
-        "wordmark-cyan-commons.svg"
-      ],
-      "defaultAsset": "wordmark-cyan-commons.svg"
-    }
-  ],
   "assets": [
-    {
-      "file": "wordmark-cyan-2015.png",
-      "label": "圆角文字标识 · Commons 青色版本",
-      "variant": "wordmark",
-      "status": "current",
-      "background": "light",
-      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/ZTE-logo.svg/1280px-ZTE-logo.svg.png",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:ZTE-logo.svg",
-      "sha256": "cc572f80f5790f67a1374584f3ae2a2ef534608b98ac8ebdef2f9c4fb4a11145",
-      "bytes": 27787,
-      "rights": {
-        "status": "permitted",
-        "license": "Public domain (textlogo)",
-        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AZTE-logo.svg&oldid=1281655836",
-        "attribution": "ZTE Corporation；Commons 上传者 Thomas R. Schwarz 的矢量版本。Commons 文件页标记为公共领域，无版权署名要求；保留来源和商标声明。文件下载原样保存。",
-        "reviewedAt": "2026-11-07",
-        "notes": "依据 Wikimedia Commons 对该文件的 PD-textlogo（简单图形或文字未达到版权独创性门槛）公共领域判定收录；这是 Commons 的第三方判定，不是品牌方对本仓库的再分发授权。商标权仍归相关权利人，使用不得暗示官方背书。保存文件页正式提供的 1280px PNG（Commons 渲染）下载，未在本地转换、改色或裁切；原始 SVG：https://upload.wikimedia.org/wikipedia/commons/2/20/ZTE-logo.svg 。圆角 ZTE 字形与现行官网 https://www.zte.com.cn/global/ 页头一致；官方视觉识别手册说明浅蓝色及圆润字形，见 https://www.zte.com.cn/content/dam/zte-site/mediapics/file/ZTE_VI%E8%A7%86%E8%A7%89%E8%AF%86%E5%88%AB%E6%8C%87%E5%AF%BC%E6%89%8B%E5%86%8C_%E8%8B%B1%E6%96%87.pdf 。 配色复核：本文件原始 PNG 的不透明主色为 RGB(0,191,254)（#00BFFE）；所引官方 VI 手册第 6 页规定数字媒体 ZTE Blue 为 RGB(0,142,211)（#008ED3），当前官网页头 https://www.zte.com.cn/content/dam/zte-site/res-www-zte-com-cn/navigator/global/main/img/logo-en.png 也采用后者。因此本文件不是当前官网标准蓝色原件，保留 Commons 下载字节，不在本地改色。圆角字标由中兴于 2014 年 12 月 30 日发布，见官方 https://www.zte.com.cn/content/dam/zte-site/res-www-zte-com-cn/mediares/magazine/publication/tech_en/pdf/201501.pdf 第 4 页；原文件名中的2015不作为准确首发日期。\n\n质量核验记录：\n- 该标识造型于 2014 年发布；文件名保留原有 2015 标记。"
-      },
-      "language": "en",
-      "layout": "horizontal",
-      "color": "other",
-      "provenance": {
-        "sourceType": "commons",
-        "processing": "rendered"
-      },
-      "qualityNotes": [
-        "Commons 青色为 #00BFFE，与官方标准蓝 #008ED3 有差异。"
-      ]
-    },
     {
       "file": "wordmark-blue-official.png",
       "label": "蓝色文字标识 · 官方素材包透明 PNG",
@@ -145,7 +105,8 @@
     },
     {
       "file": "wordmark-blue-header-official.png",
-      "label": "标准蓝文字标识 · 官方官网页头 PNG",
+      "label": "标准蓝字标 · 小尺寸 PNG（官方页头）",
+      "display": "alternative",
       "variant": "wordmark",
       "background": "light",
       "color": "brand",
@@ -172,35 +133,6 @@
       },
       "sha256": "92aea76efc16df57dc57e2ccba3debd62f3634c7cbb1c5cd01e30f50473a1cad",
       "bytes": 2914
-    },
-    {
-      "file": "wordmark-cyan-commons.svg",
-      "label": "青色文字标识 · SVG（Commons 原件）",
-      "variant": "wordmark",
-      "status": "current",
-      "background": "light",
-      "source": "https://upload.wikimedia.org/wikipedia/commons/2/20/ZTE-logo.svg",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:ZTE-logo.svg",
-      "sha256": "085e39623384fb8fba7cc59809e12ff932e4a81af3c6675b3f0e510db43b56b2",
-      "bytes": 5883,
-      "rights": {
-        "status": "permitted",
-        "license": "Public domain (textlogo)",
-        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AZTE-logo.svg&oldid=1281655836",
-        "attribution": "ZTE Corporation；Commons 上传者 Thomas R. Schwarz 的矢量版本。Commons 文件页标记为公共领域，无版权署名要求；保留来源和商标声明。文件下载原样保存。",
-        "reviewedAt": "2026-11-07",
-        "notes": "依据所引 Commons 对 ZTE-logo.svg 这一具体文件的 PD-textlogo 公共领域判定收录，不是中兴品牌方授予的再分发许可。原样保存该 SVG 文件，未清洗、改色或裁切。此文件为路径矢量，配色属于 Commons 青色版本，与官方 VI 标准蓝 #008ED3 不同；不将其标为标准蓝原件。商标权及其他使用限制仍保留。"
-      },
-      "language": "en",
-      "layout": "horizontal",
-      "color": "other",
-      "provenance": {
-        "sourceType": "commons",
-        "processing": "original"
-      },
-      "qualityNotes": [
-        "Commons 青色矢量版本，与官方 VI 指定的标准蓝 #008ED3 不同。"
-      ]
     }
   ]
 }
