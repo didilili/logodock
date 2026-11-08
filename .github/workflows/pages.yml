@@ -15,7 +15,14 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  check:
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: read
+    uses: ./.github/workflows/check.yml
+
   build:
+    needs: check
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
@@ -33,7 +40,7 @@ jobs:
         id: pages
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
       - run: npm ci --ignore-scripts
-      - run: npm run check
+      - run: npm run build
         env:
           BASE_PATH: ${{ steps.pages.outputs.base_path }}
       - name: Upload GitHub Pages artifact

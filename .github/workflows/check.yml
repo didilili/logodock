@@ -2,7 +2,9 @@ name: Check resources
 
 on:
   push:
+    branches-ignore: [main]
   pull_request:
+  workflow_call:
 
 permissions:
   contents: read
@@ -24,7 +26,11 @@ jobs:
           cache: npm
       - run: npm ci --ignore-scripts
       - name: Check commit messages
+        if: github.event_name == 'push' || github.event_name == 'pull_request'
         run: npm run check:commits
+      - name: Check selected commit message
+        if: github.event_name == 'workflow_dispatch'
+        run: git show -s --format=%B HEAD | npx --no-install commitlint
       - run: npm run check
       - run: npx playwright install --with-deps chromium
       - run: npm run test:browser
