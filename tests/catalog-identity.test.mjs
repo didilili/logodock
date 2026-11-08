@@ -1,64 +1,35 @@
 import assert from 'node:assert/strict';
-import { createHash } from 'node:crypto';
 import { mkdtemp, mkdir, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
 import { loadCatalog } from '../scripts/lib/catalog.mjs';
-
-const svg =
-  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"><path d="M0 0h8v8H0z"/></svg>';
-const url = 'https://example.com/';
-const date = '2026-11-07';
-const digest = (data) => createHash('sha256').update(data).digest('hex');
+import {
+  assetMetadata,
+  brandMetadata,
+  fixtureSvg as svg,
+  fixtureWebsite as url,
+  fixtureReviewDate as date,
+} from './helpers/catalog-fixtures.mjs';
 
 async function fixture(t, change = () => {}, data = Buffer.from(svg), file = 'icon.svg') {
-  const root = await mkdtemp(join(tmpdir(), 'logodock-v3-'));
+  const root = await mkdtemp(join(tmpdir(), 'logodock-identity-'));
   t.after(() => rm(root, { recursive: true, force: true }));
   const folder = join(root, 'logos/example');
   await mkdir(folder, { recursive: true });
-  const metadata = {
-    schemaVersion: 3,
-    id: 'example',
+  const metadata = brandMetadata({
     name: 'Example',
     aliases: ['An alias is not a verified name'],
-    website: url,
-    identity: { nameZh: null, nameEn: null, legalNames: [], sources: [] },
-    entityType: 'company',
-    categories: [],
     defaultAsset: file,
-    assets: [
-      {
-        file,
-        label: 'Original',
-        variant: 'icon',
-        status: 'current',
-        background: 'any',
-        language: 'none',
-        layout: 'standalone',
-        color: 'brand',
-        provenance: { sourceType: 'official', processing: 'original' },
-        source: url,
-        sourcePage: url,
-        sha256: digest(data),
-        bytes: data.length,
-        rights: {
-          status: 'permitted',
-          license: 'Example permission',
-          reference: url,
-          attribution: 'Example',
-          reviewedAt: date,
-        },
-      },
-    ],
-  };
+    assets: [assetMetadata({ file, data, label: 'Original' })],
+  });
   change(metadata);
   await writeFile(join(folder, file), data);
   await writeFile(join(folder, 'metadata.json'), JSON.stringify(metadata));
   return root;
 }
 
-test('v3 keeps unverified names null without deriving them from aliases', async (t) => {
+test('catalog keeps unverified names null without deriving them from aliases', async (t) => {
   const catalog = await loadCatalog(await fixture(t));
   assert.equal(catalog.schemaVersion, 3);
   assert.deepEqual(catalog.brands[0].identity, {
@@ -70,7 +41,7 @@ test('v3 keeps unverified names null without deriving them from aliases', async 
   assert.deepEqual(catalog.brands[0].aliases, ['An alias is not a verified name']);
 });
 
-test('v3 preserves independently sourced legal roles and reviewed identity sources', async (t) => {
+test('catalog preserves independently sourced legal roles and reviewed identity sources', async (t) => {
   const identity = {
     nameZh: '示例',
     nameEn: 'Example',
@@ -93,7 +64,7 @@ test('v3 preserves independently sourced legal roles and reviewed identity sourc
   assert.deepEqual(catalog.brands[0].identity, identity);
 });
 
-test('v3 requires identity shape, valid names, explicit roles, HTTPS sources and real review dates', async (t) => {
+test('catalog requires identity shape, valid names, explicit roles, HTTPS sources and real review dates', async (t) => {
   for (const change of [
     (m) => {
       delete m.identity;
@@ -150,7 +121,7 @@ test('v3 requires identity shape, valid names, explicit roles, HTTPS sources and
   }
 });
 
-test('v3 preserves structured asset attributes and optional useful quality notes', async (t) => {
+test('catalog preserves structured asset attributes and optional useful quality notes', async (t) => {
   const root = await fixture(t, (m) =>
     Object.assign(m.assets[0], {
       language: 'bilingual',
@@ -169,7 +140,7 @@ test('v3 preserves structured asset attributes and optional useful quality notes
   assert.equal(Object.hasOwn(asset, 'width'), false);
 });
 
-test('v3 rejects missing or invented asset attributes and unknown provenance properties', async (t) => {
+test('catalog rejects missing or invented asset attributes and unknown provenance properties', async (t) => {
   for (const change of [
     ...['language', 'layout', 'color', 'provenance'].map((key) => (m) => {
       delete m.assets[0][key];

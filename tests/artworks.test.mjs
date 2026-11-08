@@ -1,10 +1,10 @@
 import assert from 'node:assert/strict';
-import { createHash } from 'node:crypto';
 import { mkdtemp, mkdir, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
 import { loadCatalog } from '../scripts/lib/catalog.mjs';
+import { assetMetadata, brandMetadata, fixtureSvg as svg } from './helpers/catalog-fixtures.mjs';
 
 const grouping = () => import('../src/lib/catalog-artworks.mjs');
 const sample = () => ({
@@ -107,45 +107,16 @@ test('grouping leaves source records untouched and allows UI labels for singleto
   assert.equal(groups[0].assets[0], brand.assets[0]);
 });
 
-const svg =
-  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"><path d="M0 0h8v8H0z"/></svg>';
-const url = 'https://example.com/';
 async function fixture(t, change = () => {}) {
   const root = await mkdtemp(join(tmpdir(), 'logodock-artworks-'));
   t.after(() => rm(root, { recursive: true, force: true }));
   const folder = join(root, 'logos/example');
   await mkdir(folder, { recursive: true });
-  const assets = ['blue.svg', 'blue-other.svg', 'white.svg'].map((file) => ({
-    file,
-    label: file,
-    variant: 'icon',
-    status: 'current',
-    background: 'any',
-    language: 'none',
-    layout: 'standalone',
-    color: file === 'white.svg' ? 'white' : 'brand',
-    provenance: { sourceType: 'official', processing: 'original' },
-    source: url,
-    sourcePage: url,
-    sha256: createHash('sha256').update(svg).digest('hex'),
-    bytes: Buffer.byteLength(svg),
-    rights: {
-      status: 'permitted',
-      license: 'Example permission',
-      reference: url,
-      attribution: 'Example',
-      reviewedAt: '2026-11-07',
-    },
-  }));
-  const metadata = {
-    schemaVersion: 3,
-    id: 'example',
+  const assets = ['blue.svg', 'blue-other.svg', 'white.svg'].map((file) =>
+    assetMetadata({ file, label: file, color: file === 'white.svg' ? 'white' : 'brand' }),
+  );
+  const metadata = brandMetadata({
     name: 'Example',
-    aliases: [],
-    website: url,
-    identity: { nameZh: null, nameEn: null, legalNames: [], sources: [] },
-    entityType: 'company',
-    categories: [],
     defaultAsset: 'blue.svg',
     assets,
     artworks: [
@@ -156,7 +127,7 @@ async function fixture(t, change = () => {}) {
         defaultAsset: 'blue.svg',
       },
     ],
-  };
+  });
   change(metadata);
   for (const asset of assets) await writeFile(join(folder, asset.file), svg);
   await writeFile(join(folder, 'metadata.json'), JSON.stringify(metadata));
