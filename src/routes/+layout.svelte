@@ -1,8 +1,9 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { resolve } from '$app/paths';
   import Icon from '#lib/components/Icon.svelte';
   import ActionButton from '#lib/components/ActionButton.svelte';
+  import BrandLogo from '#lib/components/BrandLogo.svelte';
+  import favicon from '#lib/assets/favicon.svg?url';
   import '../app.css';
   let { children } = $props();
   let dark = $state(false);
@@ -37,11 +38,13 @@
   }
 </script>
 
+<svelte:head>
+  <link rel="icon" type="image/svg+xml" href={favicon} />
+</svelte:head>
+
 <a class="skip-link" href="#main">跳到内容</a>
 <header class="site-header shell">
-  <a class="wordmark" href={resolve('/')} data-sveltekit-reload
-    >LogoDock<span class="wordmark-description">Logo 资源目录</span></a
-  >
+  <BrandLogo />
   <nav aria-label="主导航">
     <a
       href="https://github.com/didilili/logodock/issues/new/choose"
