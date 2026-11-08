@@ -13,7 +13,6 @@ test(
   { timeout: 45000 },
   async (t) => {
     const root = await mkdtemp(join(tmpdir(), 'logodock-dev-'));
-    t.after(() => rm(root, { recursive: true, force: true }));
     for (const folder of ['scripts', 'schema', 'logos', 'src']) {
       await cp(new URL(folder, repository), join(root, folder), { recursive: true });
     }
@@ -38,21 +37,21 @@ test(
     child.stderr.on('data', (chunk) => {
       output += chunk;
     });
-    t.after(
-      () =>
-        new Promise((resolve) => {
-          if (child.exitCode !== null || child.signalCode !== null) {
-            resolve();
-            return;
-          }
-          const timer = setTimeout(() => child.kill('SIGKILL'), 1500);
-          child.once('exit', () => {
-            clearTimeout(timer);
-            resolve();
-          });
-          child.kill('SIGTERM');
-        }),
-    );
+    t.after(async () => {
+      await new Promise((resolve) => {
+        if (child.exitCode !== null || child.signalCode !== null) {
+          resolve();
+          return;
+        }
+        const timer = setTimeout(() => child.kill('SIGKILL'), 1500);
+        child.once('exit', () => {
+          clearTimeout(timer);
+          resolve();
+        });
+        child.kill('SIGTERM');
+      });
+      await rm(root, { recursive: true, force: true });
+    });
     async function eventually(check, label) {
       const started = Date.now();
       while (Date.now() - started < 10000) {
