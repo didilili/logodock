@@ -9,3 +9,5 @@ _site/
 static/
 playwright-report/
 test-results/
+local-artifacts/logo-design/
+local-artifacts/site-copy-review/

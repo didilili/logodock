@@ -5,6 +5,7 @@ package-lock.json
 README.md
 static/
 _site/
+local-artifacts/site-copy-review/**/site/
 .svelte-kit/
 coverage/
 playwright-report/
