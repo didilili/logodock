@@ -124,6 +124,30 @@ test('search and file filters survive detail navigation, browser back and a relo
   expect(errors).toEqual([]);
 });
 
+test('legacy brand links retain valid file selections and directory filters', async ({ page }) => {
+  for (const [requested, expected] of [
+    ['wordmark-orange-chinese.svg', 'wordmark-orange-chinese.svg'],
+    ['missing.svg', 'wordmark-orange.svg'],
+  ]) {
+    await page.goto(`/?brand=alibaba&asset=${requested}&q=alibaba&category=internet&format=SVG`);
+    await expect(page).toHaveURL(/\/logos\/alibaba\//);
+    await expect(page.locator('#detail-copy-menu')).toBeEnabled();
+    const url = new URL(page.url());
+    expect(url.searchParams.has('brand')).toBe(false);
+    expect(url.searchParams.get('q')).toBe('alibaba');
+    expect(url.searchParams.get('category')).toBe('internet');
+    expect(url.searchParams.get('format')).toBe('SVG');
+    await expect(page.locator('#download-link')).toHaveAttribute(
+      'href',
+      new RegExp(`/logos/alibaba/${expected.replaceAll('.', '\\.')}$`),
+    );
+    const back = new URL(
+      await page.locator('#back-directory').evaluate((element: HTMLAnchorElement) => element.href),
+    );
+    expect(back.searchParams.get('category')).toBe('internet');
+  }
+});
+
 test('deep-linked variants and denied clipboard access retain the selected original', async ({
   page,
 }) => {

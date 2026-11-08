@@ -87,6 +87,56 @@ test('category options use actual memberships and the eight declared Chinese lab
   assert.deepEqual(categoryOptions([]), [{ id: '', label: '全部品牌', count: 0 }]);
 });
 
+test('custom categories stay visible, count each brand once and filter exact memberships', async () => {
+  const { categoryOptions, matchingBrands } = await presentation();
+  const custom = structuredClone(brands);
+  custom[0].categories = ['internet', '设计 & 工具', 'Developer tools', '设计 & 工具'];
+  custom[1].categories = ['设计 & 工具', 'constructor'];
+  const before = structuredClone(custom);
+  assert.deepEqual(categoryOptions(custom), [
+    { id: '', label: '全部品牌', count: 2 },
+    { id: 'internet', label: '互联网', count: 1 },
+    { id: 'Developer tools', label: 'Developer tools', count: 1 },
+    { id: 'constructor', label: 'constructor', count: 1 },
+    { id: '设计 & 工具', label: '设计 & 工具', count: 2 },
+  ]);
+  assert.deepEqual(
+    categoryOptions([...custom].reverse()),
+    categoryOptions(custom),
+    'Category ordering must not depend on the brand order.',
+  );
+  assert.deepEqual(
+    matchingBrands(custom, { category: 'Developer tools' }).map((brand) => brand.id),
+    ['z'],
+  );
+  assert.deepEqual(
+    matchingBrands(custom, { category: '设计 & 工具' }).map((brand) => brand.id),
+    ['a', 'z'],
+  );
+  assert.deepEqual(matchingBrands(custom, { category: 'unregistered' }), []);
+  assert.deepEqual(custom, before);
+});
+
+test('directory URLs round-trip custom categories and reject categories absent from the catalog on read', async () => {
+  const { directoryUrl, readDirectoryState } = await presentation();
+  const custom = structuredClone(brands);
+  custom[0].categories = ['设计 & 工具'];
+  const state = {
+    q: '动物园',
+    type: 'company',
+    format: 'PNG',
+    shape: 'icon',
+    category: '设计 & 工具',
+  };
+  const url = directoryUrl('https://example.com/logodock/?other=1', state);
+  assert.equal(url.searchParams.get('category'), '设计 & 工具');
+  assert.equal(url.searchParams.get('other'), '1');
+  assert.deepEqual(readDirectoryState(url, custom), state);
+  const stale = directoryUrl(url, { ...state, category: 'removed-category' });
+  assert.deepEqual(readDirectoryState(stale, custom), { ...state, category: '' });
+  assert.equal(directoryUrl(url, { ...state, category: '' }).searchParams.has('category'), false);
+});
+
 test('filters by actual file format and entity type while sorting real names', async () => {
   const { matchingBrands, defaultAsset } = await presentation();
   const result = matchingBrands(brands, { type: 'company', format: 'PNG', q: '动物园' });
@@ -169,60 +219,8 @@ test('asset search terms, category, format and shape intersect on a single real 
   assert.deepEqual(alibaba, before);
 });
 
-test('restores query, filters, selected brand and selected file from a URL', async () => {
-  const { readCatalogState } = await presentation();
-  assert.deepEqual(
-    readCatalogState(
-      'https://example.com/logodock/?q=动物园&brand=z&asset=old.png&type=company&format=PNG',
-      brands,
-    ),
-    {
-      q: '动物园',
-      type: 'company',
-      format: 'PNG',
-      category: '',
-      brandId: 'z',
-      assetFile: 'old.png',
-    },
-  );
-});
-
-test('unknown URL selections and filters fall back to available content', async () => {
-  const { readCatalogState } = await presentation();
-  assert.deepEqual(
-    readCatalogState('https://example.com/?type=bad&format=EXE&brand=missing&asset=../x', brands),
-    { q: '', type: '', format: '', category: '', brandId: 'a', assetFile: 'old.png' },
-  );
-  const empty = readCatalogState('https://example.com/?q=missing&brand=z', brands);
-  assert.equal(empty.brandId, '');
-  assert.equal(empty.assetFile, '');
-});
-
-test('an asset parameter belongs to its brand and cannot select a different fallback brand version', async () => {
-  const { readCatalogState } = await presentation();
-  const state = readCatalogState('https://example.com/?brand=missing&asset=old.png', [brands[0]]);
-  assert.equal(state.brandId, 'z');
-  assert.equal(state.assetFile, 'new.svg');
-});
-
-test('share URLs preserve the query and selected asset and round trip safely', async () => {
-  const { catalogUrl, readCatalogState } = await presentation();
-  const state = {
-    q: '动物园',
-    type: '',
-    format: '',
-    category: '',
-    brandId: 'z',
-    assetFile: 'old.png',
-  };
-  const url = catalogUrl('https://example.com/logodock/?q=old&brand=a&asset=x&unrelated=1', state);
-  assert.equal(new URL(url).pathname, '/logodock/');
-  assert.deepEqual(readCatalogState(url, brands), state);
-  assert.equal(new URL(url).searchParams.get('unrelated'), '1');
-});
-
-test('category URL state round-trips with query and legacy filters and rejects unknown categories', async () => {
-  const { directoryUrl, readDirectoryState, catalogUrl, readCatalogState } = await presentation();
+test('directory URL state round-trips with query and filters and rejects absent categories', async () => {
+  const { directoryUrl, readDirectoryState } = await presentation();
   const directory = {
     q: '动物园 旧版',
     category: 'developer-tools',
@@ -233,18 +231,14 @@ test('category URL state round-trips with query and legacy filters and rejects u
   const url = directoryUrl('https://example.com/logodock/?category=internet&other=1', directory);
   assert.deepEqual(readDirectoryState(url, brands), directory);
   assert.equal(url.searchParams.get('other'), '1');
-  const catalog = { ...directory, brandId: 'z', assetFile: 'old.png' };
-  assert.deepEqual(readCatalogState(catalogUrl(url, catalog), brands), catalog);
-  assert.equal(
-    readCatalogState(new URL(`${url}&brand=z&asset=new.svg`), brands).assetFile,
-    'old.png',
-    'A shared selection cannot recover a file excluded by the active query and filters.',
-  );
   for (const category of ['', 'not-a-category']) {
     const invalid = new URL(url);
     invalid.searchParams.set('category', category);
     assert.deepEqual(readDirectoryState(invalid, brands), { ...directory, category: '' });
-    assert.equal(directoryUrl(url, { ...directory, category }).searchParams.has('category'), false);
+    assert.equal(
+      directoryUrl(url, { ...directory, category }).searchParams.has('category'),
+      Boolean(category),
+    );
   }
 });
 

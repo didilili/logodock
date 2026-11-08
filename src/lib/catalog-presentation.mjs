@@ -87,15 +87,22 @@ export function filterOptions(brands) {
 }
 
 export function categoryOptions(brands) {
+  const counts = new Map();
+  for (const brand of brands)
+    for (const category of new Set(brand.categories ?? []))
+      counts.set(category, (counts.get(category) ?? 0) + 1);
+  // Known labels keep their established order; metadata supplies any other tags.
+  const categories = [
+    ...Object.keys(categoryLabels).filter((id) => counts.has(id)),
+    ...[...counts.keys()].filter((id) => !Object.hasOwn(categoryLabels, id)).sort(),
+  ];
   return [
     { id: '', label: '全部品牌', count: brands.length },
-    ...Object.entries(categoryLabels)
-      .map(([id, label]) => ({
-        id,
-        label,
-        count: brands.filter((brand) => brand.categories?.includes(id)).length,
-      }))
-      .filter((category) => category.count),
+    ...categories.map((id) => ({
+      id,
+      label: Object.hasOwn(categoryLabels, id) ? categoryLabels[id] : id,
+      count: counts.get(id),
+    })),
   ];
 }
 
@@ -103,10 +110,9 @@ export function matchingBrands(
   brands,
   { q = '', type = '', format = '', shape = '', category = '' } = {},
 ) {
-  const selectedCategory = Object.hasOwn(categoryLabels, category) ? category : '';
   const available = sortBrands(brands)
     .filter((brand) => !type || brand.entityType === type)
-    .filter((brand) => !selectedCategory || brand.categories?.includes(selectedCategory))
+    .filter((brand) => !category || brand.categories?.includes(category))
     .map((brand) => {
       const eligible = brand.assets.filter(
         (asset) =>
@@ -142,39 +148,8 @@ export function readDirectoryState(url, brands) {
 export function directoryUrl(baseUrl, state) {
   const url = new URL(baseUrl);
   for (const key of ['q', 'type', 'format', 'shape', 'category']) {
-    if (state[key] && (key !== 'category' || Object.hasOwn(categoryLabels, state[key])))
-      url.searchParams.set(key, state[key]);
+    if (state[key]) url.searchParams.set(key, state[key]);
     else url.searchParams.delete(key);
   }
   return url;
-}
-
-// Compatibility helpers for consumers of the original single-page selection state.
-export function readCatalogState(url, brands) {
-  const params = new URL(url).searchParams;
-  const { shape, ...directory } = readDirectoryState(url, brands);
-  const state = { ...directory, ...(shape ? { shape } : {}), brandId: '', assetFile: '' };
-  const matches = matchingBrands(brands, state);
-  const requested = matches.find((brand) => brand.id === params.get('brand'));
-  const selected = requested || matches[0];
-  if (selected) {
-    state.brandId = selected.id;
-    state.assetFile = defaultAsset(selected, requested ? params.get('asset') : undefined).file;
-  }
-  return state;
-}
-
-export function catalogUrl(baseUrl, state) {
-  const url = directoryUrl(baseUrl, state);
-  for (const [key, value] of Object.entries({
-    q: state.q,
-    type: state.type,
-    format: state.format,
-    brand: state.brandId,
-    asset: state.assetFile,
-  })) {
-    if (value) url.searchParams.set(key, value);
-    else url.searchParams.delete(key);
-  }
-  return url.href;
 }
