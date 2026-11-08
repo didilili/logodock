@@ -9,7 +9,7 @@ const brands = [
     aliases: ['动物园'],
     website: 'https://z.example/',
     entityType: 'company',
-    categories: ['developer-tools'],
+    categories: ['developer-tools', 'internet'],
     defaultAsset: 'new.svg',
     assets: [
       {
@@ -67,6 +67,26 @@ test('generates only available entity and file-format filters', async () => {
   });
 });
 
+test('category options use actual memberships and the eight declared Chinese labels', async () => {
+  const { categoryLabels, categoryOptions } = await presentation();
+  assert.deepEqual(categoryLabels, {
+    internet: '互联网',
+    'code-hosting': '代码托管',
+    'developer-tools': '开发工具',
+    hardware: '硬件与设备',
+    telecommunications: '通信',
+    ai: '人工智能',
+    'enterprise-software': '企业软件',
+    software: '软件与服务',
+  });
+  assert.deepEqual(categoryOptions(brands), [
+    { id: '', label: '全部品牌', count: 2 },
+    { id: 'internet', label: '互联网', count: 1 },
+    { id: 'developer-tools', label: '开发工具', count: 1 },
+  ]);
+  assert.deepEqual(categoryOptions([]), [{ id: '', label: '全部品牌', count: 0 }]);
+});
+
 test('filters by actual file format and entity type while sorting real names', async () => {
   const { matchingBrands, defaultAsset } = await presentation();
   const result = matchingBrands(brands, { type: 'company', format: 'PNG', q: '动物园' });
@@ -102,6 +122,53 @@ test('directory previews select the matching file while brand-only searches reta
   );
 });
 
+test('asset search terms, category, format and shape intersect on a single real file', async () => {
+  const { matchingBrands, directoryAsset, defaultAsset } = await presentation();
+  const { artworkGroups } = await import('../src/lib/catalog-artworks.mjs');
+  const { loadCatalog } = await import('../scripts/lib/catalog.mjs');
+  const actual = (await loadCatalog()).brands;
+  const alibaba = actual.find((brand) => brand.id === 'alibaba');
+  const before = structuredClone(alibaba);
+  for (const filters of [
+    { q: 'alibaba 中文 png' },
+    { q: 'alibaba 中文', format: 'PNG' },
+    { q: 'alibaba 中文', format: 'SVG', shape: 'icon' },
+    { q: 'alibaba', category: 'hardware' },
+  ]) {
+    assert.deepEqual(matchingBrands(actual, filters), [], JSON.stringify(filters));
+  }
+  const filters = {
+    q: 'alibaba 中文',
+    category: 'internet',
+    type: 'company',
+    format: 'SVG',
+    shape: 'wordmark',
+  };
+  const [chinese] = matchingBrands(actual, filters);
+  assert.deepEqual(
+    chinese.assets.map((asset) => asset.file),
+    ['wordmark-orange-chinese.svg'],
+  );
+  assert.equal(directoryAsset(chinese, filters.q), chinese.assets[0]);
+  assert.equal(defaultAsset(chinese), chinese.assets[0]);
+  const [englishPng] = matchingBrands(actual, { ...filters, q: 'alibaba', format: 'PNG' });
+  assert.deepEqual(
+    englishPng.assets.map((asset) => asset.file),
+    ['wordmark-orange.png'],
+  );
+  assert.equal(
+    englishPng.artworks,
+    alibaba.artworks,
+    'Reviewed artwork declarations are preserved.',
+  );
+  assert.deepEqual(
+    artworkGroups(englishPng).map((group) => group.assets.map((asset) => asset.file)),
+    [['wordmark-orange.png']],
+    'Grouping intersects the eligible files instead of recovering a filtered SVG.',
+  );
+  assert.deepEqual(alibaba, before);
+});
+
 test('restores query, filters, selected brand and selected file from a URL', async () => {
   const { readCatalogState } = await presentation();
   assert.deepEqual(
@@ -109,7 +176,14 @@ test('restores query, filters, selected brand and selected file from a URL', asy
       'https://example.com/logodock/?q=动物园&brand=z&asset=old.png&type=company&format=PNG',
       brands,
     ),
-    { q: '动物园', type: 'company', format: 'PNG', brandId: 'z', assetFile: 'old.png' },
+    {
+      q: '动物园',
+      type: 'company',
+      format: 'PNG',
+      category: '',
+      brandId: 'z',
+      assetFile: 'old.png',
+    },
   );
 });
 
@@ -117,7 +191,7 @@ test('unknown URL selections and filters fall back to available content', async 
   const { readCatalogState } = await presentation();
   assert.deepEqual(
     readCatalogState('https://example.com/?type=bad&format=EXE&brand=missing&asset=../x', brands),
-    { q: '', type: '', format: '', brandId: 'a', assetFile: 'old.png' },
+    { q: '', type: '', format: '', category: '', brandId: 'a', assetFile: 'old.png' },
   );
   const empty = readCatalogState('https://example.com/?q=missing&brand=z', brands);
   assert.equal(empty.brandId, '');
@@ -133,11 +207,45 @@ test('an asset parameter belongs to its brand and cannot select a different fall
 
 test('share URLs preserve the query and selected asset and round trip safely', async () => {
   const { catalogUrl, readCatalogState } = await presentation();
-  const state = { q: '动物园', type: '', format: '', brandId: 'z', assetFile: 'old.png' };
+  const state = {
+    q: '动物园',
+    type: '',
+    format: '',
+    category: '',
+    brandId: 'z',
+    assetFile: 'old.png',
+  };
   const url = catalogUrl('https://example.com/logodock/?q=old&brand=a&asset=x&unrelated=1', state);
   assert.equal(new URL(url).pathname, '/logodock/');
   assert.deepEqual(readCatalogState(url, brands), state);
   assert.equal(new URL(url).searchParams.get('unrelated'), '1');
+});
+
+test('category URL state round-trips with query and legacy filters and rejects unknown categories', async () => {
+  const { directoryUrl, readDirectoryState, catalogUrl, readCatalogState } = await presentation();
+  const directory = {
+    q: '动物园 旧版',
+    category: 'developer-tools',
+    type: 'company',
+    format: 'PNG',
+    shape: 'icon',
+  };
+  const url = directoryUrl('https://example.com/logodock/?category=internet&other=1', directory);
+  assert.deepEqual(readDirectoryState(url, brands), directory);
+  assert.equal(url.searchParams.get('other'), '1');
+  const catalog = { ...directory, brandId: 'z', assetFile: 'old.png' };
+  assert.deepEqual(readCatalogState(catalogUrl(url, catalog), brands), catalog);
+  assert.equal(
+    readCatalogState(new URL(`${url}&brand=z&asset=new.svg`), brands).assetFile,
+    'old.png',
+    'A shared selection cannot recover a file excluded by the active query and filters.',
+  );
+  for (const category of ['', 'not-a-category']) {
+    const invalid = new URL(url);
+    invalid.searchParams.set('category', category);
+    assert.deepEqual(readDirectoryState(invalid, brands), { ...directory, category: '' });
+    assert.equal(directoryUrl(url, { ...directory, category }).searchParams.has('category'), false);
+  }
 });
 
 test('asset labels come from metadata and history status is not inferred from filenames', async () => {
@@ -197,7 +305,17 @@ test('short version titles retain meaningful differences and leave original meta
     ['Commons 青色字标（非官方标准蓝）', 'Commons 青色字标（非官方标准蓝）'],
     ['中文公司组合标识 · 黑色 SVG 原件', '中文公司组合标识 · 黑色'],
     ['中文公司组合标识 · 白色 SVG 原件', '中文公司组合标识 · 白色'],
-    ['蓝色中英文文字标识 · 官方高清透明 PNG', '蓝色中英文文字标识 · 官方高清透明'],
+    ['橙色图形与英文横版组合 · SVG（官方原件）', '橙色图形与英文横版组合'],
+    ['蓝色中英文文字标识 · 官方高清透明 PNG', '蓝色中英文文字标识 · 高清透明'],
+    ['红色英文字标（官方透明 PNG）', '红色英文字标（透明）'],
+    ['白色英文字标（官方 SVG）', '白色英文字标'],
+    ['红底白字标识 · 官方 Brand World PNG 原件', '红底白字标识'],
+    ['标准红标识 · 官方官网 SVG 原件', '标准红标识'],
+    ['标准蓝文字标识 · 官方官网页头 PNG', '标准蓝文字标识'],
+    ['蓝色文字标识 · 官方素材包透明 PNG', '蓝色文字标识 · 透明'],
+    ['圆角文字标识 · Commons 青色版本', '圆角文字标识 · 青色版本'],
+    ['文字标识（品牌规范中的 SVG 示例）', '文字标识（品牌规范中的 SVG 示例）'],
+    ['文字标识 · 品牌规范附注', '文字标识 · 品牌规范附注'],
   ];
   for (const [label, expected] of cases) {
     const asset = { label, variant: 'logo' };

@@ -51,3 +51,17 @@ test('searches verified bilingual identity and legal names even without aliases'
     assert.deepEqual(search.filterBrands([huawei], query), [huawei]);
   assert.deepEqual(search.filterBrands([huawei], 'not-a-company'), []);
 });
+
+test('file-specific search terms must match one file while brand terms remain shared', () => {
+  const brand = {
+    ...brands[0],
+    assets: [
+      { file: 'chinese.svg', label: '中文文字标识', rights: { license: 'MIT' } },
+      { file: 'english.png', label: '英文文字标识', rights: { license: 'CC-BY-4.0' } },
+    ],
+  };
+  for (const query of ['阿尔法 中文 svg', 'alpha.example 英文 png', 'ＡＦ 中文 mit'])
+    assert.deepEqual(search.filterBrands([brand], query), [brand]);
+  for (const query of ['阿尔法 中文 png', 'alpha 中文 cc-by', 'alpha 英文 mit'])
+    assert.deepEqual(search.filterBrands([brand], query), [], query);
+});

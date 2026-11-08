@@ -1,7 +1,17 @@
-import { filterBrands, normalizeQuery, sortBrands } from './catalog-search.mjs';
+import { filterBrands, matchingAssets, sortBrands } from './catalog-search.mjs';
 import { artworkGroups } from './catalog-artworks.mjs';
 
 export const entityLabels = { company: '公司', product: '产品', organization: '组织' };
+export const categoryLabels = {
+  internet: '互联网',
+  'code-hosting': '代码托管',
+  'developer-tools': '开发工具',
+  hardware: '硬件与设备',
+  telecommunications: '通信',
+  ai: '人工智能',
+  'enterprise-software': '企业软件',
+  software: '软件与服务',
+};
 export const sortCatalogBrands = sortBrands;
 const variantLabels = { icon: '图形标识', wordmark: '文字标识', logo: '组合标识' };
 
@@ -20,28 +30,8 @@ export function defaultAsset(brand, requestedFile) {
 
 export function directoryAsset(brand, query = '') {
   const fallback = defaultAsset(brand);
-  const identity = normalizeQuery(
-    [
-      brand.id,
-      brand.name,
-      brand.website,
-      brand.identity?.nameZh,
-      brand.identity?.nameEn,
-      ...(brand.aliases || []),
-      ...(brand.identity?.legalNames || []).map((item) => item.name),
-    ].join(' '),
-  );
-  const terms = normalizeQuery(query)
-    .split(' ')
-    .filter((term) => term && !identity.includes(term));
-  if (!terms.length) return fallback;
-  const scored = brand.assets.map((asset) => {
-    const text = normalizeQuery([asset.file, asset.label, asset.rights?.license].join(' '));
-    return { asset, score: terms.filter((term) => text.includes(term)).length };
-  });
-  const bestScore = Math.max(0, ...scored.map((item) => item.score));
-  if (!bestScore) return fallback;
-  const candidates = scored.filter((item) => item.score === bestScore).map((item) => item.asset);
+  const candidates = matchingAssets(brand, query);
+  if (!candidates.length) return fallback;
   return (
     candidates.find((asset) => asset.file === fallback.file) ||
     artworkGroups(brand)
@@ -58,14 +48,17 @@ export function assetLabel(asset) {
 export function assetDisplayLabel(asset) {
   // Format and provenance have dedicated places in the interface.
   return assetLabel(asset)
-    .replace(/\s*[（(](?:Commons (?:原件|渲染)|官方(?:内嵌)?原生 PNG)[）)]/gi, '')
+    .replace(/\s*[（(](?:Commons (?:原件|渲染)|官方\s*(?:(?:内嵌)?原生 PNG|SVG|原件))[）)]/gi, '')
+    .replace(/[（(]官方透明 PNG[）)]/gi, '（透明）')
     .replace(/\s*·\s*([^·]+)$/u, (suffix, description) => {
-      if (!/\b(?:SVG|PNG|JPEG|JPG)\b/i.test(description)) return suffix;
       const detail = description
+        .replace(/^(?:官方 Brand World|官方官网(?:页头)?|官方素材包|Commons)\s*/iu, '')
+        .replace(/^官方(?=高清透明(?:\s|$))/u, '')
         .replace(/\b(?:SVG|PNG|JPEG|JPG)\b/gi, '')
-        .replace(/原件/g, '')
+        .replace(/\s*原件\s*$/u, '')
         .replace(/\s+/g, ' ')
         .trim();
+      if (detail === description) return suffix;
       return detail ? ` · ${detail}` : '';
     })
     .trim();
@@ -93,20 +86,36 @@ export function filterOptions(brands) {
   };
 }
 
-export function matchingBrands(brands, { q = '', type = '', format = '', shape = '' } = {}) {
+export function categoryOptions(brands) {
+  return [
+    { id: '', label: '全部品牌', count: brands.length },
+    ...Object.entries(categoryLabels)
+      .map(([id, label]) => ({
+        id,
+        label,
+        count: brands.filter((brand) => brand.categories?.includes(id)).length,
+      }))
+      .filter((category) => category.count),
+  ];
+}
+
+export function matchingBrands(
+  brands,
+  { q = '', type = '', format = '', shape = '', category = '' } = {},
+) {
+  const selectedCategory = Object.hasOwn(categoryLabels, category) ? category : '';
   const available = sortBrands(brands)
     .filter((brand) => !type || brand.entityType === type)
-    .map((brand) =>
-      format || shape
-        ? {
-            ...brand,
-            assets: brand.assets.filter(
-              (asset) =>
-                (!format || assetFormat(asset) === format) && (!shape || asset.variant === shape),
-            ),
-          }
-        : brand,
-    )
+    .filter((brand) => !selectedCategory || brand.categories?.includes(selectedCategory))
+    .map((brand) => {
+      const eligible = brand.assets.filter(
+        (asset) =>
+          (!format || assetFormat(asset) === format) && (!shape || asset.variant === shape),
+      );
+      const assets = matchingAssets({ ...brand, assets: eligible }, q);
+      // Keep reviewed artwork declarations intact; artworkGroups intersects members.
+      return assets.length === brand.assets.length ? brand : { ...brand, assets };
+    })
     .filter((brand) => brand.assets.length);
   return filterBrands(available, q);
 }
@@ -120,18 +129,21 @@ export function readDirectoryState(url, brands) {
   const type = params.get('type') || '';
   const format = params.get('format') || '';
   const shape = params.get('shape') || '';
+  const category = params.get('category') || '';
   return {
     q: params.get('q') || '',
     type: options.types.includes(type) ? type : '',
     format: options.formats.includes(format) ? format : '',
     shape: shapes.includes(shape) ? shape : '',
+    category: categoryOptions(brands).some((option) => option.id === category) ? category : '',
   };
 }
 
 export function directoryUrl(baseUrl, state) {
   const url = new URL(baseUrl);
-  for (const key of ['q', 'type', 'format', 'shape']) {
-    if (state[key]) url.searchParams.set(key, state[key]);
+  for (const key of ['q', 'type', 'format', 'shape', 'category']) {
+    if (state[key] && (key !== 'category' || Object.hasOwn(categoryLabels, state[key])))
+      url.searchParams.set(key, state[key]);
     else url.searchParams.delete(key);
   }
   return url;

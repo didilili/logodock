@@ -216,7 +216,13 @@ test('directory URL state round-trips only available filters without adding a br
   const available = [
     { ...brands[0], entityType: 'company', assets: [{ file: 'icon.svg', variant: 'icon' }] },
   ];
-  const state = { q: 'Example & 示例', type: 'company', shape: 'icon', format: 'SVG' };
+  const state = {
+    q: 'Example & 示例',
+    type: 'company',
+    shape: 'icon',
+    format: 'SVG',
+    category: '',
+  };
   const url = directoryUrl('https://example.com/logodock/?other=1', state);
   assert.equal(url.pathname, '/logodock/');
   assert.equal(url.searchParams.get('brand'), null);
@@ -224,6 +230,6 @@ test('directory URL state round-trips only available filters without adding a br
   assert.deepEqual(readDirectoryState(url, available), state);
   assert.deepEqual(
     readDirectoryState('https://example.com/?shape=fake&type=bad&format=EXE', available),
-    { q: '', type: '', format: '', shape: '' },
+    { q: '', type: '', format: '', shape: '', category: '' },
   );
 });

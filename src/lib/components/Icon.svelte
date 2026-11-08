@@ -2,6 +2,10 @@
   let { name, size = 18 }: { name: string; size?: number } = $props();
   const paths: Record<string, string[]> = {
     search: ['m16 16 4 4'],
+    menu: ['M4 6h16M4 12h16M4 18h16'],
+    filter: ['M4 6h16M7 12h10M10 18h4'],
+    copy: ['M8 8h12v13H8zM15 8V3H3v13h5'],
+    code: ['m8 5-6 7 6 7m8-14 6 7-6 7M14 3l-4 18'],
     download: ['M12 3v12m-4-4 4 4 4-4M5 16v4h14v-4'],
     link: [
       'm10 13 4-4m-5 7-1.5 1.5a4 4 0 0 1-5.7-5.7L7 7.6a4 4 0 0 1 5.7 0m-.7 8.8a4 4 0 0 0 5.7 0l4.2-4.2a4 4 0 0 0-5.7-5.7L15 8',

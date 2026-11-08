@@ -43,4 +43,4 @@ export function provenanceLabel(asset) {
   return '来源见素材说明';
 }
 
-export const shapeLabels = { icon: '图形', wordmark: '字标', logo: '组合' };
+export const shapeLabels = { icon: '图形', wordmark: '文字', logo: '图文组合' };

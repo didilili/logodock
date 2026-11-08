@@ -36,7 +36,7 @@
     if (!pageUrl) return path;
     const result = new URL(path, pageUrl);
     const current = new URL(pageUrl);
-    for (const key of ['q', 'type', 'format', 'shape']) {
+    for (const key of ['q', 'type', 'format', 'shape', 'category']) {
       const value = current.searchParams.get(key);
       if (value) result.searchParams.set(key, value);
     }
@@ -125,11 +125,11 @@
   >
   <header class="brand-heading">
     <div>
+      <p class="detail-entity">
+        {entityLabels[brand.entityType as keyof typeof entityLabels] || '品牌'}
+      </p>
       <div class="brand-heading-line">
         <h1>{names.primary}</h1>
-        <span class="entity-tag"
-          >{entityLabels[brand.entityType as keyof typeof entityLabels] || '品牌'}</span
-        >
       </div>
       {#if names.secondary}<p class="detail-english">{names.secondary}</p>{/if}
       {#if parent}<p class="parent-brand">
@@ -175,3 +175,124 @@
   </noscript>
 </main>
 <CopyFeedback bind:this={feedback} />
+
+<style>
+  .detail-main {
+    max-width: 1120px;
+    padding-block: 22px 56px;
+  }
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    color: var(--muted);
+    font-size: 12px;
+    text-decoration: none;
+  }
+  .back-link:hover {
+    color: var(--ink);
+  }
+  .back-link svg {
+    width: 16px;
+    height: 16px;
+  }
+  .brand-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin: 19px 0 27px;
+  }
+  .brand-heading > div {
+    min-width: 0;
+  }
+  .detail-entity {
+    margin-bottom: 10px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+  .brand-heading h1 {
+    margin: 0;
+    font-size: 28px;
+    line-height: 1.3;
+    font-weight: 650;
+    letter-spacing: -0.025em;
+    overflow-wrap: anywhere;
+  }
+  .detail-english {
+    margin-top: 7px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .parent-brand {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+  .website-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 44px;
+    max-width: 45%;
+    color: var(--muted);
+    font-size: 12px;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+  }
+  .website-link:hover {
+    color: var(--ink);
+    text-decoration: underline;
+  }
+  .website-link svg {
+    width: 14px;
+    height: 14px;
+    flex: 0 0 auto;
+  }
+  .noscript-files {
+    margin-top: 14px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .noscript-files > summary {
+    min-height: 44px;
+    padding-block: 10px;
+    cursor: pointer;
+  }
+  .noscript-files ul {
+    padding-left: 20px;
+  }
+  .noscript-files li + li {
+    margin-top: 10px;
+  }
+  @media (max-width: 720px) {
+    .detail-main {
+      padding-block: 10px 34px;
+    }
+    .back-link {
+      min-height: 40px;
+    }
+    .brand-heading {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 18px;
+    }
+    .detail-entity {
+      display: none;
+    }
+    .brand-heading h1 {
+      font-size: 24px;
+      line-height: 1.3;
+    }
+    .detail-english {
+      margin-top: 5px;
+      font-size: 12px;
+    }
+    .website-link {
+      min-height: 34px;
+      max-width: 100%;
+      margin-top: 2px;
+    }
+  }
+</style>

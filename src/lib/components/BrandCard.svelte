@@ -1,51 +1,119 @@
 <script lang="ts">
-  import type { Brand } from '../types';
-  import { identityNames, websiteDomain } from '../catalog-display.mjs';
+  import type { Asset, ArtworkGroup, Brand } from '../types';
+  import { identityNames } from '../catalog-display.mjs';
   import {
     directoryAsset,
+    assetDisplayLabel,
     assetFormat,
     assetWarnings,
-    entityLabels,
   } from '../catalog-presentation.mjs';
-  import { artworkGroups } from '../catalog-artworks.mjs';
+  import { artworkGroups, preferredArtworkAsset } from '../catalog-artworks.mjs';
   import { assetPath } from '../resource-links.mjs';
   import Icon from './Icon.svelte';
-  import ActionButton from './ActionButton.svelte';
+  import CopyMenu from './CopyMenu.svelte';
+
   let {
     brand,
     basePath,
     href,
+    assetHref,
     oncopy,
     onsave,
     ready,
     query = '',
+    onAssetChange,
   }: {
     brand: Brand;
     basePath: string;
     href: string;
+    assetHref: (asset: Asset) => string;
     ready: boolean;
     query?: string;
-    oncopy: (brand: Brand) => void;
+    oncopy: (brand: Brand, asset: Asset, kind: 'current' | 'html' | 'markdown' | 'svg') => void;
     onsave: () => void;
+    onAssetChange?: () => void;
   } = $props();
-  let asset = $derived(directoryAsset(brand, query));
-  let artworks = $derived(artworkGroups(brand));
-  let names = $derived(identityNames(brand));
-  let formats = $derived([...new Set(brand.assets.map(assetFormat))].join(' / '));
-  let warnings = $derived(assetWarnings(asset));
-  let restrictions = $derived(
-    warnings.filter((note) => note === '历史素材，不代表现行标识' || note === '仅限非商业用途'),
+
+  let selection = $state<{ key: string; file: string } | null>(null);
+  const selectionKey = $derived(
+    JSON.stringify([brand.id, query, brand.assets.map((item) => item.file)]),
   );
-  let notes = $derived(warnings.filter((note) => !restrictions.includes(note)));
+  const asset = $derived.by(() => {
+    const currentSelection = selection;
+    return (
+      (currentSelection?.key === selectionKey &&
+        brand.assets.find((item) => item.file === currentSelection.file)) ||
+      directoryAsset(brand, query)
+    );
+  });
+  const artworks = $derived(artworkGroups(brand, assetDisplayLabel));
+  const artwork = $derived(
+    artworks.find((item) => item.assets.some((file) => file.file === asset.file)),
+  );
+  const names = $derived(identityNames(brand));
+  const detailHref = $derived(selection?.key === selectionKey ? assetHref(asset) : href);
+  const restrictions = $derived(
+    assetWarnings(asset).filter(
+      (note) => note === '历史素材，不代表现行标识' || note === '仅限非商业用途',
+    ),
+  );
+  const restrictionSummary = $derived(
+    restrictions
+      .map((note) => (note === '历史素材，不代表现行标识' ? '历史' : '仅非商业'))
+      .join(' · '),
+  );
+  const copyItems = $derived([
+    ...(assetFormat(asset) === 'SVG'
+      ? [
+          {
+            id: 'svg',
+            label: 'SVG 源码',
+            hint: '原始代码',
+            onselect: () => oncopy(brand, asset, 'svg'),
+          },
+        ]
+      : []),
+    { id: 'html', label: 'HTML', hint: '嵌入图片', onselect: () => oncopy(brand, asset, 'html') },
+    {
+      id: 'markdown',
+      label: 'Markdown',
+      hint: '文档引用',
+      onselect: () => oncopy(brand, asset, 'markdown'),
+    },
+    {
+      id: 'current',
+      label: '图片地址',
+      hint: '当前文件',
+      onselect: () => oncopy(brand, asset, 'current'),
+    },
+  ]);
+
+  function selectArtwork(event: MouseEvent, group: ArtworkGroup) {
+    if (
+      !ready ||
+      event.button !== 0 ||
+      event.metaKey ||
+      event.ctrlKey ||
+      event.shiftKey ||
+      event.altKey
+    )
+      return;
+    event.preventDefault();
+    onAssetChange?.();
+    selection = {
+      key: selectionKey,
+      file: preferredArtworkAsset(group, assetFormat(asset)).file,
+    };
+  }
 </script>
 
 <article class="brand-card" data-brand={brand.id}>
   <a
     class="brand-link"
-    {href}
+    href={detailHref}
     onclick={onsave}
     data-brand-link={brand.id}
-    aria-label={`查看 ${names.primary} Logo`}
+    aria-label={`查看 ${names.primary}，${assetDisplayLabel(asset)}`}
     data-sveltekit-reload
   >
     <div
@@ -61,44 +129,292 @@
         width="190"
         height="80"
       />
-    </div>
-    <div class="brand-identity">
-      <h2>
-        {names.primary}{#if brand.entityType !== 'company'}<span class="entity-tag"
-            >{entityLabels[brand.entityType]}</span
-          >{/if}
-      </h2>
-      <p class="brand-english">{names.secondary || websiteDomain(brand)}</p>
-      <p class="brand-domain" aria-hidden={!names.secondary}>
-        {names.secondary ? websiteDomain(brand) : '\u00a0'}
-      </p>
+      <span class="asset-format">{assetFormat(asset)}</span>
     </div>
   </a>
-  <div class="card-meta"><span>{formats}</span><span>{artworks.length} 组素材</span></div>
-  {#if restrictions.length}<p class="card-warning">{restrictions.join('；')}</p>{/if}
-  {#if notes.length}
-    <details class="card-notes">
-      <summary>{notes.length === 1 ? '素材说明' : `${notes.length} 项素材说明`}</summary>
-      <ul>
-        {#each notes as note (note)}<li>{note}</li>{/each}
-      </ul>
-    </details>
-  {/if}
-  <div class="card-actions">
-    <a
-      class="card-download"
-      href={`${basePath}/${assetPath(asset)}`}
-      download={`${brand.id}-${asset.file}`}
-      aria-label={`下载 ${names.primary} ${assetFormat(asset)}`}
-      ><Icon name="download" /><span>下载 {assetFormat(asset)}</span></a
-    ><ActionButton
-      variant="text"
-      size="sm"
-      class="card-copy"
-      disabled={!ready}
-      data-copy-brand={brand.id}
-      aria-label={`复制 ${names.primary} 图片地址`}
-      onclick={() => oncopy(brand)}><Icon name="link" /><span>复制链接</span></ActionButton
-    >
+  <div class="card-content">
+    <div class="brand-identity">
+      <h2><a href={detailHref} onclick={onsave} data-sveltekit-reload>{names.primary}</a></h2>
+      <p class="brand-english">{names.secondary || '\u00a0'}</p>
+    </div>
+    <div class="card-versions">
+      {#if restrictions.length}
+        <p class="card-restrictions" title={restrictions.join('；')}>{restrictionSummary}</p>
+      {:else if artworks.length > 1}
+        <div class="version-thumbnails" aria-label={`${names.primary}的标识版本`}>
+          {#each artworks.slice(0, 2) as group (group.id)}
+            <a
+              class="version-thumbnail"
+              href={`${basePath}/${assetPath(group.defaultAsset)}`}
+              data-background={group.defaultAsset.background === 'dark' ? 'dark' : 'light'}
+              data-card-artwork={group.id}
+              aria-current={group.id === artwork?.id ? 'true' : 'false'}
+              aria-label={`预览${group.label}`}
+              title={group.label}
+              onclick={(event) => selectArtwork(event, group)}
+            >
+              <img
+                src={`${basePath}/${assetPath(group.defaultAsset)}`}
+                alt=""
+                loading="lazy"
+                decoding="async"
+                width="30"
+                height="22"
+              />
+            </a>
+          {/each}
+          {#if artworks.length > 2}
+            <a
+              class="more-versions"
+              href={detailHref}
+              onclick={onsave}
+              aria-label={`查看 ${names.primary} 的其他标识`}
+              data-sveltekit-reload>+{artworks.length - 2}</a
+            >
+          {/if}
+        </div>
+      {:else}
+        <p class="single-version" title={artwork?.label || assetDisplayLabel(asset)}>
+          {artwork?.label || assetDisplayLabel(asset)}
+        </p>
+      {/if}
+    </div>
+    <div class="card-actions">
+      <a
+        class="card-download"
+        href={`${basePath}/${assetPath(asset)}`}
+        download={`${brand.id}-${asset.file}`}
+        aria-label={`下载 ${names.primary} ${assetFormat(asset)} 原文件`}
+        ><Icon name="download" size={16} /><span>下载</span><span class="download-format"
+          >{assetFormat(asset)}</span
+        ></a
+      >
+      <CopyMenu
+        brandId={brand.id}
+        items={copyItems}
+        label=""
+        ariaLabel={`复制 ${names.primary} 标识`}
+        class="card-copy"
+        disabled={!ready}
+      />
+    </div>
   </div>
 </article>
+
+<style>
+  .brand-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--paper);
+    transition:
+      border-color 150ms ease,
+      box-shadow 150ms ease;
+  }
+  .brand-card:hover {
+    border-color: var(--line-strong);
+    box-shadow: 0 4px 16px #21314608;
+  }
+  .brand-link {
+    display: block;
+    text-decoration: none;
+  }
+  .brand-art {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 122px;
+    padding: 27px 23px;
+    border-bottom: 1px solid var(--line);
+    background: #f8f9fb;
+  }
+  .brand-art[data-background='dark'] {
+    background: #252a32;
+  }
+  .brand-art img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 68px;
+    object-fit: contain;
+  }
+  .brand-art[data-variant='icon'] img {
+    max-width: 68px;
+  }
+  .asset-format {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 1px 5px;
+    border: 1px solid #e4e8ed;
+    border-radius: 3px;
+    background: #fffdfc;
+    color: #647185;
+    font-size: var(--type-caption);
+    line-height: 1.5;
+  }
+  .brand-art[data-background='dark'] .asset-format {
+    border-color: #ffffff24;
+    background: #ffffff12;
+    color: #c8d0dc;
+  }
+  .card-content {
+    padding: 10px 11px 9px;
+  }
+  .brand-identity h2 {
+    font-size: var(--type-body);
+    font-weight: 650;
+    line-height: 1.5;
+  }
+  .brand-identity h2 a {
+    display: block;
+    overflow: hidden;
+    padding: 1px 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+  .brand-identity h2 a:hover {
+    color: var(--focus);
+  }
+  .brand-english {
+    overflow: hidden;
+    margin-top: 2px;
+    color: var(--muted);
+    font-size: var(--type-caption);
+    line-height: 1.5;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .card-versions {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    margin-top: 6px;
+  }
+  .version-thumbnails {
+    display: flex;
+    gap: 4px;
+  }
+  .version-thumbnail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 6px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: #f8f9fb;
+  }
+  .version-thumbnail[data-background='dark'] {
+    background: #252a32;
+  }
+  .version-thumbnail[aria-current='true'] {
+    border-color: var(--focus);
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--focus) 12%, transparent);
+  }
+  .version-thumbnail img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 24px;
+    object-fit: contain;
+  }
+  .more-versions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 4px;
+    color: var(--muted);
+    font-size: var(--type-caption);
+    text-decoration: none;
+  }
+  .more-versions:hover {
+    background: var(--hover);
+    color: var(--ink);
+  }
+  .single-version {
+    overflow: hidden;
+    color: var(--muted);
+    font-size: var(--type-caption);
+    line-height: 1.6;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .card-restrictions {
+    color: var(--warning-ink);
+    font-size: var(--type-caption);
+    line-height: 1.6;
+    white-space: nowrap;
+  }
+  .card-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 44px;
+    gap: 5px;
+    margin-top: 7px;
+    padding-top: 7px;
+    border-top: 1px solid var(--line);
+  }
+  .card-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-width: 0;
+    min-height: 44px;
+    padding: 0 9px;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    color: var(--muted);
+    font-size: var(--type-small);
+    text-decoration: none;
+  }
+  .card-download:hover {
+    border-color: var(--line-strong);
+    background: var(--hover);
+    color: var(--ink);
+  }
+  .download-format {
+    margin-left: auto;
+    font-size: var(--type-caption);
+  }
+  @media (max-width: 720px) {
+    .brand-art {
+      height: 112px;
+      padding: 25px 20px;
+    }
+    .brand-art img {
+      max-height: 62px;
+    }
+    .card-content {
+      padding: 8px 9px;
+    }
+    .brand-identity h2 {
+      font-size: var(--type-small);
+    }
+    .version-thumbnail {
+      width: 44px;
+      height: 44px;
+    }
+    .more-versions {
+      min-width: 44px;
+      min-height: 44px;
+    }
+    .card-download {
+      gap: 5px;
+      padding-inline: 7px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .brand-card {
+      transition: none;
+    }
+  }
+</style>
