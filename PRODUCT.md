@@ -17,7 +17,7 @@
 
 ## 维护与本地开发
 
-- 元数据结构集中维护于 `schema/metadata.schema.json`，网页、索引和 README 资源表由原始记录生成。
+- 元数据结构集中维护于 `schema/metadata.schema.json`，网页、索引和 `docs/catalog.md` 资源清单由原始记录生成。分类沿用开放标签契约，网页按实际元数据生成选项；README 保持为手写项目入口。
 - 标识分组由明确的文件成员关系维护，不通过形态、配色等字段相同就自动推定为同一图稿。文件的来源、许可、尺寸与校验值仍独立记录。
 - 录入工具只生成待审核草稿，不自动确认公司身份、素材来源或分发权利。
 - 网站采用 SvelteKit、Tailwind CSS 与 Bits UI，使用 `npm run dev` 本地热更新；通过 `npm run build` 预渲染全部独立页面，生产输出为 `_site/`，域名及部署由维护者决定。

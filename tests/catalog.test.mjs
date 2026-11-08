@@ -5,12 +5,10 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import test from 'node:test';
+import { assetMetadata, brandMetadata, fixtureSvg as svg } from './helpers/catalog-fixtures.mjs';
 
 const moduleUrl = new URL('../scripts/lib/catalog.mjs', import.meta.url);
 const loader = async (root) => (await import(moduleUrl)).loadCatalog(root);
-const svg =
-  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"><path d="M0 0h8v8H0z"/></svg>';
-const website = 'https://example.com/';
 const digest = (data) => createHash('sha256').update(data).digest('hex');
 
 async function fixture(t, ids = ['example']) {
@@ -25,42 +23,7 @@ async function fixture(t, ids = ['example']) {
 }
 
 async function asset(root, id, data, patch = {}) {
-  const metadata = {
-    schemaVersion: 3,
-    id,
-    name: id,
-    aliases: [],
-    website,
-    identity: { nameZh: null, nameEn: null, legalNames: [], sources: [] },
-    entityType: 'company',
-    categories: [],
-    defaultAsset: 'icon.svg',
-    assets: [
-      {
-        file: 'icon.svg',
-        label: 'Current icon',
-        variant: 'icon',
-        status: 'current',
-        background: 'any',
-        language: 'none',
-        layout: 'standalone',
-        color: 'brand',
-        provenance: { sourceType: 'official', processing: 'original' },
-        source: website,
-        sourcePage: website,
-        sha256: digest(data),
-        bytes: Buffer.byteLength(data),
-        rights: {
-          status: 'permitted',
-          license: 'Example permission',
-          reference: website,
-          attribution: 'Example Company',
-          reviewedAt: '2026-11-06',
-        },
-      },
-    ],
-    ...patch,
-  };
+  const metadata = brandMetadata({ id, assets: [assetMetadata({ data })], ...patch });
   await writeFile(join(root, 'logos', id, 'icon.svg'), data);
   await writeFile(join(root, 'logos', id, 'metadata.json'), JSON.stringify(metadata));
   return metadata;
@@ -359,7 +322,7 @@ test('allows fragment references and embedded PNG images in passive SVG', async 
   assert.equal((await loader(root)).brands.length, 1);
 });
 
-test('build-index --check detects stale index and scripts work outside repository CWD', async (t) => {
+test('build-index generates the resource document without rewriting README and checks drift outside repository CWD', async (t) => {
   const root = await fixture(t);
   await cp(new URL('../scripts', import.meta.url), join(root, 'scripts'), { recursive: true });
   await cp(new URL('../schema', import.meta.url), join(root, 'schema'), { recursive: true });
@@ -367,7 +330,7 @@ test('build-index --check detects stale index and scripts work outside repositor
   const build = join(root, 'scripts/build-index.mjs');
   const validate = join(root, 'scripts/validate.mjs');
   const readme =
-    '# Preserve intro\n\n<!-- logos:start -->\n<!-- logos:end -->\n\nPreserve footer\n';
+    '# Preserve intro\n\nHandwritten usage and contribution links.\n\nPreserve footer\n';
   await writeFile(join(root, 'README.md'), readme);
   await rm(join(root, 'logos/example/icon.svg'));
   const unusualFile = 'icon "(1).svg';
@@ -381,27 +344,34 @@ test('build-index --check detects stale index and scripts work outside repositor
   });
   const built = spawnSync(process.execPath, [build], { cwd: tmpdir(), encoding: 'utf8' });
   assert.equal(built.status, 0, built.stderr);
-  const generated = await readFile(join(root, 'README.md'), 'utf8');
+  assert.equal(await readFile(join(root, 'README.md'), 'utf8'), readme);
+  const document = join(root, 'docs/catalog.md');
+  const generated = await readFile(document, 'utf8');
+  assert.match(generated, /^# Logo 资源清单\n/);
   assert.match(generated, /width="64">/);
   assert.doesNotMatch(generated, /height="64"/);
-  assert.match(generated, /logos\/example\/icon%20%22%281%29.svg/);
+  assert.match(generated, /\.\.\/logos\/example\/icon%20%22%281%29.svg/);
   assert.match(generated, /Historical &#124; &lt;script&gt; Use conditions/);
   assert.doesNotMatch(generated, /<img src=x>|\*\*bold\*\*|\[inject\]\(javascript:/);
-  assert.equal(generated.split('<!-- logos:start -->')[0], readme.split('<!-- logos:start -->')[0]);
-  assert.equal(generated.split('<!-- logos:end -->')[1], readme.split('<!-- logos:end -->')[1]);
+  assert.equal(await readFile(join(root, 'README.md'), 'utf8'), readme);
+  const currentIndex = await readFile(join(root, 'index.json'), 'utf8');
   const checked = spawnSync(process.execPath, [build, '--check'], {
     cwd: tmpdir(),
     encoding: 'utf8',
   });
   assert.equal(checked.status, 0, checked.stderr);
-  await writeFile(join(root, 'README.md'), readme);
+  assert.equal(await readFile(document, 'utf8'), generated);
+  assert.equal(await readFile(join(root, 'index.json'), 'utf8'), currentIndex);
+  await writeFile(document, '# Stale resource list\n');
   const staleTable = spawnSync(process.execPath, [build, '--check'], {
     cwd: tmpdir(),
     encoding: 'utf8',
   });
   assert.equal(staleTable.status, 1);
-  assert.match(staleTable.stderr, /README/);
-  await writeFile(join(root, 'README.md'), generated);
+  assert.match(staleTable.stderr, /catalog\.md/);
+  assert.equal(await readFile(document, 'utf8'), '# Stale resource list\n');
+  assert.equal(await readFile(join(root, 'README.md'), 'utf8'), readme);
+  await writeFile(document, generated);
   await writeFile(join(root, 'index.json'), '{}\n');
   const stale = spawnSync(process.execPath, [build, '--check'], {
     cwd: tmpdir(),
@@ -409,6 +379,9 @@ test('build-index --check detects stale index and scripts work outside repositor
   });
   assert.equal(stale.status, 1);
   assert.match(stale.stderr, /index/i);
+  assert.equal(await readFile(join(root, 'index.json'), 'utf8'), '{}\n');
+  assert.equal(await readFile(document, 'utf8'), generated);
+  assert.equal(await readFile(join(root, 'README.md'), 'utf8'), readme);
   const valid = spawnSync(process.execPath, [validate], { cwd: tmpdir(), encoding: 'utf8' });
   assert.equal(valid.status, 0, valid.stderr);
 });

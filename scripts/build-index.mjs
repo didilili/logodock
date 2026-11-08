@@ -1,5 +1,5 @@
-import { readFile, writeFile } from 'node:fs/promises';
-import { join } from 'node:path';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { dirname, join } from 'node:path';
 import { loadCatalog, repositoryRoot } from './lib/catalog.mjs';
 
 const escapeText = (text) =>
@@ -25,7 +25,7 @@ function resourceTable(catalog) {
   const rows = ['| 预览 | 品牌 | 文件 / 类型 | 许可 | 说明 |', '| --- | --- | --- | --- | --- |'];
   for (const brand of catalog.brands)
     for (const asset of brand.assets) {
-      const path = assetUrl(asset.path);
+      const path = `../${assetUrl(asset.path)}`;
       rows.push(
         `| <img src="${path}" alt="${brand.id}" width="64"> | ${escapeText(brand.name)} | ` +
           `[${escapeText(asset.file)}](${path}) / ${asset.variant} | ` +
@@ -42,26 +42,22 @@ try {
   const catalog = await loadCatalog();
   const serialized = `${JSON.stringify(catalog, null, 2)}\n`;
   const path = join(repositoryRoot, 'index.json');
-  const readmePath = join(repositoryRoot, 'README.md');
-  const readme = await readFile(readmePath, 'utf8');
-  const region = /<!-- logos:start -->[\s\S]*?<!-- logos:end -->/g;
-  if ([...readme.matchAll(region)].length !== 1)
-    throw new Error('README.md must contain exactly one logos:start/end region.');
-  const updatedReadme = readme.replace(
-    region,
-    () => `<!-- logos:start -->\n${resourceTable(catalog)}\n<!-- logos:end -->`,
-  );
+  const documentPath = join(repositoryRoot, 'docs/catalog.md');
+  const count = catalog.brands.reduce((total, brand) => total + brand.assets.length, 0);
+  const document = `# Logo 资源清单\n\n此文件由 \`npm run build:index\` 生成，请修改 \`logos/<id>/metadata.json\` 和原始素材后重新生成。\n\n当前收录 ${catalog.brands.length} 个品牌、${count} 个文件。使用条件以逐文件记录及其来源为准，收录不代表品牌方授权或背书；详见 [第三方资源说明](../NOTICE.md)。\n\n返回 [项目说明](../README.md) · [贡献指南](../CONTRIBUTING.md) · [完整 JSON 索引](../index.json)\n\n${resourceTable(catalog)}\n`;
   if (args.includes('--check')) {
     const current = await readFile(path, 'utf8').catch(() => null);
     if (current !== serialized)
       throw new Error('index.json is missing or stale. Run npm run build:index.');
-    if (readme !== updatedReadme)
-      throw new Error('README.md resource table is stale. Run npm run build:index.');
-    console.log('index.json and README.md resource table are current.');
+    const currentDocument = await readFile(documentPath, 'utf8').catch(() => null);
+    if (currentDocument !== document)
+      throw new Error('docs/catalog.md is missing or stale. Run npm run build:index.');
+    console.log('index.json and docs/catalog.md are current.');
   } else {
     await writeFile(path, serialized);
-    if (readme !== updatedReadme) await writeFile(readmePath, updatedReadme);
-    console.log('Generated index.json and README.md resource table.');
+    await mkdir(dirname(documentPath), { recursive: true });
+    await writeFile(documentPath, document);
+    console.log('Generated index.json and docs/catalog.md.');
   }
 } catch (error) {
   console.error(error.message);

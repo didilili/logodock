@@ -28,7 +28,7 @@
 
 - `entityType` 为 `company`（公司）、`product`（产品）或 `organization`（组织）。
 - 可选的 `parentId` 必须指向已收录实体，不能指向自身或形成循环；没有可靠对应记录时省略。
-- `categories` 保存简短分类标签，建议复用 `internet`、`ai`、`developer-tools` 等已有标签。
+- `categories` 保存开放的非空分类标签，建议复用 `internet`、`ai`、`developer-tools` 等已有标签。网页从实际元数据生成分类，常用标签显示中文名，其他标签按原值显示；新增分类不需要移动品牌目录或修改 Schema。
 - `defaultAsset` 必须是本条目登记的文件名。有当前版本时必须默认当前素材；仅有历史文件的条目可以显式默认历史素材，网页会标明历史。
 
 可选的 `artworks` 用于将已核实的同款标识归组，让 SVG、PNG 等文件共用一个标识预览。每组填写稳定的 `id`、简短的 `label`、成员文件名数组 `files` 和首选文件名 `defaultAsset`。
@@ -101,7 +101,7 @@ npm ci --ignore-scripts
 npm run hooks:install
 ```
 
-修改资源或元数据后，更新生成文件，再运行完整检查：
+修改资源或元数据后，更新生成的 `index.json` 与 `docs/catalog.md`，再运行完整检查：
 
 ```sh
 npm run build:index
@@ -120,7 +120,7 @@ PR 中简要说明新增或修改了什么、公司与 Logo 的对应关系、�
 - `npm run format`：主动格式化配置允许的源码、脚本、测试、文档与配置文件。
 - `npm run check:staged`：只检查暂存文件，不自动修复文件、不修改暂存区。
 
-`logos/` 的原始素材与元数据、生成的 `index.json` 和 README 资源表均不参与自动格式化；README 整体跳过自动格式化。资源表与索引仍由 `npm run build:index` 更新。
+`logos/` 的原始素材与元数据、生成的 `index.json` 和 `docs/catalog.md` 均不参与自动格式化。资源清单与索引由 `npm run build:index` 更新；README 是手写的项目入口，参与常规格式检查。
 
 `prepare` 生命周期脚本和 `npm run hooks:install` 都用于初始化 Husky。由于推荐安装命令使用 `--ignore-scripts`，安装后需显式运行 `npm run hooks:install`。pre-commit 运行暂存文件检查，commit-msg 检查提交信息。可用 `HUSKY=0` 跳过本地钩子；CI 独立检查代码、格式和提交信息。
 
@@ -136,7 +136,15 @@ chore(tooling): 更新开发工具配置
 
 常用类型为 `feat`（功能）、`fix`（修复）、`docs`（文档）、`style`（格式）、`refactor`（重构）、`perf`（性能）、`test`（测试）、`build`（构建）、`ci`（工作流）、`chore`（维护）和 `revert`（回退）。scope 必填，用于说明改动范围，可按内容使用 `catalog`、`site`、`project`、`search`、`scripts`、`tooling` 或 `ci`。
 
-CI 会检查 PR 的全部提交和每次 push 新增的全部提交；新建分支会检查其完整历史。
+CI 会检查 PR 的全部提交和每次 push 新增的全部提交；新建分支会检查其完整历史。手动发布检查所选提交的信息。主分支 Pages 发布复用同一质量检查，通过浏览器回归后才构建并部署发布产物。
+
+## 链接与兼容性
+
+品牌 ID、原始素材路径和公开索引是使用者可能依赖的入口。修改显示名称或分类时不改动这些路径；文件替换、删除及结构升级的约定见 [docs/versioning.md](docs/versioning.md)。
+
+网页保留旧目录 `?brand=<id>&asset=<file>` 链接的跳转，以及详情页 `?asset=<file>` 的文件选择。调整内部组件和辅助函数时，继续通过真实页面回归验证这些行为。
+
+固定版本图片地址只指向已经确认公开的完整 commit SHA。构建会核对素材与提交内容是否一致，并根据官方仓库的远端跟踪引用或 GitHub Actions 提交信息判断公开快照。本地未提交、未推送、其他仓库或无 Git 信息的构建，只提供实际本站图片地址；本地跟踪引用落后时先更新引用再构建。
 
 ## 纠错与权利请求
 
@@ -146,7 +154,7 @@ CI 会检查 PR 的全部提交和每次 push 新增的全部提交；新建分�
 
 ## 贡献许可
 
-提交原创脚本或文档，即表示同意以本仓库的 MIT 许可分发这些原创改动。提交第三方 Logo 不改变其原有许可，也不表示你或本仓库获得了相关商标权。
+提交原创代码或文档，即表示同意以本仓库的 MIT 许可分发这些原创改动。提交第三方 Logo 不改变其原有许可，也不表示你或本仓库获得了相关商标权。
 
 ## 网站开发
 

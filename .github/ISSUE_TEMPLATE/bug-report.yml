@@ -1,0 +1,23 @@
+name: 网站或工具问题
+description: 报告搜索、预览、下载、复制或维护工具的异常；素材内容问题请使用资源纠错。
+title: '[问题] '
+body:
+  - type: input
+    id: location
+    attributes:
+      label: 页面地址或执行的命令
+      description: 本地环境请说明使用的提交或版本；涉及素材时附具体文件路径。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 如何复现
+      description: 按顺序说明操作、实际结果及期望结果。
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境与错误信息
+      description: 可附浏览器、系统、Node.js 版本、相关日志或截图。请移除个人信息、访问令牌和其他敏感内容。
