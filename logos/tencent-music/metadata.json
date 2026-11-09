@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 3,
+  "id": "tencent-music",
+  "name": "腾讯音乐娱乐集团",
+  "aliases": [
+    "腾讯音乐",
+    "TME",
+    "Tencent Music"
+  ],
+  "website": "https://www.tencentmusic.com/",
+  "entityType": "company",
+  "categories": [
+    "internet",
+    "entertainment"
+  ],
+  "identity": {
+    "nameZh": "腾讯音乐娱乐集团",
+    "nameEn": "Tencent Music Entertainment Group",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "腾讯音乐集团官网",
+        "url": "https://www.tencentmusic.com/",
+        "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "腾讯音乐官方投资者关系",
+        "url": "https://ir.tencentmusic.com/",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "defaultAsset": "wordmark-tme-blue-official.png",
+  "assets": [
+    {
+      "file": "wordmark-tme-blue-official.png",
+      "label": "蓝色 TME 字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header",
+        "pageTitle": "腾讯音乐官网首页"
+      },
+      "source": "https://www.tencentmusic.com/img/tme-blue.cafd93f9.png",
+      "sourcePage": "https://www.tencentmusic.com/",
+      "sha256": "e1ddc3718baac847063240897c06c80f61375cf8b939d61f997176324ec443f7",
+      "bytes": 3825,
+      "qualityNotes": [
+        "透明背景。"
+      ],
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:%E9%A8%B0%E8%A8%8A%E9%9F%B3%E6%A8%82%E5%A8%9B%E6%A8%82%E9%9B%86%E5%9C%98logo.jpg&oldid=1254296409",
+        "attribution": "Tencent Music Entertainment Group / 腾讯音乐娱乐集团。Commons 对相同 TME 简单字母图形的 PD-textlogo 判断无版权署名要求；保留官方来源与商标声明，文件原样保存。",
+        "reviewedAt": "2026-11-09",
+        "notes": "直接保存当前官网页头引用的透明蓝色 PNG，未裁切、改色、放大或重新描摹。已实际查看并对照 Commons 具体图片中的 TME 部分，核对三个字母的斜切笔画、中心 M、右侧三条 E 横线及相互比例；Commons 为白色，官网提供蓝色原件，保留官网原色。版权判断仅用于相同 TME 简单字母图形，不外推到 Commons 图片背景、不同中文字形或当前官网完整中英文字标。该判断来自第三方，不是品牌方对本图库的许可；商标权及其他使用限制仍保留，不得暗示品牌背书。\n\n原始核对记录\n564 × 204 像素，透明背景；图案本身是 TME 三个字母，不属于无文字图形。"
+      }
+    }
+  ]
+}

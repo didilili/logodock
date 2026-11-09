@@ -48,7 +48,7 @@
   "assets": [
     {
       "file": "logo-red-official.svg",
-      "label": "标准红标识 · 官方官网 SVG 原件",
+      "label": "红色标识",
       "variant": "logo",
       "background": "any",
       "color": "brand",
@@ -60,21 +60,23 @@
         "reference": "https://commons.wikimedia.org/w/index.php?title=File%3ALenovo_%282015%29.svg&oldid=1251613811",
         "attribution": "Lenovo Group Limited。保留官方文件来源、Commons 公共领域判断及商标声明；下载文件原样保存。",
         "reviewedAt": "2026-11-07",
-        "notes": "版权收录依据是 Commons 对相同简单 Lenovo 字样与纯色矩形标识的 PD-textlogo 第三方判断，不是联想对本图库的授权。经图形复核，本文件没有新增口号、插画或复杂组合；原色及像素/路径均保留。官方来源只证明文件及现行使用，不证明允许图库镜像或再分发。官方 https://www.lenovo.com/us/en/legal/copytrade/ 说明其他公司使用 Lenovo Logo 需取得书面许可或品牌授权；本条不授予商标使用权，也不构成对该限制的豁免，不得暗示官方背书。品牌资源禁止用于训练 AI 模型，见 https://brandworld.lenovo.com/visual-identity/logo/ 。\n\n质量核验记录：\n- 原始路径使用 #E1251B，与当前官方 Signature Red 一致。\n- 官方官网页头原件为 123.999×40 视口，保留其约 3.1:1 原始比例；未调整为品牌指南的 3:1。"
+        "notes": "版权收录依据是 Commons 对相同简单 Lenovo 字样与纯色矩形标识的 PD-textlogo 第三方判断，不是联想对本图库的授权。经图形复核，本文件没有新增口号、插画或复杂组合；原色及像素/路径均保留。官方来源只证明文件及现行使用，不证明允许图库镜像或再分发。官方 https://www.lenovo.com/us/en/legal/copytrade/ 说明其他公司使用 Lenovo Logo 需取得书面许可或品牌授权；本条不授予商标使用权，也不构成对该限制的豁免，不得暗示官方背书。品牌资源禁止用于训练 AI 模型，见 https://brandworld.lenovo.com/visual-identity/logo/ 。\n\n质量核验记录：\n- 原始路径使用 #E1251B，与当前官方 Signature Red 一致。\n- 官方官网页头原件为 123.999×40 视口，保留其约 3.1:1 原始比例；未调整为品牌指南的 3:1。\n\n原始核对记录\n标准红 #E1251B。\n长宽比约 3.1:1，与品牌指南的 3:1 不同。"
       },
-      "qualityNotes": [
-        "标准红 #E1251B。",
-        "长宽比约 3.1:1，与品牌指南的 3:1 不同。"
-      ],
       "status": "current",
       "language": "en",
       "layout": "horizontal",
       "provenance": {
         "sourceType": "official",
-        "processing": "original"
+        "processing": "original",
+        "channel": "website",
+        "placement": "header",
+        "pageTitle": "联想美国官网首页"
       },
       "sha256": "422f42f97bc8d3d17313dff4781262115246e060b385b6f53ece2ac1ee99a68a",
-      "bytes": 1475
+      "bytes": 1475,
+      "usageWarnings": [
+        "长宽比约 3.1:1，与品牌指南的 3:1 有差异。"
+      ]
     }
   ]
 }

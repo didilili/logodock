@@ -5,6 +5,7 @@ import { join } from 'node:path';
 import test from 'node:test';
 import { loadCatalog, repositoryRoot } from '../scripts/lib/catalog.mjs';
 import { toPosixPath } from '../scripts/lib/paths.mjs';
+import { sourceLabel, licenseLabel } from '../src/lib/catalog-display.mjs';
 
 // These tests inspect one production build. `npm test` builds it once before
 // running the suite; fixtures for pure catalog logic do not rebuild SvelteKit.
@@ -27,10 +28,10 @@ async function filesBelow(directory, relative = '') {
   return files.sort();
 }
 
-test('production output includes a prerendered home and all 23 independent detail pages', async () => {
+test('production output includes a prerendered home and all 31 independent detail pages', async () => {
   assert.equal(
     catalog.brands.length,
-    23,
+    31,
     'Update this inventory deliberately when entries change.',
   );
   const files = await filesBelow(output);
@@ -94,8 +95,8 @@ test('static index, source metadata and every original file keep their paths and
     }
     active += brand.assets.length;
   }
-  assert.equal(originals, 56);
-  assert.equal(active, 56);
+  assert.equal(originals, 57);
+  assert.equal(active, 57);
 });
 
 test('each detail keeps downloads, brand names, sources and rights without exposing maintenance records', async () => {
@@ -121,15 +122,12 @@ test('each detail keeps downloads, brand names, sources and rights without expos
     );
     assert.match(download, /\bdownload(?:[\s=>])/);
     assert.ok(visible.includes(escaped(selected.sourcePage)), `${brand.id}: source page`);
-    assert.ok(visible.includes(escaped(selected.source)), `${brand.id}: original source`);
     assert.ok(
-      visible.includes(
-        escaped(
-          /^Public domain\b/i.test(selected.rights.license) ? '公共领域' : selected.rights.license,
-        ),
-      ),
-      `${brand.id}: license`,
+      visible.includes(escaped(sourceLabel(selected))),
+      `${brand.id}: visible source channel`,
     );
+    assert.ok(visible.includes(escaped(selected.source)), `${brand.id}: original source`);
+    assert.ok(visible.includes(escaped(licenseLabel(selected))), `${brand.id}: license`);
     assert.ok(
       visible.includes(escaped(selected.rights.reference)),
       `${brand.id}: license reference`,

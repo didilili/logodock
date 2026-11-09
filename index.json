@@ -49,21 +49,10 @@
         "internet"
       ],
       "defaultAsset": "wordmark-orange.svg",
-      "artworks": [
-        {
-          "id": "wordmark-orange-english",
-          "label": "橙色英文字标",
-          "files": [
-            "wordmark-orange.png",
-            "wordmark-orange.svg"
-          ],
-          "defaultAsset": "wordmark-orange.svg"
-        }
-      ],
       "assets": [
         {
           "file": "wordmark-orange-chinese.svg",
-          "label": "橙色中文文字标识 · SVG（Commons 原件）",
+          "label": "中文",
           "variant": "wordmark",
           "status": "current",
           "background": "light",
@@ -72,11 +61,9 @@
           "color": "brand",
           "provenance": {
             "sourceType": "commons",
-            "processing": "original"
+            "processing": "original",
+            "channel": "commons"
           },
-          "qualityNotes": [
-            "纯中文“阿里巴巴”字标，未含阿里图形。"
-          ],
           "source": "https://upload.wikimedia.org/wikipedia/commons/0/03/Alibaba_zh_logo.svg",
           "sourcePage": "https://commons.wikimedia.org/wiki/File:Alibaba_zh_logo.svg",
           "sha256": "c09c884c7e8759484f8ad311da78c0d243a93d7a042eb46443f449af0aba21d5",
@@ -87,45 +74,13 @@
             "reference": "https://commons.wikimedia.org/wiki/File:Alibaba_zh_logo.svg",
             "attribution": "Alibaba Group Holding Limited；Wikimedia Commons 文件 Alibaba zh logo.svg。Commons 标记 PD-textlogo，无版权署名要求；保留来源与商标声明。",
             "reviewedAt": "2026-11-07",
-            "notes": "依据所引 Wikimedia Commons 对该具体文件的 PD-textlogo 公共领域判定收录；这是第三方对简单文字或几何图形的判断，不是品牌方授予的再分发许可，商标权及其他使用限制仍保留。保存该文件页提供的 SVG 原始字节，未清洗、改色、裁切或重绘；此 SVG 由路径等矢量图形组成，不是内嵌位图容器。"
+            "notes": "依据所引 Wikimedia Commons 对该具体文件的 PD-textlogo 公共领域判定收录；这是第三方对简单文字或几何图形的判断，不是品牌方授予的再分发许可，商标权及其他使用限制仍保留。保存该文件页提供的 SVG 原始字节，未清洗、改色、裁切或重绘；此 SVG 由路径等矢量图形组成，不是内嵌位图容器。\n\n原始核对记录\n纯中文“阿里巴巴”字标，未含阿里图形。"
           },
           "path": "logos/alibaba/wordmark-orange-chinese.svg"
         },
         {
-          "file": "wordmark-orange.png",
-          "label": "橙色英文文字标识 · PNG（Commons 渲染）",
-          "variant": "wordmark",
-          "status": "current",
-          "background": "light",
-          "language": "en",
-          "layout": "horizontal",
-          "color": "brand",
-          "provenance": {
-            "sourceType": "commons",
-            "processing": "rendered"
-          },
-          "qualityNotes": [
-            "纯英文字标，未含阿里图形；不是完整的集团组合标识。"
-          ],
-          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Alibaba_en_logo.svg/1280px-Alibaba_en_logo.svg.png",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:Alibaba_en_logo.svg",
-          "sha256": "1bbd240af8c5450232f87f82e985e68f831d17dc24d2dd534e0daac3c4135fda",
-          "bytes": 19648,
-          "rights": {
-            "status": "permitted",
-            "license": "Public domain (textlogo)",
-            "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AAlibaba_en_logo.svg&oldid=1115285514",
-            "attribution": "No copyright attribution required by the Commons PD-textlogo designation. Logo attributed to 阿里巴巴集团; trademark rights remain with the respective owner.",
-            "reviewedAt": "2026-11-07",
-            "notes": "分发依据为 Wikimedia Commons 对该具体标识的简单图形/文字公共领域判定（PD-textlogo），不是品牌方的再分发授权。该判定不授予商标权，相关商标权保留；使用时不得暗示品牌方背书。 保存 Commons 文件页正式提供的 PNG 渲染下载，原样保存，未自行修改图形、颜色、比例或透明背景。此项为 Alibaba Group 的英文文字标识，字形与集团官方资源页 https://www.alibabagroup.com/en-US/resource-logos 所列 Alibaba Group logo (English) 中的文字一致；不是 Alibaba.com 业务标识。Commons 当前文件注明为英文纯文字版本。"
-          },
-          "width": 1280,
-          "height": 203,
-          "path": "logos/alibaba/wordmark-orange.png"
-        },
-        {
           "file": "wordmark-orange.svg",
-          "label": "橙色英文文字标识 · SVG（Commons 原件）",
+          "label": "英文",
           "variant": "wordmark",
           "status": "current",
           "background": "light",
@@ -134,11 +89,9 @@
           "color": "brand",
           "provenance": {
             "sourceType": "commons",
-            "processing": "original"
+            "processing": "original",
+            "channel": "commons"
           },
-          "qualityNotes": [
-            "纯英文字标，未含阿里图形；不是完整的集团组合标识。"
-          ],
           "source": "https://upload.wikimedia.org/wikipedia/commons/4/41/Alibaba_en_logo.svg",
           "sourcePage": "https://commons.wikimedia.org/wiki/File:Alibaba_en_logo.svg",
           "sha256": "7902655038ecf095e3df91423f83a45b1f3815345c4c88ed6a67227ef8563c54",
@@ -149,7 +102,7 @@
             "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AAlibaba_en_logo.svg&oldid=1115285514",
             "attribution": "No copyright attribution required by the Commons PD-textlogo designation. Logo attributed to 阿里巴巴集团; trademark rights remain with the respective owner.",
             "reviewedAt": "2026-11-07",
-            "notes": "依据所引 Wikimedia Commons 对该具体文件的 PD-textlogo 公共领域判定收录；这是第三方对简单文字或几何图形的判断，不是品牌方授予的再分发许可，商标权及其他使用限制仍保留。保存该文件页提供的 SVG 原始字节，未清洗、改色、裁切或重绘；此 SVG 由路径等矢量图形组成，不是内嵌位图容器。"
+            "notes": "依据所引 Wikimedia Commons 对该具体文件的 PD-textlogo 公共领域判定收录；这是第三方对简单文字或几何图形的判断，不是品牌方授予的再分发许可，商标权及其他使用限制仍保留。保存该文件页提供的 SVG 原始字节，未清洗、改色、裁切或重绘；此 SVG 由路径等矢量图形组成，不是内嵌位图容器。\n\n原始核对记录\n纯英文字标，未含阿里图形；不是完整的集团组合标识。"
           },
           "path": "logos/alibaba/wordmark-orange.svg"
         }
@@ -193,50 +146,39 @@
         "internet"
       ],
       "defaultAsset": "logo-english.svg",
-      "artworks": [
-        {
-          "id": "logo-color-english",
-          "label": "彩色英文组合标识",
-          "files": [
-            "logo-english.png",
-            "logo-english.svg"
-          ],
-          "defaultAsset": "logo-english.svg"
-        }
-      ],
       "assets": [
         {
-          "file": "logo-english.png",
-          "label": "英文彩色组合标识 · PNG（Commons 渲染）",
-          "variant": "logo",
+          "file": "icon-white-official.svg",
+          "label": "白色图形",
+          "variant": "icon",
           "status": "current",
-          "background": "light",
-          "language": "en",
-          "layout": "horizontal",
-          "color": "brand",
+          "background": "dark",
+          "language": "none",
+          "layout": "standalone",
+          "color": "white",
           "provenance": {
-            "sourceType": "commons",
-            "processing": "rendered"
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "website",
+            "pageTitle": "字节跳动中文首页"
           },
-          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/ByteDance_logo_English.svg/1280px-ByteDance_logo_English.svg.png",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:ByteDance_logo_English.svg",
-          "sha256": "d7c8c58ac84bff71cf5d094913599b6fef91776c12bf4a5ec91acd0836a9bdb6",
-          "bytes": 29260,
+          "source": "https://www.bytedance.com/zh/#embedded-svg-img-2",
+          "sourcePage": "https://www.bytedance.com/zh/",
+          "sha256": "31320dac45abdc933122c9980cea790fa12ee99f46a0b7ca926c59b5637da0a8",
+          "bytes": 450,
           "rights": {
             "status": "permitted",
-            "license": "Public domain (textlogo)",
+            "license": "Public domain (textlogo; third-party assessment)",
             "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AByteDance_logo_English.svg&oldid=1117279263",
-            "attribution": "No copyright attribution required by the Commons PD-textlogo designation. Logo attributed to 字节跳动; trademark rights remain with the respective owner.",
-            "reviewedAt": "2026-11-07",
-            "notes": "分发依据为 Wikimedia Commons 对该具体标识的简单图形/文字公共领域判定（PD-textlogo），不是品牌方的再分发授权。该判定不授予商标权，相关商标权保留；使用时不得暗示品牌方背书。 保存 Commons 文件页正式提供的 PNG 渲染下载，原样保存，未自行修改图形、颜色、比例或透明背景。公司身份与当前图形及英文字样已对照 https://www.bytedance.com/?locale=en 页首内嵌 Logo 核对；此项不是抖音、TikTok 或其他产品标识。"
+            "attribution": "字节跳动 / ByteDance。原样保存官网首页主体区域内嵌 SVG；保留来源及 Commons 对相同四柱几何标识的第三方 PD-textlogo 判断，商标权保留。",
+            "reviewedAt": "2026-11-09",
+            "notes": "文件是本次官网下载 HTML 中第 3 个 img data:image/svg+xml 的 Base64 原始字节（从 0 编号为 2）；仅解码内嵌传输，不修改路径、颜色、画布或比例。已对照官网中英组合标与既有 Commons 英文组合标，核对四根斜端柱的高低次序、朝向和相对位置，属于相同几何图形的官方白色版本。版权依据限于 Commons 对该简单四柱图形的第三方公共领域判断，不是字节跳动对图库的再分发授权；保留商标限制，不得暗示官方背书。与彩色英文组合标用途不同，供深色背景纯图形场景取用。\n\n原始核对记录\n100 × 88 viewBox，纯路径矢量，无内嵌位图。\n官方白色图形，须在深色背景使用；没有从组合标中裁切。"
           },
-          "width": 1280,
-          "height": 221,
-          "path": "logos/bytedance/logo-english.png"
+          "path": "logos/bytedance/icon-white-official.svg"
         },
         {
           "file": "logo-english.svg",
-          "label": "英文彩色组合标识 · SVG（Commons 原件）",
+          "label": "彩色英文组合",
           "variant": "logo",
           "status": "current",
           "background": "light",
@@ -245,7 +187,8 @@
           "color": "brand",
           "provenance": {
             "sourceType": "commons",
-            "processing": "original"
+            "processing": "original",
+            "channel": "commons"
           },
           "source": "https://upload.wikimedia.org/wikipedia/commons/0/07/ByteDance_logo_English.svg",
           "sourcePage": "https://commons.wikimedia.org/wiki/File:ByteDance_logo_English.svg",
@@ -302,77 +245,10 @@
         "developer-tools"
       ],
       "defaultAsset": "icon-blue.svg",
-      "artworks": [
-        {
-          "id": "icon-blue",
-          "label": "蓝色图形",
-          "files": [
-            "icon-blue.png",
-            "icon-blue.svg"
-          ],
-          "defaultAsset": "icon-blue.svg"
-        },
-        {
-          "id": "icon-white",
-          "label": "白色图形",
-          "files": [
-            "icon-white.png",
-            "icon-white.svg"
-          ],
-          "defaultAsset": "icon-white.svg"
-        },
-        {
-          "id": "logo-vertical-blue",
-          "label": "蓝色竖版组合标识",
-          "files": [
-            "logo-vertical-blue.png",
-            "logo-vertical-blue.svg"
-          ],
-          "defaultAsset": "logo-vertical-blue.svg"
-        },
-        {
-          "id": "logo-vertical-white",
-          "label": "白色竖版组合标识",
-          "files": [
-            "logo-vertical-white.png",
-            "logo-vertical-white.svg"
-          ],
-          "defaultAsset": "logo-vertical-white.svg"
-        }
-      ],
       "assets": [
         {
-          "file": "icon-blue.png",
-          "label": "官方蓝色图标",
-          "variant": "icon",
-          "status": "current",
-          "background": "light",
-          "language": "none",
-          "layout": "standalone",
-          "color": "brand",
-          "provenance": {
-            "sourceType": "official",
-            "processing": "original"
-          },
-          "source": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/logo/icon/png/codeberg-logo_icon_blue-512x512.png",
-          "sourcePage": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
-          "sha256": "9c93808bddc26445e251f723f29b431722352359c4e7ecb206393fcc0fabf39c",
-          "bytes": 20141,
-          "rights": {
-            "status": "permitted",
-            "license": "CC0-1.0",
-            "reference": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
-            "attribution": "Logo by Robert Martinez; published by Codeberg e.V.",
-            "reviewedAt": "2026-11-06",
-            "notes": "原始蓝色版本，未修改。Codeberg e.V. 是非营利组织，此处收录其组织品牌。素材版权采用 CC0；Codeberg 名称与 Logo 商标权保留。遵循官方品牌指南，不变形、不自定义染色，深色背景请选择官方白色版本。"
-          },
-          "width": 512,
-          "height": 512,
-          "path": "logos/codeberg/icon-blue.png"
-        },
-        {
           "file": "icon-blue.svg",
-          "label": "官方蓝色矢量图标",
+          "label": "蓝色图形",
           "variant": "icon",
           "status": "current",
           "background": "light",
@@ -381,7 +257,9 @@
           "color": "brand",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "repository",
+            "pageTitle": "Codeberg Design 素材仓库"
           },
           "source": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/logo/icon/svg/codeberg-logo_icon_blue.svg",
           "sourcePage": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
@@ -398,37 +276,8 @@
           "path": "logos/codeberg/icon-blue.svg"
         },
         {
-          "file": "icon-white.png",
-          "label": "官方白色图标",
-          "variant": "icon",
-          "status": "current",
-          "background": "dark",
-          "language": "none",
-          "layout": "standalone",
-          "color": "white",
-          "provenance": {
-            "sourceType": "official",
-            "processing": "original"
-          },
-          "source": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/logo/icon/png/codeberg-logo_icon_white-512x512.png",
-          "sourcePage": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
-          "sha256": "6faf35af558e958d6d4f8261c895fce0a9999bf538c88b9759c2a015dcb64b1d",
-          "bytes": 14405,
-          "rights": {
-            "status": "permitted",
-            "license": "CC0-1.0",
-            "reference": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
-            "attribution": "Logo by Robert Martinez; published by Codeberg e.V.",
-            "reviewedAt": "2026-11-07",
-            "notes": "官方原始白色版本，未修改；适合深色背景。素材版权采用 CC0；Codeberg 名称与 Logo 商标权保留。遵循官方品牌指南，不变形、不自行染色。"
-          },
-          "width": 512,
-          "height": 512,
-          "path": "logos/codeberg/icon-white.png"
-        },
-        {
           "file": "icon-white.svg",
-          "label": "官方白色矢量图标",
+          "label": "白色图形",
           "variant": "icon",
           "status": "current",
           "background": "dark",
@@ -437,7 +286,9 @@
           "color": "white",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "repository",
+            "pageTitle": "Codeberg Design 素材仓库"
           },
           "source": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/logo/icon/svg/codeberg-logo_icon_white.svg",
           "sourcePage": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
@@ -454,37 +305,8 @@
           "path": "logos/codeberg/icon-white.svg"
         },
         {
-          "file": "logo-vertical-blue.png",
-          "label": "官方蓝色竖版组合标识",
-          "variant": "logo",
-          "status": "current",
-          "background": "light",
-          "language": "en",
-          "layout": "vertical",
-          "color": "brand",
-          "provenance": {
-            "sourceType": "official",
-            "processing": "original"
-          },
-          "source": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/logo/vertical/png/codeberg-logo_vertical_blue-512x512.png",
-          "sourcePage": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
-          "sha256": "0e51654c05d7fa30de86947d6a03b99a53784c0e4a40b62ab0c1d15508ebbd82",
-          "bytes": 21116,
-          "rights": {
-            "status": "permitted",
-            "license": "CC0-1.0",
-            "reference": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
-            "attribution": "Logo by Robert Martinez; published by Codeberg e.V.",
-            "reviewedAt": "2026-11-06",
-            "notes": "原始蓝色版本，未修改。Codeberg e.V. 是非营利组织，此处收录其组织品牌。素材版权采用 CC0；Codeberg 名称与 Logo 商标权保留。遵循官方品牌指南，不变形、不自定义染色，深色背景请选择官方白色版本。"
-          },
-          "width": 512,
-          "height": 512,
-          "path": "logos/codeberg/logo-vertical-blue.png"
-        },
-        {
           "file": "logo-vertical-blue.svg",
-          "label": "官方蓝色矢量竖版组合标识",
+          "label": "蓝色竖版组合",
           "variant": "logo",
           "status": "current",
           "background": "light",
@@ -493,7 +315,9 @@
           "color": "brand",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "repository",
+            "pageTitle": "Codeberg Design 素材仓库"
           },
           "source": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/logo/vertical/svg/codeberg-logo_vertical_blue.svg",
           "sourcePage": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
@@ -510,37 +334,8 @@
           "path": "logos/codeberg/logo-vertical-blue.svg"
         },
         {
-          "file": "logo-vertical-white.png",
-          "label": "官方白色竖版组合标识",
-          "variant": "logo",
-          "status": "current",
-          "background": "dark",
-          "language": "en",
-          "layout": "vertical",
-          "color": "white",
-          "provenance": {
-            "sourceType": "official",
-            "processing": "original"
-          },
-          "source": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/logo/vertical/png/codeberg-logo_vertical_white-512x512.png",
-          "sourcePage": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
-          "sha256": "6b898560e80e02e2b4519f4ac414b35583d1eda70cbd922fbaed84a600766ca5",
-          "bytes": 15807,
-          "rights": {
-            "status": "permitted",
-            "license": "CC0-1.0",
-            "reference": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
-            "attribution": "Logo by Robert Martinez; published by Codeberg e.V.",
-            "reviewedAt": "2026-11-07",
-            "notes": "官方原始白色版本，未修改；适合深色背景。素材版权采用 CC0；Codeberg 名称与 Logo 商标权保留。遵循官方品牌指南，不变形、不自行染色。"
-          },
-          "width": 512,
-          "height": 512,
-          "path": "logos/codeberg/logo-vertical-white.png"
-        },
-        {
           "file": "logo-vertical-white.svg",
-          "label": "官方白色矢量竖版组合标识",
+          "label": "白色竖版组合",
           "variant": "logo",
           "status": "current",
           "background": "dark",
@@ -549,7 +344,9 @@
           "color": "white",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "repository",
+            "pageTitle": "Codeberg Design 素材仓库"
           },
           "source": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/logo/vertical/svg/codeberg-logo_vertical_white.svg",
           "sourcePage": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
@@ -607,50 +404,43 @@
         "internet"
       ],
       "defaultAsset": "logo-english.svg",
-      "artworks": [
-        {
-          "id": "logo-orange-english",
-          "label": "橙色英文组合标识",
-          "files": [
-            "logo-english.png",
-            "logo-english.svg"
-          ],
-          "defaultAsset": "logo-english.svg"
-        }
-      ],
       "assets": [
         {
-          "file": "logo-english.png",
-          "label": "橙色英文组合标识 · PNG（Commons 渲染）",
-          "variant": "logo",
+          "file": "icon-gray-official.svg",
+          "label": "灰色图形",
+          "variant": "icon",
           "status": "current",
-          "background": "light",
-          "language": "en",
-          "layout": "horizontal",
-          "color": "brand",
+          "background": "any",
+          "language": "none",
+          "layout": "standalone",
+          "color": "monochrome",
           "provenance": {
-            "sourceType": "commons",
-            "processing": "rendered"
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "website",
+            "placement": "footer",
+            "pageTitle": "滴滴官网首页"
           },
-          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/DiDi_Logo.svg/1280px-DiDi_Logo.svg.png",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:DiDi_Logo.svg",
-          "sha256": "6602d9eee0f2fe7d084cfb9b46d62213b71efb15455e54e8b251a30c6049c533",
-          "bytes": 22509,
+          "qualityNotes": [
+            "底部留白。"
+          ],
+          "source": "https://website.didiglobal.com/dist/media/footer-logo.7521c19c.svg",
+          "sourcePage": "https://www.didiglobal.com/",
+          "sha256": "49b12559cde733befbf01747be55ade2b243436d0c75d0d307facbd49162d047",
+          "bytes": 486,
           "rights": {
             "status": "permitted",
-            "license": "Public domain (textlogo)",
-            "reference": "https://commons.wikimedia.org/w/index.php?title=File%3ADiDi_Logo.svg&oldid=1219426260",
-            "attribution": "No copyright attribution required by the Commons PD-textlogo designation. Logo attributed to 滴滴; trademark rights remain with the respective owner.",
-            "reviewedAt": "2026-11-07",
-            "notes": "分发依据为 Wikimedia Commons 对该具体标识的简单图形/文字公共领域判定（PD-textlogo），不是品牌方的再分发授权。该判定不授予商标权，相关商标权保留；使用时不得暗示品牌方背书。 保存 Commons 文件页正式提供的 PNG 渲染下载，原样保存，未自行修改图形、颜色、比例或透明背景。公司身份与橙色图形、深灰 DiDi 字样已对照 https://www.didiglobal.com/ 实际引用的 https://website.didiglobal.com/dist/media/logo-en.cdc5b041.svg 核对。"
+            "license": "Public domain (textlogo; third-party assessment)",
+            "reference": "https://commons.wikimedia.org/w/index.php?title=File:DiDi_Logo.svg&oldid=1219426260",
+            "attribution": "滴滴 / DiDi。官网 SVG 原件，未修改；保留 Commons 对相同 D 形几何标识的 PD-textlogo 判断及来源，商标权保留。",
+            "reviewedAt": "2026-11-09",
+            "notes": "官网当前 main.9a074ac6.js 直接引用此页脚纯图形 SVG；文件原样保存。已对照同站 logo-en.cdc5b041.svg、logo-zh.5837eebe.svg 及既有 Commons 英文组合，核对 D 形开口、横向顶边与右侧高低断点；这是官方独立灰色图形，不是从组合标裁切或改色。分发依据为 Commons 对包含该相同几何 D 的 DiDi 组合标的第三方 PD-textlogo 判断，不是官方开放授权；不扩展到其他滴滴产品图标。商标及其他使用限制保留，不得暗示官方背书。\n\n原始核对记录\n41.15 × 41.15 viewBox，纯路径矢量，无内嵌位图。\n原件为 #ADADAD 灰色，保留原始底部留白；不是橙色品牌版本。"
           },
-          "width": 1280,
-          "height": 381,
-          "path": "logos/didi/logo-english.png"
+          "path": "logos/didi/icon-gray-official.svg"
         },
         {
           "file": "logo-english.svg",
-          "label": "英文组合标识 · SVG（Commons 原件）",
+          "label": "橙色英文组合",
           "variant": "logo",
           "status": "current",
           "background": "light",
@@ -659,7 +449,8 @@
           "color": "brand",
           "provenance": {
             "sourceType": "commons",
-            "processing": "original"
+            "processing": "original",
+            "channel": "commons"
           },
           "source": "https://upload.wikimedia.org/wikipedia/commons/7/75/DiDi_Logo.svg",
           "sourcePage": "https://commons.wikimedia.org/wiki/File:DiDi_Logo.svg",
@@ -708,7 +499,7 @@
       "assets": [
         {
           "file": "icon-orange.svg",
-          "label": "官方橙色图标",
+          "label": "橙色图形",
           "variant": "icon",
           "status": "current",
           "background": "light",
@@ -717,7 +508,9 @@
           "color": "brand",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "brand-library",
+            "pageTitle": "Git Logo 下载页"
           },
           "source": "https://raw.githubusercontent.com/git/git-scm.com/f8a81a6dffa8f80450f8688769f9a2a57de1f545/static/images/logos/downloads/Git-Icon-1788C.svg",
           "sourcePage": "https://git-scm.com/community/logos",
@@ -735,7 +528,7 @@
         },
         {
           "file": "logo-color.svg",
-          "label": "官方双色组合标识",
+          "label": "双色组合",
           "variant": "logo",
           "status": "current",
           "background": "light",
@@ -744,7 +537,9 @@
           "color": "brand",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "brand-library",
+            "pageTitle": "Git Logo 下载页"
           },
           "source": "https://raw.githubusercontent.com/git/git-scm.com/f8a81a6dffa8f80450f8688769f9a2a57de1f545/static/images/logos/downloads/Git-Logo-2Color.svg",
           "sourcePage": "https://git-scm.com/community/logos",
@@ -762,7 +557,7 @@
         },
         {
           "file": "logo-white.svg",
-          "label": "官方白色组合标识",
+          "label": "白色组合",
           "variant": "logo",
           "status": "current",
           "background": "dark",
@@ -771,7 +566,9 @@
           "color": "white",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "brand-library",
+            "pageTitle": "Git Logo 下载页"
           },
           "source": "https://raw.githubusercontent.com/git/git-scm.com/f8a81a6dffa8f80450f8688769f9a2a57de1f545/static/images/logos/downloads/Git-Logo-White.svg",
           "sourcePage": "https://git-scm.com/community/logos",
@@ -840,7 +637,9 @@
           "color": "brand",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "repository",
+            "pageTitle": "GitLab Artwork 素材仓库"
           },
           "source": "https://gitlab.com/gitlab-com/gitlab-artwork/-/raw/9b07772f44a9fa51f395a95928a6e41c61a5b1cb/logo/logo-square.png",
           "sourcePage": "https://gitlab.com/gitlab-com/gitlab-artwork/-/raw/9b07772f44a9fa51f395a95928a6e41c61a5b1cb/README.md",
@@ -909,7 +708,7 @@
       "assets": [
         {
           "file": "wordmark-black-2020.svg",
-          "label": "2020 黑色文字标识 · SVG",
+          "label": "2020 黑色字标",
           "variant": "wordmark",
           "status": "current",
           "background": "light",
@@ -918,7 +717,8 @@
           "color": "black",
           "provenance": {
             "sourceType": "commons",
-            "processing": "original"
+            "processing": "original",
+            "channel": "commons"
           },
           "source": "https://upload.wikimedia.org/wikipedia/commons/2/20/Honor_Logo_%282020%29.svg",
           "sourcePage": "https://commons.wikimedia.org/wiki/File:Honor_Logo_(2020).svg",
@@ -1000,7 +800,7 @@
       "assets": [
         {
           "file": "wordmark-dark-2018.png",
-          "label": "2018 深色文字标识 · PNG（Commons 渲染）",
+          "label": "2018 深色字标",
           "variant": "wordmark",
           "status": "current",
           "background": "light",
@@ -1009,11 +809,9 @@
           "color": "monochrome",
           "provenance": {
             "sourceType": "commons",
-            "processing": "rendered"
+            "processing": "rendered",
+            "channel": "commons"
           },
-          "qualityNotes": [
-            "仅含 HUAWEI 字标，未含花瓣图形。"
-          ],
           "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Huawei_wordmark_2019.svg/1280px-Huawei_wordmark_2019.svg.png",
           "sourcePage": "https://commons.wikimedia.org/wiki/File:Huawei_wordmark_2019.svg",
           "sha256": "38ee78b24f6fac758ff1b3a6a4438e834839ca54e04f29236ede8741f1da39c3",
@@ -1024,7 +822,7 @@
             "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AHuawei_wordmark_2019.svg&oldid=1123513783",
             "attribution": "Huawei。Commons 文件页标记为公共领域，无版权署名要求；保留来源和商标声明。文件下载原样保存。",
             "reviewedAt": "2026-11-07",
-            "notes": "依据 Wikimedia Commons 对该文件的 PD-textlogo（简单图形或文字未达到版权独创性门槛）公共领域判定收录；这是 Commons 的第三方判定，不是品牌方对本仓库的再分发授权。商标权仍归相关权利人，使用不得暗示官方背书。保存文件页正式提供的 1280px PNG（Commons 渲染）下载，未在本地转换、改色或裁切；原始 SVG：https://upload.wikimedia.org/wikipedia/commons/d/db/Huawei_wordmark_2019.svg 。仅收录 HUAWEI 文字标识，不含花瓣图案；Commons 文件说明及分类标记其为 2018 年起使用的文字式样。公司身份和现用字形对照 https://www.huawei.com/en/corporate-information ，官网页头仍使用该字形。"
+            "notes": "依据 Wikimedia Commons 对该文件的 PD-textlogo（简单图形或文字未达到版权独创性门槛）公共领域判定收录；这是 Commons 的第三方判定，不是品牌方对本仓库的再分发授权。商标权仍归相关权利人，使用不得暗示官方背书。保存文件页正式提供的 1280px PNG（Commons 渲染）下载，未在本地转换、改色或裁切；原始 SVG：https://upload.wikimedia.org/wikipedia/commons/d/db/Huawei_wordmark_2019.svg 。仅收录 HUAWEI 文字标识，不含花瓣图案；Commons 文件说明及分类标记其为 2018 年起使用的文字式样。公司身份和现用字形对照 https://www.huawei.com/en/corporate-information ，官网页头仍使用该字形。\n\n原始核对记录\n仅含 HUAWEI 字标，未含花瓣图形。\n\n2026-11-09 SVG 优先复核\n同页原始 SVG 含 DOCTYPE，按仓库静态 SVG 验收规则采用来源提供的 PNG 渲染文件。"
           },
           "width": 1280,
           "height": 219,
@@ -1079,11 +877,11 @@
       "categories": [
         "ai"
       ],
-      "defaultAsset": "logo-blue-bilingual.png",
+      "defaultAsset": "logo-english-official.svg",
       "assets": [
         {
           "file": "logo-black-bilingual.png",
-          "label": "黑色中英组合标识（官方内嵌原生 PNG）",
+          "label": "黑色中英组合",
           "variant": "logo",
           "status": "current",
           "background": "light",
@@ -1092,10 +890,13 @@
           "color": "black",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "website",
+            "placement": "header",
+            "pageTitle": "科大讯飞中文首页"
           },
           "qualityNotes": [
-            "272 × 83 像素，透明背景；适合浅色背景，放大易模糊。"
+            "透明背景。"
           ],
           "source": "https://www.iflytek.com/cn/static/js/index.eaba97afd11e2d3d87d8.js?97d64dd72195ce83a01e",
           "sourcePage": "https://www.iflytek.com/cn/",
@@ -1107,7 +908,7 @@
             "reference": "https://commons.wikimedia.org/w/index.php?title=File:IFlytek_logo.png&oldid=1015993493",
             "attribution": "No copyright attribution required under the Wikimedia Commons PD-textlogo assessment for the matching logo artwork. Original native asset credited to 科大讯飞 / iFLYTEK; source file retained without visual modification. Trademark rights remain with the respective owner.",
             "reviewedAt": "2026-11-07",
-            "notes": "权利依据为所引 Commons 具体文件页对科大讯飞 X 图形、中文名和 iFLYTEK 英文名组合作品的 PD-textlogo 公共领域判断；本原件与该作品核对了三个部分的图形及字形，属于同一组合标识的单色版，分辨率和边缘像素不同，不声称文件字节相同，也不将该判断推广到其他版式或产品标识。该判断不是科大讯飞授予的开放版权许可或再分发授权，不同法域原创性门槛可能不同。官方及商标权利保留，不得暗示官方背书或违反适用的品牌使用限制。 源文件为官网当前中文首页 index JavaScript，webpack module 146 内含原生 PNG data URI；仅作 Base64 解码取得原始 PNG 字节，未重新编码图像，不是渲染、重绘或从网页截图生成。首页滚动后的头部使用此黑色标识。\n\n质量核验记录：\n- 272 × 83 像素，透明背景；适合小尺寸浅色背景使用，放大显示会降低清晰度。\n- 官方首页脚本 module 146 内嵌原生 PNG，仅作 Base64 解码，未裁切、重绘、转换或放大。"
+            "notes": "权利依据为所引 Commons 具体文件页对科大讯飞 X 图形、中文名和 iFLYTEK 英文名组合作品的 PD-textlogo 公共领域判断；本原件与该作品核对了三个部分的图形及字形，属于同一组合标识的单色版，分辨率和边缘像素不同，不声称文件字节相同，也不将该判断推广到其他版式或产品标识。该判断不是科大讯飞授予的开放版权许可或再分发授权，不同法域原创性门槛可能不同。官方及商标权利保留，不得暗示官方背书或违反适用的品牌使用限制。 源文件为官网当前中文首页 index JavaScript，webpack module 146 内含原生 PNG data URI；仅作 Base64 解码取得原始 PNG 字节，未重新编码图像，不是渲染、重绘或从网页截图生成。首页滚动后的头部使用此黑色标识。\n\n质量核验记录：\n- 272 × 83 像素，透明背景；适合小尺寸浅色背景使用，放大显示会降低清晰度。\n- 官方首页脚本 module 146 内嵌原生 PNG，仅作 Base64 解码，未裁切、重绘、转换或放大。\n\n原始核对记录\n272 × 83 像素，透明背景；适合浅色背景，放大易模糊。"
           },
           "width": 272,
           "height": 83,
@@ -1115,7 +916,7 @@
         },
         {
           "file": "logo-blue-bilingual.png",
-          "label": "蓝色中英组合标识（Commons 原件）",
+          "label": "蓝色中英组合",
           "variant": "logo",
           "status": "current",
           "background": "light",
@@ -1124,11 +925,9 @@
           "color": "brand",
           "provenance": {
             "sourceType": "commons",
-            "processing": "original"
+            "processing": "original",
+            "channel": "commons"
           },
-          "qualityNotes": [
-            "550 × 166 像素，放大使用会降低清晰度。"
-          ],
           "source": "https://upload.wikimedia.org/wikipedia/commons/f/ff/IFlytek_logo.png",
           "sourcePage": "https://commons.wikimedia.org/wiki/File:IFlytek_logo.png",
           "sha256": "1bffea9a5f82a6be91fe4f2a14ae92f0dce2606204b086ae659d9fe8f2ed727a",
@@ -1139,15 +938,45 @@
             "reference": "https://commons.wikimedia.org/w/index.php?title=File:IFlytek_logo.png&oldid=1015993493",
             "attribution": "No copyright attribution required under the Wikimedia Commons PD-textlogo assessment. Source credit retained: 科大讯飞 / Wikimedia Commons, https://commons.wikimedia.org/wiki/File:IFlytek_logo.png . Original file, unmodified.",
             "reviewedAt": "2026-11-07",
-            "notes": "该文件页使用 PD-textlogo，依据是 Wikimedia Commons 对简单文字或几何图形未达到版权原创性门槛的公共领域判定，不是品牌方授予 Logo 的开放版权许可或再分发授权；不同法域的原创性判断可能不同。商标权及其他使用限制仍然保留，不得暗示官方背书。公司身份见 https://www.iflytek.com/en/about-us/about.html ，中文官网为 https://www.iflytek.com/cn/ 。本文件为科大讯飞公司 X 图形、中文名及 iFLYTEK 英文名的组合标识；已与现用英文官网 /en/Public/Uploads/uploadfile/images/20230812/comlogo1.svg 的图形与英文字形核对，不是星火等产品标识。"
+            "notes": "该文件页使用 PD-textlogo，依据是 Wikimedia Commons 对简单文字或几何图形未达到版权原创性门槛的公共领域判定，不是品牌方授予 Logo 的开放版权许可或再分发授权；不同法域的原创性判断可能不同。商标权及其他使用限制仍然保留，不得暗示官方背书。公司身份见 https://www.iflytek.com/en/about-us/about.html ，中文官网为 https://www.iflytek.com/cn/ 。本文件为科大讯飞公司 X 图形、中文名及 iFLYTEK 英文名的组合标识；已与现用英文官网 /en/Public/Uploads/uploadfile/images/20230812/comlogo1.svg 的图形与英文字形核对，不是星火等产品标识。\n\n原始核对记录\n550 × 166 像素，放大使用会降低清晰度。"
           },
           "width": 550,
           "height": 166,
           "path": "logos/iflytek/logo-blue-bilingual.png"
         },
         {
+          "file": "logo-english-official.svg",
+          "label": "英文横版组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "website",
+            "placement": "header",
+            "pageTitle": "科大讯飞英文首页"
+          },
+          "source": "https://www.iflytek.com/en/Public/Uploads/uploadfile/images/20230812/comlogo1.svg",
+          "sourcePage": "https://www.iflytek.com/en/",
+          "sha256": "ae825a3ddb3e7bed8c4a1691c6676cca9d003d673ba5089b246178c9bd43727f",
+          "bytes": 3327,
+          "rights": {
+            "status": "permitted",
+            "license": "Public domain (textlogo; third-party assessment)",
+            "reference": "https://commons.wikimedia.org/wiki/File:IFlytek_logo.png",
+            "attribution": "科大讯飞 / iFLYTEK。官方原始 SVG，未修改；保留来源及 Commons 对相同 X 形标识与 iFLYTEK 字标的 PD-textlogo 第三方判断。商标权保留。",
+            "reviewedAt": "2026-11-09",
+            "notes": "本文件为当前英文官网桌面和手机页头直接引用的 SVG，纯路径，无内嵌位图。已与已有 Commons 公司中英组合标逐图核对 X 形弧线、三条斜线以及 iFLYTEK 字形，并对照本次官网下载的纯图 favicon；不包含星火等产品图标。分发依据是 Commons 对相同 X 图形及 iFLYTEK 文字标识的第三方 PD-textlogo 判断，不是科大讯飞对本库授予的再分发许可；仅以此判断收录相同作品的官方英文排列原件，保留商标及其他使用限制，不得暗示官方背书。与中英文 PNG 语言、布局及配色不同，英文矢量版本适合英文页面和大幅输出。\n\n原始核对记录\n168 × 33 viewBox，原生路径矢量，无内嵌位图。\n保留官网原始深蓝绿色；未将已有 PNG 放大、描摹或改色。"
+          },
+          "path": "logos/iflytek/logo-english-official.svg"
+        },
+        {
           "file": "logo-white-bilingual.png",
-          "label": "白色中英组合标识（官方原生 PNG）",
+          "label": "白色中英组合",
           "variant": "logo",
           "status": "current",
           "background": "dark",
@@ -1156,10 +985,13 @@
           "color": "white",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "website",
+            "placement": "header",
+            "pageTitle": "科大讯飞中文首页"
           },
           "qualityNotes": [
-            "302 × 92 像素，透明背景；适合深色背景，放大易模糊。"
+            "透明背景。"
           ],
           "source": "https://www.iflytek.com/cn/static/img/logo-white.c2064c0.png",
           "sourcePage": "https://www.iflytek.com/cn/",
@@ -1171,11 +1003,80 @@
             "reference": "https://commons.wikimedia.org/w/index.php?title=File:IFlytek_logo.png&oldid=1015993493",
             "attribution": "No copyright attribution required under the Wikimedia Commons PD-textlogo assessment for the matching logo artwork. Original native asset credited to 科大讯飞 / iFLYTEK; source file retained without visual modification. Trademark rights remain with the respective owner.",
             "reviewedAt": "2026-11-07",
-            "notes": "权利依据为所引 Commons 具体文件页对科大讯飞 X 图形、中文名和 iFLYTEK 英文名组合作品的 PD-textlogo 公共领域判断；本原件与该作品核对了三个部分的图形及字形，属于同一组合标识的单色版，分辨率和边缘像素不同，不声称文件字节相同，也不将该判断推广到其他版式或产品标识。该判断不是科大讯飞授予的开放版权许可或再分发授权，不同法域原创性门槛可能不同。官方及商标权利保留，不得暗示官方背书或违反适用的品牌使用限制。 官网中文首页头部未滚动状态使用此白色标识。\n\n质量核验记录：\n- 302 × 92 像素，透明背景；适合小尺寸深色背景使用，放大显示会降低清晰度。\n- 官方原生 PNG，保留源文件字节，未裁切、重绘、转换或放大。"
+            "notes": "权利依据为所引 Commons 具体文件页对科大讯飞 X 图形、中文名和 iFLYTEK 英文名组合作品的 PD-textlogo 公共领域判断；本原件与该作品核对了三个部分的图形及字形，属于同一组合标识的单色版，分辨率和边缘像素不同，不声称文件字节相同，也不将该判断推广到其他版式或产品标识。该判断不是科大讯飞授予的开放版权许可或再分发授权，不同法域原创性门槛可能不同。官方及商标权利保留，不得暗示官方背书或违反适用的品牌使用限制。 官网中文首页头部未滚动状态使用此白色标识。\n\n质量核验记录：\n- 302 × 92 像素，透明背景；适合小尺寸深色背景使用，放大显示会降低清晰度。\n- 官方原生 PNG，保留源文件字节，未裁切、重绘、转换或放大。\n\n原始核对记录\n302 × 92 像素，透明背景；适合深色背景，放大易模糊。"
           },
           "width": 302,
           "height": 92,
           "path": "logos/iflytek/logo-white-bilingual.png"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 3,
+      "id": "inovance",
+      "name": "汇川技术",
+      "aliases": [
+        "INOVANCE",
+        "Inovance"
+      ],
+      "identity": {
+        "nameZh": "汇川技术",
+        "nameEn": "INOVANCE",
+        "legalNames": [],
+        "sources": [
+          {
+            "label": "汇川技术官方网站",
+            "url": "https://www.inovance.com/",
+            "reviewedAt": "2026-11-09"
+          },
+          {
+            "label": "汇川全球官网（页头原图来源）",
+            "url": "https://www.inovance.com/global",
+            "reviewedAt": "2026-11-09"
+          }
+        ]
+      },
+      "website": "https://www.inovance.com/",
+      "entityType": "company",
+      "categories": [
+        "industrial-automation"
+      ],
+      "defaultAsset": "wordmark-blue-official.png",
+      "assets": [
+        {
+          "file": "wordmark-blue-official.png",
+          "label": "标准蓝英文字标",
+          "variant": "wordmark",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "website",
+            "placement": "header",
+            "pageTitle": "汇川技术全球官网首页"
+          },
+          "qualityNotes": [
+            "透明背景，横向画布紧凑。"
+          ],
+          "source": "https://portal-file.inovance.com/upload/image/2025/03/28/0e86e631-cd0c-41ac-aa2d-a981e7a4dbfb.png",
+          "sourcePage": "https://www.inovance.com/global",
+          "sha256": "0ac55305f11f9d0dfd9384322f46d1e51afa5efe77cd4b7da0ad7c31ece8b9fc",
+          "bytes": 37976,
+          "rights": {
+            "status": "permitted",
+            "license": "Public domain (textlogo; third-party assessment)",
+            "reference": "https://commons.wikimedia.org/w/index.php?title=File:Shenzhen_Inovance_Technology.svg&oldid=1117280283",
+            "attribution": "INOVANCE / 汇川技术。Commons 对相同英文字标作品作 PD-textlogo 公共领域判定，无版权署名要求；保留官方原图来源与商标声明。原文件未经修改。",
+            "reviewedAt": "2026-11-09",
+            "notes": "原件由当前官方全球网站页头图片地址去除服务器端图像质量/格式处理参数后，取得同路径提供的原始 PNG；下载原字节未裁切、放大、改色或转换。版权收录依据为 Commons 对 INOVANCE 简单文字图形作品的 PD-textlogo 第三方判断，不是汇川对本库的再分发授权；已在一致预览条件核对 I/N/O/V/A/N/C/E 字形、A 的断开三角与整体比例。Commons 文件的蓝色与官方当前图像不同，因此不把 Commons SVG 作为另一配色入库，也不宣称字节相同。该判断不推广到汇川其他图形、中文字体或产品标识。不同法域的原创性门槛可能不同，商标权及其他使用限制仍保留，不得暗示官方背书。\n\n原始核对记录\n2858 × 431 像素，透明背景，紧凑横版画布；边缘清晰，适合浅色背景。"
+          },
+          "width": 2858,
+          "height": 431,
+          "path": "logos/inovance/wordmark-blue-official.png"
         }
       ]
     },
@@ -1218,50 +1119,10 @@
         "internet"
       ],
       "defaultAsset": "wordmark-green.svg",
-      "artworks": [
-        {
-          "id": "wordmark-green-bilingual-2022",
-          "label": "2022 绿色中英文字标",
-          "files": [
-            "wordmark-green.png",
-            "wordmark-green.svg"
-          ],
-          "defaultAsset": "wordmark-green.svg"
-        }
-      ],
       "assets": [
         {
-          "file": "wordmark-green.png",
-          "label": "绿色中英文文字标识 · PNG（Commons 渲染）",
-          "variant": "wordmark",
-          "status": "current",
-          "background": "light",
-          "language": "bilingual",
-          "layout": "horizontal",
-          "color": "brand",
-          "provenance": {
-            "sourceType": "commons",
-            "processing": "rendered"
-          },
-          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/IQIYI_logo_%282022%29.svg/1280px-IQIYI_logo_%282022%29.svg.png",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:IQIYI_logo_(2022).svg",
-          "sha256": "97e8ec12d7d3f7df4a0ca75aee77514633ce8a1c47a2816027b1833c001c1966",
-          "bytes": 12339,
-          "rights": {
-            "status": "permitted",
-            "license": "Public domain (textlogo)",
-            "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AIQIYI_logo_%282022%29.svg&oldid=1277926211",
-            "attribution": "No copyright attribution required by the Commons PD-textlogo designation. Logo attributed to iQIYI, Inc.; trademark rights remain with the respective owner.",
-            "reviewedAt": "2026-11-07",
-            "notes": "分发依据为 Wikimedia Commons 对该具体标识的简单图形/文字公共领域判定（PD-textlogo），不是品牌方的再分发授权。该判定不授予商标权，相关商标权保留；使用时不得暗示品牌方背书。保存 Commons 文件页正式提供的 PNG 渲染下载，原样保存，未自行修改图形、颜色、比例或透明背景。公司身份由 https://ir.iqiyi.com/ 核对；2022 年起的绿色中英文文字标识及 #00DC5A 线上色已对照官方标志使用规范 https://www.iqiyi.com/common/biaozhiguifan.html 核对，Commons 文件来源亦注明该官方页面。"
-          },
-          "width": 1280,
-          "height": 198,
-          "path": "logos/iqiyi/wordmark-green.png"
-        },
-        {
           "file": "wordmark-green.svg",
-          "label": "2022 绿色中英文字标 · SVG（Commons 原件）",
+          "label": "2022 绿色中英字标",
           "variant": "wordmark",
           "status": "current",
           "background": "light",
@@ -1270,7 +1131,8 @@
           "color": "brand",
           "provenance": {
             "sourceType": "commons",
-            "processing": "original"
+            "processing": "original",
+            "channel": "commons"
           },
           "source": "https://upload.wikimedia.org/wikipedia/commons/0/0f/IQIYI_logo_%282022%29.svg",
           "sourcePage": "https://commons.wikimedia.org/wiki/File:IQIYI_logo_(2022).svg",
@@ -1341,7 +1203,7 @@
       "assets": [
         {
           "file": "logo-color-english.jpg",
-          "label": "四色圆点英文组合标识（Commons 原件）",
+          "label": "四色圆点英文组合",
           "variant": "logo",
           "status": "current",
           "background": "light",
@@ -1350,11 +1212,14 @@
           "color": "brand",
           "provenance": {
             "sourceType": "commons",
-            "processing": "original"
+            "processing": "original",
+            "channel": "commons"
           },
           "qualityNotes": [
-            "CMYK JPEG，白色不透明背景；显示效果受色彩管理影响。",
-            "原画布含较多留白。"
+            "不透明白底，画布留白较多。"
+          ],
+          "usageWarnings": [
+            "CMYK 色彩显示受色彩管理影响。"
           ],
           "source": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Kingdee_logo_wiki.jpg",
           "sourcePage": "https://commons.wikimedia.org/wiki/File:Kingdee_logo_wiki.jpg",
@@ -1366,11 +1231,108 @@
             "reference": "https://commons.wikimedia.org/w/index.php?title=File:Kingdee_logo_wiki.jpg&oldid=1271741533",
             "attribution": "Aiko Chung Kingdee. Kingdee logo wiki.jpg. Wikimedia Commons. Licensed under Creative Commons Attribution-ShareAlike 4.0 International: https://creativecommons.org/licenses/by-sa/4.0/ . Source: https://commons.wikimedia.org/wiki/File:Kingdee_logo_wiki.jpg . Original file, unmodified.",
             "reviewedAt": "2026-11-07",
-            "notes": "按 CC BY-SA 4.0 保留作者署名、文件来源与许可链接，注明未修改；若改编需按相同或兼容许可分享。此逐文件版权许可不转让商标权，也不代表公司背书。Commons 文件描述为 Kingdee Cloud ERP Logo；公司官网 https://www.kingdee.com/newlist/42875 明确这套四色圆点加 Kingdee 字形是2017年发布的集团品牌标识，而非单个软件产品标识。核对日 https://www.kingdee.com/global/ 仍使用同形公司标识 https://global.kingdee.com/wp-content/uploads/2025/07/logo-scaled.png ，其 alt 为 Kingdee International Software Group；公司身份见 https://www.kingdee.com/global/company-information/ 。许可依据为 Commons 上传者对该具体文件的 CC BY-SA 4.0 声明，未推断为全品牌开放授权。 文件特征复核：此 JPG 原生尺寸为2528×1371，采用 CMYK / Coated FOGRA39 (ISO 12647-2:2004) 色彩配置，无透明通道且有明显白底留白。它是按来源保留的原件，不是透明 PNG 或 sRGB 网页优化输出；适合网页的透明版本需另取可靠来源并核对分发条件。"
+            "notes": "按 CC BY-SA 4.0 保留作者署名、文件来源与许可链接，注明未修改；若改编需按相同或兼容许可分享。此逐文件版权许可不转让商标权，也不代表公司背书。Commons 文件描述为 Kingdee Cloud ERP Logo；公司官网 https://www.kingdee.com/newlist/42875 明确这套四色圆点加 Kingdee 字形是2017年发布的集团品牌标识，而非单个软件产品标识。核对日 https://www.kingdee.com/global/ 仍使用同形公司标识 https://global.kingdee.com/wp-content/uploads/2025/07/logo-scaled.png ，其 alt 为 Kingdee International Software Group；公司身份见 https://www.kingdee.com/global/company-information/ 。许可依据为 Commons 上传者对该具体文件的 CC BY-SA 4.0 声明，未推断为全品牌开放授权。 文件特征复核：此 JPG 原生尺寸为2528×1371，采用 CMYK / Coated FOGRA39 (ISO 12647-2:2004) 色彩配置，无透明通道且有明显白底留白。它是按来源保留的原件，不是透明 PNG 或 sRGB 网页优化输出；适合网页的透明版本需另取可靠来源并核对分发条件。\n\n原始核对记录\nCMYK JPEG，白色不透明背景；显示效果受色彩管理影响。\n原画布含较多留白。"
           },
           "width": 2528,
           "height": 1371,
           "path": "logos/kingdee/logo-color-english.jpg"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 3,
+      "id": "kuaishou",
+      "name": "快手",
+      "aliases": [
+        "Kuaishou"
+      ],
+      "identity": {
+        "nameZh": "快手",
+        "nameEn": "Kuaishou",
+        "legalNames": [],
+        "sources": [
+          {
+            "label": "快手官方素材库",
+            "url": "https://www.kuaishou.com/official/material-lib",
+            "reviewedAt": "2026-11-09"
+          }
+        ]
+      },
+      "website": "https://www.kuaishou.com/",
+      "entityType": "company",
+      "categories": [
+        "internet"
+      ],
+      "defaultAsset": "icon-orange-official.png",
+      "assets": [
+        {
+          "file": "icon-orange-official.png",
+          "label": "橙色摄影机图形",
+          "variant": "icon",
+          "status": "current",
+          "background": "light",
+          "language": "none",
+          "layout": "standalone",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library",
+            "pageTitle": "快手素材库"
+          },
+          "qualityNotes": [
+            "透明背景，有效图形约 680 × 781 像素。"
+          ],
+          "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/pure-logo-1-min.png",
+          "sourcePage": "https://www.kuaishou.com/official/material-lib",
+          "sha256": "dea4cc25d61910638339e6867009e89e95ef0da54ebf824fa1aea041ddd07305",
+          "bytes": 11543,
+          "rights": {
+            "status": "permitted",
+            "license": "Public domain (textlogo; third-party assessment)",
+            "reference": "https://commons.wikimedia.org/w/index.php?title=File:Kuaishou_logo.png&oldid=686719154",
+            "attribution": "快手 / Kuaishou。图片来源：快手网站（kuaishou.com）；官方原件未修改。保留 Commons 对相同摄影机图形的第三方 PD-textlogo 判断，商标权保留。",
+            "reviewedAt": "2026-11-09",
+            "notes": "已逐图对照 Commons 英文组合原件与快手官方“纯图形无文字”：摄影机双圆、圆角矩形机身、左侧三角镜头的造型、比例与橙色一致。本文件直接来自官方素材页而非由 Commons 组合裁切。版权依据为 Commons 对相同简单摄影机图形的第三方 PD-textlogo 判断，不是快手对图库的再分发授权。官方素材页许可限定宣传推广快手产品、要求署名及保持完整性；未把该条款解释为独立图库镜像授权。该第三方版权判断不授予商标权，使用时仍须遵守商标及其他限制，不得暗示官方背书。\n\n原始核对记录\n1024 × 1024 像素，透明背景；有效图形范围约 680 × 781 像素。\n直接保存官方原始文件，未裁切、放大、改色或重绘。"
+          },
+          "width": 1024,
+          "height": 1024,
+          "path": "logos/kuaishou/icon-orange-official.png"
+        },
+        {
+          "file": "logo-english-official.jpg",
+          "label": "橙灰英文横版组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library",
+            "pageTitle": "快手素材库"
+          },
+          "qualityNotes": [
+            "不透明白底，画布留白较多。",
+            "有效图稿约 8559 × 1596 像素。"
+          ],
+          "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/e-logo-1-min.jpeg",
+          "sourcePage": "https://www.kuaishou.com/official/material-lib",
+          "sha256": "0cf90382c21ccc008b3fa57fce28a6fb308aa7c869034f6e626ff3b30cc08a37",
+          "bytes": 399040,
+          "rights": {
+            "status": "permitted",
+            "license": "Public domain (textlogo; third-party assessment)",
+            "reference": "https://commons.wikimedia.org/w/index.php?title=File:Kuaishou_logo.png&oldid=686719154",
+            "attribution": "快手 / Kuaishou。官方素材页原件未修改；保留Commons对同款简单摄影机和英文字标的PD-textlogo判断，商标权保留。",
+            "reviewedAt": "2026-11-09",
+            "notes": "直接下载快手官方素材页e-logo-1-min.jpeg原样保存；实际查看原件，并在相同横版条件下对照Commons File:Kuaishou_logo.png的摄影机双圆、圆角机身、三角镜头、KUAISHOU字形、间距、橙/灰构图，核对同款。Commons正文对具体作品的PD-textlogo评估为第三方版权分发依据，不是快手对图库的再分发授权；官方素材页宣传推广用途、署名、完整性要求不解释为图库镜像许可。商标权及其他限制保留，不得暗示背书；不同法域原创性门槛可能不同。本轮优先保存官方原件，来源回溯brandlogos.net的Commons透明PNG仅留作核对证据，不将其称作官方原件或增添同用途公开文件。\n\n原始核对记录\n13725 × 9097 像素官方原始 JPEG，白底，保留大量原始留白；有效图稿约 8559 × 1596 像素。\n保留来源原始字节，未裁切、改色、放大或重新压缩。JPEG有压缩，透明独立图形另由官方PNG提供。"
+          },
+          "width": 13725,
+          "height": 9097,
+          "path": "logos/kuaishou/logo-english-official.jpg"
         }
       ]
     },
@@ -1424,7 +1386,7 @@
       "assets": [
         {
           "file": "logo-red-official.svg",
-          "label": "标准红标识 · 官方官网 SVG 原件",
+          "label": "红色标识",
           "variant": "logo",
           "status": "current",
           "background": "any",
@@ -1433,11 +1395,13 @@
           "color": "brand",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "website",
+            "placement": "header",
+            "pageTitle": "联想美国官网首页"
           },
-          "qualityNotes": [
-            "标准红 #E1251B。",
-            "长宽比约 3.1:1，与品牌指南的 3:1 不同。"
+          "usageWarnings": [
+            "长宽比约 3.1:1，与品牌指南的 3:1 有差异。"
           ],
           "source": "https://p3-ofp.static.pub/fes/cms/2023/03/22/8hjmcte754uauw07ypikjkjtx0m5ib450914.svg",
           "sourcePage": "https://www.lenovo.com/us/en/",
@@ -1449,7 +1413,7 @@
             "reference": "https://commons.wikimedia.org/w/index.php?title=File%3ALenovo_%282015%29.svg&oldid=1251613811",
             "attribution": "Lenovo Group Limited。保留官方文件来源、Commons 公共领域判断及商标声明；下载文件原样保存。",
             "reviewedAt": "2026-11-07",
-            "notes": "版权收录依据是 Commons 对相同简单 Lenovo 字样与纯色矩形标识的 PD-textlogo 第三方判断，不是联想对本图库的授权。经图形复核，本文件没有新增口号、插画或复杂组合；原色及像素/路径均保留。官方来源只证明文件及现行使用，不证明允许图库镜像或再分发。官方 https://www.lenovo.com/us/en/legal/copytrade/ 说明其他公司使用 Lenovo Logo 需取得书面许可或品牌授权；本条不授予商标使用权，也不构成对该限制的豁免，不得暗示官方背书。品牌资源禁止用于训练 AI 模型，见 https://brandworld.lenovo.com/visual-identity/logo/ 。\n\n质量核验记录：\n- 原始路径使用 #E1251B，与当前官方 Signature Red 一致。\n- 官方官网页头原件为 123.999×40 视口，保留其约 3.1:1 原始比例；未调整为品牌指南的 3:1。"
+            "notes": "版权收录依据是 Commons 对相同简单 Lenovo 字样与纯色矩形标识的 PD-textlogo 第三方判断，不是联想对本图库的授权。经图形复核，本文件没有新增口号、插画或复杂组合；原色及像素/路径均保留。官方来源只证明文件及现行使用，不证明允许图库镜像或再分发。官方 https://www.lenovo.com/us/en/legal/copytrade/ 说明其他公司使用 Lenovo Logo 需取得书面许可或品牌授权；本条不授予商标使用权，也不构成对该限制的豁免，不得暗示官方背书。品牌资源禁止用于训练 AI 模型，见 https://brandworld.lenovo.com/visual-identity/logo/ 。\n\n质量核验记录：\n- 原始路径使用 #E1251B，与当前官方 Signature Red 一致。\n- 官方官网页头原件为 123.999×40 视口，保留其约 3.1:1 原始比例；未调整为品牌指南的 3:1。\n\n原始核对记录\n标准红 #E1251B。\n长宽比约 3.1:1，与品牌指南的 3:1 不同。"
           },
           "path": "logos/lenovo/logo-red-official.svg"
         }
@@ -1503,7 +1467,7 @@
       "assets": [
         {
           "file": "logo-bilingual-commons.png",
-          "label": "中英横版组合标识 · 透明 PNG（Commons 原件）",
+          "label": "中英组合",
           "variant": "logo",
           "status": "current",
           "background": "light",
@@ -1512,7 +1476,8 @@
           "color": "brand",
           "provenance": {
             "sourceType": "commons",
-            "processing": "original"
+            "processing": "original",
+            "channel": "commons"
           },
           "source": "https://upload.wikimedia.org/wikipedia/commons/6/61/Meituan_English_Logo.png",
           "sourcePage": "https://commons.wikimedia.org/wiki/File:Meituan_English_Logo.png",
@@ -1532,7 +1497,7 @@
         },
         {
           "file": "logo-chinese-official.png",
-          "label": "中文组合标识 · 高清透明 PNG（官方原件）",
+          "label": "中文组合",
           "variant": "logo",
           "status": "current",
           "background": "light",
@@ -1541,11 +1506,12 @@
           "color": "brand",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "brand-library",
+            "pageTitle": "美团媒体资源"
           },
           "qualityNotes": [
-            "1896 × 687 像素，透明背景，来自官方媒体素材包。",
-            "主黄为 #FFD100。"
+            "透明背景。"
           ],
           "source": "https://s3plus.meituan.net/smart/22c45b30-80ba-4aa5-bfad-2bfaed7beb4e.zip",
           "sourcePage": "https://www.meituan.com/media",
@@ -1557,7 +1523,7 @@
             "reference": "https://commons.wikimedia.org/wiki/File:Meituan_Logo.png",
             "attribution": "No copyright attribution required under the Commons PD-textlogo assessment of the same Chinese lockup. Source credit retained: 美团 / Meituan; PNG extracted unchanged from the official media download archive.",
             "reviewedAt": "2026-11-07",
-            "notes": "原始文件为官方媒体包“美团/美团横式色彩标识.png”，1896 × 687 像素、带透明通道；从官方 ZIP 逐字节提取，未放大、裁切、改色或重绘。已与原库 Commons 195 × 71 版本核对，为同一黄色圆角方形加黑色“美团”的中文组合设计。分发依据是 Commons 对该相同设计的 PD-textlogo 判定，不是新的官方再分发授权。官方媒体页限制图像“仅供个人或编辑使用”；此处没有将该声明当作开放素材库许可。商标权及其他使用限制仍然保留，不得暗示官方背书。"
+            "notes": "原始文件为官方媒体包“美团/美团横式色彩标识.png”，1896 × 687 像素、带透明通道；从官方 ZIP 逐字节提取，未放大、裁切、改色或重绘。已与原库 Commons 195 × 71 版本核对，为同一黄色圆角方形加黑色“美团”的中文组合设计。分发依据是 Commons 对该相同设计的 PD-textlogo 判定，不是新的官方再分发授权。官方媒体页限制图像“仅供个人或编辑使用”；此处没有将该声明当作开放素材库许可。商标权及其他使用限制仍然保留，不得暗示官方背书。\n\n原始核对记录\n1896 × 687 像素，透明背景，来自官方媒体素材包。\n主黄为 #FFD100。"
           },
           "width": 1896,
           "height": 687,
@@ -1622,7 +1588,7 @@
       "assets": [
         {
           "file": "logo-black-horizontal.png",
-          "label": "黑色横版组合标识（官方原生 PNG）",
+          "label": "黑色横版",
           "variant": "logo",
           "status": "current",
           "background": "light",
@@ -1631,10 +1597,12 @@
           "color": "black",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "brand-library",
+            "pageTitle": "MiniMax Brand VI"
           },
           "qualityNotes": [
-            "3600 × 1320 像素，透明背景，画布含留白。"
+            "透明背景，画布含留白。"
           ],
           "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_Logo_Asset.zip",
           "sourcePage": "https://www.minimax.io/brand-vi",
@@ -1646,7 +1614,7 @@
             "reference": "https://commons.wikimedia.org/w/index.php?title=File:MiniMax.png&oldid=1051737129",
             "attribution": "No copyright attribution required under the Wikimedia Commons PD-textlogo assessment for the matching logo artwork. Original native asset credited to MiniMax; source file retained without visual modification. Trademark rights remain with the respective owner.",
             "reviewedAt": "2026-11-07",
-            "notes": "权利依据为所引 Commons 具体文件页对相同简单波形和 MINIMAX 字形作品的 PD-textlogo 公共领域判断；本文件为官方 ZIP 内原生 PNG，已与该 Commons 竖版作品核对图形及字形，版式、色彩和像素分辨率不同，不声称两个文件字节相同，也不将该判断泛化到其他 MiniMax 图形。该判断不是 MiniMax 的开放许可或再分发授权，不同法域原创性门槛可能不同。官方 https://www.minimax.io/brand-vi 的使用条款保留权利，要求遵守比例、颜色、间距和组合规范，禁止歪曲、拆分、重设计及转授权；其有限、非独占、不可转让的使用许可不等于 Logo 仓库再分发授权，未涵盖用途须另行申请批准。商标及其他使用限制仍然保留，不得暗示官方背书。 ZIP 成员：MiniMax_Logo_Asset/png/Horizontal/Black_Black.png。\n\n质量核验记录：\n- 3600 × 1320 像素，透明背景；官方 ZIP 原生 PNG，保留原画布与留白，未裁切、重绘、转换或放大。\n- ZIP 内文件路径：MiniMax_Logo_Asset/png/Horizontal/Black_Black.png"
+            "notes": "权利依据为所引 Commons 具体文件页对相同简单波形和 MINIMAX 字形作品的 PD-textlogo 公共领域判断；本文件为官方 ZIP 内原生 PNG，已与该 Commons 竖版作品核对图形及字形，版式、色彩和像素分辨率不同，不声称两个文件字节相同，也不将该判断泛化到其他 MiniMax 图形。该判断不是 MiniMax 的开放许可或再分发授权，不同法域原创性门槛可能不同。官方 https://www.minimax.io/brand-vi 的使用条款保留权利，要求遵守比例、颜色、间距和组合规范，禁止歪曲、拆分、重设计及转授权；其有限、非独占、不可转让的使用许可不等于 Logo 仓库再分发授权，未涵盖用途须另行申请批准。商标及其他使用限制仍然保留，不得暗示官方背书。 ZIP 成员：MiniMax_Logo_Asset/png/Horizontal/Black_Black.png。\n\n质量核验记录：\n- 3600 × 1320 像素，透明背景；官方 ZIP 原生 PNG，保留原画布与留白，未裁切、重绘、转换或放大。\n- ZIP 内文件路径：MiniMax_Logo_Asset/png/Horizontal/Black_Black.png\n\n原始核对记录\n3600 × 1320 像素，透明背景，画布含留白。"
           },
           "width": 3600,
           "height": 1320,
@@ -1654,7 +1622,7 @@
         },
         {
           "file": "logo-gradient-horizontal-white.png",
-          "label": "渐变白字横版组合标识（官方原生 PNG）",
+          "label": "渐变白字横版",
           "variant": "logo",
           "status": "current",
           "background": "dark",
@@ -1663,10 +1631,12 @@
           "color": "brand",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "brand-library",
+            "pageTitle": "MiniMax Brand VI"
           },
           "qualityNotes": [
-            "3600 × 1320 像素，透明背景，画布含留白。"
+            "透明背景，画布含留白。"
           ],
           "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_Logo_Asset.zip",
           "sourcePage": "https://www.minimax.io/brand-vi",
@@ -1678,7 +1648,7 @@
             "reference": "https://commons.wikimedia.org/w/index.php?title=File:MiniMax.png&oldid=1051737129",
             "attribution": "No copyright attribution required under the Wikimedia Commons PD-textlogo assessment for the matching logo artwork. Original native asset credited to MiniMax; source file retained without visual modification. Trademark rights remain with the respective owner.",
             "reviewedAt": "2026-11-07",
-            "notes": "权利依据为所引 Commons 具体文件页对相同简单波形和 MINIMAX 字形作品的 PD-textlogo 公共领域判断；本文件为官方 ZIP 内原生 PNG，已与该 Commons 竖版作品核对图形及字形，版式、色彩和像素分辨率不同，不声称两个文件字节相同，也不将该判断泛化到其他 MiniMax 图形。该判断不是 MiniMax 的开放许可或再分发授权，不同法域原创性门槛可能不同。官方 https://www.minimax.io/brand-vi 的使用条款保留权利，要求遵守比例、颜色、间距和组合规范，禁止歪曲、拆分、重设计及转授权；其有限、非独占、不可转让的使用许可不等于 Logo 仓库再分发授权，未涵盖用途须另行申请批准。商标及其他使用限制仍然保留，不得暗示官方背书。 ZIP 成员：MiniMax_Logo_Asset/png/Horizontal/BrandColor_White.png。\n\n质量核验记录：\n- 3600 × 1320 像素，透明背景；官方 ZIP 原生 PNG，保留原画布与留白，未裁切、重绘、转换或放大。\n- ZIP 内文件路径：MiniMax_Logo_Asset/png/Horizontal/BrandColor_White.png"
+            "notes": "权利依据为所引 Commons 具体文件页对相同简单波形和 MINIMAX 字形作品的 PD-textlogo 公共领域判断；本文件为官方 ZIP 内原生 PNG，已与该 Commons 竖版作品核对图形及字形，版式、色彩和像素分辨率不同，不声称两个文件字节相同，也不将该判断泛化到其他 MiniMax 图形。该判断不是 MiniMax 的开放许可或再分发授权，不同法域原创性门槛可能不同。官方 https://www.minimax.io/brand-vi 的使用条款保留权利，要求遵守比例、颜色、间距和组合规范，禁止歪曲、拆分、重设计及转授权；其有限、非独占、不可转让的使用许可不等于 Logo 仓库再分发授权，未涵盖用途须另行申请批准。商标及其他使用限制仍然保留，不得暗示官方背书。 ZIP 成员：MiniMax_Logo_Asset/png/Horizontal/BrandColor_White.png。\n\n质量核验记录：\n- 3600 × 1320 像素，透明背景；官方 ZIP 原生 PNG，保留原画布与留白，未裁切、重绘、转换或放大。\n- ZIP 内文件路径：MiniMax_Logo_Asset/png/Horizontal/BrandColor_White.png\n\n原始核对记录\n3600 × 1320 像素，透明背景，画布含留白。"
           },
           "width": 3600,
           "height": 1320,
@@ -1686,7 +1656,7 @@
         },
         {
           "file": "logo-gradient-horizontal.png",
-          "label": "渐变黑字横版组合标识（官方原生 PNG）",
+          "label": "渐变黑字横版",
           "variant": "logo",
           "status": "current",
           "background": "light",
@@ -1695,10 +1665,12 @@
           "color": "brand",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "brand-library",
+            "pageTitle": "MiniMax Brand VI"
           },
           "qualityNotes": [
-            "3600 × 1320 像素，透明背景，画布含留白。"
+            "透明背景，画布含留白。"
           ],
           "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_Logo_Asset.zip",
           "sourcePage": "https://www.minimax.io/brand-vi",
@@ -1710,7 +1682,7 @@
             "reference": "https://commons.wikimedia.org/w/index.php?title=File:MiniMax.png&oldid=1051737129",
             "attribution": "No copyright attribution required under the Wikimedia Commons PD-textlogo assessment for the matching logo artwork. Original native asset credited to MiniMax; source file retained without visual modification. Trademark rights remain with the respective owner.",
             "reviewedAt": "2026-11-07",
-            "notes": "权利依据为所引 Commons 具体文件页对相同简单波形和 MINIMAX 字形作品的 PD-textlogo 公共领域判断；本文件为官方 ZIP 内原生 PNG，已与该 Commons 竖版作品核对图形及字形，版式、色彩和像素分辨率不同，不声称两个文件字节相同，也不将该判断泛化到其他 MiniMax 图形。该判断不是 MiniMax 的开放许可或再分发授权，不同法域原创性门槛可能不同。官方 https://www.minimax.io/brand-vi 的使用条款保留权利，要求遵守比例、颜色、间距和组合规范，禁止歪曲、拆分、重设计及转授权；其有限、非独占、不可转让的使用许可不等于 Logo 仓库再分发授权，未涵盖用途须另行申请批准。商标及其他使用限制仍然保留，不得暗示官方背书。 ZIP 成员：MiniMax_Logo_Asset/png/Horizontal/BrandColor_Black.png。\n\n质量核验记录：\n- 3600 × 1320 像素，透明背景；官方 ZIP 原生 PNG，保留原画布与留白，未裁切、重绘、转换或放大。\n- ZIP 内文件路径：MiniMax_Logo_Asset/png/Horizontal/BrandColor_Black.png"
+            "notes": "权利依据为所引 Commons 具体文件页对相同简单波形和 MINIMAX 字形作品的 PD-textlogo 公共领域判断；本文件为官方 ZIP 内原生 PNG，已与该 Commons 竖版作品核对图形及字形，版式、色彩和像素分辨率不同，不声称两个文件字节相同，也不将该判断泛化到其他 MiniMax 图形。该判断不是 MiniMax 的开放许可或再分发授权，不同法域原创性门槛可能不同。官方 https://www.minimax.io/brand-vi 的使用条款保留权利，要求遵守比例、颜色、间距和组合规范，禁止歪曲、拆分、重设计及转授权；其有限、非独占、不可转让的使用许可不等于 Logo 仓库再分发授权，未涵盖用途须另行申请批准。商标及其他使用限制仍然保留，不得暗示官方背书。 ZIP 成员：MiniMax_Logo_Asset/png/Horizontal/BrandColor_Black.png。\n\n质量核验记录：\n- 3600 × 1320 像素，透明背景；官方 ZIP 原生 PNG，保留原画布与留白，未裁切、重绘、转换或放大。\n- ZIP 内文件路径：MiniMax_Logo_Asset/png/Horizontal/BrandColor_Black.png\n\n原始核对记录\n3600 × 1320 像素，透明背景，画布含留白。"
           },
           "width": 3600,
           "height": 1320,
@@ -1718,7 +1690,7 @@
         },
         {
           "file": "logo-gradient-vertical-official.png",
-          "label": "渐变黑字竖版组合标识（官方原生 PNG）",
+          "label": "渐变黑字竖版",
           "variant": "logo",
           "status": "current",
           "background": "light",
@@ -1727,10 +1699,12 @@
           "color": "brand",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "brand-library",
+            "pageTitle": "MiniMax Brand VI"
           },
           "qualityNotes": [
-            "1600 × 1600 像素，透明背景，画布含留白。"
+            "透明背景，画布含留白。"
           ],
           "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_Logo_Asset.zip",
           "sourcePage": "https://www.minimax.io/brand-vi",
@@ -1742,11 +1716,75 @@
             "reference": "https://commons.wikimedia.org/w/index.php?title=File:MiniMax.png&oldid=1051737129",
             "attribution": "No copyright attribution required under the Wikimedia Commons PD-textlogo assessment for the matching logo artwork. Original native asset credited to MiniMax; source file retained without visual modification. Trademark rights remain with the respective owner.",
             "reviewedAt": "2026-11-07",
-            "notes": "权利依据为所引 Commons 具体文件页对相同简单波形和 MINIMAX 字形作品的 PD-textlogo 公共领域判断；本文件为官方 ZIP 内原生 PNG，已与该 Commons 竖版作品核对图形及字形，版式、色彩和像素分辨率不同，不声称两个文件字节相同，也不将该判断泛化到其他 MiniMax 图形。该判断不是 MiniMax 的开放许可或再分发授权，不同法域原创性门槛可能不同。官方 https://www.minimax.io/brand-vi 的使用条款保留权利，要求遵守比例、颜色、间距和组合规范，禁止歪曲、拆分、重设计及转授权；其有限、非独占、不可转让的使用许可不等于 Logo 仓库再分发授权，未涵盖用途须另行申请批准。商标及其他使用限制仍然保留，不得暗示官方背书。 ZIP 成员：MiniMax_Logo_Asset/png/Vertical/BrandColor_Black.png。\n\n质量核验记录：\n- 1600 × 1600 像素，透明背景；官方 ZIP 原生 PNG，保留原画布与留白，未裁切、重绘、转换或放大。\n- ZIP 内文件路径：MiniMax_Logo_Asset/png/Vertical/BrandColor_Black.png"
+            "notes": "权利依据为所引 Commons 具体文件页对相同简单波形和 MINIMAX 字形作品的 PD-textlogo 公共领域判断；本文件为官方 ZIP 内原生 PNG，已与该 Commons 竖版作品核对图形及字形，版式、色彩和像素分辨率不同，不声称两个文件字节相同，也不将该判断泛化到其他 MiniMax 图形。该判断不是 MiniMax 的开放许可或再分发授权，不同法域原创性门槛可能不同。官方 https://www.minimax.io/brand-vi 的使用条款保留权利，要求遵守比例、颜色、间距和组合规范，禁止歪曲、拆分、重设计及转授权；其有限、非独占、不可转让的使用许可不等于 Logo 仓库再分发授权，未涵盖用途须另行申请批准。商标及其他使用限制仍然保留，不得暗示官方背书。 ZIP 成员：MiniMax_Logo_Asset/png/Vertical/BrandColor_Black.png。\n\n质量核验记录：\n- 1600 × 1600 像素，透明背景；官方 ZIP 原生 PNG，保留原画布与留白，未裁切、重绘、转换或放大。\n- ZIP 内文件路径：MiniMax_Logo_Asset/png/Vertical/BrandColor_Black.png\n\n原始核对记录\n1600 × 1600 像素，透明背景，画布含留白。"
           },
           "width": 1600,
           "height": 1600,
           "path": "logos/minimax/logo-gradient-vertical-official.png"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 3,
+      "id": "nio",
+      "name": "蔚来",
+      "aliases": [
+        "NIO",
+        "Nio"
+      ],
+      "identity": {
+        "nameZh": "蔚来",
+        "nameEn": "NIO",
+        "legalNames": [],
+        "sources": [
+          {
+            "label": "蔚来国际官网",
+            "url": "https://www.nio.com/",
+            "reviewedAt": "2026-11-09"
+          },
+          {
+            "label": "NIO 官方品牌说明",
+            "url": "https://us.nio.com/blog/showing-gratitude-and-celebrating-anniversaries",
+            "reviewedAt": "2026-11-09"
+          }
+        ]
+      },
+      "website": "https://www.nio.com/",
+      "entityType": "company",
+      "categories": [
+        "automotive"
+      ],
+      "defaultAsset": "icon-white-official.svg",
+      "assets": [
+        {
+          "file": "icon-white-official.svg",
+          "label": "白色图形",
+          "variant": "icon",
+          "status": "current",
+          "background": "dark",
+          "language": "none",
+          "layout": "standalone",
+          "color": "white",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "website",
+            "placement": "header",
+            "pageTitle": "蔚来国际官网首页"
+          },
+          "source": "https://cdn-udp-public.eu.nio.com/www-nio/cdn-static/mynio/nextjs/images/icons/nio-logo-white.svg",
+          "sourcePage": "https://www.nio.com/",
+          "sha256": "3a6a38e9bf1cafcdd0a744c1345050ff5d432d98c90ef13f7b9bc6a2b4650d08",
+          "bytes": 1625,
+          "rights": {
+            "status": "permitted",
+            "license": "Public domain (textlogo; third-party assessment)",
+            "reference": "https://commons.wikimedia.org/w/index.php?title=File:NIO_logo_emblem.svg&oldid=1124487383",
+            "attribution": "标识归属 NIO / 蔚来；Commons 的 PD-textlogo 判断无版权署名要求，保留原始来源与商标声明。文件原样保存。",
+            "reviewedAt": "2026-11-09",
+            "notes": "NIO 当前国际官网页头直接引用的白色独立图形。已与 Commons 纯图形及官网官方品牌说明核对上部天空拱形、下部向上指向轮廓、中央分隔和整体比例；第三方版权判断仅用于相同图形，未外推到 NIO 子品牌。白色版本适合深色背景，作为官方来源默认文件。 该依据是 Commons 对具体图稿的第三方公共领域判断，不是品牌方授予本图库的许可。商标权和其他使用限制仍归权利人，不得暗示官方背书。\n\n原始核对记录\n路径矢量，无内嵌位图；保留来源的画布和路径，未改色、裁切或重新描摹。"
+          },
+          "path": "logos/nio/icon-white-official.svg"
         }
       ]
     },
@@ -1795,50 +1833,10 @@
         "hardware"
       ],
       "defaultAsset": "wordmark-green-2019.svg",
-      "artworks": [
-        {
-          "id": "wordmark-green-2019",
-          "label": "2019 绿色字标",
-          "files": [
-            "wordmark-green-2019.png",
-            "wordmark-green-2019.svg"
-          ],
-          "defaultAsset": "wordmark-green-2019.svg"
-        }
-      ],
       "assets": [
         {
-          "file": "wordmark-green-2019.png",
-          "label": "2019 绿色文字标识 · PNG（Commons 渲染）",
-          "variant": "wordmark",
-          "status": "current",
-          "background": "light",
-          "language": "en",
-          "layout": "horizontal",
-          "color": "brand",
-          "provenance": {
-            "sourceType": "commons",
-            "processing": "rendered"
-          },
-          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/OPPO_LOGO_2019.svg/1280px-OPPO_LOGO_2019.svg.png",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:OPPO_LOGO_2019.svg",
-          "sha256": "a3a2c820344de41adbddba82a2fb309ba84439ee5ddc6638fe3633ee046d074f",
-          "bytes": 15337,
-          "rights": {
-            "status": "permitted",
-            "license": "Public domain (textlogo)",
-            "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AOPPO_LOGO_2019.svg&oldid=1291432638",
-            "attribution": "OPPO；SVG 转制：Wikimedia Commons 用户 Sushant savla。Commons 文件页标记为公共领域，无版权署名要求；保留来源和商标声明。文件下载原样保存。",
-            "reviewedAt": "2026-11-07",
-            "notes": "依据 Wikimedia Commons 对该文件的 PD-textlogo（简单图形或文字未达到版权独创性门槛）公共领域判定收录；这是 Commons 的第三方判定，不是品牌方对本仓库的再分发授权。商标权仍归相关权利人，使用不得暗示官方背书。保存文件页正式提供的 1280px PNG（Commons 渲染）下载，未在本地转换、改色或裁切；原始 SVG：https://upload.wikimedia.org/wikipedia/commons/0/0a/OPPO_LOGO_2019.svg 。公司身份见 https://privacy.oppo.com/cn/policy ，字形对照 https://www.oppo.com/en/about/ 。绿色字标仍见 OPPO 2025 年官方合规声明 https://www.oppo.com/content/dam/oppo/uk/static/certification/OPPO%20Enco%20Buds3%20Pro%28ETEK1%29_SoC.pdf ，网站也使用单色变体；此处保留来源绿色，未改为黑色。"
-          },
-          "width": 1280,
-          "height": 305,
-          "path": "logos/oppo/wordmark-green-2019.png"
-        },
-        {
           "file": "wordmark-green-2019.svg",
-          "label": "2019 绿色文字标识 · SVG（Commons 原件）",
+          "label": "2019 绿色字标",
           "variant": "wordmark",
           "status": "current",
           "background": "light",
@@ -1847,7 +1845,8 @@
           "color": "brand",
           "provenance": {
             "sourceType": "commons",
-            "processing": "original"
+            "processing": "original",
+            "channel": "commons"
           },
           "source": "https://upload.wikimedia.org/wikipedia/commons/0/0a/OPPO_LOGO_2019.svg",
           "sourcePage": "https://commons.wikimedia.org/wiki/File:OPPO_LOGO_2019.svg",
@@ -1917,7 +1916,7 @@
       "assets": [
         {
           "file": "logo-color.png",
-          "label": "彩色横版组合标识（Commons 原件）",
+          "label": "彩色中英横版组合",
           "variant": "logo",
           "status": "current",
           "background": "light",
@@ -1926,7 +1925,8 @@
           "color": "brand",
           "provenance": {
             "sourceType": "commons",
-            "processing": "original"
+            "processing": "original",
+            "channel": "commons"
           },
           "source": "https://upload.wikimedia.org/wikipedia/commons/c/c9/SenseTime_logo.png",
           "sourcePage": "https://commons.wikimedia.org/wiki/File:SenseTime_logo.png",
@@ -1943,6 +1943,67 @@
           "width": 2105,
           "height": 592,
           "path": "logos/sensetime/logo-color.png"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 3,
+      "id": "shopee",
+      "name": "虾皮",
+      "aliases": [
+        "Shopee"
+      ],
+      "identity": {
+        "nameZh": "虾皮",
+        "nameEn": "Shopee",
+        "legalNames": [],
+        "sources": [
+          {
+            "label": "Shopee 官方招聘站（品牌身份与现用图稿）",
+            "url": "https://careers.shopee.sg/",
+            "reviewedAt": "2026-11-09"
+          }
+        ]
+      },
+      "website": "https://shopee.sg/",
+      "entityType": "company",
+      "categories": [
+        "e-commerce"
+      ],
+      "defaultAsset": "logo-horizontal-official.svg",
+      "assets": [
+        {
+          "file": "logo-horizontal-official.svg",
+          "label": "橙色英文横版组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "website",
+            "placement": "footer",
+            "pageTitle": "Shopee 招聘官网首页"
+          },
+          "qualityNotes": [
+            "透明背景。"
+          ],
+          "source": "https://deo.shopeemobile.com/shopee/shopee-careers-live-sg/assets/img/footer-shopee.62760462.svg",
+          "sourcePage": "https://careers.shopee.sg/",
+          "sha256": "3a15506fbbeaf7d7f75181687513ae4b14d08eb15642c063cc9c7e95f90b4a35",
+          "bytes": 8335,
+          "rights": {
+            "status": "permitted",
+            "license": "Public domain (textlogo; third-party assessment)",
+            "reference": "https://commons.wikimedia.org/w/index.php?title=File:Shopee.svg&oldid=1284381307",
+            "attribution": "Shopee。Commons 对同款简单图形与字标作 PD-textlogo 判定，无版权署名要求；保留官方来源与商标声明。",
+            "reviewedAt": "2026-11-09",
+            "notes": "文件直接来自 Shopee 官方招聘站页脚，未改色、裁切、重绘或重新序列化。实际查看官方页面及文件，并在相同横版条件下对照 Commons File:Shopee.svg：购物袋轮廓、提手、S 字形、英文 Shopee 字形、比例与 #EE4D2D 主色一致。版权分发依据为 Commons 对相同简单标识作品的 PD-textlogo 第三方公共领域评估，不是 Shopee 对本图库的授权；不扩展至 Careers 组合、活动图、吉祥物或其他作品。商标权保留，不得暗示背书；不同法域的原创性门槛可能不同。Commons 横版与本官方 SVG 用途重叠，正式库只保留官方原件。Commons 竖版 SVG 的 enable-background 不符静态子集，不改写原件；Sea 官方媒体库另有竖版 PNG，但有效图稿仅188×268，本轮按用户高清要求只留草稿。本轮未取得可正式收录的无字独立图形文件。\n\n原始核对记录\n原生路径矢量，透明背景；保留官网原始 SVG 字节与 #EE4D2D 橙色。"
+          },
+          "path": "logos/shopee/logo-horizontal-official.svg"
         }
       ]
     },
@@ -1994,21 +2055,10 @@
         "internet"
       ],
       "defaultAsset": "wordmark-blue-official.png",
-      "artworks": [
-        {
-          "id": "wordmark-blue-bilingual",
-          "label": "蓝色中英文字标",
-          "files": [
-            "wordmark-blue.png",
-            "wordmark-blue-official.png"
-          ],
-          "defaultAsset": "wordmark-blue-official.png"
-        }
-      ],
       "assets": [
         {
           "file": "wordmark-black-official.png",
-          "label": "黑色中英文字标 · 保留留白的官方透明 PNG",
+          "label": "黑色字标",
           "variant": "wordmark",
           "status": "current",
           "background": "light",
@@ -2017,10 +2067,12 @@
           "color": "black",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "brand-library",
+            "pageTitle": "腾讯媒体资源"
           },
           "qualityNotes": [
-            "2953 × 889 像素，透明背景，保留原始上下留白。"
+            "透明背景，上下留白较多。"
           ],
           "source": "https://www.tencent.com/wp-content/uploads/2022/12/01_Tencent_Logo_Black.png",
           "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/",
@@ -2032,7 +2084,7 @@
             "reference": "https://commons.wikimedia.org/w/index.php?title=File%3ATencent_logo_2017.svg&oldid=1213564805",
             "attribution": "Tencent / 腾讯。保留官方文件来源及 Commons 对相同中英文字标的 PD-textlogo 判断；原文件未经修改，商标权保留。",
             "reviewedAt": "2026-11-07",
-            "notes": "版权收录依据为 Wikimedia Commons 对相同 Tencent + 腾讯中英文简单字标作品的 PD-textlogo 第三方公共领域判定；已比对斜体英文字形、箭头状 t、中文字形及横向构图，不扩展至其他组合、口号、企鹅图形或产品标识。该 Commons 判定不是本 PNG 的下载来源，也不是腾讯对本图库的开放许可或再分发授权；不同法域的原创性门槛可能不同。官方媒体页 https://www.tencent.com/zh-cn/newsroom/media-resources/ 明确素材仅供媒体报道使用，未将此条款解释为图库镜像授权。官方 https://www.tencent.com/zh-cn/legal-statement/ 保留版权，并说明超越合理使用范畴且未经书面许可的使用可能被追责；其商标声明说明未经许可使用相关注册商标或混淆性近似商标可能侵权。本项不授予商标权或对这些限制的豁免，不得暗示官方背书。文件直接下载原样保存，未裁切、放大、改色、重画或转换格式。\n\n质量核验记录：\n- 2953 × 889 像素官方透明 PNG 原件；实际字形包围框约 2764 × 370，保留较多上下透明留白，未裁切。\n- 官方媒体页直接提供的黑色版本，非由其他图片在本地改色生成。"
+            "notes": "版权收录依据为 Wikimedia Commons 对相同 Tencent + 腾讯中英文简单字标作品的 PD-textlogo 第三方公共领域判定；已比对斜体英文字形、箭头状 t、中文字形及横向构图，不扩展至其他组合、口号、企鹅图形或产品标识。该 Commons 判定不是本 PNG 的下载来源，也不是腾讯对本图库的开放许可或再分发授权；不同法域的原创性门槛可能不同。官方媒体页 https://www.tencent.com/zh-cn/newsroom/media-resources/ 明确素材仅供媒体报道使用，未将此条款解释为图库镜像授权。官方 https://www.tencent.com/zh-cn/legal-statement/ 保留版权，并说明超越合理使用范畴且未经书面许可的使用可能被追责；其商标声明说明未经许可使用相关注册商标或混淆性近似商标可能侵权。本项不授予商标权或对这些限制的豁免，不得暗示官方背书。文件直接下载原样保存，未裁切、放大、改色、重画或转换格式。\n\n质量核验记录：\n- 2953 × 889 像素官方透明 PNG 原件；实际字形包围框约 2764 × 370，保留较多上下透明留白，未裁切。\n- 官方媒体页直接提供的黑色版本，非由其他图片在本地改色生成。\n\n原始核对记录\n2953 × 889 像素，透明背景，保留原始上下留白。"
           },
           "width": 2953,
           "height": 889,
@@ -2040,7 +2092,7 @@
         },
         {
           "file": "wordmark-blue-official.png",
-          "label": "蓝色中英文字标 · 保留留白的官方透明 PNG",
+          "label": "蓝色字标",
           "variant": "wordmark",
           "status": "current",
           "background": "light",
@@ -2049,12 +2101,13 @@
           "color": "brand",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "brand-library",
+            "pageTitle": "腾讯媒体资源"
           },
           "qualityNotes": [
-            "2953 × 889 像素，透明背景，保留原始上下留白。",
-            "有效字形范围约为 2763 × 370 像素。",
-            "蓝色为 #0052D9。"
+            "透明背景，上下留白较多。",
+            "有效字形约 2763 × 370 像素。"
           ],
           "source": "https://www.tencent.com/wp-content/uploads/2022/12/01_Tencent_Standard-Logo.png",
           "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/",
@@ -2066,48 +2119,15 @@
             "reference": "https://commons.wikimedia.org/w/index.php?title=File%3ATencent_logo_2017.svg&oldid=1213564805",
             "attribution": "Tencent / 腾讯。保留官方文件来源及 Commons 对相同中英文字标的 PD-textlogo 判断；原文件未经修改，商标权保留。",
             "reviewedAt": "2026-11-07",
-            "notes": "版权收录依据为 Wikimedia Commons 对相同 Tencent + 腾讯中英文简单字标作品的 PD-textlogo 第三方公共领域判定；已比对斜体英文字形、箭头状 t、中文字形及横向构图，不扩展至其他组合、口号、企鹅图形或产品标识。该 Commons 判定不是本 PNG 的下载来源，也不是腾讯对本图库的开放许可或再分发授权；不同法域的原创性门槛可能不同。官方媒体页 https://www.tencent.com/zh-cn/newsroom/media-resources/ 明确素材仅供媒体报道使用，未将此条款解释为图库镜像授权。官方 https://www.tencent.com/zh-cn/legal-statement/ 保留版权，并说明超越合理使用范畴且未经书面许可的使用可能被追责；其商标声明说明未经许可使用相关注册商标或混淆性近似商标可能侵权。本项不授予商标权或对这些限制的豁免，不得暗示官方背书。文件直接下载原样保存，未裁切、放大、改色、重画或转换格式。\n\n质量核验记录：\n- 2953 × 889 像素官方透明 PNG 原件；实际字形包围框约 2763 × 370，保留较多上下透明留白，未裁切。\n- 原始不透明主色为 #0052D9；保留官方原色。"
+            "notes": "版权收录依据为 Wikimedia Commons 对相同 Tencent + 腾讯中英文简单字标作品的 PD-textlogo 第三方公共领域判定；已比对斜体英文字形、箭头状 t、中文字形及横向构图，不扩展至其他组合、口号、企鹅图形或产品标识。该 Commons 判定不是本 PNG 的下载来源，也不是腾讯对本图库的开放许可或再分发授权；不同法域的原创性门槛可能不同。官方媒体页 https://www.tencent.com/zh-cn/newsroom/media-resources/ 明确素材仅供媒体报道使用，未将此条款解释为图库镜像授权。官方 https://www.tencent.com/zh-cn/legal-statement/ 保留版权，并说明超越合理使用范畴且未经书面许可的使用可能被追责；其商标声明说明未经许可使用相关注册商标或混淆性近似商标可能侵权。本项不授予商标权或对这些限制的豁免，不得暗示官方背书。文件直接下载原样保存，未裁切、放大、改色、重画或转换格式。\n\n质量核验记录：\n- 2953 × 889 像素官方透明 PNG 原件；实际字形包围框约 2763 × 370，保留较多上下透明留白，未裁切。\n- 原始不透明主色为 #0052D9；保留官方原色。\n\n原始核对记录\n2953 × 889 像素，透明背景，保留原始上下留白。\n有效字形范围约为 2763 × 370 像素。\n蓝色为 #0052D9。"
           },
           "width": 2953,
           "height": 889,
           "path": "logos/tencent/wordmark-blue-official.png"
         },
         {
-          "file": "wordmark-blue.png",
-          "label": "蓝色中英文字标 · 紧凑画布透明 PNG",
-          "variant": "wordmark",
-          "status": "current",
-          "background": "light",
-          "language": "bilingual",
-          "layout": "horizontal",
-          "color": "brand",
-          "provenance": {
-            "sourceType": "commons",
-            "processing": "rendered"
-          },
-          "qualityNotes": [
-            "1280 × 172 像素，透明背景，紧凑画布，无额外外沿留白。",
-            "蓝色为 #0052D9，适合直接嵌入与复制。"
-          ],
-          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Tencent_logo_2017.svg/1280px-Tencent_logo_2017.svg.png",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:Tencent_logo_2017.svg",
-          "sha256": "5da4c0faf03b7e812dd27dd2acb3c7d4c2db56727a8029b2d86afcfed545a674",
-          "bytes": 43216,
-          "rights": {
-            "status": "permitted",
-            "license": "Public domain (textlogo)",
-            "reference": "https://commons.wikimedia.org/w/index.php?title=File%3ATencent_logo_2017.svg&oldid=1213564805",
-            "attribution": "No copyright attribution required by the Commons PD-textlogo designation. Logo attributed to 腾讯; trademark rights remain with the respective owner.",
-            "reviewedAt": "2026-11-07",
-            "notes": "分发依据为 Wikimedia Commons 对该具体标识的简单图形/文字公共领域判定（PD-textlogo），不是品牌方的再分发授权。该判定不授予商标权，相关商标权保留；使用时不得暗示品牌方背书。 保存 Commons 文件页正式提供的 PNG 渲染下载，原样保存，未自行修改图形、颜色、比例或透明背景。当前中英文蓝色文字样式与 https://www.tencent.com/zh-cn/newsroom/media-resources/ 的腾讯标识核对一致。腾讯官方媒体库注明其素材仅供媒体报道使用；本项未把该媒体库条款写成通用授权，而是采用 Commons 对此具体文件的 PD-textlogo 判定。"
-          },
-          "width": 1280,
-          "height": 172,
-          "path": "logos/tencent/wordmark-blue.png"
-        },
-        {
           "file": "wordmark-white-official.png",
-          "label": "白色中英文字标 · 保留留白的官方透明 PNG",
+          "label": "白色字标",
           "variant": "wordmark",
           "status": "current",
           "background": "dark",
@@ -2116,10 +2136,12 @@
           "color": "white",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "brand-library",
+            "pageTitle": "腾讯媒体资源"
           },
           "qualityNotes": [
-            "2953 × 889 像素，透明背景，保留原始上下留白。"
+            "透明背景，上下留白较多。"
           ],
           "source": "https://www.tencent.com/wp-content/uploads/2022/12/01_Tencent_Logo_Reverse-type.png",
           "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/",
@@ -2131,11 +2153,141 @@
             "reference": "https://commons.wikimedia.org/w/index.php?title=File%3ATencent_logo_2017.svg&oldid=1213564805",
             "attribution": "Tencent / 腾讯。保留官方文件来源及 Commons 对相同中英文字标的 PD-textlogo 判断；原文件未经修改，商标权保留。",
             "reviewedAt": "2026-11-07",
-            "notes": "版权收录依据为 Wikimedia Commons 对相同 Tencent + 腾讯中英文简单字标作品的 PD-textlogo 第三方公共领域判定；已比对斜体英文字形、箭头状 t、中文字形及横向构图，不扩展至其他组合、口号、企鹅图形或产品标识。该 Commons 判定不是本 PNG 的下载来源，也不是腾讯对本图库的开放许可或再分发授权；不同法域的原创性门槛可能不同。官方媒体页 https://www.tencent.com/zh-cn/newsroom/media-resources/ 明确素材仅供媒体报道使用，未将此条款解释为图库镜像授权。官方 https://www.tencent.com/zh-cn/legal-statement/ 保留版权，并说明超越合理使用范畴且未经书面许可的使用可能被追责；其商标声明说明未经许可使用相关注册商标或混淆性近似商标可能侵权。本项不授予商标权或对这些限制的豁免，不得暗示官方背书。文件直接下载原样保存，未裁切、放大、改色、重画或转换格式。\n\n质量核验记录：\n- 2953 × 889 像素官方透明 PNG 原件；实际字形包围框约 2764 × 371，保留较多上下透明留白，未裁切。\n- 官方媒体页直接提供的白色版本，非由其他图片在本地改色生成。"
+            "notes": "版权收录依据为 Wikimedia Commons 对相同 Tencent + 腾讯中英文简单字标作品的 PD-textlogo 第三方公共领域判定；已比对斜体英文字形、箭头状 t、中文字形及横向构图，不扩展至其他组合、口号、企鹅图形或产品标识。该 Commons 判定不是本 PNG 的下载来源，也不是腾讯对本图库的开放许可或再分发授权；不同法域的原创性门槛可能不同。官方媒体页 https://www.tencent.com/zh-cn/newsroom/media-resources/ 明确素材仅供媒体报道使用，未将此条款解释为图库镜像授权。官方 https://www.tencent.com/zh-cn/legal-statement/ 保留版权，并说明超越合理使用范畴且未经书面许可的使用可能被追责；其商标声明说明未经许可使用相关注册商标或混淆性近似商标可能侵权。本项不授予商标权或对这些限制的豁免，不得暗示官方背书。文件直接下载原样保存，未裁切、放大、改色、重画或转换格式。\n\n质量核验记录：\n- 2953 × 889 像素官方透明 PNG 原件；实际字形包围框约 2764 × 371，保留较多上下透明留白，未裁切。\n- 官方媒体页直接提供的白色版本，非由其他图片在本地改色生成。\n\n原始核对记录\n2953 × 889 像素，透明背景，保留原始上下留白。"
           },
           "width": 2953,
           "height": 889,
           "path": "logos/tencent/wordmark-white-official.png"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 3,
+      "id": "tencent-music",
+      "name": "腾讯音乐娱乐集团",
+      "aliases": [
+        "TME",
+        "Tencent Music",
+        "腾讯音乐"
+      ],
+      "identity": {
+        "nameZh": "腾讯音乐娱乐集团",
+        "nameEn": "Tencent Music Entertainment Group",
+        "legalNames": [],
+        "sources": [
+          {
+            "label": "腾讯音乐集团官网",
+            "url": "https://www.tencentmusic.com/",
+            "reviewedAt": "2026-11-09"
+          },
+          {
+            "label": "腾讯音乐官方投资者关系",
+            "url": "https://ir.tencentmusic.com/",
+            "reviewedAt": "2026-11-09"
+          }
+        ]
+      },
+      "website": "https://www.tencentmusic.com/",
+      "entityType": "company",
+      "categories": [
+        "entertainment",
+        "internet"
+      ],
+      "defaultAsset": "wordmark-tme-blue-official.png",
+      "assets": [
+        {
+          "file": "wordmark-tme-blue-official.png",
+          "label": "蓝色 TME 字标",
+          "variant": "wordmark",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "website",
+            "placement": "header",
+            "pageTitle": "腾讯音乐官网首页"
+          },
+          "qualityNotes": [
+            "透明背景。"
+          ],
+          "source": "https://www.tencentmusic.com/img/tme-blue.cafd93f9.png",
+          "sourcePage": "https://www.tencentmusic.com/",
+          "sha256": "e1ddc3718baac847063240897c06c80f61375cf8b939d61f997176324ec443f7",
+          "bytes": 3825,
+          "rights": {
+            "status": "permitted",
+            "license": "Public domain (textlogo; third-party assessment)",
+            "reference": "https://commons.wikimedia.org/w/index.php?title=File:%E9%A8%B0%E8%A8%8A%E9%9F%B3%E6%A8%82%E5%A8%9B%E6%A8%82%E9%9B%86%E5%9C%98logo.jpg&oldid=1254296409",
+            "attribution": "Tencent Music Entertainment Group / 腾讯音乐娱乐集团。Commons 对相同 TME 简单字母图形的 PD-textlogo 判断无版权署名要求；保留官方来源与商标声明，文件原样保存。",
+            "reviewedAt": "2026-11-09",
+            "notes": "直接保存当前官网页头引用的透明蓝色 PNG，未裁切、改色、放大或重新描摹。已实际查看并对照 Commons 具体图片中的 TME 部分，核对三个字母的斜切笔画、中心 M、右侧三条 E 横线及相互比例；Commons 为白色，官网提供蓝色原件，保留官网原色。版权判断仅用于相同 TME 简单字母图形，不外推到 Commons 图片背景、不同中文字形或当前官网完整中英文字标。该判断来自第三方，不是品牌方对本图库的许可；商标权及其他使用限制仍保留，不得暗示品牌背书。\n\n原始核对记录\n564 × 204 像素，透明背景；图案本身是 TME 三个字母，不属于无文字图形。"
+          },
+          "width": 564,
+          "height": 204,
+          "path": "logos/tencent-music/wordmark-tme-blue-official.png"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 3,
+      "id": "transsion",
+      "name": "传音控股",
+      "aliases": [
+        "Transsion Holdings",
+        "传音"
+      ],
+      "identity": {
+        "nameZh": "传音控股",
+        "nameEn": "TRANSSION",
+        "legalNames": [],
+        "sources": [
+          {
+            "label": "传音控股公司官网",
+            "url": "https://www.transsion.com/zh-CN/about",
+            "reviewedAt": "2026-11-09"
+          }
+        ]
+      },
+      "website": "https://www.transsion.com/",
+      "entityType": "company",
+      "categories": [
+        "hardware"
+      ],
+      "defaultAsset": "wordmark-black-official.svg",
+      "assets": [
+        {
+          "file": "wordmark-black-official.svg",
+          "label": "黑色英文字标",
+          "variant": "wordmark",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "black",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "website",
+            "placement": "footer",
+            "pageTitle": "关于传音"
+          },
+          "source": "https://www.transsion.com/_next/static/media/logo-black.d7cd9b41.svg",
+          "sourcePage": "https://www.transsion.com/zh-CN/about",
+          "sha256": "37ac109cbd791078358eeeda68a0cb12d85d54bf0f9241ab3f0d7d5e7c003230",
+          "bytes": 3241,
+          "rights": {
+            "status": "permitted",
+            "license": "Public domain (textlogo; third-party assessment)",
+            "reference": "https://commons.wikimedia.org/w/index.php?title=File:Transsion_Logo.svg&oldid=1224445862",
+            "attribution": "标识归属 TRANSSION / 传音；Commons 的 PD-textlogo 判断无版权署名要求，保留原始来源与商标声明。文件原样保存。",
+            "reviewedAt": "2026-11-09",
+            "notes": "官方原始 SVG，2026-11-09 核对来源页确认当前用于页脚。实际看图已核对 T 上横与竖笔分离、ranssion 字形、比例和黑色；与 Commons 文件去除文件首尾空白后逐字节一致，未引入其他图形。仅保留官方原件，不另收同稿 Commons 副本。 该依据是 Commons 对具体图稿的第三方公共领域判断，不是品牌方授予本图库的许可。商标权和其他使用限制仍归权利人，不得暗示官方背书。\n\n原始核对记录\n路径矢量，无内嵌位图；保留来源的画布和路径，未改色、裁切或重新描摹。"
+          },
+          "path": "logos/transsion/wordmark-black-official.svg"
         }
       ]
     },
@@ -2193,50 +2345,10 @@
         "internet"
       ],
       "defaultAsset": "wordmark-color.svg",
-      "artworks": [
-        {
-          "id": "wordmark-color-group",
-          "label": "彩色集团字标",
-          "files": [
-            "wordmark-color.png",
-            "wordmark-color.svg"
-          ],
-          "defaultAsset": "wordmark-color.svg"
-        }
-      ],
       "assets": [
         {
-          "file": "wordmark-color.png",
-          "label": "英文集团文字标识 · PNG（Commons 渲染）",
-          "variant": "wordmark",
-          "status": "current",
-          "background": "light",
-          "language": "en",
-          "layout": "horizontal",
-          "color": "brand",
-          "provenance": {
-            "sourceType": "commons",
-            "processing": "rendered"
-          },
-          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Trip.com_Group_logo.svg/1280px-Trip.com_Group_logo.svg.png",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:Trip.com_Group_logo.svg",
-          "sha256": "fda8b0003738f1d7e03e3297bf6f4e35e025bf63f2569a814785b3ee0677a289",
-          "bytes": 25433,
-          "rights": {
-            "status": "permitted",
-            "license": "Public domain (textlogo)",
-            "reference": "https://commons.wikimedia.org/w/index.php?title=File%3ATrip.com_Group_logo.svg&oldid=1245285677",
-            "attribution": "No copyright attribution required by the Commons PD-textlogo designation. Logo attributed to 携程集团; trademark rights remain with the respective owner.",
-            "reviewedAt": "2026-11-07",
-            "notes": "分发依据为 Wikimedia Commons 对该具体标识的简单图形/文字公共领域判定（PD-textlogo），不是品牌方的再分发授权。该判定不授予商标权，相关商标权保留；使用时不得暗示品牌方背书。 保存 Commons 文件页正式提供的 PNG 渲染下载，原样保存，未自行修改图形、颜色、比例或透明背景。此项标识含 Group，为携程集团公司标识，非 Trip.com 预订产品标识。公司身份与集团字样已对照 https://group.trip.com/ 和 https://group.trip.com/about/story 核对；集团官网当前页首使用同字形的反白版本。"
-          },
-          "width": 1280,
-          "height": 175,
-          "path": "logos/trip-com/wordmark-color.png"
-        },
-        {
           "file": "wordmark-color.svg",
-          "label": "集团彩色文字标识 · SVG（Commons 原件）",
+          "label": "彩色集团字标",
           "variant": "wordmark",
           "status": "current",
           "background": "light",
@@ -2245,7 +2357,8 @@
           "color": "brand",
           "provenance": {
             "sourceType": "commons",
-            "processing": "original"
+            "processing": "original",
+            "channel": "commons"
           },
           "source": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Trip.com_Group_logo.svg",
           "sourcePage": "https://commons.wikimedia.org/wiki/File:Trip.com_Group_logo.svg",
@@ -2309,50 +2422,10 @@
         "hardware"
       ],
       "defaultAsset": "wordmark-blue-2019.svg",
-      "artworks": [
-        {
-          "id": "wordmark-blue-2019",
-          "label": "2019 蓝色字标",
-          "files": [
-            "wordmark-blue-2019.png",
-            "wordmark-blue-2019.svg"
-          ],
-          "defaultAsset": "wordmark-blue-2019.svg"
-        }
-      ],
       "assets": [
         {
-          "file": "wordmark-blue-2019.png",
-          "label": "2019 蓝色文字标识 · PNG（Commons 渲染）",
-          "variant": "wordmark",
-          "status": "current",
-          "background": "light",
-          "language": "en",
-          "layout": "horizontal",
-          "color": "brand",
-          "provenance": {
-            "sourceType": "commons",
-            "processing": "rendered"
-          },
-          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Vivo_%28China%29_logo.svg/1280px-Vivo_%28China%29_logo.svg.png",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:Vivo_(China)_logo.svg",
-          "sha256": "19eb08b232792e5dd50d77e9c2083d5b0548e77b67d5315548e7a569da278816",
-          "bytes": 11667,
-          "rights": {
-            "status": "permitted",
-            "license": "Public domain (textlogo)",
-            "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AVivo_%28China%29_logo.svg&oldid=1276362702",
-            "attribution": "Vivo Mobile Communication Co., Ltd. (China)。Commons 文件页标记为公共领域，无版权署名要求；保留来源和商标声明。文件下载原样保存。",
-            "reviewedAt": "2026-11-07",
-            "notes": "依据 Wikimedia Commons 对该文件的 PD-textlogo（简单图形或文字未达到版权独创性门槛）公共领域判定收录；这是 Commons 的第三方判定，不是品牌方对本仓库的再分发授权。商标权仍归相关权利人，使用不得暗示官方背书。保存文件页正式提供的 1280px PNG（Commons 渲染）下载，未在本地转换、改色或裁切；原始 SVG：https://upload.wikimedia.org/wikipedia/commons/0/04/Vivo_%28China%29_logo.svg 。中国科技公司 vivo，非巴西同名电信运营商。公司身份和现用字形对照 https://www.vivo.com/en/about-vivo/culture ；法定中文名称见 https://mobile.vivo.com/ 。2019 年视觉识别及品牌色发布说明见 https://www.vivo.com/sg/about-vivo/news/Vivo-V15Pro-Unveils-Tech 。"
-          },
-          "width": 1280,
-          "height": 336,
-          "path": "logos/vivo/wordmark-blue-2019.png"
-        },
-        {
           "file": "wordmark-blue-2019.svg",
-          "label": "2019 蓝色文字标识 · SVG（Commons 原件）",
+          "label": "2019 蓝色字标",
           "variant": "wordmark",
           "status": "current",
           "background": "light",
@@ -2361,7 +2434,8 @@
           "color": "brand",
           "provenance": {
             "sourceType": "commons",
-            "processing": "original"
+            "processing": "original",
+            "channel": "commons"
           },
           "source": "https://upload.wikimedia.org/wikipedia/commons/0/04/Vivo_%28China%29_logo.svg",
           "sourcePage": "https://commons.wikimedia.org/wiki/File:Vivo_(China)_logo.svg",
@@ -2376,6 +2450,73 @@
             "notes": "依据所引 Wikimedia Commons 对该具体文件的 PD-textlogo 公共领域判定收录；这是第三方对简单文字或几何图形的判断，不是品牌方授予的再分发许可，商标权及其他使用限制仍保留。保存该文件页提供的 SVG 原始字节，未清洗、改色、裁切或重绘；此 SVG 由路径等矢量图形组成，不是内嵌位图容器。"
           },
           "path": "logos/vivo/wordmark-blue-2019.svg"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 3,
+      "id": "xiaohongshu",
+      "name": "小红书",
+      "aliases": [
+        "Xiaohongshu"
+      ],
+      "identity": {
+        "nameZh": "小红书",
+        "nameEn": null,
+        "legalNames": [],
+        "sources": [
+          {
+            "label": "小红书官方关于我们",
+            "url": "https://www.xiaohongshu.com/protocols/about",
+            "reviewedAt": "2026-11-09"
+          },
+          {
+            "label": "官方应用 App Store 页面（Xingin）",
+            "url": "https://apps.apple.com/cn/app/id741292507",
+            "reviewedAt": "2026-11-09"
+          }
+        ]
+      },
+      "website": "https://www.xiaohongshu.com/",
+      "entityType": "company",
+      "categories": [
+        "internet",
+        "social-media"
+      ],
+      "defaultAsset": "wordmark-square-appstore.jpg",
+      "assets": [
+        {
+          "file": "wordmark-square-appstore.jpg",
+          "label": "红底白字方形应用标识",
+          "variant": "wordmark",
+          "status": "current",
+          "background": "any",
+          "language": "zh",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "rendered",
+            "channel": "app-store"
+          },
+          "qualityNotes": [
+            "不透明红底。"
+          ],
+          "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/38/bd/a2/38bda237-424d-e201-35a4-e4485ce4a4fc/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/512x512bb.jpg",
+          "sourcePage": "https://apps.apple.com/cn/app/id741292507",
+          "sha256": "9edf8faf71ae6c9294f86085c19a5e5056bc732cabe0d3cca9461ff7f73b8d47",
+          "bytes": 19031,
+          "rights": {
+            "status": "permitted",
+            "license": "Public domain (textlogo; third-party assessment)",
+            "reference": "https://commons.wikimedia.org/w/index.php?title=File:XiaohongshuLOGO.png&oldid=1059366505",
+            "attribution": "小红书 / Xingin。保留官方应用商店来源及 Commons 对相同简单文字标识的 PD-textlogo 第三方判断；商标权保留。",
+            "reviewedAt": "2026-11-09",
+            "notes": "实际查看官方应用商店本轮提供的512px文件、Commons原生256px图和小红书现用官网。三字的独特笔画、右上圆点及横排构图一致；App Store方形底与Commons圆角底不同，未改写或裁切任何原件。分发依据只针对相同简单文字与几何背景作品的 Commons PD-textlogo 第三方公共领域判断，不是小红书或 Apple 的图库授权；不包括口号、其他插画、薯队长形象或无字图标。Commons文件页正文为PD-textlogo，结构化数据仍残留旧CC BY-SA 4.0标签，本项明确依据正文对应的固定修订判断，不把结构化元数据当新授权。商标权保留，不得暗示官方背书；不同法域的原创性门槛可能不同。此项为公司通用品牌在应用上的字标版本，不将其表述为无字公司徽标。\n\n原始核对记录\n512 × 512 像素，来自官方应用商店直接提供的 artworkUrl512；保留原始 JPG 字节，不透明红底。\n这是小红书应用使用的方形品牌字标，不是独立无字图形；没有将 256px Commons 文件放大。\n商店提供的栅格展示图，不是原生矢量或设计源文件；按原生像素使用。"
+          },
+          "width": 512,
+          "height": 512,
+          "path": "logos/xiaohongshu/wordmark-square-appstore.jpg"
         }
       ]
     },
@@ -2436,7 +2577,7 @@
       "assets": [
         {
           "file": "icon-orange-2021.png",
-          "label": "2021 橙色图形标识 · PNG（Commons 渲染）",
+          "label": "2021 橙色图形",
           "variant": "icon",
           "status": "current",
           "background": "any",
@@ -2445,7 +2586,8 @@
           "color": "brand",
           "provenance": {
             "sourceType": "commons",
-            "processing": "rendered"
+            "processing": "rendered",
+            "channel": "commons"
           },
           "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Xiaomi_logo_%282021-%29.svg/1280px-Xiaomi_logo_%282021-%29.svg.png",
           "sourcePage": "https://commons.wikimedia.org/wiki/File:Xiaomi_logo_(2021-).svg",
@@ -2457,7 +2599,7 @@
             "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AXiaomi_logo_%282021-%29.svg&oldid=1257483450",
             "attribution": "Xiaomi。Commons 文件页标记为公共领域，无版权署名要求；保留来源和商标声明。文件下载原样保存。",
             "reviewedAt": "2026-11-07",
-            "notes": "依据 Wikimedia Commons 对该文件的 PD-textlogo（简单图形或文字未达到版权独创性门槛）公共领域判定收录；这是 Commons 的第三方判定，不是品牌方对本仓库的再分发授权。商标权仍归相关权利人，使用不得暗示官方背书。保存文件页正式提供的 1280px PNG（Commons 渲染）下载，未在本地转换、改色或裁切；原始 SVG：https://upload.wikimedia.org/wikipedia/commons/a/ae/Xiaomi_logo_%282021-%29.svg 。公司身份及现用标识对照 https://www.mi.com/global/about/ ；2021 年新标识见小米集团官方半年报 https://ir.mi.com/system/files-encrypted/nasdaq_kms/assets/2021/12/22/4-01-53/2021092800380.pdf 。"
+            "notes": "依据 Wikimedia Commons 对该文件的 PD-textlogo（简单图形或文字未达到版权独创性门槛）公共领域判定收录；这是 Commons 的第三方判定，不是品牌方对本仓库的再分发授权。商标权仍归相关权利人，使用不得暗示官方背书。保存文件页正式提供的 1280px PNG（Commons 渲染）下载，未在本地转换、改色或裁切；原始 SVG：https://upload.wikimedia.org/wikipedia/commons/a/ae/Xiaomi_logo_%282021-%29.svg 。公司身份及现用标识对照 https://www.mi.com/global/about/ ；2021 年新标识见小米集团官方半年报 https://ir.mi.com/system/files-encrypted/nasdaq_kms/assets/2021/12/22/4-01-53/2021092800380.pdf 。\n\n2026-11-09 SVG 优先复核\n同页图形原始 SVG 含 DOCTYPE，按仓库静态 SVG 验收规则采用来源提供的 PNG 渲染文件。"
           },
           "width": 1280,
           "height": 1280,
@@ -2465,7 +2607,7 @@
         },
         {
           "file": "logo-horizontal-official.svg",
-          "label": "橙色图形与英文横版组合 · SVG（官方原件）",
+          "label": "橙色英文横版组合",
           "variant": "logo",
           "status": "current",
           "background": "light",
@@ -2474,7 +2616,9 @@
           "color": "brand",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "website",
+            "pageTitle": "小米信任中心"
           },
           "source": "https://cdna.sec.miui.com/mi-trust-center/group-mi-logo-mobile.svg",
           "sourcePage": "https://trust.mi.com/",
@@ -2489,6 +2633,130 @@
             "notes": "原文件来源为 Xiaomi 官方 CDN，原样保存，未清洗、改色或组合重绘。所引 Commons 文件页直接列出该官方原文件地址并对同一横版组合标识作 PD-textlogo 判断；依据是第三方公共领域判定，不是小米品牌方授予的再分发许可。商标权及其他使用限制仍保留，不得暗示官方背书。官方文件与 Commons 版本的图形元素逐项一致，仅根元素名义尺寸不同。"
           },
           "path": "logos/xiaomi/logo-horizontal-official.svg"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 3,
+      "id": "xpeng",
+      "name": "小鹏",
+      "aliases": [
+        "XPeng",
+        "Xpeng Motors",
+        "小鹏汽车",
+        "小鹏集团"
+      ],
+      "identity": {
+        "nameZh": "小鹏",
+        "nameEn": "XPENG",
+        "legalNames": [],
+        "sources": [
+          {
+            "label": "小鹏中国官网",
+            "url": "https://www.xiaopeng.com/",
+            "reviewedAt": "2026-11-09"
+          },
+          {
+            "label": "小鹏投资者关系",
+            "url": "https://ir.xiaopeng.com/",
+            "reviewedAt": "2026-11-09"
+          }
+        ]
+      },
+      "website": "https://www.xiaopeng.com/",
+      "entityType": "company",
+      "categories": [
+        "automotive"
+      ],
+      "defaultAsset": "icon-black-official.svg",
+      "assets": [
+        {
+          "file": "icon-black-official.svg",
+          "label": "黑色图形",
+          "variant": "icon",
+          "status": "current",
+          "background": "light",
+          "language": "none",
+          "layout": "standalone",
+          "color": "black",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "website",
+            "placement": "header",
+            "pageTitle": "小鹏汽车官网"
+          },
+          "source": "https://xps01.xiaopeng.com/domestic/_next/static/media/black-logo.d7e75b41.svg",
+          "sourcePage": "https://www.xiaopeng.com/",
+          "sha256": "b3c739e433b12bc1587cd4caf23b1b4c485bd37f1ee684f1a8d5c6fd8084de3c",
+          "bytes": 2837,
+          "rights": {
+            "status": "permitted",
+            "license": "Public domain (textlogo; third-party assessment)",
+            "reference": "https://commons.wikimedia.org/w/index.php?title=File:XPeng_logo.svg&oldid=1115665137",
+            "attribution": "标识归属 XPENG / 小鹏；Commons 的 PD-textlogo 判断无版权署名要求，保留原始来源与商标声明。文件原样保存。",
+            "reviewedAt": "2026-11-09",
+            "notes": "官网当前页头直接引用的独立 X 形图形 SVG。已逐图比较 Commons 组合标识中的相同 X 形图形，包括两侧翼形轮廓、中央分隔与细缝；版权判断仅用于该相同图形，不外推到其他小鹏标识。官方黑白两版分别适合浅色与深色背景。 该依据是 Commons 对具体图稿的第三方公共领域判断，不是品牌方授予本图库的许可。商标权和其他使用限制仍归权利人，不得暗示官方背书。\n\n原始核对记录\n路径矢量，无内嵌位图；保留来源的画布和路径，未改色、裁切或重新描摹。"
+          },
+          "path": "logos/xpeng/icon-black-official.svg"
+        },
+        {
+          "file": "icon-white-official.svg",
+          "label": "白色图形",
+          "variant": "icon",
+          "status": "current",
+          "background": "dark",
+          "language": "none",
+          "layout": "standalone",
+          "color": "white",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "website",
+            "placement": "header",
+            "pageTitle": "小鹏汽车官网"
+          },
+          "source": "https://xps01.xiaopeng.com/domestic/_next/static/media/white-logo.9330e0be.svg",
+          "sourcePage": "https://www.xiaopeng.com/",
+          "sha256": "c11bf1d7f744691816ea304265e7177f444d7a06573e6898b899671514bc97b4",
+          "bytes": 2837,
+          "rights": {
+            "status": "permitted",
+            "license": "Public domain (textlogo; third-party assessment)",
+            "reference": "https://commons.wikimedia.org/w/index.php?title=File:XPeng_logo.svg&oldid=1115665137",
+            "attribution": "标识归属 XPENG / 小鹏；Commons 的 PD-textlogo 判断无版权署名要求，保留原始来源与商标声明。文件原样保存。",
+            "reviewedAt": "2026-11-09",
+            "notes": "官网当前页头直接引用的独立 X 形图形 SVG。已逐图比较 Commons 组合标识中的相同 X 形图形，包括两侧翼形轮廓、中央分隔与细缝；版权判断仅用于该相同图形，不外推到其他小鹏标识。官方黑白两版分别适合浅色与深色背景。 该依据是 Commons 对具体图稿的第三方公共领域判断，不是品牌方授予本图库的许可。商标权和其他使用限制仍归权利人，不得暗示官方背书。\n\n原始核对记录\n路径矢量，无内嵌位图；保留来源的画布和路径，未改色、裁切或重新描摹。"
+          },
+          "path": "logos/xpeng/icon-white-official.svg"
+        },
+        {
+          "file": "logo-black-commons.svg",
+          "label": "黑色英文组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "black",
+          "provenance": {
+            "sourceType": "commons",
+            "processing": "original",
+            "channel": "commons"
+          },
+          "source": "https://upload.wikimedia.org/wikipedia/commons/c/ca/XPeng_logo.svg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:XPeng_logo.svg",
+          "sha256": "e61c71cc54e8062b767822a53f02e96adb08e254dca6b5b342921220034cbad7",
+          "bytes": 4234,
+          "rights": {
+            "status": "permitted",
+            "license": "Public domain (textlogo)",
+            "reference": "https://commons.wikimedia.org/w/index.php?title=File:XPeng_logo.svg&oldid=1115665137",
+            "attribution": "标识归属 XPENG / 小鹏；Commons 的 PD-textlogo 判断无版权署名要求，保留原始来源与商标声明。文件原样保存。",
+            "reviewedAt": "2026-11-09",
+            "notes": "Commons 文件页将作者记为 XPeng Motor，注明原始来源为官方投资者站 https://ir.xiaopeng.com/sites/g/files/knoqqb75791/themes/site/nir_pid7769/dist/images/logo.svg 。本轮该官方直链返回 403，因此下载地址如实登记为 Commons，不冒称本轮直接取得的官方文件。已查看 X 形图形与 XPENG 字样、横向比例和背景，保留来源原始 SVG。 该依据是 Commons 对具体图稿的第三方公共领域判断，不是品牌方授予本图库的许可。商标权和其他使用限制仍归权利人，不得暗示官方背书。\n\n原始核对记录\n路径矢量，无内嵌位图；保留来源的画布和路径，未改色、裁切或重新描摹。"
+          },
+          "path": "logos/xpeng/logo-black-commons.svg"
         }
       ]
     },
@@ -2541,21 +2809,10 @@
         "software"
       ],
       "defaultAsset": "wordmark-red-transparent.png",
-      "artworks": [
-        {
-          "id": "wordmark-white",
-          "label": "白色英文字标",
-          "files": [
-            "wordmark-white.svg",
-            "wordmark-white-transparent.png"
-          ],
-          "defaultAsset": "wordmark-white.svg"
-        }
-      ],
       "assets": [
         {
           "file": "wordmark-red-transparent.png",
-          "label": "红色英文字标（官方透明 PNG）",
+          "label": "红色字标",
           "variant": "wordmark",
           "status": "current",
           "background": "light",
@@ -2564,10 +2821,12 @@
           "color": "brand",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "website",
+            "pageTitle": "用友香港官网"
           },
           "qualityNotes": [
-            "686 × 139 像素，透明背景，原始红色为 #E60013。"
+            "透明背景。"
           ],
           "source": "https://www.yonyou.com.hk/wp-content/uploads/2024/09/%E7%94%A8%E5%8F%8BEN-Logo.png",
           "sourcePage": "https://www.yonyou.com.hk/%e7%94%a8%e5%8f%8ben-logo/",
@@ -2579,47 +2838,15 @@
             "reference": "https://commons.wikimedia.org/w/index.php?title=File:Yonyou_logo.jpg&oldid=1279365656",
             "attribution": "Yonyou / 香港官网. Source: https://www.yonyou.com.hk/wp-content/uploads/2024/09/%E7%94%A8%E5%8F%8BEN-Logo.png . Original file, unmodified. Commons PD-textlogo assessment for the same simple English wordmark: https://commons.wikimedia.org/w/index.php?title=File:Yonyou_logo.jpg&oldid=1279365656 .",
             "reviewedAt": "2026-11-07",
-            "notes": "版权依据是 Commons 对同一简单英文 yonyou 字标作品的 PD-textlogo 判定；已逐一核对相同字形结构，不将该判定扩展至中文组合、云图形或产品标识。这不是品牌方的开放许可或官方再分发授权，官方站点仅证明文件来源与现行使用；不同法域的原创性判断可能不同。商标权及其他使用限制仍然保留，不得暗示官方背书。来源文件未裁切、改色、放大、重绘或清理 SVG。\n\n质量核验记录：\n- 686 × 139 像素透明 PNG；保留官方文件字节。"
+            "notes": "版权依据是 Commons 对同一简单英文 yonyou 字标作品的 PD-textlogo 判定；已逐一核对相同字形结构，不将该判定扩展至中文组合、云图形或产品标识。这不是品牌方的开放许可或官方再分发授权，官方站点仅证明文件来源与现行使用；不同法域的原创性判断可能不同。商标权及其他使用限制仍然保留，不得暗示官方背书。来源文件未裁切、改色、放大、重绘或清理 SVG。\n\n质量核验记录：\n- 686 × 139 像素透明 PNG；保留官方文件字节。\n\n原始核对记录\n686 × 139 像素，透明背景，原始红色为 #E60013。"
           },
           "width": 686,
           "height": 139,
           "path": "logos/yonyou/wordmark-red-transparent.png"
         },
         {
-          "file": "wordmark-white-transparent.png",
-          "label": "白色英文字标（官方透明 PNG）",
-          "variant": "wordmark",
-          "status": "current",
-          "background": "dark",
-          "language": "en",
-          "layout": "horizontal",
-          "color": "white",
-          "provenance": {
-            "sourceType": "official",
-            "processing": "original"
-          },
-          "qualityNotes": [
-            "1348 × 423 像素，白色为 #FFFFFF，透明背景，画布含留白。"
-          ],
-          "source": "https://yonyou.com.my/wp-content/uploads/2026/03/logo-1.png",
-          "sourcePage": "https://yonyou.com.my/?attachment_id=7193",
-          "sha256": "ad4e98ec8a11619ed6a4f760b900ebe0ad1aceb35ee9148fed1d44048cb7a660",
-          "bytes": 15078,
-          "rights": {
-            "status": "permitted",
-            "license": "Public domain (textlogo)",
-            "reference": "https://commons.wikimedia.org/w/index.php?title=File:Yonyou_logo.jpg&oldid=1279365656",
-            "attribution": "Yonyou / 马来西亚官网. Source: https://yonyou.com.my/wp-content/uploads/2026/03/logo-1.png . Original file, unmodified. Commons PD-textlogo assessment for the same simple English wordmark: https://commons.wikimedia.org/w/index.php?title=File:Yonyou_logo.jpg&oldid=1279365656 .",
-            "reviewedAt": "2026-11-07",
-            "notes": "版权依据是 Commons 对同一简单英文 yonyou 字标作品的 PD-textlogo 判定；已逐一核对相同字形结构，不将该判定扩展至中文组合、云图形或产品标识。这不是品牌方的开放许可或官方再分发授权，官方站点仅证明文件来源与现行使用；不同法域的原创性判断可能不同。商标权及其他使用限制仍然保留，不得暗示官方背书。来源文件未裁切、改色、放大、重绘或清理 SVG。\n\n质量核验记录：\n- 1348 × 423 像素透明 PNG；原画布含透明留白，保留来源原件。"
-          },
-          "width": 1348,
-          "height": 423,
-          "path": "logos/yonyou/wordmark-white-transparent.png"
-        },
-        {
           "file": "wordmark-white.svg",
-          "label": "白色英文字标（官方 SVG）",
+          "label": "白色字标",
           "variant": "wordmark",
           "status": "current",
           "background": "dark",
@@ -2628,11 +2855,13 @@
           "color": "white",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "website",
+            "placement": "footer",
+            "pageTitle": "用友台湾官网"
           },
           "qualityNotes": [
-            "原生路径 SVG，白色为 #FFFFFF，透明背景，适合深色背景。",
-            "原始视口为 125 × 25。"
+            "透明背景。"
           ],
           "source": "https://www.yonyou.com.tw/wp-content/uploads/2021/06/yonyou-logo-white.svg",
           "sourcePage": "https://www.yonyou.com.tw/",
@@ -2644,7 +2873,7 @@
             "reference": "https://commons.wikimedia.org/w/index.php?title=File:Yonyou_logo.jpg&oldid=1279365656",
             "attribution": "Yonyou / 台湾官网. Source: https://www.yonyou.com.tw/wp-content/uploads/2021/06/yonyou-logo-white.svg . Original file, unmodified. Commons PD-textlogo assessment for the same simple English wordmark: https://commons.wikimedia.org/w/index.php?title=File:Yonyou_logo.jpg&oldid=1279365656 .",
             "reviewedAt": "2026-11-07",
-            "notes": "版权依据是 Commons 对同一简单英文 yonyou 字标作品的 PD-textlogo 判定；已逐一核对相同字形结构，不将该判定扩展至中文组合、云图形或产品标识。这不是品牌方的开放许可或官方再分发授权，官方站点仅证明文件来源与现行使用；不同法域的原创性判断可能不同。商标权及其他使用限制仍然保留，不得暗示官方背书。来源文件未裁切、改色、放大、重绘或清理 SVG。\n\n质量核验记录：\n- 原生路径 SVG，viewBox 0 0 125 25；透明背景，适合深色底。"
+            "notes": "版权依据是 Commons 对同一简单英文 yonyou 字标作品的 PD-textlogo 判定；已逐一核对相同字形结构，不将该判定扩展至中文组合、云图形或产品标识。这不是品牌方的开放许可或官方再分发授权，官方站点仅证明文件来源与现行使用；不同法域的原创性判断可能不同。商标权及其他使用限制仍然保留，不得暗示官方背书。来源文件未裁切、改色、放大、重绘或清理 SVG。\n\n质量核验记录：\n- 原生路径 SVG，viewBox 0 0 125 25；透明背景，适合深色底。\n\n原始核对记录\n原生路径 SVG，白色为 #FFFFFF，透明背景，适合深色背景。\n原始视口为 125 × 25。"
           },
           "path": "logos/yonyou/wordmark-white.svg"
         }
@@ -2702,7 +2931,7 @@
       "assets": [
         {
           "file": "icon-monochrome-commons.png",
-          "label": "Z.ai 方形图标（Commons 渲染）",
+          "label": "Z.ai 方形图标",
           "variant": "icon",
           "status": "current",
           "background": "any",
@@ -2711,10 +2940,11 @@
           "color": "monochrome",
           "provenance": {
             "sourceType": "commons",
-            "processing": "rendered"
+            "processing": "rendered",
+            "channel": "commons"
           },
           "qualityNotes": [
-            "来自 chat.z.ai 的方形图标，不能等同于智谱公司的横版组合标识。"
+            "用于 chat.z.ai。"
           ],
           "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Z.ai_%28company_logo%29.svg/960px-Z.ai_%28company_logo%29.svg.png",
           "sourcePage": "https://commons.wikimedia.org/wiki/File:Z.ai_(company_logo).svg",
@@ -2726,7 +2956,7 @@
             "reference": "https://commons.wikimedia.org/w/index.php?title=File:Z.ai_(company_logo).svg&oldid=1192313548",
             "attribution": "No copyright attribution required under the Wikimedia Commons PD-textlogo assessment. Source credit retained: 智谱 / Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Z.ai_(company_logo).svg . PNG rendered by Wikimedia Commons; downloaded without further modification.",
             "reviewedAt": "2026-11-07",
-            "notes": "该文件页使用 PD-textlogo，依据是 Wikimedia Commons 对简单文字或几何图形未达到版权原创性门槛的公共领域判定，不是品牌方授予 Logo 的开放版权许可或再分发授权；不同法域的原创性判断可能不同。商标权及其他使用限制仍然保留，不得暗示官方背书。公司官网 https://www.zhipuai.cn/zh/about 明确“智谱（Z.AI）”。Commons 文件页注明此方形图标的来源是 https://chat.z.ai/ ；当前公司官网 /logo.svg 与 /logo-en.svg 是 Z 字形分别与“智谱”“Z.AI”组成的横版标识，与本文件构图不同。本记录准确标为 Z.ai 方形图标，不将其冒充公司官网提供的横版标识或官方原件，也不把 GLM、智谱清言等模型或产品作为公司别名。Commons 原 SVG 含本仓库静态子集未接受的 style 元素和属性，因此选用同一文件页正式提供的960px PNG渲染文件原样保存，未自行改图、清洗 SVG 或裁切；下载和许可来源均对应这一 Commons SVG 文件页。"
+            "notes": "该文件页使用 PD-textlogo，依据是 Wikimedia Commons 对简单文字或几何图形未达到版权原创性门槛的公共领域判定，不是品牌方授予 Logo 的开放版权许可或再分发授权；不同法域的原创性判断可能不同。商标权及其他使用限制仍然保留，不得暗示官方背书。公司官网 https://www.zhipuai.cn/zh/about 明确“智谱（Z.AI）”。Commons 文件页注明此方形图标的来源是 https://chat.z.ai/ ；当前公司官网 /logo.svg 与 /logo-en.svg 是 Z 字形分别与“智谱”“Z.AI”组成的横版标识，与本文件构图不同。本记录准确标为 Z.ai 方形图标，不将其冒充公司官网提供的横版标识或官方原件，也不把 GLM、智谱清言等模型或产品作为公司别名。Commons 原 SVG 含本仓库静态子集未接受的 style 元素和属性，因此选用同一文件页正式提供的960px PNG渲染文件原样保存，未自行改图、清洗 SVG 或裁切；下载和许可来源均对应这一 Commons SVG 文件页。\n\n原始核对记录\n来自 chat.z.ai 的方形图标，不能等同于智谱公司的横版组合标识。\n\n2026-11-09 SVG 优先复核\n同页方形图标 SVG 的绘制样式仍超出仓库静态验收范围，采用来源提供的 PNG 渲染文件。"
           },
           "width": 960,
           "height": 960,
@@ -2734,7 +2964,7 @@
         },
         {
           "file": "logo-black-chinese.svg",
-          "label": "中文公司组合标识 · 黑色 SVG 原件",
+          "label": "黑色中文公司组合",
           "variant": "logo",
           "status": "current",
           "background": "light",
@@ -2743,7 +2973,10 @@
           "color": "black",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "website",
+            "placement": "header",
+            "pageTitle": "关于智谱"
           },
           "source": "https://www.zhipuai.cn/logo.svg",
           "sourcePage": "https://www.zhipuai.cn/zh/about",
@@ -2761,7 +2994,7 @@
         },
         {
           "file": "logo-white-chinese.svg",
-          "label": "中文公司组合标识 · 白色 SVG 原件",
+          "label": "白色中文公司组合",
           "variant": "logo",
           "status": "current",
           "background": "dark",
@@ -2770,7 +3003,10 @@
           "color": "white",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "website",
+            "placement": "footer",
+            "pageTitle": "关于智谱"
           },
           "source": "https://www.zhipuai.cn/logo-white.svg",
           "sourcePage": "https://www.zhipuai.cn/zh/about",
@@ -2835,7 +3071,7 @@
       "assets": [
         {
           "file": "wordmark-blue-header-official.png",
-          "label": "标准蓝字标 · 小尺寸 PNG（官方页头）",
+          "label": "标准蓝字标",
           "variant": "wordmark",
           "status": "current",
           "display": "alternative",
@@ -2845,11 +3081,13 @@
           "color": "brand",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "website",
+            "placement": "header",
+            "pageTitle": "中兴通讯全球官网"
           },
           "qualityNotes": [
-            "标准蓝 #008ED3。",
-            "仅 92 × 44 像素，适合小尺寸展示，放大易模糊。"
+            "色值 #008ED3，适合小尺寸展示。"
           ],
           "source": "https://www.zte.com.cn/content/dam/zte-site/res-www-zte-com-cn/navigator/global/main/img/logo-en.png",
           "sourcePage": "https://www.zte.com.cn/global/",
@@ -2861,7 +3099,7 @@
             "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AZTE-logo.svg&oldid=1281655836",
             "attribution": "ZTE Corporation。保留官方文件来源、Commons 对相同 ZTE 简单字标的公共领域判断及商标声明；文件原样保存。",
             "reviewedAt": "2026-11-07",
-            "notes": "版权收录依据是 Commons 对相同圆角 ZTE 三字母简单字标的 PD-textlogo / PD-shape 第三方判断，不是中兴通讯对本图库的许可。本文件仅含相同字标，没有加入中文、口号或其他图案；未将此依据外推到不同组合标识。官方图库的下载入口及官网展示只证明来源和现行使用，不等于图库再分发授权。官方 https://www.zte.com.cn/global/article/acknowledge.html 仅允许个人非商业目的拷贝、传播网站内容并保留版权声明，且声明商标、标识使用须经明确许可；本条不授予商标使用权或品牌授权，也不构成对这些限制的豁免，不得暗示官方背书。\n\n质量核验记录：\n- 原始不透明色为 #008ED3，与官方 VI 数字媒体标准蓝一致。\n- 仅 92×44 原始像素，适合小尺寸展示；不是高清文件，未放大或重采样。"
+            "notes": "版权收录依据是 Commons 对相同圆角 ZTE 三字母简单字标的 PD-textlogo / PD-shape 第三方判断，不是中兴通讯对本图库的许可。本文件仅含相同字标，没有加入中文、口号或其他图案；未将此依据外推到不同组合标识。官方图库的下载入口及官网展示只证明来源和现行使用，不等于图库再分发授权。官方 https://www.zte.com.cn/global/article/acknowledge.html 仅允许个人非商业目的拷贝、传播网站内容并保留版权声明，且声明商标、标识使用须经明确许可；本条不授予商标使用权或品牌授权，也不构成对这些限制的豁免，不得暗示官方背书。\n\n质量核验记录：\n- 原始不透明色为 #008ED3，与官方 VI 数字媒体标准蓝一致。\n- 仅 92×44 原始像素，适合小尺寸展示；不是高清文件，未放大或重采样。\n\n原始核对记录\n标准蓝 #008ED3。\n仅 92 × 44 像素，适合小尺寸展示，放大易模糊。"
           },
           "width": 92,
           "height": 44,
@@ -2869,7 +3107,7 @@
         },
         {
           "file": "wordmark-blue-official.png",
-          "label": "蓝色文字标识 · 官方素材包透明 PNG",
+          "label": "蓝色字标",
           "variant": "wordmark",
           "status": "current",
           "background": "light",
@@ -2878,10 +3116,14 @@
           "color": "other",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "brand-library",
+            "pageTitle": "中兴通讯 Corporate Gallery"
           },
           "qualityNotes": [
-            "1535 × 907 像素，透明背景，画布含留白。",
+            "透明背景，画布含留白。"
+          ],
+          "usageWarnings": [
             "蓝色为 #0086D1，与官方标准蓝 #008ED3 有差异。"
           ],
           "source": "https://www.zte.com.cn/content/dam/zte-site/mediapics/file/zte_logo_en.7z",
@@ -2894,7 +3136,7 @@
             "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AZTE-logo.svg&oldid=1281655836",
             "attribution": "ZTE Corporation。保留官方文件来源、Commons 对相同 ZTE 简单字标的公共领域判断及商标声明；文件原样保存。",
             "reviewedAt": "2026-11-07",
-            "notes": "版权收录依据是 Commons 对相同圆角 ZTE 三字母简单字标的 PD-textlogo / PD-shape 第三方判断，不是中兴通讯对本图库的许可。本文件仅含相同字标，没有加入中文、口号或其他图案；未将此依据外推到不同组合标识。官方图库的下载入口及官网展示只证明来源和现行使用，不等于图库再分发授权。官方 https://www.zte.com.cn/global/article/acknowledge.html 仅允许个人非商业目的拷贝、传播网站内容并保留版权声明，且声明商标、标识使用须经明确许可；本条不授予商标使用权或品牌授权，也不构成对这些限制的豁免，不得暗示官方背书。\n\n质量核验记录：\n- 官方英文素材包成员 zte_logo_en/ZTE LOGO.png；1535×907，含原始透明留白，未裁切。\n- 包内 PNG 原色为 #0086D1，未附 ICC，与官方 VI 数字色 #008ED3 有差异；不是标准蓝色完全一致版，未改色。\n- 素材包内文件日期为 2015 年，但截至 2026-11-07 仍由现行官方企业图库直接提供。"
+            "notes": "版权收录依据是 Commons 对相同圆角 ZTE 三字母简单字标的 PD-textlogo / PD-shape 第三方判断，不是中兴通讯对本图库的许可。本文件仅含相同字标，没有加入中文、口号或其他图案；未将此依据外推到不同组合标识。官方图库的下载入口及官网展示只证明来源和现行使用，不等于图库再分发授权。官方 https://www.zte.com.cn/global/article/acknowledge.html 仅允许个人非商业目的拷贝、传播网站内容并保留版权声明，且声明商标、标识使用须经明确许可；本条不授予商标使用权或品牌授权，也不构成对这些限制的豁免，不得暗示官方背书。\n\n质量核验记录：\n- 官方英文素材包成员 zte_logo_en/ZTE LOGO.png；1535×907，含原始透明留白，未裁切。\n- 包内 PNG 原色为 #0086D1，未附 ICC，与官方 VI 数字色 #008ED3 有差异；不是标准蓝色完全一致版，未改色。\n- 素材包内文件日期为 2015 年，但截至 2026-11-07 仍由现行官方企业图库直接提供。\n\n原始核对记录\n1535 × 907 像素，透明背景，画布含留白。"
           },
           "width": 1535,
           "height": 907,
@@ -2902,7 +3144,7 @@
         },
         {
           "file": "wordmark-white-official.png",
-          "label": "白色文字标识 · 官方素材包透明 PNG",
+          "label": "白色字标",
           "variant": "wordmark",
           "status": "current",
           "background": "dark",
@@ -2911,11 +3153,12 @@
           "color": "white",
           "provenance": {
             "sourceType": "official",
-            "processing": "original"
+            "processing": "original",
+            "channel": "brand-library",
+            "pageTitle": "中兴通讯 Corporate Gallery"
           },
           "qualityNotes": [
-            "1535 × 907 像素，透明背景，画布含留白。",
-            "白色版本，适合深色背景。"
+            "透明背景，画布含留白。"
           ],
           "source": "https://www.zte.com.cn/content/dam/zte-site/mediapics/file/zte_logo_en.7z",
           "sourcePage": "https://www.zte.com.cn/global/new_events/media.html",
@@ -2927,7 +3170,7 @@
             "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AZTE-logo.svg&oldid=1281655836",
             "attribution": "ZTE Corporation。保留官方文件来源、Commons 对相同 ZTE 简单字标的公共领域判断及商标声明；文件原样保存。",
             "reviewedAt": "2026-11-07",
-            "notes": "版权收录依据是 Commons 对相同圆角 ZTE 三字母简单字标的 PD-textlogo / PD-shape 第三方判断，不是中兴通讯对本图库的许可。本文件仅含相同字标，没有加入中文、口号或其他图案；未将此依据外推到不同组合标识。官方图库的下载入口及官网展示只证明来源和现行使用，不等于图库再分发授权。官方 https://www.zte.com.cn/global/article/acknowledge.html 仅允许个人非商业目的拷贝、传播网站内容并保留版权声明，且声明商标、标识使用须经明确许可；本条不授予商标使用权或品牌授权，也不构成对这些限制的豁免，不得暗示官方背书。\n\n质量核验记录：\n- 官方英文素材包成员 zte_logo_en/ZTE LOGO反白.png；1535×907，含原始透明留白，未裁切。\n- 官方原生反白文件，适合深色背景；未由蓝色图片在本地生成。"
+            "notes": "版权收录依据是 Commons 对相同圆角 ZTE 三字母简单字标的 PD-textlogo / PD-shape 第三方判断，不是中兴通讯对本图库的许可。本文件仅含相同字标，没有加入中文、口号或其他图案；未将此依据外推到不同组合标识。官方图库的下载入口及官网展示只证明来源和现行使用，不等于图库再分发授权。官方 https://www.zte.com.cn/global/article/acknowledge.html 仅允许个人非商业目的拷贝、传播网站内容并保留版权声明，且声明商标、标识使用须经明确许可；本条不授予商标使用权或品牌授权，也不构成对这些限制的豁免，不得暗示官方背书。\n\n质量核验记录：\n- 官方英文素材包成员 zte_logo_en/ZTE LOGO反白.png；1535×907，含原始透明留白，未裁切。\n- 官方原生反白文件，适合深色背景；未由蓝色图片在本地生成。\n\n原始核对记录\n1535 × 907 像素，透明背景，画布含留白。\n白色版本，适合深色背景。"
           },
           "width": 1535,
           "height": 907,

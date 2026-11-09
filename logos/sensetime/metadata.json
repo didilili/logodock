@@ -50,7 +50,7 @@
   "assets": [
     {
       "file": "logo-color.png",
-      "label": "彩色横版组合标识（Commons 原件）",
+      "label": "彩色中英横版组合",
       "variant": "logo",
       "status": "current",
       "background": "light",
@@ -71,7 +71,8 @@
       "color": "brand",
       "provenance": {
         "sourceType": "commons",
-        "processing": "original"
+        "processing": "original",
+        "channel": "commons"
       }
     }
   ]

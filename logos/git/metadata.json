@@ -29,7 +29,7 @@
   "assets": [
     {
       "file": "icon-orange.svg",
-      "label": "官方橙色图标",
+      "label": "橙色图形",
       "variant": "icon",
       "status": "current",
       "background": "light",
@@ -50,12 +50,14 @@
       "color": "brand",
       "provenance": {
         "sourceType": "official",
-        "processing": "original"
+        "processing": "original",
+        "channel": "brand-library",
+        "pageTitle": "Git Logo 下载页"
       }
     },
     {
       "file": "logo-color.svg",
-      "label": "官方双色组合标识",
+      "label": "双色组合",
       "variant": "logo",
       "status": "current",
       "background": "light",
@@ -76,12 +78,14 @@
       "color": "brand",
       "provenance": {
         "sourceType": "official",
-        "processing": "original"
+        "processing": "original",
+        "channel": "brand-library",
+        "pageTitle": "Git Logo 下载页"
       }
     },
     {
       "file": "logo-white.svg",
-      "label": "官方白色组合标识",
+      "label": "白色组合",
       "variant": "logo",
       "status": "current",
       "background": "dark",
@@ -102,7 +106,9 @@
       "color": "white",
       "provenance": {
         "sourceType": "official",
-        "processing": "original"
+        "processing": "original",
+        "channel": "brand-library",
+        "pageTitle": "Git Logo 下载页"
       }
     }
   ]

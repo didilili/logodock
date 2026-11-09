@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onDestroy, onMount } from 'svelte';
-  import { DropdownMenu } from 'bits-ui';
+  import { DropdownMenu, Popover } from 'bits-ui';
   import type { Brand } from '../types';
   import type { CopyFeedbackApi } from './CopyFeedback.svelte';
   import CopyField from './CopyField.svelte';
@@ -21,7 +21,13 @@
     selectedArtwork,
   } from '../catalog-artworks.mjs';
   import { assetPath, fixedAssetUrl, resourceLinks } from '../resource-links.mjs';
-  import { escapeHtml, fileInfo, provenanceLabel } from '../catalog-display.mjs';
+  import {
+    escapeHtml,
+    fileInfo,
+    provenanceLabel,
+    sourceLabel,
+    licenseLabel,
+  } from '../catalog-display.mjs';
   import { canCopyPngImage, copyPngImage } from '../clipboard-image.mjs';
   import { renderSvgPng } from '../svg-export';
 
@@ -35,6 +41,7 @@
     basePath: string;
     pageUrl: string;
     backgroundChoice?: PreviewBackground;
+    sourceDetailsOpen?: boolean;
     feedback?: CopyFeedbackApi;
     assetHref: (file: string) => string;
     shareHref: (file: string) => string;
@@ -48,6 +55,7 @@
     basePath,
     pageUrl,
     backgroundChoice,
+    sourceDetailsOpen = $bindable(false),
     feedback,
     assetHref,
     shareHref,
@@ -104,9 +112,6 @@
       ? ''
       : asset.rights?.attribution,
   );
-  const license = $derived(
-    /^Public domain\b/i.test(asset.rights?.license || '') ? '公共领域' : asset.rights?.license,
-  );
   const info = $derived(fileInfo({ ...asset, width: rasterSize.width, height: rasterSize.height }));
   const links = $derived.by(() => {
     if (pageUrl)
@@ -152,7 +157,7 @@
     // Copying can replace the toast while this export still belongs to the
     // current keyed workspace. Selection changes destroy it and cancel export.
     const isCurrent = () => alive;
-    const size = 1024;
+    const size = 2048;
     exporting = true;
     try {
       const result = await renderSvgPng(sourceUrl(), size, isCurrent);
@@ -164,7 +169,9 @@
       link.click();
       setTimeout(() => URL.revokeObjectURL(pngUrl), 10000);
       if (controller.isCurrent(token))
-        await controller.show(`已下载 ${result.width} × ${result.height} px PNG（由 SVG 生成）。`);
+        await controller.show(
+          `已下载 ${result.width} × ${result.height} px PNG（由 SVG 生成 · 长边 ${size}px）。`,
+        );
     } catch {
       if (isCurrent() && controller.isCurrent(token))
         await controller.show('PNG 生成未完成，请下载原始 SVG 后重试。');
@@ -346,7 +353,35 @@
         />
       </div>
       <div class="preview-bottom">
-        <span class="preview-label" aria-hidden="true">预览背景</span>
+        <div class="preview-heading">
+          <span class="preview-label" aria-hidden="true">预览背景</span>
+          <Popover.Root>
+            <Popover.Trigger class="preview-help" aria-label="预览背景说明">
+              <svg
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                aria-hidden="true"
+                ><circle cx="12" cy="12" r="9" /><path d="M12 11v6m0-10h.01" /></svg
+              >
+            </Popover.Trigger>
+            <Popover.Portal>
+              <Popover.Content
+                class="preview-help-content"
+                role="dialog"
+                aria-label="预览背景说明"
+                side="top"
+                align="start"
+                sideOffset={8}
+                collisionPadding={12}>背景仅用于预览，下载保留原始文件。</Popover.Content
+              >
+            </Popover.Portal>
+          </Popover.Root>
+        </div>
         <fieldset class="preview-controls">
           <legend>预览背景</legend>
           {#each backgroundOptions as option (option.value)}
@@ -365,16 +400,28 @@
         </fieldset>
       </div>
     </div>
-    <p class="preview-note">背景仅用于预览，下载保留原始文件。</p>
     <p class="preview-status" id="preview-status" role="status" aria-live="polite">
       {previewStatus}
     </p>
   </section>
   <div class="asset-controls">
     <section class="asset-action-panel" aria-label="取用当前文件">
-      <p class="file-info" id="detail-fileinfo">
-        {info}<span>{asset.display === 'alternative' ? '备选文件' : '原文件'}</span>
-      </p>
+      <div class="file-meta">
+        <p class="file-info" id="detail-fileinfo">
+          {info}{#if asset.display === 'alternative'}<span>备选文件</span>{/if}
+        </p>
+        <a
+          id="detail-source-link"
+          href={external(asset.sourcePage)}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`查看来源，${sourceLabel(asset)}`}
+          >{sourceLabel(asset)}<Icon name="external" size={14} /></a
+        >
+      </div>
+      {#if asset.qualityNotes?.length}
+        <p class="asset-description">{asset.qualityNotes.join(' ')}</p>
+      {/if}
       {#if warnings.length}<ul class="asset-warnings">
           {#each warnings as note (note)}<li>{note}</li>{/each}
         </ul>{/if}
@@ -423,7 +470,7 @@
                     textValue="下载 PNG"
                     onSelect={downloadGeneratedPng}
                   >
-                    <span>下载 PNG</span><small>由 SVG 生成 · 长边 1024px</small>
+                    <span>下载 PNG</span><small>由 SVG 生成 · 长边 2048px</small>
                   </DropdownMenu.Item>
                 </DropdownMenu.Content>
               </DropdownMenu.Portal>
@@ -463,49 +510,52 @@
         </details>
       {/if}
     </section>
-    <section class="file-section" aria-label="文件选择">
-      {#if formatChoices.length > 1}
-        <fieldset class="format-choices">
-          <legend>文件格式</legend>
-          <div class="format-option-list">
-            {#each formatChoices as item (item.format)}
-              <a
-                class="format-option"
-                href={assetHref(item.asset.file)}
-                data-select-asset={item.asset.file}
-                data-selection-kind="format"
-                aria-current={item.format === format ? 'true' : 'false'}
-                onclick={(event) => onSelectAsset(event, item.asset.file)}
-                >{item.format}{#if item.asset.display === 'alternative'}<small>备选</small>{/if}</a
-              >
-            {/each}
-          </div>
-        </fieldset>
-      {:else}
-        <div class="single-format"><span>文件格式</span><strong>{format}</strong></div>
-      {/if}
-      {#if fileAlternatives.length > 1}
-        <details class="file-options" open={asset.display === 'alternative'}>
-          <summary>更多文件</summary>
-          <div class="file-option-list">
-            {#each fileAlternatives as item (item.file)}
-              <a
-                class="file-option"
-                href={assetHref(item.file)}
-                data-select-asset={item.file}
-                data-selection-kind="file"
-                aria-current={item.file === asset.file ? 'true' : 'false'}
-                onclick={(event) => onSelectAsset(event, item.file)}
-                ><span
-                  >{assetDisplayLabel(item)}{item.display === 'alternative' ? ' · 备选' : ''}</span
-                ><small>{provenanceLabel(item)} · {fileInfo(item)}</small></a
-              >
-            {/each}
-          </div>
-        </details>
-      {/if}
-    </section>
-    <details class="resource-details source-details">
+    {#if formatChoices.length > 1 || fileAlternatives.length > 1}
+      <section class="file-section" aria-label="文件选择">
+        {#if formatChoices.length > 1}
+          <fieldset class="format-choices">
+            <legend>文件格式</legend>
+            <div class="format-option-list">
+              {#each formatChoices as item (item.format)}
+                <a
+                  class="format-option"
+                  href={assetHref(item.asset.file)}
+                  data-select-asset={item.asset.file}
+                  data-selection-kind="format"
+                  aria-current={item.format === format ? 'true' : 'false'}
+                  onclick={(event) => onSelectAsset(event, item.asset.file)}
+                  >{item.format}{#if item.asset.display === 'alternative'}<small>备选</small
+                    >{/if}</a
+                >
+              {/each}
+            </div>
+          </fieldset>
+        {/if}
+        {#if fileAlternatives.length > 1}
+          <details class="file-options" open={asset.display === 'alternative'}>
+            <summary>更多文件</summary>
+            <div class="file-option-list">
+              {#each fileAlternatives as item (item.file)}
+                <a
+                  class="file-option"
+                  href={assetHref(item.file)}
+                  data-select-asset={item.file}
+                  data-selection-kind="file"
+                  aria-current={item.file === asset.file ? 'true' : 'false'}
+                  onclick={(event) => onSelectAsset(event, item.file)}
+                  ><span
+                    >{assetDisplayLabel(item)}{item.display === 'alternative'
+                      ? ' · 备选'
+                      : ''}</span
+                  ><small>{provenanceLabel(item)} · {fileInfo(item)}</small></a
+                >
+              {/each}
+            </div>
+          </details>
+        {/if}
+      </section>
+    {/if}
+    <details class="resource-details source-details" bind:open={sourceDetailsOpen}>
       <summary
         >来源与许可{#if attribution}<span>需署名</span>{/if}</summary
       >
@@ -517,7 +567,7 @@
               >{provenanceLabel(asset)}<Icon name="external" /></a
             >
           </dd>
-          <dt>原始文件</dt>
+          <dt>来源文件</dt>
           <dd>
             <a href={external(asset.source)} target="_blank" rel="noopener noreferrer"
               >查看来源文件<Icon name="external" /></a
@@ -525,8 +575,11 @@
           </dd>
           <dt>许可</dt>
           <dd>
-            <a href={external(asset.rights?.reference)} target="_blank" rel="noopener noreferrer"
-              >{license}<Icon name="external" /></a
+            <a
+              id="detail-license-link"
+              href={external(asset.rights?.reference)}
+              target="_blank"
+              rel="noopener noreferrer">{licenseLabel(asset)}<Icon name="external" /></a
             >
           </dd>
         </dl>
@@ -644,6 +697,39 @@
     font-size: 12px;
     white-space: nowrap;
   }
+  .preview-heading {
+    display: flex;
+    align-items: center;
+  }
+  .preview-heading :global(.preview-help) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    min-height: 40px;
+    padding: 0;
+    border: 0;
+    border-radius: 5px;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .preview-heading :global(.preview-help:hover) {
+    background: var(--hover);
+    color: var(--ink);
+  }
+  :global(.preview-help-content) {
+    z-index: 50;
+    max-width: min(260px, calc(100vw - 24px));
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--paper);
+    color: var(--ink);
+    box-shadow: 0 8px 28px #15264312;
+    font-size: 12px;
+    line-height: 1.65;
+  }
   .preview-controls {
     display: flex;
     align-items: center;
@@ -709,15 +795,11 @@
     background: conic-gradient(#cbd0d7 25%, #fff 0 50%, #cbd0d7 0 75%, #fff 0);
     background-size: 6px 6px;
   }
-  .preview-note,
   .preview-status {
     margin-top: 9px;
     color: var(--muted);
     font-size: 12px;
     line-height: 1.6;
-  }
-  .preview-note {
-    text-align: center;
   }
   .preview-status:empty {
     display: none;
@@ -746,8 +828,7 @@
     margin-bottom: 10px;
   }
   .section-heading h2,
-  .format-choices legend,
-  .single-format > span {
+  .format-choices legend {
     color: var(--muted);
     font-size: 13px;
     font-weight: 600;
@@ -858,8 +939,7 @@
     flex-wrap: wrap;
     gap: 7px;
   }
-  .format-option,
-  .single-format > strong {
+  .format-option {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -880,16 +960,10 @@
   .format-option small {
     font-size: 11px;
   }
-  .format-option[aria-current='true'],
-  .single-format > strong {
+  .format-option[aria-current='true'] {
     border-color: var(--accent, var(--focus));
     color: var(--accent, var(--focus));
     background: var(--accent-soft, var(--hover));
-  }
-  .single-format {
-    display: grid;
-    justify-items: start;
-    gap: 12px;
   }
   .file-options {
     margin-top: 8px;
@@ -927,12 +1001,36 @@
     color: var(--muted);
     font-size: 12px;
   }
+  .file-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 12px;
+    margin-top: 3px;
+  }
+  #detail-source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    min-height: 40px;
+    max-width: 100%;
+    padding-inline: 4px;
+    border-radius: 4px;
+    color: var(--muted);
+    font-size: 12px;
+    text-decoration-color: var(--line-strong);
+    text-underline-offset: 3px;
+    overflow-wrap: anywhere;
+  }
+  #detail-source-link:hover {
+    color: var(--ink);
+  }
   .file-info {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 7px 10px;
-    margin: 3px 0 0;
+    margin: 0;
     color: var(--muted);
     font-size: 12px;
     font-variant-numeric: tabular-nums;
@@ -940,6 +1038,13 @@
   .file-info > span {
     padding-left: 10px;
     border-left: 1px solid var(--line);
+  }
+  .asset-description {
+    margin: 8px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
   }
   .asset-action-panel .asset-warnings {
     margin: 12px 0 0;
@@ -1173,9 +1278,6 @@
     }
     .preview-label {
       font-size: 12px;
-    }
-    .preview-note {
-      display: none;
     }
     .asset-action-panel {
       order: 1;

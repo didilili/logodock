@@ -38,47 +38,10 @@
     "internet"
   ],
   "defaultAsset": "logo-english.svg",
-  "artworks": [
-    {
-      "id": "logo-orange-english",
-      "label": "橙色英文组合标识",
-      "files": [
-        "logo-english.png",
-        "logo-english.svg"
-      ],
-      "defaultAsset": "logo-english.svg"
-    }
-  ],
   "assets": [
     {
-      "file": "logo-english.png",
-      "label": "橙色英文组合标识 · PNG（Commons 渲染）",
-      "variant": "logo",
-      "status": "current",
-      "background": "light",
-      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/DiDi_Logo.svg/1280px-DiDi_Logo.svg.png",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:DiDi_Logo.svg",
-      "sha256": "6602d9eee0f2fe7d084cfb9b46d62213b71efb15455e54e8b251a30c6049c533",
-      "bytes": 22509,
-      "rights": {
-        "status": "permitted",
-        "license": "Public domain (textlogo)",
-        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3ADiDi_Logo.svg&oldid=1219426260",
-        "attribution": "No copyright attribution required by the Commons PD-textlogo designation. Logo attributed to 滴滴; trademark rights remain with the respective owner.",
-        "reviewedAt": "2026-11-07",
-        "notes": "分发依据为 Wikimedia Commons 对该具体标识的简单图形/文字公共领域判定（PD-textlogo），不是品牌方的再分发授权。该判定不授予商标权，相关商标权保留；使用时不得暗示品牌方背书。 保存 Commons 文件页正式提供的 PNG 渲染下载，原样保存，未自行修改图形、颜色、比例或透明背景。公司身份与橙色图形、深灰 DiDi 字样已对照 https://www.didiglobal.com/ 实际引用的 https://website.didiglobal.com/dist/media/logo-en.cdc5b041.svg 核对。"
-      },
-      "language": "en",
-      "layout": "horizontal",
-      "color": "brand",
-      "provenance": {
-        "sourceType": "commons",
-        "processing": "rendered"
-      }
-    },
-    {
       "file": "logo-english.svg",
-      "label": "英文组合标识 · SVG（Commons 原件）",
+      "label": "橙色英文组合",
       "variant": "logo",
       "status": "current",
       "background": "light",
@@ -99,8 +62,41 @@
       "color": "brand",
       "provenance": {
         "sourceType": "commons",
-        "processing": "original"
+        "processing": "original",
+        "channel": "commons"
       }
+    },
+    {
+      "file": "icon-gray-official.svg",
+      "label": "灰色图形",
+      "variant": "icon",
+      "status": "current",
+      "background": "any",
+      "language": "none",
+      "layout": "standalone",
+      "color": "monochrome",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "footer",
+        "pageTitle": "滴滴官网首页"
+      },
+      "source": "https://website.didiglobal.com/dist/media/footer-logo.7521c19c.svg",
+      "sourcePage": "https://www.didiglobal.com/",
+      "sha256": "49b12559cde733befbf01747be55ade2b243436d0c75d0d307facbd49162d047",
+      "bytes": 486,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:DiDi_Logo.svg&oldid=1219426260",
+        "attribution": "滴滴 / DiDi。官网 SVG 原件，未修改；保留 Commons 对相同 D 形几何标识的 PD-textlogo 判断及来源，商标权保留。",
+        "reviewedAt": "2026-11-09",
+        "notes": "官网当前 main.9a074ac6.js 直接引用此页脚纯图形 SVG；文件原样保存。已对照同站 logo-en.cdc5b041.svg、logo-zh.5837eebe.svg 及既有 Commons 英文组合，核对 D 形开口、横向顶边与右侧高低断点；这是官方独立灰色图形，不是从组合标裁切或改色。分发依据为 Commons 对包含该相同几何 D 的 DiDi 组合标的第三方 PD-textlogo 判断，不是官方开放授权；不扩展到其他滴滴产品图标。商标及其他使用限制保留，不得暗示官方背书。\n\n原始核对记录\n41.15 × 41.15 viewBox，纯路径矢量，无内嵌位图。\n原件为 #ADADAD 灰色，保留原始底部留白；不是橙色品牌版本。"
+      },
+      "qualityNotes": [
+        "底部留白。"
+      ]
     }
   ]
 }

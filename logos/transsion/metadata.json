@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 3,
+  "id": "transsion",
+  "name": "传音控股",
+  "aliases": [
+    "传音",
+    "Transsion Holdings"
+  ],
+  "identity": {
+    "nameZh": "传音控股",
+    "nameEn": "TRANSSION",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "传音控股公司官网",
+        "url": "https://www.transsion.com/zh-CN/about",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.transsion.com/",
+  "entityType": "company",
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "wordmark-black-official.svg",
+  "assets": [
+    {
+      "file": "wordmark-black-official.svg",
+      "label": "黑色英文字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "footer",
+        "pageTitle": "关于传音"
+      },
+      "source": "https://www.transsion.com/_next/static/media/logo-black.d7cd9b41.svg",
+      "sourcePage": "https://www.transsion.com/zh-CN/about",
+      "sha256": "37ac109cbd791078358eeeda68a0cb12d85d54bf0f9241ab3f0d7d5e7c003230",
+      "bytes": 3241,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:Transsion_Logo.svg&oldid=1224445862",
+        "attribution": "标识归属 TRANSSION / 传音；Commons 的 PD-textlogo 判断无版权署名要求，保留原始来源与商标声明。文件原样保存。",
+        "reviewedAt": "2026-11-09",
+        "notes": "官方原始 SVG，2026-11-09 核对来源页确认当前用于页脚。实际看图已核对 T 上横与竖笔分离、ranssion 字形、比例和黑色；与 Commons 文件去除文件首尾空白后逐字节一致，未引入其他图形。仅保留官方原件，不另收同稿 Commons 副本。 该依据是 Commons 对具体图稿的第三方公共领域判断，不是品牌方授予本图库的许可。商标权和其他使用限制仍归权利人，不得暗示官方背书。\n\n原始核对记录\n路径矢量，无内嵌位图；保留来源的画布和路径，未改色、裁切或重新描摹。"
+      }
+    }
+  ]
+}

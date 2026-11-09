@@ -45,11 +45,11 @@
   "categories": [
     "ai"
   ],
-  "defaultAsset": "logo-blue-bilingual.png",
+  "defaultAsset": "logo-english-official.svg",
   "assets": [
     {
       "file": "logo-blue-bilingual.png",
-      "label": "蓝色中英组合标识（Commons 原件）",
+      "label": "蓝色中英组合",
       "variant": "logo",
       "status": "current",
       "background": "light",
@@ -63,22 +63,20 @@
         "reference": "https://commons.wikimedia.org/w/index.php?title=File:IFlytek_logo.png&oldid=1015993493",
         "attribution": "No copyright attribution required under the Wikimedia Commons PD-textlogo assessment. Source credit retained: 科大讯飞 / Wikimedia Commons, https://commons.wikimedia.org/wiki/File:IFlytek_logo.png . Original file, unmodified.",
         "reviewedAt": "2026-11-07",
-        "notes": "该文件页使用 PD-textlogo，依据是 Wikimedia Commons 对简单文字或几何图形未达到版权原创性门槛的公共领域判定，不是品牌方授予 Logo 的开放版权许可或再分发授权；不同法域的原创性判断可能不同。商标权及其他使用限制仍然保留，不得暗示官方背书。公司身份见 https://www.iflytek.com/en/about-us/about.html ，中文官网为 https://www.iflytek.com/cn/ 。本文件为科大讯飞公司 X 图形、中文名及 iFLYTEK 英文名的组合标识；已与现用英文官网 /en/Public/Uploads/uploadfile/images/20230812/comlogo1.svg 的图形与英文字形核对，不是星火等产品标识。"
+        "notes": "该文件页使用 PD-textlogo，依据是 Wikimedia Commons 对简单文字或几何图形未达到版权原创性门槛的公共领域判定，不是品牌方授予 Logo 的开放版权许可或再分发授权；不同法域的原创性判断可能不同。商标权及其他使用限制仍然保留，不得暗示官方背书。公司身份见 https://www.iflytek.com/en/about-us/about.html ，中文官网为 https://www.iflytek.com/cn/ 。本文件为科大讯飞公司 X 图形、中文名及 iFLYTEK 英文名的组合标识；已与现用英文官网 /en/Public/Uploads/uploadfile/images/20230812/comlogo1.svg 的图形与英文字形核对，不是星火等产品标识。\n\n原始核对记录\n550 × 166 像素，放大使用会降低清晰度。"
       },
       "language": "bilingual",
       "layout": "horizontal",
       "color": "brand",
       "provenance": {
         "sourceType": "commons",
-        "processing": "original"
-      },
-      "qualityNotes": [
-        "550 × 166 像素，放大使用会降低清晰度。"
-      ]
+        "processing": "original",
+        "channel": "commons"
+      }
     },
     {
       "file": "logo-white-bilingual.png",
-      "label": "白色中英组合标识（官方原生 PNG）",
+      "label": "白色中英组合",
       "variant": "logo",
       "status": "current",
       "background": "dark",
@@ -92,22 +90,25 @@
         "reference": "https://commons.wikimedia.org/w/index.php?title=File:IFlytek_logo.png&oldid=1015993493",
         "attribution": "No copyright attribution required under the Wikimedia Commons PD-textlogo assessment for the matching logo artwork. Original native asset credited to 科大讯飞 / iFLYTEK; source file retained without visual modification. Trademark rights remain with the respective owner.",
         "reviewedAt": "2026-11-07",
-        "notes": "权利依据为所引 Commons 具体文件页对科大讯飞 X 图形、中文名和 iFLYTEK 英文名组合作品的 PD-textlogo 公共领域判断；本原件与该作品核对了三个部分的图形及字形，属于同一组合标识的单色版，分辨率和边缘像素不同，不声称文件字节相同，也不将该判断推广到其他版式或产品标识。该判断不是科大讯飞授予的开放版权许可或再分发授权，不同法域原创性门槛可能不同。官方及商标权利保留，不得暗示官方背书或违反适用的品牌使用限制。 官网中文首页头部未滚动状态使用此白色标识。\n\n质量核验记录：\n- 302 × 92 像素，透明背景；适合小尺寸深色背景使用，放大显示会降低清晰度。\n- 官方原生 PNG，保留源文件字节，未裁切、重绘、转换或放大。"
+        "notes": "权利依据为所引 Commons 具体文件页对科大讯飞 X 图形、中文名和 iFLYTEK 英文名组合作品的 PD-textlogo 公共领域判断；本原件与该作品核对了三个部分的图形及字形，属于同一组合标识的单色版，分辨率和边缘像素不同，不声称文件字节相同，也不将该判断推广到其他版式或产品标识。该判断不是科大讯飞授予的开放版权许可或再分发授权，不同法域原创性门槛可能不同。官方及商标权利保留，不得暗示官方背书或违反适用的品牌使用限制。 官网中文首页头部未滚动状态使用此白色标识。\n\n质量核验记录：\n- 302 × 92 像素，透明背景；适合小尺寸深色背景使用，放大显示会降低清晰度。\n- 官方原生 PNG，保留源文件字节，未裁切、重绘、转换或放大。\n\n原始核对记录\n302 × 92 像素，透明背景；适合深色背景，放大易模糊。"
       },
       "language": "bilingual",
       "layout": "horizontal",
       "color": "white",
       "provenance": {
         "sourceType": "official",
-        "processing": "original"
+        "processing": "original",
+        "channel": "website",
+        "placement": "header",
+        "pageTitle": "科大讯飞中文首页"
       },
       "qualityNotes": [
-        "302 × 92 像素，透明背景；适合深色背景，放大易模糊。"
+        "透明背景。"
       ]
     },
     {
       "file": "logo-black-bilingual.png",
-      "label": "黑色中英组合标识（官方内嵌原生 PNG）",
+      "label": "黑色中英组合",
       "variant": "logo",
       "status": "current",
       "background": "light",
@@ -121,18 +122,50 @@
         "reference": "https://commons.wikimedia.org/w/index.php?title=File:IFlytek_logo.png&oldid=1015993493",
         "attribution": "No copyright attribution required under the Wikimedia Commons PD-textlogo assessment for the matching logo artwork. Original native asset credited to 科大讯飞 / iFLYTEK; source file retained without visual modification. Trademark rights remain with the respective owner.",
         "reviewedAt": "2026-11-07",
-        "notes": "权利依据为所引 Commons 具体文件页对科大讯飞 X 图形、中文名和 iFLYTEK 英文名组合作品的 PD-textlogo 公共领域判断；本原件与该作品核对了三个部分的图形及字形，属于同一组合标识的单色版，分辨率和边缘像素不同，不声称文件字节相同，也不将该判断推广到其他版式或产品标识。该判断不是科大讯飞授予的开放版权许可或再分发授权，不同法域原创性门槛可能不同。官方及商标权利保留，不得暗示官方背书或违反适用的品牌使用限制。 源文件为官网当前中文首页 index JavaScript，webpack module 146 内含原生 PNG data URI；仅作 Base64 解码取得原始 PNG 字节，未重新编码图像，不是渲染、重绘或从网页截图生成。首页滚动后的头部使用此黑色标识。\n\n质量核验记录：\n- 272 × 83 像素，透明背景；适合小尺寸浅色背景使用，放大显示会降低清晰度。\n- 官方首页脚本 module 146 内嵌原生 PNG，仅作 Base64 解码，未裁切、重绘、转换或放大。"
+        "notes": "权利依据为所引 Commons 具体文件页对科大讯飞 X 图形、中文名和 iFLYTEK 英文名组合作品的 PD-textlogo 公共领域判断；本原件与该作品核对了三个部分的图形及字形，属于同一组合标识的单色版，分辨率和边缘像素不同，不声称文件字节相同，也不将该判断推广到其他版式或产品标识。该判断不是科大讯飞授予的开放版权许可或再分发授权，不同法域原创性门槛可能不同。官方及商标权利保留，不得暗示官方背书或违反适用的品牌使用限制。 源文件为官网当前中文首页 index JavaScript，webpack module 146 内含原生 PNG data URI；仅作 Base64 解码取得原始 PNG 字节，未重新编码图像，不是渲染、重绘或从网页截图生成。首页滚动后的头部使用此黑色标识。\n\n质量核验记录：\n- 272 × 83 像素，透明背景；适合小尺寸浅色背景使用，放大显示会降低清晰度。\n- 官方首页脚本 module 146 内嵌原生 PNG，仅作 Base64 解码，未裁切、重绘、转换或放大。\n\n原始核对记录\n272 × 83 像素，透明背景；适合浅色背景，放大易模糊。"
       },
       "language": "bilingual",
       "layout": "horizontal",
       "color": "black",
       "provenance": {
         "sourceType": "official",
-        "processing": "original"
+        "processing": "original",
+        "channel": "website",
+        "placement": "header",
+        "pageTitle": "科大讯飞中文首页"
       },
       "qualityNotes": [
-        "272 × 83 像素，透明背景；适合浅色背景，放大易模糊。"
+        "透明背景。"
       ]
+    },
+    {
+      "file": "logo-english-official.svg",
+      "label": "英文横版组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header",
+        "pageTitle": "科大讯飞英文首页"
+      },
+      "source": "https://www.iflytek.com/en/Public/Uploads/uploadfile/images/20230812/comlogo1.svg",
+      "sourcePage": "https://www.iflytek.com/en/",
+      "sha256": "ae825a3ddb3e7bed8c4a1691c6676cca9d003d673ba5089b246178c9bd43727f",
+      "bytes": 3327,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/wiki/File:IFlytek_logo.png",
+        "attribution": "科大讯飞 / iFLYTEK。官方原始 SVG，未修改；保留来源及 Commons 对相同 X 形标识与 iFLYTEK 字标的 PD-textlogo 第三方判断。商标权保留。",
+        "reviewedAt": "2026-11-09",
+        "notes": "本文件为当前英文官网桌面和手机页头直接引用的 SVG，纯路径，无内嵌位图。已与已有 Commons 公司中英组合标逐图核对 X 形弧线、三条斜线以及 iFLYTEK 字形，并对照本次官网下载的纯图 favicon；不包含星火等产品图标。分发依据是 Commons 对相同 X 图形及 iFLYTEK 文字标识的第三方 PD-textlogo 判断，不是科大讯飞对本库授予的再分发许可；仅以此判断收录相同作品的官方英文排列原件，保留商标及其他使用限制，不得暗示官方背书。与中英文 PNG 语言、布局及配色不同，英文矢量版本适合英文页面和大幅输出。\n\n原始核对记录\n168 × 33 viewBox，原生路径矢量，无内嵌位图。\n保留官网原始深蓝绿色；未将已有 PNG 放大、描摹或改色。"
+      }
     }
   ]
 }

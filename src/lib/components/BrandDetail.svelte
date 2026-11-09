@@ -24,6 +24,7 @@
   let pageUrl = $state('');
   let workspaceVersion = $state(0);
   let backgroundChoice = $state<'light' | 'dark' | 'transparent'>();
+  let sourceDetailsOpen = $state(false);
   let feedback = $state<CopyFeedbackApi>();
   let workspace: HTMLDivElement | undefined;
   const names = $derived(identityNames(brand));
@@ -150,6 +151,7 @@
         {basePath}
         {pageUrl}
         {backgroundChoice}
+        bind:sourceDetailsOpen
         {feedback}
         {assetHref}
         shareHref={(file) => detailHref(brand, file)}

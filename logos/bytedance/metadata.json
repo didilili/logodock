@@ -36,47 +36,10 @@
     "internet"
   ],
   "defaultAsset": "logo-english.svg",
-  "artworks": [
-    {
-      "id": "logo-color-english",
-      "label": "彩色英文组合标识",
-      "files": [
-        "logo-english.png",
-        "logo-english.svg"
-      ],
-      "defaultAsset": "logo-english.svg"
-    }
-  ],
   "assets": [
     {
-      "file": "logo-english.png",
-      "label": "英文彩色组合标识 · PNG（Commons 渲染）",
-      "variant": "logo",
-      "status": "current",
-      "background": "light",
-      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/ByteDance_logo_English.svg/1280px-ByteDance_logo_English.svg.png",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:ByteDance_logo_English.svg",
-      "sha256": "d7c8c58ac84bff71cf5d094913599b6fef91776c12bf4a5ec91acd0836a9bdb6",
-      "bytes": 29260,
-      "rights": {
-        "status": "permitted",
-        "license": "Public domain (textlogo)",
-        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AByteDance_logo_English.svg&oldid=1117279263",
-        "attribution": "No copyright attribution required by the Commons PD-textlogo designation. Logo attributed to 字节跳动; trademark rights remain with the respective owner.",
-        "reviewedAt": "2026-11-07",
-        "notes": "分发依据为 Wikimedia Commons 对该具体标识的简单图形/文字公共领域判定（PD-textlogo），不是品牌方的再分发授权。该判定不授予商标权，相关商标权保留；使用时不得暗示品牌方背书。 保存 Commons 文件页正式提供的 PNG 渲染下载，原样保存，未自行修改图形、颜色、比例或透明背景。公司身份与当前图形及英文字样已对照 https://www.bytedance.com/?locale=en 页首内嵌 Logo 核对；此项不是抖音、TikTok 或其他产品标识。"
-      },
-      "language": "en",
-      "layout": "horizontal",
-      "color": "brand",
-      "provenance": {
-        "sourceType": "commons",
-        "processing": "rendered"
-      }
-    },
-    {
       "file": "logo-english.svg",
-      "label": "英文彩色组合标识 · SVG（Commons 原件）",
+      "label": "彩色英文组合",
       "variant": "logo",
       "status": "current",
       "background": "light",
@@ -97,7 +60,36 @@
       "color": "brand",
       "provenance": {
         "sourceType": "commons",
-        "processing": "original"
+        "processing": "original",
+        "channel": "commons"
+      }
+    },
+    {
+      "file": "icon-white-official.svg",
+      "label": "白色图形",
+      "variant": "icon",
+      "status": "current",
+      "background": "dark",
+      "language": "none",
+      "layout": "standalone",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "pageTitle": "字节跳动中文首页"
+      },
+      "source": "https://www.bytedance.com/zh/#embedded-svg-img-2",
+      "sourcePage": "https://www.bytedance.com/zh/",
+      "sha256": "31320dac45abdc933122c9980cea790fa12ee99f46a0b7ca926c59b5637da0a8",
+      "bytes": 450,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AByteDance_logo_English.svg&oldid=1117279263",
+        "attribution": "字节跳动 / ByteDance。原样保存官网首页主体区域内嵌 SVG；保留来源及 Commons 对相同四柱几何标识的第三方 PD-textlogo 判断，商标权保留。",
+        "reviewedAt": "2026-11-09",
+        "notes": "文件是本次官网下载 HTML 中第 3 个 img data:image/svg+xml 的 Base64 原始字节（从 0 编号为 2）；仅解码内嵌传输，不修改路径、颜色、画布或比例。已对照官网中英组合标与既有 Commons 英文组合标，核对四根斜端柱的高低次序、朝向和相对位置，属于相同几何图形的官方白色版本。版权依据限于 Commons 对该简单四柱图形的第三方公共领域判断，不是字节跳动对图库的再分发授权；保留商标限制，不得暗示官方背书。与彩色英文组合标用途不同，供深色背景纯图形场景取用。\n\n原始核对记录\n100 × 88 viewBox，纯路径矢量，无内嵌位图。\n官方白色图形，须在深色背景使用；没有从组合标中裁切。"
       }
     }
   ]

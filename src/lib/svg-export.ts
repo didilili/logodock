@@ -7,7 +7,7 @@ export interface PngExport {
 /** Render an SVG without changing its aspect ratio or painting its background. */
 export async function renderSvgPng(
   url: string,
-  size: 512 | 1024,
+  size: 512 | 1024 | 2048,
   isCurrent: () => boolean,
 ): Promise<PngExport | null> {
   let objectUrl: string | undefined;

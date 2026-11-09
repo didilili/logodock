@@ -62,7 +62,7 @@
   "assets": [
     {
       "file": "wordmark-dark-2018.png",
-      "label": "2018 深色文字标识 · PNG（Commons 渲染）",
+      "label": "2018 深色字标",
       "variant": "wordmark",
       "status": "current",
       "background": "light",
@@ -76,18 +76,16 @@
         "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AHuawei_wordmark_2019.svg&oldid=1123513783",
         "attribution": "Huawei。Commons 文件页标记为公共领域，无版权署名要求；保留来源和商标声明。文件下载原样保存。",
         "reviewedAt": "2026-11-07",
-        "notes": "依据 Wikimedia Commons 对该文件的 PD-textlogo（简单图形或文字未达到版权独创性门槛）公共领域判定收录；这是 Commons 的第三方判定，不是品牌方对本仓库的再分发授权。商标权仍归相关权利人，使用不得暗示官方背书。保存文件页正式提供的 1280px PNG（Commons 渲染）下载，未在本地转换、改色或裁切；原始 SVG：https://upload.wikimedia.org/wikipedia/commons/d/db/Huawei_wordmark_2019.svg 。仅收录 HUAWEI 文字标识，不含花瓣图案；Commons 文件说明及分类标记其为 2018 年起使用的文字式样。公司身份和现用字形对照 https://www.huawei.com/en/corporate-information ，官网页头仍使用该字形。"
+        "notes": "依据 Wikimedia Commons 对该文件的 PD-textlogo（简单图形或文字未达到版权独创性门槛）公共领域判定收录；这是 Commons 的第三方判定，不是品牌方对本仓库的再分发授权。商标权仍归相关权利人，使用不得暗示官方背书。保存文件页正式提供的 1280px PNG（Commons 渲染）下载，未在本地转换、改色或裁切；原始 SVG：https://upload.wikimedia.org/wikipedia/commons/d/db/Huawei_wordmark_2019.svg 。仅收录 HUAWEI 文字标识，不含花瓣图案；Commons 文件说明及分类标记其为 2018 年起使用的文字式样。公司身份和现用字形对照 https://www.huawei.com/en/corporate-information ，官网页头仍使用该字形。\n\n原始核对记录\n仅含 HUAWEI 字标，未含花瓣图形。\n\n2026-11-09 SVG 优先复核\n同页原始 SVG 含 DOCTYPE，按仓库静态 SVG 验收规则采用来源提供的 PNG 渲染文件。"
       },
       "language": "en",
       "layout": "horizontal",
       "color": "monochrome",
       "provenance": {
         "sourceType": "commons",
-        "processing": "rendered"
-      },
-      "qualityNotes": [
-        "仅含 HUAWEI 字标，未含花瓣图形。"
-      ]
+        "processing": "rendered",
+        "channel": "commons"
+      }
     }
   ]
 }

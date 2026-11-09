@@ -65,13 +65,7 @@
       ? undefined
       : `${rasterSize.height / density}px`,
   );
-  const alternativeSummary = $derived(
-    asset.qualityNotes?.find((note: string) =>
-      /小尺寸|低分辨率|放大|模糊|不透明|裁切/u.test(note),
-    ) ??
-      asset.qualityNotes?.[0] ??
-      '',
-  );
+  const alternativeSummary = $derived(asset.usageWarnings?.[0] ?? asset.qualityNotes?.[0] ?? '');
   const artwork = $derived(
     artworks.find((item) => item.assets.some((file) => file.file === asset.file)),
   );
@@ -183,7 +177,10 @@
     </div>
     <div class="card-versions">
       {#if asset.display === 'alternative'}
-        <p class="card-alternative" title={assetWarnings(asset).join('；')}>
+        <p
+          class="card-alternative"
+          title={[...assetWarnings(asset), ...(asset.qualityNotes ?? [])].join('；')}
+        >
           <strong
             >备选 · {asset.width && asset.height
               ? `${asset.width} × ${asset.height} px`

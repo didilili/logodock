@@ -50,7 +50,7 @@
   "assets": [
     {
       "file": "icon-monochrome-commons.png",
-      "label": "Z.ai 方形图标（Commons 渲染）",
+      "label": "Z.ai 方形图标",
       "variant": "icon",
       "status": "current",
       "background": "any",
@@ -64,22 +64,23 @@
         "reference": "https://commons.wikimedia.org/w/index.php?title=File:Z.ai_(company_logo).svg&oldid=1192313548",
         "attribution": "No copyright attribution required under the Wikimedia Commons PD-textlogo assessment. Source credit retained: 智谱 / Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Z.ai_(company_logo).svg . PNG rendered by Wikimedia Commons; downloaded without further modification.",
         "reviewedAt": "2026-11-07",
-        "notes": "该文件页使用 PD-textlogo，依据是 Wikimedia Commons 对简单文字或几何图形未达到版权原创性门槛的公共领域判定，不是品牌方授予 Logo 的开放版权许可或再分发授权；不同法域的原创性判断可能不同。商标权及其他使用限制仍然保留，不得暗示官方背书。公司官网 https://www.zhipuai.cn/zh/about 明确“智谱（Z.AI）”。Commons 文件页注明此方形图标的来源是 https://chat.z.ai/ ；当前公司官网 /logo.svg 与 /logo-en.svg 是 Z 字形分别与“智谱”“Z.AI”组成的横版标识，与本文件构图不同。本记录准确标为 Z.ai 方形图标，不将其冒充公司官网提供的横版标识或官方原件，也不把 GLM、智谱清言等模型或产品作为公司别名。Commons 原 SVG 含本仓库静态子集未接受的 style 元素和属性，因此选用同一文件页正式提供的960px PNG渲染文件原样保存，未自行改图、清洗 SVG 或裁切；下载和许可来源均对应这一 Commons SVG 文件页。"
+        "notes": "该文件页使用 PD-textlogo，依据是 Wikimedia Commons 对简单文字或几何图形未达到版权原创性门槛的公共领域判定，不是品牌方授予 Logo 的开放版权许可或再分发授权；不同法域的原创性判断可能不同。商标权及其他使用限制仍然保留，不得暗示官方背书。公司官网 https://www.zhipuai.cn/zh/about 明确“智谱（Z.AI）”。Commons 文件页注明此方形图标的来源是 https://chat.z.ai/ ；当前公司官网 /logo.svg 与 /logo-en.svg 是 Z 字形分别与“智谱”“Z.AI”组成的横版标识，与本文件构图不同。本记录准确标为 Z.ai 方形图标，不将其冒充公司官网提供的横版标识或官方原件，也不把 GLM、智谱清言等模型或产品作为公司别名。Commons 原 SVG 含本仓库静态子集未接受的 style 元素和属性，因此选用同一文件页正式提供的960px PNG渲染文件原样保存，未自行改图、清洗 SVG 或裁切；下载和许可来源均对应这一 Commons SVG 文件页。\n\n原始核对记录\n来自 chat.z.ai 的方形图标，不能等同于智谱公司的横版组合标识。\n\n2026-11-09 SVG 优先复核\n同页方形图标 SVG 的绘制样式仍超出仓库静态验收范围，采用来源提供的 PNG 渲染文件。"
       },
       "language": "none",
       "layout": "standalone",
       "color": "monochrome",
       "provenance": {
         "sourceType": "commons",
-        "processing": "rendered"
+        "processing": "rendered",
+        "channel": "commons"
       },
       "qualityNotes": [
-        "来自 chat.z.ai 的方形图标，不能等同于智谱公司的横版组合标识。"
+        "用于 chat.z.ai。"
       ]
     },
     {
       "file": "logo-black-chinese.svg",
-      "label": "中文公司组合标识 · 黑色 SVG 原件",
+      "label": "黑色中文公司组合",
       "variant": "logo",
       "status": "current",
       "background": "light",
@@ -88,7 +89,10 @@
       "color": "black",
       "provenance": {
         "sourceType": "official",
-        "processing": "original"
+        "processing": "original",
+        "channel": "website",
+        "placement": "header",
+        "pageTitle": "关于智谱"
       },
       "source": "https://www.zhipuai.cn/logo.svg",
       "sourcePage": "https://www.zhipuai.cn/zh/about",
@@ -105,7 +109,7 @@
     },
     {
       "file": "logo-white-chinese.svg",
-      "label": "中文公司组合标识 · 白色 SVG 原件",
+      "label": "白色中文公司组合",
       "variant": "logo",
       "status": "current",
       "background": "dark",
@@ -114,7 +118,10 @@
       "color": "white",
       "provenance": {
         "sourceType": "official",
-        "processing": "original"
+        "processing": "original",
+        "channel": "website",
+        "placement": "footer",
+        "pageTitle": "关于智谱"
       },
       "source": "https://www.zhipuai.cn/logo-white.svg",
       "sourcePage": "https://www.zhipuai.cn/zh/about",

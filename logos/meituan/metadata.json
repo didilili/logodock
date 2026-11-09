@@ -46,7 +46,7 @@
   "assets": [
     {
       "file": "logo-chinese-official.png",
-      "label": "中文组合标识 · 高清透明 PNG（官方原件）",
+      "label": "中文组合",
       "variant": "logo",
       "status": "current",
       "background": "light",
@@ -55,7 +55,9 @@
       "color": "brand",
       "provenance": {
         "sourceType": "official",
-        "processing": "original"
+        "processing": "original",
+        "channel": "brand-library",
+        "pageTitle": "美团媒体资源"
       },
       "source": "https://s3plus.meituan.net/smart/22c45b30-80ba-4aa5-bfad-2bfaed7beb4e.zip",
       "sourcePage": "https://www.meituan.com/media",
@@ -67,16 +69,15 @@
         "reference": "https://commons.wikimedia.org/wiki/File:Meituan_Logo.png",
         "attribution": "No copyright attribution required under the Commons PD-textlogo assessment of the same Chinese lockup. Source credit retained: 美团 / Meituan; PNG extracted unchanged from the official media download archive.",
         "reviewedAt": "2026-11-07",
-        "notes": "原始文件为官方媒体包“美团/美团横式色彩标识.png”，1896 × 687 像素、带透明通道；从官方 ZIP 逐字节提取，未放大、裁切、改色或重绘。已与原库 Commons 195 × 71 版本核对，为同一黄色圆角方形加黑色“美团”的中文组合设计。分发依据是 Commons 对该相同设计的 PD-textlogo 判定，不是新的官方再分发授权。官方媒体页限制图像“仅供个人或编辑使用”；此处没有将该声明当作开放素材库许可。商标权及其他使用限制仍然保留，不得暗示官方背书。"
+        "notes": "原始文件为官方媒体包“美团/美团横式色彩标识.png”，1896 × 687 像素、带透明通道；从官方 ZIP 逐字节提取，未放大、裁切、改色或重绘。已与原库 Commons 195 × 71 版本核对，为同一黄色圆角方形加黑色“美团”的中文组合设计。分发依据是 Commons 对该相同设计的 PD-textlogo 判定，不是新的官方再分发授权。官方媒体页限制图像“仅供个人或编辑使用”；此处没有将该声明当作开放素材库许可。商标权及其他使用限制仍然保留，不得暗示官方背书。\n\n原始核对记录\n1896 × 687 像素，透明背景，来自官方媒体素材包。\n主黄为 #FFD100。"
       },
       "qualityNotes": [
-        "1896 × 687 像素，透明背景，来自官方媒体素材包。",
-        "主黄为 #FFD100。"
+        "透明背景。"
       ]
     },
     {
       "file": "logo-bilingual-commons.png",
-      "label": "中英横版组合标识 · 透明 PNG（Commons 原件）",
+      "label": "中英组合",
       "variant": "logo",
       "status": "current",
       "background": "light",
@@ -85,7 +86,8 @@
       "color": "brand",
       "provenance": {
         "sourceType": "commons",
-        "processing": "original"
+        "processing": "original",
+        "channel": "commons"
       },
       "source": "https://upload.wikimedia.org/wikipedia/commons/6/61/Meituan_English_Logo.png",
       "sourcePage": "https://commons.wikimedia.org/wiki/File:Meituan_English_Logo.png",

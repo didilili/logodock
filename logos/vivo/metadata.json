@@ -44,47 +44,10 @@
     "hardware"
   ],
   "defaultAsset": "wordmark-blue-2019.svg",
-  "artworks": [
-    {
-      "id": "wordmark-blue-2019",
-      "label": "2019 蓝色字标",
-      "files": [
-        "wordmark-blue-2019.png",
-        "wordmark-blue-2019.svg"
-      ],
-      "defaultAsset": "wordmark-blue-2019.svg"
-    }
-  ],
   "assets": [
     {
-      "file": "wordmark-blue-2019.png",
-      "label": "2019 蓝色文字标识 · PNG（Commons 渲染）",
-      "variant": "wordmark",
-      "status": "current",
-      "background": "light",
-      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Vivo_%28China%29_logo.svg/1280px-Vivo_%28China%29_logo.svg.png",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Vivo_(China)_logo.svg",
-      "sha256": "19eb08b232792e5dd50d77e9c2083d5b0548e77b67d5315548e7a569da278816",
-      "bytes": 11667,
-      "rights": {
-        "status": "permitted",
-        "license": "Public domain (textlogo)",
-        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AVivo_%28China%29_logo.svg&oldid=1276362702",
-        "attribution": "Vivo Mobile Communication Co., Ltd. (China)。Commons 文件页标记为公共领域，无版权署名要求；保留来源和商标声明。文件下载原样保存。",
-        "reviewedAt": "2026-11-07",
-        "notes": "依据 Wikimedia Commons 对该文件的 PD-textlogo（简单图形或文字未达到版权独创性门槛）公共领域判定收录；这是 Commons 的第三方判定，不是品牌方对本仓库的再分发授权。商标权仍归相关权利人，使用不得暗示官方背书。保存文件页正式提供的 1280px PNG（Commons 渲染）下载，未在本地转换、改色或裁切；原始 SVG：https://upload.wikimedia.org/wikipedia/commons/0/04/Vivo_%28China%29_logo.svg 。中国科技公司 vivo，非巴西同名电信运营商。公司身份和现用字形对照 https://www.vivo.com/en/about-vivo/culture ；法定中文名称见 https://mobile.vivo.com/ 。2019 年视觉识别及品牌色发布说明见 https://www.vivo.com/sg/about-vivo/news/Vivo-V15Pro-Unveils-Tech 。"
-      },
-      "language": "en",
-      "layout": "horizontal",
-      "color": "brand",
-      "provenance": {
-        "sourceType": "commons",
-        "processing": "rendered"
-      }
-    },
-    {
       "file": "wordmark-blue-2019.svg",
-      "label": "2019 蓝色文字标识 · SVG（Commons 原件）",
+      "label": "2019 蓝色字标",
       "variant": "wordmark",
       "status": "current",
       "background": "light",
@@ -105,7 +68,8 @@
       "color": "brand",
       "provenance": {
         "sourceType": "commons",
-        "processing": "original"
+        "processing": "original",
+        "channel": "commons"
       }
     }
   ]

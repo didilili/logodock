@@ -112,3 +112,43 @@ test('positive transparency queries exclude negated descriptions and preserve ot
   assert.deepEqual(search.matchingAssets(brand, 'alpha 透明 jpg'), []);
   assert.deepEqual(brand, before);
 });
+
+test('catalog transparency searches return the matching downloadable files', async () => {
+  const { loadCatalog } = await import('../scripts/lib/catalog.mjs');
+  const { matchingBrands } = await import('../src/lib/catalog-presentation.mjs');
+  const { brands: catalog } = await loadCatalog();
+  for (const query of ['金蝶 透明', '小红书 透明', '快手 透明 jpg'])
+    assert.deepEqual(matchingBrands(catalog, { q: query }), [], query);
+  for (const [query, files] of [
+    ['快手 透明', ['icon-orange-official.png']],
+    ['快手 不透明', ['logo-english-official.jpg']],
+    ['金蝶 不透明 白底', ['logo-color-english.jpg']],
+    ['小红书 红底', ['wordmark-square-appstore.jpg']],
+  ]) {
+    const matches = matchingBrands(catalog, { q: query });
+    assert.equal(matches.length, 1, query);
+    assert.deepEqual(
+      matches[0].assets.map((asset) => asset.file),
+      files,
+      query,
+    );
+  }
+});
+
+test('shortened catalog labels preserve language, shape, layout and color searches', async () => {
+  const { loadCatalog } = await import('../scripts/lib/catalog.mjs');
+  const { brands: catalog } = await loadCatalog();
+  for (const [id, query, count] of [
+    ['tencent', '腾讯 中英', 3],
+    ['tencent', '腾讯 英文', 3],
+    ['yonyou', '用友 英文', 2],
+    ['alibaba', '阿里巴巴 橙色', 2],
+    ['codeberg', 'codeberg 图标 白色', 1],
+    ['minimax', 'minimax 竖版', 1],
+  ]) {
+    const brand = catalog.find((item) => item.id === id);
+    assert.equal(search.matchingAssets(brand, query).length, count, query);
+  }
+  const alibaba = catalog.find((item) => item.id === 'alibaba');
+  assert.deepEqual(search.matchingAssets(alibaba, '阿里巴巴 中文 png'), []);
+});

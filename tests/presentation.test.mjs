@@ -284,7 +284,6 @@ test('directory previews select the matching file while brand-only searches reta
 
 test('asset search terms, category, format and shape intersect on a single real file', async () => {
   const { matchingBrands, directoryAsset, defaultAsset } = await presentation();
-  const { artworkGroups } = await import('../src/lib/catalog-artworks.mjs');
   const { loadCatalog } = await import('../scripts/lib/catalog.mjs');
   const actual = (await loadCatalog()).brands;
   const alibaba = actual.find((brand) => brand.id === 'alibaba');
@@ -311,20 +310,10 @@ test('asset search terms, category, format and shape intersect on a single real 
   );
   assert.equal(directoryAsset(chinese, filters.q), chinese.assets[0]);
   assert.equal(defaultAsset(chinese), chinese.assets[0]);
-  const [englishPng] = matchingBrands(actual, { ...filters, q: 'alibaba', format: 'PNG' });
   assert.deepEqual(
-    englishPng.assets.map((asset) => asset.file),
-    ['wordmark-orange.png'],
-  );
-  assert.equal(
-    englishPng.artworks,
-    alibaba.artworks,
-    'Reviewed artwork declarations are preserved.',
-  );
-  assert.deepEqual(
-    artworkGroups(englishPng).map((group) => group.assets.map((asset) => asset.file)),
-    [['wordmark-orange.png']],
-    'Grouping intersects the eligible files instead of recovering a filtered SVG.',
+    matchingBrands(actual, { ...filters, q: 'alibaba', format: 'PNG' }),
+    [],
+    'Generated PNG downloads are not indexed as additional source files.',
   );
   assert.deepEqual(alibaba, before);
 });
@@ -337,8 +326,7 @@ test('filtering out a brand default still selects the reviewed default of a matc
   const [white] = matchingBrands(catalog, { q: query });
   assert.equal(directoryAsset(white, query).file, 'icon-white.svg');
   assert.equal(defaultAsset(white).file, 'icon-white.svg');
-  const [png] = matchingBrands(catalog, { q: query, format: 'PNG' });
-  assert.equal(directoryAsset(png, query).file, 'icon-white.png');
+  assert.deepEqual(matchingBrands(catalog, { q: query, format: 'PNG' }), []);
   assert.deepEqual(matchingBrands(catalog, { q: 'ZTE 青色' }), []);
 });
 
@@ -397,7 +385,27 @@ test('asset labels come from metadata and history status is not inferred from fi
   );
 });
 
-test('asset warnings keep the first occurrence when metadata already warns about low resolution', async () => {
+test('ordinary file descriptions and alternative status do not become usage warnings', async () => {
+  const { assetWarnings } = await presentation();
+  assert.deepEqual(
+    assetWarnings({
+      file: 'icon.svg',
+      display: 'alternative',
+      qualityNotes: ['透明背景。', '保留原始留白。'],
+    }),
+    [],
+  );
+  assert.deepEqual(
+    assetWarnings({
+      file: 'icon.svg',
+      qualityNotes: ['透明背景。'],
+      usageWarnings: ['配色与品牌标准色存在差异。', '配色与品牌标准色存在差异。'],
+    }),
+    ['配色与品牌标准色存在差异。'],
+  );
+});
+
+test('usage warnings keep the first occurrence when metadata already warns about low resolution', async () => {
   const { assetWarnings } = await presentation();
   assert.deepEqual(
     assetWarnings({
@@ -406,19 +414,17 @@ test('asset warnings keep the first occurrence when metadata already warns about
       width: 128,
       height: 64,
       rights: { license: 'CC-BY-NC-SA-4.0' },
-      qualityNotes: [
-        '原图含白色背景',
+      qualityNotes: ['原图含白色背景'],
+      usageWarnings: [
         '低分辨率原图，请留意实际像素尺寸',
         '原图边缘存在裁切',
         '历史素材，不代表现行标识',
         '仅限非商业用途',
-        '原图含白色背景',
       ],
     }),
     [
       '历史素材，不代表现行标识',
       '仅限非商业用途',
-      '原图含白色背景',
       '低分辨率原图，请留意实际像素尺寸',
       '原图边缘存在裁切',
     ],

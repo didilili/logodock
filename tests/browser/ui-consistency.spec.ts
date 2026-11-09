@@ -87,6 +87,22 @@ async function expectNoHorizontalOverflow(page: Page) {
   expect(width.viewport).toBe(page.viewportSize()?.width);
 }
 
+async function expectSourceLink(page: Page, label: string, href: string) {
+  const source = page.locator('#detail-source-link');
+  await expect(source).toHaveText(label);
+  await expect(source).toHaveAttribute('href', href);
+  await expect(source).toHaveAttribute('target', '_blank');
+  await expect(source).toHaveAttribute('rel', 'noopener noreferrer');
+  await expect(
+    page.locator('#detail-fileinfo').locator('..').locator('#detail-source-link'),
+  ).toHaveCount(1);
+  await expectMinimumHeight(source, 40);
+  expect(
+    await source.evaluate((element) => element.getBoundingClientRect().width),
+  ).toBeGreaterThanOrEqual(40);
+  await expectNoHorizontalOverflow(page);
+}
+
 async function openExtraFilters(page: Page) {
   const trigger = page.locator('#more-filters-trigger');
   const opening = (await trigger.getAttribute('aria-expanded')) !== 'true';
@@ -183,6 +199,8 @@ test('desktop filters use readable control sizing and keyboard focus stays visib
     await expect(page.locator('html')).toHaveAttribute('data-theme', theme);
     await page.locator('#download-link').focus();
     await page.keyboard.press('Tab');
+    await expectKeyboardFocus(page.locator('#download-options'));
+    await page.keyboard.press('Tab');
     await expectKeyboardFocus(page.locator('#detail-copy-menu'));
   }
 });
@@ -231,9 +249,9 @@ test('390px home and Alibaba detail retain usable targets without horizontal scr
   await expectMinimumHeight(page.locator('button:visible'), 40);
   await expectMinimumHeight(page.locator('#download-link'), 44);
   await expectMinimumHeight(page.locator('.variant-list [data-select-artwork]'), 44);
-  await expectMinimumHeight(page.locator('.format-option'), 40);
+  await expect(page.locator('.format-choices, #export-size, .export-details')).toHaveCount(0);
+  await expectMinimumHeight(page.locator('#download-options'), 44);
   await expectNoHorizontalOverflow(page);
-  await expect(page.locator('#download-options, #export-size, .export-details')).toHaveCount(0);
   await page.locator('[data-select-asset="wordmark-orange-chinese.svg"]').click();
   const downloadOptions = page.locator('#download-options');
   await expectMinimumHeight(downloadOptions, 44);
@@ -425,3 +443,260 @@ test('cards keep usage restrictions visible and details disclose useful material
   await sources.locator('summary').click();
   for (const note of await notes.all()) await expect(note).toBeVisible();
 });
+
+for (const width of [1280, 390]) {
+  test(`detail controls stay concise and file descriptions remain accurate at ${width}px`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width, height: 844 });
+    const panel = page.locator('.asset-action-panel');
+    const fileInfo = page.locator('#detail-fileinfo');
+    const sources = page.locator('.source-details');
+    const download = page.locator('#download-link');
+
+    await page.goto('/logos/alibaba/');
+    await expect(page.locator('#detail-copy-menu')).toBeEnabled();
+    await expect(fileInfo.locator('span')).toHaveCount(0);
+    await expect(panel.locator('.asset-description')).toHaveCount(0);
+    await expect(page.locator('.preview-note, .single-format')).toHaveCount(0);
+    await expect(
+      page.locator('[data-select-artwork="file:wordmark-orange.svg"] .variant-label'),
+    ).toHaveText(/^英文\s*SVG$/);
+    await expect(
+      page.locator('[data-select-asset="wordmark-orange-chinese.svg"] .variant-label'),
+    ).toHaveText(/^中文\s*SVG$/);
+
+    const help = page.getByRole('button', { name: '预览背景说明', exact: true });
+    const helpText = page.getByText('背景仅用于预览，下载保留原始文件。', { exact: true });
+    await expect(helpText).toBeHidden();
+    await help.focus();
+    await page.keyboard.press('Enter');
+    await expect(helpText).toBeVisible();
+    await help.click();
+    await expect(helpText).toBeHidden();
+    await help.click();
+    await expect(helpText).toBeVisible();
+    await help.click();
+
+    await expect(page.locator('.format-choices')).toHaveCount(0);
+    for (const file of [
+      'wordmark-orange.svg',
+      'wordmark-orange-chinese.svg',
+      'wordmark-orange.svg',
+    ]) {
+      await page.locator(`[data-select-asset="${file}"]`).click();
+      await expect(download).toHaveAttribute('href', new RegExp(`/${file.replace('.', '\\.')}$`));
+      await expect(fileInfo).toContainText('SVG');
+      await expect(fileInfo.locator('span')).toHaveCount(0);
+      await expect(panel.locator('.asset-description, .asset-warnings')).toHaveCount(0);
+      await expect(sources).toHaveJSProperty('open', false);
+      await sources.locator('summary').click();
+      await expect(sources).toContainText('Wikimedia Commons · 原始文件');
+      await sources.locator('summary').click();
+    }
+    await expectNoHorizontalOverflow(page);
+
+    await page.goto('/logos/xiaohongshu/');
+    await expect(panel.locator('.asset-description')).toHaveText('不透明红底。');
+    await expect(panel.locator('.asset-warnings')).toHaveCount(0);
+    await expect(fileInfo).toContainText('512 × 512');
+    await expect(fileInfo.locator('span')).toHaveCount(0);
+    await expect(page.locator('.file-section')).toHaveCount(0);
+    await expect(panel).not.toContainText('artworkUrl512');
+    await expect(panel).not.toContainText('Commons');
+    await expect(download).toHaveAttribute('href', /wordmark-square-appstore\.jpg$/);
+    const downloaded = page.waitForEvent('download');
+    await download.click();
+    expect((await downloaded).suggestedFilename()).toBe('xiaohongshu-wordmark-square-appstore.jpg');
+
+    await page.goto('/logos/tencent/');
+    await expect(page.locator('.format-choices, .single-format')).toHaveCount(0);
+    await expect(panel.locator('.asset-description')).toContainText('留白');
+    await expect(panel.locator('.asset-description')).toContainText('2763');
+    await expect(page.locator('.file-options')).toHaveCount(0);
+    for (const [file, label] of [
+      ['wordmark-black-official.png', '黑色字标'],
+      ['wordmark-white-official.png', '白色字标'],
+    ]) {
+      await page.locator(`[data-select-asset="${file}"]`).click();
+      await expect(download).toHaveAttribute('href', new RegExp(`/${file.replace('.', '\\.')}$`));
+      await expect(page.locator('.variant-list [aria-current="true"]')).toContainText(label);
+      await expect(panel.locator('.asset-description')).toHaveText('透明背景，上下留白较多。');
+      await expect(panel.locator('.asset-description')).not.toContainText('2763');
+      await expect(fileInfo).toContainText('PNG');
+    }
+
+    await page.goto('/logos/zte/');
+    await expect(panel.locator('.asset-description')).toContainText('留白');
+    await expect(panel.locator('.asset-warnings')).toContainText('#0086D1');
+    await expect(panel.locator('.asset-warnings')).toContainText('#008ED3');
+    await expect(sources).toHaveJSProperty('open', false);
+    const alternatives = page.locator('.artwork-alternatives');
+    await alternatives.locator('summary').click();
+    await alternatives.locator('[data-select-asset="wordmark-blue-header-official.png"]').click();
+    await expect(fileInfo).toContainText('92 × 44');
+    await expect(fileInfo.locator('span')).toHaveText('备选文件');
+    await expect(panel.locator('.asset-description')).toContainText('#008ED3');
+    await expect(panel.locator('.asset-warnings')).toContainText('低分辨率');
+    await expect(panel.locator('.asset-warnings')).not.toContainText('#0086D1');
+    await expect(download).toHaveAttribute('href', /wordmark-blue-header-official\.png$/);
+    await expectNoHorizontalOverflow(page);
+
+    await page.goto('/logos/gitlab/');
+    await expect(panel.locator('.asset-warnings')).toContainText('历史素材');
+    await expect(panel.locator('.asset-warnings')).toContainText('仅限非商业用途');
+  });
+
+  test(`current-file sources and disclosure preferences follow selection at ${width}px`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width, height: 844 });
+    const sources = page.locator('.source-details');
+    const license = page.locator('#detail-license-link');
+    const download = page.locator('#download-link');
+    const kuaishouSource = 'https://www.kuaishou.com/official/material-lib';
+    const alibabaSource = 'https://commons.wikimedia.org/wiki/File:Alibaba_en_logo.svg';
+    const alibabaChineseSource = 'https://commons.wikimedia.org/wiki/File:Alibaba_zh_logo.svg';
+    const tencentSource = 'https://www.tencent.com/zh-cn/newsroom/media-resources/';
+    const tencentBlue =
+      'https://www.tencent.com/wp-content/uploads/2022/12/01_Tencent_Standard-Logo.png';
+    const tencentBlack =
+      'https://www.tencent.com/wp-content/uploads/2022/12/01_Tencent_Logo_Black.png';
+    const tencentWhite =
+      'https://www.tencent.com/wp-content/uploads/2022/12/01_Tencent_Logo_Reverse-type.png';
+    const sourceFile = sources.getByRole('link', {
+      name: '查看来源文件',
+      exact: true,
+      includeHidden: true,
+    });
+
+    await page.goto('/logos/kuaishou/');
+    await expect(page.locator('#detail-copy-menu')).toBeEnabled();
+    await expectSourceLink(page, '官方品牌素材下载页', kuaishouSource);
+    await expect(sources).toHaveJSProperty('open', false);
+    await sources.locator('summary').click();
+    await expect(license).toHaveText('Commons 公共领域判定');
+    await expect(license).toHaveAttribute(
+      'href',
+      'https://commons.wikimedia.org/w/index.php?title=File:Kuaishou_logo.png&oldid=686719154',
+    );
+    await page.locator('[data-select-asset="logo-english-official.jpg"]').click();
+    await expect(download).toHaveAttribute('href', /logo-english-official\.jpg$/);
+    await expectSourceLink(page, '官方品牌素材下载页', kuaishouSource);
+    await expect(sources).toHaveJSProperty('open', true);
+    await sources.locator('summary').click();
+    await page.locator('[data-select-asset="icon-orange-official.png"]').click();
+    await expect(download).toHaveAttribute('href', /icon-orange-official\.png$/);
+    await expect(sources).toHaveJSProperty('open', false);
+    await page.goBack();
+    await expect(download).toHaveAttribute('href', /logo-english-official\.jpg$/);
+    await expectSourceLink(page, '官方品牌素材下载页', kuaishouSource);
+    await expect(sources).toHaveJSProperty('open', false);
+
+    await page.goto('/logos/alibaba/');
+    await expectSourceLink(page, 'Commons', alibabaSource);
+    await expect(sources).toHaveJSProperty('open', false);
+    await sources.locator('summary').click();
+    await expect(license).toHaveText('Commons 公共领域判定');
+    await expect(license).toHaveAttribute(
+      'href',
+      'https://commons.wikimedia.org/w/index.php?title=File%3AAlibaba_en_logo.svg&oldid=1115285514',
+    );
+    await page.locator('[data-select-asset="wordmark-orange-chinese.svg"]').click();
+    await expect(download).toHaveAttribute('href', /wordmark-orange-chinese\.svg$/);
+    await expectSourceLink(page, 'Commons', alibabaChineseSource);
+    await expect(sources).toHaveJSProperty('open', true);
+    await page.goBack();
+    await expect(download).toHaveAttribute('href', /wordmark-orange\.svg$/);
+    await expectSourceLink(page, 'Commons', alibabaSource);
+    await expect(sources).toHaveJSProperty('open', true);
+    await sources.locator('summary').click();
+    await page.locator('[data-select-asset="wordmark-orange-chinese.svg"]').click();
+    await expect(download).toHaveAttribute('href', /wordmark-orange-chinese\.svg$/);
+    await expectSourceLink(page, 'Commons', alibabaChineseSource);
+    await expect(sources).toHaveJSProperty('open', false);
+    await page.goBack();
+    await expect(download).toHaveAttribute('href', /wordmark-orange\.svg$/);
+    await expectSourceLink(page, 'Commons', alibabaSource);
+    await expect(sources).toHaveJSProperty('open', false);
+
+    await page.goto('/logos/tencent/');
+    await expectSourceLink(page, '官方品牌素材下载页', tencentSource);
+    await expect(page.locator('.format-choices, .file-options')).toHaveCount(0);
+    await expect(sources).toHaveJSProperty('open', false);
+    await sources.locator('summary').click();
+    await expect(license).toHaveText('Commons 公共领域判定');
+    await expect(sourceFile).toHaveAttribute('href', tencentBlue);
+    await page.locator('[data-select-asset="wordmark-black-official.png"]').click();
+    await expect(download).toHaveAttribute('href', /wordmark-black-official\.png$/);
+    await expectSourceLink(page, '官方品牌素材下载页', tencentSource);
+    await expect(sourceFile).toHaveAttribute('href', tencentBlack);
+    await expect(sources).toHaveJSProperty('open', true);
+    await page.goBack();
+    await expect(download).toHaveAttribute('href', /wordmark-blue-official\.png$/);
+    await expectSourceLink(page, '官方品牌素材下载页', tencentSource);
+    await expect(sourceFile).toHaveAttribute('href', tencentBlue);
+    await expect(sources).toHaveJSProperty('open', true);
+    await sources.locator('summary').click();
+    await page.locator('[data-select-asset="wordmark-white-official.png"]').click();
+    await expect(download).toHaveAttribute('href', /wordmark-white-official\.png$/);
+    await expectSourceLink(page, '官方品牌素材下载页', tencentSource);
+    await expect(sourceFile).toHaveAttribute('href', tencentWhite);
+    await expect(sources).toHaveJSProperty('open', false);
+    await page.goBack();
+    await expect(download).toHaveAttribute('href', /wordmark-blue-official\.png$/);
+    await expectSourceLink(page, '官方品牌素材下载页', tencentSource);
+    await expect(sourceFile).toHaveAttribute('href', tencentBlue);
+    await expect(sources).toHaveJSProperty('open', false);
+
+    await page.goto('/logos/xiaohongshu/');
+    await expectSourceLink(
+      page,
+      '官方应用商店 · 渲染图',
+      'https://apps.apple.com/cn/app/id741292507',
+    );
+    await expect(sources).toHaveJSProperty('open', false);
+
+    await page.goto('/logos/zte/?asset=wordmark-blue-header-official.png');
+    await expectSourceLink(page, '官网页头 Logo', 'https://www.zte.com.cn/global/');
+    await expect(page.locator('.asset-action-panel .asset-warnings')).toContainText('低分辨率');
+    await expect(page.locator('.asset-action-panel .asset-warnings')).toBeVisible();
+    await sources.locator('summary').click();
+    await expect(sources).toContainText('页头 Logo · 原始文件');
+
+    await page.goto('/logos/transsion/');
+    await expectSourceLink(page, '官网页脚 Logo', 'https://www.transsion.com/zh-CN/about');
+    await sources.locator('summary').click();
+    await expect(sources).toContainText('页脚 Logo · 原始文件');
+
+    await page.goto('/logos/xiaomi/');
+    const xiaomiCommons = 'https://commons.wikimedia.org/wiki/File:Xiaomi_logo_(2021-).svg';
+    await expectSourceLink(page, 'Commons · 渲染图', xiaomiCommons);
+    await expect(sources).toHaveJSProperty('open', false);
+    await sources.locator('summary').click();
+    await expect(sources).toContainText('Wikimedia Commons · 渲染文件');
+    await page.locator('[data-select-asset="logo-horizontal-official.svg"]').click();
+    await expectSourceLink(page, '官网页面用图', 'https://trust.mi.com/');
+    await expect(sources).toHaveJSProperty('open', true);
+    await expect(sources).toContainText('小米信任中心 · 原始文件');
+    await page.goBack();
+    await expectSourceLink(page, 'Commons · 渲染图', xiaomiCommons);
+    await expect(sources).toHaveJSProperty('open', true);
+    await expect(sources).toContainText('Wikimedia Commons · 渲染文件');
+
+    await page.goto('/logos/gitlab/');
+    const gitlabSource =
+      'https://gitlab.com/gitlab-com/gitlab-artwork/-/raw/9b07772f44a9fa51f395a95928a6e41c61a5b1cb/README.md';
+    await expectSourceLink(page, '官方仓库', gitlabSource);
+    await expect(sources).toHaveJSProperty('open', false);
+    const warnings = page.locator('.asset-action-panel .asset-warnings');
+    await expect(warnings).toBeVisible();
+    await expect(warnings).toContainText('历史素材');
+    await expect(warnings).toContainText('仅限非商业用途');
+    await sources.locator('summary').click();
+    await expect(license).toHaveText('CC-BY-NC-SA-4.0');
+    await expect(license).toHaveAttribute('href', gitlabSource);
+    await expect(warnings).toBeVisible();
+    await expectNoHorizontalOverflow(page);
+  });
+}

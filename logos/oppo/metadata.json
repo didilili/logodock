@@ -43,47 +43,10 @@
     "hardware"
   ],
   "defaultAsset": "wordmark-green-2019.svg",
-  "artworks": [
-    {
-      "id": "wordmark-green-2019",
-      "label": "2019 绿色字标",
-      "files": [
-        "wordmark-green-2019.png",
-        "wordmark-green-2019.svg"
-      ],
-      "defaultAsset": "wordmark-green-2019.svg"
-    }
-  ],
   "assets": [
     {
-      "file": "wordmark-green-2019.png",
-      "label": "2019 绿色文字标识 · PNG（Commons 渲染）",
-      "variant": "wordmark",
-      "status": "current",
-      "background": "light",
-      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/OPPO_LOGO_2019.svg/1280px-OPPO_LOGO_2019.svg.png",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:OPPO_LOGO_2019.svg",
-      "sha256": "a3a2c820344de41adbddba82a2fb309ba84439ee5ddc6638fe3633ee046d074f",
-      "bytes": 15337,
-      "rights": {
-        "status": "permitted",
-        "license": "Public domain (textlogo)",
-        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AOPPO_LOGO_2019.svg&oldid=1291432638",
-        "attribution": "OPPO；SVG 转制：Wikimedia Commons 用户 Sushant savla。Commons 文件页标记为公共领域，无版权署名要求；保留来源和商标声明。文件下载原样保存。",
-        "reviewedAt": "2026-11-07",
-        "notes": "依据 Wikimedia Commons 对该文件的 PD-textlogo（简单图形或文字未达到版权独创性门槛）公共领域判定收录；这是 Commons 的第三方判定，不是品牌方对本仓库的再分发授权。商标权仍归相关权利人，使用不得暗示官方背书。保存文件页正式提供的 1280px PNG（Commons 渲染）下载，未在本地转换、改色或裁切；原始 SVG：https://upload.wikimedia.org/wikipedia/commons/0/0a/OPPO_LOGO_2019.svg 。公司身份见 https://privacy.oppo.com/cn/policy ，字形对照 https://www.oppo.com/en/about/ 。绿色字标仍见 OPPO 2025 年官方合规声明 https://www.oppo.com/content/dam/oppo/uk/static/certification/OPPO%20Enco%20Buds3%20Pro%28ETEK1%29_SoC.pdf ，网站也使用单色变体；此处保留来源绿色，未改为黑色。"
-      },
-      "language": "en",
-      "layout": "horizontal",
-      "color": "brand",
-      "provenance": {
-        "sourceType": "commons",
-        "processing": "rendered"
-      }
-    },
-    {
       "file": "wordmark-green-2019.svg",
-      "label": "2019 绿色文字标识 · SVG（Commons 原件）",
+      "label": "2019 绿色字标",
       "variant": "wordmark",
       "status": "current",
       "background": "light",
@@ -104,7 +67,8 @@
       "color": "brand",
       "provenance": {
         "sourceType": "commons",
-        "processing": "original"
+        "processing": "original",
+        "channel": "commons"
       }
     }
   ]

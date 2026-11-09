@@ -37,47 +37,10 @@
     "internet"
   ],
   "defaultAsset": "wordmark-green.svg",
-  "artworks": [
-    {
-      "id": "wordmark-green-bilingual-2022",
-      "label": "2022 绿色中英文字标",
-      "files": [
-        "wordmark-green.png",
-        "wordmark-green.svg"
-      ],
-      "defaultAsset": "wordmark-green.svg"
-    }
-  ],
   "assets": [
     {
-      "file": "wordmark-green.png",
-      "label": "绿色中英文文字标识 · PNG（Commons 渲染）",
-      "variant": "wordmark",
-      "status": "current",
-      "background": "light",
-      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/IQIYI_logo_%282022%29.svg/1280px-IQIYI_logo_%282022%29.svg.png",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:IQIYI_logo_(2022).svg",
-      "sha256": "97e8ec12d7d3f7df4a0ca75aee77514633ce8a1c47a2816027b1833c001c1966",
-      "bytes": 12339,
-      "rights": {
-        "status": "permitted",
-        "license": "Public domain (textlogo)",
-        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AIQIYI_logo_%282022%29.svg&oldid=1277926211",
-        "attribution": "No copyright attribution required by the Commons PD-textlogo designation. Logo attributed to iQIYI, Inc.; trademark rights remain with the respective owner.",
-        "reviewedAt": "2026-11-07",
-        "notes": "分发依据为 Wikimedia Commons 对该具体标识的简单图形/文字公共领域判定（PD-textlogo），不是品牌方的再分发授权。该判定不授予商标权，相关商标权保留；使用时不得暗示品牌方背书。保存 Commons 文件页正式提供的 PNG 渲染下载，原样保存，未自行修改图形、颜色、比例或透明背景。公司身份由 https://ir.iqiyi.com/ 核对；2022 年起的绿色中英文文字标识及 #00DC5A 线上色已对照官方标志使用规范 https://www.iqiyi.com/common/biaozhiguifan.html 核对，Commons 文件来源亦注明该官方页面。"
-      },
-      "language": "bilingual",
-      "layout": "horizontal",
-      "color": "brand",
-      "provenance": {
-        "sourceType": "commons",
-        "processing": "rendered"
-      }
-    },
-    {
       "file": "wordmark-green.svg",
-      "label": "2022 绿色中英文字标 · SVG（Commons 原件）",
+      "label": "2022 绿色中英字标",
       "variant": "wordmark",
       "status": "current",
       "background": "light",
@@ -98,7 +61,8 @@
       "color": "brand",
       "provenance": {
         "sourceType": "commons",
-        "processing": "original"
+        "processing": "original",
+        "channel": "commons"
       }
     }
   ]

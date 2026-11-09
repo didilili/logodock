@@ -202,10 +202,10 @@ test('minimal accepted JPEG headers never receive invented dimensions', async (t
   assert.equal(Object.hasOwn(asset, 'height'), false);
 });
 
-test('repository migration retains all 23 entities, precise identities and asset caveats', async () => {
+test('repository retains all 31 entities, precise identities and asset caveats', async () => {
   const catalog = await loadCatalog();
   const byId = Object.fromEntries(catalog.brands.map((b) => [b.id, b]));
-  assert.equal(catalog.brands.length, 23);
+  assert.equal(catalog.brands.length, 31);
   assert.equal(byId.minimax.identity.nameZh, null);
   assert.equal(byId.codeberg.identity.legalNames[0].language, 'de');
   assert.equal(byId.oppo.identity.nameZh, 'OPPO');
@@ -219,7 +219,7 @@ test('repository migration retains all 23 entities, precise identities and asset
   assert.equal(senseTime.provenance.processing, 'original');
   assert.equal(byId.kingdee.assets[0].width, 2528);
   assert.equal(byId.kingdee.assets[0].height, 1371);
-  assert.match(byId.kingdee.assets[0].qualityNotes.join(' '), /CMYK/);
+  assert.match(byId.kingdee.assets[0].usageWarnings.join(' '), /CMYK/);
   const smallZte = byId.zte.assets.find(
     (asset) => asset.file === 'wordmark-blue-header-official.png',
   );
@@ -238,6 +238,19 @@ test('removed redundant originals have no metadata record or repository file', a
     ['lenovo', 'logo-red-brandworld.png'],
     ['zte', 'wordmark-cyan-2015.png'],
     ['zte', 'wordmark-cyan-commons.svg'],
+    ['alibaba', 'wordmark-orange.png'],
+    ['bytedance', 'logo-english.png'],
+    ['codeberg', 'icon-blue.png'],
+    ['codeberg', 'icon-white.png'],
+    ['codeberg', 'logo-vertical-blue.png'],
+    ['codeberg', 'logo-vertical-white.png'],
+    ['didi', 'logo-english.png'],
+    ['iqiyi', 'wordmark-green.png'],
+    ['oppo', 'wordmark-green-2019.png'],
+    ['trip-com', 'wordmark-color.png'],
+    ['vivo', 'wordmark-blue-2019.png'],
+    ['yonyou', 'wordmark-white-transparent.png'],
+    ['tencent', 'wordmark-blue.png'],
   ]) {
     const metadata = JSON.parse(
       await readFile(new URL(`../logos/${id}/metadata.json`, import.meta.url), 'utf8'),

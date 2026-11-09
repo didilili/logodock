@@ -250,14 +250,14 @@ test('catalog rejects ambiguous or dangling artwork membership and defaults', as
     await assert.rejects(loadCatalog(await fixture(t, change)), /Invalid catalog:/);
 });
 
-test('reviewed repository groups cover proven format pairs while preserving genuinely different artworks', async () => {
+test('reviewed repository keeps distinct artworks after redundant format renditions are removed', async () => {
   const { artworkGroups } = await grouping();
   const brands = Object.fromEntries((await loadCatalog()).brands.map((brand) => [brand.id, brand]));
   const expected = {
     alibaba: 2,
-    bytedance: 1,
+    bytedance: 2,
     codeberg: 4,
-    didi: 1,
+    didi: 2,
     iqiyi: 1,
     oppo: 1,
     vivo: 1,
@@ -267,10 +267,7 @@ test('reviewed repository groups cover proven format pairs while preserving genu
   };
   for (const [id, count] of Object.entries(expected))
     assert.equal(artworkGroups(brands[id]).length, count, id);
-  assert.equal(
-    artworkGroups(brands.tencent).find((group) => group.assets.length === 2).defaultAsset.file,
-    'wordmark-blue-official.png',
-  );
+  assert.ok(artworkGroups(brands.tencent).every((group) => group.assets.length === 1));
   const { selectedArtwork, primaryArtworkGroups, alternativeArtworkGroups } = await grouping();
   for (const [id, removed, replacement] of [
     ['meituan', 'logo-chinese.png', 'logo-chinese-official.png'],
@@ -281,8 +278,12 @@ test('reviewed repository groups cover proven format pairs while preserving genu
     assert.equal(selectedArtwork(brand, replacement).defaultAsset.file, replacement);
   }
   assert.equal(
-    selectedArtwork(brands.yonyou, 'wordmark-white-transparent.png').id,
-    selectedArtwork(brands.yonyou, 'wordmark-white.svg').id,
+    selectedArtwork(brands.yonyou, 'wordmark-white-transparent.png').defaultAsset.file,
+    brands.yonyou.defaultAsset,
+  );
+  assert.equal(
+    selectedArtwork(brands.yonyou, 'wordmark-white.svg').defaultAsset.file,
+    'wordmark-white.svg',
   );
   for (const id of ['lenovo', 'minimax', 'zte']) {
     const brand = brands[id];

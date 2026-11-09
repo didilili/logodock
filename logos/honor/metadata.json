@@ -47,7 +47,7 @@
   "assets": [
     {
       "file": "wordmark-black-2020.svg",
-      "label": "2020 黑色文字标识 · SVG",
+      "label": "2020 黑色字标",
       "variant": "wordmark",
       "status": "current",
       "background": "light",
@@ -68,7 +68,8 @@
       "color": "black",
       "provenance": {
         "sourceType": "commons",
-        "processing": "original"
+        "processing": "original",
+        "channel": "commons"
       }
     }
   ]

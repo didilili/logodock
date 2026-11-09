@@ -55,7 +55,9 @@
       "color": "brand",
       "provenance": {
         "sourceType": "official",
-        "processing": "original"
+        "processing": "original",
+        "channel": "repository",
+        "pageTitle": "GitLab Artwork 素材仓库"
       }
     }
   ],

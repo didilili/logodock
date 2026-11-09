@@ -62,10 +62,9 @@ export function assetDisplayLabel(asset) {
 
 export function assetWarnings(asset) {
   const notes = [];
-  if (asset.display === 'alternative') notes.push('备选文件，请留意配色、背景与清晰度说明');
   if (asset.status === 'historical') notes.push('历史素材，不代表现行标识');
   if (/(?:^|[-\s])NC(?:[-\s]|$)/i.test(asset.rights?.license || '')) notes.push('仅限非商业用途');
-  for (const note of asset.qualityNotes || []) if (note && !notes.includes(note)) notes.push(note);
+  for (const note of asset.usageWarnings || []) if (note && !notes.includes(note)) notes.push(note);
   if (
     assetFormat(asset) !== 'SVG' &&
     asset.width &&

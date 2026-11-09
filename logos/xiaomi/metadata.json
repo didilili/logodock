@@ -55,7 +55,7 @@
   "assets": [
     {
       "file": "icon-orange-2021.png",
-      "label": "2021 橙色图形标识 · PNG（Commons 渲染）",
+      "label": "2021 橙色图形",
       "variant": "icon",
       "status": "current",
       "background": "any",
@@ -69,19 +69,20 @@
         "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AXiaomi_logo_%282021-%29.svg&oldid=1257483450",
         "attribution": "Xiaomi。Commons 文件页标记为公共领域，无版权署名要求；保留来源和商标声明。文件下载原样保存。",
         "reviewedAt": "2026-11-07",
-        "notes": "依据 Wikimedia Commons 对该文件的 PD-textlogo（简单图形或文字未达到版权独创性门槛）公共领域判定收录；这是 Commons 的第三方判定，不是品牌方对本仓库的再分发授权。商标权仍归相关权利人，使用不得暗示官方背书。保存文件页正式提供的 1280px PNG（Commons 渲染）下载，未在本地转换、改色或裁切；原始 SVG：https://upload.wikimedia.org/wikipedia/commons/a/ae/Xiaomi_logo_%282021-%29.svg 。公司身份及现用标识对照 https://www.mi.com/global/about/ ；2021 年新标识见小米集团官方半年报 https://ir.mi.com/system/files-encrypted/nasdaq_kms/assets/2021/12/22/4-01-53/2021092800380.pdf 。"
+        "notes": "依据 Wikimedia Commons 对该文件的 PD-textlogo（简单图形或文字未达到版权独创性门槛）公共领域判定收录；这是 Commons 的第三方判定，不是品牌方对本仓库的再分发授权。商标权仍归相关权利人，使用不得暗示官方背书。保存文件页正式提供的 1280px PNG（Commons 渲染）下载，未在本地转换、改色或裁切；原始 SVG：https://upload.wikimedia.org/wikipedia/commons/a/ae/Xiaomi_logo_%282021-%29.svg 。公司身份及现用标识对照 https://www.mi.com/global/about/ ；2021 年新标识见小米集团官方半年报 https://ir.mi.com/system/files-encrypted/nasdaq_kms/assets/2021/12/22/4-01-53/2021092800380.pdf 。\n\n2026-11-09 SVG 优先复核\n同页图形原始 SVG 含 DOCTYPE，按仓库静态 SVG 验收规则采用来源提供的 PNG 渲染文件。"
       },
       "language": "none",
       "layout": "standalone",
       "color": "brand",
       "provenance": {
         "sourceType": "commons",
-        "processing": "rendered"
+        "processing": "rendered",
+        "channel": "commons"
       }
     },
     {
       "file": "logo-horizontal-official.svg",
-      "label": "橙色图形与英文横版组合 · SVG（官方原件）",
+      "label": "橙色英文横版组合",
       "variant": "logo",
       "status": "current",
       "background": "light",
@@ -90,7 +91,9 @@
       "color": "brand",
       "provenance": {
         "sourceType": "official",
-        "processing": "original"
+        "processing": "original",
+        "channel": "website",
+        "pageTitle": "小米信任中心"
       },
       "source": "https://cdna.sec.miui.com/mi-trust-center/group-mi-logo-mobile.svg",
       "sourcePage": "https://trust.mi.com/",

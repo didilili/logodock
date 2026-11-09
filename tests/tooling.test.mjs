@@ -77,6 +77,22 @@ async function snapshot(cwd, files) {
   };
 }
 
+test('source SVG bytes survive staging and checkout without line-ending conversion', async (t) => {
+  const cwd = await temporary(t);
+  git(cwd, 'init', '--quiet');
+  await cp(join(root, '.gitattributes'), join(cwd, '.gitattributes'));
+  const file = 'logos/example/logo.svg';
+  const original = '<svg xmlns="http://www.w3.org/2000/svg">\r\n</svg>\r\n';
+  await mkdir(join(cwd, 'logos/example'), { recursive: true });
+  await writeFile(join(cwd, file), original);
+  git(cwd, 'add', '--', '.gitattributes', file);
+  assert.equal(git(cwd, 'show', `:${file}`), original);
+  git(cwd, 'diff', '--cached', '--check');
+  await rm(join(cwd, file));
+  git(cwd, 'checkout-index', '--', file);
+  assert.equal(await readFile(join(cwd, file), 'utf8'), original);
+});
+
 test('hook installation skips archives, CI, production and HUSKY=0 without dependencies', async (t) => {
   const cwd = await temporary(t);
   await copyScript(cwd, 'install-hooks.mjs');

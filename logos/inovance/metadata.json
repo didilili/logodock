@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 3,
+  "id": "inovance",
+  "name": "汇川技术",
+  "aliases": [
+    "INOVANCE",
+    "Inovance"
+  ],
+  "identity": {
+    "nameZh": "汇川技术",
+    "nameEn": "INOVANCE",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "汇川技术官方网站",
+        "url": "https://www.inovance.com/",
+        "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "汇川全球官网（页头原图来源）",
+        "url": "https://www.inovance.com/global",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.inovance.com/",
+  "entityType": "company",
+  "categories": [
+    "industrial-automation"
+  ],
+  "defaultAsset": "wordmark-blue-official.png",
+  "assets": [
+    {
+      "file": "wordmark-blue-official.png",
+      "label": "标准蓝英文字标",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://portal-file.inovance.com/upload/image/2025/03/28/0e86e631-cd0c-41ac-aa2d-a981e7a4dbfb.png",
+      "sourcePage": "https://www.inovance.com/global",
+      "sha256": "0ac55305f11f9d0dfd9384322f46d1e51afa5efe77cd4b7da0ad7c31ece8b9fc",
+      "bytes": 37976,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:Shenzhen_Inovance_Technology.svg&oldid=1117280283",
+        "attribution": "INOVANCE / 汇川技术。Commons 对相同英文字标作品作 PD-textlogo 公共领域判定，无版权署名要求；保留官方原图来源与商标声明。原文件未经修改。",
+        "reviewedAt": "2026-11-09",
+        "notes": "原件由当前官方全球网站页头图片地址去除服务器端图像质量/格式处理参数后，取得同路径提供的原始 PNG；下载原字节未裁切、放大、改色或转换。版权收录依据为 Commons 对 INOVANCE 简单文字图形作品的 PD-textlogo 第三方判断，不是汇川对本库的再分发授权；已在一致预览条件核对 I/N/O/V/A/N/C/E 字形、A 的断开三角与整体比例。Commons 文件的蓝色与官方当前图像不同，因此不把 Commons SVG 作为另一配色入库，也不宣称字节相同。该判断不推广到汇川其他图形、中文字体或产品标识。不同法域的原创性门槛可能不同，商标权及其他使用限制仍保留，不得暗示官方背书。\n\n原始核对记录\n2858 × 431 像素，透明背景，紧凑横版画布；边缘清晰，适合浅色背景。"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header",
+        "pageTitle": "汇川技术全球官网首页"
+      },
+      "qualityNotes": [
+        "透明背景，横向画布紧凑。"
+      ]
+    }
+  ]
+}
