@@ -15,6 +15,7 @@ export default defineConfig(
       'static/**',
       '_site/**',
       'local-artifacts/site-copy-review/**/site/**',
+      'local-artifacts/mianstack-287/**',
       '.svelte-kit/**',
       'coverage/**',
       'playwright-report/**',

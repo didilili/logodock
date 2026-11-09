@@ -1,0 +1,4051 @@
+{
+  "schemaVersion": 1,
+  "purpose": "mianstack-company-collection-checkpoint",
+  "reviewedAt": "2026-11-09",
+  "scope": "面栈公司目录默认排序前50条",
+  "source": "https://mianstack.com/data/companies.json",
+  "sourcePage": "https://mianstack.com/company/",
+  "directorySnapshotCount": 287,
+  "status": "reviewed-with-open-items",
+  "localEvidenceDirectory": "local-artifacts/mianstack-287/2026-11-09/",
+  "requirements": [
+    "高清、官方原汁原味；优先原始出处。",
+    "带字与无字版本分别查找，不裁切组合标制造缺失版本。",
+    "其他Logo项目只作线索；不能将第三方重绘冒称官方。",
+    "来源字节不修改；未核实分发依据、质量或当前版本的文件留在logos之外。"
+  ],
+  "summary": {
+    "requestedCompanies": 50,
+    "catalogAvailableCompanies": 21,
+    "relatedGroupOnlyCompanies": 1,
+    "pendingCompanies": 28,
+    "bothTextAndSymbolAvailable": 5,
+    "newBrandIds": [
+      "inovance",
+      "kuaishou",
+      "nio",
+      "shopee",
+      "tencent-music",
+      "transsion",
+      "xiaohongshu",
+      "xpeng"
+    ],
+    "newBrandCount": 8,
+    "netNewAssetCount": 14,
+    "allRequestedCompaniesAdmitted": false,
+    "allRequestedVariantsFound": false
+  },
+  "companies": [
+    {
+      "ordinal": 1,
+      "mianstackId": "bytedance",
+      "name": "字节跳动",
+      "mianstackUrl": "https://mianstack.com/company/bytedance/interview/",
+      "canonicalId": "bytedance",
+      "entityType": "company",
+      "website": "https://www.bytedance.com/zh/",
+      "catalogId": "bytedance",
+      "catalogStatus": "available",
+      "relatedCatalogIds": [],
+      "defaultAsset": "logo-english.svg",
+      "catalogAssets": [
+        {
+          "file": "logo-english.svg",
+          "variant": "logo",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "status": "current",
+          "provenance": {
+            "sourceType": "commons",
+            "processing": "original"
+          },
+          "source": "https://upload.wikimedia.org/wikipedia/commons/0/07/ByteDance_logo_English.svg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:ByteDance_logo_English.svg"
+        },
+        {
+          "file": "icon-white-official.svg",
+          "variant": "icon",
+          "language": "none",
+          "layout": "standalone",
+          "color": "white",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "qualityNotes": [
+            "100 × 88 viewBox，纯路径矢量，无内嵌位图。",
+            "官方白色图形，须在深色背景使用；没有从组合标中裁切。"
+          ],
+          "source": "https://www.bytedance.com/zh/#embedded-svg-img-2",
+          "sourcePage": "https://www.bytedance.com/zh/"
+        }
+      ],
+      "variants": {
+        "withText": {
+          "catalogFiles": ["logo-english.svg"],
+          "searchStatus": "catalog-available"
+        },
+        "withoutText": {
+          "catalogFiles": ["icon-white-official.svg"],
+          "searchStatus": "catalog-available"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "catalog-existing-or-updated",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://www.bytedance.com/zh/",
+            "httpStatus": 200
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "source": "https://www.bytedance.com/zh/#embedded-svg-img-0",
+          "sourcePage": "https://www.bytedance.com/zh/",
+          "downloadStatus": "downloaded",
+          "variant": "logo",
+          "language": "bilingual",
+          "rightsStatus": "pending-review",
+          "sha256": "324408bdb167b07e9be1be51510e4014176f11c169b1f058b409de7ff299c146",
+          "bytes": 9348,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/scoped-001-016/drafts/bytedance/official-embedded-0.svg"
+        },
+        {
+          "source": "https://www.bytedance.com/zh/#embedded-svg-img-1",
+          "sourcePage": "https://www.bytedance.com/zh/",
+          "downloadStatus": "downloaded",
+          "variant": "logo",
+          "language": "bilingual",
+          "rightsStatus": "pending-review",
+          "sha256": "a07b002e7fe99cd02d781ea71beb710a7485f50074ac6fa2b24055f32ddfffbc",
+          "bytes": 9461,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/scoped-001-016/drafts/bytedance/official-embedded-1.svg"
+        },
+        {
+          "source": "https://www.bytedance.com/zh/#embedded-svg-img-2",
+          "sourcePage": "https://www.bytedance.com/zh/",
+          "downloadStatus": "downloaded",
+          "variant": "icon",
+          "language": "none",
+          "rightsStatus": "permitted",
+          "sha256": "31320dac45abdc933122c9980cea790fa12ee99f46a0b7ca926c59b5637da0a8",
+          "bytes": 450,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/scoped-001-016/drafts/bytedance/official-embedded-2.svg"
+        }
+      ],
+      "notes": [
+        "现有彩色英文组合保留 SVG，重复 PNG 已删除。新增官网首页主体区域的独立白色四柱 SVG，供深色背景无字场景使用。官网页头白色及彩色中英组合 SVG 已原样解码为草稿，中文组合字形的分发依据仍待单独核实。"
+      ],
+      "nextStep": "继续查缺失版本的独立官方原件；逐文件核实品质与分发依据。"
+    },
+    {
+      "ordinal": 2,
+      "mianstackId": "alibaba",
+      "name": "阿里巴巴",
+      "mianstackUrl": "https://mianstack.com/company/alibaba/interview/",
+      "canonicalId": "alibaba",
+      "entityType": "company",
+      "website": "https://ali-home.alibaba.com/resource-logos",
+      "catalogId": "alibaba",
+      "catalogStatus": "available",
+      "relatedCatalogIds": [],
+      "defaultAsset": "wordmark-orange.svg",
+      "catalogAssets": [
+        {
+          "file": "wordmark-orange.svg",
+          "variant": "wordmark",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "status": "current",
+          "provenance": {
+            "sourceType": "commons",
+            "processing": "original"
+          },
+          "qualityNotes": ["纯英文字标，未含阿里图形；不是完整的集团组合标识。"],
+          "source": "https://upload.wikimedia.org/wikipedia/commons/4/41/Alibaba_en_logo.svg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Alibaba_en_logo.svg"
+        },
+        {
+          "file": "wordmark-orange-chinese.svg",
+          "variant": "wordmark",
+          "language": "zh",
+          "layout": "horizontal",
+          "color": "brand",
+          "status": "current",
+          "provenance": {
+            "sourceType": "commons",
+            "processing": "original"
+          },
+          "qualityNotes": ["纯中文“阿里巴巴”字标，未含阿里图形。"],
+          "source": "https://upload.wikimedia.org/wikipedia/commons/0/03/Alibaba_zh_logo.svg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Alibaba_zh_logo.svg"
+        }
+      ],
+      "variants": {
+        "withText": {
+          "catalogFiles": ["wordmark-orange.svg", "wordmark-orange-chinese.svg"],
+          "searchStatus": "catalog-available"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "pending-see-notes"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "catalog-existing-or-updated",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://ali-home.alibaba.com/resource-logos",
+            "httpStatus": 200
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "source": "https://ali-home-data.oss-cn-hangzhou.aliyuncs.com/ecms-files/886024452/ae99cd49-2667-464e-b9db-b39cee0126e1.png",
+          "sourcePage": "https://ali-home.alibaba.com/resource-logos",
+          "downloadStatus": "downloaded",
+          "rightsStatus": "pending-review",
+          "sha256": "769468b1e50df3f032a0caccb7f0fe5a0a229f5f3c955cb9c1e49676690cf0d6",
+          "bytes": 22712,
+          "width": 2072,
+          "height": 266,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/scoped-001-016/drafts/alibaba/standard-logo.png"
+        },
+        {
+          "source": "https://ali-home-data.oss-cn-hangzhou.aliyuncs.com/ecms-files/886024452/d7eaad8d-b2b1-4f5f-ad09-9338bfe8efc5.png",
+          "sourcePage": "https://ali-home.alibaba.com/resource-logos",
+          "downloadStatus": "downloaded",
+          "rightsStatus": "pending-review",
+          "sha256": "99e16b3aa1342434196ae400c5ad1ea1e5dd91265d30570545b5d6ffd09a3b3f",
+          "bytes": 14438,
+          "width": 1737,
+          "height": 267,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/scoped-001-016/drafts/alibaba/logo-horizontal-zh.png"
+        }
+      ],
+      "notes": [
+        "现有中/英橙色纯字标继续保留。官方资源页明确提供标准英文横版及中文横版等原始 PNG，已保存并看图；包含人脸 a 图形，与已收录纯字标并非同一完整作品，不能把纯字标 PD 判断扩展到该人脸图形。官方组合高清原件留待权利核实，未裁出纯图。"
+      ],
+      "nextStep": "继续查缺失版本的独立官方原件；逐文件核实品质与分发依据。"
+    },
+    {
+      "ordinal": 3,
+      "mianstackId": "baidu",
+      "name": "百度",
+      "mianstackUrl": "https://mianstack.com/company/baidu/interview/",
+      "canonicalId": "baidu",
+      "entityType": "company",
+      "website": "https://home.baidu.com/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "pending-see-notes"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "pending-see-notes"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "pending-review",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://home.baidu.com/",
+            "httpStatus": 200
+          },
+          {
+            "url": "https://home.baidu.com/media_resource/show_detail/res_id/2/tab_id/1"
+          },
+          {
+            "url": "https://www.baidu.com/duty/copyright.html"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "source": "https://static.home.baidu.com/homebd/heaikgnlfdmjbc1565603510.rar?authorization=bce-auth-v1%2Fe6803def36ae467f81ebdb4bdc75f119%2F2019-08-12T09%3A51%3A50Z%2F-1%2F%2F0390dfab18dbd5670ff2d80eb4ba96ee73eec173f32f4a88aca5996e908677b7",
+          "sourcePage": "https://home.baidu.com/media_resource/show_detail/res_id/2/tab_id/1",
+          "downloadStatus": "failed",
+          "error": {
+            "curlExit": 35,
+            "http": "000\n"
+          },
+          "rightsStatus": "pending-review",
+          "visualReviewed": false
+        },
+        {
+          "source": "https://home.baidu.com/Public/img/logo.png?v=15",
+          "sourcePage": "https://home.baidu.com/",
+          "downloadStatus": "downloaded",
+          "rightsStatus": "pending-review",
+          "sha256": "d95942708a67aaac7bf4da585384fdf5841d4ce69a28cfbe5beb1c47ac72f406",
+          "bytes": 2805,
+          "width": 126,
+          "height": 40,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/scoped-001-016/drafts/baidu/logo-header.png"
+        }
+      ],
+      "notes": [
+        "已核对官方标准彩色品牌页，明确要求整体使用、熊掌不能代替 Logo，使用授权需咨询百度法务/品牌管理部。官网原始 126×40 页头图已下载并原生尺寸查看，较小不称高清。品牌页 1.23MB RAR 下载入口可追溯，但本次签名 CDN 发生 TLS/连接失败，未取得包。CoreUI、Tabler 等是第三方绘制图标，不替代官方原件，未入库。"
+      ],
+      "nextStep": "按记录继续补高清官方原件、版本或可覆盖图库分发的依据；草稿不计入正式资源。"
+    },
+    {
+      "ordinal": 4,
+      "mianstackId": "kuaishou",
+      "name": "快手",
+      "mianstackUrl": "https://mianstack.com/company/kuaishou/interview/",
+      "canonicalId": "kuaishou",
+      "entityType": "company",
+      "website": "https://www.kuaishou.com/official/material-lib",
+      "catalogId": "kuaishou",
+      "catalogStatus": "available",
+      "relatedCatalogIds": [],
+      "defaultAsset": "icon-orange-official.png",
+      "catalogAssets": [
+        {
+          "file": "icon-orange-official.png",
+          "variant": "icon",
+          "language": "none",
+          "layout": "standalone",
+          "color": "brand",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "qualityNotes": [
+            "1024 × 1024 像素，透明背景；有效图形范围约 680 × 781 像素。",
+            "直接保存官方原始文件，未裁切、放大、改色或重绘。"
+          ],
+          "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/pure-logo-1-min.png",
+          "sourcePage": "https://www.kuaishou.com/official/material-lib"
+        },
+        {
+          "file": "logo-english-official.jpg",
+          "variant": "logo",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "qualityNotes": [
+            "13725 × 9097 像素官方原始 JPEG，白底，保留大量原始留白；有效图稿约 8559 × 1596 像素。",
+            "保留来源原始字节，未裁切、改色、放大或重新压缩。JPEG有压缩，透明独立图形另由官方PNG提供。"
+          ],
+          "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/e-logo-1-min.jpeg",
+          "sourcePage": "https://www.kuaishou.com/official/material-lib"
+        }
+      ],
+      "variants": {
+        "withText": {
+          "catalogFiles": ["logo-english-official.jpg"],
+          "searchStatus": "catalog-available"
+        },
+        "withoutText": {
+          "catalogFiles": ["icon-orange-official.png"],
+          "searchStatus": "catalog-available"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "catalog-existing-or-updated",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://www.kuaishou.com/official/material-lib",
+            "httpStatus": 200
+          },
+          {
+            "url": "https://commons.wikimedia.org/w/index.php?title=File:Kuaishou_logo.png&oldid=686719154"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/pure-logo-1-min.png",
+          "sourcePage": "https://www.kuaishou.com/official/material-lib",
+          "downloadStatus": "downloaded",
+          "rightsStatus": "permitted",
+          "sha256": "dea4cc25d61910638339e6867009e89e95ef0da54ebf824fa1aea041ddd07305",
+          "bytes": 11543,
+          "width": 1024,
+          "height": 1024,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/scoped-001-016/drafts/kuaishou/icon-orange.png"
+        },
+        {
+          "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/word-logo-1-min.png",
+          "sourcePage": "https://www.kuaishou.com/official/material-lib",
+          "downloadStatus": "downloaded",
+          "rightsStatus": "pending-review",
+          "sha256": "65da9ce09e5db07248ffc64fa32c89d2a1e1e8de26b724c550486a7e03456120",
+          "bytes": 15978,
+          "width": 1571,
+          "height": 590,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/scoped-001-016/drafts/kuaishou/logo-chinese.png"
+        },
+        {
+          "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/e-logo-1-min.jpeg",
+          "sourcePage": "https://www.kuaishou.com/official/material-lib",
+          "downloadStatus": "downloaded",
+          "rightsStatus": "pending-review",
+          "sha256": "0cf90382c21ccc008b3fa57fce28a6fb308aa7c869034f6e626ff3b30cc08a37",
+          "bytes": 399040,
+          "width": 13725,
+          "height": 9097,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/scoped-001-016/drafts/kuaishou/logo-english.jpg"
+        }
+      ],
+      "notes": [
+        "正式库保留官方 1024×1024 透明摄影机图形 PNG 和 13725×9097 英文组合 JPG。英文组合有效图稿约 8559×1596 像素，保留原始白底及留白。已对照 Commons 4106×760 透明英文组合的双圆、机身、三角镜头、英文字形及橙灰配色，核对同稿。Commons PNG 仅留草稿核对证据。官方中文组合也留在草稿，中文字形的分发依据仍待核实。"
+      ],
+      "nextStep": "继续查缺失版本的独立官方原件；逐文件核实品质与分发依据。"
+    },
+    {
+      "ordinal": 5,
+      "mianstackId": "tencent",
+      "name": "腾讯",
+      "mianstackUrl": "https://mianstack.com/company/tencent/interview/",
+      "canonicalId": "tencent",
+      "entityType": "company",
+      "website": "https://www.tencent.com/zh-cn/",
+      "catalogId": "tencent",
+      "catalogStatus": "available",
+      "relatedCatalogIds": [],
+      "defaultAsset": "wordmark-blue-official.png",
+      "catalogAssets": [
+        {
+          "file": "wordmark-blue-official.png",
+          "variant": "wordmark",
+          "language": "bilingual",
+          "layout": "horizontal",
+          "color": "brand",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "qualityNotes": [
+            "2953 × 889 像素，透明背景，保留原始上下留白。",
+            "有效字形范围约为 2763 × 370 像素。",
+            "蓝色为 #0052D9。"
+          ],
+          "source": "https://www.tencent.com/wp-content/uploads/2022/12/01_Tencent_Standard-Logo.png",
+          "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/"
+        },
+        {
+          "file": "wordmark-black-official.png",
+          "variant": "wordmark",
+          "language": "bilingual",
+          "layout": "horizontal",
+          "color": "black",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "qualityNotes": ["2953 × 889 像素，透明背景，保留原始上下留白。"],
+          "source": "https://www.tencent.com/wp-content/uploads/2022/12/01_Tencent_Logo_Black.png",
+          "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/"
+        },
+        {
+          "file": "wordmark-white-official.png",
+          "variant": "wordmark",
+          "language": "bilingual",
+          "layout": "horizontal",
+          "color": "white",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "qualityNotes": ["2953 × 889 像素，透明背景，保留原始上下留白。"],
+          "source": "https://www.tencent.com/wp-content/uploads/2022/12/01_Tencent_Logo_Reverse-type.png",
+          "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/"
+        }
+      ],
+      "variants": {
+        "withText": {
+          "catalogFiles": [
+            "wordmark-blue-official.png",
+            "wordmark-black-official.png",
+            "wordmark-white-official.png"
+          ],
+          "searchStatus": "catalog-available"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "pending-see-notes"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "catalog-existing-or-updated",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://www.tencent.com/zh-cn/",
+            "httpStatus": 200
+          },
+          {
+            "url": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "source": "https://www.tencent.com/wp-content/uploads/2022/12/04_Tencent_Graphics.png",
+          "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+          "downloadStatus": "downloaded",
+          "rightsStatus": "pending-review",
+          "sha256": "ec5cf76ff1f8442e189422754bebbb49e95cbdb7f064c43f44c1fb30a6a81348",
+          "bytes": 19322,
+          "width": 910,
+          "height": 889,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/scoped-001-016/drafts/tencent/graphic-blue-square.png"
+        },
+        {
+          "source": "https://www.tencent.com/wp-content/uploads/2024/05/04_Tencent_Graphics2-2.png",
+          "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+          "downloadStatus": "downloaded",
+          "rightsStatus": "pending-review",
+          "sha256": "b30969d3b66ab9472a10d27280802cba5ecb762aaf18ae36491ab2ad7550cb28",
+          "bytes": 13015,
+          "width": 910,
+          "height": 889,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/scoped-001-016/drafts/tencent/graphic-blue-diamond.png"
+        }
+      ],
+      "notes": [
+        "正式库保留官方 2953×889 蓝/黑/白中英 PNG。官方蓝色 PNG 的有效字形约 2763×370 像素，清晰度覆盖同稿 1280×172 紧凑 PNG，重复的紧凑 PNG 已删除。官方媒体库另有两种原始蓝色无字图形（方框反白 t 与独立 t，均 910×889），已下载看图。两图构图不同，独立图形的分发依据仍待核实，均留在草稿。"
+      ],
+      "nextStep": "继续查缺失版本的独立官方原件；逐文件核实品质与分发依据。"
+    },
+    {
+      "ordinal": 6,
+      "mianstackId": "meituan",
+      "name": "美团",
+      "mianstackUrl": "https://mianstack.com/company/meituan/interview/",
+      "canonicalId": "meituan",
+      "entityType": "company",
+      "website": "https://www.meituan.com/",
+      "catalogId": "meituan",
+      "catalogStatus": "available",
+      "relatedCatalogIds": [],
+      "defaultAsset": "logo-chinese-official.png",
+      "catalogAssets": [
+        {
+          "file": "logo-chinese-official.png",
+          "variant": "logo",
+          "language": "zh",
+          "layout": "horizontal",
+          "color": "brand",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "qualityNotes": ["1896 × 687 像素，透明背景，来自官方媒体素材包。", "主黄为 #FFD100。"],
+          "source": "https://s3plus.meituan.net/smart/22c45b30-80ba-4aa5-bfad-2bfaed7beb4e.zip",
+          "sourcePage": "https://www.meituan.com/media"
+        },
+        {
+          "file": "logo-bilingual-commons.png",
+          "variant": "logo",
+          "language": "bilingual",
+          "layout": "horizontal",
+          "color": "brand",
+          "status": "current",
+          "provenance": {
+            "sourceType": "commons",
+            "processing": "original"
+          },
+          "source": "https://upload.wikimedia.org/wikipedia/commons/6/61/Meituan_English_Logo.png",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Meituan_English_Logo.png"
+        }
+      ],
+      "variants": {
+        "withText": {
+          "catalogFiles": ["logo-chinese-official.png", "logo-bilingual-commons.png"],
+          "searchStatus": "catalog-available"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "pending-see-notes"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "catalog-existing-or-updated",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://www.meituan.com/",
+            "httpStatus": 200
+          },
+          {
+            "url": "https://www.meituan.com/media"
+          }
+        ]
+      },
+      "draftsAndEvidence": [],
+      "notes": [
+        "既有官方中文组合 PNG 1896×687 与英文组合保持不动，均已实际看图。本次从公司官网/媒体包线索继续核查，原始公司图形是含“美团”文字的黄色方块，不将外卖袋鼠等产品标识混作公司无字图形。官方媒体 ZIP 本次 TLS 失败；现有已验证包原件不受影响。未裁字或重绘无字版。"
+      ],
+      "nextStep": "继续查缺失版本的独立官方原件；逐文件核实品质与分发依据。"
+    },
+    {
+      "ordinal": 7,
+      "mianstackId": "xiaohongshu",
+      "name": "小红书",
+      "mianstackUrl": "https://mianstack.com/company/xiaohongshu/interview/",
+      "canonicalId": "xiaohongshu",
+      "entityType": "company",
+      "website": "https://www.xiaohongshu.com/",
+      "catalogId": "xiaohongshu",
+      "catalogStatus": "available",
+      "relatedCatalogIds": [],
+      "defaultAsset": "wordmark-square-appstore.jpg",
+      "catalogAssets": [
+        {
+          "file": "wordmark-square-appstore.jpg",
+          "variant": "wordmark",
+          "language": "zh",
+          "layout": "horizontal",
+          "color": "brand",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "rendered"
+          },
+          "qualityNotes": [
+            "512 × 512 像素，来自官方应用商店直接提供的 artworkUrl512；保留原始 JPG 字节，不透明红底。",
+            "这是小红书应用使用的方形品牌字标，不是独立无字图形；没有将 256px Commons 文件放大。",
+            "商店提供的栅格展示图，不是原生矢量或设计源文件；按原生像素使用。"
+          ],
+          "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/38/bd/a2/38bda237-424d-e201-35a4-e4485ce4a4fc/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/512x512bb.jpg",
+          "sourcePage": "https://apps.apple.com/cn/app/id741292507"
+        }
+      ],
+      "variants": {
+        "withText": {
+          "catalogFiles": ["wordmark-square-appstore.jpg"],
+          "searchStatus": "catalog-available"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "pending-see-notes"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "admitted-with-variant-gap",
+        "artworkViewed": true,
+        "artworkReviewScope": "historical original contact sheet only; current artwork and full native quality not yet cleared",
+        "checkedPages": [
+          {
+            "url": "https://oia.xiaohongshu.com/oia?deeplink=xhsdiscover",
+            "httpStatus": 200,
+            "finalUrl": "https://oia.xiaohongshu.com/oia?deeplink=xhsdiscover",
+            "title": "打开小红书",
+            "error": null
+          },
+          {
+            "url": "https://apps.apple.com/cn/app/id741292507",
+            "result": "官方应用商店及公开lookup接口核对Xingin、品牌名与当下512px图稿"
+          },
+          {
+            "url": "https://commons.wikimedia.org/w/index.php?title=File:XiaohongshuLOGO.png&oldid=1059366505",
+            "result": "正文PD-textlogo；结构化数据残留CC BY-SA标签，未视为品牌授权"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "sourcePage": "https://apps.apple.com/cn/app/id741292507",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/38/bd/a2/38bda237-424d-e201-35a4-e4485ce4a4fc/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/512x512bb.jpg",
+          "variant": "wordmark",
+          "textPresence": "zh",
+          "rightsStatus": "admitted",
+          "sha256": "9edf8faf71ae6c9294f86085c19a5e5056bc732cabe0d3cca9461ff7f73b8d47",
+          "bytes": 19031,
+          "note": "已入库，官方商店提供的512px栅格展示，不是矢量设计源。",
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/root/xiaohongshu-appstore-512.jpg"
+        }
+      ],
+      "notes": [
+        "实际对照官网、官方商店512px及Commons256px，文字形态一致。没有把低像素文件放大，也不收口号组合的重复文件。",
+        "未找到独立无字公司图形。小红书文字方形应用标识不能标成无字icon。"
+      ],
+      "nextStep": "继续查缺失版本的独立官方原件；逐文件核实品质与分发依据。"
+    },
+    {
+      "ordinal": 8,
+      "mianstackId": "huawei",
+      "name": "华为",
+      "mianstackUrl": "https://mianstack.com/company/huawei/interview/",
+      "canonicalId": "huawei",
+      "entityType": "company",
+      "website": "https://www.huawei.com/cn/",
+      "catalogId": "huawei",
+      "catalogStatus": "available",
+      "relatedCatalogIds": [],
+      "defaultAsset": "wordmark-dark-2018.png",
+      "catalogAssets": [
+        {
+          "file": "wordmark-dark-2018.png",
+          "variant": "wordmark",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "monochrome",
+          "status": "current",
+          "provenance": {
+            "sourceType": "commons",
+            "processing": "rendered"
+          },
+          "qualityNotes": ["仅含 HUAWEI 字标，未含花瓣图形。"],
+          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Huawei_wordmark_2019.svg/1280px-Huawei_wordmark_2019.svg.png",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Huawei_wordmark_2019.svg"
+        }
+      ],
+      "variants": {
+        "withText": {
+          "catalogFiles": ["wordmark-dark-2018.png"],
+          "searchStatus": "catalog-available"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "pending-see-notes"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "catalog-existing-or-updated",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://www.huawei.com/cn/",
+            "httpStatus": 200
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "source": "https://www-file.huawei.com/dam/asset/view/1925d2d933444b1d9a2649e4998948cc.png",
+          "sourcePage": "https://www.huawei.com/cn/",
+          "downloadStatus": "failed",
+          "error": {
+            "curlExit": 28,
+            "http": "000\n"
+          },
+          "rightsStatus": "pending-review",
+          "visualReviewed": false
+        },
+        {
+          "source": "https://www.huawei.com/-/media/htemplate-home/1.0.1.20251205144752/components/assets/img/favicon-logo.svg",
+          "sourcePage": "https://www.huawei.com/cn/",
+          "downloadStatus": "downloaded",
+          "rightsStatus": "pending-review",
+          "sha256": "18c6f80d423c1b1e01e4a6e02f66e1375567fd909de1af55c8013430a504126d",
+          "bytes": 3315,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/scoped-001-016/drafts/huawei/logo-vertical.svg"
+        },
+        {
+          "source": "https://www.huawei.com/-/media/hcomponent-header/1.0.1.20260908162100/component/img/huawei_logo.png",
+          "sourcePage": "https://www.huawei.com/cn/",
+          "downloadStatus": "downloaded",
+          "variant": "logo",
+          "language": "en",
+          "rightsStatus": "pending-review",
+          "sha256": "492e58a2680a4f4607185e21d55183f0d2ac976b8f4737512a495672d31e4070",
+          "bytes": 12719,
+          "width": 266,
+          "height": 60,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/scoped-001-016/drafts/huawei/logo-header.png"
+        }
+      ],
+      "notes": [
+        "官方页头横版 PNG 266×60 和 favicon-logo.svg 纵版纯路径原件已保存并看图。特别确认 SVG 实际仍带 HUAWEI 文字，不将其文件名中的 favicon 当作无文字图形；当前未获得官方独立无字花瓣原件。既有 HUAWEI 文字标识继续保留，新花瓣组合未取得可覆盖本图库镜像的分发依据，留待审核。官网 schema.org 提供的另一企业大图 URL 本次超时，未称下载成功。"
+      ],
+      "nextStep": "继续查缺失版本的独立官方原件；逐文件核实品质与分发依据。"
+    },
+    {
+      "ordinal": 9,
+      "mianstackId": "antgroup",
+      "name": "蚂蚁集团",
+      "mianstackUrl": "https://mianstack.com/company/antgroup/interview/",
+      "canonicalId": "antgroup",
+      "entityType": "company",
+      "website": "https://www.antgroup.com/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "pending-see-notes"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "pending-see-notes"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "official-originals-drafted-permission-pending",
+        "artworkViewed": true,
+        "artworkReviewScope": "historical original contact sheet only; current artwork and full native quality not yet cleared",
+        "checkedPages": [
+          {
+            "url": "https://talent.antgroup.com/",
+            "httpStatus": 200,
+            "finalUrl": "https://talent.antgroup.com/",
+            "title": null,
+            "error": null
+          },
+          {
+            "url": "https://www.antgroup.com/news-media/media-library",
+            "result": "实际打开资料库，看到蚂蚁集团品牌（中英）下载项；当前页头图稿与包内一致。"
+          },
+          {
+            "url": "https://render.alipay.com/p/yuyan/antfin-data_news-media-h5data/zh_CN.json",
+            "result": "实际读取官方页面数据，获得官方AntGroup.zip下载地址。"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Ant_group1.png",
+            "result": "上传者以Own work声称CC BY-SA，不能证明其有权许可蚂蚁集团原作品；不用于入库。"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "sourcePage": "https://www.antgroup.com/news-media/media-library",
+          "url": "https://mdn.alipayobjects.com/portal_ehkctf/uri/file/as/AntGroup.zip",
+          "variant": "logo",
+          "textPresence": "bilingual",
+          "rightsStatus": "pending-review",
+          "sha256": "615a83a5a0d4c4f7a0b34269c2f6bd497c56e568eb95156e244d9367ee847531",
+          "bytes": 72725,
+          "note": "官方ZIP成员：蚂蚁集团标志（中英）/蚂蚁集团标志（中英）PNG/蚂蚁集团标志(中)-反白.png；原生约3864×2251透明PNG，实际有效图稿比画布小，保留留白未裁切。",
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/root/antgroup-draft/蚂蚁集团标志(中)-反白.png"
+        },
+        {
+          "sourcePage": "https://www.antgroup.com/news-media/media-library",
+          "url": "https://mdn.alipayobjects.com/portal_ehkctf/uri/file/as/AntGroup.zip",
+          "variant": "logo",
+          "textPresence": "bilingual",
+          "rightsStatus": "pending-review",
+          "sha256": "7edddc64238fbb7e201b1e19e194410a227f3715aaecd08303f839e2aa9f5bdf",
+          "bytes": 106203,
+          "note": "官方ZIP成员：蚂蚁集团标志（中英）/蚂蚁集团标志（中英）PNG/蚂蚁集团标志(中)-正色.png；原生约3864×2251透明PNG，实际有效图稿比画布小，保留留白未裁切。",
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/root/antgroup-draft/蚂蚁集团标志(中)-正色.png"
+        },
+        {
+          "sourcePage": "https://www.antgroup.com/news-media/media-library",
+          "url": "https://mdn.alipayobjects.com/portal_ehkctf/uri/file/as/AntGroup.zip",
+          "variant": "logo",
+          "textPresence": "en",
+          "rightsStatus": "pending-review",
+          "sha256": "1b0eb3e02fe0ce87edfa055e30109f1b3d9dc7a7d036d1320e2bd9d7e134b620",
+          "bytes": 62954,
+          "note": "官方ZIP成员：蚂蚁集团标志（中英）/蚂蚁集团标志（中英）PNG/蚂蚁集团标志(英)-反白.png；原生约3864×2251透明PNG，实际有效图稿比画布小，保留留白未裁切。",
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/root/antgroup-draft/蚂蚁集团标志(英)-反白.png"
+        },
+        {
+          "sourcePage": "https://www.antgroup.com/news-media/media-library",
+          "url": "https://mdn.alipayobjects.com/portal_ehkctf/uri/file/as/AntGroup.zip",
+          "variant": "logo",
+          "textPresence": "en",
+          "rightsStatus": "pending-review",
+          "sha256": "82dd934c21234a6b94c4ee21b25aca15999ca5231db2e5f05f2bf1174e70be95",
+          "bytes": 94556,
+          "note": "官方ZIP成员：蚂蚁集团标志（中英）/蚂蚁集团标志（中英）PNG/蚂蚁集团标志(英)-正色.png；原生约3864×2251透明PNG，实际有效图稿比画布小，保留留白未裁切。",
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/root/antgroup-draft/蚂蚁集团标志(英)-正色.png"
+        }
+      ],
+      "notes": [
+        "四份官方原件分别覆盖中英双语/纯英文、正色/反白，已统一背景看图；ZIP另含RGB/CMYK AI源文件，保留原包。",
+        "未确认允许独立Logo库镜像分发，未进入logos。没有从组合标裁出蚂蚁图形；面栈88px图标不作为高清原件入库。"
+      ],
+      "nextStep": "按记录继续补高清官方原件、版本或可覆盖图库分发的依据；草稿不计入正式资源。"
+    },
+    {
+      "ordinal": 10,
+      "mianstackId": "didi",
+      "name": "滴滴",
+      "mianstackUrl": "https://mianstack.com/company/didi/interview/",
+      "canonicalId": "didi",
+      "entityType": "company",
+      "website": "https://www.didiglobal.com/",
+      "catalogId": "didi",
+      "catalogStatus": "available",
+      "relatedCatalogIds": [],
+      "defaultAsset": "logo-english.svg",
+      "catalogAssets": [
+        {
+          "file": "logo-english.svg",
+          "variant": "logo",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "status": "current",
+          "provenance": {
+            "sourceType": "commons",
+            "processing": "original"
+          },
+          "source": "https://upload.wikimedia.org/wikipedia/commons/7/75/DiDi_Logo.svg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:DiDi_Logo.svg"
+        },
+        {
+          "file": "icon-gray-official.svg",
+          "variant": "icon",
+          "language": "none",
+          "layout": "standalone",
+          "color": "monochrome",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "qualityNotes": [
+            "41.15 × 41.15 viewBox，纯路径矢量，无内嵌位图。",
+            "原件为 #ADADAD 灰色，保留原始底部留白；不是橙色品牌版本。"
+          ],
+          "source": "https://website.didiglobal.com/dist/media/footer-logo.7521c19c.svg",
+          "sourcePage": "https://www.didiglobal.com/"
+        }
+      ],
+      "variants": {
+        "withText": {
+          "catalogFiles": ["logo-english.svg"],
+          "searchStatus": "catalog-available"
+        },
+        "withoutText": {
+          "catalogFiles": ["icon-gray-official.svg"],
+          "searchStatus": "catalog-available"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "catalog-existing-or-updated",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://www.didiglobal.com/",
+            "httpStatus": 200
+          },
+          {
+            "url": "https://website.didiglobal.com/dist/js/main.9a074ac6.js"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "source": "https://website.didiglobal.com/dist/media/logo-zh.5837eebe.svg",
+          "sourcePage": "https://www.didiglobal.com/",
+          "downloadStatus": "downloaded",
+          "variant": "logo",
+          "language": "zh",
+          "rightsStatus": "pending-review",
+          "sha256": "bc8b1689d5bb4e7ca33a3431d44934dba27e24eee22b2fcbeb95e4e41b42938f",
+          "bytes": 2242,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/scoped-001-016/drafts/didi-zh.svg"
+        },
+        {
+          "source": "https://website.didiglobal.com/dist/media/logo-en.cdc5b041.svg",
+          "sourcePage": "https://www.didiglobal.com/",
+          "downloadStatus": "downloaded",
+          "variant": "logo",
+          "language": "en",
+          "rightsStatus": "pending-review",
+          "sha256": "05404864efb4a10895ead480817f5292dddb51129f580d9fde08425efb6c5840",
+          "bytes": 1603,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/scoped-001-016/drafts/didi-en.svg"
+        },
+        {
+          "source": "https://website.didiglobal.com/dist/media/footer-logo.7521c19c.svg",
+          "sourcePage": "https://www.didiglobal.com/",
+          "downloadStatus": "downloaded",
+          "variant": "icon",
+          "language": "none",
+          "rightsStatus": "permitted",
+          "sha256": "49b12559cde733befbf01747be55ade2b243436d0c75d0d307facbd49162d047",
+          "bytes": 486,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/scoped-001-016/drafts/didi-footer.svg"
+        }
+      ],
+      "notes": [
+        "现有英文组合保留 SVG，重复 PNG 已删除。当前官网主 JS 提供中文、英文及页脚灰色 D 形三份独立 SVG，已逐图查看。灰色独立图形与组合 D 的顶边、开口和右侧高低断点一致，新增官方灰色原件。中文组合保留草稿，额外中文字形的分发依据仍待核实。"
+      ],
+      "nextStep": "继续查缺失版本的独立官方原件；逐文件核实品质与分发依据。"
+    },
+    {
+      "ordinal": 11,
+      "mianstackId": "pinduoduo",
+      "name": "拼多多",
+      "mianstackUrl": "https://mianstack.com/company/pinduoduo/interview/",
+      "canonicalId": "pinduoduo",
+      "entityType": "company",
+      "website": "https://www.pinduoduo.com/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "pending-see-notes"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "pending-see-notes"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "pending-review",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://www.pinduoduo.com/",
+            "httpStatus": 200
+          },
+          {
+            "url": "https://commons.wikimedia.org/w/index.php?title=File:Pinduoduologo.png&oldid=1134825029"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "source": "https://cdn.pinduoduo.com/upload/home/img/common/pdd_logo_v2.png",
+          "sourcePage": "https://www.pinduoduo.com/",
+          "downloadStatus": "downloaded",
+          "rightsStatus": "pending-review",
+          "sha256": "eaecdaab33edb3937f222fa906a188f923212328bce4c1aacd59f52ce4b1f61c",
+          "bytes": 35323,
+          "width": 360,
+          "height": 126,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/scoped-001-016/drafts/pinduoduo/logo-chinese.png"
+        }
+      ],
+      "notes": [
+        "官方当前素材是购物物品拼心图形+中文“拼多多”与口号，360×126 透明 PNG 已原样保存、原生像素查看，清晰度有限。Commons Pinduoduologo.png 683×173 为另一旧式几何“拼”心形公司标，含英文 Pinduoduo；与当前购物拼心图形不同，不能互换，不能用旧标公共领域判断授权当前图形。当前官网版权与独立分发权尚未确认，未入库；未混用 PDD Holdings/Temu。"
+      ],
+      "nextStep": "按记录继续补高清官方原件、版本或可覆盖图库分发的依据；草稿不计入正式资源。"
+    },
+    {
+      "ordinal": 12,
+      "mianstackId": "jd",
+      "name": "京东",
+      "mianstackUrl": "https://mianstack.com/company/jd/interview/",
+      "canonicalId": "jd",
+      "entityType": "company",
+      "website": "https://www.jd.com/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "pending-see-notes"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "pending-see-notes"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "guideline-found-no-redistributable-hd-original",
+        "artworkViewed": true,
+        "artworkReviewScope": "historical original contact sheet only; current artwork and full native quality not yet cleared",
+        "checkedPages": [
+          {
+            "url": "https://corporate.jd.com/",
+            "httpStatus": 0,
+            "finalUrl": "https://corporate.jd.com/",
+            "title": null,
+            "error": "curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to corporate.jd.com:443 \n"
+          },
+          {
+            "url": "https://jdrdl.jd.com/Brand-Logo.html",
+            "result": "实际阅读官方规范：JOY四足版本与京东朗正体组成品牌标识；保存规范图仅作版本参照，不作可下载Logo。"
+          },
+          {
+            "url": "https://help.jd.com/user/issue/32-4534.html",
+            "result": "官方品牌授权管理规范要求审批且不得转授权，不支持推定Logo图库镜像许可。"
+          },
+          {
+            "url": "https://corporate.jd.com/",
+            "result": "本轮页面返回JoyGen壳页，不沿用历史公司页原图作为当前高清标识证明。"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "sourcePage": "https://jdrdl.jd.com/Brand-Logo.html",
+          "url": "https://jdrdl.jd.com/assets/img/remark01.png",
+          "variant": "guideline-illustration",
+          "textPresence": "zh",
+          "rightsStatus": "pending-review",
+          "sha256": "347bdd161c1df47f337e86409f15771bc55b27b958275f933bd4154ecf172237",
+          "bytes": 27994,
+          "note": "1172×662官方规范示意，含标注与大幅白底，不能裁切充当独立Logo；只留作核对证据。",
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/root/jd-remark01.png"
+        }
+      ],
+      "notes": [
+        "未确认可在独立素材库分发的当前高清完整标识；Commons搜索未发现可用的同款权利依据。历史170×60面栈图不凑数入库。",
+        "无字JOY形象需要单独官方原件与权利核实，不能从组合里裁出。"
+      ],
+      "nextStep": "按记录继续补高清官方原件、版本或可覆盖图库分发的依据；草稿不计入正式资源。"
+    },
+    {
+      "ordinal": 13,
+      "mianstackId": "c-53bb-54ea-513f",
+      "name": "去哪儿",
+      "mianstackUrl": "https://mianstack.com/company/qunar/interview/",
+      "canonicalId": "qunar",
+      "entityType": "company",
+      "website": "https://www.qunar.com/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "pending-see-notes"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "pending-see-notes"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "pending-review",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://www.qunar.com/",
+            "httpStatus": 200
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "source": "https://qimgs.qunarzz.com/wpf_newmpic_001/7ba610125f839834b5a14758eca83a87.png",
+          "sourcePage": "https://www.qunar.com/",
+          "downloadStatus": "failed",
+          "error": {
+            "curlExit": 28,
+            "http": "000\n"
+          },
+          "rightsStatus": "pending-review",
+          "visualReviewed": false,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/scoped-001-016/drafts/qunar/logo-horizontal.png"
+        },
+        {
+          "source": "https://qimgs.qunarzz.com/wpf_newmpic_001/7ba610125f839834b5a14758eca83a87.png",
+          "sourcePage": "https://www.qunar.com/",
+          "downloadStatus": "downloaded",
+          "variant": "logo",
+          "language": "zh",
+          "rightsStatus": "pending-review",
+          "sha256": "08baf1c6847fe040601db6f1a48aca68d2542c5907aa644efba6dda48d9be082",
+          "bytes": 2298,
+          "width": 224,
+          "height": 48,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/scoped-001-016/drafts/qunar/logo-horizontal.png"
+        }
+      ],
+      "notes": [
+        "原始官方 CDN 文件已实际下载并原生尺寸看图，是青色骆驼+“去哪儿旅行”横排，224×48 透明 PNG。页面当前是 JS 应用，原件虽可追溯但像素仅适于小尺寸，未称高清；未找到有依据的更大官方无字独立文件，未裁出骆驼。Commons 查询未找到可用的具体开放 Logo 记录，仍留待分发依据与高清补充。"
+      ],
+      "nextStep": "按记录继续补高清官方原件、版本或可覆盖图库分发的依据；草稿不计入正式资源。"
+    },
+    {
+      "ordinal": 14,
+      "mianstackId": "c-867e-76ae",
+      "name": "虾皮",
+      "mianstackUrl": "https://mianstack.com/company/shopee/interview/",
+      "canonicalId": "shopee",
+      "entityType": "company",
+      "website": "https://shopee.sg/",
+      "catalogId": "shopee",
+      "catalogStatus": "available",
+      "relatedCatalogIds": [],
+      "defaultAsset": "logo-horizontal-official.svg",
+      "catalogAssets": [
+        {
+          "file": "logo-horizontal-official.svg",
+          "variant": "logo",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "qualityNotes": ["原生路径矢量，透明背景；保留官网原始 SVG 字节与 #EE4D2D 橙色。"],
+          "source": "https://deo.shopeemobile.com/shopee/shopee-careers-live-sg/assets/img/footer-shopee.62760462.svg",
+          "sourcePage": "https://careers.shopee.sg/"
+        }
+      ],
+      "variants": {
+        "withText": {
+          "catalogFiles": ["logo-horizontal-official.svg"],
+          "searchStatus": "catalog-available"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "pending-see-notes"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "admitted-with-variant-gap",
+        "artworkViewed": true,
+        "artworkReviewScope": "historical original contact sheet only; current artwork and full native quality not yet cleared",
+        "checkedPages": [
+          {
+            "url": "https://careers.shopee.sg/",
+            "httpStatus": 200,
+            "finalUrl": "https://careers.shopee.sg/",
+            "title": "Create Impact That Lasts | Shopee Careers",
+            "error": null
+          },
+          {
+            "url": "https://careers.shopee.sg/",
+            "result": "实际页面截图与官方页脚SVG查看；品牌橙色购物袋与Shopee英文横排。"
+          },
+          {
+            "url": "https://www.sea.com/news/library",
+            "result": "实际打开母公司媒体库并取得Shopee Logo官方ZIP，包内横/竖两个原始PNG。"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Shopee.svg",
+            "result": "具体横版PD-textlogo固定修订1284381307，无删除提名；与官方SVG同款。"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Shopee_logo.svg",
+            "result": "具体竖版PD-textlogo固定修订1191573910，与官方PNG同款。"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "sourcePage": "https://careers.shopee.sg/",
+          "url": "https://deo.shopeemobile.com/shopee/shopee-careers-live-sg/assets/img/footer-shopee.62760462.svg",
+          "variant": "logo",
+          "textPresence": "en",
+          "rightsStatus": "admitted",
+          "sha256": "3a15506fbbeaf7d7f75181687513ae4b14d08eb15642c063cc9c7e95f90b4a35",
+          "bytes": 8335,
+          "note": "已入库原生路径透明横版SVG。",
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/root/shopee-official.svg"
+        },
+        {
+          "sourcePage": "https://www.sea.com/news/library",
+          "url": "https://cdn.seagroup.com/webmain/static/resource/seagroup/mediaresource/logo/Shopee%20Logo/Shopee%20Logo.zip",
+          "variant": "logo",
+          "textPresence": "en",
+          "rightsStatus": "draft-quality-limited",
+          "sha256": "ddcf0776db6ffd8683ce92ad2efa2bdf73c7c8ee1bca2d2dc4d5c4c8c32afe6c",
+          "bytes": 8709,
+          "note": "600×400官方竖版PNG，有效图稿188×268；独立布局有用途，但本轮高清要求优先，只留草稿。",
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/root/Shopee_Logo_Web-Vertical.png"
+        }
+      ],
+      "notes": [
+        "正式库只保留官方原生路径横版SVG；原包横版PNG用途重复不收，竖版PNG有效188×268未列入本轮高清正式资源。",
+        "无字纯袋图形未找到合格官方独立文件；32px ICO不转格式或放大，未入库。Commons竖版SVG enable-background不符合静态子集，不自行改源文件。"
+      ],
+      "nextStep": "继续查缺失版本的独立官方原件；逐文件核实品质与分发依据。"
+    },
+    {
+      "ordinal": 15,
+      "mianstackId": "c-79d1-5927-8baf-98de",
+      "name": "科大讯飞",
+      "mianstackUrl": "https://mianstack.com/company/iflytek/interview/",
+      "canonicalId": "iflytek",
+      "entityType": "company",
+      "website": "https://www.iflytek.com/",
+      "catalogId": "iflytek",
+      "catalogStatus": "available",
+      "relatedCatalogIds": [],
+      "defaultAsset": "logo-english-official.svg",
+      "catalogAssets": [
+        {
+          "file": "logo-blue-bilingual.png",
+          "variant": "logo",
+          "language": "bilingual",
+          "layout": "horizontal",
+          "color": "brand",
+          "status": "current",
+          "provenance": {
+            "sourceType": "commons",
+            "processing": "original"
+          },
+          "qualityNotes": ["550 × 166 像素，放大使用会降低清晰度。"],
+          "source": "https://upload.wikimedia.org/wikipedia/commons/f/ff/IFlytek_logo.png",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:IFlytek_logo.png"
+        },
+        {
+          "file": "logo-white-bilingual.png",
+          "variant": "logo",
+          "language": "bilingual",
+          "layout": "horizontal",
+          "color": "white",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "qualityNotes": ["302 × 92 像素，透明背景；适合深色背景，放大易模糊。"],
+          "source": "https://www.iflytek.com/cn/static/img/logo-white.c2064c0.png",
+          "sourcePage": "https://www.iflytek.com/cn/"
+        },
+        {
+          "file": "logo-black-bilingual.png",
+          "variant": "logo",
+          "language": "bilingual",
+          "layout": "horizontal",
+          "color": "black",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "qualityNotes": ["272 × 83 像素，透明背景；适合浅色背景，放大易模糊。"],
+          "source": "https://www.iflytek.com/cn/static/js/index.eaba97afd11e2d3d87d8.js?97d64dd72195ce83a01e",
+          "sourcePage": "https://www.iflytek.com/cn/"
+        },
+        {
+          "file": "logo-english-official.svg",
+          "variant": "logo",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "qualityNotes": [
+            "168 × 33 viewBox，原生路径矢量，无内嵌位图。",
+            "保留官网原始深蓝绿色；未将已有 PNG 放大、描摹或改色。"
+          ],
+          "source": "https://www.iflytek.com/en/Public/Uploads/uploadfile/images/20230812/comlogo1.svg",
+          "sourcePage": "https://www.iflytek.com/en/"
+        }
+      ],
+      "variants": {
+        "withText": {
+          "catalogFiles": [
+            "logo-blue-bilingual.png",
+            "logo-white-bilingual.png",
+            "logo-black-bilingual.png",
+            "logo-english-official.svg"
+          ],
+          "searchStatus": "catalog-available"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "pending-see-notes"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "catalog-existing-or-updated",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://www.iflytek.com/",
+            "httpStatus": 200
+          },
+          {
+            "url": "https://www.iflytek.com/en/"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "source": "https://www.iflytek.com/en/Public/Uploads/uploadfile/images/20230812/comlogo1.svg",
+          "sourcePage": "https://www.iflytek.com/en/",
+          "downloadStatus": "downloaded",
+          "variant": "logo",
+          "language": "en",
+          "rightsStatus": "permitted",
+          "sha256": "ae825a3ddb3e7bed8c4a1691c6676cca9d003d673ba5089b246178c9bd43727f",
+          "bytes": 3327,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/scoped-001-016/drafts/iflytek/logo-english.svg"
+        },
+        {
+          "source": "https://www.iflytek.com/en/favicon.png",
+          "sourcePage": "https://www.iflytek.com/en/",
+          "downloadStatus": "downloaded",
+          "variant": "icon",
+          "language": "none",
+          "rightsStatus": "pending-review",
+          "sha256": "052e0ea5f3020c2b8b841bb45d278b784c265e22f5b3a5c46b2a8c5cd4596ecb",
+          "bytes": 2199,
+          "width": 60,
+          "height": 60,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/scoped-001-016/drafts/iflytek/icon.png"
+        },
+        {
+          "source": "https://www.iflytek.com/en/Public/Uploads/uploadfile/images/20250917/newlogo-233.png",
+          "sourcePage": "https://www.iflytek.com/en/",
+          "downloadStatus": "downloaded",
+          "variant": "logo",
+          "language": "en",
+          "rightsStatus": "pending-review",
+          "sha256": "b82b0e49bf84e771f67e86220f3ee187a713ca27bc8811d75de5968189f933a9",
+          "bytes": 195282,
+          "width": 5000,
+          "height": 2813,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/scoped-001-016/drafts/iflytek/structured-logo.png"
+        }
+      ],
+      "notes": [
+        "保持原有中文蓝/黑/白组合文件的不同用途；从当前英文官网桌面和移动页头确认并保存纯路径英文 SVG 168×33 viewBox，新增入库且设为推荐，改善可缩放性与英文页面取用。官网纯 X favicon.png 仅60×60，原生尺寸已看图，作为线索草稿保留不充当高清；另存官网结构化 logo 大图，实际是白色英文组合置于蓝绿渐变背景，虽5000×2813并不等同透明纯图标。"
+      ],
+      "nextStep": "继续查缺失版本的独立官方原件；逐文件核实品质与分发依据。"
+    },
+    {
+      "ordinal": 16,
+      "mianstackId": "c-6df1-4fe1-670d",
+      "name": "深信服",
+      "mianstackUrl": "https://mianstack.com/company/sangfor/interview/",
+      "canonicalId": "sangfor",
+      "entityType": "company",
+      "website": "https://www.sangfor.com.cn/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "pending-see-notes"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "pending-see-notes"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "pending-review",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://www.sangfor.com.cn/",
+            "httpStatus": 200
+          },
+          {
+            "url": "https://www.sangfor.com.cn/about-us/statement"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/User_talk:SangforMark"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "source": "https://download.sangfor.com.cn/cmsdownload/6D4BA729E12049FC919E560ED2498DB6.svg",
+          "sourcePage": "https://www.sangfor.com.cn/",
+          "downloadStatus": "downloaded",
+          "rightsStatus": "pending-review",
+          "sha256": "8d37763f47722bb132cf2bf090a058c285b315e43c745d3192f21444c217c189",
+          "bytes": 18787,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/scoped-001-016/drafts/sangfor/logo-horizontal.svg"
+        },
+        {
+          "source": "https://download.sangfor.com.cn/5d0c9eaab18e4429a6344b2c7e860994.png",
+          "sourcePage": "https://www.sangfor.com.cn/",
+          "downloadStatus": "downloaded",
+          "rightsStatus": "pending-review",
+          "sha256": "55c0ccd0875fd321616ab4d42d6e17748a369218f5e7eae2254157cc0ca41f93",
+          "bytes": 100137,
+          "width": 900,
+          "height": 900,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/scoped-001-016/drafts/sangfor/icon-square.png"
+        }
+      ],
+      "notes": [
+        "当前官网原生 SVG 是蓝绿球形+SANGFOR/深信服科技组合，独立球形 PNG 为900×900；两份已保存并实际查看，SVG 含原生矢量渐变，PNG保留原始透明背景，未重绘/裁切。深信服法律声明保留转载与商标许可；Commons 旧 Sangfor logo 曾因版权删除，不能视为可用授权。两版官方原件均留 pending-review，不入库。"
+      ],
+      "nextStep": "按记录继续补高清官方原件、版本或可覆盖图库分发的依据；草稿不计入正式资源。"
+    },
+    {
+      "ordinal": 17,
+      "mianstackId": "bilibili",
+      "name": "哔哩哔哩（B站）",
+      "mianstackUrl": "https://mianstack.com/company/bilibili/interview/",
+      "canonicalId": "bilibili",
+      "entityType": "company",
+      "website": "https://www.bilibili.com/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "pending-see-notes"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "pending-see-notes"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "official-candidates-quality-or-version-blocked",
+        "artworkViewed": true,
+        "artworkReviewScope": "historical original contact sheet only; current artwork and full native quality not yet cleared",
+        "checkedPages": [
+          {
+            "url": "https://www.bilibili.com/",
+            "httpStatus": 0,
+            "finalUrl": "https://www.bilibili.com/",
+            "title": null,
+            "error": "curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to www.bilibili.com:443 \n"
+          },
+          {
+            "url": "https://www.bilibili.com/",
+            "result": "实际打开当前站点并提取白色手写英文Logo原始PNG；截图可对照。"
+          },
+          {
+            "url": "https://www.bilibili.com/blackboard/protocal/licence.html",
+            "result": "官方协议8.4保留标识权利且限制使用/复制，不作镜像许可。"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Bilibili_2023.svg",
+            "result": "虽有PD-textlogo，但图为小电视+BiliBili块状字母，与当前国内官网手写字标不同；不套用到当前Logo。"
+          },
+          {
+            "url": "https://apps.apple.com/cn/app/id736536022",
+            "result": "本轮App Store原图实际为英雄联盟S16活动图，不作为品牌标准标识收录。"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "sourcePage": "https://www.bilibili.com/",
+          "url": "https://i0.hdslb.com/bfs/archive/a6fc20e8360913e8c796df1def661bf1d7f1b9c8.png",
+          "variant": "wordmark",
+          "textPresence": "en",
+          "rightsStatus": "pending-review",
+          "sha256": "b88f745e0d6aa1dc3517bd3a1b1b9e8e7a3258d23159b4095d7ad49af93441e5",
+          "bytes": 6371,
+          "note": "220×105当前官网原始白字PNG，仅小尺寸；实际有效图稿约178×70，未宣称高清。",
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/root/bilibili-wordmark-white.png"
+        },
+        {
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Bilibili_2023.svg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Bilibili_2023.svg",
+          "variant": "logo",
+          "textPresence": "en",
+          "rightsStatus": "rejected-current-version-mismatch",
+          "sha256": "e4559c422f2555058d20c19d3acd850bcd5f86d5888f4da92237d5414c76eb9f",
+          "bytes": 16172,
+          "note": "看图发现不是当前国内官网标准字标；状态需另核实，不入库。",
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/root/bilibili-2023.svg"
+        },
+        {
+          "sourcePage": "https://apps.apple.com/cn/app/id736536022",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/70/99/b7709979-0703-0722-b561-c97b2bf5b644/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+          "variant": "campaign-artwork",
+          "textPresence": "zh",
+          "rightsStatus": "rejected-campaign-artwork",
+          "sha256": "a60c44d8a5f7ce2f016023fe364310b5cdc6acd1c27e49f8cda6874050794ab1",
+          "bytes": 52726,
+          "note": "英雄联盟S16活动图，不能当作品牌Logo。",
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/root/bilibili-appstore-512.jpg"
+        }
+      ],
+      "notes": [
+        "未取得符合本轮高清标准且可公开分发的官方完整标识，保留具体来源与缺口。",
+        "不拿字节化的第三方Logo、App商店活动图或32px小电视favicon凑数。"
+      ],
+      "nextStep": "按记录继续补高清官方原件、版本或可覆盖图库分发的依据；草稿不计入正式资源。"
+    },
+    {
+      "ordinal": 18,
+      "mianstackId": "c-6052-751f-7535-5b50",
+      "name": "恒生电子",
+      "mianstackUrl": "https://mianstack.com/company/hundsun/interview/",
+      "canonicalId": "hundsun",
+      "entityType": "company",
+      "website": "https://www.hundsun.com/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "draft-only"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "not-found-as-independent-official-company-artwork"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "draft-only",
+        "artworkViewed": true,
+        "artworkReviewScope": "historical original contact sheet only; current artwork and full native quality not yet cleared",
+        "checkedPages": [
+          {
+            "url": "https://www.hundsun.com/",
+            "httpStatus": 200,
+            "finalUrl": "https://www.hundsun.com/",
+            "title": "恒生电子",
+            "error": null
+          },
+          {
+            "url": "https://www.hundsun.com/assets/js/app.e433d8a3.js"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "source": "https://www.hundsun.com/assets/img/logo.2f34c9dc.gif",
+          "sourcePage": "https://www.hundsun.com/",
+          "sha256": "5d01b31adf24a5ec9adccdeba1cfa5b256d9ff9794c39e0a5fbad1a18c8fd13d",
+          "bytes": 18511,
+          "visualNotes": [
+            "157×96原生像素GIF，已检查第一帧和末帧；青蓝底白色 HUND/SUN 文字组合，透明留白较多。",
+            "GIF不在正式库支持格式内；未自行转成PNG或放大充当高清。"
+          ],
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/hundsun/logo-official.gif",
+          "rightsStatus": "pending-review"
+        }
+      ],
+      "notes": [
+        "本轮获取来源页 HTML 并提取可能的 Logo URL；页面获取与 URL 线索不代表视觉审核或再分发许可。",
+        "已核对恒生电子官网脚本中实际引用的HUND/SUN GIF，并看首末帧；未找到可确认许可的高清静态原件，不用HS favicon凑数。"
+      ],
+      "nextStep": "按记录继续补高清官方原件、版本或可覆盖图库分发的依据；草稿不计入正式资源。"
+    },
+    {
+      "ordinal": 19,
+      "mianstackId": "c-987a-4e30",
+      "name": "顺丰",
+      "mianstackUrl": "https://mianstack.com/company/sf-express/interview/",
+      "canonicalId": "sf-express",
+      "entityType": "company",
+      "website": "https://www.sf-express.com/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "official-pdf-ai-guide-only; not-independent-accepted-image"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "official-pdf-ai-guide-only; not-extracted-or-redrawn"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "draft-only",
+        "artworkViewed": true,
+        "artworkReviewScope": "historical original contact sheet only; current artwork and full native quality not yet cleared",
+        "checkedPages": [
+          {
+            "url": "https://www.sf-express.com/",
+            "httpStatus": 200,
+            "finalUrl": "https://www.sf-express.com/",
+            "title": null,
+            "error": null
+          },
+          {
+            "url": "https://www.sf-express.com/uploads/SF_Band_Information_Basic_ce811c8a97.zip"
+          },
+          {
+            "url": "https://www.sf-express.com/chn/sc/use"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "sha256": "ef4629bad7fc35eeff4bd6cb97be9135284b050c8c0ea88e8b42dbf141d64c99",
+          "bytes": 5403658,
+          "visualNotes": [
+            "与品牌规范PDF同包的Illustrator原件；已确认归属与文件完整性，未在Illustrator中打开，不声称已逐画板视觉审核。"
+          ],
+          "note": "AI/PDF为官方品牌规范原件，尚无可正式入库的独立SVG/PNG原件。",
+          "visualReviewed": false,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/sf-express/brand-basic-official.ai",
+          "rightsStatus": "pending-review"
+        },
+        {
+          "sha256": "bb8da2fb8a7661619a5cb8e745c6c56ce1ecb1dcdd013d5b15cd0690d29513a1",
+          "bytes": 1706860,
+          "visualNotes": [
+            "官方2024版基础规范20页；已实际渲染并查看目录、标识、标识说明（PDF第2–4页）。规范展示SF图形、顺丰速运/EXPRESS横向组合及简繁/英文版本。",
+            "PDF与AI原件逐字节解包保存；没有从PDF裁切或转绘新的Logo。"
+          ],
+          "note": "AI/PDF为官方品牌规范原件，尚无可正式入库的独立SVG/PNG原件。",
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/sf-express/brand-basic-official.pdf",
+          "rightsStatus": "pending-review"
+        }
+      ],
+      "notes": [
+        "本轮获取来源页 HTML 并提取可能的 Logo URL；页面获取与 URL 线索不代表视觉审核或再分发许可。",
+        "当前官网品牌资料ZIP内含2024基础规范PDF和AI。已看PDF标识说明，确认图形与中英组合及标准关系；官网条款限制站外使用，未获图库分发依据。"
+      ],
+      "nextStep": "按记录继续补高清官方原件、版本或可覆盖图库分发的依据；草稿不计入正式资源。"
+    },
+    {
+      "ordinal": 20,
+      "mianstackId": "c-5f97-7269",
+      "name": "得物",
+      "mianstackUrl": "https://mianstack.com/company/dewu/interview/",
+      "canonicalId": "dewu",
+      "entityType": "company",
+      "website": "https://www.dewu.com/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "small-official-draft"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "not-found-as-independent-official-company-artwork"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "draft-only",
+        "artworkViewed": true,
+        "artworkReviewScope": "historical original contact sheet only; current artwork and full native quality not yet cleared",
+        "checkedPages": [
+          {
+            "url": "https://www.dewu.com/",
+            "httpStatus": 200,
+            "finalUrl": "https://www.dewu.com/",
+            "title": "得物App-新一代潮流网购社区",
+            "error": null
+          },
+          {
+            "url": "https://www.dewu.com/property.html"
+          },
+          {
+            "url": "https://dewu.com/usage"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "source": "https://h5static.dewucdn.com/node-common/2b06036c-45e4-11eb-e923-918dc63592df-120-120.png",
+          "sourcePage": "https://www.dewu.com/",
+          "sha256": "815c3d1aa4bee3c8c166ee839111e7fb90a55d55e34171b7b485d4be0a292906",
+          "bytes": 1713,
+          "visualNotes": [
+            "120×120透明原件，黑色圆角方块含白色得物文字，白色边框；官网页头实际引用。",
+            "属于带中文字图标，不是无字图形；原生像素有限，不作高清入库。"
+          ],
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/dewu/wordmark-square-official.png",
+          "rightsStatus": "pending-review"
+        }
+      ],
+      "notes": [
+        "本轮获取来源页 HTML 并提取可能的 Logo URL；页面获取与 URL 线索不代表视觉审核或再分发许可。",
+        "已确认官网页头120像素原图为得物文字方形图标；页面3个SVG是应用平台下载按钮，已排除。未查到可确认再分发的高清公司原件。"
+      ],
+      "nextStep": "按记录继续补高清官方原件、版本或可覆盖图库分发的依据；草稿不计入正式资源。"
+    },
+    {
+      "ordinal": 21,
+      "mianstackId": "netease",
+      "name": "网易",
+      "mianstackUrl": "https://mianstack.com/company/netease/interview/",
+      "canonicalId": "netease",
+      "entityType": "company",
+      "website": "https://www.163.com/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "identity-and-artwork-evidence-only; no-acceptable-independent-file"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "not-found; do-not-substitute-NetEase-News-or-game-product-icons"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "source-only",
+        "artworkViewed": true,
+        "artworkReviewScope": "historical original contact sheet only; current artwork and full native quality not yet cleared",
+        "checkedPages": [
+          {
+            "url": "https://www.163.com/",
+            "httpStatus": 0,
+            "finalUrl": "https://www.163.com/",
+            "title": null,
+            "error": "curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to www.163.com:443 \n"
+          },
+          {
+            "url": "https://ir.netease.com/"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/Commons:Village_pump/Archive/2022/06"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:NetEaseHangzhouOffice.jpg"
+          }
+        ]
+      },
+      "draftsAndEvidence": [],
+      "notes": [
+        "本轮获取来源页 HTML 并提取可能的 Logo URL；页面获取与 URL 线索不代表视觉审核或再分发许可。",
+        "来源页未完整成功获取，需换渠道人工复核。",
+        "官方网站IR确认公司身份。面栈原始文件是含多个产品图标的网页雪碧图，不是独立公司Logo，已看图排除。Commons公开讨论明确NetEase logo按fair-use存于英语维基，未取得可在本库分发的独立原件。"
+      ],
+      "nextStep": "按记录继续补高清官方原件、版本或可覆盖图库分发的依据；草稿不计入正式资源。"
+    },
+    {
+      "ordinal": 22,
+      "mianstackId": "c-4f-50-50-4f",
+      "name": "OPPO",
+      "mianstackUrl": "https://mianstack.com/company/oppo/interview/",
+      "canonicalId": "oppo",
+      "entityType": "company",
+      "website": "https://www.oppo.com/cn/",
+      "catalogId": "oppo",
+      "catalogStatus": "available",
+      "relatedCatalogIds": [],
+      "defaultAsset": "wordmark-green-2019.svg",
+      "catalogAssets": [
+        {
+          "file": "wordmark-green-2019.svg",
+          "variant": "wordmark",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "status": "current",
+          "provenance": {
+            "sourceType": "commons",
+            "processing": "original"
+          },
+          "source": "https://upload.wikimedia.org/wikipedia/commons/0/0a/OPPO_LOGO_2019.svg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:OPPO_LOGO_2019.svg"
+        }
+      ],
+      "variants": {
+        "withText": {
+          "catalogFiles": ["wordmark-green-2019.svg"],
+          "searchStatus": "catalog-available"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "not-found; brand-is-wordmark"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "existing-plus-draft",
+        "artworkViewed": true,
+        "artworkReviewScope": "historical original contact sheet only; current artwork and full native quality not yet cleared",
+        "checkedPages": [
+          {
+            "url": "https://www.oppo.com/cn/",
+            "httpStatus": 200,
+            "finalUrl": "https://www.oppo.com/cn/",
+            "title": "OPPO Find X10 系列 丨 哈 苏 超 清 原 相 机 | OPPO 官方网站",
+            "error": null
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "source": "https://www.oppo.com/cn/",
+          "sourcePage": "https://www.oppo.com/cn/",
+          "sha256": "297c469a60d6be652328c2624ef9b61b0d95ba901e294bd464a857696d1682a0",
+          "bytes": 2978,
+          "visualNotes": [
+            "官网页头嵌入的黑色oppo字标原始SVG片段，实际看图核对与现有绿色2019字形一致，路径矢量无位图。",
+            "是HTML内原始片段而非独立官方下载文件；原样提取，不修改属性或添加反白颜色。"
+          ],
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/oppo/wordmark-inline-official.svg",
+          "rightsStatus": "pending-review"
+        }
+      ],
+      "notes": [
+        "本轮获取来源页 HTML 并提取可能的 Logo URL；页面获取与 URL 线索不代表视觉审核或再分发许可。",
+        "既有绿色字标保留 SVG，重复 PNG 已删除。官网页头原始内嵌黑色 oppo SVG 已原样提取并看图，留在草稿。brand-icon-cn-dark/light.svg 实际是“趁现在”宣传字，已排除。官方独立无字图形仍待查找。"
+      ],
+      "nextStep": "继续查缺失版本的独立官方原件；逐文件核实品质与分发依据。"
+    },
+    {
+      "ordinal": 23,
+      "mianstackId": "c-61c2-8f66-5e1d",
+      "name": "懂车帝",
+      "mianstackUrl": "https://mianstack.com/company/dongchedi/interview/",
+      "canonicalId": "dongchedi",
+      "entityType": "product",
+      "website": "https://www.dongchedi.com/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "official-original-svg-draft"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "not-found-as-independent-original; not-cropped-from-combination"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "draft-only",
+        "artworkViewed": true,
+        "artworkReviewScope": "historical original contact sheet only; current artwork and full native quality not yet cleared",
+        "checkedPages": [
+          {
+            "url": "https://www.dongchedi.com/",
+            "httpStatus": 200,
+            "finalUrl": "https://www.dongchedi.com/",
+            "title": "懂车帝 - 说真的还得懂车帝",
+            "error": null
+          },
+          {
+            "url": "https://lf3-cdn-tos.draftstatic.com/obj/ies-hotsoon-draft/dcd_dzx_agreement/data-bi-service.html"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "source": "https://lf3-motor.dcarstatic.com/obj/motor-fe-static/motor/pc/_next/./static/images/logo-fcf421caf44b23091eee..svg",
+          "sourcePage": "https://www.dongchedi.com/",
+          "sha256": "d01f5c00d22b040b0c7ceb1a0b868755ca354664b666c5d23e707732b5001dfc",
+          "bytes": 7694,
+          "visualNotes": [
+            "原始路径矢量，黄色图形与黑色懂车帝、网址横向组合；已实际查看造型、配色与透明背景。",
+            "来源为懂车帝服务品牌；未把其他商家或假冒official-dongchedi站素材混入。"
+          ],
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/dongchedi/logo-horizontal-official.svg",
+          "rightsStatus": "pending-review"
+        }
+      ],
+      "notes": [
+        "本轮获取来源页 HTML 并提取可能的 Logo URL；页面获取与 URL 线索不代表视觉审核或再分发许可。",
+        "已知品牌或业务与公司实体存在区别，正式入库前须确定条目身份，不单凭产品网站归类。",
+        "已取得官网原始横版路径SVG并看图，含黄色图形、懂车帝与网址。官方协议对标识要求事先书面同意；未获本库分发依据。"
+      ],
+      "nextStep": "按记录继续补高清官方原件、版本或可覆盖图库分发的依据；草稿不计入正式资源。"
+    },
+    {
+      "ordinal": 24,
+      "mianstackId": "c-5c0f-9e4f",
+      "name": "小鹏",
+      "mianstackUrl": "https://mianstack.com/company/xpeng/interview/",
+      "canonicalId": "xpeng",
+      "entityType": "company",
+      "website": "https://www.xiaopeng.com/",
+      "catalogId": "xpeng",
+      "catalogStatus": "available",
+      "relatedCatalogIds": [],
+      "defaultAsset": "icon-black-official.svg",
+      "catalogAssets": [
+        {
+          "file": "icon-black-official.svg",
+          "variant": "icon",
+          "language": "none",
+          "layout": "standalone",
+          "color": "black",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "qualityNotes": ["路径矢量，无内嵌位图；保留来源的画布和路径，未改色、裁切或重新描摹。"],
+          "source": "https://xps01.xiaopeng.com/domestic/_next/static/media/black-logo.d7e75b41.svg",
+          "sourcePage": "https://www.xiaopeng.com/"
+        },
+        {
+          "file": "icon-white-official.svg",
+          "variant": "icon",
+          "language": "none",
+          "layout": "standalone",
+          "color": "white",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "qualityNotes": ["路径矢量，无内嵌位图；保留来源的画布和路径，未改色、裁切或重新描摹。"],
+          "source": "https://xps01.xiaopeng.com/domestic/_next/static/media/white-logo.9330e0be.svg",
+          "sourcePage": "https://www.xiaopeng.com/"
+        },
+        {
+          "file": "logo-black-commons.svg",
+          "variant": "logo",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "black",
+          "status": "current",
+          "provenance": {
+            "sourceType": "commons",
+            "processing": "original"
+          },
+          "qualityNotes": ["路径矢量，无内嵌位图；保留来源的画布和路径，未改色、裁切或重新描摹。"],
+          "source": "https://upload.wikimedia.org/wikipedia/commons/c/ca/XPeng_logo.svg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:XPeng_logo.svg"
+        }
+      ],
+      "variants": {
+        "withText": {
+          "catalogFiles": ["logo-black-commons.svg"],
+          "searchStatus": "catalog-available"
+        },
+        "withoutText": {
+          "catalogFiles": ["icon-black-official.svg", "icon-white-official.svg"],
+          "searchStatus": "catalog-available"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "catalogued-new",
+        "artworkViewed": true,
+        "artworkReviewScope": "historical original contact sheet only; current artwork and full native quality not yet cleared",
+        "checkedPages": [
+          {
+            "url": "https://www.xiaopeng.com/",
+            "httpStatus": 200,
+            "finalUrl": "https://www.xiaopeng.com/",
+            "title": "小鹏汽车丨未来出行探索者",
+            "error": null
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:XPeng_logo.svg"
+          }
+        ]
+      },
+      "draftsAndEvidence": [],
+      "notes": [
+        "本轮获取来源页 HTML 并提取可能的 Logo URL；页面获取与 URL 线索不代表视觉审核或再分发许可。",
+        "官网黑/白纯图形原始SVG和Commons保存的官网IR来源英文组合SVG均已看图。官方IR旧文件直链403，故组合版如实登记Commons；默认官网原件。"
+      ],
+      "nextStep": "继续查缺失版本的独立官方原件；逐文件核实品质与分发依据。"
+    },
+    {
+      "ordinal": 25,
+      "mianstackId": "c-4f5c-4e1a-5e2e",
+      "name": "作业帮",
+      "mianstackUrl": "https://mianstack.com/company/zuoyebang/interview/",
+      "canonicalId": "zuoyebang",
+      "entityType": "company",
+      "website": "https://www.zuoyebang.com/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "small-official-original-png-draft"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "not-found-as-independent-original; not-cropped"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "draft-only",
+        "artworkViewed": true,
+        "artworkReviewScope": "historical original contact sheet only; current artwork and full native quality not yet cleared",
+        "checkedPages": [
+          {
+            "url": "https://www.zuoyebang.com/",
+            "httpStatus": 200,
+            "finalUrl": "https://www.zuoyebang.com/",
+            "title": "作业帮官网 在线教育引领者 - 极目未来",
+            "error": null
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "source": "https://plat-h5.cdnjtzy.com/www/img/data_homework_logo.8386503.png",
+          "sourcePage": "https://www.zuoyebang.com/",
+          "sha256": "2e0c041a406a9158f3b4a8ae4af0e6dceab15eb77941fd1186f4644b064c6646",
+          "bytes": 4131,
+          "visualNotes": [
+            "168×44原生像素，彩色100图形与黑色作业帮组合；透明背景，原字节未放大或裁切。",
+            "尺寸偏小，缺少可确认许可和高清独立纯图形。"
+          ],
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/zuoyebang/logo-horizontal-official.png",
+          "rightsStatus": "pending-review"
+        }
+      ],
+      "notes": [
+        "本轮获取来源页 HTML 并提取可能的 Logo URL；页面获取与 URL 线索不代表视觉审核或再分发许可。",
+        "已取得并查看官网168×44透明组合PNG，不放大充当高清；未查到独立纯图形高质量原件及本库分发依据。"
+      ],
+      "nextStep": "按记录继续补高清官方原件、版本或可覆盖图库分发的依据；草稿不计入正式资源。"
+    },
+    {
+      "ordinal": 26,
+      "mianstackId": "c-43-56-54-45",
+      "name": "CVTE",
+      "mianstackUrl": "https://mianstack.com/company/cvte/interview/",
+      "canonicalId": "cvte",
+      "entityType": "company",
+      "website": "https://www.cvte.com/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "two-official-original-drafts; header-and-plain-letter-wordmark"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "not-found; red-CVTE-is-still-letter-wordmark"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "draft-only",
+        "artworkViewed": true,
+        "artworkReviewScope": "historical original contact sheet only; current artwork and full native quality not yet cleared",
+        "checkedPages": [
+          {
+            "url": "https://www.cvte.com/",
+            "httpStatus": 200,
+            "finalUrl": "https://www.cvte.com/",
+            "title": "CVTE视源股份 - 梦想引领未来",
+            "error": null
+          },
+          {
+            "url": "https://www.cvte.com/common/page/legal-notice"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "source": "https://www.cvte.com/public/images/other/logo-02.webp",
+          "sourcePage": "https://www.cvte.com/",
+          "sha256": "dccd373ee9f32972f1946003d4441f9e0191b7acb8d433e0a0b465f622f049ab",
+          "bytes": 1676,
+          "visualNotes": [
+            "224×62原生像素，红色CVTE纯字母字标，透明背景，原生尺寸有限。",
+            "没有从大型组合标里裁切该字标；此文件为官网另行提供的原件。"
+          ],
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/cvte/wordmark-red-official.webp",
+          "rightsStatus": "pending-review"
+        },
+        {
+          "source": "https://cos-pro-pub.cvtestatic.com/cvte-official-website/uwixkqpjminhnhlwhxkhopvpunphihhh",
+          "sourcePage": "https://www.cvte.com/",
+          "sha256": "47e124096236a9106814169dc3612a6f17732a381405d666f39984d2351aafc2",
+          "bytes": 19438,
+          "visualNotes": [
+            "1589×168原生像素，红色CVTE、Dream·Future、视源股份与股票代码002841组合。",
+            "官方当前页头引用的完整组合原件，未裁切掉口号、公司名或股票代码。"
+          ],
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/cvte/wordmark-header-original.png",
+          "rightsStatus": "pending-review"
+        }
+      ],
+      "notes": [
+        "本轮获取来源页 HTML 并提取可能的 Logo URL；页面获取与 URL 线索不代表视觉审核或再分发许可。",
+        "已取得并查看官网1589×168完整公司页头PNG，以及独立224×62红色CVTE字标WebP；完整组合含口号、公司名、股票代码，未裁切。官方法律声明要求复制、镜像与使用标识事先书面许可。"
+      ],
+      "nextStep": "按记录继续补高清官方原件、版本或可覆盖图库分发的依据；草稿不计入正式资源。"
+    },
+    {
+      "ordinal": 27,
+      "mianstackId": "transsion",
+      "name": "传音控股",
+      "mianstackUrl": "https://mianstack.com/company/transsion/interview/",
+      "canonicalId": "transsion",
+      "entityType": "company",
+      "website": "https://www.transsion.com/zh-CN/about",
+      "catalogId": "transsion",
+      "catalogStatus": "available",
+      "relatedCatalogIds": [],
+      "defaultAsset": "wordmark-black-official.svg",
+      "catalogAssets": [
+        {
+          "file": "wordmark-black-official.svg",
+          "variant": "wordmark",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "black",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "qualityNotes": ["路径矢量，无内嵌位图；保留来源的画布和路径，未改色、裁切或重新描摹。"],
+          "source": "https://www.transsion.com/_next/static/media/logo-black.d7cd9b41.svg",
+          "sourcePage": "https://www.transsion.com/zh-CN/about"
+        }
+      ],
+      "variants": {
+        "withText": {
+          "catalogFiles": ["wordmark-black-official.svg"],
+          "searchStatus": "catalog-available"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "not-found-as-independent-official-company-artwork"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "catalogued-new",
+        "artworkViewed": true,
+        "artworkReviewScope": "historical original contact sheet only; current artwork and full native quality not yet cleared",
+        "checkedPages": [
+          {
+            "url": "https://www.transsion.com/zh-CN/about",
+            "httpStatus": 200,
+            "finalUrl": "https://www.transsion.com/zh-CN/about",
+            "title": "深圳传音控股股份有限公司 Together we can",
+            "error": null
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Transsion_Logo.svg"
+          }
+        ]
+      },
+      "draftsAndEvidence": [],
+      "notes": [
+        "本轮获取来源页 HTML 并提取可能的 Logo URL；页面获取与 URL 线索不代表视觉审核或再分发许可。",
+        "当前官网黑字SVG与Commons具体PD文件除首尾空白外逐字节一致；已看图，仅保留官网原始文件。未将T形favicon当作无字图形。"
+      ],
+      "nextStep": "继续查缺失版本的独立官方原件；逐文件核实品质与分发依据。"
+    },
+    {
+      "ordinal": 28,
+      "mianstackId": "c-6dd8-5929",
+      "name": "淘天",
+      "mianstackUrl": "https://mianstack.com/company/taotian/interview/",
+      "canonicalId": "taotian",
+      "entityType": "organization",
+      "website": "https://talent.taotian.com/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "official-recruitment-layout-draft"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "not-confirmed-for-group; Tao-character-is-not-textless"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "draft-only",
+        "artworkViewed": true,
+        "artworkReviewScope": "historical original contact sheet only; current artwork and full native quality not yet cleared",
+        "checkedPages": [
+          {
+            "url": "https://talent.taotian.com/",
+            "httpStatus": 200,
+            "finalUrl": "https://talent.taotian.com/",
+            "title": "Index of Template Application",
+            "error": null
+          },
+          {
+            "url": "https://g.alicdn.com/CPO-platform/taotian-careers-portal/0.0.41/index.js"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "source": "https://img.alicdn.com/imgextra/i1/O1CN01mZqDrs1hwEBiEJMje_!!6000000004341-2-tps-1523-298.png",
+          "sourcePage": "https://talent.taotian.com/",
+          "sha256": "f2cdebde51c14839fca8ea4716a0660dd65d23c34978774ce00ee2992a69b270",
+          "bytes": 15705,
+          "visualNotes": [
+            "1523×298透明PNG，白色淘图标、淘天集团/TAOBAO&TMALL GROUP字样及招聘字样。",
+            "官方招聘站当前mainLogo原件，属于招聘版式；未把淘宝淘字图标单独冒充淘天集团无字标。"
+          ],
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/taotian/logo-main-official.png",
+          "rightsStatus": "pending-review"
+        }
+      ],
+      "notes": [
+        "本轮获取来源页 HTML 并提取可能的 Logo URL；页面获取与 URL 线索不代表视觉审核或再分发许可。",
+        "淘天集团为阿里业务集团；历史图片为淘宝淘字图标，不能当作已核实淘天集团标识。",
+        "从官方当前招聘应用脚本mainLogo追溯到1523×298透明原图并看图，含淘天集团/TAOBAO&TMALL GROUP及招聘字样。原先面栈淘字favicon不能单独代替集团无字Logo。未获再分发依据，不裁掉招聘字样。"
+      ],
+      "nextStep": "按记录继续补高清官方原件、版本或可覆盖图库分发的依据；草稿不计入正式资源。"
+    },
+    {
+      "ordinal": 29,
+      "mianstackId": "c-817e-8baf-97f3-4e50",
+      "name": "腾讯音乐",
+      "mianstackUrl": "https://mianstack.com/company/tencent-music/interview/",
+      "canonicalId": "tencent-music",
+      "entityType": "company",
+      "website": "https://www.tencentmusic.com/",
+      "catalogId": "tencent-music",
+      "catalogStatus": "available",
+      "relatedCatalogIds": [],
+      "defaultAsset": "wordmark-tme-blue-official.png",
+      "catalogAssets": [
+        {
+          "file": "wordmark-tme-blue-official.png",
+          "variant": "wordmark",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "qualityNotes": ["564 × 204 像素，透明背景；图案本身是 TME 三个字母，不属于无文字图形。"],
+          "source": "https://www.tencentmusic.com/img/tme-blue.cafd93f9.png",
+          "sourcePage": "https://www.tencentmusic.com/"
+        }
+      ],
+      "variants": {
+        "withText": {
+          "catalogFiles": ["wordmark-tme-blue-official.png"],
+          "searchStatus": "catalog-available"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "not-found; stylized-TME-is-lettering-not-textless"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "catalogued-new-plus-draft",
+        "artworkViewed": true,
+        "artworkReviewScope": "historical original contact sheet only; current artwork and full native quality not yet cleared",
+        "checkedPages": [
+          {
+            "url": "https://www.tencentmusic.com/",
+            "httpStatus": 200,
+            "finalUrl": "https://www.tencentmusic.com/",
+            "title": "腾讯音乐官网 | Tencent Music (TME)",
+            "error": null
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:%E9%A8%B0%E8%A8%8A%E9%9F%B3%E6%A8%82%E5%A8%9B%E6%A8%82%E9%9B%86%E5%9C%98logo.jpg"
+          },
+          {
+            "url": "https://ir.tencentmusic.com/"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "source": "https://www.tencentmusic.com/img/header-logo-txt.fe0fce7d.png",
+          "sourcePage": "https://www.tencentmusic.com/",
+          "sha256": "207e054e103ebd06f8874a0ef24054be65fd0dfa095627ab61dbbda86ccd1356",
+          "bytes": 15653,
+          "visualNotes": [
+            "1096×204透明PNG，白色腾讯音乐娱乐集团及TENCENT MUSIC ENTERTAINMENT双语字标，已在深色背景实际查看。",
+            "Commons已找到的旧组合仅含较短中文，未将其PD判断外推至本完整中英字形，继续待授权。"
+          ],
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/tencent-music/wordmark-zh-official.png",
+          "rightsStatus": "pending-review"
+        }
+      ],
+      "notes": [
+        "本轮获取来源页 HTML 并提取可能的 Logo URL；页面获取与 URL 线索不代表视觉审核或再分发许可。",
+        "已看当前官网TME蓝字母原件，并逐形核对Commons同图TME部分的PD判断后入库。官网完整中英白字与Commons较短中文不同，未外推许可，留草稿。"
+      ],
+      "nextStep": "继续查缺失版本的独立官方原件；逐文件核实品质与分发依据。"
+    },
+    {
+      "ordinal": 30,
+      "mianstackId": "c-851a-6765",
+      "name": "蔚来",
+      "mianstackUrl": "https://mianstack.com/company/nio/interview/",
+      "canonicalId": "nio",
+      "entityType": "company",
+      "website": "https://www.nio.cn/",
+      "catalogId": "nio",
+      "catalogStatus": "available",
+      "relatedCatalogIds": [],
+      "defaultAsset": "icon-white-official.svg",
+      "catalogAssets": [
+        {
+          "file": "icon-white-official.svg",
+          "variant": "icon",
+          "language": "none",
+          "layout": "standalone",
+          "color": "white",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "qualityNotes": ["路径矢量，无内嵌位图；保留来源的画布和路径，未改色、裁切或重新描摹。"],
+          "source": "https://cdn-udp-public.eu.nio.com/www-nio/cdn-static/mynio/nextjs/images/icons/nio-logo-white.svg",
+          "sourcePage": "https://www.nio.com/"
+        }
+      ],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "draft-only-see-notes"
+        },
+        "withoutText": {
+          "catalogFiles": ["icon-white-official.svg"],
+          "searchStatus": "catalog-available"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "catalogued-new",
+        "artworkViewed": true,
+        "artworkReviewScope": "historical original contact sheet only; current artwork and full native quality not yet cleared",
+        "checkedPages": [
+          {
+            "url": "https://www.nio.cn/",
+            "httpStatus": 567,
+            "finalUrl": "https://www.nio.cn/",
+            "title": "",
+            "error": null
+          },
+          {
+            "url": "https://www.nio.com/"
+          },
+          {
+            "url": "https://us.nio.com/blog/showing-gratitude-and-celebrating-anniversaries"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:NIO_logo.svg"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:NIO_logo_emblem.svg"
+          }
+        ]
+      },
+      "draftsAndEvidence": [],
+      "notes": [
+        "本轮获取来源页 HTML 并提取可能的 Logo URL；页面获取与 URL 线索不代表视觉审核或再分发许可。",
+        "来源页未完整成功获取，需换渠道人工复核。",
+        "正式库保留当前国际官网白色独立图形 SVG 并设为默认，已实际看图。Commons 黑色英文组合 SVG 为第三方矢量化，仅留候选供后续核对，带字官方原件仍待补充。"
+      ],
+      "nextStep": "继续查缺失版本的独立官方原件；逐文件核实品质与分发依据。"
+    },
+    {
+      "ordinal": 31,
+      "mianstackId": "c-643a-7a0b",
+      "name": "携程",
+      "mianstackUrl": "https://mianstack.com/company/ctrip/interview/",
+      "canonicalId": "ctrip",
+      "entityType": "product",
+      "website": "https://job.ctrip.com/",
+      "catalogId": null,
+      "catalogStatus": "related-group-only",
+      "relatedCatalogIds": ["trip-com"],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "group-only-in-existing-trip-com; Ctrip-product-version-pending"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "Ctrip-dolphin-only-small-historical-ico-lead; not-admitted"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "related-group-existing-product-unresolved",
+        "artworkViewed": true,
+        "artworkReviewScope": "historical original contact sheet only; current artwork and full native quality not yet cleared",
+        "checkedPages": [
+          {
+            "url": "https://job.ctrip.com/",
+            "httpStatus": 0,
+            "finalUrl": "https://job.ctrip.com/",
+            "title": null,
+            "error": "curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to job.ctrip.com:443 \n"
+          }
+        ]
+      },
+      "draftsAndEvidence": [],
+      "notes": [
+        "本轮获取来源页 HTML 并提取可能的 Logo URL；页面获取与 URL 线索不代表视觉审核或再分发许可。",
+        "来源页未完整成功获取，需换渠道人工复核。",
+        "面栈携程使用的历史海豚ICO是携程旅行产品/商业品牌，不与含Group的Trip.com Group集团字标混同。既有trip-com仅提供集团图稿；本轮未取得携程旅行高清且可分发原件，关系保留，不直接覆盖现有集团记录。",
+        "现有trip-com仅提供携程集团字标；不把它等同携程旅行海豚产品标识，相关集团可参考，但本项仍有独立标识缺口。"
+      ],
+      "nextStep": "按记录继续补高清官方原件、版本或可覆盖图库分发的依据；草稿不计入正式资源。"
+    },
+    {
+      "ordinal": 32,
+      "mianstackId": "c-4e9a-4fe1-79d1-6280",
+      "name": "亚信科技",
+      "mianstackUrl": "https://mianstack.com/company/asiainfo/interview/",
+      "canonicalId": "asiainfo",
+      "entityType": "company",
+      "website": "https://www.asiainfo.com/zh_cn/index.html",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "official-color-and-white-svg-drafts"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "not-found-as-independent-original; not-extracted"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "draft-only",
+        "artworkViewed": true,
+        "artworkReviewScope": "historical original contact sheet only; current artwork and full native quality not yet cleared",
+        "checkedPages": [
+          {
+            "url": "https://www.asiainfo.com/zh_cn/index.html",
+            "httpStatus": 200,
+            "finalUrl": "https://www.asiainfo.com/zh_cn/index.html",
+            "title": "亚信科技-数智化全栈能力提供商",
+            "error": null
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "source": "https://www.asiainfo.com/include/images/logo-white.svg",
+          "sourcePage": "https://www.asiainfo.com/zh_cn/index.html",
+          "sha256": "dc93262a5f013564900f1359e980053dbde049d9f184195960bd2d2e72a68c3a",
+          "bytes": 22035,
+          "visualNotes": [
+            "官网当前页头直接引用的白色图形与中英文字组合；路径矢量，无内嵌位图，已在深色背景实际查看。"
+          ],
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/asiainfo/logo-white-official.svg",
+          "rightsStatus": "pending-review"
+        },
+        {
+          "source": "https://www.asiainfo.com/include/images/logo.svg",
+          "sourcePage": "https://www.asiainfo.com/zh_cn/index.html",
+          "sha256": "a0169adbbbfe6118aec26d3c5db1c1c78d14bf8cbf5307a2e49700f4e55f5102",
+          "bytes": 43310,
+          "visualNotes": [
+            "当前官网来源的彩色渐变环形图形、AsiaInfo与亚信科技组合；路径矢量，无内嵌位图，已实际查看。"
+          ],
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/asiainfo/logo-color-official.svg",
+          "rightsStatus": "pending-review"
+        }
+      ],
+      "notes": [
+        "本轮获取来源页 HTML 并提取可能的 Logo URL；页面获取与 URL 线索不代表视觉审核或再分发许可。",
+        "已查看官方彩色与反白中英组合SVG，均为路径矢量。未将亚信安全等关联或近似名字企业混入；分发许可待确认，未从组合中拆图形。"
+      ],
+      "nextStep": "按记录继续补高清官方原件、版本或可覆盖图库分发的依据；草稿不计入正式资源。"
+    },
+    {
+      "ordinal": 33,
+      "mianstackId": "c-4e2d-5174",
+      "name": "中兴",
+      "mianstackUrl": "https://mianstack.com/company/zte/interview/",
+      "canonicalId": "zte",
+      "entityType": "company",
+      "website": "https://www.zte.com.cn/china/",
+      "catalogId": "zte",
+      "catalogStatus": "available",
+      "relatedCatalogIds": [],
+      "defaultAsset": "wordmark-blue-official.png",
+      "catalogAssets": [
+        {
+          "file": "wordmark-blue-official.png",
+          "variant": "wordmark",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "other",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "qualityNotes": [
+            "1535 × 907 像素，透明背景，画布含留白。",
+            "蓝色为 #0086D1，与官方标准蓝 #008ED3 有差异。"
+          ],
+          "source": "https://www.zte.com.cn/content/dam/zte-site/mediapics/file/zte_logo_en.7z",
+          "sourcePage": "https://www.zte.com.cn/global/new_events/media.html"
+        },
+        {
+          "file": "wordmark-white-official.png",
+          "variant": "wordmark",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "white",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "qualityNotes": ["1535 × 907 像素，透明背景，画布含留白。", "白色版本，适合深色背景。"],
+          "source": "https://www.zte.com.cn/content/dam/zte-site/mediapics/file/zte_logo_en.7z",
+          "sourcePage": "https://www.zte.com.cn/global/new_events/media.html"
+        },
+        {
+          "file": "wordmark-blue-header-official.png",
+          "variant": "wordmark",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "qualityNotes": ["标准蓝 #008ED3。", "仅 92 × 44 像素，适合小尺寸展示，放大易模糊。"],
+          "source": "https://www.zte.com.cn/content/dam/zte-site/res-www-zte-com-cn/navigator/global/main/img/logo-en.png",
+          "sourcePage": "https://www.zte.com.cn/global/"
+        }
+      ],
+      "variants": {
+        "withText": {
+          "catalogFiles": [
+            "wordmark-blue-official.png",
+            "wordmark-white-official.png",
+            "wordmark-blue-header-official.png"
+          ],
+          "searchStatus": "catalog-available"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "not-found; corporate-mark-is-lettering"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "existing",
+        "artworkViewed": true,
+        "artworkReviewScope": "historical original contact sheet only; current artwork and full native quality not yet cleared",
+        "checkedPages": [
+          {
+            "url": "https://www.zte.com.cn/china/",
+            "httpStatus": 200,
+            "finalUrl": "https://www.zte.com.cn/china/",
+            "title": "ZTE - 中兴通讯官网 | 全球领先的ICT解决方案提供商",
+            "error": null
+          }
+        ]
+      },
+      "draftsAndEvidence": [],
+      "notes": [
+        "本轮获取来源页 HTML 并提取可能的 Logo URL；页面获取与 URL 线索不代表视觉审核或再分发许可。",
+        "既有官方英文蓝/白透明PNG及小尺寸标准蓝备选保持。当前官网仍用ZTE字形，未找到独立无文字公司图形证据；不把ZTE三个字母谎称无字Logo，也不重复保留同稿来源。"
+      ],
+      "nextStep": "继续查缺失版本的独立官方原件；逐文件核实品质与分发依据。"
+    },
+    {
+      "ordinal": 34,
+      "mianstackId": "c-33-36-30",
+      "name": "360",
+      "mianstackUrl": "https://mianstack.com/company/360/interview/",
+      "canonicalId": "qihoo-360",
+      "entityType": "company",
+      "website": "http://www.360.cn/about/contactus.html?page=logo",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "official-high-resolution-png-draft"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "official-128px-original-png-draft"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "draft-only",
+        "artworkViewed": true,
+        "artworkReviewScope": "historical original contact sheet only; current artwork and full native quality not yet cleared",
+        "checkedPages": [
+          {
+            "url": "http://www.360.cn/about/contactus.html?page=logo",
+            "httpStatus": 200,
+            "finalUrl": "http://www.360.cn/about/contactus.html?page=logo",
+            "title": "联系我们",
+            "error": null
+          },
+          {
+            "url": "https://www.360.cn/about/contactus.html"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "source": "http://p3.ssl.qhimg.com/d/inn/b886349a3672/LOGO_1464x414.png",
+          "sourcePage": "https://www.360.cn/about/contactus.html?page=logo",
+          "sha256": "a19f81afaf5c4cc1647337e6d0f3a7533b53fc957f395a55c24725b039346d85",
+          "bytes": 107542,
+          "visualNotes": [
+            "1464×414透明PNG，绿黄图形与绿色360字样，已在白色背景实际查看全图和边缘。",
+            "官网允许开发者下载后使用，但独立图库镜像分发范围仍未确认。"
+          ],
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/qihoo-360/logo-horizontal-official.png",
+          "rightsStatus": "pending-review"
+        },
+        {
+          "source": "http://p2.ssl.qhimg.com/d/inn/b886349a3672/LOGO_128x128.png",
+          "sourcePage": "https://www.360.cn/about/contactus.html?page=logo",
+          "sha256": "08dadddaac8ee1c5d0381f25cdd9bcdefc1377c62fdfcd766a05f17e5b1e48f8",
+          "bytes": 4584,
+          "visualNotes": [
+            "128×128透明PNG，绿黄圆形与绿色十字图形，官方标识下载页原件，已按原生像素实际查看。"
+          ],
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/qihoo-360/icon-official.png",
+          "rightsStatus": "pending-review"
+        }
+      ],
+      "notes": [
+        "本轮获取来源页 HTML 并提取可能的 Logo URL；页面获取与 URL 线索不代表视觉审核或再分发许可。",
+        "官方标识下载页明确提供标准色、单色、横版与竖版。已取得并在白背景按原生尺寸查看1464×414横版和128×128纯图形PNG。下载后使用条款未明确覆盖独立图库镜像分发；HTTPS握手失败时由相同官方CDN域名同路径HTTP取得原字节。"
+      ],
+      "nextStep": "按记录继续补高清官方原件、版本或可覆盖图库分发的依据；草稿不计入正式资源。"
+    },
+    {
+      "ordinal": 35,
+      "mianstackId": "c-591a-76ca-7f51-7edc",
+      "name": "多益网络",
+      "mianstackUrl": "https://mianstack.com/company/duoyi/interview/",
+      "canonicalId": "duoyi",
+      "entityType": "company",
+      "website": "https://www.duoyi.com/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "official-small-original-found"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "not-yet-found"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "draft-pending-permission-or-quality",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://www.duoyi.com/",
+            "httpStatus": 200,
+            "finalUrl": "https://www.duoyi.com/",
+            "title": "多益网络官网 - 游戏奋斗者",
+            "error": null
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "sourcePage": "https://www.duoyi.com/",
+          "url": "https://image.duoyi.com/img/logo2.png",
+          "variant": "logo",
+          "language": "zh",
+          "textPresence": "with-text",
+          "rightsStatus": "pending-review",
+          "sha256": "6016261ca55a65ae2eb96965aad5f5d32a4d6aeafbab71a614d0cd3c6c8b676f",
+          "bytes": 3316,
+          "nativeWidth": 172,
+          "nativeHeight": 46,
+          "visualNotes": "red duoyi glyph, 多益网络 and 游戏奋斗者 slogan; transparent, 172×46; website header original; small bitmap",
+          "originalBytesPreserved": true,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/duoyi/logo-original.png"
+        }
+      ],
+      "notes": ["带字172×46；纯图形独立高清未找到，不能从组合图裁出。"],
+      "nextStep": "继续查官方品牌包或直接原始文件；分发依据不足的逐文件保留pending-review，不自动入库。"
+    },
+    {
+      "ordinal": 36,
+      "mianstackId": "c-6c47-5ddd-6280-672f",
+      "name": "汇川技术",
+      "mianstackUrl": "https://mianstack.com/company/inovance/interview/",
+      "canonicalId": "inovance",
+      "entityType": "company",
+      "website": "https://www.inovance.com/",
+      "catalogId": "inovance",
+      "catalogStatus": "available",
+      "relatedCatalogIds": [],
+      "defaultAsset": "wordmark-blue-official.png",
+      "catalogAssets": [
+        {
+          "file": "wordmark-blue-official.png",
+          "variant": "wordmark",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "qualityNotes": ["2858 × 431 像素，透明背景，紧凑横版画布；边缘清晰，适合浅色背景。"],
+          "source": "https://portal-file.inovance.com/upload/image/2025/03/28/0e86e631-cd0c-41ac-aa2d-a981e7a4dbfb.png",
+          "sourcePage": "https://www.inovance.com/global"
+        }
+      ],
+      "variants": {
+        "withText": {
+          "catalogFiles": ["wordmark-blue-official.png"],
+          "searchStatus": "catalog-available"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "not-yet-found"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "admitted",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://www.inovance.com/",
+            "httpStatus": 200,
+            "finalUrl": "https://www.inovance.com/",
+            "title": null,
+            "error": null
+          },
+          {
+            "url": "https://www.inovance.com/global"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Shenzhen_Inovance_Technology.svg"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "sourcePage": "https://www.inovance.com/global",
+          "url": "https://portal-file.inovance.com/upload/image/2025/03/28/0e86e631-cd0c-41ac-aa2d-a981e7a4dbfb.png",
+          "variant": "wordmark",
+          "language": "en",
+          "textPresence": "with-text",
+          "rightsStatus": "permitted-third-party-PD-assessment",
+          "sha256": "0ac55305f11f9d0dfd9384322f46d1e51afa5efe77cd4b7da0ad7c31ece8b9fc",
+          "bytes": 37976,
+          "nativeWidth": 2858,
+          "nativeHeight": 431,
+          "visualNotes": "INOVANCE blue wordmark; transparent 2858×431; native edges checked; official unprocessed original from current header CDN",
+          "originalBytesPreserved": true,
+          "visualReviewed": true,
+          "localEvidencePath": "logos/inovance/wordmark-blue-official.png"
+        }
+      ],
+      "notes": ["官方高清英文字标已入库；未找到可确认独立用途的纯图形原件。"],
+      "nextStep": "独立纯图形若出现，须另核对官方用途与权利。"
+    },
+    {
+      "ordinal": 37,
+      "mianstackId": "c-8363-8000",
+      "name": "荣耀",
+      "mianstackUrl": "https://mianstack.com/company/honor/interview/",
+      "canonicalId": "honor",
+      "entityType": "company",
+      "website": "https://www.honor.com/cn/",
+      "catalogId": "honor",
+      "catalogStatus": "available",
+      "relatedCatalogIds": [],
+      "defaultAsset": "wordmark-black-2020.svg",
+      "catalogAssets": [
+        {
+          "file": "wordmark-black-2020.svg",
+          "variant": "wordmark",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "black",
+          "status": "current",
+          "provenance": {
+            "sourceType": "commons",
+            "processing": "original"
+          },
+          "source": "https://upload.wikimedia.org/wikipedia/commons/2/20/Honor_Logo_%282020%29.svg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Honor_Logo_(2020).svg"
+        }
+      ],
+      "variants": {
+        "withText": {
+          "catalogFiles": ["wordmark-black-2020.svg"],
+          "searchStatus": "catalog-available"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "not-yet-found"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "existing-retained",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://www.honor.com/cn/",
+            "httpStatus": 200,
+            "finalUrl": "https://www.honor.com/cn/",
+            "title": "荣耀AI终端-荣耀手机-荣耀WIN2 系列 | 荣耀官网",
+            "error": null
+          }
+        ]
+      },
+      "draftsAndEvidence": [],
+      "notes": [
+        "现有黑色HONOR SVG已覆盖带字标；未查到官方独立无字图形，不能把字母或旧图标拼成新版本。"
+      ],
+      "nextStep": "继续查官方品牌包或直接原始文件；分发依据不足的逐文件保留pending-review，不自动入库。"
+    },
+    {
+      "ordinal": 38,
+      "mianstackId": "c-552f-54c1-4f1a",
+      "name": "唯品会",
+      "mianstackUrl": "https://mianstack.com/company/vipshop/interview/",
+      "canonicalId": "vipshop",
+      "entityType": "company",
+      "website": "https://www.vip.com/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "sprite-only-rejected"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "not-yet-found"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "draft-pending-permission-or-quality",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://www.vip.com/",
+            "httpStatus": 200,
+            "finalUrl": "https://www.vip.com/",
+            "title": "唯品会（vip.com）-11.11特卖狂欢节",
+            "error": null
+          },
+          {
+            "url": "https://ir.vip.com/"
+          },
+          {
+            "url": "https://sec.vip.com/clause"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "sourcePage": "https://www.vip.com/",
+          "url": "https://member-ssl.vipstatic.com/img/passport/sprites-hash-c9975078.png?1d3187cc",
+          "variant": "page-sprite-not-standalone-logo",
+          "textPresence": "with-text",
+          "rightsStatus": "pending-review",
+          "visualNotes": "621×328 UI sprite containing several wordmarks, QR/login/social/button graphics and phone mockup; must not crop into a logo or call it a standalone company asset.",
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/vipshop/page-sprite-original.png"
+        }
+      ],
+      "notes": ["当前仅确切找到UI雪碧图；尚缺可单独取用的高清公司原件，未裁切，IR入口被拒绝访问。"],
+      "nextStep": "继续查官方品牌包或直接原始文件；分发依据不足的逐文件保留pending-review，不自动入库。"
+    },
+    {
+      "ordinal": 39,
+      "mianstackId": "c-4d-69-6e-69-4d-61-78",
+      "name": "MiniMax",
+      "mianstackUrl": "https://mianstack.com/company/minimax/interview/",
+      "canonicalId": "minimax",
+      "entityType": "company",
+      "website": "https://www.minimax.io/brand-vi",
+      "catalogId": "minimax",
+      "catalogStatus": "available",
+      "relatedCatalogIds": [],
+      "defaultAsset": "logo-gradient-horizontal.png",
+      "catalogAssets": [
+        {
+          "file": "logo-gradient-vertical-official.png",
+          "variant": "logo",
+          "language": "en",
+          "layout": "vertical",
+          "color": "brand",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "qualityNotes": ["1600 × 1600 像素，透明背景，画布含留白。"],
+          "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_Logo_Asset.zip",
+          "sourcePage": "https://www.minimax.io/brand-vi"
+        },
+        {
+          "file": "logo-gradient-horizontal.png",
+          "variant": "logo",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "qualityNotes": ["3600 × 1320 像素，透明背景，画布含留白。"],
+          "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_Logo_Asset.zip",
+          "sourcePage": "https://www.minimax.io/brand-vi"
+        },
+        {
+          "file": "logo-gradient-horizontal-white.png",
+          "variant": "logo",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "qualityNotes": ["3600 × 1320 像素，透明背景，画布含留白。"],
+          "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_Logo_Asset.zip",
+          "sourcePage": "https://www.minimax.io/brand-vi"
+        },
+        {
+          "file": "logo-black-horizontal.png",
+          "variant": "logo",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "black",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "qualityNotes": ["3600 × 1320 像素，透明背景，画布含留白。"],
+          "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_Logo_Asset.zip",
+          "sourcePage": "https://www.minimax.io/brand-vi"
+        }
+      ],
+      "variants": {
+        "withText": {
+          "catalogFiles": [
+            "logo-gradient-vertical-official.png",
+            "logo-gradient-horizontal.png",
+            "logo-gradient-horizontal-white.png",
+            "logo-black-horizontal.png"
+          ],
+          "searchStatus": "catalog-available"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "not-yet-found"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "existing-retained",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://www.minimax.io/brand-vi",
+            "httpStatus": 200,
+            "finalUrl": "https://www.minimax.io/brand-vi",
+            "title": "Brand VI — MiniMax Brand Book | MiniMax",
+            "error": null
+          },
+          {
+            "url": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_Logo_Asset.zip"
+          }
+        ]
+      },
+      "draftsAndEvidence": [],
+      "notes": [
+        "现有四份官方原生PNG覆盖横竖/深浅底带字版；本轮重新检查官方ZIP，仅横竖组合、一个AI和非图形元文件，未见独立PNG图形，不自行拆分。"
+      ],
+      "nextStep": "继续查官方品牌包或直接原始文件；分发依据不足的逐文件保留pending-review，不自动入库。"
+    },
+    {
+      "ordinal": 40,
+      "mianstackId": "c-5e06-8f6f",
+      "name": "帆软",
+      "mianstackUrl": "https://mianstack.com/company/fanruan/interview/",
+      "canonicalId": "fanruan",
+      "entityType": "company",
+      "website": "https://www.fanruan.com/download/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "official-small-original-found"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "official-small-original-found"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "draft-pending-permission-or-quality",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://www.fanruan.com/download/",
+            "httpStatus": 200,
+            "finalUrl": "https://www.fanruan.com/download/",
+            "title": "相关下载 - 帆软,专业的大数据BI和分析平台提供商",
+            "error": null
+          },
+          {
+            "url": "https://down.finereport.com/website-resources/common/fanruan-logo.pdf"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "sourcePage": "https://www.fanruan.com/download/",
+          "url": "https://src.fanruan.com/website/finereport/logo-fanruan.png",
+          "variant": "logo",
+          "language": "zh",
+          "textPresence": "with-text",
+          "rightsStatus": "pending-review",
+          "sha256": "6a83c35aee58b6d043eeeb20a0d8df976836728199a65d91369ef7768dd24919",
+          "bytes": 3591,
+          "nativeWidth": 180,
+          "nativeHeight": 60,
+          "visualNotes": "blue FanRuan symbol plus 帆软; transparent 180×60; small native bitmap",
+          "originalBytesPreserved": true,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/fanruan/logo-original.png"
+        },
+        {
+          "sourcePage": "https://join.fanruan.com/",
+          "url": "https://join.fanruan.com/wp-content/themes/fanruan_join/2023-join04/fanruan-logo.webp",
+          "variant": "icon",
+          "language": "none",
+          "textPresence": "without-text",
+          "rightsStatus": "pending-review",
+          "sha256": "0e5693c4babddad106e84965e8b7a62694c84bbcec13f583b215aeea62ac9c83",
+          "bytes": 1512,
+          "nativeWidth": 64,
+          "nativeHeight": 64,
+          "visualNotes": "blue geometric FanRuan symbol, 64×64 native webp; not a high-resolution original",
+          "originalBytesPreserved": true,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/fanruan/logo-recruiting-original.webp"
+        }
+      ],
+      "notes": [
+        "带字180×60，图形64×64；官方标注LOGO包链接实际指向失效PDF，未取得高清包；版权分发待核实。"
+      ],
+      "nextStep": "继续查官方品牌包或直接原始文件；分发依据不足的逐文件保留pending-review，不自动入库。"
+    },
+    {
+      "ordinal": 41,
+      "mianstackId": "c-9ad8-5fb7",
+      "name": "高德",
+      "mianstackUrl": "https://mianstack.com/company/gaode/interview/",
+      "canonicalId": "amap",
+      "entityType": "company",
+      "website": "https://www.amap.com/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "not-yet-found"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "favicon-scale-only-rejected"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "draft-pending-permission-or-quality",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://www.amap.com/",
+            "httpStatus": 200,
+            "finalUrl": "https://www.amap.com/?amap_migrate_retry=1",
+            "title": "\n        高德地图\n    ",
+            "error": null
+          },
+          {
+            "url": "https://lbs.amap.com/pages/terms"
+          },
+          {
+            "url": "https://lbs.amap.com/"
+          }
+        ]
+      },
+      "draftsAndEvidence": [],
+      "notes": [
+        "官网仅34×34导航箭头图，未当高清素材；尚需官方品牌/媒体入口和许可。开放平台条款不能当图库授权。"
+      ],
+      "nextStep": "继续查官方品牌包或直接原始文件；分发依据不足的逐文件保留pending-review，不自动入库。"
+    },
+    {
+      "ordinal": 42,
+      "mianstackId": "c-7ecf-7eac-6052-6da6",
+      "name": "经纬恒润",
+      "mianstackUrl": "https://mianstack.com/company/hirain/interview/",
+      "canonicalId": "hirain",
+      "entityType": "company",
+      "website": "https://www.hirain.com/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "official-small-original-found"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "not-yet-found"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "draft-pending-permission-or-quality",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://www.hirain.com/",
+            "httpStatus": 200,
+            "finalUrl": "https://www.hirain.com/",
+            "title": "北京经纬恒润科技股份有限公司-全球领先的汽车电子系统科技服务公司之一",
+            "error": null
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "sourcePage": "https://www.hirain.com/",
+          "url": "https://omo-oss-image.thefastimg.com/portal-saas/pg2025022811165511155/cms/image/3f356044-6591-4712-85b1-f36359d822a9.png",
+          "variant": "logo",
+          "language": "bilingual",
+          "textPresence": "with-text",
+          "rightsStatus": "pending-review",
+          "sha256": "63953389c3a7e4ec26c8405df7ab91a9afec3ac5972fad892480aaf3d4fc8c3e",
+          "bytes": 25518,
+          "nativeWidth": 223,
+          "nativeHeight": 62,
+          "visualNotes": "blue framed square with yellow motif and 经纬恒润 / JINGWEI HIRAIN; 223×62; dense striped detail; original retrieved with ordinary site Referer; native small header bitmap",
+          "originalBytesPreserved": true,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/hirain/logo-original.png"
+        }
+      ],
+      "notes": ["带字223×62，官网当前页头CDN原件已实际查看；未找到独立高清图形，不从组合裁出。"],
+      "nextStep": "继续查官方品牌包或直接原始文件；分发依据不足的逐文件保留pending-review，不自动入库。"
+    },
+    {
+      "ordinal": 43,
+      "mianstackId": "c-6e05-5fae-667a-80fd",
+      "name": "清微智能",
+      "mianstackUrl": "https://mianstack.com/company/tsingmicro/interview/",
+      "canonicalId": "tsingmicro",
+      "entityType": "company",
+      "website": "https://www.tsingmicro.com/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "official-scalable-original-found"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "official-scalable-original-found"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "draft-pending-permission-or-quality",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://www.tsingmicro.com/",
+            "httpStatus": 200,
+            "finalUrl": "https://www.tsingmicro.com/",
+            "title": "清微智能",
+            "error": null
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "sourcePage": "https://www.tsingmicro.com/",
+          "url": "https://www.tsingmicro.com/logo.svg",
+          "variant": "icon",
+          "language": "none",
+          "textPresence": "without-text",
+          "rightsStatus": "pending-review",
+          "sha256": "088eacfde5d18d524722b5283b68bac7c0432ea75dba5e4f237bca6d44a64af6",
+          "bytes": 1139,
+          "visualNotes": "red rounded square with white T and small upper-left point; native static vector paths, no embedded bitmap",
+          "originalBytesPreserved": true,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/tsingmicro/icon-original.svg"
+        },
+        {
+          "sourcePage": "https://www.tsingmicro.com/",
+          "url": "https://rs.tsingmicro.com/_nuxt/logo.CvhlYUgm.svg",
+          "variant": "logo",
+          "language": "zh",
+          "textPresence": "with-text",
+          "rightsStatus": "pending-review",
+          "sha256": "41746925b08f71befdb61b262c17bde0a521ae41cb7a90f6e6eced6500e0d665",
+          "bytes": 11726,
+          "visualNotes": "same red T symbol and white 清微智能 text; suitable for dark backgrounds; native static SVG paths, no embedded bitmap",
+          "originalBytesPreserved": true,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/tsingmicro/logo-original.svg"
+        }
+      ],
+      "notes": [
+        "已确认白字组合与红色纯图形，两份路径SVG，适用背景不同；未找到可覆盖本库再分发的许可，均保留草稿。"
+      ],
+      "nextStep": "继续查官方品牌包或直接原始文件；分发依据不足的逐文件保留pending-review，不自动入库。"
+    },
+    {
+      "ordinal": 44,
+      "mianstackId": "sensetime",
+      "name": "商汤",
+      "mianstackUrl": "https://mianstack.com/company/sensetime/interview/",
+      "canonicalId": "sensetime",
+      "entityType": "company",
+      "website": "https://www.sensetime.com/cn/",
+      "catalogId": "sensetime",
+      "catalogStatus": "available",
+      "relatedCatalogIds": [],
+      "defaultAsset": "logo-color.png",
+      "catalogAssets": [
+        {
+          "file": "logo-color.png",
+          "variant": "logo",
+          "language": "bilingual",
+          "layout": "horizontal",
+          "color": "brand",
+          "status": "current",
+          "provenance": {
+            "sourceType": "commons",
+            "processing": "original"
+          },
+          "source": "https://upload.wikimedia.org/wikipedia/commons/c/c9/SenseTime_logo.png",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:SenseTime_logo.png"
+        }
+      ],
+      "variants": {
+        "withText": {
+          "catalogFiles": ["logo-color.png"],
+          "searchStatus": "catalog-available"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "not-yet-found"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "existing-retained",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://www.sensetime.com/cn/",
+            "httpStatus": 200,
+            "finalUrl": "https://www.sensetime.com/cn/",
+            "title": "商汤科技 SenseTime",
+            "error": null
+          }
+        ]
+      },
+      "draftsAndEvidence": [],
+      "notes": [
+        "现有2105×592组合PNG与官方链接同字节且有逐文件Commons CC-BY-SA依据；未找到独立官方高清图形原件，不裁下无限符号。"
+      ],
+      "nextStep": "继续查官方品牌包或直接原始文件；分发依据不足的逐文件保留pending-review，不自动入库。"
+    },
+    {
+      "ordinal": 45,
+      "mianstackId": "c-6c34-6ef4",
+      "name": "水滴",
+      "mianstackUrl": "https://mianstack.com/company/shuidi/interview/",
+      "canonicalId": "waterdrop",
+      "entityType": "company",
+      "website": "https://ir.waterdrop-inc.com/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "official-small-original-found"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "not-yet-found"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "draft-pending-permission-or-quality",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://ir.waterdrop-inc.com/",
+            "httpStatus": 200,
+            "finalUrl": "https://ir.waterdrop-inc.com/",
+            "title": "Water Drop InvestorRoom  - Home",
+            "error": null
+          },
+          {
+            "url": "https://www.waterdrop-inc.com/"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Waterdrop_Logo.png"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "sourcePage": "https://www.waterdrop-inc.com/downloads",
+          "url": "https://cloud-image.shuiditech.com/waterdrop-inc/logo/wd_logo_1.png",
+          "variant": "logo",
+          "language": "bilingual",
+          "textPresence": "with-text",
+          "rightsStatus": "pending-review",
+          "sha256": "07b92c0edd4c50776fbaa8f5294ce27596f54613cb6df9327cdcb005f8cfba33",
+          "bytes": 6326,
+          "nativeWidth": 152,
+          "nativeHeight": 102,
+          "visualNotes": "blue rounded rectangle with white 水滴 / WATERDROP INC.; small 152×102 official corporate download asset, not a product logo; no independently verified pictogram",
+          "originalBytesPreserved": true,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/waterdrop/logo-official-original.png"
+        }
+      ],
+      "notes": [
+        "企业IR与主站下载页的152×102组合，非大幅高清；Commons Waterdrop Logo搜索命中奥地利饮料公司，已排除，不把其许可套给中国水滴。"
+      ],
+      "nextStep": "继续查官方品牌包或直接原始文件；分发依据不足的逐文件保留pending-review，不自动入库。"
+    },
+    {
+      "ordinal": 46,
+      "mianstackId": "xiaomi",
+      "name": "小米",
+      "mianstackUrl": "https://mianstack.com/company/xiaomi/interview/",
+      "canonicalId": "xiaomi",
+      "entityType": "company",
+      "website": "https://www.mi.com/",
+      "catalogId": "xiaomi",
+      "catalogStatus": "available",
+      "relatedCatalogIds": [],
+      "defaultAsset": "icon-orange-2021.png",
+      "catalogAssets": [
+        {
+          "file": "icon-orange-2021.png",
+          "variant": "icon",
+          "language": "none",
+          "layout": "standalone",
+          "color": "brand",
+          "status": "current",
+          "provenance": {
+            "sourceType": "commons",
+            "processing": "rendered"
+          },
+          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Xiaomi_logo_%282021-%29.svg/1280px-Xiaomi_logo_%282021-%29.svg.png",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Xiaomi_logo_(2021-).svg"
+        },
+        {
+          "file": "logo-horizontal-official.svg",
+          "variant": "logo",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "status": "current",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original"
+          },
+          "source": "https://cdna.sec.miui.com/mi-trust-center/group-mi-logo-mobile.svg",
+          "sourcePage": "https://trust.mi.com/"
+        }
+      ],
+      "variants": {
+        "withText": {
+          "catalogFiles": ["logo-horizontal-official.svg"],
+          "searchStatus": "catalog-available"
+        },
+        "withoutText": {
+          "catalogFiles": ["icon-orange-2021.png"],
+          "searchStatus": "catalog-available"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "existing-retained",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://www.mi.com/",
+            "httpStatus": 200,
+            "finalUrl": "https://www.mi.com/",
+            "title": "Xiaomi官方网站 | 以人为中心，构建“人车家全生态”",
+            "error": null
+          }
+        ]
+      },
+      "draftsAndEvidence": [],
+      "notes": ["现有官方组合SVG和2021图形PNG分别覆盖带字与无字；不新增同稿小位图。"],
+      "nextStep": "继续查官方品牌包或直接原始文件；分发依据不足的逐文件保留pending-review，不自动入库。"
+    },
+    {
+      "ordinal": 47,
+      "mianstackId": "c-8981-52a1-79d1-6280",
+      "name": "要务科技",
+      "mianstackUrl": "https://mianstack.com/company/yaowu/interview/",
+      "canonicalId": "yaowu-tech",
+      "entityType": "company",
+      "website": "https://www.yaowutech.com/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "not-yet-found"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "official-200px-original-found"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "draft-pending-permission-or-quality",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://www.yaowutech.com/",
+            "httpStatus": 200,
+            "finalUrl": "https://www.yaowutech.com/",
+            "title": "要务科技 - 工业生产资料数字化租赁与数字化运营生态构建者",
+            "error": null
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "sourcePage": "https://www.yaowutech.com/",
+          "url": "https://www.yaowutech.com/images/logo-icon.png",
+          "variant": "icon",
+          "language": "none",
+          "textPresence": "without-text",
+          "rightsStatus": "pending-review",
+          "sha256": "5a97e92f2c441b46f1e97783d80707224daf286acfd0a3ade80b29d53767c763",
+          "bytes": 4261,
+          "nativeWidth": 200,
+          "nativeHeight": 200,
+          "visualNotes": "blue rounded square and white Y symbol; 200×200 original, with no text",
+          "originalBytesPreserved": true,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/yaowu-tech/icon-original.png"
+        },
+        {
+          "sourcePage": "https://www.yaowutech.com/",
+          "url": "https://www.yaowutech.com/images/logo.png",
+          "variant": "icon",
+          "language": "none",
+          "textPresence": "without-text",
+          "rightsStatus": "pending-review",
+          "sha256": "7d0cf3cf5fdbd07171fc8dda495ef5b379747ae7d2d397b906f6ab6bbbf80818",
+          "bytes": 7173,
+          "nativeWidth": 400,
+          "nativeHeight": 300,
+          "visualNotes": "despite filename, still the same Y icon on white 400×300 canvas; effective graphic about180×180; no separate wordmark; redundant source rejected for catalog",
+          "originalBytesPreserved": true,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/yaowu-tech/logo-original.png"
+        }
+      ],
+      "notes": [
+        "官网logo.png(400×300)仍是纯Y图标，不能按文件名算带字；有效图形反比200×200独立图标小。两份只用于审核比较，待许可。"
+      ],
+      "nextStep": "继续查官方品牌包或直接原始文件；分发依据不足的逐文件保留pending-review，不自动入库。"
+    },
+    {
+      "ordinal": 48,
+      "mianstackId": "c-77e5-4e4e",
+      "name": "知乎",
+      "mianstackUrl": "https://mianstack.com/company/zhihu/interview/",
+      "canonicalId": "zhihu",
+      "entityType": "company",
+      "website": "https://ir.zhihu.com/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "official-inline-vector-found-standalone-file-pending"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "not-yet-found"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "draft-pending-permission-or-quality",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://ir.zhihu.com/",
+            "httpStatus": 0,
+            "finalUrl": "https://ir.zhihu.com/",
+            "title": null,
+            "error": "curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to ir.zhihu.com:443 \n"
+          },
+          {
+            "url": "https://www.zhihu.com/contact"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Zhihu_logo.svg"
+          },
+          {
+            "url": "https://bvip.zhihu.com/agreement"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "sourcePage": "https://www.zhihu.com/contact",
+          "url": "https://www.zhihu.com/contact#AppHeader",
+          "variant": "wordmark",
+          "language": "zh",
+          "textPresence": "with-text",
+          "rightsStatus": "pending-review",
+          "sha256": "0c1f9d877d966a940d6399cc88da617247e4830a5f42fe77aa6e922f85f39ecc",
+          "bytes": 1915,
+          "visualNotes": "current two-character 知乎 wordmark #1772F6; original exact inline SVG markup lacks xmlns; static-file validator rejects root; kept draft without adding bytes",
+          "originalBytesPreserved": true,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/zhihu/wordmark-current-inline.svg"
+        },
+        {
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Zhihu_logo.svg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Zhihu_logo.svg",
+          "variant": "wordmark",
+          "language": "zh",
+          "textPresence": "with-text",
+          "rightsStatus": "pending-review",
+          "sha256": "eaeb659cc2b95d4f8b31392fcd59afce3d2dffdef49b00ed6e1e361f8d9a516e",
+          "bytes": 1652,
+          "visualNotes": "2017 Commons vector wordmark, blue differs from currently published official #1772F6; not used as current standard-blue default",
+          "originalBytesPreserved": true,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/zhihu/wordmark-commons.svg"
+        }
+      ],
+      "notes": [
+        "当前官方/contact内嵌字标确切取得，#1772F6且缺xmlns；静态校验实际拒绝，未改原字节。Commons2017版本色不同，未当现行标准色入库；未找到独立无字原件。"
+      ],
+      "nextStep": "继续查官方品牌包或直接原始文件；分发依据不足的逐文件保留pending-review，不自动入库。"
+    },
+    {
+      "ordinal": 49,
+      "mianstackId": "c-667a-5143-673a-5668-4eba",
+      "name": "智元机器人",
+      "mianstackUrl": "https://mianstack.com/company/agibot/interview/",
+      "canonicalId": "agibot",
+      "entityType": "company",
+      "website": "https://www.agibot.com/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "high-resolution-source-and-version-review-pending"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "not-yet-found"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "draft-pending-permission-or-quality",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://www.agibot.com/",
+            "httpStatus": 200,
+            "finalUrl": "https://www.agibot.com/",
+            "title": "AGIBOT Innovation (Shanghai) Technology Co., Ltd. -AGIBOT Innovation (Shanghai) Technology Co., Ltd. ",
+            "error": null
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:AgiBot.png"
+          },
+          {
+            "url": "https://newsroom.brackalltron.ch/assets/241651/"
+          },
+          {
+            "url": "https://www.globenewswire.com/NewsRoom/AttachmentNg/f6452d8d-6baf-4ce5-8bcf-fdd1d28d4a59"
+          },
+          {
+            "url": "https://www.globenewswire.com/fr/news-release/2026/11/08/3398006/0/en/six-agibot-g2-robots-complete-1-730-tasks-in-24-hour-shanghai-convenience-store-trial.html"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "sourcePage": "https://www.agibot.com/",
+          "url": "https://www.agibot.com/public/static/index/en/images/logo2.png",
+          "variant": "logo",
+          "language": "en",
+          "textPresence": "with-text",
+          "rightsStatus": "pending-review",
+          "sha256": "83535ee96d57a776b05e4f8f0c3b0c65014ea7994ff1bab96d18b173f87f5aa9",
+          "bytes": 5382,
+          "nativeWidth": 243,
+          "nativeHeight": 58,
+          "visualNotes": "current website gray uppercase AGIBOT and blue-purple symbol; 243×58; small native header; draft only",
+          "originalBytesPreserved": true,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/agibot/logo-en-black-original.png"
+        },
+        {
+          "sourcePage": "https://www.agibot.com/",
+          "url": "https://www.agibot.com/public/static/index/en/images/logo.png",
+          "variant": "logo",
+          "language": "en",
+          "textPresence": "with-text",
+          "rightsStatus": "pending-review",
+          "sha256": "3632c1641f5566dc998bc5e7104842fee64214986db0fcd1ff1304d6ff787b1d",
+          "bytes": 5232,
+          "nativeWidth": 243,
+          "nativeHeight": 58,
+          "visualNotes": "current website white uppercase AGIBOT and blue-purple symbol; 243×58, for dark background; small native header; draft only",
+          "originalBytesPreserved": true,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/agibot/logo-en-original.png"
+        },
+        {
+          "sourcePage": "https://www.agibot.com.cn/",
+          "url": "https://www.agibot.com.cn/public/static/index/images/index2/new-logo.png",
+          "variant": "logo",
+          "language": "bilingual",
+          "textPresence": "with-text",
+          "rightsStatus": "pending-review",
+          "sha256": "22673db8b8b7e192574cee6c127a21d44c1ba7d7a32835c82c94c5f25e0a18f9",
+          "bytes": 4123,
+          "nativeWidth": 154,
+          "nativeHeight": 58,
+          "visualNotes": "blue-purple symbol and 智元 / AGIBOT; 154×58; small native company header",
+          "originalBytesPreserved": true,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/agibot/logo-zh-original.png"
+        },
+        {
+          "sourcePage": "https://newsroom.brackalltron.ch/assets/241651/",
+          "url": "https://d21buns5ku92am.cloudfront.net/69864/images/699861-AGIBOT%20Logo-bf9977-original-1788888279.png",
+          "variant": "logo",
+          "language": "en",
+          "textPresence": "with-text",
+          "rightsStatus": "pending-review",
+          "sha256": "5b5400ee252928cedbca7361329bc1258252b65c16eb9bf0c72c71390878954a",
+          "bytes": 197761,
+          "nativeWidth": 5583,
+          "nativeHeight": 1163,
+          "visualNotes": "5583×1163 transparent PNG; current uppercase I version matches current website; distributed by official Swiss partner Alltron media kit; partner provenance, not a brand-owned-domain original; upstream and rights pending",
+          "originalBytesPreserved": true,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/agibot/logo-partner-release-original.png"
+        },
+        {
+          "sourcePage": "https://www.globenewswire.com/NewsRoom/AttachmentNg/f6452d8d-6baf-4ce5-8bcf-fdd1d28d4a59",
+          "url": "https://ml.globenewswire.com/Resource/Download/f6452d8d-6baf-4ce5-8bcf-fdd1d28d4a59",
+          "variant": "logo",
+          "language": "en",
+          "textPresence": "with-text",
+          "rightsStatus": "pending-review",
+          "sha256": "8663a7686465a2e980ee458300d3a897aaee989aad183b8b634f681daa4bf0a1",
+          "bytes": 136282,
+          "nativeWidth": 4834,
+          "nativeHeight": 1508,
+          "visualNotes": "4834×1508 PNG, white opaque background; source page names AgiBot; 2025 brand-issued newswire original has dotted i, unlike current website uppercase I. Native detail checked; not grouped as the current uppercase-I artwork",
+          "originalBytesPreserved": true,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/agibot/logo-brand-newswire-original.png"
+        }
+      ],
+      "notes": [
+        "官网小原件已退回草稿；5583×1163合作方原件为当前大写I，4834×1508品牌自发新闻稿原件为带点i，已统一预览比对，不能硬算同款。缺品牌直接发布的现行大写I高清原件及独立图形。"
+      ],
+      "nextStep": "继续查官方品牌包或直接原始文件；分发依据不足的逐文件保留pending-review，不自动入库。"
+    },
+    {
+      "ordinal": 50,
+      "mianstackId": "c-42-49-47-4f",
+      "name": "BIGO",
+      "mianstackUrl": "https://mianstack.com/company/bigo/interview/",
+      "canonicalId": "bigo",
+      "entityType": "company",
+      "website": "https://www.bigo.sg/",
+      "catalogId": null,
+      "catalogStatus": "pending-review",
+      "relatedCatalogIds": [],
+      "defaultAsset": null,
+      "catalogAssets": [],
+      "variants": {
+        "withText": {
+          "catalogFiles": [],
+          "searchStatus": "official-small-original-found"
+        },
+        "withoutText": {
+          "catalogFiles": [],
+          "searchStatus": "not-yet-found"
+        }
+      },
+      "sourceReview": {
+        "reviewedAt": "2026-11-09",
+        "disposition": "draft-pending-permission-or-quality",
+        "artworkViewed": true,
+        "artworkReviewScope": "详见逐文件图稿记录；不代表已确认所有版本或权利",
+        "checkedPages": [
+          {
+            "url": "https://www.bigo.sg/",
+            "httpStatus": 200,
+            "finalUrl": "https://www.bigo.sg/",
+            "title": "BIGO TECHNOLOGY PTE. LTD.",
+            "error": null
+          },
+          {
+            "url": "https://www.bigo.sg/js/app.f517000c.js"
+          }
+        ]
+      },
+      "draftsAndEvidence": [
+        {
+          "sourcePage": "https://www.bigo.sg/",
+          "url": "https://www.bigo.sg/img/logo.d237405c.png",
+          "variant": "wordmark",
+          "language": "en",
+          "textPresence": "with-text",
+          "rightsStatus": "pending-review",
+          "sha256": "d803d1a7047027661fa006b81ab2cdc3e7ad74c85671c75711c671bcec2e485c",
+          "bytes": 4417,
+          "nativeWidth": 191,
+          "nativeHeight": 57,
+          "visualNotes": "white BIGO wordmark, transparent 191×57; official header imported by production JS; native small bitmap",
+          "originalBytesPreserved": true,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/bigo/logo-white-original.png"
+        },
+        {
+          "sourcePage": "https://www.bigo.sg/",
+          "url": "https://www.bigo.sg/js/app.f517000c.js#d5db",
+          "variant": "wordmark",
+          "language": "en",
+          "textPresence": "with-text",
+          "rightsStatus": "pending-review",
+          "sha256": "07b777d7bda0b0add85f40fc12f12eb83198aeb54a13f2249092c429342c7556",
+          "bytes": 1731,
+          "nativeWidth": 88,
+          "nativeHeight": 26,
+          "visualNotes": "blue BIGO wordmark, transparent 88×26; exact PNG bytes decoded from production JS module d5db base64; native small bitmap; not a standalone pictogram",
+          "originalBytesPreserved": true,
+          "visualReviewed": true,
+          "localEvidencePath": "local-artifacts/mianstack-287/2026-11-09/drafts/bigo/logo-black-embedded-original.png"
+        }
+      ],
+      "notes": [
+        "官网白色191×57与蓝色88×26均是文字BIGO，不是纯图形；尚缺官方高清/矢量及再分发依据，不以BIGO LIVE产品吉祥物替代公司标识。"
+      ],
+      "nextStep": "继续查官方品牌包或直接原始文件；分发依据不足的逐文件保留pending-review，不自动入库。"
+    }
+  ]
+}
