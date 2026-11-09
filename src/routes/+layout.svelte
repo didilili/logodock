@@ -43,25 +43,30 @@
 </svelte:head>
 
 <a class="skip-link" href="#main">跳到内容</a>
-<header class="site-header shell">
-  <BrandLogo />
-  <nav aria-label="主导航">
-    <a
-      href="https://github.com/didilili/logodock/issues/new/choose"
-      target="_blank"
-      rel="noopener noreferrer">建议收录<Icon name="external" /></a
-    >
-    <a href="https://github.com/didilili/logodock" target="_blank" rel="noopener noreferrer"
-      >GitHub<Icon name="external" /></a
-    >
-    <ActionButton
-      id="theme-toggle"
-      variant="icon"
-      disabled={!ready}
-      onclick={toggleTheme}
-      aria-label={dark ? '切换到浅色主题' : '切换到深色主题'}
-      title={dark ? '切换到浅色主题' : '切换到深色主题'}><Icon name="theme" /></ActionButton
-    >
-  </nav>
+<header class="site-header">
+  <div class="site-header-inner">
+    <BrandLogo />
+    <div class="site-header-main">
+      <span class="wordmark-description">品牌 Logo 库</span>
+      <nav aria-label="主导航">
+        <a
+          href="https://github.com/didilili/logodock/issues/new/choose"
+          target="_blank"
+          rel="noopener noreferrer">建议收录<Icon name="external" /></a
+        >
+        <a href="https://github.com/didilili/logodock" target="_blank" rel="noopener noreferrer"
+          >GitHub<Icon name="external" /></a
+        >
+        <ActionButton
+          id="theme-toggle"
+          variant="icon"
+          disabled={!ready}
+          onclick={toggleTheme}
+          aria-label={dark ? '切换到浅色主题' : '切换到深色主题'}
+          title={dark ? '切换到浅色主题' : '切换到深色主题'}><Icon name="theme" /></ActionButton
+        >
+      </nav>
+    </div>
+  </div>
 </header>
 {@render children()}

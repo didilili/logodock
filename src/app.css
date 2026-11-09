@@ -157,14 +157,32 @@ svg {
   position: sticky;
   top: 0;
   z-index: 10;
+  width: 100%;
+  height: 68px;
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+.site-header-inner,
+.directory-layout {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  max-width: 2200px;
+  width: 100%;
+  margin-inline: auto;
+}
+.site-header-inner {
+  height: 100%;
+  align-items: center;
+}
+.site-header-inner > .brand-logo {
+  margin-inline: 15px;
+}
+.site-header-main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  height: 68px;
-  padding-inline: max(30px, calc((100vw - 1540px) / 2));
-  border-bottom: 1px solid var(--line);
-  background: var(--paper);
+  min-width: 0;
+  padding-inline: 28px;
   gap: 24px;
 }
 .wordmark {
@@ -177,7 +195,6 @@ svg {
   white-space: nowrap;
 }
 .wordmark-description {
-  margin-left: 20px;
   font-size: var(--type-caption);
   color: var(--muted);
   font-weight: 400;
@@ -277,12 +294,7 @@ svg {
   letter-spacing: 0;
 }
 .directory-layout {
-  display: grid;
-  grid-template-columns: 190px minmax(0, 1fr);
-  max-width: 1600px;
-  width: 100%;
   min-height: calc(100dvh - 68px);
-  margin-inline: auto;
 }
 .category-sidebar {
   position: sticky;
@@ -533,7 +545,7 @@ svg {
 }
 .brand-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 15px 14px;
   align-items: stretch;
 }
@@ -694,11 +706,6 @@ svg {
   font-size: 22px;
   color: var(--muted);
 }
-@media (min-width: 1700px) {
-  .brand-grid {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-}
 @media (max-width: 1239px) {
   .brand-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -708,12 +715,17 @@ svg {
   .brand-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+  .site-header-inner,
   .directory-layout {
     grid-template-columns: 172px minmax(0, 1fr);
+  }
+  .site-header-inner > .brand-logo {
+    margin-inline: 9px;
   }
   .category-sidebar {
     padding-inline: 9px;
   }
+  .site-header-main,
   .directory-main {
     padding-inline: 22px;
   }
@@ -730,9 +742,18 @@ svg {
   }
   .site-header {
     height: 60px;
-    width: 100%;
+  }
+  .site-header-inner {
+    display: flex;
+    justify-content: space-between;
     padding-inline: 16px;
     gap: 16px;
+  }
+  .site-header-inner > .brand-logo {
+    margin-inline: 0;
+  }
+  .site-header-main {
+    padding-inline: 0;
   }
   .wordmark {
     font-size: 23px;
@@ -830,7 +851,7 @@ svg {
   }
 }
 @media (max-width: 360px) {
-  .site-header {
+  .site-header-inner {
     padding-inline: 12px;
     gap: 8px;
   }

@@ -131,6 +131,51 @@ async function expectEntirelyInViewport(control: Locator) {
     .toBe(true);
 }
 
+test('directory uses wider screens while keeping filtered cards at the same size', async ({
+  page,
+}) => {
+  await page.goto('/');
+  await expect(page.locator('#theme-toggle')).toBeEnabled();
+  for (const [width, columns] of [
+    [721, 3],
+    [1050, 3],
+    [1462, 5],
+    [1920, 7],
+    [2376, 8],
+    [2560, 8],
+  ]) {
+    await page.setViewportSize({ width, height: 1000 });
+    await expectGridColumns(page, columns);
+    const layout = await page.locator('.directory-layout').evaluate((element) => {
+      const bounds = element.getBoundingClientRect();
+      return { width: bounds.width, left: bounds.left };
+    });
+    expect(layout.width).toBe(Math.min(width, 2200));
+    expect(layout.left).toBe((width - layout.width) / 2);
+    const header = await page.locator('.site-header-inner').boundingBox();
+    expect(header?.x).toBe(layout.left);
+    expect(header?.width).toBe(layout.width);
+    const brand = await page.locator('.brand-mark').boundingBox();
+    const sidebar = await page.locator('.category-sidebar').boundingBox();
+    const search = await page.locator('.search-form').boundingBox();
+    const description = await page.locator('.wordmark-description').boundingBox();
+    const sidebarInset = width <= 1050 ? 9 : 15;
+    expect(brand!.x).toBe(sidebar!.x + sidebarInset);
+    expect(brand!.x + brand!.width).toBeLessThanOrEqual(sidebar!.x + sidebar!.width - sidebarInset);
+    expect(description?.x).toBe(search?.x);
+    await expectNoHorizontalOverflow(page);
+  }
+
+  await page.setViewportSize({ width: 2376, height: 1000 });
+  await page.locator('#search').fill('阿里巴巴');
+  await expect(page.locator('#brand-grid > .brand-card')).toHaveCount(1);
+  await expectGridColumns(page, 8);
+  const cardWidth = await page
+    .locator('#brand-grid > .brand-card')
+    .evaluate((element) => element.getBoundingClientRect().width);
+  expect(cardWidth).toBeCloseTo(232, 0);
+});
+
 test('desktop filters use readable control sizing and keyboard focus stays visible in both themes', async ({
   page,
 }) => {

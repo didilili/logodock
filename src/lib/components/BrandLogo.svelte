@@ -206,7 +206,6 @@
       <path d={wordmarkPath} fill="currentColor" fill-rule="evenodd" />
     </svg>
   </span>
-  <span class="wordmark-description">品牌 Logo 库</span>
 </a>
 
 <style>
@@ -214,11 +213,12 @@
     min-height: 44px;
   }
   .brand-mark {
-    --brand-cap-size: 20px;
-    --brand-symbol-size: 32px;
+    --brand-scale: 0.88;
+    --brand-cap-size: calc(20px * var(--brand-scale));
+    --brand-symbol-size: calc(32px * var(--brand-scale));
     display: inline-flex;
     align-items: center;
-    gap: 9px;
+    gap: calc(9px * var(--brand-scale));
     line-height: 0;
   }
   .brand-character {
@@ -259,6 +259,11 @@
     width: calc(var(--brand-cap-size) * 962 / 161);
     height: calc(var(--brand-cap-size) * 210 / 161);
     transform: translateY(calc(var(--brand-cap-size) * 45 / 322));
+  }
+  @media (min-width: 721px) and (max-width: 1050px) {
+    .brand-mark {
+      --brand-scale: 0.84;
+    }
   }
   @media (max-width: 720px) {
     .brand-mark {
