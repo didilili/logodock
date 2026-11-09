@@ -44,7 +44,7 @@
 
 - `entityType` 为 `company`（公司）、`product`（产品）或 `organization`（组织）。
 - 可选的 `parentId` 必须指向已收录实体，不能指向自身或形成循环；没有可靠对应记录时省略。
-- `categories` 保存开放的非空分类标签，建议复用 `internet`、`ai`、`developer-tools` 等已有标签。网页从实际元数据生成分类，常用标签显示中文名，其他标签按原值显示；新增分类不需要移动品牌目录或修改 Schema。
+- `categories` 保存开放的非空分类标签，建议复用 `internet`、`ai`、`developer-tools` 等已有标签。网页从实际元数据生成分类，正式库使用的分类须有中文显示名。新增英文分类标识时，同步补充 `src/lib/catalog-presentation.mjs` 中的 `categoryLabels`。自定义中文标签可直接显示。`npm run validate` 会列出缺少中文显示名的分类并报错。新增分类无需移动品牌目录或修改 Schema。
 - `defaultAsset` 必须是本条目登记且未标为 `alternative` 的文件名。有当前版本时必须默认当前素材；仅有历史文件的条目可以显式默认历史素材，网页会标明历史。推荐文件按上述准确性和质量依据人工选择，不由格式或来源标签自动决定。
 
 可选的 `artworks` 用于将已核实的同款标识归组，让 SVG、PNG 等文件共用一个标识预览。每组填写稳定的 `id`、简短的 `label`、成员文件名数组 `files` 和首选文件名 `defaultAsset`。

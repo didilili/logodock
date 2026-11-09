@@ -51,6 +51,148 @@ test('catalog preserves explicit entity, tags, readable versions and the selecte
   assert.equal(product.assets[0].background, 'any');
 });
 
+test('catalog preserves usage warnings separately from ordinary quality notes', async (t) => {
+  const root = await fixture(t);
+  const usageWarnings = ['仅供非商业使用。', '适合按原生尺寸嵌入。'];
+  const qualityNotes = ['透明背景。', '保留原始留白。'];
+  await mutate(root, (metadata) => {
+    metadata.assets[0].usageWarnings = usageWarnings;
+    metadata.assets[0].qualityNotes = qualityNotes;
+  });
+  const catalog = await loadCatalog(root);
+  const asset = JSON.parse(JSON.stringify(catalog)).brands[0].assets[0];
+  assert.equal(catalog.schemaVersion, 3);
+  assert.deepEqual(asset.usageWarnings, usageWarnings);
+  assert.deepEqual(asset.qualityNotes, qualityNotes);
+});
+
+test('usage warnings remain optional for existing quality notes and accept an empty list', async (t) => {
+  const root = await fixture(t);
+  await mutate(root, (metadata) => {
+    metadata.assets[0].qualityNotes = ['Opaque white background.'];
+  });
+  const asset = (await loadCatalog(root)).brands[0].assets[0];
+  assert.equal(Object.hasOwn(asset, 'usageWarnings'), false);
+  assert.deepEqual(asset.qualityNotes, ['Opaque white background.']);
+
+  await mutate(root, (metadata) => {
+    metadata.assets[0].usageWarnings = [];
+  });
+  assert.deepEqual((await loadCatalog(root)).brands[0].assets[0].usageWarnings, []);
+});
+
+test('catalog rejects blank usage warnings and incorrect list or item types', async (t) => {
+  for (const usageWarnings of [null, 'Warning', {}, [null], [true], [42], [''], [' \t\n']]) {
+    const root = await fixture(t);
+    await mutate(root, (metadata) => {
+      metadata.assets[0].usageWarnings = usageWarnings;
+    });
+    await assert.rejects(loadCatalog(root), /usageWarnings/);
+  }
+});
+
+test('provenance channel remains optional for existing official and Commons records', async (t) => {
+  for (const sourceType of ['official', 'commons']) {
+    const root = await fixture(t);
+    await mutate(root, (metadata) => {
+      metadata.assets[0].provenance.sourceType = sourceType;
+    });
+    const asset = (await loadCatalog(root)).brands[0].assets[0];
+    assert.deepEqual(asset.provenance, { sourceType, processing: 'original' });
+    assert.equal(Object.hasOwn(asset.provenance, 'channel'), false);
+  }
+});
+
+test('catalog preserves every supported provenance channel in serialized output', async (t) => {
+  for (const [sourceType, channel] of [
+    ['official', 'brand-library'],
+    ['official', 'repository'],
+    ['official', 'website'],
+    ['official', 'app-store'],
+    ['commons', 'commons'],
+  ]) {
+    const root = await fixture(t);
+    const provenance = { sourceType, processing: 'original', channel };
+    await mutate(root, (metadata) => {
+      metadata.assets[0].provenance = provenance;
+    });
+    const catalog = JSON.parse(JSON.stringify(await loadCatalog(root)));
+    assert.equal(catalog.schemaVersion, 3);
+    assert.deepEqual(catalog.brands[0].assets[0].provenance, provenance);
+  }
+});
+
+test('catalog rejects unknown provenance channels and incorrect channel types', async (t) => {
+  for (const channel of ['external', '', ' ', null, 42, {}, []]) {
+    const root = await fixture(t);
+    await mutate(root, (metadata) => {
+      metadata.assets[0].provenance.channel = channel;
+    });
+    await assert.rejects(loadCatalog(root), /provenance\.channel/);
+  }
+});
+
+test('catalog preserves reviewed source pages and placements in serialized output', async (t) => {
+  const root = await fixture(t);
+  const provenance = {
+    sourceType: 'official',
+    processing: 'original',
+    channel: 'website',
+    pageTitle: '小米信任中心',
+    placement: 'header',
+  };
+  await mutate(root, (metadata) => {
+    metadata.assets[0].provenance = provenance;
+  });
+  const catalog = JSON.parse(JSON.stringify(await loadCatalog(root)));
+  assert.deepEqual(catalog.brands[0].assets[0].provenance, provenance);
+});
+
+test('reviewed placements require a website source and valid placement names', async (t) => {
+  for (const [channel, placement] of [
+    ['website', 'navigation'],
+    ['website', null],
+    ['website', ''],
+    ['brand-library', 'header'],
+    ['commons', 'footer'],
+    [undefined, 'header'],
+  ]) {
+    const root = await fixture(t);
+    await mutate(root, (metadata) => {
+      metadata.assets[0].provenance = {
+        sourceType: channel === 'commons' ? 'commons' : 'official',
+        processing: 'original',
+        ...(channel === undefined ? {} : { channel }),
+        placement,
+      };
+    });
+    await assert.rejects(loadCatalog(root), /provenance\.placement/);
+  }
+  for (const pageTitle of ['', ' ', null, 42]) {
+    const root = await fixture(t);
+    await mutate(root, (metadata) => {
+      metadata.assets[0].provenance.pageTitle = pageTitle;
+    });
+    await assert.rejects(loadCatalog(root), /provenance\.pageTitle/);
+  }
+});
+
+test('provenance channel must agree with its source type', async (t) => {
+  for (const [sourceType, channel] of [
+    ['official', 'commons'],
+    ['commons', 'brand-library'],
+    ['commons', 'repository'],
+    ['commons', 'website'],
+    ['commons', 'app-store'],
+  ]) {
+    const root = await fixture(t);
+    await mutate(root, (metadata) => {
+      Object.assign(metadata.assets[0].provenance, { sourceType, channel });
+    });
+    await assert.rejects(loadCatalog(root), /provenance\.channel.*sourceType/);
+  }
+});
+
 test('catalog rejects unsupported versions, wrong types, unknown fields and invalid enums', async (t) => {
   for (const change of [
     (m) => {

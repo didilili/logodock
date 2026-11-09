@@ -326,6 +326,7 @@ test('build-index generates the resource document without rewriting README and c
   const root = await fixture(t);
   await cp(new URL('../scripts', import.meta.url), join(root, 'scripts'), { recursive: true });
   await cp(new URL('../schema', import.meta.url), join(root, 'schema'), { recursive: true });
+  await cp(new URL('../src/lib', import.meta.url), join(root, 'src/lib'), { recursive: true });
   await symlink(new URL('../node_modules', import.meta.url).pathname, join(root, 'node_modules'));
   const build = join(root, 'scripts/build-index.mjs');
   const validate = join(root, 'scripts/validate.mjs');
@@ -384,4 +385,27 @@ test('build-index generates the resource document without rewriting README and c
   assert.equal(await readFile(join(root, 'README.md'), 'utf8'), readme);
   const valid = spawnSync(process.execPath, [validate], { cwd: tmpdir(), encoding: 'utf8' });
   assert.equal(valid.status, 0, valid.stderr);
+  await mutate(root, (meta) => {
+    meta.categories = ['untranslated-industry'];
+  });
+  const untranslated = spawnSync(process.execPath, [validate], {
+    cwd: tmpdir(),
+    encoding: 'utf8',
+  });
+  assert.equal(
+    untranslated.status,
+    1,
+    'Repository validation must reject untranslated categories.',
+  );
+  assert.match(untranslated.stderr, /untranslated-industry/);
+  for (const category of ['industrial-automation', '工业设计']) {
+    await mutate(root, (meta) => {
+      meta.categories = [category];
+    });
+    const translated = spawnSync(process.execPath, [validate], {
+      cwd: tmpdir(),
+      encoding: 'utf8',
+    });
+    assert.equal(translated.status, 0, translated.stderr);
+  }
 });

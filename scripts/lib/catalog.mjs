@@ -183,6 +183,16 @@ function checkRaster(buffer, extension, context) {
 async function readAsset(asset, folder, id) {
   const context = `${id}.assets`;
   validate(asset, assetSchema, context);
+  const { sourceType, channel, placement, pageTitle } = asset.provenance;
+  requireValue(
+    channel === undefined ||
+      (sourceType === 'commons' ? channel === 'commons' : channel !== 'commons'),
+    `${context}.provenance.channel must agree with sourceType ${sourceType}`,
+  );
+  requireValue(
+    placement === undefined || channel === 'website',
+    `${context}.provenance.placement requires the website channel`,
+  );
   const file = asset.file;
   requireValue(basename(file) === file, `${context}.file must be an image basename`);
   const path = join(folder, file);
@@ -207,10 +217,14 @@ async function readAsset(asset, folder, id) {
     layout: asset.layout,
     color: asset.color,
     provenance: {
-      sourceType: asset.provenance.sourceType,
+      sourceType,
       processing: asset.provenance.processing,
+      ...(channel === undefined ? {} : { channel }),
+      ...(placement === undefined ? {} : { placement }),
+      ...(pageTitle === undefined ? {} : { pageTitle }),
     },
     ...(asset.qualityNotes === undefined ? {} : { qualityNotes: [...asset.qualityNotes] }),
+    ...(asset.usageWarnings === undefined ? {} : { usageWarnings: [...asset.usageWarnings] }),
     source: httpsUrl(asset.source, `${context}.source`, assetSchema.properties.source),
     sourcePage: httpsUrl(
       asset.sourcePage,

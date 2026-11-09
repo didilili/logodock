@@ -7,6 +7,26 @@ export function normalizeQuery(value) {
 }
 
 const names = new Intl.Collator('zh-CN', { sensitivity: 'base', numeric: true });
+const sourceLabels = { official: '官方', commons: 'Commons' };
+const processingLabels = { original: '原件 原始文件', rendered: '渲染' };
+const shapeLabels = { icon: '图形 图标', wordmark: '文字 字标', logo: '组合标识' };
+const languageLabels = {
+  none: '无字',
+  zh: '中文',
+  en: '英文',
+  bilingual: '中英 中英文 中文 英文',
+};
+const layoutLabels = { standalone: '独立', horizontal: '横版 横向', vertical: '竖版 竖向' };
+const fileColorLabels = {
+  orange: '橙色',
+  red: '红色',
+  blue: '蓝色',
+  green: '绿色',
+  black: '黑色',
+  white: '白色',
+  gray: '灰色',
+  grey: '灰色',
+};
 
 export function sortBrands(brands) {
   return [...brands].sort((a, b) => names.compare(a.name, b.name) || names.compare(a.id, b.id));
@@ -34,8 +54,32 @@ export function matchingAssets(brand, query) {
     .filter((term) => term && !identity.includes(term));
   if (!terms.length) return [...brand.assets];
   return brand.assets.filter((asset) => {
-    const text = normalizeQuery([asset.file, asset.label, asset.rights?.license].join(' '));
-    return terms.every((term) => text.includes(term));
+    const text = normalizeQuery(
+      [
+        asset.file,
+        asset.label,
+        asset.rights?.license,
+        asset.variant,
+        shapeLabels[asset.variant],
+        languageLabels[asset.language],
+        layoutLabels[asset.layout],
+        ...asset.file
+          .toLowerCase()
+          .split(/[-_.]/u)
+          .map((word) => fileColorLabels[word]),
+        asset.provenance?.sourceType,
+        asset.provenance?.processing,
+        sourceLabels[asset.provenance?.sourceType],
+        processingLabels[asset.provenance?.processing],
+        ...(asset.qualityNotes || []),
+      ].join(' '),
+    );
+    // Keep negated descriptions searchable without treating them as transparent artwork.
+    const transparencyText = text.replace(/(?:不|非)透明/gu, '');
+    return terms.every((term) => {
+      const positiveTransparency = term.includes('透明') && !/(?:不|非)透明/u.test(term);
+      return (positiveTransparency ? transparencyText : text).includes(term);
+    });
   });
 }
 

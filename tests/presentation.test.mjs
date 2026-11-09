@@ -2,6 +2,111 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 
 const presentation = () => import('../src/lib/catalog-presentation.mjs');
+
+test('source labels use reviewed channels and preserve original or rendered distinctions', async () => {
+  const { sourceLabel } = await import('../src/lib/catalog-display.mjs');
+  for (const [channel, expected] of [
+    ['brand-library', '官方品牌素材下载页'],
+    ['repository', '官方仓库'],
+    ['website', '官网页面用图'],
+    ['app-store', '官方应用商店'],
+    ['commons', 'Commons'],
+  ]) {
+    const sourceType = channel === 'commons' ? 'commons' : 'official';
+    assert.equal(
+      sourceLabel({ provenance: { sourceType, channel, processing: 'original' } }),
+      expected,
+    );
+    assert.equal(
+      sourceLabel({ provenance: { sourceType, channel, processing: 'rendered' } }),
+      `${expected} · 渲染图`,
+    );
+  }
+  assert.equal(
+    sourceLabel({ provenance: { sourceType: 'official', processing: 'original' } }),
+    '官方来源',
+  );
+  assert.equal(
+    sourceLabel({ provenance: { sourceType: 'commons', processing: 'original' } }),
+    'Commons',
+  );
+  assert.equal(sourceLabel({}), '来源');
+});
+
+test('website source labels describe reviewed placement and the actual source page', async () => {
+  const { sourceLabel, provenanceLabel } = await import('../src/lib/catalog-display.mjs');
+  for (const [placement, location] of [
+    ['header', '页头 Logo'],
+    ['footer', '页脚 Logo'],
+  ]) {
+    const asset = {
+      provenance: {
+        sourceType: 'official',
+        channel: 'website',
+        processing: 'original',
+        pageTitle: '小米信任中心',
+        placement,
+      },
+    };
+    assert.equal(sourceLabel(asset), `官网${location}`);
+    assert.equal(provenanceLabel(asset), `小米信任中心 · ${location} · 原始文件`);
+    asset.provenance.processing = 'rendered';
+    assert.equal(sourceLabel(asset), `官网${location} · 渲染图`);
+    assert.equal(provenanceLabel(asset), `小米信任中心 · ${location} · 渲染文件`);
+  }
+  assert.equal(
+    sourceLabel({ provenance: { sourceType: 'official', channel: 'website' } }),
+    '官网页面用图',
+  );
+  assert.equal(
+    provenanceLabel({
+      provenance: {
+        sourceType: 'official',
+        channel: 'brand-library',
+        processing: 'original',
+        pageTitle: '腾讯媒体资料库',
+      },
+    }),
+    '腾讯媒体资料库 · 原始文件',
+  );
+});
+
+test('public domain labels identify the distribution assessment while preserving named licenses', async () => {
+  const { licenseLabel } = await import('../src/lib/catalog-display.mjs');
+  assert.equal(
+    licenseLabel({
+      rights: {
+        license: 'Public domain (textlogo; third-party assessment)',
+        reference: 'https://commons.wikimedia.org/wiki/File:Example.svg',
+      },
+    }),
+    'Commons 公共领域判定',
+  );
+  assert.equal(
+    licenseLabel({
+      rights: {
+        license: 'Public domain (third-party assessment)',
+        reference: 'https://example.com/license',
+      },
+    }),
+    '公共领域（第三方判定）',
+  );
+  assert.equal(
+    licenseLabel({
+      rights: { license: 'Public domain', reference: 'https://example.com/license' },
+    }),
+    '公共领域',
+  );
+  assert.equal(
+    licenseLabel({
+      rights: {
+        license: 'CC-BY-NC-4.0',
+        reference: 'https://commons.wikimedia.org/wiki/File:Example.svg',
+      },
+    }),
+    'CC-BY-NC-4.0',
+  );
+});
 const brands = [
   {
     id: 'z',
@@ -67,7 +172,7 @@ test('generates only available entity and file-format filters', async () => {
   });
 });
 
-test('category options use actual memberships and the eight declared Chinese labels', async () => {
+test('category options use actual memberships and the declared Chinese labels', async () => {
   const { categoryLabels, categoryOptions } = await presentation();
   assert.deepEqual(categoryLabels, {
     internet: '互联网',
@@ -78,6 +183,11 @@ test('category options use actual memberships and the eight declared Chinese lab
     ai: '人工智能',
     'enterprise-software': '企业软件',
     software: '软件与服务',
+    automotive: '汽车',
+    'e-commerce': '电子商务',
+    entertainment: '娱乐',
+    'industrial-automation': '工业自动化',
+    'social-media': '社交媒体',
   });
   assert.deepEqual(categoryOptions(brands), [
     { id: '', label: '全部品牌', count: 2 },

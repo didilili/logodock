@@ -65,3 +65,50 @@ test('file-specific search terms must match one file while brand terms remain sh
   for (const query of ['阿尔法 中文 png', 'alpha 中文 cc-by', 'alpha 英文 mit'])
     assert.deepEqual(search.filterBrands([brand], query), [], query);
 });
+
+test('concise labels keep provenance and file descriptions searchable on the same file', () => {
+  const brand = {
+    ...brands[0],
+    assets: [
+      {
+        file: 'english.svg',
+        label: '英文',
+        provenance: { sourceType: 'official', processing: 'original' },
+        qualityNotes: ['透明背景，画布含留白。'],
+      },
+      {
+        file: 'english.png',
+        label: '英文',
+        provenance: { sourceType: 'commons', processing: 'rendered' },
+      },
+    ],
+  };
+  const before = structuredClone(brand);
+  for (const query of ['阿尔法 官方 原件', 'AF official original', 'alpha 透明 留白'])
+    assert.deepEqual(search.matchingAssets(brand, query), [brand.assets[0]], query);
+  for (const query of ['阿尔法 Commons 渲染', 'alpha commons rendered'])
+    assert.deepEqual(search.matchingAssets(brand, query), [brand.assets[1]], query);
+  assert.deepEqual(search.matchingAssets(brand, 'alpha 官方 png'), []);
+  assert.deepEqual(search.matchingAssets(brand, 'alpha Commons 留白'), []);
+  assert.deepEqual(brand, before);
+});
+
+test('positive transparency queries exclude negated descriptions and preserve other terms', () => {
+  const brand = {
+    ...brands[0],
+    assets: [
+      { file: 'clear.png', qualityNotes: ['透明背景，画布含留白。'] },
+      { file: 'white.jpg', qualityNotes: ['不透明白底，画布含留白。'] },
+      { file: 'red.png', qualityNotes: ['非透明背景，红底。'] },
+    ],
+  };
+  const before = structuredClone(brand);
+  for (const query of ['alpha 透明', 'alpha 透明背景', 'alpha 透明 留白'])
+    assert.deepEqual(search.matchingAssets(brand, query), [brand.assets[0]], query);
+  for (const query of ['alpha 不透明', 'alpha 不透明白底', 'alpha 白底'])
+    assert.deepEqual(search.matchingAssets(brand, query), [brand.assets[1]], query);
+  for (const query of ['alpha 非透明', 'alpha 非透明背景', 'alpha 红底'])
+    assert.deepEqual(search.matchingAssets(brand, query), [brand.assets[2]], query);
+  assert.deepEqual(search.matchingAssets(brand, 'alpha 透明 jpg'), []);
+  assert.deepEqual(brand, before);
+});

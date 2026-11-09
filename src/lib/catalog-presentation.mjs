@@ -11,6 +11,11 @@ export const categoryLabels = {
   ai: '人工智能',
   'enterprise-software': '企业软件',
   software: '软件与服务',
+  automotive: '汽车',
+  'e-commerce': '电子商务',
+  entertainment: '娱乐',
+  'industrial-automation': '工业自动化',
+  'social-media': '社交媒体',
 };
 export const sortCatalogBrands = sortBrands;
 const variantLabels = { icon: '图形标识', wordmark: '文字标识', logo: '组合标识' };

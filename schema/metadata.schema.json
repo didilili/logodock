@@ -206,6 +206,12 @@
           "items": {
             "$ref": "#/$defs/nonemptyString"
           }
+        },
+        "usageWarnings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/nonemptyString"
+          }
         }
       }
     },
@@ -296,6 +302,20 @@
         "processing": {
           "type": "string",
           "enum": ["original", "rendered"]
+        },
+        "channel": {
+          "type": "string",
+          "enum": ["brand-library", "repository", "website", "app-store", "commons"],
+          "description": "Optional reviewed acquisition channel. Consistency with sourceType is checked by the catalog loader."
+        },
+        "placement": {
+          "type": "string",
+          "enum": ["header", "footer"],
+          "description": "Optional verified use of the exact file on its source website. Only valid for the website channel."
+        },
+        "pageTitle": {
+          "$ref": "#/$defs/nonemptyString",
+          "description": "Reviewed human-readable name of sourcePage."
         }
       }
     },

@@ -17,7 +17,14 @@ export interface Asset {
   width?: number;
   height?: number;
   qualityNotes?: string[];
-  provenance: { sourceType: string; processing: string };
+  usageWarnings?: string[];
+  provenance: {
+    sourceType: string;
+    processing: string;
+    channel?: 'brand-library' | 'repository' | 'website' | 'app-store' | 'commons';
+    placement?: 'header' | 'footer';
+    pageTitle?: string;
+  };
   rights: {
     status: string;
     license: string;
