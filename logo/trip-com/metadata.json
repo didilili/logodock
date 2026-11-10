@@ -59,38 +59,6 @@
   "defaultAsset": "wordmark-white-official.png",
   "assets": [
     {
-      "file": "wordmark-white-official.png",
-      "label": "白色集团字标",
-      "variant": "wordmark",
-      "status": "current",
-      "background": "dark",
-      "language": "en",
-      "layout": "horizontal",
-      "color": "white",
-      "provenance": {
-        "sourceType": "official",
-        "processing": "original",
-        "channel": "website",
-        "placement": "header",
-        "pageTitle": "携程集团官方网站"
-      },
-      "source": "https://dimg04.tripcdn.com/images/0x90212000n90afx071CB.png",
-      "sourcePage": "https://group.trip.com/",
-      "sha256": "edf3a1b21c9fa2dc9c8e1815869476acd8400dbff960ba4679b682c4d3f91998",
-      "bytes": 5841,
-      "rights": {
-        "status": "permitted",
-        "license": "Public domain (textlogo; third-party assessment)",
-        "reference": "https://commons.wikimedia.org/w/index.php?title=File:Trip.com_Group_logo.svg&oldid=1245285677",
-        "attribution": "携程集团 / Trip.com Group。来源为集团官网直接提供的原始PNG，未修改；Commons对相同简单英文字标的第三方PD-textlogo判断无版权署名要求，商标权保留。",
-        "reviewedAt": "2026-11-09",
-        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围限于相同 Trip.com Group 简单英文字标。"
-      },
-      "qualityNotes": [
-        "透明背景。"
-      ]
-    },
-    {
       "file": "wordmark-blue-small-official.png",
       "label": "蓝色小尺寸字标",
       "variant": "wordmark",
@@ -122,6 +90,57 @@
       "qualityNotes": [
         "透明背景。"
       ]
+    },
+    {
+      "file": "wordmark-white-official.png",
+      "label": "白色集团字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://file.tripcdn.com/files/6/mkt_groupwebsite_file/25g0212000rogkrcx9CEC.png",
+      "sourcePage": "https://group.trip.com/media",
+      "sha256": "bb0c4c93736684dd1c5765c2365993f83dc26e0e25c2f32139475883b4800261",
+      "bytes": 68730,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://group.trip.com/media",
+        "attribution": "携程集团。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "透明背景，官方媒体库反白原件。"
+      ]
+    }
+  ],
+  "sourceFiles": [
+    {
+      "file": "brand-guidelines-2023-official.pdf",
+      "label": "品牌使用规范 2023/03",
+      "assetFiles": [
+        "wordmark-white-official.png",
+        "wordmark-blue-small-official.png"
+      ],
+      "source": "https://file.tripcdn.com/files/6/mkt_groupwebsite_file/25g2o12000gcr4roa35A3.pdf",
+      "sourcePage": "https://group.trip.com/media",
+      "sha256": "7ac3a776c65c76a71db22f443527621d5ee878900f7b7afaa47f97406a3466d7",
+      "bytes": 32921553,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://group.trip.com/media",
+        "attribution": "Trip.com Group。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌官网当前 Brand Assets 提供的完整规范，文档标记 2023/03、For External Use Only。保持原稿比例及颜色，留足以字母 o 为基准的保护空间；最小高度为印刷 4 mm、屏幕 24 dp，浅底用彩色，蓝色或深底用反白并保持对比度。合作署名按规范保持视觉等重、标识间距及分隔线。指南中的反白示意为全白，当前媒体 PNG 原件保留黄色圆点，按各原件实际图稿取用。"
+      }
     }
   ]
 }

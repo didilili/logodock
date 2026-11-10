@@ -6,7 +6,15 @@
   "identity": {
     "nameZh": "亚信科技",
     "nameEn": "AsiaInfo",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "亚信科技控股有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://www.asiainfo.com/zh_cn/about.html",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
     "sources": [
       {
         "label": "亚信科技官方来源",

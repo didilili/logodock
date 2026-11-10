@@ -115,5 +115,47 @@
         "notes": "官网使用条款限制站外使用。"
       }
     }
+  ],
+  "sourceFiles": [
+    {
+      "file": "brand-guidelines-official.ai",
+      "label": "品牌基础规范 AI 原件",
+      "assetFiles": [
+        "icon-black-official.png",
+        "icon-white-official.png"
+      ],
+      "source": "https://www.sf-express.com/uploads/SF_Band_Information_Basic_ce811c8a97.zip",
+      "sourcePage": "https://www.sf-express.com/chn/sc",
+      "sha256": "ef4629bad7fc35eeff4bd6cb97be9135284b050c8c0ea88e8b42dbf141d64c99",
+      "bytes": 5403658,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.sf-express.com/chn/sc",
+        "attribution": "顺丰速运。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方品牌基础规范完整原件，含标识、语言组合、颜色及使用标准。AI 可供设计软件使用，PDF 供阅读规范。 使用时按规范保留至少 0.2x 的保护空间，印刷高度至少 9 mm；保持标识组合、字形、比例与标准配色，避免低对比度或复杂图像背景。"
+      }
+    },
+    {
+      "file": "brand-guidelines-official.pdf",
+      "label": "品牌基础规范 PDF 原件",
+      "assetFiles": [
+        "icon-black-official.png",
+        "icon-white-official.png"
+      ],
+      "source": "https://www.sf-express.com/uploads/SF_Band_Information_Basic_ce811c8a97.zip",
+      "sourcePage": "https://www.sf-express.com/chn/sc",
+      "sha256": "bb8da2fb8a7661619a5cb8e745c6c56ce1ecb1dcdd013d5b15cd0690d29513a1",
+      "bytes": 1706860,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.sf-express.com/chn/sc",
+        "attribution": "顺丰速运。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方品牌基础规范完整原件，含标识、语言组合、颜色及使用标准。AI 可供设计软件使用，PDF 供阅读规范。 使用时按规范保留至少 0.2x 的保护空间，印刷高度至少 9 mm；保持标识组合、字形、比例与标准配色，避免低对比度或复杂图像背景。"
+      }
+    }
   ]
 }

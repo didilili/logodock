@@ -6,7 +6,22 @@
   "identity": {
     "nameZh": "经纬恒润",
     "nameEn": "JINGWEI HIRAIN",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "北京经纬恒润科技股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.hirain.com/intro/36.html",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "name": "Beijing Jingwei Hirain Technologies Co., Inc.",
+        "language": "en",
+        "role": "company",
+        "source": "https://en.hirain.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
     "sources": [
       {
         "label": "经纬恒润官方来源",

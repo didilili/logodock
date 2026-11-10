@@ -9,7 +9,15 @@
   "identity": {
     "nameZh": "传音控股",
     "nameEn": "TRANSSION",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "深圳传音控股股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.transsion.com/zh-CN/about",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
     "sources": [
       {
         "label": "传音控股公司官网",

@@ -37,6 +37,11 @@
         "label": "腾讯官方投资者页（中/英）",
         "url": "https://www.tencent.com/zh-cn/investors/",
         "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "腾讯官方媒体库 Logo 全部条目",
+        "url": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+        "reviewedAt": "2026-11-10"
       }
     ]
   },
@@ -139,6 +144,276 @@
       },
       "qualityNotes": [
         "透明背景，上下留白较多。"
+      ]
+    },
+    {
+      "file": "wordmark-english-blue-official.png",
+      "label": "蓝色英文字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.tencent.com/wp-content/uploads/2022/12/03_Tencent_English-logo.png",
+      "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+      "sha256": "5f2c7ae33573b9d313298578c503c1772dea6571860dbfd483641b13164de173",
+      "bytes": 45583,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+        "attribution": "腾讯。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方媒体库限定素材供媒体报道使用，其他用途须核对品牌方要求。"
+      },
+      "qualityNotes": [
+        "透明背景，英文独立字标。"
+      ]
+    },
+    {
+      "file": "icon-t-blue-official.png",
+      "label": "蓝色t 图形",
+      "variant": "icon",
+      "status": "current",
+      "language": "en",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.tencent.com/wp-content/uploads/2024/05/04_Tencent_Graphics2-2.png",
+      "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+      "sha256": "b30969d3b66ab9472a10d27280802cba5ecb762aaf18ae36491ab2ad7550cb28",
+      "bytes": 13015,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+        "attribution": "腾讯。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方媒体库限定素材供媒体报道使用，其他用途须核对品牌方要求。"
+      },
+      "qualityNotes": [
+        "透明背景，保留官方独立构图。"
+      ]
+    },
+    {
+      "file": "icon-tile-blue-official.png",
+      "label": "蓝色倾斜方块 t 图形",
+      "variant": "icon",
+      "status": "current",
+      "language": "en",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.tencent.com/wp-content/uploads/2022/12/04_Tencent_Graphics.png",
+      "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+      "sha256": "ec5cf76ff1f8442e189422754bebbb49e95cbdb7f064c43f44c1fb30a6a81348",
+      "bytes": 19322,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+        "attribution": "腾讯。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方媒体库限定素材供媒体报道使用，其他用途须核对品牌方要求。"
+      },
+      "qualityNotes": [
+        "透明背景，保留官方独立构图。"
+      ]
+    },
+    {
+      "file": "wordmark-english-black-official.png",
+      "label": "黑色英文字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "source": "https://www.tencent.com/wp-content/uploads/2022/12/03_Tencent_English-logo_Black.png",
+      "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+      "sha256": "370a7af701afc6c3d6673eecbd768ec426956ff241b920e04012374600fba5c6",
+      "bytes": 41276,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+        "attribution": "腾讯。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方媒体库限定素材供媒体报道使用，其他用途须核对品牌方要求。"
+      },
+      "qualityNotes": [
+        "透明背景，英文独立字标。"
+      ]
+    },
+    {
+      "file": "icon-t-black-official.png",
+      "label": "黑色t 图形",
+      "variant": "icon",
+      "status": "current",
+      "language": "en",
+      "layout": "standalone",
+      "color": "black",
+      "background": "light",
+      "source": "https://www.tencent.com/wp-content/uploads/2020/05/04_Tencent_Graphics2_Black.png",
+      "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+      "sha256": "6a053813d7d3e33dd8dc37932a19ee85e79edd8be4468ad923968b680ab64206",
+      "bytes": 12590,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+        "attribution": "腾讯。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方媒体库限定素材供媒体报道使用，其他用途须核对品牌方要求。"
+      },
+      "qualityNotes": [
+        "透明背景，保留官方独立构图。"
+      ]
+    },
+    {
+      "file": "icon-tile-black-official.png",
+      "label": "黑色倾斜方块 t 图形",
+      "variant": "icon",
+      "status": "current",
+      "language": "en",
+      "layout": "standalone",
+      "color": "black",
+      "background": "light",
+      "source": "https://www.tencent.com/wp-content/uploads/2023/02/03_Tencent_Graphics1_Black.png",
+      "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+      "sha256": "26d46295acdc16c7e43477a7e33218a590bc6dee982740faf7524df413b7c92f",
+      "bytes": 18425,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+        "attribution": "腾讯。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方媒体库限定素材供媒体报道使用，其他用途须核对品牌方要求。"
+      },
+      "qualityNotes": [
+        "透明背景，保留官方独立构图。"
+      ]
+    },
+    {
+      "file": "wordmark-english-white-official.png",
+      "label": "白色英文字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.tencent.com/wp-content/uploads/2022/12/03_Tencent_English-logo_Reverse-type.png",
+      "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+      "sha256": "0a77f3e5c127e411f230783edeb6ce3e3b9d85fbf001faf40a1f45358bd08032",
+      "bytes": 45749,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+        "attribution": "腾讯。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方媒体库限定素材供媒体报道使用，其他用途须核对品牌方要求。"
+      },
+      "qualityNotes": [
+        "透明背景，英文独立字标。"
+      ]
+    },
+    {
+      "file": "icon-t-white-official.png",
+      "label": "白色t 图形",
+      "variant": "icon",
+      "status": "current",
+      "language": "en",
+      "layout": "standalone",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.tencent.com/wp-content/uploads/2024/05/04_Tencent_Graphics2_Reverse-type.png",
+      "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+      "sha256": "471df2dbe4c8bdb4d91280ff11ff5ad22729bc5ee757f90a3b6226d5cda61167",
+      "bytes": 13594,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+        "attribution": "腾讯。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方媒体库限定素材供媒体报道使用，其他用途须核对品牌方要求。"
+      },
+      "qualityNotes": [
+        "透明背景，保留官方独立构图。"
+      ]
+    },
+    {
+      "file": "icon-tile-white-official.png",
+      "label": "白色倾斜方块 t 图形",
+      "variant": "icon",
+      "status": "current",
+      "language": "en",
+      "layout": "standalone",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.tencent.com/wp-content/uploads/2024/05/03_Tencent_Graphics1_Reverse-type.png",
+      "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+      "sha256": "e3f89e8f3132b286d831f9eef1bb8366e347efcfec823006cb7fb6f617e13cb1",
+      "bytes": 18294,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+        "attribution": "腾讯。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方媒体库限定素材供媒体报道使用，其他用途须核对品牌方要求。"
+      },
+      "qualityNotes": [
+        "透明背景，保留官方独立构图。"
       ]
     }
   ]

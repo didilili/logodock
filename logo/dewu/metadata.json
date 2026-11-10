@@ -5,7 +5,7 @@
   "aliases": [],
   "identity": {
     "nameZh": "得物",
-    "nameEn": null,
+    "nameEn": "POIZON",
     "legalNames": [],
     "sources": [
       {
@@ -17,6 +17,11 @@
         "label": "得物官网链接的官方招聘网站",
         "url": "https://poizon.jobs.feishu.cn/index",
         "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "得物官网关联的官方招聘页与国际品牌名称",
+        "url": "https://poizon.jobs.feishu.cn/",
+        "reviewedAt": "2026-11-10"
       }
     ]
   },

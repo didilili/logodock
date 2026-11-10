@@ -6,7 +6,15 @@
   "identity": {
     "nameZh": null,
     "nameEn": "BIGO",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "BIGO TECHNOLOGY PTE. LTD.",
+        "language": "en",
+        "role": "company",
+        "source": "https://www.bigo.sg/",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
     "sources": [
       {
         "label": "BIGO官方来源",

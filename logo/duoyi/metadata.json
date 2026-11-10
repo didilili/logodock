@@ -5,13 +5,26 @@
   "aliases": [],
   "identity": {
     "nameZh": "多益网络",
-    "nameEn": null,
-    "legalNames": [],
+    "nameEn": "Duoyi",
+    "legalNames": [
+      {
+        "name": "广州多益网络股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.duoyi.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
     "sources": [
       {
         "label": "多益网络官方来源",
         "url": "https://www.duoyi.com/",
         "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "多益集团官方英文介绍",
+        "url": "https://www.duoyigroup.cn/dycommerce/en/",
+        "reviewedAt": "2026-11-10"
       }
     ]
   },

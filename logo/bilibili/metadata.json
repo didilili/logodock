@@ -142,6 +142,37 @@
         "attribution": "哔哩哔哩。许可及署名条件待核实。",
         "reviewedAt": "2026-11-09"
       }
+    },
+    {
+      "file": "wordmark-recruitment-white-official.png",
+      "label": "招聘组合",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://s1.hdslb.com/bfs/templar/york-static/egGNHG9P4Vz5KY6e.png",
+      "sourcePage": "https://jobs.bilibili.com/",
+      "status": "current",
+      "display": "alternative",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header"
+      },
+      "qualityNotes": [
+        "完整保留“bilibili 招聘”字样，供招聘相关场景取用。"
+      ],
+      "sha256": "fe36d2002dab29f464e73c28e20fde21c4cec9ce1cfe4673209e32ceeae0b639",
+      "bytes": 11926,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://jobs.bilibili.com/",
+        "attribution": "哔哩哔哩。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
     }
   ]
 }

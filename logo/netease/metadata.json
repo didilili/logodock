@@ -5,13 +5,26 @@
   "aliases": [],
   "identity": {
     "nameZh": "网易",
-    "nameEn": null,
-    "legalNames": [],
+    "nameEn": "NetEase",
+    "legalNames": [
+      {
+        "name": "NetEase, Inc.",
+        "language": "en",
+        "role": "group",
+        "source": "https://ir.netease.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
     "sources": [
       {
         "label": "网易官方来源",
         "url": "https://hr.163.com/",
         "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "网易官方投资者关系公司概览",
+        "url": "https://ir.netease.com/",
+        "reviewedAt": "2026-11-10"
       }
     ]
   },

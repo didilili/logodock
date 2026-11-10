@@ -37,7 +37,7 @@
   "categories": [
     "internet"
   ],
-  "defaultAsset": "logo-english.svg",
+  "defaultAsset": "logo-chinese-official.svg",
   "assets": [
     {
       "file": "logo-english.svg",
@@ -161,6 +161,84 @@
         "attribution": "滴滴。原作品权利及来源依据沿用母稿记录，图形提取处理由 LogoDock 完成。",
         "reviewedAt": "2026-11-10",
         "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。判定范围限于 DiDi 组合标中的相同 D 形图形。"
+      }
+    },
+    {
+      "file": "logo-chinese-official.svg",
+      "label": "中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://website.didiglobal.com/dist/media/logo-zh.5837eebe.svg",
+      "sourcePage": "https://www.didiglobal.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "bc8b1689d5bb4e7ca33a3431d44934dba27e24eee22b2fcbeb95e4e41b42938f",
+      "bytes": 2242,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.didiglobal.com/",
+        "attribution": "滴滴。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-chinese-white-official.svg",
+      "label": "中文反白组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://website.didiglobal.com/dist/media/logo-zh-1.1387092c.svg",
+      "sourcePage": "https://www.didiglobal.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "c4b31edc02e837ccf09db8e8da05fd737fed7d1f97ea51a8c0e991bc6dabb413",
+      "bytes": 2190,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.didiglobal.com/",
+        "attribution": "滴滴。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-english-white-official.svg",
+      "label": "英文反白组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://website.didiglobal.com/dist/media/logo-en-1.fc3db1d1.svg",
+      "sourcePage": "https://www.didiglobal.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "c765b9080b8a23f23a33ad67aa775a75dd79ea9ab49add039548b5b702681265",
+      "bytes": 1553,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.didiglobal.com/",
+        "attribution": "滴滴。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
       }
     }
   ],

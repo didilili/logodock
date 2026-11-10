@@ -176,6 +176,312 @@
       "qualityNotes": [
         "透明背景，画布含留白。"
       ]
+    },
+    {
+      "file": "logo-slogan-light-1.png",
+      "label": "浅底竖标三行口号",
+      "variant": "logo",
+      "status": "current",
+      "display": "alternative",
+      "background": "light",
+      "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_LogoSlogan_Lockup.zip",
+      "sourcePage": "https://www.minimax.io/brand-vi",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "b3bb3ec8a6794fe5ac3602c091e7ff013b3806e7bf10021a0576bc631e6506ae",
+      "bytes": 168672,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.minimax.io/brand-vi",
+        "attribution": "MiniMax。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "遵守官方比例、颜色、间距和完整组合要求。官方使用许可为有限、非独占且不可转让，未涵盖的用途须另行申请批准。"
+      },
+      "qualityNotes": [
+        "保留官方完整口号“Intelligence with Everyone”，布局对应品牌书允许的四种组合之一。"
+      ]
+    },
+    {
+      "file": "logo-slogan-light-2.png",
+      "label": "浅底竖标两行口号",
+      "variant": "logo",
+      "status": "current",
+      "display": "alternative",
+      "background": "light",
+      "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_LogoSlogan_Lockup.zip",
+      "sourcePage": "https://www.minimax.io/brand-vi",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "5832f0997a93660bba8c646364f297f09e94a8df3df7708a4267ade91705a594",
+      "bytes": 182052,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.minimax.io/brand-vi",
+        "attribution": "MiniMax。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "遵守官方比例、颜色、间距和完整组合要求。官方使用许可为有限、非独占且不可转让，未涵盖的用途须另行申请批准。"
+      },
+      "qualityNotes": [
+        "保留官方完整口号“Intelligence with Everyone”，布局对应品牌书允许的四种组合之一。"
+      ]
+    },
+    {
+      "file": "logo-slogan-light-3.png",
+      "label": "浅底横标三行口号",
+      "variant": "logo",
+      "status": "current",
+      "display": "alternative",
+      "background": "light",
+      "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_LogoSlogan_Lockup.zip",
+      "sourcePage": "https://www.minimax.io/brand-vi",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "75666020c02384c51fca8d67c268d396f0c2401b3826ce22d12ee8ccd059adc0",
+      "bytes": 172409,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.minimax.io/brand-vi",
+        "attribution": "MiniMax。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "遵守官方比例、颜色、间距和完整组合要求。官方使用许可为有限、非独占且不可转让，未涵盖的用途须另行申请批准。"
+      },
+      "qualityNotes": [
+        "保留官方完整口号“Intelligence with Everyone”，布局对应品牌书允许的四种组合之一。"
+      ]
+    },
+    {
+      "file": "logo-slogan-light-4.png",
+      "label": "浅底横标两行口号",
+      "variant": "logo",
+      "status": "current",
+      "display": "alternative",
+      "background": "light",
+      "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_LogoSlogan_Lockup.zip",
+      "sourcePage": "https://www.minimax.io/brand-vi",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "dcd827430b1cb9cea881cbb7bb166d6adb8b955d930f2455398b144fb438ed3c",
+      "bytes": 189617,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.minimax.io/brand-vi",
+        "attribution": "MiniMax。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "遵守官方比例、颜色、间距和完整组合要求。官方使用许可为有限、非独占且不可转让，未涵盖的用途须另行申请批准。"
+      },
+      "qualityNotes": [
+        "保留官方完整口号“Intelligence with Everyone”，布局对应品牌书允许的四种组合之一。"
+      ]
+    },
+    {
+      "file": "logo-slogan-dark-1.png",
+      "label": "深底竖标三行口号",
+      "variant": "logo",
+      "status": "current",
+      "display": "alternative",
+      "background": "dark",
+      "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_LogoSlogan_Lockup.zip",
+      "sourcePage": "https://www.minimax.io/brand-vi",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "872bbf32e59ebbb29d07492d9d05c35ae750ea3c7e530527219ef842e59ec7f6",
+      "bytes": 60448,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.minimax.io/brand-vi",
+        "attribution": "MiniMax。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "遵守官方比例、颜色、间距和完整组合要求。官方使用许可为有限、非独占且不可转让，未涵盖的用途须另行申请批准。"
+      },
+      "qualityNotes": [
+        "保留官方完整口号“Intelligence with Everyone”，布局对应品牌书允许的四种组合之一。"
+      ]
+    },
+    {
+      "file": "logo-slogan-dark-2.png",
+      "label": "深底竖标两行口号",
+      "variant": "logo",
+      "status": "current",
+      "display": "alternative",
+      "background": "dark",
+      "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_LogoSlogan_Lockup.zip",
+      "sourcePage": "https://www.minimax.io/brand-vi",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "a5e3047e26bd30cbc05cc5dca6eafa03d0c2fc150eeef4cd86f41d2f8ffc7151",
+      "bytes": 72001,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.minimax.io/brand-vi",
+        "attribution": "MiniMax。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "遵守官方比例、颜色、间距和完整组合要求。官方使用许可为有限、非独占且不可转让，未涵盖的用途须另行申请批准。"
+      },
+      "qualityNotes": [
+        "保留官方完整口号“Intelligence with Everyone”，布局对应品牌书允许的四种组合之一。"
+      ]
+    },
+    {
+      "file": "logo-slogan-dark-3.png",
+      "label": "深底横标三行口号",
+      "variant": "logo",
+      "status": "current",
+      "display": "alternative",
+      "background": "dark",
+      "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_LogoSlogan_Lockup.zip",
+      "sourcePage": "https://www.minimax.io/brand-vi",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "853f782fed4deddf20b71792f93eb39149756bb0ae4c6c8b77fc6866c50041ae",
+      "bytes": 62034,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.minimax.io/brand-vi",
+        "attribution": "MiniMax。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "遵守官方比例、颜色、间距和完整组合要求。官方使用许可为有限、非独占且不可转让，未涵盖的用途须另行申请批准。"
+      },
+      "qualityNotes": [
+        "保留官方完整口号“Intelligence with Everyone”，布局对应品牌书允许的四种组合之一。"
+      ]
+    },
+    {
+      "file": "logo-slogan-dark-4.png",
+      "label": "深底横标两行口号",
+      "variant": "logo",
+      "status": "current",
+      "display": "alternative",
+      "background": "dark",
+      "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_LogoSlogan_Lockup.zip",
+      "sourcePage": "https://www.minimax.io/brand-vi",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "e0fda874624317ece590c68875357648a1d1413ebb13b49309552a11f94672cf",
+      "bytes": 75436,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.minimax.io/brand-vi",
+        "attribution": "MiniMax。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "遵守官方比例、颜色、间距和完整组合要求。官方使用许可为有限、非独占且不可转让，未涵盖的用途须另行申请批准。"
+      },
+      "qualityNotes": [
+        "保留官方完整口号“Intelligence with Everyone”，布局对应品牌书允许的四种组合之一。"
+      ]
+    }
+  ],
+  "sourceFiles": [
+    {
+      "file": "logo-slogan-lockup-original.ai",
+      "label": "口号组合矢量源稿",
+      "assetFiles": [
+        "logo-slogan-light-1.png",
+        "logo-slogan-light-2.png",
+        "logo-slogan-light-3.png",
+        "logo-slogan-light-4.png",
+        "logo-slogan-dark-1.png",
+        "logo-slogan-dark-2.png",
+        "logo-slogan-dark-3.png",
+        "logo-slogan-dark-4.png"
+      ],
+      "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_LogoSlogan_Lockup.zip",
+      "sourcePage": "https://www.minimax.io/brand-vi",
+      "sha256": "08a316ef69a2290b5db5def14b7bd58ee08252b7d824f7970a220bb0c9e5a7df",
+      "bytes": 946442,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.minimax.io/brand-vi",
+        "attribution": "MiniMax。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "遵守官方比例、颜色、间距和完整组合要求。官方使用许可为有限、非独占且不可转让，未涵盖的用途须另行申请批准。"
+      }
+    },
+    {
+      "file": "brand-book-2026.pdf",
+      "label": "品牌视觉规范（2026）",
+      "assetFiles": [
+        "logo-gradient-vertical-official.png",
+        "logo-gradient-horizontal.png",
+        "logo-gradient-horizontal-white.png",
+        "logo-black-horizontal.png",
+        "logo-slogan-light-1.png",
+        "logo-slogan-light-2.png",
+        "logo-slogan-light-3.png",
+        "logo-slogan-light-4.png",
+        "logo-slogan-dark-1.png",
+        "logo-slogan-dark-2.png",
+        "logo-slogan-dark-3.png",
+        "logo-slogan-dark-4.png"
+      ],
+      "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_Brand_Book.pdf",
+      "sourcePage": "https://www.minimax.io/brand-vi",
+      "sha256": "cfdaa62f5a4c9118239aac78d535b9b0b46eafd7eecf84f07e8987ae815f722d",
+      "bytes": 22968444,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.minimax.io/brand-vi",
+        "attribution": "MiniMax。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "遵守官方比例、颜色、间距和完整组合要求。官方使用许可为有限、非独占且不可转让，未涵盖的用途须另行申请批准。"
+      }
     }
   ]
 }

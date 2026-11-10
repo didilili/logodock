@@ -251,6 +251,93 @@
         "reviewedAt": "2026-11-10",
         "notes": "许可及署名条件待核实。"
       }
+    },
+    {
+      "file": "logo-black-official.svg",
+      "label": "单色黑色组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "source": "https://about.gitlab.com/images/press/gitlab-logo-300-rgb.svg",
+      "sourcePage": "https://about.gitlab.com/press/press-kit/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "8704699931f96905a0f3ad1c7103d3d519200f2b9d8762a279a7b5a6fd0b206f",
+      "bytes": 3568,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://about.gitlab.com/press/press-kit/",
+        "attribution": "GitLab。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "透明背景，保留官方画板留白。"
+      ]
+    },
+    {
+      "file": "logo-monochrome-white-official.svg",
+      "label": "全白组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://about.gitlab.com/images/press/gitlab-logo-400-rgb.svg",
+      "sourcePage": "https://about.gitlab.com/press/press-kit/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "ac62115b7bee77fd7abd65ddb1d89533cd7b5c51f823c1d26756f75804cc0a93",
+      "bytes": 2097,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://about.gitlab.com/press/press-kit/",
+        "attribution": "GitLab。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "透明背景，保留官方画板留白。"
+      ]
+    },
+    {
+      "file": "icon-black-official.svg",
+      "label": "单色黑色图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "black",
+      "background": "light",
+      "source": "https://about.gitlab.com/images/press/gitlab-logo-600-rgb.svg",
+      "sourcePage": "https://about.gitlab.com/press/press-kit/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "2fd0dd96a81cdb156a74c2b17785a29228def82680d4b8b05bea5b2daf00ef42",
+      "bytes": 533,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://about.gitlab.com/press/press-kit/",
+        "attribution": "GitLab。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "透明背景，保留官方画板留白。"
+      ]
     }
   ],
   "entityType": "company",
@@ -283,7 +370,8 @@
       "file": "icon-color-cmyk.pdf",
       "label": "CMYK 印刷用稿",
       "assetFiles": [
-        "icon-color-official.svg"
+        "icon-color-official.svg",
+        "icon-color-square-extracted.svg"
       ],
       "source": "https://about.gitlab.com/images/press/gitlab-logo-550-cmyk.pdf",
       "sourcePage": "https://about.gitlab.com/press/press-kit/",
@@ -296,6 +384,102 @@
         "attribution": "GitLab。许可及署名条件待核实。",
         "reviewedAt": "2026-11-09",
         "notes": "官方 CMYK 印刷附件，按标注色彩模式及画板取用。"
+      }
+    },
+    {
+      "file": "logo-white-cmyk.eps",
+      "label": "彩色图形反白字标 · CMYK EPS",
+      "assetFiles": [
+        "logo-white-official.svg"
+      ],
+      "source": "https://about.gitlab.com/images/press/gitlab-logo-250-cmyk.eps",
+      "sourcePage": "https://about.gitlab.com/press/press-kit/",
+      "sha256": "d8825ebe4f8d3263b6fd39653828b60f6d4ae7b6547f2e53575e606d9f8ae67b",
+      "bytes": 997170,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://about.gitlab.com/press/press-kit/",
+        "attribution": "GitLab。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方 CMYK 印刷原件，保留原始矢量图稿、色彩空间与画板。"
+      }
+    },
+    {
+      "file": "logo-black-cmyk.pdf",
+      "label": "黑色组合 · CMYK PDF",
+      "assetFiles": [
+        "logo-black-official.svg"
+      ],
+      "source": "https://about.gitlab.com/images/press/gitlab-logo-350-cmyk.pdf",
+      "sourcePage": "https://about.gitlab.com/press/press-kit/",
+      "sha256": "1a3cb12feb007f52ba9e5a191f0c3b0c3013a90820417bc7ed907227524ae036",
+      "bytes": 411276,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://about.gitlab.com/press/press-kit/",
+        "attribution": "GitLab。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方 CMYK 印刷原件，保留原始矢量图稿、色彩空间与画板。"
+      }
+    },
+    {
+      "file": "logo-monochrome-white-cmyk.eps",
+      "label": "全白组合 · CMYK EPS",
+      "assetFiles": [
+        "logo-monochrome-white-official.svg"
+      ],
+      "source": "https://about.gitlab.com/images/press/gitlab-logo-450-cmyk.eps",
+      "sourcePage": "https://about.gitlab.com/press/press-kit/",
+      "sha256": "6958ed99e8d4e3edc3ba6e0d8bf3805ddf53b15ddfda09aed827ecb9436bed13",
+      "bytes": 995714,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://about.gitlab.com/press/press-kit/",
+        "attribution": "GitLab。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方 CMYK 印刷原件，保留原始矢量图稿、色彩空间与画板。"
+      }
+    },
+    {
+      "file": "icon-black-cmyk.pdf",
+      "label": "黑色图形 · CMYK PDF",
+      "assetFiles": [
+        "icon-black-official.svg"
+      ],
+      "source": "https://about.gitlab.com/images/press/gitlab-logo-650-cmyk.pdf",
+      "sourcePage": "https://about.gitlab.com/press/press-kit/",
+      "sha256": "a44fbae0b78bb440fa25aa66d89f1288a872923e175c0c19fac2012fddf13ef9",
+      "bytes": 410332,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://about.gitlab.com/press/press-kit/",
+        "attribution": "GitLab。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方 CMYK 印刷原件，保留原始矢量图稿、色彩空间与画板。"
+      }
+    },
+    {
+      "file": "icon-white-cmyk.eps",
+      "label": "白色图形 · CMYK EPS",
+      "assetFiles": [
+        "icon-white-official.svg",
+        "icon-white-square-extracted.svg"
+      ],
+      "source": "https://about.gitlab.com/images/press/gitlab-logo-750-cmyk.eps",
+      "sourcePage": "https://about.gitlab.com/press/press-kit/",
+      "sha256": "8426905a2ad6e757608525c8c6e0e749fc1e15257499e7363b1025b3dbae34fb",
+      "bytes": 520190,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://about.gitlab.com/press/press-kit/",
+        "attribution": "GitLab。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方 CMYK 印刷原件，保留原始矢量图稿、色彩空间与画板。"
       }
     }
   ],

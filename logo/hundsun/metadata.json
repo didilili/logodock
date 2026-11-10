@@ -6,7 +6,22 @@
   "identity": {
     "nameZh": "恒生电子",
     "nameEn": "HUNDSUN",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "恒生电子股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.hundsun.com/about",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "name": "HUNDSUN TECHNOLOGIES INC.",
+        "language": "en",
+        "role": "company",
+        "source": "https://www.hundsun.com/about",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
     "sources": [
       {
         "label": "恒生电子官方来源",
@@ -17,6 +32,11 @@
         "label": "恒生电子官方校园招聘网站",
         "url": "https://campus.hundsun.com/campus",
         "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "恒生电子官方公司介绍",
+        "url": "https://www.hundsun.com/about",
+        "reviewedAt": "2026-11-10"
       }
     ]
   },

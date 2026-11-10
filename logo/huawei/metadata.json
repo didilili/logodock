@@ -58,7 +58,7 @@
     "hardware",
     "telecommunications"
   ],
-  "defaultAsset": "wordmark-dark-2018.png",
+  "defaultAsset": "logo-color-vertical-official.svg",
   "assets": [
     {
       "file": "wordmark-dark-2018.png",
@@ -86,6 +86,35 @@
         "processing": "rendered",
         "channel": "commons"
       }
+    },
+    {
+      "file": "logo-color-vertical-official.svg",
+      "label": "彩色竖版组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.huawei.com/-/media/htemplate-home/1.0.1.20251205144752/components/assets/img/favicon-logo.svg",
+      "sourcePage": "https://www.huawei.com/en/media-center/multimedia",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "18c6f80d423c1b1e01e4a6e02f66e1375567fd909de1af55c8013430a504126d",
+      "bytes": 3315,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.huawei.com/en/media-center/multimedia",
+        "attribution": "华为。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "完整花瓣图形与HUAWEI字标。"
+      ]
     }
   ]
 }

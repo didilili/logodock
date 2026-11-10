@@ -43,7 +43,7 @@
   "categories": [
     "hardware"
   ],
-  "defaultAsset": "wordmark-black-2020.svg",
+  "defaultAsset": "logo-color-black-horizontal-2026.svg",
   "assets": [
     {
       "file": "wordmark-black-2020.svg",
@@ -71,6 +71,246 @@
         "processing": "original",
         "channel": "commons"
       }
+    },
+    {
+      "file": "logo-black-horizontal-2026.svg",
+      "label": "黑色横版组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "source": "https://www.honor.com/content/dam/honor/cn/brand-guideline-2026/download/HONOR%20Logo%20Toolkit%20%E8%8D%A3%E8%80%80%E5%93%81%E7%89%8C%E6%A0%87%E8%AF%86%E5%B7%A5%E5%85%B7%E5%8C%85.zip",
+      "sourcePage": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "be915e8acfd66669e144c56934390e86f5c64500caec779a622d0e0df7ee3c6d",
+      "bytes": 1770,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+        "attribution": "荣耀。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "工具包声明适用于个人、编辑及非商业用途；品牌规范要求经合同或协议授权使用。遵守官方标志完整性和安全空间要求。"
+      },
+      "qualityNotes": [
+        "原始画布保留官方品牌安全空间。"
+      ]
+    },
+    {
+      "file": "logo-white-horizontal-2026.svg",
+      "label": "白色横版组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.honor.com/content/dam/honor/cn/brand-guideline-2026/download/HONOR%20Logo%20Toolkit%20%E8%8D%A3%E8%80%80%E5%93%81%E7%89%8C%E6%A0%87%E8%AF%86%E5%B7%A5%E5%85%B7%E5%8C%85.zip",
+      "sourcePage": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "e05fa37654730b12164f2ef3eb2492eb593469684d5de090c50b548e1a2ec690",
+      "bytes": 1939,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+        "attribution": "荣耀。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "工具包声明适用于个人、编辑及非商业用途；品牌规范要求经合同或协议授权使用。遵守官方标志完整性和安全空间要求。"
+      },
+      "qualityNotes": [
+        "原始画布保留官方品牌安全空间。"
+      ]
+    },
+    {
+      "file": "logo-color-black-horizontal-2026.svg",
+      "label": "蓝黑横版组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.honor.com/content/dam/honor/cn/brand-guideline-2026/download/HONOR%20Logo%20Toolkit%20%E8%8D%A3%E8%80%80%E5%93%81%E7%89%8C%E6%A0%87%E8%AF%86%E5%B7%A5%E5%85%B7%E5%8C%85.zip",
+      "sourcePage": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "47493d1a491664171f927c5afaeb688d1acab397de5389d63879f6fb3edaad89",
+      "bytes": 1882,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+        "attribution": "荣耀。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "工具包声明适用于个人、编辑及非商业用途；品牌规范要求经合同或协议授权使用。遵守官方标志完整性和安全空间要求。"
+      },
+      "qualityNotes": [
+        "原始画布保留官方品牌安全空间。"
+      ]
+    },
+    {
+      "file": "logo-color-white-horizontal-2026.svg",
+      "label": "蓝白横版组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "dark",
+      "source": "https://www.honor.com/content/dam/honor/cn/brand-guideline-2026/download/HONOR%20Logo%20Toolkit%20%E8%8D%A3%E8%80%80%E5%93%81%E7%89%8C%E6%A0%87%E8%AF%86%E5%B7%A5%E5%85%B7%E5%8C%85.zip",
+      "sourcePage": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "a819e4ed731f168bb4fc327d877b775d5ea0bdfb34e2ce547d316763475e8e21",
+      "bytes": 1984,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+        "attribution": "荣耀。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "工具包声明适用于个人、编辑及非商业用途；品牌规范要求经合同或协议授权使用。遵守官方标志完整性和安全空间要求。"
+      },
+      "qualityNotes": [
+        "原始画布保留官方品牌安全空间。"
+      ]
+    },
+    {
+      "file": "logo-black-vertical-2026.svg",
+      "label": "黑色竖版组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "vertical",
+      "color": "black",
+      "background": "light",
+      "source": "https://www.honor.com/content/dam/honor/cn/brand-guideline-2026/download/HONOR%20Logo%20Toolkit%20%E8%8D%A3%E8%80%80%E5%93%81%E7%89%8C%E6%A0%87%E8%AF%86%E5%B7%A5%E5%85%B7%E5%8C%85.zip",
+      "sourcePage": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "94d4939edd3c0f55b488f73bb4f7cefbdac64c52c1ab0b1175eaaac62fd97143",
+      "bytes": 1801,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+        "attribution": "荣耀。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "工具包声明适用于个人、编辑及非商业用途；品牌规范要求经合同或协议授权使用。遵守官方标志完整性和安全空间要求。"
+      },
+      "qualityNotes": [
+        "原始画布保留官方品牌安全空间。"
+      ]
+    },
+    {
+      "file": "logo-white-vertical-2026.svg",
+      "label": "白色竖版组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "vertical",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.honor.com/content/dam/honor/cn/brand-guideline-2026/download/HONOR%20Logo%20Toolkit%20%E8%8D%A3%E8%80%80%E5%93%81%E7%89%8C%E6%A0%87%E8%AF%86%E5%B7%A5%E5%85%B7%E5%8C%85.zip",
+      "sourcePage": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "4f33207a98f31e2f7f0e350eb59bf85a3a38dec2b6263da78c304646e6c73dc6",
+      "bytes": 1970,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+        "attribution": "荣耀。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "工具包声明适用于个人、编辑及非商业用途；品牌规范要求经合同或协议授权使用。遵守官方标志完整性和安全空间要求。"
+      },
+      "qualityNotes": [
+        "原始画布保留官方品牌安全空间。"
+      ]
+    },
+    {
+      "file": "logo-color-black-vertical-2026.svg",
+      "label": "蓝黑竖版组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.honor.com/content/dam/honor/cn/brand-guideline-2026/download/HONOR%20Logo%20Toolkit%20%E8%8D%A3%E8%80%80%E5%93%81%E7%89%8C%E6%A0%87%E8%AF%86%E5%B7%A5%E5%85%B7%E5%8C%85.zip",
+      "sourcePage": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "55635e3e3d95fe693fb7234079cc0b31e414dba2cce29e42b2b297abec177e30",
+      "bytes": 1913,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+        "attribution": "荣耀。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "工具包声明适用于个人、编辑及非商业用途；品牌规范要求经合同或协议授权使用。遵守官方标志完整性和安全空间要求。"
+      },
+      "qualityNotes": [
+        "原始画布保留官方品牌安全空间。"
+      ]
+    },
+    {
+      "file": "logo-color-white-vertical-2026.svg",
+      "label": "蓝白竖版组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "dark",
+      "source": "https://www.honor.com/content/dam/honor/cn/brand-guideline-2026/download/HONOR%20Logo%20Toolkit%20%E8%8D%A3%E8%80%80%E5%93%81%E7%89%8C%E6%A0%87%E8%AF%86%E5%B7%A5%E5%85%B7%E5%8C%85.zip",
+      "sourcePage": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "759966110111387b7f39137226fe246e6ca9ae9f610ac062a9537e71fc7d5541",
+      "bytes": 2015,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+        "attribution": "荣耀。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "工具包声明适用于个人、编辑及非商业用途；品牌规范要求经合同或协议授权使用。遵守官方标志完整性和安全空间要求。"
+      },
+      "qualityNotes": [
+        "原始画布保留官方品牌安全空间。"
+      ]
     }
   ]
 }

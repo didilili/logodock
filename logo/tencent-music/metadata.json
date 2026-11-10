@@ -30,7 +30,7 @@
       }
     ]
   },
-  "defaultAsset": "wordmark-tme-blue-official.png",
+  "defaultAsset": "logo-chinese-official.png",
   "assets": [
     {
       "file": "wordmark-tme-blue-official.png",
@@ -63,6 +63,64 @@
         "reviewedAt": "2026-11-09",
         "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围限于相同 TME 简单字母图形。"
       }
+    },
+    {
+      "file": "logo-chinese-official.png",
+      "label": "蓝色 TME 与中文组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "light",
+      "source": "https://prodpublic-1253428821.cos.ap-guangzhou.myqcloud.com/public/tme_logo/TME_LOGO_CN.png",
+      "sourcePage": "https://www.tencentmusic.com/",
+      "sha256": "8eca411ac4866cae54da74b658042a98d3ae3e3a566b702d9307c0b5484bda84",
+      "bytes": 6248,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.tencentmusic.com/",
+        "attribution": "腾讯音乐娱乐集团。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "不透明白底，保留原始留白。"
+      ]
+    },
+    {
+      "file": "wordmark-bilingual-white-official.png",
+      "label": "白色中英字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.tencentmusic.com/img/header-logo-txt.fe0fce7d.png",
+      "sourcePage": "https://www.tencentmusic.com/",
+      "sha256": "207e054e103ebd06f8874a0ef24054be65fd0dfa095627ab61dbbda86ccd1356",
+      "bytes": 15653,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.tencentmusic.com/",
+        "attribution": "腾讯音乐娱乐集团。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "透明背景，保留完整集团中英文名称。"
+      ]
     }
   ]
 }

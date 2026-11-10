@@ -5,13 +5,18 @@
   "aliases": [],
   "identity": {
     "nameZh": "360",
-    "nameEn": null,
+    "nameEn": "360",
     "legalNames": [],
     "sources": [
       {
         "label": "360官方来源",
         "url": "https://www.360.cn/",
         "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "360官方品牌标识下载页",
+        "url": "https://www.360.cn/about/contactus.html?page=logo",
+        "reviewedAt": "2026-11-10"
       }
     ]
   },
@@ -81,6 +86,122 @@
         "attribution": "360。许可及署名条件待核实。",
         "reviewedAt": "2026-11-09"
       }
+    },
+    {
+      "file": "logo-monochrome-horizontal-official.png",
+      "label": "单色横版组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "monochrome",
+      "background": "light",
+      "source": "https://p1.ssl.qhimg.com/d/inn/b886349a3672/LOGO_1464x414_1.png",
+      "sourcePage": "https://www.360.cn/about/contactus.html?page=logo",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "83aa770d2dfdb939eeff5dd7943bb618113e13a459b63f6c5bb5ee751dc4edce",
+      "bytes": 27805,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.360.cn/about/contactus.html?page=logo",
+        "attribution": "360。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ]
+    },
+    {
+      "file": "logo-color-vertical-official.png",
+      "label": "彩色竖版组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "light",
+      "source": "https://p4.ssl.qhimg.com/d/inn/b886349a3672/LOGO_414x576.png",
+      "sourcePage": "https://www.360.cn/about/contactus.html?page=logo",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "7c851bfda778a3ede4bcc2900fd49c3eedc9bba3b8f4e01018b570c690f92999",
+      "bytes": 69001,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.360.cn/about/contactus.html?page=logo",
+        "attribution": "360。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ]
+    },
+    {
+      "file": "logo-monochrome-vertical-official.png",
+      "label": "单色竖版组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "vertical",
+      "color": "monochrome",
+      "background": "light",
+      "source": "https://p4.ssl.qhimg.com/d/inn/b886349a3672/LOGO_414x576_1.png",
+      "sourcePage": "https://www.360.cn/about/contactus.html?page=logo",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "646c5beedfc3f5b2552c6d08d8d6f594725f4883552ecc9f804efa9f8cb5ad05",
+      "bytes": 19299,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.360.cn/about/contactus.html?page=logo",
+        "attribution": "360。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ]
+    },
+    {
+      "file": "icon-monochrome-small-official.png",
+      "label": "小尺寸单色图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "monochrome",
+      "background": "light",
+      "source": "https://p5.ssl.qhimg.com/d/inn/b886349a3672/LOGO_128x128_1.png",
+      "sourcePage": "https://www.360.cn/about/contactus.html?page=logo",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "4be0f69b411c30ddcc8aafc37be7ab9a9ca27ee04a6bf30cc63a7f1a78c05cb5",
+      "bytes": 1656,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.360.cn/about/contactus.html?page=logo",
+        "attribution": "360。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ]
     }
   ]
 }

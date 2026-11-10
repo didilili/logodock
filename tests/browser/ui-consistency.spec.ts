@@ -236,7 +236,7 @@ test('desktop filters use readable control sizing and keyboard focus stays visib
   }
   expect(palettes[0]).not.toBe(palettes[1]);
 
-  await page.goto('/logo/alibaba/');
+  await page.goto('/logo/alibaba/?asset=wordmark-orange.svg');
   await expect(page.locator('#theme-toggle')).toBeEnabled();
   await expectMinimumHeight(page.locator('#download-link'), 44);
   for (const theme of ['dark', 'light']) {
@@ -289,7 +289,7 @@ test('390px home and Alibaba detail retain usable targets without horizontal scr
     await expect(format).toHaveText('PNG');
   await expectNoHorizontalOverflow(page);
 
-  await page.goto('/logo/alibaba/');
+  await page.goto('/logo/alibaba/?asset=wordmark-orange.svg');
   await expect(page.locator('#theme-toggle')).toBeEnabled();
   await expectMinimumHeight(page.locator('button:visible'), 40);
   await expectMinimumHeight(page.locator('#download-link'), 44);
@@ -389,7 +389,7 @@ test('empty results reset every filter and manual copy remains readonly with rec
   expect(new URL(page.url()).search).toBe('');
   await page.keyboard.press('Escape');
 
-  await page.goto('/logo/alibaba/');
+  await page.goto('/logo/alibaba/?asset=wordmark-orange.svg');
   await expect(page.locator('#theme-toggle')).toBeEnabled();
   const copy = page.locator('#detail-copy-menu');
   await copy.click();
@@ -514,7 +514,7 @@ for (const width of [1280, 390]) {
     const sources = page.locator('.source-details');
     const download = page.locator('#download-link');
 
-    await page.goto('/logo/alibaba/');
+    await page.goto('/logo/alibaba/?asset=wordmark-orange.svg');
     await expect(page.locator('#detail-copy-menu')).toBeEnabled();
     await expect(fileInfo.locator('span')).toHaveCount(0);
     await expect(panel.locator('.asset-description')).toHaveCount(0);
@@ -658,7 +658,7 @@ for (const width of [1280, 390]) {
     await expectSourceLink(page, '官方品牌素材下载页', kuaishouSource);
     await expect(sources).toHaveJSProperty('open', false);
 
-    await page.goto('/logo/alibaba/');
+    await page.goto('/logo/alibaba/?asset=wordmark-orange.svg');
     await expectSourceLink(page, 'Commons', alibabaSource);
     await expect(sources).toHaveJSProperty('open', false);
     await sources.locator('summary').click();
@@ -797,7 +797,13 @@ for (const width of [1280, 390]) {
         'https://www.sf-express.com/chn/sc',
         'unverified',
       ],
-      ['trip-com', 'wordmark-white-official.png', '官网页头 Logo', 'https://group.trip.com/'],
+      [
+        'trip-com',
+        'wordmark-white-official.png',
+        '官方品牌素材下载页',
+        'https://group.trip.com/media',
+        'unverified',
+      ],
       ['trip-com', 'wordmark-blue-small-official.png', '官网页头 Logo', 'https://group.trip.com/'],
       [
         'baidu',

@@ -270,12 +270,17 @@ test('repository retains all 59 entities, precise identities and asset caveats',
   const directIntake = catalog.brands.flatMap((brand) =>
     brand.assets.filter((asset) => asset.rights.status === 'unverified'),
   );
-  assert.equal(directIntake.length, 66);
+  assert.equal(directIntake.length, 133);
   assert.ok(directIntake.every((asset) => asset.provenance.sourceType === 'official'));
   assert.equal(byId.minimax.identity.nameZh, null);
   assert.equal(byId.codeberg.identity.legalNames[0].language, 'de');
   assert.equal(byId.oppo.identity.nameZh, 'OPPO');
   assert.equal(byId.vivo.identity.nameZh, 'vivo');
+  assert.equal(byId.amap.identity.nameEn, 'Amap');
+  assert.equal(byId.dewu.identity.nameEn, 'POIZON');
+  assert.equal(byId.jd.identity.nameEn, 'JD.com');
+  assert.equal(byId.jd.identity.legalNames[0].name, 'JD.com, Inc.');
+  assert.equal(byId.jd.identity.legalNames[0].role, 'group');
   assert.equal(byId.baidu.defaultAsset, 'logo-bilingual-brand-library.jpg');
   assert.equal(byId.gitlab.defaultAsset, 'logo-color-official.svg');
   assert.equal(byId.hundsun.defaultAsset, 'wordmark-color-official.png');
@@ -292,9 +297,16 @@ test('repository retains all 59 entities, precise identities and asset caveats',
   const senseTime = byId.sensetime.assets[0];
   assert.equal(senseTime.provenance.sourceType, 'commons');
   assert.equal(senseTime.provenance.processing, 'original');
-  assert.equal(byId.kingdee.assets[0].width, 2528);
-  assert.equal(byId.kingdee.assets[0].height, 1371);
-  assert.match(byId.kingdee.assets[0].usageWarnings.join(' '), /CMYK/);
+  const kingdee = byId.kingdee.assets.find(
+    (asset) => asset.file === 'logo-color-english-official.svg',
+  );
+  assert.equal(byId.kingdee.defaultAsset, kingdee.file);
+  assert.equal(Object.hasOwn(kingdee, 'width'), false);
+  assert.equal(Object.hasOwn(kingdee, 'height'), false);
+  assert.deepEqual(kingdee.qualityNotes, ['透明背景。']);
+  assert.deepEqual(kingdee.usageWarnings, [
+    'SVG 内嵌 1492 × 506 PNG，放大后仍受原始位图像素限制。',
+  ]);
   const smallZte = byId.zte.assets.find(
     (asset) => asset.file === 'wordmark-blue-header-official.png',
   );
@@ -315,6 +327,7 @@ test('removed redundant originals have no metadata record or repository file', a
     ['xiaomi', 'icon-orange-2021.png'],
     ['dewu', 'wordmark-square-small-official.png'],
     ['bigo', 'wordmark-blue-micro-official.png'],
+    ['kingdee', 'logo-color-english.jpg'],
     ['meituan', 'logo-chinese.png'],
     ['yonyou', 'wordmark-red.jpg'],
     ['minimax', 'logo-gradient-vertical.png'],

@@ -6,7 +6,15 @@
   "identity": {
     "nameZh": "百度",
     "nameEn": "Baidu",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "Baidu, Inc.",
+        "language": "en",
+        "role": "group",
+        "source": "https://ir.baidu.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
     "sources": [
       {
         "label": "百度官方来源",
@@ -233,6 +241,44 @@
         "attribution": "百度。许可及署名条件待核实。",
         "reviewedAt": "2026-11-09",
         "notes": "官方 AI 设计附件，包含图稿及使用规范，按标注的 RGB 或 CMYK 色彩模式取用。"
+      }
+    },
+    {
+      "file": "logo-bilingual-white-rgb.ai",
+      "label": "反白规范 RGB",
+      "assetFiles": [
+        "logo-bilingual-brand-library.jpg"
+      ],
+      "source": "https://static.home.baidu.com/homebd/kbamgnjfcelidh1565603716.rar?authorization=bce-auth-v1%2Fe6803def36ae467f81ebdb4bdc75f119%2F2019-08-12T09%3A55%3A16Z%2F-1%2F%2F5789f57a15e89cd4362312f0d4ca9e546f04ed996c1f109d83ae2a11d9e02d06",
+      "sourcePage": "https://home.baidu.com/media_resource/show_detail/res_id/3/tab_id/1",
+      "sha256": "30c579bdb7b6ef959d6599e79333d4d227c6c11b23414fb922412b3c1597b87a",
+      "bytes": 316123,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://home.baidu.com/media_resource/show_detail/res_id/3/tab_id/1",
+        "attribution": "百度。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方反白规范 AI，包含完整中英组合图稿及使用规范。RGB 用于屏幕，反白图稿须整体使用，比例与颜色按原规范取用。"
+      }
+    },
+    {
+      "file": "logo-bilingual-white-cmyk.ai",
+      "label": "反白规范 CMYK",
+      "assetFiles": [
+        "logo-bilingual-brand-library.jpg"
+      ],
+      "source": "https://static.home.baidu.com/homebd/kbamgnjfcelidh1565603716.rar?authorization=bce-auth-v1%2Fe6803def36ae467f81ebdb4bdc75f119%2F2019-08-12T09%3A55%3A16Z%2F-1%2F%2F5789f57a15e89cd4362312f0d4ca9e546f04ed996c1f109d83ae2a11d9e02d06",
+      "sourcePage": "https://home.baidu.com/media_resource/show_detail/res_id/3/tab_id/1",
+      "sha256": "3fd02ec9888be06748ac545236bacd1a36e5da57cd19863a8f41853d0480d0cd",
+      "bytes": 1213198,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://home.baidu.com/media_resource/show_detail/res_id/3/tab_id/1",
+        "attribution": "百度。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方反白规范 AI，包含完整中英组合图稿及使用规范。CMYK 用于印刷，反白图稿须整体使用，比例与颜色按原规范取用。"
       }
     }
   ]

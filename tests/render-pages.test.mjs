@@ -119,8 +119,8 @@ test('static index, source metadata and every original file keep their paths and
     }
     active += brand.assets.length;
   }
-  assert.equal(originals, 145);
-  assert.equal(active, 145);
+  assert.equal(originals, 215);
+  assert.equal(active, 215);
 });
 
 test('each detail keeps downloads, brand names, sources and rights without exposing maintenance records', async () => {
@@ -205,9 +205,9 @@ test('detail hydration contains only the requested brand, not a serialized whole
 
 test('reviewed artwork groups and no-JavaScript file links contain only active choices', async () => {
   for (const [id, count] of [
-    ['alibaba', 2],
-    ['codeberg', 4],
-    ['tencent', 3],
+    ['alibaba', 6],
+    ['codeberg', 6],
+    ['tencent', 12],
   ]) {
     const visible = withoutScripts(await readOutput(`logo/${id}/index.html`));
     assert.equal(

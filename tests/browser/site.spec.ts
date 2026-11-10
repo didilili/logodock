@@ -21,6 +21,7 @@ const removedSources = [
   ['iqiyi', 'wordmark-green.png'],
   ['oppo', 'wordmark-green-2019.png'],
   ['tencent', 'wordmark-blue.png'],
+  ['kingdee', 'logo-color-english.jpg'],
   ['trip-com', 'wordmark-color.png'],
   ['vivo', 'wordmark-blue-2019.png'],
   ['yonyou', 'wordmark-white-transparent.png'],
@@ -273,8 +274,8 @@ test('removed source files leave selection, search and format filters and their 
   await expect(page.locator('#theme-toggle')).toBeEnabled();
   // Useful JPG originals remain available after redundant JPG files are removed.
   await chooseFilter(page, 'format-filter', 'JPG');
-  await expect(page.locator('#brand-grid .brand-card')).toHaveCount(8);
-  await expect(page.locator('[data-brand="kingdee"]')).toHaveCount(1);
+  await expect(page.locator('#brand-grid .brand-card')).toHaveCount(7);
+  await expect(page.locator('[data-brand="kingdee"]')).toHaveCount(0);
   await expect(page.locator('[data-brand="kuaishou"]')).toHaveCount(1);
   await expect(page.locator('[data-brand="xiaohongshu"]')).toHaveCount(0);
   await expect(page.locator('[data-brand="yonyou"]')).toHaveCount(0);
@@ -420,7 +421,7 @@ test('search and file filters survive detail navigation, browser back and a relo
 test('legacy brand links retain valid file selections and directory filters', async ({ page }) => {
   for (const [requested, expected] of [
     ['wordmark-orange-chinese.svg', 'wordmark-orange-chinese.svg'],
-    ['missing.svg', 'wordmark-orange.svg'],
+    ['missing.svg', 'logo-chinese-horizontal-official.png'],
   ]) {
     await page.goto(`/?brand=alibaba&asset=${requested}&q=alibaba&category=internet&format=SVG`);
     await expect(page).toHaveURL(/\/logo\/alibaba\//);
@@ -819,7 +820,7 @@ test('card artwork choices keep preview, original download, detail and copied ad
   page,
 }) => {
   await recordTextCopies(page);
-  await page.goto('/?q=阿里巴巴');
+  await page.goto('/?q=阿里巴巴&format=SVG');
   await expect(page.locator('#theme-toggle')).toBeEnabled();
   const card = page.locator('.brand-card[data-brand="alibaba"]');
   const files = [
@@ -877,9 +878,10 @@ test('switching a card artwork discards a pending SVG copy from the previous sel
     await route.continue();
   });
   try {
-    await page.goto('/?q=阿里巴巴');
+    await page.goto('/?q=阿里巴巴&format=SVG');
     await expect(page.locator('#theme-toggle')).toBeEnabled();
     const card = page.locator('.brand-card[data-brand="alibaba"]');
+    await card.locator('[data-card-artwork="file:wordmark-orange.svg"]').click();
     await chooseCopy(page, 'svg', card.locator('[data-copy-brand="alibaba"]'));
     await expect.poll(() => sourceRequested).toBe(true);
     await card.locator('[data-card-artwork="file:wordmark-orange-chinese.svg"]').click();
@@ -937,11 +939,14 @@ test('opening category drawer discards pending copy feedback', async ({ page }) 
     await route.continue();
   });
   try {
-    await page.goto('/?q=阿里巴巴');
+    await page.goto('/?q=阿里巴巴&format=SVG');
     await expect(page.locator('#theme-toggle')).toBeEnabled();
     const copyTrigger = page.locator('[data-copy-brand="alibaba"]');
     const categoryTrigger = page.getByRole('button', { name: '打开品牌分类', exact: true });
     const drawer = page.getByRole('dialog', { name: '资源分类', exact: true });
+    await page
+      .locator('[data-brand="alibaba"] [data-card-artwork="file:wordmark-orange.svg"]')
+      .click();
     await chooseCopy(page, 'svg', copyTrigger);
     await expect.poll(() => sourceRequested).toBe(true);
     await categoryTrigger.click();
@@ -1017,7 +1022,7 @@ test('PNG filtering limits card previews and artwork thumbnails to available PNG
     nio.locator('[data-card-artwork="file:logo-black-english-official.svg"]'),
   ).toHaveCount(0);
   await expect(nio.locator('.card-download')).toHaveAttribute('href', /\/icon-turquoise-app\.png$/);
-  await expect(page.locator('.brand-card[data-brand="alibaba"]')).toHaveCount(0);
+  await expect(page.locator('.brand-card[data-brand="alibaba"]')).toHaveCount(1);
   await expect(page.locator('.brand-card[data-brand="xiaomi"]')).toHaveCount(0);
   await nio.locator('[data-brand-link]').click();
   await expect(page.locator('#detail-image')).toHaveAttribute('src', /\/icon-turquoise-app\.png$/);
@@ -1063,7 +1068,7 @@ test('mobile category drawer and copy menu support keyboard use while original d
   await expect(menu).toBeVisible();
   // Bits applies opening focus after the menu becomes visible. Let that focus
   // settle before navigation so it cannot overwrite the result of End.
-  const firstCopyItem = menu.locator('[data-copy-kind="svg"]');
+  const firstCopyItem = menu.locator('[data-copy-kind="html"]');
   await expect(firstCopyItem).toBeFocused();
   await firstCopyItem.press('End');
   await expect(menu.locator('[data-copy-kind="share"]')).toBeFocused();
@@ -1162,19 +1167,19 @@ test('without JavaScript the static home, source disclosure and original downloa
     await expect(sources).toHaveJSProperty('open', false);
     await sources.locator('summary').click();
     await expect(
-      page.locator('a[href="https://commons.wikimedia.org/wiki/File:Alibaba_en_logo.svg"]').first(),
+      page.locator('a[href="https://www.alibabagroup.com/en-US/resource-logos"]').first(),
     ).toBeVisible();
     await expect(page.locator('#download-link')).toHaveAttribute(
       'href',
-      /\/logo\/alibaba\/wordmark-orange\.svg$/,
+      /\/logo\/alibaba\/logo-chinese-horizontal-official\.png$/,
     );
     const downloadPromise = page.waitForEvent('download');
     await page.locator('#download-link').click();
     const download = await downloadPromise;
-    const path = testInfo.outputPath('original.svg');
+    const path = testInfo.outputPath('original.png');
     await download.saveAs(path);
     const original = await readFile(
-      new URL('../../logo/alibaba/wordmark-orange.svg', import.meta.url),
+      new URL('../../logo/alibaba/logo-chinese-horizontal-official.png', import.meta.url),
     );
     expect(
       createHash('sha256')
@@ -1185,10 +1190,10 @@ test('without JavaScript the static home, source disclosure and original downloa
       'href',
       /\/logo\/alibaba\/wordmark-orange-chinese\.svg$/,
     );
-    await expect(page.locator('.variant-list [data-select-artwork]')).toHaveCount(2);
+    await expect(page.locator('.variant-list [data-select-artwork]')).toHaveCount(6);
     await expect(page.locator('.format-option')).toHaveCount(0);
     await expect(page.locator('a[href$="/wordmark-orange.png"]')).toHaveCount(0);
-    await expect(page.locator('#download-options')).toBeDisabled();
+    await expect(page.locator('#download-options')).toHaveCount(0);
     await page.locator('#back-directory').click();
     await expect(page.locator('#brand-grid .brand-card')).toHaveCount(59);
     for (const id of new Set(removedSources.map(([brand]) => brand))) {
@@ -1260,14 +1265,15 @@ test('SVG artwork offers original and generated downloads while links retain the
   page,
 }, testInfo) => {
   await recordTextCopies(page);
-  await page.goto('/logo/alibaba/?asset=wordmark-orange.png&q=阿里巴巴&format=SVG');
+  await page.goto('/logo/alibaba/?asset=wordmark-orange.svg&q=阿里巴巴&format=SVG');
   await expect(page.locator('#theme-toggle')).toBeEnabled();
   const choices = page.locator('.variant-list [data-select-artwork]');
-  await expect(choices).toHaveCount(2);
-  await expect(choices.filter({ hasText: /英文/ })).toHaveCount(1);
-  await expect(page.locator('.variant-list img')).toHaveCount(2);
-  const artworkId = await choices.filter({ hasText: /英文/ }).getAttribute('data-select-artwork');
-  await expect(choices.filter({ hasText: /英文/ })).toHaveAttribute('aria-current', 'true');
+  await expect(choices).toHaveCount(6);
+  const english = page.locator('[data-select-artwork="file:wordmark-orange.svg"]');
+  await expect(english).toHaveCount(1);
+  await expect(page.locator('.variant-list img')).toHaveCount(6);
+  const artworkId = await english.getAttribute('data-select-artwork');
+  await expect(english).toHaveAttribute('aria-current', 'true');
   await expect(page.locator('.format-option')).toHaveCount(0);
   await expect(page.locator('#detail-image')).toHaveAttribute('src', /\/wordmark-orange\.svg$/);
   await expect(page.locator('#download-link')).toHaveAttribute('href', /\/wordmark-orange\.svg$/);
@@ -1357,7 +1363,7 @@ test('SVG artwork offers original and generated downloads while links retain the
 });
 
 test('PNG generation follows the selected PNG-only or SVG-only artwork', async ({ page }) => {
-  await page.goto('/logo/huawei/');
+  await page.goto('/logo/huawei/?asset=wordmark-dark-2018.png');
   await expect(page.locator('#theme-toggle')).toBeEnabled();
   await expect(page.locator('#download-options, #export-size, .export-details')).toHaveCount(0);
   await expect(page.locator('#download-link')).toHaveAttribute(
@@ -1439,7 +1445,7 @@ for (const denied of [false, true]) {
       },
       { denied },
     );
-    await page.goto('/logo/huawei/');
+    await page.goto('/logo/huawei/?asset=wordmark-dark-2018.png');
     await expect(page.locator('#theme-toggle')).toBeEnabled();
     await expect(page.locator('.export-details, #copy-png-image')).toHaveCount(0);
     await chooseCopy(page, 'png');
@@ -1478,9 +1484,9 @@ test('artwork choices retain distinct designs and colors after redundant formats
   page,
 }) => {
   for (const [id, count] of [
-    ['codeberg', 4],
-    ['git', 4],
-    ['iflytek', 5],
+    ['codeberg', 6],
+    ['git', 7],
+    ['iflytek', 6],
     ['xiaomi', 2],
     ['zhipu', 5],
     ['lenovo', 0],
@@ -1520,7 +1526,7 @@ test('Tencent color choices retain their original files and sources without the 
   await recordTextCopies(page);
   await page.goto('/logo/tencent/');
   await expect(page.locator('#theme-toggle')).toBeEnabled();
-  await expect(page.locator('.variant-list [data-select-artwork]')).toHaveCount(3);
+  await expect(page.locator('.variant-list [data-select-artwork]')).toHaveCount(12);
   await expect(page.locator('#download-link')).toHaveAttribute(
     'href',
     /\/wordmark-blue-official\.png$/,

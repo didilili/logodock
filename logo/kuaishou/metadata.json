@@ -9,12 +9,25 @@
   "identity": {
     "nameZh": "快手",
     "nameEn": "Kuaishou",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "Kuaishou Technology",
+        "language": "en",
+        "role": "group",
+        "source": "https://ir.kuaishou.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
     "sources": [
       {
         "label": "快手官方素材库",
         "url": "https://www.kuaishou.com/official/material-lib",
         "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "快手官方投资者关系网站",
+        "url": "https://ir.kuaishou.com/",
+        "reviewedAt": "2026-11-10"
       }
     ]
   },
@@ -116,6 +129,344 @@
       },
       "qualityNotes": [
         "四角透明。"
+      ]
+    },
+    {
+      "file": "logo-chinese-horizontal-color.png",
+      "label": "横版中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/word-logo-1.png",
+      "sourcePage": "https://www.kuaishou.com/official/material-lib",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "ea39348e5b11bdf4399830dcacccf33148c7154fa507e826d6849f7a6f2f188e",
+      "bytes": 66788,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.kuaishou.com/official/material-lib",
+        "attribution": "快手。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "素材页面允许宣传推广快手产品时下载使用，需标明来源为快手网站并保持完整比例；许可及再次分发条件待核实。"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ]
+    },
+    {
+      "file": "logo-chinese-horizontal-dark-background.png",
+      "label": "横版深底中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/word-logo-2.png",
+      "sourcePage": "https://www.kuaishou.com/official/material-lib",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "b1f218076b2fac96436f53d18e87af6bfb52127eff6eab27f90163acb5555461",
+      "bytes": 59525,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.kuaishou.com/official/material-lib",
+        "attribution": "快手。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "素材页面允许宣传推广快手产品时下载使用，需标明来源为快手网站并保持完整比例；许可及再次分发条件待核实。"
+      },
+      "qualityNotes": [
+        "官方黑底或黑色画布版本，用于深色背景场景。"
+      ]
+    },
+    {
+      "file": "logo-chinese-horizontal-orange-background.png",
+      "label": "横版橙底中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/word-logo-3.png",
+      "sourcePage": "https://www.kuaishou.com/official/material-lib",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "c51d19a022176713234ab37fbf6e14770a888d57b1935e96190944973464a3a3",
+      "bytes": 57765,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.kuaishou.com/official/material-lib",
+        "attribution": "快手。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "素材页面允许宣传推广快手产品时下载使用，需标明来源为快手网站并保持完整比例；许可及再次分发条件待核实。"
+      },
+      "qualityNotes": [
+        "官方橙底反白版本，用于品牌橙色背景场景。"
+      ]
+    },
+    {
+      "file": "logo-chinese-vertical-color.png",
+      "label": "竖版中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "light",
+      "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/w-v-logo-1.png",
+      "sourcePage": "https://www.kuaishou.com/official/material-lib",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "8a0ac996dc7182b7bcbefae497e4b57b753bbebc6298e6fd58d3985ac756c811",
+      "bytes": 164945,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.kuaishou.com/official/material-lib",
+        "attribution": "快手。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "素材页面允许宣传推广快手产品时下载使用，需标明来源为快手网站并保持完整比例；许可及再次分发条件待核实。"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ]
+    },
+    {
+      "file": "logo-chinese-vertical-dark-background.png",
+      "label": "竖版深底中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "light",
+      "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/w-v-logo-2.png",
+      "sourcePage": "https://www.kuaishou.com/official/material-lib",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "1df58d3d25ce078de0789229699b856cc5e195f5c0a9e2a7c9b46ffd482ddf10",
+      "bytes": 16868,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.kuaishou.com/official/material-lib",
+        "attribution": "快手。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "素材页面允许宣传推广快手产品时下载使用，需标明来源为快手网站并保持完整比例；许可及再次分发条件待核实。"
+      },
+      "qualityNotes": [
+        "官方黑底或黑色画布版本，用于深色背景场景。"
+      ]
+    },
+    {
+      "file": "logo-chinese-vertical-orange-background.png",
+      "label": "竖版橙底中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "light",
+      "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/w-v-logo-3.png",
+      "sourcePage": "https://www.kuaishou.com/official/material-lib",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "cce2a24ea5e595ffcaa855be5397852869b6bbef14f822e48b12de7cf035794d",
+      "bytes": 16362,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.kuaishou.com/official/material-lib",
+        "attribution": "快手。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "素材页面允许宣传推广快手产品时下载使用，需标明来源为快手网站并保持完整比例；许可及再次分发条件待核实。"
+      },
+      "qualityNotes": [
+        "官方橙底反白版本，用于品牌橙色背景场景。"
+      ]
+    },
+    {
+      "file": "logo-chinese-slogan-color.png",
+      "label": "彩色中文口号组合",
+      "variant": "logo",
+      "status": "current",
+      "display": "alternative",
+      "background": "light",
+      "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/slogan-logo-1.png",
+      "sourcePage": "https://www.kuaishou.com/official/material-lib",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "97b249d3a7ea0e85cc19ae8939050b4f686c203fae2f28f90c72127e6bdae153",
+      "bytes": 6949,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.kuaishou.com/official/material-lib",
+        "attribution": "快手。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "素材页面允许宣传推广快手产品时下载使用，需标明来源为快手网站并保持完整比例；许可及再次分发条件待核实。"
+      },
+      "qualityNotes": [
+        "保留官方口号“拥抱每一种生活”。",
+        "透明画布，有效图稿约289 × 145像素。"
+      ]
+    },
+    {
+      "file": "logo-chinese-slogan-dark-background.png",
+      "label": "黑底中文口号组合",
+      "variant": "logo",
+      "status": "current",
+      "display": "alternative",
+      "background": "dark",
+      "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/slogan-logo-2.png",
+      "sourcePage": "https://www.kuaishou.com/official/material-lib",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "39f37cc25022a531f62a3596da4d2e36c59c5614452a78570373c82b09763fe3",
+      "bytes": 7128,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.kuaishou.com/official/material-lib",
+        "attribution": "快手。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "素材页面允许宣传推广快手产品时下载使用，需标明来源为快手网站并保持完整比例；许可及再次分发条件待核实。"
+      },
+      "qualityNotes": [
+        "保留官方口号“拥抱每一种生活”。",
+        "保留官方黑底原始画布。"
+      ]
+    },
+    {
+      "file": "logo-chinese-slogan-orange-background.png",
+      "label": "橙底中文口号组合",
+      "variant": "logo",
+      "status": "current",
+      "display": "alternative",
+      "background": "light",
+      "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/slogan-logo-3.png",
+      "sourcePage": "https://www.kuaishou.com/official/material-lib",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "a74d444f17724c69a42644883ccc8cef4453e68fdd9bdd9b1e9f97de84c5f958",
+      "bytes": 7492,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.kuaishou.com/official/material-lib",
+        "attribution": "快手。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "素材页面允许宣传推广快手产品时下载使用，需标明来源为快手网站并保持完整比例；许可及再次分发条件待核实。"
+      },
+      "qualityNotes": [
+        "保留官方口号“拥抱每一种生活”。",
+        "保留官方橙底原始画布。"
+      ]
+    },
+    {
+      "file": "logo-english-dark-background.jpg",
+      "label": "黑底英文组合",
+      "variant": "logo",
+      "status": "current",
+      "display": "alternative",
+      "background": "dark",
+      "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/e-logo-2.jpeg",
+      "sourcePage": "https://www.kuaishou.com/official/material-lib",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "ba7d347d8645f2bedbbc62b1efb3e444d8e235212739745399dbfd8f92e231ac",
+      "bytes": 1959530,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.kuaishou.com/official/material-lib",
+        "attribution": "快手。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "素材页面允许宣传推广快手产品时下载使用，需标明来源为快手网站并保持完整比例；许可及再次分发条件待核实。"
+      },
+      "qualityNotes": [
+        "不透明黑底，原始画布留白较多。"
+      ]
+    },
+    {
+      "file": "logo-english-orange-background.jpg",
+      "label": "橙底英文组合",
+      "variant": "logo",
+      "status": "current",
+      "display": "alternative",
+      "background": "light",
+      "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/e-logo-3.jpeg",
+      "sourcePage": "https://www.kuaishou.com/official/material-lib",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "326604f631c3b952be87598c574c380d040e7d2a6d8c49b01fb3ea19ea47e9b8",
+      "bytes": 2303438,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.kuaishou.com/official/material-lib",
+        "attribution": "快手。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "素材页面允许宣传推广快手产品时下载使用，需标明来源为快手网站并保持完整比例；许可及再次分发条件待核实。"
+      },
+      "qualityNotes": [
+        "不透明橙底，原始画布留白较多。"
       ]
     }
   ]

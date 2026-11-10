@@ -143,6 +143,66 @@
         "reviewedAt": "2026-11-07",
         "notes": "Codeberg Design 仓库以 CC0 发布这些图稿。Codeberg 名称与 Logo 商标权保留，使用须遵循官方品牌指南，保持比例、原色及组合关系。"
       }
+    },
+    {
+      "file": "logo-horizontal-blue.png",
+      "label": "横版蓝色组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://codeberg.org/Codeberg/Design/raw/branch/main/logo/horizontal/png/codeberg-logo_horizontal_blue-850x250.png",
+      "sourcePage": "https://codeberg.org/Codeberg/Design/src/branch/main/logo/horizontal/png",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "repository"
+      },
+      "qualityNotes": [
+        "透明背景，官方横版位图原件。"
+      ],
+      "sha256": "4566f07af4c2d94849eec3bd7913b56173b508149d3a65844652931a7c0b8229",
+      "bytes": 23089,
+      "rights": {
+        "status": "permitted",
+        "license": "CC0-1.0",
+        "reference": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
+        "attribution": "Logo by Robert Martinez; published by Codeberg e.V.",
+        "reviewedAt": "2026-11-10",
+        "notes": "Codeberg Design 仓库以 CC0 发布这些图稿。Codeberg 名称与 Logo 商标权保留，使用须遵循官方品牌指南，保持比例、原色及组合关系。"
+      }
+    },
+    {
+      "file": "logo-horizontal-white.png",
+      "label": "横版反白组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://codeberg.org/Codeberg/Design/raw/branch/main/logo/horizontal/png/codeberg-logo_horizontal_white-850x250.png",
+      "sourcePage": "https://codeberg.org/Codeberg/Design/src/branch/main/logo/horizontal/png",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "repository"
+      },
+      "qualityNotes": [
+        "透明背景，官方横版位图原件。"
+      ],
+      "sha256": "a9b9a3ca7d736e639ec20587710571a911aaa800eaacb412814290fa7f4c29a1",
+      "bytes": 16513,
+      "rights": {
+        "status": "permitted",
+        "license": "CC0-1.0",
+        "reference": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
+        "attribution": "Logo by Robert Martinez; published by Codeberg e.V.",
+        "reviewedAt": "2026-11-10",
+        "notes": "Codeberg Design 仓库以 CC0 发布这些图稿。Codeberg 名称与 Logo 商标权保留，使用须遵循官方品牌指南，保持比例、原色及组合关系。"
+      }
     }
   ],
   "entityType": "organization",

@@ -2,16 +2,23 @@
   "schemaVersion": 3,
   "id": "zuoyebang",
   "name": "作业帮",
-  "aliases": [],
+  "aliases": [
+    "Zuoyebang"
+  ],
   "identity": {
     "nameZh": "作业帮",
-    "nameEn": null,
+    "nameEn": "Zuoyebang",
     "legalNames": [],
     "sources": [
       {
         "label": "作业帮官方来源",
         "url": "https://www.zuoyebang.com/",
         "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "作业帮官方开源项目英文介绍",
+        "url": "https://bitalos.zuoyebang.com/guide/",
+        "reviewedAt": "2026-11-10"
       }
     ]
   },

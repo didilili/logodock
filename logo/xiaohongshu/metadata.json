@@ -7,7 +7,7 @@
   ],
   "identity": {
     "nameZh": "小红书",
-    "nameEn": null,
+    "nameEn": "Xiaohongshu",
     "legalNames": [],
     "sources": [
       {
@@ -19,6 +19,11 @@
         "label": "官方应用 App Store 页面（Xingin）",
         "url": "https://apps.apple.com/cn/app/id741292507",
         "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "小红书官方英文隐私政策",
+        "url": "https://agree.xiaohongshu.com/h5/terms/ZXXY20230227002/-1",
+        "reviewedAt": "2026-11-10"
       }
     ]
   },

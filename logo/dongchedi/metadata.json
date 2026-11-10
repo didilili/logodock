@@ -5,13 +5,26 @@
   "aliases": [],
   "identity": {
     "nameZh": "懂车帝",
-    "nameEn": null,
-    "legalNames": [],
+    "nameEn": "DCar",
+    "legalNames": [
+      {
+        "name": "重庆懂车帝科技有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://lf3-cdn-tos.draftstatic.com/obj/ies-hotsoon-draft/dcar_ecom/f944ac35-d37a-4b05-91e6-8fa2f776f9b2.html",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
     "sources": [
       {
         "label": "懂车帝官方来源",
         "url": "https://www.dongchedi.com/",
         "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "懂车帝官方招聘页的中英文品牌名称",
+        "url": "https://dcar.jobs.feishu.cn/",
+        "reviewedAt": "2026-11-10"
       }
     ]
   },

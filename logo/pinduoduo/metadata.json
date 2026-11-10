@@ -5,13 +5,18 @@
   "aliases": [],
   "identity": {
     "nameZh": "拼多多",
-    "nameEn": null,
+    "nameEn": "Pinduoduo",
     "legalNames": [],
     "sources": [
       {
         "label": "拼多多官方来源",
         "url": "https://www.pinduoduo.com/",
         "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "拼多多官方英文网站",
+        "url": "https://en.pinduoduo.com/",
+        "reviewedAt": "2026-11-10"
       }
     ]
   },
@@ -50,6 +55,35 @@
         "attribution": "拼多多。许可及署名条件待核实。",
         "reviewedAt": "2026-11-09"
       }
+    },
+    {
+      "file": "logo-english-slogan-official.png",
+      "label": "英文口号组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://cdn.pinduoduo.com/international/static/media/logo.a4026bb14.png",
+      "sourcePage": "https://en.pinduoduo.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "c621bcb39c1cdc78210917031e59bca749b8125e219e93f00e84ece2e4f7843e",
+      "bytes": 12491,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://en.pinduoduo.com/",
+        "attribution": "拼多多。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "保留官方英文口号，适用于英文网站小尺寸展示。"
+      ]
     }
   ]
 }

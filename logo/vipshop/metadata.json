@@ -2,16 +2,31 @@
   "schemaVersion": 3,
   "id": "vipshop",
   "name": "唯品会",
-  "aliases": [],
+  "aliases": [
+    "Vipshop"
+  ],
   "identity": {
     "nameZh": "唯品会",
-    "nameEn": null,
-    "legalNames": [],
+    "nameEn": "Vipshop",
+    "legalNames": [
+      {
+        "name": "Vipshop Holdings Limited",
+        "language": "en",
+        "role": "group",
+        "source": "https://ir.vip.com/news-releases/news-release-details/vipshop-reports-unaudited-second-quarter-2026-financial-results",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
     "sources": [
       {
         "label": "唯品会官方来源",
         "url": "https://www.vip.com/",
         "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "唯品会官方投资者关系",
+        "url": "https://ir.vip.com/",
+        "reviewedAt": "2026-11-10"
       }
     ]
   },

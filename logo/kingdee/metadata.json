@@ -47,39 +47,38 @@
     "software",
     "enterprise-software"
   ],
-  "defaultAsset": "logo-color-english.jpg",
+  "defaultAsset": "logo-color-english-official.svg",
   "assets": [
     {
-      "file": "logo-color-english.jpg",
-      "label": "四色圆点英文组合",
+      "file": "logo-color-english-official.svg",
+      "label": "彩色英文组合",
       "variant": "logo",
-      "status": "current",
-      "background": "light",
-      "source": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Kingdee_logo_wiki.jpg",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Kingdee_logo_wiki.jpg",
-      "sha256": "d7b291e6d80c24aa28774c418ac16b3a12210f1853f5445c9bd8d28ce8a626c8",
-      "bytes": 756221,
-      "rights": {
-        "status": "permitted",
-        "license": "CC-BY-SA-4.0",
-        "reference": "https://commons.wikimedia.org/w/index.php?title=File:Kingdee_logo_wiki.jpg&oldid=1271741533",
-        "attribution": "Aiko Chung Kingdee. Kingdee logo wiki.jpg. Wikimedia Commons. Licensed under Creative Commons Attribution-ShareAlike 4.0 International: https://creativecommons.org/licenses/by-sa/4.0/ . Source: https://commons.wikimedia.org/wiki/File:Kingdee_logo_wiki.jpg . Original file, unmodified.",
-        "reviewedAt": "2026-11-07",
-        "notes": "本文件按 Commons 上传者所列 CC BY-SA 4.0 分发，需保留作者署名、文件来源、许可链接及修改说明，改编须按相同或兼容许可分享。商标权保留，使用不得暗示品牌背书。图稿为 2017 年发布的集团品牌标识。原件采用 CMYK / Coated FOGRA39 (ISO 12647-2:2004) 色彩配置。"
-      },
       "language": "en",
       "layout": "horizontal",
       "color": "brand",
+      "background": "light",
+      "source": "https://global.kingdee.com/wp-content/uploads/2025/07/KD-01-1.svg",
+      "sourcePage": "https://www.kingdee.com/global/company-information/",
+      "status": "current",
       "provenance": {
-        "sourceType": "commons",
+        "sourceType": "official",
         "processing": "original",
-        "channel": "commons"
+        "channel": "website"
+      },
+      "sha256": "d359fca08cc0dc1c98003fcf1c22c9332ede6fe02422f859b053c8f345c50a79",
+      "bytes": 35108,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.kingdee.com/global/company-information/",
+        "attribution": "金蝶。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
       },
       "qualityNotes": [
-        "不透明白底，画布留白较多。"
+        "透明背景。"
       ],
       "usageWarnings": [
-        "CMYK 色彩显示受色彩管理影响。"
+        "SVG 内嵌 1492 × 506 PNG，放大后仍受原始位图像素限制。"
       ]
     }
   ]

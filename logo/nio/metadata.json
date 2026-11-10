@@ -9,7 +9,15 @@
   "identity": {
     "nameZh": "蔚来",
     "nameEn": "NIO",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "NIO Inc.",
+        "language": "en",
+        "role": "group",
+        "source": "https://ir.nio.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
     "sources": [
       {
         "label": "蔚来国际官网",
@@ -20,6 +28,11 @@
         "label": "NIO 官方品牌说明",
         "url": "https://us.nio.com/blog/showing-gratitude-and-celebrating-anniversaries",
         "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "蔚来官方投资者关系公司概览",
+        "url": "https://ir.nio.com/",
+        "reviewedAt": "2026-11-10"
       }
     ]
   },

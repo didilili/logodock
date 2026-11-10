@@ -2,16 +2,31 @@
   "schemaVersion": 3,
   "id": "waterdrop",
   "name": "水滴",
-  "aliases": [],
+  "aliases": [
+    "Waterdrop Inc."
+  ],
   "identity": {
     "nameZh": "水滴",
-    "nameEn": "WATERDROP INC.",
-    "legalNames": [],
+    "nameEn": "Waterdrop",
+    "legalNames": [
+      {
+        "name": "Waterdrop Inc.",
+        "language": "en",
+        "role": "company",
+        "source": "https://ir.waterdrop-inc.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
     "sources": [
       {
         "label": "水滴官方来源",
         "url": "https://www.waterdrop-inc.com/",
         "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "水滴官方投资者关系",
+        "url": "https://ir.waterdrop-inc.com/",
+        "reviewedAt": "2026-11-10"
       }
     ]
   },

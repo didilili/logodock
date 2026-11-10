@@ -10,7 +10,15 @@
   "identity": {
     "nameZh": "知乎",
     "nameEn": "Zhihu",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "Zhihu Inc.",
+        "language": "en",
+        "role": "company",
+        "source": "https://ir.zhihu.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
     "sources": [
       {
         "label": "知乎官方联系页面",
@@ -21,6 +29,11 @@
         "label": "知乎官方Google Play页面",
         "url": "https://play.google.com/store/apps/details?id=com.zhihu.android&hl=zh-CN",
         "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "知乎官方投资者关系",
+        "url": "https://ir.zhihu.com/",
+        "reviewedAt": "2026-11-10"
       }
     ]
   },
@@ -28,7 +41,7 @@
   "categories": [
     "internet"
   ],
-  "defaultAsset": "wordmark-rounded-google-play.png",
+  "defaultAsset": "wordmark-slogan-official.svg",
   "assets": [
     {
       "file": "wordmark-rounded-google-play.png",
@@ -59,6 +72,35 @@
       },
       "qualityNotes": [
         "四角透明。"
+      ]
+    },
+    {
+      "file": "wordmark-slogan-official.svg",
+      "label": "中文口号组合",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "zh",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "light",
+      "source": "https://ir.zhihu.com/media/zuodh3gq/logo-new.svg",
+      "sourcePage": "https://ir.zhihu.com/",
+      "sha256": "10d73f77ece5d722d7050df4bb3c90066e577c6cb2db29afea77d701a2aa45aa",
+      "bytes": 10748,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://ir.zhihu.com/",
+        "attribution": "知乎。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "蓝色字标与“有问题 就会有答案”完整口号。"
       ]
     }
   ]

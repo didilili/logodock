@@ -45,7 +45,7 @@
   "categories": [
     "internet"
   ],
-  "defaultAsset": "wordmark-orange.svg",
+  "defaultAsset": "logo-chinese-horizontal-official.png",
   "assets": [
     {
       "file": "wordmark-orange.svg",
@@ -100,6 +100,126 @@
         "processing": "original",
         "channel": "commons"
       }
+    },
+    {
+      "file": "logo-chinese-horizontal-official.png",
+      "label": "中文横版组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://ali-home-data.oss-cn-hangzhou.aliyuncs.com/ecms-files/886024452/760bfffd-4f36-4c64-9c2e-0ee2382c313f.png",
+      "sourcePage": "https://www.alibabagroup.com/en-US/resource-logos",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "99e16b3aa1342434196ae400c5ad1ea1e5dd91265d30570545b5d6ffd09a3b3f",
+      "bytes": 14438,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.alibabagroup.com/en-US/resource-logos",
+        "attribution": "Source: www.alibabagroup.com.",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方媒体库限获认可媒体作编辑用途，使用时标注来源；其他用途需阿里巴巴集团书面许可。可等比缩放，须保持图稿原样。"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ]
+    },
+    {
+      "file": "logo-english-horizontal-official.png",
+      "label": "英文横版组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://data.alibabagroup.com/ecms-files/886024452/ce9a0936-27b7-4f64-ad88-b33fb22bf36f.png",
+      "sourcePage": "https://www.alibabagroup.com/en-US/resource-logos",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "769468b1e50df3f032a0caccb7f0fe5a0a229f5f3c955cb9c1e49676690cf0d6",
+      "bytes": 22712,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.alibabagroup.com/en-US/resource-logos",
+        "attribution": "Source: www.alibabagroup.com.",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方媒体库限获认可媒体作编辑用途，使用时标注来源；其他用途需阿里巴巴集团书面许可。可等比缩放，须保持图稿原样。"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ]
+    },
+    {
+      "file": "logo-chinese-vertical-official.png",
+      "label": "中文竖版组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "light",
+      "source": "https://ali-home-data.oss-cn-hangzhou.aliyuncs.com/ecms-files/886024452/6b505419-12d6-4931-9e26-b12d0af5f3b0.png",
+      "sourcePage": "https://www.alibabagroup.com/en-US/resource-logos",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "ee4d86217c5be11a25f80b1ea0cb49c4ffff08b9eb60fe505defbe29e5154418",
+      "bytes": 16281,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.alibabagroup.com/en-US/resource-logos",
+        "attribution": "Source: www.alibabagroup.com.",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方媒体库限获认可媒体作编辑用途，使用时标注来源；其他用途需阿里巴巴集团书面许可。可等比缩放，须保持图稿原样。"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ]
+    },
+    {
+      "file": "logo-english-vertical-official.png",
+      "label": "英文竖版组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "light",
+      "source": "https://data.alibabagroup.com/ecms-files/886024452/296d05a1-c52a-4f5e-abf2-0d49d4c0d6b3.png",
+      "sourcePage": "https://www.alibabagroup.com/en-US/resource-logos",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "112515c766d85229db0f5f09236f98cc48c54ad27224f6ec442aa26239741898",
+      "bytes": 24735,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.alibabagroup.com/en-US/resource-logos",
+        "attribution": "Source: www.alibabagroup.com.",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方媒体库限获认可媒体作编辑用途，使用时标注来源；其他用途需阿里巴巴集团书面许可。可等比缩放，须保持图稿原样。"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ]
     }
   ]
 }

@@ -254,16 +254,16 @@ test('reviewed repository keeps distinct artworks after redundant format renditi
   const { artworkGroups } = await grouping();
   const brands = Object.fromEntries((await loadCatalog()).brands.map((brand) => [brand.id, brand]));
   const expected = {
-    alibaba: 2,
-    bytedance: 3,
-    codeberg: 4,
-    didi: 3,
-    iqiyi: 1,
+    alibaba: 6,
+    bytedance: 6,
+    codeberg: 6,
+    didi: 6,
+    iqiyi: 3,
     oppo: 2,
     vivo: 1,
     'trip-com': 2,
     zte: 3,
-    tencent: 3,
+    tencent: 12,
   };
   for (const [id, count] of Object.entries(expected))
     assert.equal(artworkGroups(brands[id]).length, count, id);
@@ -286,10 +286,14 @@ test('reviewed repository keeps distinct artworks after redundant format renditi
     selectedArtwork(brands.yonyou, 'wordmark-white.svg').defaultAsset.file,
     'wordmark-white.svg',
   );
-  for (const id of ['lenovo', 'minimax', 'zte']) {
+  for (const [id, alternativeCount] of [
+    ['lenovo', 0],
+    ['minimax', 8],
+    ['zte', 1],
+  ]) {
     const brand = brands[id];
     assert.equal(primaryArtworkGroups(brand)[0].defaultAsset.file, brand.defaultAsset);
-    assert.equal(alternativeArtworkGroups(brand).length, id === 'zte' ? 1 : 0);
+    assert.equal(alternativeArtworkGroups(brand).length, alternativeCount, id);
     assert.ok(
       alternativeArtworkGroups(brand).every((group) =>
         group.assets.every((asset) => asset.display === 'alternative'),

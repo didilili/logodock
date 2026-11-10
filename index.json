@@ -9,7 +9,22 @@
       "identity": {
         "nameZh": "智元机器人",
         "nameEn": "AGIBOT",
-        "legalNames": [],
+        "legalNames": [
+          {
+            "name": "AGIBOT Innovation (Shanghai) Technology Co., Ltd.",
+            "language": "en",
+            "role": "company",
+            "source": "https://www.agibot.com/",
+            "reviewedAt": "2026-11-10"
+          },
+          {
+            "name": "智元创新（上海）科技股份有限公司",
+            "language": "zh",
+            "role": "company",
+            "source": "https://www.agibot.com.cn/about/167.html",
+            "reviewedAt": "2026-11-10"
+          }
+        ],
         "sources": [
           {
             "label": "智元机器人官方来源",
@@ -204,8 +219,140 @@
       "categories": [
         "internet"
       ],
-      "defaultAsset": "wordmark-orange.svg",
+      "defaultAsset": "logo-chinese-horizontal-official.png",
       "assets": [
+        {
+          "file": "logo-chinese-horizontal-official.png",
+          "label": "中文横版组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "zh",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "透明背景。"
+          ],
+          "source": "https://ali-home-data.oss-cn-hangzhou.aliyuncs.com/ecms-files/886024452/760bfffd-4f36-4c64-9c2e-0ee2382c313f.png",
+          "sourcePage": "https://www.alibabagroup.com/en-US/resource-logos",
+          "sha256": "99e16b3aa1342434196ae400c5ad1ea1e5dd91265d30570545b5d6ffd09a3b3f",
+          "bytes": 14438,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.alibabagroup.com/en-US/resource-logos",
+            "attribution": "Source: www.alibabagroup.com.",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方媒体库限获认可媒体作编辑用途，使用时标注来源；其他用途需阿里巴巴集团书面许可。可等比缩放，须保持图稿原样。"
+          },
+          "width": 1737,
+          "height": 267,
+          "path": "logo/alibaba/logo-chinese-horizontal-official.png"
+        },
+        {
+          "file": "logo-chinese-vertical-official.png",
+          "label": "中文竖版组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "zh",
+          "layout": "vertical",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "透明背景。"
+          ],
+          "source": "https://ali-home-data.oss-cn-hangzhou.aliyuncs.com/ecms-files/886024452/6b505419-12d6-4931-9e26-b12d0af5f3b0.png",
+          "sourcePage": "https://www.alibabagroup.com/en-US/resource-logos",
+          "sha256": "ee4d86217c5be11a25f80b1ea0cb49c4ffff08b9eb60fe505defbe29e5154418",
+          "bytes": 16281,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.alibabagroup.com/en-US/resource-logos",
+            "attribution": "Source: www.alibabagroup.com.",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方媒体库限获认可媒体作编辑用途，使用时标注来源；其他用途需阿里巴巴集团书面许可。可等比缩放，须保持图稿原样。"
+          },
+          "width": 1246,
+          "height": 610,
+          "path": "logo/alibaba/logo-chinese-vertical-official.png"
+        },
+        {
+          "file": "logo-english-horizontal-official.png",
+          "label": "英文横版组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "透明背景。"
+          ],
+          "source": "https://data.alibabagroup.com/ecms-files/886024452/ce9a0936-27b7-4f64-ad88-b33fb22bf36f.png",
+          "sourcePage": "https://www.alibabagroup.com/en-US/resource-logos",
+          "sha256": "769468b1e50df3f032a0caccb7f0fe5a0a229f5f3c955cb9c1e49676690cf0d6",
+          "bytes": 22712,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.alibabagroup.com/en-US/resource-logos",
+            "attribution": "Source: www.alibabagroup.com.",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方媒体库限获认可媒体作编辑用途，使用时标注来源；其他用途需阿里巴巴集团书面许可。可等比缩放，须保持图稿原样。"
+          },
+          "width": 2072,
+          "height": 266,
+          "path": "logo/alibaba/logo-english-horizontal-official.png"
+        },
+        {
+          "file": "logo-english-vertical-official.png",
+          "label": "英文竖版组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "vertical",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "透明背景。"
+          ],
+          "source": "https://data.alibabagroup.com/ecms-files/886024452/296d05a1-c52a-4f5e-abf2-0d49d4c0d6b3.png",
+          "sourcePage": "https://www.alibabagroup.com/en-US/resource-logos",
+          "sha256": "112515c766d85229db0f5f09236f98cc48c54ad27224f6ec442aa26239741898",
+          "bytes": 24735,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.alibabagroup.com/en-US/resource-logos",
+            "attribution": "Source: www.alibabagroup.com.",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方媒体库限获认可媒体作编辑用途，使用时标注来源；其他用途需阿里巴巴集团书面许可。可等比缩放，须保持图稿原样。"
+          },
+          "width": 1602,
+          "height": 605,
+          "path": "logo/alibaba/logo-english-vertical-official.png"
+        },
         {
           "file": "wordmark-orange-chinese.svg",
           "label": "中文",
@@ -273,13 +420,18 @@
       "aliases": [],
       "identity": {
         "nameZh": "高德",
-        "nameEn": null,
+        "nameEn": "Amap",
         "legalNames": [],
         "sources": [
           {
             "label": "高德官方来源",
             "url": "https://www.amap.com/",
             "reviewedAt": "2026-11-09"
+          },
+          {
+            "label": "阿里巴巴集团官方资源页中的高德英文名称",
+            "url": "https://www.alibabagroup.com/en-US/resource-logos",
+            "reviewedAt": "2026-11-10"
           }
         ]
       },
@@ -486,7 +638,15 @@
       "identity": {
         "nameZh": "亚信科技",
         "nameEn": "AsiaInfo",
-        "legalNames": [],
+        "legalNames": [
+          {
+            "name": "亚信科技控股有限公司",
+            "language": "zh",
+            "role": "group",
+            "source": "https://www.asiainfo.com/zh_cn/about.html",
+            "reviewedAt": "2026-11-10"
+          }
+        ],
         "sources": [
           {
             "label": "亚信科技官方来源",
@@ -636,7 +796,15 @@
       "identity": {
         "nameZh": "百度",
         "nameEn": "Baidu",
-        "legalNames": [],
+        "legalNames": [
+          {
+            "name": "Baidu, Inc.",
+            "language": "en",
+            "role": "group",
+            "source": "https://ir.baidu.com/",
+            "reviewedAt": "2026-11-10"
+          }
+        ],
         "sources": [
           {
             "label": "百度官方来源",
@@ -737,6 +905,46 @@
             "notes": "官方 AI 设计附件，包含图稿及使用规范，按标注的 RGB 或 CMYK 色彩模式取用。"
           },
           "path": "logo/baidu/logo-bilingual-rgb.ai"
+        },
+        {
+          "file": "logo-bilingual-white-cmyk.ai",
+          "label": "反白规范 CMYK",
+          "assetFiles": [
+            "logo-bilingual-brand-library.jpg"
+          ],
+          "source": "https://static.home.baidu.com/homebd/kbamgnjfcelidh1565603716.rar?authorization=bce-auth-v1%2Fe6803def36ae467f81ebdb4bdc75f119%2F2019-08-12T09%3A55%3A16Z%2F-1%2F%2F5789f57a15e89cd4362312f0d4ca9e546f04ed996c1f109d83ae2a11d9e02d06",
+          "sourcePage": "https://home.baidu.com/media_resource/show_detail/res_id/3/tab_id/1",
+          "sha256": "3fd02ec9888be06748ac545236bacd1a36e5da57cd19863a8f41853d0480d0cd",
+          "bytes": 1213198,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://home.baidu.com/media_resource/show_detail/res_id/3/tab_id/1",
+            "attribution": "百度。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方反白规范 AI，包含完整中英组合图稿及使用规范。CMYK 用于印刷，反白图稿须整体使用，比例与颜色按原规范取用。"
+          },
+          "path": "logo/baidu/logo-bilingual-white-cmyk.ai"
+        },
+        {
+          "file": "logo-bilingual-white-rgb.ai",
+          "label": "反白规范 RGB",
+          "assetFiles": [
+            "logo-bilingual-brand-library.jpg"
+          ],
+          "source": "https://static.home.baidu.com/homebd/kbamgnjfcelidh1565603716.rar?authorization=bce-auth-v1%2Fe6803def36ae467f81ebdb4bdc75f119%2F2019-08-12T09%3A55%3A16Z%2F-1%2F%2F5789f57a15e89cd4362312f0d4ca9e546f04ed996c1f109d83ae2a11d9e02d06",
+          "sourcePage": "https://home.baidu.com/media_resource/show_detail/res_id/3/tab_id/1",
+          "sha256": "30c579bdb7b6ef959d6599e79333d4d227c6c11b23414fb922412b3c1597b87a",
+          "bytes": 316123,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://home.baidu.com/media_resource/show_detail/res_id/3/tab_id/1",
+            "attribution": "百度。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方反白规范 AI，包含完整中英组合图稿及使用规范。RGB 用于屏幕，反白图稿须整体使用，比例与颜色按原规范取用。"
+          },
+          "path": "logo/baidu/logo-bilingual-white-rgb.ai"
         }
       ],
       "assets": [
@@ -891,7 +1099,15 @@
       "identity": {
         "nameZh": null,
         "nameEn": "BIGO",
-        "legalNames": [],
+        "legalNames": [
+          {
+            "name": "BIGO TECHNOLOGY PTE. LTD.",
+            "language": "en",
+            "role": "company",
+            "source": "https://www.bigo.sg/",
+            "reviewedAt": "2026-11-10"
+          }
+        ],
         "sources": [
           {
             "label": "BIGO官方来源",
@@ -1096,6 +1312,40 @@
           "path": "logo/bilibili/wordmark-ir-white-official.svg"
         },
         {
+          "file": "wordmark-recruitment-white-official.png",
+          "label": "招聘组合",
+          "variant": "wordmark",
+          "status": "current",
+          "display": "alternative",
+          "background": "dark",
+          "language": "bilingual",
+          "layout": "horizontal",
+          "color": "white",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "website",
+            "placement": "header"
+          },
+          "qualityNotes": [
+            "完整保留“bilibili 招聘”字样，供招聘相关场景取用。"
+          ],
+          "source": "https://s1.hdslb.com/bfs/templar/york-static/egGNHG9P4Vz5KY6e.png",
+          "sourcePage": "https://jobs.bilibili.com/",
+          "sha256": "fe36d2002dab29f464e73c28e20fde21c4cec9ce1cfe4673209e32ceeae0b639",
+          "bytes": 11926,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://jobs.bilibili.com/",
+            "attribution": "哔哩哔哩。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
+          },
+          "width": 396,
+          "height": 96,
+          "path": "logo/bilibili/wordmark-recruitment-white-official.png"
+        },
+        {
           "file": "wordmark-white-small-official.png",
           "label": "白色小尺寸字标",
           "variant": "wordmark",
@@ -1166,7 +1416,7 @@
       "categories": [
         "internet"
       ],
-      "defaultAsset": "logo-english.svg",
+      "defaultAsset": "logo-bilingual-color-official.svg",
       "artworks": [
         {
           "id": "square-white",
@@ -1277,6 +1527,96 @@
           },
           "aspectRatio": 1,
           "path": "logo/bytedance/icon-white-square-extracted.svg"
+        },
+        {
+          "file": "logo-bilingual-color-official.svg",
+          "label": "中英组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "bilingual",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "website"
+          },
+          "qualityNotes": [
+            "官网内嵌的原生路径 SVG。"
+          ],
+          "source": "https://www.bytedance.com/?locale=zh#embedded-svg-img-1",
+          "sourcePage": "https://www.bytedance.com/?locale=zh",
+          "sha256": "a07b002e7fe99cd02d781ea71beb710a7485f50074ac6fa2b24055f32ddfffbc",
+          "bytes": 9461,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.bytedance.com/?locale=zh",
+            "attribution": "字节跳动。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
+          },
+          "aspectRatio": 3.8421052631578947,
+          "path": "logo/bytedance/logo-bilingual-color-official.svg"
+        },
+        {
+          "file": "logo-bilingual-white-official.svg",
+          "label": "中英反白组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "dark",
+          "language": "bilingual",
+          "layout": "horizontal",
+          "color": "white",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "website"
+          },
+          "qualityNotes": [
+            "官网内嵌的原生路径 SVG。"
+          ],
+          "source": "https://www.bytedance.com/?locale=zh#embedded-svg-img-0",
+          "sourcePage": "https://www.bytedance.com/?locale=zh",
+          "sha256": "324408bdb167b07e9be1be51510e4014176f11c169b1f058b409de7ff299c146",
+          "bytes": 9348,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.bytedance.com/?locale=zh",
+            "attribution": "字节跳动。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
+          },
+          "aspectRatio": 3.8421052631578947,
+          "path": "logo/bytedance/logo-bilingual-white-official.svg"
+        },
+        {
+          "file": "logo-english-white-official.svg",
+          "label": "英文反白组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "dark",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "white",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "website"
+          },
+          "source": "https://www.bytedance.com/?locale=en#embedded-svg-img-0",
+          "sourcePage": "https://www.bytedance.com/?locale=en",
+          "sha256": "55fbb2919265f6ec420e98e7997b9c9b6034602437b5c070d051e590311800b1",
+          "bytes": 7634,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.bytedance.com/?locale=en",
+            "attribution": "字节跳动。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
+          },
+          "aspectRatio": 3.8421052631578947,
+          "path": "logo/bytedance/logo-english-white-official.svg"
         },
         {
           "file": "logo-english.svg",
@@ -1410,6 +1750,72 @@
           "path": "logo/codeberg/icon-white.svg"
         },
         {
+          "file": "logo-horizontal-blue.png",
+          "label": "横版蓝色组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "repository"
+          },
+          "qualityNotes": [
+            "透明背景，官方横版位图原件。"
+          ],
+          "source": "https://codeberg.org/Codeberg/Design/raw/branch/main/logo/horizontal/png/codeberg-logo_horizontal_blue-850x250.png",
+          "sourcePage": "https://codeberg.org/Codeberg/Design/src/branch/main/logo/horizontal/png",
+          "sha256": "4566f07af4c2d94849eec3bd7913b56173b508149d3a65844652931a7c0b8229",
+          "bytes": 23089,
+          "rights": {
+            "status": "permitted",
+            "license": "CC0-1.0",
+            "reference": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
+            "attribution": "Logo by Robert Martinez; published by Codeberg e.V.",
+            "reviewedAt": "2026-11-10",
+            "notes": "Codeberg Design 仓库以 CC0 发布这些图稿。Codeberg 名称与 Logo 商标权保留，使用须遵循官方品牌指南，保持比例、原色及组合关系。"
+          },
+          "width": 850,
+          "height": 250,
+          "path": "logo/codeberg/logo-horizontal-blue.png"
+        },
+        {
+          "file": "logo-horizontal-white.png",
+          "label": "横版反白组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "dark",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "white",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "repository"
+          },
+          "qualityNotes": [
+            "透明背景，官方横版位图原件。"
+          ],
+          "source": "https://codeberg.org/Codeberg/Design/raw/branch/main/logo/horizontal/png/codeberg-logo_horizontal_white-850x250.png",
+          "sourcePage": "https://codeberg.org/Codeberg/Design/src/branch/main/logo/horizontal/png",
+          "sha256": "a9b9a3ca7d736e639ec20587710571a911aaa800eaacb412814290fa7f4c29a1",
+          "bytes": 16513,
+          "rights": {
+            "status": "permitted",
+            "license": "CC0-1.0",
+            "reference": "https://codeberg.org/Codeberg/Design/raw/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/README.md",
+            "attribution": "Logo by Robert Martinez; published by Codeberg e.V.",
+            "reviewedAt": "2026-11-10",
+            "notes": "Codeberg Design 仓库以 CC0 发布这些图稿。Codeberg 名称与 Logo 商标权保留，使用须遵循官方品牌指南，保持比例、原色及组合关系。"
+          },
+          "width": 850,
+          "height": 250,
+          "path": "logo/codeberg/logo-horizontal-white.png"
+        },
+        {
           "file": "logo-vertical-blue.svg",
           "label": "蓝色竖版组合",
           "variant": "logo",
@@ -1481,7 +1887,15 @@
       "identity": {
         "nameZh": "视源股份",
         "nameEn": "CVTE",
-        "legalNames": [],
+        "legalNames": [
+          {
+            "name": "广州视源电子科技股份有限公司",
+            "language": "zh",
+            "role": "company",
+            "source": "https://www.cvte.com/",
+            "reviewedAt": "2026-11-10"
+          }
+        ],
         "sources": [
           {
             "label": "视源股份官方来源",
@@ -1574,7 +1988,7 @@
       "aliases": [],
       "identity": {
         "nameZh": "得物",
-        "nameEn": null,
+        "nameEn": "POIZON",
         "legalNames": [],
         "sources": [
           {
@@ -1586,6 +2000,11 @@
             "label": "得物官网链接的官方招聘网站",
             "url": "https://poizon.jobs.feishu.cn/index",
             "reviewedAt": "2026-11-09"
+          },
+          {
+            "label": "得物官网关联的官方招聘页与国际品牌名称",
+            "url": "https://poizon.jobs.feishu.cn/",
+            "reviewedAt": "2026-11-10"
           }
         ]
       },
@@ -1670,7 +2089,7 @@
       "categories": [
         "internet"
       ],
-      "defaultAsset": "logo-english.svg",
+      "defaultAsset": "logo-chinese-official.svg",
       "artworks": [
         {
           "id": "square-gray",
@@ -1787,6 +2206,90 @@
           "path": "logo/didi/icon-orange-extracted.svg"
         },
         {
+          "file": "logo-chinese-official.svg",
+          "label": "中文组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "zh",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "website"
+          },
+          "source": "https://website.didiglobal.com/dist/media/logo-zh.5837eebe.svg",
+          "sourcePage": "https://www.didiglobal.com/",
+          "sha256": "bc8b1689d5bb4e7ca33a3431d44934dba27e24eee22b2fcbeb95e4e41b42938f",
+          "bytes": 2242,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.didiglobal.com/",
+            "attribution": "滴滴。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
+          },
+          "aspectRatio": 2.5956055453832074,
+          "path": "logo/didi/logo-chinese-official.svg"
+        },
+        {
+          "file": "logo-chinese-white-official.svg",
+          "label": "中文反白组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "dark",
+          "language": "zh",
+          "layout": "horizontal",
+          "color": "white",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "website"
+          },
+          "source": "https://website.didiglobal.com/dist/media/logo-zh-1.1387092c.svg",
+          "sourcePage": "https://www.didiglobal.com/",
+          "sha256": "c4b31edc02e837ccf09db8e8da05fd737fed7d1f97ea51a8c0e991bc6dabb413",
+          "bytes": 2190,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.didiglobal.com/",
+            "attribution": "滴滴。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
+          },
+          "aspectRatio": 2.5956055453832074,
+          "path": "logo/didi/logo-chinese-white-official.svg"
+        },
+        {
+          "file": "logo-english-white-official.svg",
+          "label": "英文反白组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "dark",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "white",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "website"
+          },
+          "source": "https://website.didiglobal.com/dist/media/logo-en-1.fc3db1d1.svg",
+          "sourcePage": "https://www.didiglobal.com/",
+          "sha256": "c765b9080b8a23f23a33ad67aa775a75dd79ea9ab49add039548b5b702681265",
+          "bytes": 1553,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.didiglobal.com/",
+            "attribution": "滴滴。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
+          },
+          "aspectRatio": 2.5956055453832074,
+          "path": "logo/didi/logo-english-white-official.svg"
+        },
+        {
           "file": "logo-english.svg",
           "label": "橙色英文组合",
           "variant": "logo",
@@ -1824,13 +2327,26 @@
       "aliases": [],
       "identity": {
         "nameZh": "懂车帝",
-        "nameEn": null,
-        "legalNames": [],
+        "nameEn": "DCar",
+        "legalNames": [
+          {
+            "name": "重庆懂车帝科技有限公司",
+            "language": "zh",
+            "role": "operating-company",
+            "source": "https://lf3-cdn-tos.draftstatic.com/obj/ies-hotsoon-draft/dcar_ecom/f944ac35-d37a-4b05-91e6-8fa2f776f9b2.html",
+            "reviewedAt": "2026-11-10"
+          }
+        ],
         "sources": [
           {
             "label": "懂车帝官方来源",
             "url": "https://www.dongchedi.com/",
             "reviewedAt": "2026-11-09"
+          },
+          {
+            "label": "懂车帝官方招聘页的中英文品牌名称",
+            "url": "https://dcar.jobs.feishu.cn/",
+            "reviewedAt": "2026-11-10"
           }
         ]
       },
@@ -1948,13 +2464,26 @@
       "aliases": [],
       "identity": {
         "nameZh": "多益网络",
-        "nameEn": null,
-        "legalNames": [],
+        "nameEn": "Duoyi",
+        "legalNames": [
+          {
+            "name": "广州多益网络股份有限公司",
+            "language": "zh",
+            "role": "company",
+            "source": "https://www.duoyi.com/",
+            "reviewedAt": "2026-11-10"
+          }
+        ],
         "sources": [
           {
             "label": "多益网络官方来源",
             "url": "https://www.duoyi.com/",
             "reviewedAt": "2026-11-09"
+          },
+          {
+            "label": "多益集团官方英文介绍",
+            "url": "https://www.duoyigroup.cn/dycommerce/en/",
+            "reviewedAt": "2026-11-10"
           }
         ]
       },
@@ -2007,7 +2536,22 @@
       "identity": {
         "nameZh": "帆软",
         "nameEn": "FanRuan",
-        "legalNames": [],
+        "legalNames": [
+          {
+            "name": "帆软软件有限公司",
+            "language": "zh",
+            "role": "company",
+            "source": "https://www.fanruan.com/download/",
+            "reviewedAt": "2026-11-10"
+          },
+          {
+            "name": "FanRuan Software Co., Ltd.",
+            "language": "en",
+            "role": "company",
+            "source": "https://www.fanruan.com/en/about-us",
+            "reviewedAt": "2026-11-10"
+          }
+        ],
         "sources": [
           {
             "label": "帆软官方来源",
@@ -2151,6 +2695,35 @@
       "defaultAsset": "icon-orange.svg",
       "assets": [
         {
+          "file": "icon-black.svg",
+          "label": "黑色图形",
+          "variant": "icon",
+          "status": "current",
+          "background": "light",
+          "language": "none",
+          "layout": "standalone",
+          "color": "black",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "source": "https://git-scm.com/images/logos/downloads/Git-Icon-Black.svg",
+          "sourcePage": "https://git-scm.com/community/logos",
+          "sha256": "0bf58ad2b4a330d0023d65ffbf056f5d93abee6b29eca81904951b014b3c9cd9",
+          "bytes": 858,
+          "rights": {
+            "status": "permitted",
+            "license": "CC-BY-3.0",
+            "reference": "https://git-scm.com/community/logos",
+            "attribution": "Git Logo by Jason Long, licensed under Creative Commons Attribution 3.0 Unported (CC BY 3.0): https://creativecommons.org/licenses/by/3.0/ . Original file, unmodified.",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方 Logo 下载页采用 CC BY 3.0，分发须保留作者署名和许可链接。Git 名称与 Logo 商标权由 Software Freedom Conservancy 代表 Git 项目持有。使用须遵循商标政策，商品销售等用途须另行取得许可，使用不得暗示官方背书。商标政策见 https://git-scm.com/about/trademark 。"
+          },
+          "aspectRatio": 1,
+          "path": "logo/git/icon-black.svg"
+        },
+        {
           "file": "icon-orange.svg",
           "label": "橙色图形",
           "variant": "icon",
@@ -2216,6 +2789,35 @@
           "path": "logo/git/icon-white-extracted.svg"
         },
         {
+          "file": "logo-black.svg",
+          "label": "黑色组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "black",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "source": "https://git-scm.com/images/logos/downloads/Git-Logo-Black.svg",
+          "sourcePage": "https://git-scm.com/community/logos",
+          "sha256": "bc76df3f745738484b172beb0b4fcf770de0603fde451487dafa2b45f76371ce",
+          "bytes": 2315,
+          "rights": {
+            "status": "permitted",
+            "license": "CC-BY-3.0",
+            "reference": "https://git-scm.com/community/logos",
+            "attribution": "Git Logo by Jason Long, licensed under Creative Commons Attribution 3.0 Unported (CC BY 3.0): https://creativecommons.org/licenses/by/3.0/ . Original file, unmodified.",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方 Logo 下载页采用 CC BY 3.0，分发须保留作者署名和许可链接。Git 名称与 Logo 商标权由 Software Freedom Conservancy 代表 Git 项目持有。使用须遵循商标政策，商品销售等用途须另行取得许可，使用不得暗示官方背书。商标政策见 https://git-scm.com/about/trademark 。"
+          },
+          "aspectRatio": 2.380434782608696,
+          "path": "logo/git/logo-black.svg"
+        },
+        {
           "file": "logo-color.svg",
           "label": "双色组合",
           "variant": "logo",
@@ -2244,6 +2846,35 @@
           },
           "aspectRatio": 2.380434782608696,
           "path": "logo/git/logo-color.svg"
+        },
+        {
+          "file": "logo-orange.svg",
+          "label": "橙色组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "source": "https://git-scm.com/images/logos/downloads/Git-Logo-1788C.svg",
+          "sourcePage": "https://git-scm.com/community/logos",
+          "sha256": "e21811929feafe2e6f563c1ad89cdbd8892a11d8da26d84f2e9a605b99848e61",
+          "bytes": 2315,
+          "rights": {
+            "status": "permitted",
+            "license": "CC-BY-3.0",
+            "reference": "https://git-scm.com/community/logos",
+            "attribution": "Git Logo by Jason Long, licensed under Creative Commons Attribution 3.0 Unported (CC BY 3.0): https://creativecommons.org/licenses/by/3.0/ . Original file, unmodified.",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方 Logo 下载页采用 CC BY 3.0，分发须保留作者署名和许可链接。Git 名称与 Logo 商标权由 Software Freedom Conservancy 代表 Git 项目持有。使用须遵循商标政策，商品销售等用途须另行取得许可，使用不得暗示官方背书。商标政策见 https://git-scm.com/about/trademark 。"
+          },
+          "aspectRatio": 2.380434782608696,
+          "path": "logo/git/logo-orange.svg"
         },
         {
           "file": "logo-white.svg",
@@ -2343,10 +2974,31 @@
       ],
       "sourceFiles": [
         {
+          "file": "icon-black-cmyk.pdf",
+          "label": "黑色图形 · CMYK PDF",
+          "assetFiles": [
+            "icon-black-official.svg"
+          ],
+          "source": "https://about.gitlab.com/images/press/gitlab-logo-650-cmyk.pdf",
+          "sourcePage": "https://about.gitlab.com/press/press-kit/",
+          "sha256": "a44fbae0b78bb440fa25aa66d89f1288a872923e175c0c19fac2012fddf13ef9",
+          "bytes": 410332,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://about.gitlab.com/press/press-kit/",
+            "attribution": "GitLab。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方 CMYK 印刷原件，保留原始矢量图稿、色彩空间与画板。"
+          },
+          "path": "logo/gitlab/icon-black-cmyk.pdf"
+        },
+        {
           "file": "icon-color-cmyk.pdf",
           "label": "CMYK 印刷用稿",
           "assetFiles": [
-            "icon-color-official.svg"
+            "icon-color-official.svg",
+            "icon-color-square-extracted.svg"
           ],
           "source": "https://about.gitlab.com/images/press/gitlab-logo-550-cmyk.pdf",
           "sourcePage": "https://about.gitlab.com/press/press-kit/",
@@ -2361,6 +3013,47 @@
             "notes": "官方 CMYK 印刷附件，按标注色彩模式及画板取用。"
           },
           "path": "logo/gitlab/icon-color-cmyk.pdf"
+        },
+        {
+          "file": "icon-white-cmyk.eps",
+          "label": "白色图形 · CMYK EPS",
+          "assetFiles": [
+            "icon-white-official.svg",
+            "icon-white-square-extracted.svg"
+          ],
+          "source": "https://about.gitlab.com/images/press/gitlab-logo-750-cmyk.eps",
+          "sourcePage": "https://about.gitlab.com/press/press-kit/",
+          "sha256": "8426905a2ad6e757608525c8c6e0e749fc1e15257499e7363b1025b3dbae34fb",
+          "bytes": 520190,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://about.gitlab.com/press/press-kit/",
+            "attribution": "GitLab。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方 CMYK 印刷原件，保留原始矢量图稿、色彩空间与画板。"
+          },
+          "path": "logo/gitlab/icon-white-cmyk.eps"
+        },
+        {
+          "file": "logo-black-cmyk.pdf",
+          "label": "黑色组合 · CMYK PDF",
+          "assetFiles": [
+            "logo-black-official.svg"
+          ],
+          "source": "https://about.gitlab.com/images/press/gitlab-logo-350-cmyk.pdf",
+          "sourcePage": "https://about.gitlab.com/press/press-kit/",
+          "sha256": "1a3cb12feb007f52ba9e5a191f0c3b0c3013a90820417bc7ed907227524ae036",
+          "bytes": 411276,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://about.gitlab.com/press/press-kit/",
+            "attribution": "GitLab。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方 CMYK 印刷原件，保留原始矢量图稿、色彩空间与画板。"
+          },
+          "path": "logo/gitlab/logo-black-cmyk.pdf"
         },
         {
           "file": "logo-color-cmyk.pdf",
@@ -2381,9 +3074,80 @@
             "notes": "官方 CMYK 印刷附件，按标注色彩模式及画板取用。"
           },
           "path": "logo/gitlab/logo-color-cmyk.pdf"
+        },
+        {
+          "file": "logo-monochrome-white-cmyk.eps",
+          "label": "全白组合 · CMYK EPS",
+          "assetFiles": [
+            "logo-monochrome-white-official.svg"
+          ],
+          "source": "https://about.gitlab.com/images/press/gitlab-logo-450-cmyk.eps",
+          "sourcePage": "https://about.gitlab.com/press/press-kit/",
+          "sha256": "6958ed99e8d4e3edc3ba6e0d8bf3805ddf53b15ddfda09aed827ecb9436bed13",
+          "bytes": 995714,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://about.gitlab.com/press/press-kit/",
+            "attribution": "GitLab。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方 CMYK 印刷原件，保留原始矢量图稿、色彩空间与画板。"
+          },
+          "path": "logo/gitlab/logo-monochrome-white-cmyk.eps"
+        },
+        {
+          "file": "logo-white-cmyk.eps",
+          "label": "彩色图形反白字标 · CMYK EPS",
+          "assetFiles": [
+            "logo-white-official.svg"
+          ],
+          "source": "https://about.gitlab.com/images/press/gitlab-logo-250-cmyk.eps",
+          "sourcePage": "https://about.gitlab.com/press/press-kit/",
+          "sha256": "d8825ebe4f8d3263b6fd39653828b60f6d4ae7b6547f2e53575e606d9f8ae67b",
+          "bytes": 997170,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://about.gitlab.com/press/press-kit/",
+            "attribution": "GitLab。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方 CMYK 印刷原件，保留原始矢量图稿、色彩空间与画板。"
+          },
+          "path": "logo/gitlab/logo-white-cmyk.eps"
         }
       ],
       "assets": [
+        {
+          "file": "icon-black-official.svg",
+          "label": "单色黑色图形",
+          "variant": "icon",
+          "status": "current",
+          "background": "light",
+          "language": "none",
+          "layout": "standalone",
+          "color": "black",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "透明背景，保留官方画板留白。"
+          ],
+          "source": "https://about.gitlab.com/images/press/gitlab-logo-600-rgb.svg",
+          "sourcePage": "https://about.gitlab.com/press/press-kit/",
+          "sha256": "2fd0dd96a81cdb156a74c2b17785a29228def82680d4b8b05bea5b2daf00ef42",
+          "bytes": 533,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://about.gitlab.com/press/press-kit/",
+            "attribution": "GitLab。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
+          },
+          "aspectRatio": 1,
+          "path": "logo/gitlab/icon-black-official.svg"
+        },
         {
           "file": "icon-color-official.svg",
           "label": "彩色图形 · 原始画布",
@@ -2551,6 +3315,37 @@
           "path": "logo/gitlab/icon-white-square-extracted.svg"
         },
         {
+          "file": "logo-black-official.svg",
+          "label": "单色黑色组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "black",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "透明背景，保留官方画板留白。"
+          ],
+          "source": "https://about.gitlab.com/images/press/gitlab-logo-300-rgb.svg",
+          "sourcePage": "https://about.gitlab.com/press/press-kit/",
+          "sha256": "8704699931f96905a0f3ad1c7103d3d519200f2b9d8762a279a7b5a6fd0b206f",
+          "bytes": 3568,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://about.gitlab.com/press/press-kit/",
+            "attribution": "GitLab。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
+          },
+          "aspectRatio": 2.6052631578947367,
+          "path": "logo/gitlab/logo-black-official.svg"
+        },
+        {
           "file": "logo-color-official.svg",
           "label": "彩色组合",
           "variant": "logo",
@@ -2581,6 +3376,37 @@
           },
           "aspectRatio": 2.6052631578947367,
           "path": "logo/gitlab/logo-color-official.svg"
+        },
+        {
+          "file": "logo-monochrome-white-official.svg",
+          "label": "全白组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "dark",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "white",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "透明背景，保留官方画板留白。"
+          ],
+          "source": "https://about.gitlab.com/images/press/gitlab-logo-400-rgb.svg",
+          "sourcePage": "https://about.gitlab.com/press/press-kit/",
+          "sha256": "ac62115b7bee77fd7abd65ddb1d89533cd7b5c51f823c1d26756f75804cc0a93",
+          "bytes": 2097,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://about.gitlab.com/press/press-kit/",
+            "attribution": "GitLab。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
+          },
+          "aspectRatio": 2.6052631578947367,
+          "path": "logo/gitlab/logo-monochrome-white-official.svg"
         },
         {
           "file": "logo-white-official.svg",
@@ -2624,7 +3450,22 @@
       "identity": {
         "nameZh": "经纬恒润",
         "nameEn": "JINGWEI HIRAIN",
-        "legalNames": [],
+        "legalNames": [
+          {
+            "name": "北京经纬恒润科技股份有限公司",
+            "language": "zh",
+            "role": "company",
+            "source": "https://www.hirain.com/intro/36.html",
+            "reviewedAt": "2026-11-10"
+          },
+          {
+            "name": "Beijing Jingwei Hirain Technologies Co., Inc.",
+            "language": "en",
+            "role": "company",
+            "source": "https://en.hirain.com/",
+            "reviewedAt": "2026-11-10"
+          }
+        ],
         "sources": [
           {
             "label": "经纬恒润官方来源",
@@ -2719,8 +3560,264 @@
       "categories": [
         "hardware"
       ],
-      "defaultAsset": "wordmark-black-2020.svg",
+      "defaultAsset": "logo-color-black-horizontal-2026.svg",
       "assets": [
+        {
+          "file": "logo-black-horizontal-2026.svg",
+          "label": "黑色横版组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "black",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "原始画布保留官方品牌安全空间。"
+          ],
+          "source": "https://www.honor.com/content/dam/honor/cn/brand-guideline-2026/download/HONOR%20Logo%20Toolkit%20%E8%8D%A3%E8%80%80%E5%93%81%E7%89%8C%E6%A0%87%E8%AF%86%E5%B7%A5%E5%85%B7%E5%8C%85.zip",
+          "sourcePage": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+          "sha256": "be915e8acfd66669e144c56934390e86f5c64500caec779a622d0e0df7ee3c6d",
+          "bytes": 1770,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+            "attribution": "荣耀。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "工具包声明适用于个人、编辑及非商业用途；品牌规范要求经合同或协议授权使用。遵守官方标志完整性和安全空间要求。"
+          },
+          "aspectRatio": 2.0894615384615385,
+          "path": "logo/honor/logo-black-horizontal-2026.svg"
+        },
+        {
+          "file": "logo-black-vertical-2026.svg",
+          "label": "黑色竖版组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "vertical",
+          "color": "black",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "原始画布保留官方品牌安全空间。"
+          ],
+          "source": "https://www.honor.com/content/dam/honor/cn/brand-guideline-2026/download/HONOR%20Logo%20Toolkit%20%E8%8D%A3%E8%80%80%E5%93%81%E7%89%8C%E6%A0%87%E8%AF%86%E5%B7%A5%E5%85%B7%E5%8C%85.zip",
+          "sourcePage": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+          "sha256": "94d4939edd3c0f55b488f73bb4f7cefbdac64c52c1ab0b1175eaaac62fd97143",
+          "bytes": 1801,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+            "attribution": "荣耀。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "工具包声明适用于个人、编辑及非商业用途；品牌规范要求经合同或协议授权使用。遵守官方标志完整性和安全空间要求。"
+          },
+          "aspectRatio": 0.8903491997264814,
+          "path": "logo/honor/logo-black-vertical-2026.svg"
+        },
+        {
+          "file": "logo-color-black-horizontal-2026.svg",
+          "label": "蓝黑横版组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "原始画布保留官方品牌安全空间。"
+          ],
+          "source": "https://www.honor.com/content/dam/honor/cn/brand-guideline-2026/download/HONOR%20Logo%20Toolkit%20%E8%8D%A3%E8%80%80%E5%93%81%E7%89%8C%E6%A0%87%E8%AF%86%E5%B7%A5%E5%85%B7%E5%8C%85.zip",
+          "sourcePage": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+          "sha256": "47493d1a491664171f927c5afaeb688d1acab397de5389d63879f6fb3edaad89",
+          "bytes": 1882,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+            "attribution": "荣耀。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "工具包声明适用于个人、编辑及非商业用途；品牌规范要求经合同或协议授权使用。遵守官方标志完整性和安全空间要求。"
+          },
+          "aspectRatio": 2.0894615384615385,
+          "path": "logo/honor/logo-color-black-horizontal-2026.svg"
+        },
+        {
+          "file": "logo-color-black-vertical-2026.svg",
+          "label": "蓝黑竖版组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "vertical",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "原始画布保留官方品牌安全空间。"
+          ],
+          "source": "https://www.honor.com/content/dam/honor/cn/brand-guideline-2026/download/HONOR%20Logo%20Toolkit%20%E8%8D%A3%E8%80%80%E5%93%81%E7%89%8C%E6%A0%87%E8%AF%86%E5%B7%A5%E5%85%B7%E5%8C%85.zip",
+          "sourcePage": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+          "sha256": "55635e3e3d95fe693fb7234079cc0b31e414dba2cce29e42b2b297abec177e30",
+          "bytes": 1913,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+            "attribution": "荣耀。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "工具包声明适用于个人、编辑及非商业用途；品牌规范要求经合同或协议授权使用。遵守官方标志完整性和安全空间要求。"
+          },
+          "aspectRatio": 0.8903491997264814,
+          "path": "logo/honor/logo-color-black-vertical-2026.svg"
+        },
+        {
+          "file": "logo-color-white-horizontal-2026.svg",
+          "label": "蓝白横版组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "dark",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "原始画布保留官方品牌安全空间。"
+          ],
+          "source": "https://www.honor.com/content/dam/honor/cn/brand-guideline-2026/download/HONOR%20Logo%20Toolkit%20%E8%8D%A3%E8%80%80%E5%93%81%E7%89%8C%E6%A0%87%E8%AF%86%E5%B7%A5%E5%85%B7%E5%8C%85.zip",
+          "sourcePage": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+          "sha256": "a819e4ed731f168bb4fc327d877b775d5ea0bdfb34e2ce547d316763475e8e21",
+          "bytes": 1984,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+            "attribution": "荣耀。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "工具包声明适用于个人、编辑及非商业用途；品牌规范要求经合同或协议授权使用。遵守官方标志完整性和安全空间要求。"
+          },
+          "aspectRatio": 2.0894615384615385,
+          "path": "logo/honor/logo-color-white-horizontal-2026.svg"
+        },
+        {
+          "file": "logo-color-white-vertical-2026.svg",
+          "label": "蓝白竖版组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "dark",
+          "language": "en",
+          "layout": "vertical",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "原始画布保留官方品牌安全空间。"
+          ],
+          "source": "https://www.honor.com/content/dam/honor/cn/brand-guideline-2026/download/HONOR%20Logo%20Toolkit%20%E8%8D%A3%E8%80%80%E5%93%81%E7%89%8C%E6%A0%87%E8%AF%86%E5%B7%A5%E5%85%B7%E5%8C%85.zip",
+          "sourcePage": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+          "sha256": "759966110111387b7f39137226fe246e6ca9ae9f610ac062a9537e71fc7d5541",
+          "bytes": 2015,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+            "attribution": "荣耀。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "工具包声明适用于个人、编辑及非商业用途；品牌规范要求经合同或协议授权使用。遵守官方标志完整性和安全空间要求。"
+          },
+          "aspectRatio": 0.8903491997264814,
+          "path": "logo/honor/logo-color-white-vertical-2026.svg"
+        },
+        {
+          "file": "logo-white-horizontal-2026.svg",
+          "label": "白色横版组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "dark",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "white",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "原始画布保留官方品牌安全空间。"
+          ],
+          "source": "https://www.honor.com/content/dam/honor/cn/brand-guideline-2026/download/HONOR%20Logo%20Toolkit%20%E8%8D%A3%E8%80%80%E5%93%81%E7%89%8C%E6%A0%87%E8%AF%86%E5%B7%A5%E5%85%B7%E5%8C%85.zip",
+          "sourcePage": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+          "sha256": "e05fa37654730b12164f2ef3eb2492eb593469684d5de090c50b548e1a2ec690",
+          "bytes": 1939,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+            "attribution": "荣耀。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "工具包声明适用于个人、编辑及非商业用途；品牌规范要求经合同或协议授权使用。遵守官方标志完整性和安全空间要求。"
+          },
+          "aspectRatio": 2.0894615384615385,
+          "path": "logo/honor/logo-white-horizontal-2026.svg"
+        },
+        {
+          "file": "logo-white-vertical-2026.svg",
+          "label": "白色竖版组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "dark",
+          "language": "en",
+          "layout": "vertical",
+          "color": "white",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "原始画布保留官方品牌安全空间。"
+          ],
+          "source": "https://www.honor.com/content/dam/honor/cn/brand-guideline-2026/download/HONOR%20Logo%20Toolkit%20%E8%8D%A3%E8%80%80%E5%93%81%E7%89%8C%E6%A0%87%E8%AF%86%E5%B7%A5%E5%85%B7%E5%8C%85.zip",
+          "sourcePage": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+          "sha256": "4f33207a98f31e2f7f0e350eb59bf85a3a38dec2b6263da78c304646e6c73dc6",
+          "bytes": 1970,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+            "attribution": "荣耀。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "工具包声明适用于个人、编辑及非商业用途；品牌规范要求经合同或协议授权使用。遵守官方标志完整性和安全空间要求。"
+          },
+          "aspectRatio": 0.8903491997264814,
+          "path": "logo/honor/logo-white-vertical-2026.svg"
+        },
         {
           "file": "wordmark-black-2020.svg",
           "label": "2020 黑色字标",
@@ -2812,8 +3909,39 @@
         "hardware",
         "telecommunications"
       ],
-      "defaultAsset": "wordmark-dark-2018.png",
+      "defaultAsset": "logo-color-vertical-official.svg",
       "assets": [
+        {
+          "file": "logo-color-vertical-official.svg",
+          "label": "彩色竖版组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "vertical",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "website"
+          },
+          "qualityNotes": [
+            "完整花瓣图形与HUAWEI字标。"
+          ],
+          "source": "https://www.huawei.com/-/media/htemplate-home/1.0.1.20251205144752/components/assets/img/favicon-logo.svg",
+          "sourcePage": "https://www.huawei.com/en/media-center/multimedia",
+          "sha256": "18c6f80d423c1b1e01e4a6e02f66e1375567fd909de1af55c8013430a504126d",
+          "bytes": 3315,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.huawei.com/en/media-center/multimedia",
+            "attribution": "华为。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
+          },
+          "aspectRatio": 1,
+          "path": "logo/huawei/logo-color-vertical-official.svg"
+        },
         {
           "file": "wordmark-dark-2018.png",
           "label": "2018 深色字标",
@@ -2854,7 +3982,22 @@
       "identity": {
         "nameZh": "恒生电子",
         "nameEn": "HUNDSUN",
-        "legalNames": [],
+        "legalNames": [
+          {
+            "name": "恒生电子股份有限公司",
+            "language": "zh",
+            "role": "company",
+            "source": "https://www.hundsun.com/about",
+            "reviewedAt": "2026-11-10"
+          },
+          {
+            "name": "HUNDSUN TECHNOLOGIES INC.",
+            "language": "en",
+            "role": "company",
+            "source": "https://www.hundsun.com/about",
+            "reviewedAt": "2026-11-10"
+          }
+        ],
         "sources": [
           {
             "label": "恒生电子官方来源",
@@ -2865,6 +4008,11 @@
             "label": "恒生电子官方校园招聘网站",
             "url": "https://campus.hundsun.com/campus",
             "reviewedAt": "2026-11-09"
+          },
+          {
+            "label": "恒生电子官方公司介绍",
+            "url": "https://www.hundsun.com/about",
+            "reviewedAt": "2026-11-10"
           }
         ]
       },
@@ -3157,6 +4305,34 @@
           "width": 302,
           "height": 92,
           "path": "logo/iflytek/logo-white-bilingual.png"
+        },
+        {
+          "file": "logo-white-english-official.svg",
+          "label": "白色英文组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "dark",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "white",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "website"
+          },
+          "source": "https://www.iflytek.com/en/Public/Uploads/uploadfile/images/20230812/comlogo2-621.svg",
+          "sourcePage": "https://www.iflytek.com/en/",
+          "sha256": "4a8e7eac58b22c9de0ee0df0685cc68ad5deb5a0a5a663ae699d1f4b36a0b1d0",
+          "bytes": 3300,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.iflytek.com/en/",
+            "attribution": "科大讯飞。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
+          },
+          "aspectRatio": 5.029411764705882,
+          "path": "logo/iflytek/logo-white-english-official.svg"
         }
       ]
     },
@@ -3268,7 +4444,67 @@
         "internet"
       ],
       "defaultAsset": "wordmark-green.svg",
+      "sourceFiles": [
+        {
+          "file": "logo-guideline-official.pdf",
+          "label": "矢量标志与配色规范",
+          "assetFiles": [
+            "wordmark-black-print-official.png",
+            "wordmark-green.svg",
+            "wordmark-white-official.png"
+          ],
+          "source": "https://static-s.iqiyi.com/ext/common/20200924-pdf/PDF-logo.pdf",
+          "sourcePage": "https://www.iqiyi.com/common/biaozhiguifan.html",
+          "sha256": "f33cee949708915b70b584d86143ab5a904c4bd8f401764f215afaf461601c98",
+          "bytes": 320666,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.iqiyi.com/common/biaozhiguifan.html",
+            "attribution": "爱奇艺。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方规范区分线上绿色、线下印刷绿色、墨稿和反白；墨稿仅适用于印刷渠道媒体。"
+          },
+          "path": "logo/iqiyi/logo-guideline-official.pdf"
+        }
+      ],
       "assets": [
+        {
+          "file": "wordmark-black-print-official.png",
+          "label": "黑色印刷稿",
+          "variant": "wordmark",
+          "status": "current",
+          "display": "alternative",
+          "background": "light",
+          "language": "bilingual",
+          "layout": "horizontal",
+          "color": "black",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "透明背景，原始画布保留较多留白；有效字标约876 × 137像素。"
+          ],
+          "usageWarnings": [
+            "官方规定墨稿仅适用于印刷渠道媒体。"
+          ],
+          "source": "https://static-s.iqiyi.com/ext/common/20200924-png/PNG-logo.zip",
+          "sourcePage": "https://www.iqiyi.com/common/biaozhiguifan.html",
+          "sha256": "6a62e92f4c61a5c40fbb40e0042ca534437d0cec5990d54362223dd661593c04",
+          "bytes": 14017,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.iqiyi.com/common/biaozhiguifan.html",
+            "attribution": "爱奇艺。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
+          },
+          "width": 1025,
+          "height": 769,
+          "path": "logo/iqiyi/wordmark-black-print-official.png"
+        },
         {
           "file": "wordmark-green.svg",
           "label": "2022 绿色中英字标",
@@ -3297,6 +4533,38 @@
           },
           "aspectRatio": 6.468244433983668,
           "path": "logo/iqiyi/wordmark-green.svg"
+        },
+        {
+          "file": "wordmark-white-official.png",
+          "label": "白色字标",
+          "variant": "wordmark",
+          "status": "current",
+          "background": "dark",
+          "language": "bilingual",
+          "layout": "horizontal",
+          "color": "white",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "透明背景，原始画布保留较多留白；有效字标约876 × 136像素。"
+          ],
+          "source": "https://static-s.iqiyi.com/ext/common/20200924-png/PNG-logo.zip",
+          "sourcePage": "https://www.iqiyi.com/common/biaozhiguifan.html",
+          "sha256": "3fcb0cc0de0214bb8fe59e684f4851963b730c91e90d95c477f675ee49ae044b",
+          "bytes": 13009,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.iqiyi.com/common/biaozhiguifan.html",
+            "attribution": "爱奇艺。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
+          },
+          "width": 1025,
+          "height": 768,
+          "path": "logo/iqiyi/wordmark-white-official.png"
         }
       ]
     },
@@ -3304,16 +4572,36 @@
       "schemaVersion": 3,
       "id": "jd",
       "name": "京东",
-      "aliases": [],
+      "aliases": [
+        "JINGDONG"
+      ],
       "identity": {
         "nameZh": "京东",
-        "nameEn": null,
-        "legalNames": [],
+        "nameEn": "JD.com",
+        "legalNames": [
+          {
+            "name": "JD.com, Inc.",
+            "language": "en",
+            "role": "group",
+            "source": "https://ir.jd.com/",
+            "reviewedAt": "2026-11-10"
+          }
+        ],
         "sources": [
           {
             "label": "京东官方来源",
             "url": "https://www.jd.com/",
             "reviewedAt": "2026-11-09"
+          },
+          {
+            "label": "京东官方投资者关系网站",
+            "url": "https://ir.jd.com/",
+            "reviewedAt": "2026-11-10"
+          },
+          {
+            "label": "京东官网页脚 JINGDONG 名称",
+            "url": "https://about.jd.com/",
+            "reviewedAt": "2026-11-10"
           }
         ]
       },
@@ -3324,6 +4612,73 @@
       ],
       "defaultAsset": "logo-header-official.png",
       "assets": [
+        {
+          "file": "icon-google-play-official.png",
+          "label": "应用图标（Google Play）",
+          "variant": "icon",
+          "status": "current",
+          "background": "any",
+          "language": "none",
+          "layout": "standalone",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "app-store",
+            "pageTitle": "京东 Google Play 官方应用"
+          },
+          "qualityNotes": [
+            "红色圆角底，四角透明，适用于应用图标与头像场景。"
+          ],
+          "source": "https://play-lh.googleusercontent.com/MVNzUB7mgDUrhhOaWap-oCnP1lEK5XGnr3k3q6ilS2ZoNQ7JI7utMb_aA15e2Bsqy7fzAlPI6hyEMKROpFgkfw=s0",
+          "sourcePage": "https://play.google.com/store/apps/details?id=com.jingdong.app.mall&hl=zh",
+          "sha256": "473dde3440b483e772d480c0d1db568521dc5631890a3fe5b86efc488a13aa18",
+          "bytes": 39239,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://play.google.com/store/apps/details?id=com.jingdong.app.mall&hl=zh",
+            "attribution": "京东。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
+          },
+          "width": 512,
+          "height": 512,
+          "path": "logo/jd/icon-google-play-official.png"
+        },
+        {
+          "file": "logo-en-ir-official.png",
+          "label": "英文网页组合（IR）",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "website",
+            "placement": "header",
+            "pageTitle": "京东官方投资者关系网站"
+          },
+          "qualityNotes": [
+            "英文官网页头原件。"
+          ],
+          "source": "https://ir.jd.com/sites/g/files/knoqqb53391/themes/site/nir_pid834/client/images/main-logo.png",
+          "sourcePage": "https://ir.jd.com/",
+          "sha256": "f1a5b93d557530935986304d9abe08ffc46d97b3fe1a171c9f19ee1617ce186f",
+          "bytes": 5300,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://ir.jd.com/",
+            "attribution": "京东。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
+          },
+          "width": 200,
+          "height": 57,
+          "path": "logo/jd/logo-en-ir-official.png"
+        },
         {
           "file": "logo-header-official.png",
           "label": "页头小尺寸组合",
@@ -3407,11 +4762,11 @@
         "enterprise-software",
         "software"
       ],
-      "defaultAsset": "logo-color-english.jpg",
+      "defaultAsset": "logo-color-english-official.svg",
       "assets": [
         {
-          "file": "logo-color-english.jpg",
-          "label": "四色圆点英文组合",
+          "file": "logo-color-english-official.svg",
+          "label": "彩色英文组合",
           "variant": "logo",
           "status": "current",
           "background": "light",
@@ -3419,31 +4774,29 @@
           "layout": "horizontal",
           "color": "brand",
           "provenance": {
-            "sourceType": "commons",
+            "sourceType": "official",
             "processing": "original",
-            "channel": "commons"
+            "channel": "website"
           },
           "qualityNotes": [
-            "不透明白底，画布留白较多。"
+            "透明背景。"
           ],
           "usageWarnings": [
-            "CMYK 色彩显示受色彩管理影响。"
+            "SVG 内嵌 1492 × 506 PNG，放大后仍受原始位图像素限制。"
           ],
-          "source": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Kingdee_logo_wiki.jpg",
-          "sourcePage": "https://commons.wikimedia.org/wiki/File:Kingdee_logo_wiki.jpg",
-          "sha256": "d7b291e6d80c24aa28774c418ac16b3a12210f1853f5445c9bd8d28ce8a626c8",
-          "bytes": 756221,
+          "source": "https://global.kingdee.com/wp-content/uploads/2025/07/KD-01-1.svg",
+          "sourcePage": "https://www.kingdee.com/global/company-information/",
+          "sha256": "d359fca08cc0dc1c98003fcf1c22c9332ede6fe02422f859b053c8f345c50a79",
+          "bytes": 35108,
           "rights": {
-            "status": "permitted",
-            "license": "CC-BY-SA-4.0",
-            "reference": "https://commons.wikimedia.org/w/index.php?title=File:Kingdee_logo_wiki.jpg&oldid=1271741533",
-            "attribution": "Aiko Chung Kingdee. Kingdee logo wiki.jpg. Wikimedia Commons. Licensed under Creative Commons Attribution-ShareAlike 4.0 International: https://creativecommons.org/licenses/by-sa/4.0/ . Source: https://commons.wikimedia.org/wiki/File:Kingdee_logo_wiki.jpg . Original file, unmodified.",
-            "reviewedAt": "2026-11-07",
-            "notes": "本文件按 Commons 上传者所列 CC BY-SA 4.0 分发，需保留作者署名、文件来源、许可链接及修改说明，改编须按相同或兼容许可分享。商标权保留，使用不得暗示品牌背书。图稿为 2017 年发布的集团品牌标识。原件采用 CMYK / Coated FOGRA39 (ISO 12647-2:2004) 色彩配置。"
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.kingdee.com/global/company-information/",
+            "attribution": "金蝶。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
           },
-          "width": 2528,
-          "height": 1371,
-          "path": "logo/kingdee/logo-color-english.jpg"
+          "aspectRatio": 2.9486166007905137,
+          "path": "logo/kingdee/logo-color-english-official.svg"
         }
       ]
     },
@@ -3457,12 +4810,25 @@
       "identity": {
         "nameZh": "快手",
         "nameEn": "Kuaishou",
-        "legalNames": [],
+        "legalNames": [
+          {
+            "name": "Kuaishou Technology",
+            "language": "en",
+            "role": "group",
+            "source": "https://ir.kuaishou.com/",
+            "reviewedAt": "2026-11-10"
+          }
+        ],
         "sources": [
           {
             "label": "快手官方素材库",
             "url": "https://www.kuaishou.com/official/material-lib",
             "reviewedAt": "2026-11-09"
+          },
+          {
+            "label": "快手官方投资者关系网站",
+            "url": "https://ir.kuaishou.com/",
+            "reviewedAt": "2026-11-10"
           }
         ]
       },
@@ -3542,6 +4908,343 @@
           "path": "logo/kuaishou/icon-rounded-official.png"
         },
         {
+          "file": "logo-chinese-horizontal-color.png",
+          "label": "横版中文组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "zh",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "透明背景。"
+          ],
+          "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/word-logo-1.png",
+          "sourcePage": "https://www.kuaishou.com/official/material-lib",
+          "sha256": "ea39348e5b11bdf4399830dcacccf33148c7154fa507e826d6849f7a6f2f188e",
+          "bytes": 66788,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.kuaishou.com/official/material-lib",
+            "attribution": "快手。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "素材页面允许宣传推广快手产品时下载使用，需标明来源为快手网站并保持完整比例；许可及再次分发条件待核实。"
+          },
+          "width": 1571,
+          "height": 590,
+          "path": "logo/kuaishou/logo-chinese-horizontal-color.png"
+        },
+        {
+          "file": "logo-chinese-horizontal-dark-background.png",
+          "label": "横版深底中文组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "zh",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "官方黑底或黑色画布版本，用于深色背景场景。"
+          ],
+          "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/word-logo-2.png",
+          "sourcePage": "https://www.kuaishou.com/official/material-lib",
+          "sha256": "b1f218076b2fac96436f53d18e87af6bfb52127eff6eab27f90163acb5555461",
+          "bytes": 59525,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.kuaishou.com/official/material-lib",
+            "attribution": "快手。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "素材页面允许宣传推广快手产品时下载使用，需标明来源为快手网站并保持完整比例；许可及再次分发条件待核实。"
+          },
+          "width": 3294,
+          "height": 2181,
+          "path": "logo/kuaishou/logo-chinese-horizontal-dark-background.png"
+        },
+        {
+          "file": "logo-chinese-horizontal-orange-background.png",
+          "label": "横版橙底中文组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "zh",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "官方橙底反白版本，用于品牌橙色背景场景。"
+          ],
+          "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/word-logo-3.png",
+          "sourcePage": "https://www.kuaishou.com/official/material-lib",
+          "sha256": "c51d19a022176713234ab37fbf6e14770a888d57b1935e96190944973464a3a3",
+          "bytes": 57765,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.kuaishou.com/official/material-lib",
+            "attribution": "快手。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "素材页面允许宣传推广快手产品时下载使用，需标明来源为快手网站并保持完整比例；许可及再次分发条件待核实。"
+          },
+          "width": 3294,
+          "height": 2181,
+          "path": "logo/kuaishou/logo-chinese-horizontal-orange-background.png"
+        },
+        {
+          "file": "logo-chinese-slogan-color.png",
+          "label": "彩色中文口号组合",
+          "variant": "logo",
+          "status": "current",
+          "display": "alternative",
+          "background": "light",
+          "language": "zh",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "保留官方口号“拥抱每一种生活”。",
+            "透明画布，有效图稿约289 × 145像素。"
+          ],
+          "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/slogan-logo-1.png",
+          "sourcePage": "https://www.kuaishou.com/official/material-lib",
+          "sha256": "97b249d3a7ea0e85cc19ae8939050b4f686c203fae2f28f90c72127e6bdae153",
+          "bytes": 6949,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.kuaishou.com/official/material-lib",
+            "attribution": "快手。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "素材页面允许宣传推广快手产品时下载使用，需标明来源为快手网站并保持完整比例；许可及再次分发条件待核实。"
+          },
+          "width": 591,
+          "height": 188,
+          "path": "logo/kuaishou/logo-chinese-slogan-color.png"
+        },
+        {
+          "file": "logo-chinese-slogan-dark-background.png",
+          "label": "黑底中文口号组合",
+          "variant": "logo",
+          "status": "current",
+          "display": "alternative",
+          "background": "dark",
+          "language": "zh",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "保留官方口号“拥抱每一种生活”。",
+            "保留官方黑底原始画布。"
+          ],
+          "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/slogan-logo-2.png",
+          "sourcePage": "https://www.kuaishou.com/official/material-lib",
+          "sha256": "39f37cc25022a531f62a3596da4d2e36c59c5614452a78570373c82b09763fe3",
+          "bytes": 7128,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.kuaishou.com/official/material-lib",
+            "attribution": "快手。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "素材页面允许宣传推广快手产品时下载使用，需标明来源为快手网站并保持完整比例；许可及再次分发条件待核实。"
+          },
+          "width": 591,
+          "height": 188,
+          "path": "logo/kuaishou/logo-chinese-slogan-dark-background.png"
+        },
+        {
+          "file": "logo-chinese-slogan-orange-background.png",
+          "label": "橙底中文口号组合",
+          "variant": "logo",
+          "status": "current",
+          "display": "alternative",
+          "background": "light",
+          "language": "zh",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "保留官方口号“拥抱每一种生活”。",
+            "保留官方橙底原始画布。"
+          ],
+          "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/slogan-logo-3.png",
+          "sourcePage": "https://www.kuaishou.com/official/material-lib",
+          "sha256": "a74d444f17724c69a42644883ccc8cef4453e68fdd9bdd9b1e9f97de84c5f958",
+          "bytes": 7492,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.kuaishou.com/official/material-lib",
+            "attribution": "快手。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "素材页面允许宣传推广快手产品时下载使用，需标明来源为快手网站并保持完整比例；许可及再次分发条件待核实。"
+          },
+          "width": 591,
+          "height": 189,
+          "path": "logo/kuaishou/logo-chinese-slogan-orange-background.png"
+        },
+        {
+          "file": "logo-chinese-vertical-color.png",
+          "label": "竖版中文组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "zh",
+          "layout": "vertical",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "透明背景。"
+          ],
+          "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/w-v-logo-1.png",
+          "sourcePage": "https://www.kuaishou.com/official/material-lib",
+          "sha256": "8a0ac996dc7182b7bcbefae497e4b57b753bbebc6298e6fd58d3985ac756c811",
+          "bytes": 164945,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.kuaishou.com/official/material-lib",
+            "attribution": "快手。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "素材页面允许宣传推广快手产品时下载使用，需标明来源为快手网站并保持完整比例；许可及再次分发条件待核实。"
+          },
+          "width": 1385,
+          "height": 2410,
+          "path": "logo/kuaishou/logo-chinese-vertical-color.png"
+        },
+        {
+          "file": "logo-chinese-vertical-dark-background.png",
+          "label": "竖版深底中文组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "zh",
+          "layout": "vertical",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "官方黑底或黑色画布版本，用于深色背景场景。"
+          ],
+          "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/w-v-logo-2.png",
+          "sourcePage": "https://www.kuaishou.com/official/material-lib",
+          "sha256": "1df58d3d25ce078de0789229699b856cc5e195f5c0a9e2a7c9b46ffd482ddf10",
+          "bytes": 16868,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.kuaishou.com/official/material-lib",
+            "attribution": "快手。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "素材页面允许宣传推广快手产品时下载使用，需标明来源为快手网站并保持完整比例；许可及再次分发条件待核实。"
+          },
+          "width": 815,
+          "height": 1125,
+          "path": "logo/kuaishou/logo-chinese-vertical-dark-background.png"
+        },
+        {
+          "file": "logo-chinese-vertical-orange-background.png",
+          "label": "竖版橙底中文组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "zh",
+          "layout": "vertical",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "官方橙底反白版本，用于品牌橙色背景场景。"
+          ],
+          "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/w-v-logo-3.png",
+          "sourcePage": "https://www.kuaishou.com/official/material-lib",
+          "sha256": "cce2a24ea5e595ffcaa855be5397852869b6bbef14f822e48b12de7cf035794d",
+          "bytes": 16362,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.kuaishou.com/official/material-lib",
+            "attribution": "快手。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "素材页面允许宣传推广快手产品时下载使用，需标明来源为快手网站并保持完整比例；许可及再次分发条件待核实。"
+          },
+          "width": 815,
+          "height": 1125,
+          "path": "logo/kuaishou/logo-chinese-vertical-orange-background.png"
+        },
+        {
+          "file": "logo-english-dark-background.jpg",
+          "label": "黑底英文组合",
+          "variant": "logo",
+          "status": "current",
+          "display": "alternative",
+          "background": "dark",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "不透明黑底，原始画布留白较多。"
+          ],
+          "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/e-logo-2.jpeg",
+          "sourcePage": "https://www.kuaishou.com/official/material-lib",
+          "sha256": "ba7d347d8645f2bedbbc62b1efb3e444d8e235212739745399dbfd8f92e231ac",
+          "bytes": 1959530,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.kuaishou.com/official/material-lib",
+            "attribution": "快手。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "素材页面允许宣传推广快手产品时下载使用，需标明来源为快手网站并保持完整比例；许可及再次分发条件待核实。"
+          },
+          "width": 13726,
+          "height": 9097,
+          "path": "logo/kuaishou/logo-english-dark-background.jpg"
+        },
+        {
           "file": "logo-english-official.jpg",
           "label": "橙灰英文横版组合",
           "variant": "logo",
@@ -3575,6 +5278,40 @@
           "width": 13725,
           "height": 9097,
           "path": "logo/kuaishou/logo-english-official.jpg"
+        },
+        {
+          "file": "logo-english-orange-background.jpg",
+          "label": "橙底英文组合",
+          "variant": "logo",
+          "status": "current",
+          "display": "alternative",
+          "background": "light",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "不透明橙底，原始画布留白较多。"
+          ],
+          "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/e-logo-3.jpeg",
+          "sourcePage": "https://www.kuaishou.com/official/material-lib",
+          "sha256": "326604f631c3b952be87598c574c380d040e7d2a6d8c49b01fb3ea19ea47e9b8",
+          "bytes": 2303438,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.kuaishou.com/official/material-lib",
+            "attribution": "快手。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "素材页面允许宣传推广快手产品时下载使用，需标明来源为快手网站并保持完整比例；许可及再次分发条件待核实。"
+          },
+          "width": 13726,
+          "height": 9097,
+          "path": "logo/kuaishou/logo-english-orange-background.jpg"
         }
       ]
     },
@@ -3862,6 +5599,66 @@
         "ai"
       ],
       "defaultAsset": "logo-gradient-horizontal.png",
+      "sourceFiles": [
+        {
+          "file": "brand-book-2026.pdf",
+          "label": "品牌视觉规范（2026）",
+          "assetFiles": [
+            "logo-black-horizontal.png",
+            "logo-gradient-horizontal-white.png",
+            "logo-gradient-horizontal.png",
+            "logo-gradient-vertical-official.png",
+            "logo-slogan-dark-1.png",
+            "logo-slogan-dark-2.png",
+            "logo-slogan-dark-3.png",
+            "logo-slogan-dark-4.png",
+            "logo-slogan-light-1.png",
+            "logo-slogan-light-2.png",
+            "logo-slogan-light-3.png",
+            "logo-slogan-light-4.png"
+          ],
+          "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_Brand_Book.pdf",
+          "sourcePage": "https://www.minimax.io/brand-vi",
+          "sha256": "cfdaa62f5a4c9118239aac78d535b9b0b46eafd7eecf84f07e8987ae815f722d",
+          "bytes": 22968444,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.minimax.io/brand-vi",
+            "attribution": "MiniMax。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "遵守官方比例、颜色、间距和完整组合要求。官方使用许可为有限、非独占且不可转让，未涵盖的用途须另行申请批准。"
+          },
+          "path": "logo/minimax/brand-book-2026.pdf"
+        },
+        {
+          "file": "logo-slogan-lockup-original.ai",
+          "label": "口号组合矢量源稿",
+          "assetFiles": [
+            "logo-slogan-dark-1.png",
+            "logo-slogan-dark-2.png",
+            "logo-slogan-dark-3.png",
+            "logo-slogan-dark-4.png",
+            "logo-slogan-light-1.png",
+            "logo-slogan-light-2.png",
+            "logo-slogan-light-3.png",
+            "logo-slogan-light-4.png"
+          ],
+          "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_LogoSlogan_Lockup.zip",
+          "sourcePage": "https://www.minimax.io/brand-vi",
+          "sha256": "08a316ef69a2290b5db5def14b7bd58ee08252b7d824f7970a220bb0c9e5a7df",
+          "bytes": 946442,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.minimax.io/brand-vi",
+            "attribution": "MiniMax。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "遵守官方比例、颜色、间距和完整组合要求。官方使用许可为有限、非独占且不可转让，未涵盖的用途须另行申请批准。"
+          },
+          "path": "logo/minimax/logo-slogan-lockup-original.ai"
+        }
+      ],
       "assets": [
         {
           "file": "logo-black-horizontal.png",
@@ -3998,6 +5795,278 @@
           "width": 1600,
           "height": 1600,
           "path": "logo/minimax/logo-gradient-vertical-official.png"
+        },
+        {
+          "file": "logo-slogan-dark-1.png",
+          "label": "深底竖标三行口号",
+          "variant": "logo",
+          "status": "current",
+          "display": "alternative",
+          "background": "dark",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "white",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "保留官方完整口号“Intelligence with Everyone”，布局对应品牌书允许的四种组合之一。"
+          ],
+          "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_LogoSlogan_Lockup.zip",
+          "sourcePage": "https://www.minimax.io/brand-vi",
+          "sha256": "872bbf32e59ebbb29d07492d9d05c35ae750ea3c7e530527219ef842e59ec7f6",
+          "bytes": 60448,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.minimax.io/brand-vi",
+            "attribution": "MiniMax。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "遵守官方比例、颜色、间距和完整组合要求。官方使用许可为有限、非独占且不可转让，未涵盖的用途须另行申请批准。"
+          },
+          "width": 2433,
+          "height": 734,
+          "path": "logo/minimax/logo-slogan-dark-1.png"
+        },
+        {
+          "file": "logo-slogan-dark-2.png",
+          "label": "深底竖标两行口号",
+          "variant": "logo",
+          "status": "current",
+          "display": "alternative",
+          "background": "dark",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "white",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "保留官方完整口号“Intelligence with Everyone”，布局对应品牌书允许的四种组合之一。"
+          ],
+          "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_LogoSlogan_Lockup.zip",
+          "sourcePage": "https://www.minimax.io/brand-vi",
+          "sha256": "a5e3047e26bd30cbc05cc5dca6eafa03d0c2fc150eeef4cd86f41d2f8ffc7151",
+          "bytes": 72001,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.minimax.io/brand-vi",
+            "attribution": "MiniMax。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "遵守官方比例、颜色、间距和完整组合要求。官方使用许可为有限、非独占且不可转让，未涵盖的用途须另行申请批准。"
+          },
+          "width": 3464,
+          "height": 712,
+          "path": "logo/minimax/logo-slogan-dark-2.png"
+        },
+        {
+          "file": "logo-slogan-dark-3.png",
+          "label": "深底横标三行口号",
+          "variant": "logo",
+          "status": "current",
+          "display": "alternative",
+          "background": "dark",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "white",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "保留官方完整口号“Intelligence with Everyone”，布局对应品牌书允许的四种组合之一。"
+          ],
+          "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_LogoSlogan_Lockup.zip",
+          "sourcePage": "https://www.minimax.io/brand-vi",
+          "sha256": "853f782fed4deddf20b71792f93eb39149756bb0ae4c6c8b77fc6866c50041ae",
+          "bytes": 62034,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.minimax.io/brand-vi",
+            "attribution": "MiniMax。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "遵守官方比例、颜色、间距和完整组合要求。官方使用许可为有限、非独占且不可转让，未涵盖的用途须另行申请批准。"
+          },
+          "width": 3364,
+          "height": 640,
+          "path": "logo/minimax/logo-slogan-dark-3.png"
+        },
+        {
+          "file": "logo-slogan-dark-4.png",
+          "label": "深底横标两行口号",
+          "variant": "logo",
+          "status": "current",
+          "display": "alternative",
+          "background": "dark",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "white",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "保留官方完整口号“Intelligence with Everyone”，布局对应品牌书允许的四种组合之一。"
+          ],
+          "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_LogoSlogan_Lockup.zip",
+          "sourcePage": "https://www.minimax.io/brand-vi",
+          "sha256": "e0fda874624317ece590c68875357648a1d1413ebb13b49309552a11f94672cf",
+          "bytes": 75436,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.minimax.io/brand-vi",
+            "attribution": "MiniMax。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "遵守官方比例、颜色、间距和完整组合要求。官方使用许可为有限、非独占且不可转让，未涵盖的用途须另行申请批准。"
+          },
+          "width": 4384,
+          "height": 640,
+          "path": "logo/minimax/logo-slogan-dark-4.png"
+        },
+        {
+          "file": "logo-slogan-light-1.png",
+          "label": "浅底竖标三行口号",
+          "variant": "logo",
+          "status": "current",
+          "display": "alternative",
+          "background": "light",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "保留官方完整口号“Intelligence with Everyone”，布局对应品牌书允许的四种组合之一。"
+          ],
+          "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_LogoSlogan_Lockup.zip",
+          "sourcePage": "https://www.minimax.io/brand-vi",
+          "sha256": "b3bb3ec8a6794fe5ac3602c091e7ff013b3806e7bf10021a0576bc631e6506ae",
+          "bytes": 168672,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.minimax.io/brand-vi",
+            "attribution": "MiniMax。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "遵守官方比例、颜色、间距和完整组合要求。官方使用许可为有限、非独占且不可转让，未涵盖的用途须另行申请批准。"
+          },
+          "width": 2433,
+          "height": 734,
+          "path": "logo/minimax/logo-slogan-light-1.png"
+        },
+        {
+          "file": "logo-slogan-light-2.png",
+          "label": "浅底竖标两行口号",
+          "variant": "logo",
+          "status": "current",
+          "display": "alternative",
+          "background": "light",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "保留官方完整口号“Intelligence with Everyone”，布局对应品牌书允许的四种组合之一。"
+          ],
+          "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_LogoSlogan_Lockup.zip",
+          "sourcePage": "https://www.minimax.io/brand-vi",
+          "sha256": "5832f0997a93660bba8c646364f297f09e94a8df3df7708a4267ade91705a594",
+          "bytes": 182052,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.minimax.io/brand-vi",
+            "attribution": "MiniMax。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "遵守官方比例、颜色、间距和完整组合要求。官方使用许可为有限、非独占且不可转让，未涵盖的用途须另行申请批准。"
+          },
+          "width": 3464,
+          "height": 712,
+          "path": "logo/minimax/logo-slogan-light-2.png"
+        },
+        {
+          "file": "logo-slogan-light-3.png",
+          "label": "浅底横标三行口号",
+          "variant": "logo",
+          "status": "current",
+          "display": "alternative",
+          "background": "light",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "保留官方完整口号“Intelligence with Everyone”，布局对应品牌书允许的四种组合之一。"
+          ],
+          "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_LogoSlogan_Lockup.zip",
+          "sourcePage": "https://www.minimax.io/brand-vi",
+          "sha256": "75666020c02384c51fca8d67c268d396f0c2401b3826ce22d12ee8ccd059adc0",
+          "bytes": 172409,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.minimax.io/brand-vi",
+            "attribution": "MiniMax。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "遵守官方比例、颜色、间距和完整组合要求。官方使用许可为有限、非独占且不可转让，未涵盖的用途须另行申请批准。"
+          },
+          "width": 3364,
+          "height": 640,
+          "path": "logo/minimax/logo-slogan-light-3.png"
+        },
+        {
+          "file": "logo-slogan-light-4.png",
+          "label": "浅底横标两行口号",
+          "variant": "logo",
+          "status": "current",
+          "display": "alternative",
+          "background": "light",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "保留官方完整口号“Intelligence with Everyone”，布局对应品牌书允许的四种组合之一。"
+          ],
+          "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_LogoSlogan_Lockup.zip",
+          "sourcePage": "https://www.minimax.io/brand-vi",
+          "sha256": "dcd827430b1cb9cea881cbb7bb166d6adb8b955d930f2455398b144fb438ed3c",
+          "bytes": 189617,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.minimax.io/brand-vi",
+            "attribution": "MiniMax。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "遵守官方比例、颜色、间距和完整组合要求。官方使用许可为有限、非独占且不可转让，未涵盖的用途须另行申请批准。"
+          },
+          "width": 4384,
+          "height": 640,
+          "path": "logo/minimax/logo-slogan-light-4.png"
         }
       ]
     },
@@ -4008,13 +6077,26 @@
       "aliases": [],
       "identity": {
         "nameZh": "网易",
-        "nameEn": null,
-        "legalNames": [],
+        "nameEn": "NetEase",
+        "legalNames": [
+          {
+            "name": "NetEase, Inc.",
+            "language": "en",
+            "role": "group",
+            "source": "https://ir.netease.com/",
+            "reviewedAt": "2026-11-10"
+          }
+        ],
         "sources": [
           {
             "label": "网易官方来源",
             "url": "https://hr.163.com/",
             "reviewedAt": "2026-11-09"
+          },
+          {
+            "label": "网易官方投资者关系公司概览",
+            "url": "https://ir.netease.com/",
+            "reviewedAt": "2026-11-10"
           }
         ]
       },
@@ -4066,7 +6148,15 @@
       "identity": {
         "nameZh": "蔚来",
         "nameEn": "NIO",
-        "legalNames": [],
+        "legalNames": [
+          {
+            "name": "NIO Inc.",
+            "language": "en",
+            "role": "group",
+            "source": "https://ir.nio.com/",
+            "reviewedAt": "2026-11-10"
+          }
+        ],
         "sources": [
           {
             "label": "蔚来国际官网",
@@ -4077,6 +6167,11 @@
             "label": "NIO 官方品牌说明",
             "url": "https://us.nio.com/blog/showing-gratitude-and-celebrating-anniversaries",
             "reviewedAt": "2026-11-09"
+          },
+          {
+            "label": "蔚来官方投资者关系公司概览",
+            "url": "https://ir.nio.com/",
+            "reviewedAt": "2026-11-10"
           }
         ]
       },
@@ -4382,13 +6477,18 @@
       "aliases": [],
       "identity": {
         "nameZh": "拼多多",
-        "nameEn": null,
+        "nameEn": "Pinduoduo",
         "legalNames": [],
         "sources": [
           {
             "label": "拼多多官方来源",
             "url": "https://www.pinduoduo.com/",
             "reviewedAt": "2026-11-09"
+          },
+          {
+            "label": "拼多多官方英文网站",
+            "url": "https://en.pinduoduo.com/",
+            "reviewedAt": "2026-11-10"
           }
         ]
       },
@@ -4399,6 +6499,38 @@
       ],
       "defaultAsset": "logo-slogan-official.png",
       "assets": [
+        {
+          "file": "logo-english-slogan-official.png",
+          "label": "英文口号组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "bilingual",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "website"
+          },
+          "qualityNotes": [
+            "保留官方英文口号，适用于英文网站小尺寸展示。"
+          ],
+          "source": "https://cdn.pinduoduo.com/international/static/media/logo.a4026bb14.png",
+          "sourcePage": "https://en.pinduoduo.com/",
+          "sha256": "c621bcb39c1cdc78210917031e59bca749b8125e219e93f00e84ece2e4f7843e",
+          "bytes": 12491,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://en.pinduoduo.com/",
+            "attribution": "拼多多。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
+          },
+          "width": 327,
+          "height": 100,
+          "path": "logo/pinduoduo/logo-english-slogan-official.png"
+        },
         {
           "file": "logo-slogan-official.png",
           "label": "含口号组合",
@@ -4440,13 +6572,18 @@
       "aliases": [],
       "identity": {
         "nameZh": "360",
-        "nameEn": null,
+        "nameEn": "360",
         "legalNames": [],
         "sources": [
           {
             "label": "360官方来源",
             "url": "https://www.360.cn/",
             "reviewedAt": "2026-11-09"
+          },
+          {
+            "label": "360官方品牌标识下载页",
+            "url": "https://www.360.cn/about/contactus.html?page=logo",
+            "reviewedAt": "2026-11-10"
           }
         ]
       },
@@ -4458,6 +6595,38 @@
       ],
       "defaultAsset": "logo-horizontal-official.png",
       "assets": [
+        {
+          "file": "icon-monochrome-small-official.png",
+          "label": "小尺寸单色图形",
+          "variant": "icon",
+          "status": "current",
+          "background": "light",
+          "language": "none",
+          "layout": "standalone",
+          "color": "monochrome",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "透明背景。"
+          ],
+          "source": "https://p5.ssl.qhimg.com/d/inn/b886349a3672/LOGO_128x128_1.png",
+          "sourcePage": "https://www.360.cn/about/contactus.html?page=logo",
+          "sha256": "4be0f69b411c30ddcc8aafc37be7ab9a9ca27ee04a6bf30cc63a7f1a78c05cb5",
+          "bytes": 1656,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.360.cn/about/contactus.html?page=logo",
+            "attribution": "360。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
+          },
+          "width": 128,
+          "height": 128,
+          "path": "logo/qihoo-360/icon-monochrome-small-official.png"
+        },
         {
           "file": "icon-small-official.png",
           "label": "小尺寸图形",
@@ -4492,6 +6661,38 @@
           "path": "logo/qihoo-360/icon-small-official.png"
         },
         {
+          "file": "logo-color-vertical-official.png",
+          "label": "彩色竖版组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "vertical",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "透明背景。"
+          ],
+          "source": "https://p4.ssl.qhimg.com/d/inn/b886349a3672/LOGO_414x576.png",
+          "sourcePage": "https://www.360.cn/about/contactus.html?page=logo",
+          "sha256": "7c851bfda778a3ede4bcc2900fd49c3eedc9bba3b8f4e01018b570c690f92999",
+          "bytes": 69001,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.360.cn/about/contactus.html?page=logo",
+            "attribution": "360。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
+          },
+          "width": 414,
+          "height": 576,
+          "path": "logo/qihoo-360/logo-color-vertical-official.png"
+        },
+        {
           "file": "logo-horizontal-official.png",
           "label": "横版组合",
           "variant": "logo",
@@ -4522,6 +6723,70 @@
           "width": 1464,
           "height": 414,
           "path": "logo/qihoo-360/logo-horizontal-official.png"
+        },
+        {
+          "file": "logo-monochrome-horizontal-official.png",
+          "label": "单色横版组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "monochrome",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "透明背景。"
+          ],
+          "source": "https://p1.ssl.qhimg.com/d/inn/b886349a3672/LOGO_1464x414_1.png",
+          "sourcePage": "https://www.360.cn/about/contactus.html?page=logo",
+          "sha256": "83aa770d2dfdb939eeff5dd7943bb618113e13a459b63f6c5bb5ee751dc4edce",
+          "bytes": 27805,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.360.cn/about/contactus.html?page=logo",
+            "attribution": "360。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
+          },
+          "width": 1464,
+          "height": 414,
+          "path": "logo/qihoo-360/logo-monochrome-horizontal-official.png"
+        },
+        {
+          "file": "logo-monochrome-vertical-official.png",
+          "label": "单色竖版组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "vertical",
+          "color": "monochrome",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "透明背景。"
+          ],
+          "source": "https://p4.ssl.qhimg.com/d/inn/b886349a3672/LOGO_414x576_1.png",
+          "sourcePage": "https://www.360.cn/about/contactus.html?page=logo",
+          "sha256": "646c5beedfc3f5b2552c6d08d8d6f594725f4883552ecc9f804efa9f8cb5ad05",
+          "bytes": 19299,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.360.cn/about/contactus.html?page=logo",
+            "attribution": "360。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
+          },
+          "width": 414,
+          "height": 576,
+          "path": "logo/qihoo-360/logo-monochrome-vertical-official.png"
         }
       ]
     },
@@ -4839,6 +7104,50 @@
         "internet"
       ],
       "defaultAsset": "icon-appstore.jpg",
+      "sourceFiles": [
+        {
+          "file": "brand-guidelines-official.ai",
+          "label": "品牌基础规范 AI 原件",
+          "assetFiles": [
+            "icon-black-official.png",
+            "icon-white-official.png"
+          ],
+          "source": "https://www.sf-express.com/uploads/SF_Band_Information_Basic_ce811c8a97.zip",
+          "sourcePage": "https://www.sf-express.com/chn/sc",
+          "sha256": "ef4629bad7fc35eeff4bd6cb97be9135284b050c8c0ea88e8b42dbf141d64c99",
+          "bytes": 5403658,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.sf-express.com/chn/sc",
+            "attribution": "顺丰速运。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方品牌基础规范完整原件，含标识、语言组合、颜色及使用标准。AI 可供设计软件使用，PDF 供阅读规范。 使用时按规范保留至少 0.2x 的保护空间，印刷高度至少 9 mm；保持标识组合、字形、比例与标准配色，避免低对比度或复杂图像背景。"
+          },
+          "path": "logo/sf-express/brand-guidelines-official.ai"
+        },
+        {
+          "file": "brand-guidelines-official.pdf",
+          "label": "品牌基础规范 PDF 原件",
+          "assetFiles": [
+            "icon-black-official.png",
+            "icon-white-official.png"
+          ],
+          "source": "https://www.sf-express.com/uploads/SF_Band_Information_Basic_ce811c8a97.zip",
+          "sourcePage": "https://www.sf-express.com/chn/sc",
+          "sha256": "bb8da2fb8a7661619a5cb8e745c6c56ce1ecb1dcdd013d5b15cd0690d29513a1",
+          "bytes": 1706860,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.sf-express.com/chn/sc",
+            "attribution": "顺丰速运。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方品牌基础规范完整原件，含标识、语言组合、颜色及使用标准。AI 可供设计软件使用，PDF 供阅读规范。 使用时按规范保留至少 0.2x 的保护空间，印刷高度至少 9 mm；保持标识组合、字形、比例与标准配色，避免低对比度或复杂图像背景。"
+          },
+          "path": "logo/sf-express/brand-guidelines-official.pdf"
+        }
+      ],
       "assets": [
         {
           "file": "icon-appstore.jpg",
@@ -5173,6 +7482,11 @@
             "label": "腾讯官方投资者页（中/英）",
             "url": "https://www.tencent.com/zh-cn/investors/",
             "reviewedAt": "2026-11-07"
+          },
+          {
+            "label": "腾讯官方媒体库 Logo 全部条目",
+            "url": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+            "reviewedAt": "2026-11-10"
           }
         ]
       },
@@ -5183,6 +7497,204 @@
       ],
       "defaultAsset": "wordmark-blue-official.png",
       "assets": [
+        {
+          "file": "icon-t-black-official.png",
+          "label": "黑色t 图形",
+          "variant": "icon",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "standalone",
+          "color": "black",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "透明背景，保留官方独立构图。"
+          ],
+          "source": "https://www.tencent.com/wp-content/uploads/2020/05/04_Tencent_Graphics2_Black.png",
+          "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+          "sha256": "6a053813d7d3e33dd8dc37932a19ee85e79edd8be4468ad923968b680ab64206",
+          "bytes": 12590,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+            "attribution": "腾讯。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方媒体库限定素材供媒体报道使用，其他用途须核对品牌方要求。"
+          },
+          "width": 910,
+          "height": 889,
+          "path": "logo/tencent/icon-t-black-official.png"
+        },
+        {
+          "file": "icon-t-blue-official.png",
+          "label": "蓝色t 图形",
+          "variant": "icon",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "standalone",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "透明背景，保留官方独立构图。"
+          ],
+          "source": "https://www.tencent.com/wp-content/uploads/2024/05/04_Tencent_Graphics2-2.png",
+          "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+          "sha256": "b30969d3b66ab9472a10d27280802cba5ecb762aaf18ae36491ab2ad7550cb28",
+          "bytes": 13015,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+            "attribution": "腾讯。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方媒体库限定素材供媒体报道使用，其他用途须核对品牌方要求。"
+          },
+          "width": 910,
+          "height": 889,
+          "path": "logo/tencent/icon-t-blue-official.png"
+        },
+        {
+          "file": "icon-t-white-official.png",
+          "label": "白色t 图形",
+          "variant": "icon",
+          "status": "current",
+          "background": "dark",
+          "language": "en",
+          "layout": "standalone",
+          "color": "white",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "透明背景，保留官方独立构图。"
+          ],
+          "source": "https://www.tencent.com/wp-content/uploads/2024/05/04_Tencent_Graphics2_Reverse-type.png",
+          "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+          "sha256": "471df2dbe4c8bdb4d91280ff11ff5ad22729bc5ee757f90a3b6226d5cda61167",
+          "bytes": 13594,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+            "attribution": "腾讯。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方媒体库限定素材供媒体报道使用，其他用途须核对品牌方要求。"
+          },
+          "width": 910,
+          "height": 889,
+          "path": "logo/tencent/icon-t-white-official.png"
+        },
+        {
+          "file": "icon-tile-black-official.png",
+          "label": "黑色倾斜方块 t 图形",
+          "variant": "icon",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "standalone",
+          "color": "black",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "透明背景，保留官方独立构图。"
+          ],
+          "source": "https://www.tencent.com/wp-content/uploads/2023/02/03_Tencent_Graphics1_Black.png",
+          "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+          "sha256": "26d46295acdc16c7e43477a7e33218a590bc6dee982740faf7524df413b7c92f",
+          "bytes": 18425,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+            "attribution": "腾讯。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方媒体库限定素材供媒体报道使用，其他用途须核对品牌方要求。"
+          },
+          "width": 910,
+          "height": 889,
+          "path": "logo/tencent/icon-tile-black-official.png"
+        },
+        {
+          "file": "icon-tile-blue-official.png",
+          "label": "蓝色倾斜方块 t 图形",
+          "variant": "icon",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "standalone",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "透明背景，保留官方独立构图。"
+          ],
+          "source": "https://www.tencent.com/wp-content/uploads/2022/12/04_Tencent_Graphics.png",
+          "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+          "sha256": "ec5cf76ff1f8442e189422754bebbb49e95cbdb7f064c43f44c1fb30a6a81348",
+          "bytes": 19322,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+            "attribution": "腾讯。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方媒体库限定素材供媒体报道使用，其他用途须核对品牌方要求。"
+          },
+          "width": 910,
+          "height": 889,
+          "path": "logo/tencent/icon-tile-blue-official.png"
+        },
+        {
+          "file": "icon-tile-white-official.png",
+          "label": "白色倾斜方块 t 图形",
+          "variant": "icon",
+          "status": "current",
+          "background": "dark",
+          "language": "en",
+          "layout": "standalone",
+          "color": "white",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "透明背景，保留官方独立构图。"
+          ],
+          "source": "https://www.tencent.com/wp-content/uploads/2024/05/03_Tencent_Graphics1_Reverse-type.png",
+          "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+          "sha256": "e3f89e8f3132b286d831f9eef1bb8366e347efcfec823006cb7fb6f617e13cb1",
+          "bytes": 18294,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+            "attribution": "腾讯。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方媒体库限定素材供媒体报道使用，其他用途须核对品牌方要求。"
+          },
+          "width": 910,
+          "height": 889,
+          "path": "logo/tencent/icon-tile-white-official.png"
+        },
         {
           "file": "wordmark-black-official.png",
           "label": "黑色字标",
@@ -5253,6 +7765,105 @@
           "path": "logo/tencent/wordmark-blue-official.png"
         },
         {
+          "file": "wordmark-english-black-official.png",
+          "label": "黑色英文字标",
+          "variant": "wordmark",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "black",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "透明背景，英文独立字标。"
+          ],
+          "source": "https://www.tencent.com/wp-content/uploads/2022/12/03_Tencent_English-logo_Black.png",
+          "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+          "sha256": "370a7af701afc6c3d6673eecbd768ec426956ff241b920e04012374600fba5c6",
+          "bytes": 41276,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+            "attribution": "腾讯。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方媒体库限定素材供媒体报道使用，其他用途须核对品牌方要求。"
+          },
+          "width": 2162,
+          "height": 889,
+          "path": "logo/tencent/wordmark-english-black-official.png"
+        },
+        {
+          "file": "wordmark-english-blue-official.png",
+          "label": "蓝色英文字标",
+          "variant": "wordmark",
+          "status": "current",
+          "background": "light",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "透明背景，英文独立字标。"
+          ],
+          "source": "https://www.tencent.com/wp-content/uploads/2022/12/03_Tencent_English-logo.png",
+          "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+          "sha256": "5f2c7ae33573b9d313298578c503c1772dea6571860dbfd483641b13164de173",
+          "bytes": 45583,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+            "attribution": "腾讯。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方媒体库限定素材供媒体报道使用，其他用途须核对品牌方要求。"
+          },
+          "width": 2162,
+          "height": 889,
+          "path": "logo/tencent/wordmark-english-blue-official.png"
+        },
+        {
+          "file": "wordmark-english-white-official.png",
+          "label": "白色英文字标",
+          "variant": "wordmark",
+          "status": "current",
+          "background": "dark",
+          "language": "en",
+          "layout": "horizontal",
+          "color": "white",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "brand-library"
+          },
+          "qualityNotes": [
+            "透明背景，英文独立字标。"
+          ],
+          "source": "https://www.tencent.com/wp-content/uploads/2022/12/03_Tencent_English-logo_Reverse-type.png",
+          "sourcePage": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+          "sha256": "0a77f3e5c127e411f230783edeb6ce3e3b9d85fbf001faf40a1f45358bd08032",
+          "bytes": 45749,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.tencent.com/zh-cn/newsroom/media-resources/logos/",
+            "attribution": "腾讯。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "官方媒体库限定素材供媒体报道使用，其他用途须核对品牌方要求。"
+          },
+          "width": 2162,
+          "height": 889,
+          "path": "logo/tencent/wordmark-english-white-official.png"
+        },
+        {
           "file": "wordmark-white-official.png",
           "label": "白色字标",
           "variant": "wordmark",
@@ -5320,8 +7931,72 @@
         "entertainment",
         "internet"
       ],
-      "defaultAsset": "wordmark-tme-blue-official.png",
+      "defaultAsset": "logo-chinese-official.png",
       "assets": [
+        {
+          "file": "logo-chinese-official.png",
+          "label": "蓝色 TME 与中文组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "bilingual",
+          "layout": "vertical",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "website"
+          },
+          "qualityNotes": [
+            "不透明白底，保留原始留白。"
+          ],
+          "source": "https://prodpublic-1253428821.cos.ap-guangzhou.myqcloud.com/public/tme_logo/TME_LOGO_CN.png",
+          "sourcePage": "https://www.tencentmusic.com/",
+          "sha256": "8eca411ac4866cae54da74b658042a98d3ae3e3a566b702d9307c0b5484bda84",
+          "bytes": 6248,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.tencentmusic.com/",
+            "attribution": "腾讯音乐娱乐集团。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
+          },
+          "width": 600,
+          "height": 600,
+          "path": "logo/tencent-music/logo-chinese-official.png"
+        },
+        {
+          "file": "wordmark-bilingual-white-official.png",
+          "label": "白色中英字标",
+          "variant": "wordmark",
+          "status": "current",
+          "background": "dark",
+          "language": "bilingual",
+          "layout": "horizontal",
+          "color": "white",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "website"
+          },
+          "qualityNotes": [
+            "透明背景，保留完整集团中英文名称。"
+          ],
+          "source": "https://www.tencentmusic.com/img/header-logo-txt.fe0fce7d.png",
+          "sourcePage": "https://www.tencentmusic.com/",
+          "sha256": "207e054e103ebd06f8874a0ef24054be65fd0dfa095627ab61dbbda86ccd1356",
+          "bytes": 15653,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.tencentmusic.com/",
+            "attribution": "腾讯音乐娱乐集团。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
+          },
+          "width": 1096,
+          "height": 204,
+          "path": "logo/tencent-music/wordmark-bilingual-white-official.png"
+        },
         {
           "file": "wordmark-tme-blue-official.png",
           "label": "蓝色 TME 字标",
@@ -5370,7 +8045,15 @@
       "identity": {
         "nameZh": "传音控股",
         "nameEn": "TRANSSION",
-        "legalNames": [],
+        "legalNames": [
+          {
+            "name": "深圳传音控股股份有限公司",
+            "language": "zh",
+            "role": "company",
+            "source": "https://www.transsion.com/zh-CN/about",
+            "reviewedAt": "2026-11-10"
+          }
+        ],
         "sources": [
           {
             "label": "传音控股公司官网",
@@ -5478,6 +8161,29 @@
         "internet"
       ],
       "defaultAsset": "wordmark-white-official.png",
+      "sourceFiles": [
+        {
+          "file": "brand-guidelines-2023-official.pdf",
+          "label": "品牌使用规范 2023/03",
+          "assetFiles": [
+            "wordmark-blue-small-official.png",
+            "wordmark-white-official.png"
+          ],
+          "source": "https://file.tripcdn.com/files/6/mkt_groupwebsite_file/25g2o12000gcr4roa35A3.pdf",
+          "sourcePage": "https://group.trip.com/media",
+          "sha256": "7ac3a776c65c76a71db22f443527621d5ee878900f7b7afaa47f97406a3466d7",
+          "bytes": 32921553,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://group.trip.com/media",
+            "attribution": "Trip.com Group。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10",
+            "notes": "品牌官网当前 Brand Assets 提供的完整规范，文档标记 2023/03、For External Use Only。保持原稿比例及颜色，留足以字母 o 为基准的保护空间；最小高度为印刷 4 mm、屏幕 24 dp，浅底用彩色，蓝色或深底用反白并保持对比度。合作署名按规范保持视觉等重、标识间距及分隔线。指南中的反白示意为全白，当前媒体 PNG 原件保留黄色圆点，按各原件实际图稿取用。"
+          },
+          "path": "logo/trip-com/brand-guidelines-2023-official.pdf"
+        }
+      ],
       "assets": [
         {
           "file": "wordmark-blue-small-official.png",
@@ -5527,27 +8233,24 @@
           "provenance": {
             "sourceType": "official",
             "processing": "original",
-            "channel": "website",
-            "placement": "header",
-            "pageTitle": "携程集团官方网站"
+            "channel": "brand-library"
           },
           "qualityNotes": [
-            "透明背景。"
+            "透明背景，官方媒体库反白原件。"
           ],
-          "source": "https://dimg04.tripcdn.com/images/0x90212000n90afx071CB.png",
-          "sourcePage": "https://group.trip.com/",
-          "sha256": "edf3a1b21c9fa2dc9c8e1815869476acd8400dbff960ba4679b682c4d3f91998",
-          "bytes": 5841,
+          "source": "https://file.tripcdn.com/files/6/mkt_groupwebsite_file/25g0212000rogkrcx9CEC.png",
+          "sourcePage": "https://group.trip.com/media",
+          "sha256": "bb0c4c93736684dd1c5765c2365993f83dc26e0e25c2f32139475883b4800261",
+          "bytes": 68730,
           "rights": {
-            "status": "permitted",
-            "license": "Public domain (textlogo; third-party assessment)",
-            "reference": "https://commons.wikimedia.org/w/index.php?title=File:Trip.com_Group_logo.svg&oldid=1245285677",
-            "attribution": "携程集团 / Trip.com Group。来源为集团官网直接提供的原始PNG，未修改；Commons对相同简单英文字标的第三方PD-textlogo判断无版权署名要求，商标权保留。",
-            "reviewedAt": "2026-11-09",
-            "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围限于相同 Trip.com Group 简单英文字标。"
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://group.trip.com/media",
+            "attribution": "携程集团。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
           },
-          "width": 699,
-          "height": 96,
+          "width": 3183,
+          "height": 434,
           "path": "logo/trip-com/wordmark-white-official.png"
         }
       ]
@@ -5556,16 +8259,23 @@
       "schemaVersion": 3,
       "id": "tsingmicro",
       "name": "清微智能",
-      "aliases": [],
+      "aliases": [
+        "TsingMicro"
+      ],
       "identity": {
         "nameZh": "清微智能",
-        "nameEn": null,
+        "nameEn": "TsingMicro",
         "legalNames": [],
         "sources": [
           {
             "label": "清微智能官方来源",
             "url": "https://www.tsingmicro.com/",
             "reviewedAt": "2026-11-09"
+          },
+          {
+            "label": "清微智能官方企业介绍",
+            "url": "https://www.tsingmicro.com/about",
+            "reviewedAt": "2026-11-10"
           }
         ]
       },
@@ -5667,16 +8377,31 @@
       "schemaVersion": 3,
       "id": "vipshop",
       "name": "唯品会",
-      "aliases": [],
+      "aliases": [
+        "Vipshop"
+      ],
       "identity": {
         "nameZh": "唯品会",
-        "nameEn": null,
-        "legalNames": [],
+        "nameEn": "Vipshop",
+        "legalNames": [
+          {
+            "name": "Vipshop Holdings Limited",
+            "language": "en",
+            "role": "group",
+            "source": "https://ir.vip.com/news-releases/news-release-details/vipshop-reports-unaudited-second-quarter-2026-financial-results",
+            "reviewedAt": "2026-11-10"
+          }
+        ],
         "sources": [
           {
             "label": "唯品会官方来源",
             "url": "https://www.vip.com/",
             "reviewedAt": "2026-11-09"
+          },
+          {
+            "label": "唯品会官方投资者关系",
+            "url": "https://ir.vip.com/",
+            "reviewedAt": "2026-11-10"
           }
         ]
       },
@@ -5806,16 +8531,31 @@
       "schemaVersion": 3,
       "id": "waterdrop",
       "name": "水滴",
-      "aliases": [],
+      "aliases": [
+        "Waterdrop Inc."
+      ],
       "identity": {
         "nameZh": "水滴",
-        "nameEn": "WATERDROP INC.",
-        "legalNames": [],
+        "nameEn": "Waterdrop",
+        "legalNames": [
+          {
+            "name": "Waterdrop Inc.",
+            "language": "en",
+            "role": "company",
+            "source": "https://ir.waterdrop-inc.com/",
+            "reviewedAt": "2026-11-10"
+          }
+        ],
         "sources": [
           {
             "label": "水滴官方来源",
             "url": "https://www.waterdrop-inc.com/",
             "reviewedAt": "2026-11-09"
+          },
+          {
+            "label": "水滴官方投资者关系",
+            "url": "https://ir.waterdrop-inc.com/",
+            "reviewedAt": "2026-11-10"
           }
         ]
       },
@@ -5899,7 +8639,7 @@
       ],
       "identity": {
         "nameZh": "小红书",
-        "nameEn": null,
+        "nameEn": "Xiaohongshu",
         "legalNames": [],
         "sources": [
           {
@@ -5911,6 +8651,11 @@
             "label": "官方应用 App Store 页面（Xingin）",
             "url": "https://apps.apple.com/cn/app/id741292507",
             "reviewedAt": "2026-11-09"
+          },
+          {
+            "label": "小红书官方英文隐私政策",
+            "url": "https://agree.xiaohongshu.com/h5/terms/ZXXY20230227002/-1",
+            "reviewedAt": "2026-11-10"
           }
         ]
       },
@@ -6336,16 +9081,26 @@
       "schemaVersion": 3,
       "id": "yaowu-tech",
       "name": "要务科技",
-      "aliases": [],
+      "aliases": [
+        "YAOWU TECH"
+      ],
       "identity": {
         "nameZh": "要务科技",
-        "nameEn": null,
-        "legalNames": [],
+        "nameEn": "YAOWU TECH",
+        "legalNames": [
+          {
+            "name": "要务(深圳)科技有限公司",
+            "language": "zh",
+            "role": "company",
+            "source": "https://www.yaowutech.com/news/yaowu-tech-company-profile/",
+            "reviewedAt": "2026-11-10"
+          }
+        ],
         "sources": [
           {
             "label": "要务科技官方来源",
             "url": "https://www.yaowutech.com/",
-            "reviewedAt": "2026-11-09"
+            "reviewedAt": "2026-11-10"
           }
         ]
       },
@@ -6354,7 +9109,7 @@
       "categories": [
         "software"
       ],
-      "defaultAsset": "icon-small-official.png",
+      "defaultAsset": "logo-bilingual-official.png",
       "assets": [
         {
           "file": "icon-small-official.png",
@@ -6384,6 +9139,38 @@
           "width": 200,
           "height": 200,
           "path": "logo/yaowu-tech/icon-small-official.png"
+        },
+        {
+          "file": "logo-bilingual-official.png",
+          "label": "中英组合",
+          "variant": "logo",
+          "status": "current",
+          "background": "light",
+          "language": "bilingual",
+          "layout": "horizontal",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "website"
+          },
+          "qualityNotes": [
+            "透明背景，保留官网原始组合与比例。"
+          ],
+          "source": "https://www.yaowutech.com/images/logo-zh-en.png",
+          "sourcePage": "https://www.yaowutech.com/",
+          "sha256": "c82518a8eb319653a6380c4253ba975dc18fc75f4f9cf4663e0d9084c640695d",
+          "bytes": 74438,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://www.yaowutech.com/",
+            "attribution": "要务科技。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
+          },
+          "width": 2815,
+          "height": 784,
+          "path": "logo/yaowu-tech/logo-bilingual-official.png"
         }
       ]
     },
@@ -6518,7 +9305,15 @@
       "identity": {
         "nameZh": "知乎",
         "nameEn": "Zhihu",
-        "legalNames": [],
+        "legalNames": [
+          {
+            "name": "Zhihu Inc.",
+            "language": "en",
+            "role": "company",
+            "source": "https://ir.zhihu.com/",
+            "reviewedAt": "2026-11-10"
+          }
+        ],
         "sources": [
           {
             "label": "知乎官方联系页面",
@@ -6529,6 +9324,11 @@
             "label": "知乎官方Google Play页面",
             "url": "https://play.google.com/store/apps/details?id=com.zhihu.android&hl=zh-CN",
             "reviewedAt": "2026-11-09"
+          },
+          {
+            "label": "知乎官方投资者关系",
+            "url": "https://ir.zhihu.com/",
+            "reviewedAt": "2026-11-10"
           }
         ]
       },
@@ -6537,7 +9337,7 @@
       "categories": [
         "internet"
       ],
-      "defaultAsset": "wordmark-rounded-google-play.png",
+      "defaultAsset": "wordmark-slogan-official.svg",
       "assets": [
         {
           "file": "wordmark-rounded-google-play.png",
@@ -6572,6 +9372,37 @@
           "width": 512,
           "height": 512,
           "path": "logo/zhihu/wordmark-rounded-google-play.png"
+        },
+        {
+          "file": "wordmark-slogan-official.svg",
+          "label": "中文口号组合",
+          "variant": "wordmark",
+          "status": "current",
+          "background": "light",
+          "language": "zh",
+          "layout": "vertical",
+          "color": "brand",
+          "provenance": {
+            "sourceType": "official",
+            "processing": "original",
+            "channel": "website"
+          },
+          "qualityNotes": [
+            "蓝色字标与“有问题 就会有答案”完整口号。"
+          ],
+          "source": "https://ir.zhihu.com/media/zuodh3gq/logo-new.svg",
+          "sourcePage": "https://ir.zhihu.com/",
+          "sha256": "10d73f77ece5d722d7050df4bb3c90066e577c6cb2db29afea77d701a2aa45aa",
+          "bytes": 10748,
+          "rights": {
+            "status": "unverified",
+            "license": "许可未核实",
+            "reference": "https://ir.zhihu.com/",
+            "attribution": "知乎。许可及署名条件待核实。",
+            "reviewedAt": "2026-11-10"
+          },
+          "aspectRatio": 1.694375595805529,
+          "path": "logo/zhihu/wordmark-slogan-official.svg"
         }
       ]
     },
@@ -6952,16 +9783,23 @@
       "schemaVersion": 3,
       "id": "zuoyebang",
       "name": "作业帮",
-      "aliases": [],
+      "aliases": [
+        "Zuoyebang"
+      ],
       "identity": {
         "nameZh": "作业帮",
-        "nameEn": null,
+        "nameEn": "Zuoyebang",
         "legalNames": [],
         "sources": [
           {
             "label": "作业帮官方来源",
             "url": "https://www.zuoyebang.com/",
             "reviewedAt": "2026-11-09"
+          },
+          {
+            "label": "作业帮官方开源项目英文介绍",
+            "url": "https://bitalos.zuoyebang.com/guide/",
+            "reviewedAt": "2026-11-10"
           }
         ]
       },

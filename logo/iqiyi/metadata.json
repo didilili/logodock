@@ -64,6 +64,91 @@
         "processing": "original",
         "channel": "commons"
       }
+    },
+    {
+      "file": "wordmark-white-official.png",
+      "label": "白色字标",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "dark",
+      "source": "https://static-s.iqiyi.com/ext/common/20200924-png/PNG-logo.zip",
+      "sourcePage": "https://www.iqiyi.com/common/biaozhiguifan.html",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "3fcb0cc0de0214bb8fe59e684f4851963b730c91e90d95c477f675ee49ae044b",
+      "bytes": 13009,
+      "qualityNotes": [
+        "透明背景，原始画布保留较多留白；有效字标约876 × 136像素。"
+      ],
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.iqiyi.com/common/biaozhiguifan.html",
+        "attribution": "爱奇艺。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "wordmark-black-print-official.png",
+      "label": "黑色印刷稿",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://static-s.iqiyi.com/ext/common/20200924-png/PNG-logo.zip",
+      "sourcePage": "https://www.iqiyi.com/common/biaozhiguifan.html",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "black",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "6a62e92f4c61a5c40fbb40e0042ca534437d0cec5990d54362223dd661593c04",
+      "bytes": 14017,
+      "qualityNotes": [
+        "透明背景，原始画布保留较多留白；有效字标约876 × 137像素。"
+      ],
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.iqiyi.com/common/biaozhiguifan.html",
+        "attribution": "爱奇艺。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "display": "alternative",
+      "usageWarnings": [
+        "官方规定墨稿仅适用于印刷渠道媒体。"
+      ]
+    }
+  ],
+  "sourceFiles": [
+    {
+      "file": "logo-guideline-official.pdf",
+      "label": "矢量标志与配色规范",
+      "assetFiles": [
+        "wordmark-green.svg",
+        "wordmark-white-official.png",
+        "wordmark-black-print-official.png"
+      ],
+      "source": "https://static-s.iqiyi.com/ext/common/20200924-pdf/PDF-logo.pdf",
+      "sourcePage": "https://www.iqiyi.com/common/biaozhiguifan.html",
+      "sha256": "f33cee949708915b70b584d86143ab5a904c4bd8f401764f215afaf461601c98",
+      "bytes": 320666,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.iqiyi.com/common/biaozhiguifan.html",
+        "attribution": "爱奇艺。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方规范区分线上绿色、线下印刷绿色、墨稿和反白；墨稿仅适用于印刷渠道媒体。"
+      }
     }
   ]
 }

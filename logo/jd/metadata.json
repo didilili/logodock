@@ -2,16 +2,36 @@
   "schemaVersion": 3,
   "id": "jd",
   "name": "京东",
-  "aliases": [],
+  "aliases": [
+    "JINGDONG"
+  ],
   "identity": {
     "nameZh": "京东",
-    "nameEn": null,
-    "legalNames": [],
+    "nameEn": "JD.com",
+    "legalNames": [
+      {
+        "name": "JD.com, Inc.",
+        "language": "en",
+        "role": "group",
+        "source": "https://ir.jd.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
     "sources": [
       {
         "label": "京东官方来源",
         "url": "https://www.jd.com/",
         "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "京东官方投资者关系网站",
+        "url": "https://ir.jd.com/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "京东官网页脚 JINGDONG 名称",
+        "url": "https://about.jd.com/",
+        "reviewedAt": "2026-11-10"
       }
     ]
   },
@@ -49,6 +69,67 @@
         "reference": "https://about.jd.com/",
         "attribution": "京东。许可及署名条件待核实。",
         "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "icon-google-play-official.png",
+      "label": "应用图标（Google Play）",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "source": "https://play-lh.googleusercontent.com/MVNzUB7mgDUrhhOaWap-oCnP1lEK5XGnr3k3q6ilS2ZoNQ7JI7utMb_aA15e2Bsqy7fzAlPI6hyEMKROpFgkfw=s0",
+      "sourcePage": "https://play.google.com/store/apps/details?id=com.jingdong.app.mall&hl=zh",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "app-store",
+        "pageTitle": "京东 Google Play 官方应用"
+      },
+      "qualityNotes": [
+        "红色圆角底，四角透明，适用于应用图标与头像场景。"
+      ],
+      "sha256": "473dde3440b483e772d480c0d1db568521dc5631890a3fe5b86efc488a13aa18",
+      "bytes": 39239,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://play.google.com/store/apps/details?id=com.jingdong.app.mall&hl=zh",
+        "attribution": "京东。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-en-ir-official.png",
+      "label": "英文网页组合（IR）",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://ir.jd.com/sites/g/files/knoqqb53391/themes/site/nir_pid834/client/images/main-logo.png",
+      "sourcePage": "https://ir.jd.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "pageTitle": "京东官方投资者关系网站",
+        "placement": "header"
+      },
+      "qualityNotes": [
+        "英文官网页头原件。"
+      ],
+      "sha256": "f1a5b93d557530935986304d9abe08ffc46d97b3fe1a171c9f19ee1617ce186f",
+      "bytes": 5300,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://ir.jd.com/",
+        "attribution": "京东。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
       }
     }
   ]

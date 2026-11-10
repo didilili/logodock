@@ -124,12 +124,28 @@ test('catalog transparency searches return the matching downloadable files', asy
   const { loadCatalog } = await import('../scripts/lib/catalog.mjs');
   const { matchingBrands } = await import('../src/lib/catalog-presentation.mjs');
   const { brands: catalog } = await loadCatalog();
-  for (const query of ['金蝶 透明', '小红书 不透明', '快手 透明 jpg'])
+  for (const query of ['金蝶 不透明 白底', '小红书 不透明', '快手 透明 jpg'])
     assert.deepEqual(matchingBrands(catalog, { q: query }), [], query);
   for (const [query, files] of [
-    ['快手 透明', ['icon-orange-official.png', 'icon-rounded-official.png']],
-    ['快手 不透明', ['logo-english-official.jpg']],
-    ['金蝶 不透明 白底', ['logo-color-english.jpg']],
+    [
+      '快手 透明',
+      [
+        'icon-orange-official.png',
+        'icon-rounded-official.png',
+        'logo-chinese-horizontal-color.png',
+        'logo-chinese-slogan-color.png',
+        'logo-chinese-vertical-color.png',
+      ],
+    ],
+    [
+      '快手 不透明',
+      [
+        'logo-english-dark-background.jpg',
+        'logo-english-official.jpg',
+        'logo-english-orange-background.jpg',
+      ],
+    ],
+    ['金蝶 透明', ['logo-color-english-official.svg']],
     ['小红书 红底', ['wordmark-capsule-official.svg', 'wordmark-rounded-google-play.png']],
     ['小红书 透明', ['wordmark-capsule-official.svg', 'wordmark-rounded-google-play.png']],
   ]) {
@@ -148,7 +164,7 @@ test('shortened catalog labels preserve language, shape, layout and color search
   const { brands: catalog } = await loadCatalog();
   for (const [id, query, count] of [
     ['tencent', '腾讯 中英', 3],
-    ['tencent', '腾讯 英文', 3],
+    ['tencent', '腾讯 英文', 12],
     ['yonyou', '用友 英文', 2],
     ['alibaba', '阿里巴巴 橙色', 2],
     ['codeberg', 'codeberg 图标 白色', 1],
@@ -158,5 +174,8 @@ test('shortened catalog labels preserve language, shape, layout and color search
     assert.equal(search.matchingAssets(brand, query).length, count, query);
   }
   const alibaba = catalog.find((item) => item.id === 'alibaba');
-  assert.deepEqual(search.matchingAssets(alibaba, '阿里巴巴 中文 png'), []);
+  assert.deepEqual(
+    search.matchingAssets(alibaba, '阿里巴巴 中文 png').map((asset) => asset.file),
+    ['logo-chinese-horizontal-official.png', 'logo-chinese-vertical-official.png'],
+  );
 });

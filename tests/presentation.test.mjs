@@ -440,8 +440,7 @@ test('asset search terms, category, format and shape intersect on a single real 
   const alibaba = actual.find((brand) => brand.id === 'alibaba');
   const before = structuredClone(alibaba);
   for (const filters of [
-    { q: 'alibaba 中文 png' },
-    { q: 'alibaba 中文', format: 'PNG' },
+    { q: 'alibaba 中文 svg png' },
     { q: 'alibaba 中文', format: 'SVG', shape: 'icon' },
     { q: 'alibaba', category: 'hardware' },
   ]) {
@@ -461,11 +460,14 @@ test('asset search terms, category, format and shape intersect on a single real 
   );
   assert.equal(directoryAsset(chinese, filters.q), chinese.assets[0]);
   assert.equal(defaultAsset(chinese), chinese.assets[0]);
-  assert.deepEqual(
-    matchingBrands(actual, { ...filters, q: 'alibaba', format: 'PNG' }),
-    [],
-    'Generated PNG downloads are not indexed as additional source files.',
-  );
+  for (const pngFilters of [{ q: 'alibaba 中文 png' }, { q: 'alibaba 中文', format: 'PNG' }]) {
+    const [png] = matchingBrands(actual, pngFilters);
+    assert.deepEqual(
+      png.assets.map((asset) => asset.file),
+      ['logo-chinese-horizontal-official.png', 'logo-chinese-vertical-official.png'],
+    );
+    assert.equal(directoryAsset(png, pngFilters.q).file, 'logo-chinese-horizontal-official.png');
+  }
   assert.deepEqual(alibaba, before);
 });
 

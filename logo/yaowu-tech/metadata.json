@@ -2,16 +2,26 @@
   "schemaVersion": 3,
   "id": "yaowu-tech",
   "name": "要务科技",
-  "aliases": [],
+  "aliases": [
+    "YAOWU TECH"
+  ],
   "identity": {
     "nameZh": "要务科技",
-    "nameEn": null,
-    "legalNames": [],
+    "nameEn": "YAOWU TECH",
+    "legalNames": [
+      {
+        "name": "要务(深圳)科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.yaowutech.com/news/yaowu-tech-company-profile/",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
     "sources": [
       {
         "label": "要务科技官方来源",
         "url": "https://www.yaowutech.com/",
-        "reviewedAt": "2026-11-09"
+        "reviewedAt": "2026-11-10"
       }
     ]
   },
@@ -20,7 +30,7 @@
   "categories": [
     "software"
   ],
-  "defaultAsset": "icon-small-official.png",
+  "defaultAsset": "logo-bilingual-official.png",
   "assets": [
     {
       "file": "icon-small-official.png",
@@ -47,6 +57,35 @@
         "attribution": "要务科技。许可及署名条件待核实。",
         "reviewedAt": "2026-11-09"
       }
+    },
+    {
+      "file": "logo-bilingual-official.png",
+      "label": "中英组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.yaowutech.com/images/logo-zh-en.png",
+      "sourcePage": "https://www.yaowutech.com/",
+      "sha256": "c82518a8eb319653a6380c4253ba975dc18fc75f4f9cf4663e0d9084c640695d",
+      "bytes": 74438,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.yaowutech.com/",
+        "attribution": "要务科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "透明背景，保留官网原始组合与比例。"
+      ]
     }
   ]
 }

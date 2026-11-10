@@ -35,7 +35,7 @@
   "categories": [
     "internet"
   ],
-  "defaultAsset": "logo-english.svg",
+  "defaultAsset": "logo-bilingual-color-official.svg",
   "assets": [
     {
       "file": "logo-english.svg",
@@ -155,6 +155,90 @@
         "attribution": "字节跳动。原作品权利及来源依据沿用母稿记录，图形提取处理由 LogoDock 完成。",
         "reviewedAt": "2026-11-10",
         "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。判定范围限于相同四柱简单几何图形。"
+      }
+    },
+    {
+      "file": "logo-bilingual-color-official.svg",
+      "label": "中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.bytedance.com/?locale=zh#embedded-svg-img-1",
+      "sourcePage": "https://www.bytedance.com/?locale=zh",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "a07b002e7fe99cd02d781ea71beb710a7485f50074ac6fa2b24055f32ddfffbc",
+      "bytes": 9461,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.bytedance.com/?locale=zh",
+        "attribution": "字节跳动。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网内嵌的原生路径 SVG。"
+      ]
+    },
+    {
+      "file": "logo-bilingual-white-official.svg",
+      "label": "中英反白组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.bytedance.com/?locale=zh#embedded-svg-img-0",
+      "sourcePage": "https://www.bytedance.com/?locale=zh",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "324408bdb167b07e9be1be51510e4014176f11c169b1f058b409de7ff299c146",
+      "bytes": 9348,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.bytedance.com/?locale=zh",
+        "attribution": "字节跳动。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网内嵌的原生路径 SVG。"
+      ]
+    },
+    {
+      "file": "logo-english-white-official.svg",
+      "label": "英文反白组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.bytedance.com/?locale=en#embedded-svg-img-0",
+      "sourcePage": "https://www.bytedance.com/?locale=en",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "55fbb2919265f6ec420e98e7997b9c9b6034602437b5c070d051e590311800b1",
+      "bytes": 7634,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.bytedance.com/?locale=en",
+        "attribution": "字节跳动。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
       }
     }
   ],

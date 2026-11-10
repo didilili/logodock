@@ -2,16 +2,23 @@
   "schemaVersion": 3,
   "id": "tsingmicro",
   "name": "清微智能",
-  "aliases": [],
+  "aliases": [
+    "TsingMicro"
+  ],
   "identity": {
     "nameZh": "清微智能",
-    "nameEn": null,
+    "nameEn": "TsingMicro",
     "legalNames": [],
     "sources": [
       {
         "label": "清微智能官方来源",
         "url": "https://www.tsingmicro.com/",
         "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "清微智能官方企业介绍",
+        "url": "https://www.tsingmicro.com/about",
+        "reviewedAt": "2026-11-10"
       }
     ]
   },
