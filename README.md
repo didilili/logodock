@@ -15,7 +15,7 @@ A community-maintained brand logo collection with a searchable website and trace
 需要固定文件版本时，使用已推送的完整 commit SHA：
 
 ```text
-https://raw.githubusercontent.com/didilili/logodock/<full-commit-sha>/logos/<id>/<asset-file>
+https://raw.githubusercontent.com/didilili/logodock/<full-commit-sha>/logo/<id>/<asset-file>
 ```
 
 将上述占位部分替换为真实提交和资源路径。网站的图片地址跟随网站更新；本地 `127.0.0.1` 地址不能作为他人的公共图片源。固定版本链接的核验方式见[贡献指南](CONTRIBUTING.md#链接与兼容性)。
@@ -47,7 +47,7 @@ npm run preview -- --base /logodock/
 ## 目录与数据
 
 ```text
-logos/<id>/       原始素材与 metadata.json，唯一维护来源
+logo/<id>/        原始素材与 metadata.json，唯一维护来源
 schema/           元数据契约，当前 schemaVersion 为 3
 src/              页面、组件、搜索、预览与取用逻辑
 scripts/          录入、校验、索引生成、构建与预览工具

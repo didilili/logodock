@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="_图层_1" data-name="图层_1" viewBox="0.08000001 -3.85474197 41 41" width="41" height="41" role="img" aria-label="灰色图形 · 图形提取版"><title>灰色图形 · 图形提取版</title><desc>保留来源图形路径、配色、变换与裁剪关系。方形画布以可见图形长边为边长，短边居中补齐透明空间。</desc>
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #adadad;
+      }
+    </style>
+  </defs>
+  
+<defs><clipPath id="logodock-original-viewport"><rect x="0" y="0" width="41.150001525878906" height="41.150001525878906"/></clipPath></defs><g clip-path="url(#logodock-original-viewport)"><path class="cls-1" d="M33.03,7.5v5.65c0,6.95-5.69,12.57-12.67,12.45-6.83-.11-12.24-5.83-12.24-12.66v-4.46c0-.54.44-.98.98-.98h23.93V.08H1.99C.93.08.08.93.08,1.99v10.46c0,11.3,9.04,20.67,20.34,20.76,11.39.08,20.66-9.13,20.66-20.5v-5.21h-8.04Z"/></g></svg>

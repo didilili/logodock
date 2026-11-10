@@ -236,7 +236,7 @@ test('desktop filters use readable control sizing and keyboard focus stays visib
   }
   expect(palettes[0]).not.toBe(palettes[1]);
 
-  await page.goto('/logos/alibaba/');
+  await page.goto('/logo/alibaba/');
   await expect(page.locator('#theme-toggle')).toBeEnabled();
   await expectMinimumHeight(page.locator('#download-link'), 44);
   for (const theme of ['dark', 'light']) {
@@ -289,7 +289,7 @@ test('390px home and Alibaba detail retain usable targets without horizontal scr
     await expect(format).toHaveText('PNG');
   await expectNoHorizontalOverflow(page);
 
-  await page.goto('/logos/alibaba/');
+  await page.goto('/logo/alibaba/');
   await expect(page.locator('#theme-toggle')).toBeEnabled();
   await expectMinimumHeight(page.locator('button:visible'), 40);
   await expectMinimumHeight(page.locator('#download-link'), 44);
@@ -389,7 +389,7 @@ test('empty results reset every filter and manual copy remains readonly with rec
   expect(new URL(page.url()).search).toBe('');
   await page.keyboard.press('Escape');
 
-  await page.goto('/logos/alibaba/');
+  await page.goto('/logo/alibaba/');
   await expect(page.locator('#theme-toggle')).toBeEnabled();
   const copy = page.locator('#detail-copy-menu');
   await copy.click();
@@ -449,9 +449,24 @@ test('cards keep usage restrictions visible and details disclose useful material
       .toBeLessThanOrEqual(1);
   }
   await expect(gitlab.locator('.brand-link')).toHaveAccessibleName(/^查看 GitLab，/);
-  await expect(
-    gitlab.locator('.card-versions').getByText('历史 · 仅非商业', { exact: true }),
-  ).toBeVisible();
+  await expect(gitlab.locator('.brand-art img')).toHaveAttribute(
+    'src',
+    /icon-color-square-extracted\.svg$/,
+  );
+  await expect(gitlab.locator('.card-download')).toHaveAttribute(
+    'href',
+    /icon-color-square-extracted\.svg$/,
+  );
+  expect(
+    new URL(
+      (await gitlab.locator('.brand-link').getAttribute('href')) || '',
+      page.url(),
+    ).searchParams.get('asset'),
+  ).toBe('icon-color-square-extracted.svg');
+  await expect(gitlab.locator('.version-thumbnail[aria-current="true"] img')).toHaveAttribute(
+    'src',
+    /icon-color-square-extracted\.svg$/,
+  );
   await expect(gitlab.locator('.card-warning')).toHaveCount(0);
 
   const zte = page.getByRole('article').filter({ has: page.locator('[data-brand-link="zte"]') });
@@ -469,7 +484,7 @@ test('cards keep usage restrictions visible and details disclose useful material
   );
 
   await zte.locator('.brand-link').click();
-  await expect(page).toHaveURL(/\/logos\/zte\//);
+  await expect(page).toHaveURL(/\/logo\/zte\//);
   await expect(page.locator('#download-link')).toHaveAttribute(
     'href',
     /wordmark-blue-official\.png$/,
@@ -499,7 +514,7 @@ for (const width of [1280, 390]) {
     const sources = page.locator('.source-details');
     const download = page.locator('#download-link');
 
-    await page.goto('/logos/alibaba/');
+    await page.goto('/logo/alibaba/');
     await expect(page.locator('#detail-copy-menu')).toBeEnabled();
     await expect(fileInfo.locator('span')).toHaveCount(0);
     await expect(panel.locator('.asset-description')).toHaveCount(0);
@@ -541,20 +556,25 @@ for (const width of [1280, 390]) {
     }
     await expectNoHorizontalOverflow(page);
 
-    await page.goto('/logos/xiaohongshu/');
-    await expect(panel.locator('.asset-description')).toHaveText('不透明红底。');
+    await page.goto('/logo/xiaohongshu/');
+    await expect(download).toHaveAttribute('href', /wordmark-capsule-official\.svg$/);
+    await expect(panel.locator('.asset-description')).toHaveText('透明圆角。');
+    await page.locator('[data-select-asset="wordmark-rounded-google-play.png"]').click();
+    await expect(panel.locator('.asset-description')).toHaveText('四角透明。');
     await expect(panel.locator('.asset-warnings')).toHaveCount(0);
     await expect(fileInfo).toContainText('512 × 512');
     await expect(fileInfo.locator('span')).toHaveCount(0);
     await expect(page.locator('.file-section')).toHaveCount(0);
     await expect(panel).not.toContainText('artworkUrl512');
     await expect(panel).not.toContainText('Commons');
-    await expect(download).toHaveAttribute('href', /wordmark-square-appstore\.jpg$/);
+    await expect(download).toHaveAttribute('href', /wordmark-rounded-google-play\.png$/);
     const downloaded = page.waitForEvent('download');
     await download.click();
-    expect((await downloaded).suggestedFilename()).toBe('xiaohongshu-wordmark-square-appstore.jpg');
+    expect((await downloaded).suggestedFilename()).toBe(
+      'xiaohongshu-wordmark-rounded-google-play.png',
+    );
 
-    await page.goto('/logos/tencent/');
+    await page.goto('/logo/tencent/');
     await expect(page.locator('.format-choices, .single-format')).toHaveCount(0);
     await expect(panel.locator('.asset-description')).toContainText('留白');
     await expect(panel.locator('.asset-description')).toContainText('2763');
@@ -571,7 +591,7 @@ for (const width of [1280, 390]) {
       await expect(fileInfo).toContainText('PNG');
     }
 
-    await page.goto('/logos/zte/');
+    await page.goto('/logo/zte/');
     await expect(panel.locator('.asset-description')).toContainText('留白');
     await expect(panel.locator('.asset-warnings')).toContainText('#0086D1');
     await expect(panel.locator('.asset-warnings')).toContainText('#008ED3');
@@ -587,7 +607,7 @@ for (const width of [1280, 390]) {
     await expect(download).toHaveAttribute('href', /wordmark-blue-header-official\.png$/);
     await expectNoHorizontalOverflow(page);
 
-    await page.goto('/logos/gitlab/');
+    await page.goto('/logo/gitlab/?asset=icon-legacy.png');
     await expect(panel.locator('.asset-warnings')).toContainText('历史素材');
     await expect(panel.locator('.asset-warnings')).toContainText('仅限非商业用途');
   });
@@ -615,7 +635,7 @@ for (const width of [1280, 390]) {
       includeHidden: true,
     });
 
-    await page.goto('/logos/kuaishou/');
+    await page.goto('/logo/kuaishou/');
     await expect(page.locator('#detail-copy-menu')).toBeEnabled();
     await expectSourceLink(page, '官方品牌素材下载页', kuaishouSource);
     await expect(sources).toHaveJSProperty('open', false);
@@ -638,7 +658,7 @@ for (const width of [1280, 390]) {
     await expectSourceLink(page, '官方品牌素材下载页', kuaishouSource);
     await expect(sources).toHaveJSProperty('open', false);
 
-    await page.goto('/logos/alibaba/');
+    await page.goto('/logo/alibaba/');
     await expectSourceLink(page, 'Commons', alibabaSource);
     await expect(sources).toHaveJSProperty('open', false);
     await sources.locator('summary').click();
@@ -665,7 +685,7 @@ for (const width of [1280, 390]) {
     await expectSourceLink(page, 'Commons', alibabaSource);
     await expect(sources).toHaveJSProperty('open', false);
 
-    await page.goto('/logos/tencent/');
+    await page.goto('/logo/tencent/');
     await expectSourceLink(page, '官方品牌素材下载页', tencentSource);
     await expect(page.locator('.format-choices, .file-options')).toHaveCount(0);
     await expect(sources).toHaveJSProperty('open', false);
@@ -694,42 +714,345 @@ for (const width of [1280, 390]) {
     await expect(sourceFile).toHaveAttribute('href', tencentBlue);
     await expect(sources).toHaveJSProperty('open', false);
 
-    await page.goto('/logos/xiaohongshu/');
+    await page.goto('/logo/xiaohongshu/');
+    await expectSourceLink(
+      page,
+      '官网页头 Logo',
+      'https://pro.xiaohongshu.com/login?redirectTo=%2F',
+    );
+    await page.locator('[data-select-asset="wordmark-rounded-google-play.png"]').click();
     await expectSourceLink(
       page,
       '官方应用商店 · 渲染图',
-      'https://apps.apple.com/cn/app/id741292507',
+      'https://play.google.com/store/apps/details?hl=zh-CN&id=com.xingin.xhs',
     );
     await expect(sources).toHaveJSProperty('open', false);
 
-    await page.goto('/logos/zte/?asset=wordmark-blue-header-official.png');
+    await page.goto('/logo/nio/');
+    await expectSourceLink(page, '官网页面用图', 'https://www.nio.com/about?noredirect=');
+    await expect(download).toHaveAttribute('href', /logo-black-english-official\.svg$/);
+    await sources.locator('summary').click();
+    await page.locator('[data-select-asset="icon-turquoise-app.png"]').click();
+    await expectSourceLink(
+      page,
+      '官方应用商店 · 渲染图',
+      'https://play.google.com/store/apps/details?id=com.nio.nioapp',
+    );
+    await expect(sources).toHaveJSProperty('open', true);
+
+    await page.goto('/logo/shopee/');
+    await expectSourceLink(page, '官网页脚 Logo', 'https://careers.shopee.sg/');
+    await sources.locator('summary').click();
+    await page.locator('[data-select-asset="logo-vertical-commons.png"]').click();
+    await expectSourceLink(
+      page,
+      'Commons · 渲染图',
+      'https://commons.wikimedia.org/wiki/File:Shopee_logo.svg',
+    );
+    await expect(page.locator('#detail-fileinfo')).toContainText('1920 × 2731');
+    await expect(download).toHaveAttribute('href', /logo-vertical-commons\.png$/);
+    await expect(sources).toHaveJSProperty('open', true);
+
+    for (const [id, file, sourceLabel, sourcePage, rightsStatus] of [
+      ['oppo', 'wordmark-black-official.svg', '官网页头 Logo', 'https://www.oppo.com/cn/'],
+      [
+        'gitlab',
+        'logo-color-official.svg',
+        '官方品牌素材下载页',
+        'https://about.gitlab.com/press/press-kit/',
+        'unverified',
+      ],
+      [
+        'bilibili',
+        'wordmark-blue-international-official.svg',
+        '官网页面用图',
+        'https://www.bilibili.tv/',
+        'unverified',
+      ],
+      [
+        'bigo',
+        'wordmark-blue-official.png',
+        '官网页面用图',
+        'https://www.bigo.sg/about',
+        'unverified',
+      ],
+      [
+        'hundsun',
+        'wordmark-color-official.png',
+        '官网页面用图',
+        'https://campus.hundsun.com/campus',
+        'unverified',
+      ],
+      [
+        'waterdrop',
+        'logo-bilingual-white-background-official.png',
+        '官网页脚 Logo',
+        'https://www.waterdrop-inc.com/downloads',
+        'unverified',
+      ],
+      [
+        'sf-express',
+        'icon-black-official.png',
+        '官网页头 Logo',
+        'https://www.sf-express.com/chn/sc',
+        'unverified',
+      ],
+      ['trip-com', 'wordmark-white-official.png', '官网页头 Logo', 'https://group.trip.com/'],
+      ['trip-com', 'wordmark-blue-small-official.png', '官网页头 Logo', 'https://group.trip.com/'],
+      [
+        'baidu',
+        'logo-bilingual-brand-library.jpg',
+        '官方品牌素材下载页',
+        'https://home.baidu.com/media_resource/show_detail/res_id/2/tab_id/1',
+        'unverified',
+      ],
+      [
+        'baidu',
+        'icon-blue-brand-library.jpg',
+        '官方品牌素材下载页',
+        'https://home.baidu.com/media_resource/show_detail/res_id/5/tab_id/1',
+        'unverified',
+      ],
+      [
+        'baidu',
+        'icon-appstore.jpg',
+        '官方应用商店 · 渲染图',
+        'https://apps.apple.com/cn/app/%E7%99%BE%E5%BA%A6-ai%E6%99%BA%E8%83%BD%E6%90%9C%E7%B4%A2/id382201985?uo=4',
+        'unverified',
+      ],
+      [
+        'pinduoduo',
+        'logo-slogan-official.png',
+        '官网页面用图',
+        'https://www.pinduoduo.com/',
+        'unverified',
+      ],
+      ['jd', 'logo-header-official.png', '官网页面用图', 'https://about.jd.com/', 'unverified'],
+      [
+        'bilibili',
+        'wordmark-white-small-official.png',
+        '官网页面用图',
+        'https://www.bilibili.com/',
+        'unverified',
+      ],
+      [
+        'hundsun',
+        'wordmark-header-original.png',
+        '官网页面用图',
+        'https://www.hundsun.com/',
+        'unverified',
+      ],
+      [
+        'sf-express',
+        'icon-appstore.jpg',
+        '官方应用商店 · 渲染图',
+        'https://apps.apple.com/cn/app/%E9%A1%BA%E4%B8%B0%E9%80%9F%E8%BF%90-%E5%BF%AB%E9%80%92%E6%9F%A5%E5%AF%84%E6%94%B6-%E4%B8%8D%E6%AD%A2%E6%98%AF%E5%BF%AB/id899529698?uo=4',
+        'unverified',
+      ],
+      [
+        'dewu',
+        'wordmark-square-official.png',
+        '官网页头 Logo',
+        'https://poizon.jobs.feishu.cn/index',
+        'unverified',
+      ],
+      [
+        'netease',
+        'wordmark-red-official.svg',
+        '官网页面用图',
+        'https://campus.163.com/app/index',
+        'unverified',
+      ],
+      [
+        'taotian',
+        'logo-recruitment-official.png',
+        '官网页面用图',
+        'https://talent.taotian.com/',
+        'unverified',
+      ],
+      [
+        'duoyi',
+        'logo-chinese-small-official.png',
+        '官网页面用图',
+        'https://www.duoyigroup.cn/dycommerce/ch/business.shtm',
+        'unverified',
+      ],
+      [
+        'vipshop',
+        'wordmark-slogan-official.png',
+        '官网页面用图',
+        'https://www.vip.com/',
+        'unverified',
+      ],
+      [
+        'hirain',
+        'logo-bilingual-small-official.png',
+        '官网页面用图',
+        'https://www.hirain.com/',
+        'unverified',
+      ],
+      [
+        'waterdrop',
+        'logo-bilingual-small-official.png',
+        '官网页面用图',
+        'https://www.waterdrop-inc.com/downloads',
+        'unverified',
+      ],
+      [
+        'yaowu-tech',
+        'icon-small-official.png',
+        '官网页面用图',
+        'https://www.yaowutech.com/',
+        'unverified',
+      ],
+      [
+        'agibot',
+        'logo-english-gray-small-official.png',
+        '官网页面用图',
+        'https://www.agibot.com/',
+        'unverified',
+      ],
+      [
+        'bigo',
+        'wordmark-white-official.png',
+        '官网页面用图',
+        'https://www.bigo.sg/mobile/about',
+        'unverified',
+      ],
+      [
+        'antgroup',
+        'logo-bilingual-color-official.png',
+        '官方品牌素材下载页',
+        'https://www.antgroup.com/news-media/media-library',
+        'unverified',
+      ],
+      [
+        'qunar',
+        'logo-english-official.svg',
+        '官网页面用图',
+        'https://careers.trip.com/',
+        'unverified',
+      ],
+      [
+        'sangfor',
+        'logo-bilingual-official.svg',
+        '官网页面用图',
+        'https://www.sangfor.com.cn/',
+        'unverified',
+      ],
+      [
+        'dongchedi',
+        'logo-chinese-official.svg',
+        '官网页面用图',
+        'https://www.dongchedi.com/',
+        'unverified',
+      ],
+      [
+        'zuoyebang',
+        'logo-slogan-official.png',
+        '官网页面用图',
+        'https://smart.zuoyebang.com/',
+        'unverified',
+      ],
+      [
+        'cvte',
+        'wordmark-bilingual-official.png',
+        '官网页面用图',
+        'https://www.cvte.com/',
+        'unverified',
+      ],
+      [
+        'asiainfo',
+        'logo-bilingual-color-official.svg',
+        '官网页面用图',
+        'https://www.asiainfo.com/zh_cn/index.html',
+        'unverified',
+      ],
+      [
+        'qihoo-360',
+        'logo-horizontal-official.png',
+        '官方品牌素材下载页',
+        'https://www.360.cn/about/contactus.html?page=logo',
+        'unverified',
+      ],
+      [
+        'fanruan',
+        'logo-english-official.svg',
+        '官网页面用图',
+        'https://www.fanruan.com/en/',
+        'unverified',
+      ],
+      [
+        'amap',
+        'icon-appstore.jpg',
+        '官方应用商店 · 渲染图',
+        'https://apps.apple.com/cn/app/%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE-%E9%AB%98%E5%BE%B7%E6%89%93%E8%BD%A6-%E5%AF%BC%E8%88%AA%E5%85%AC%E4%BA%A4%E5%9C%B0%E9%93%81%E5%87%BA%E8%A1%8C/id461703208?uo=4',
+        'unverified',
+      ],
+      [
+        'tsingmicro',
+        'logo-color-official.svg',
+        '官网页面用图',
+        'https://www.tsingmicro.com/',
+        'unverified',
+      ],
+
+      ['kuaishou', 'icon-rounded-official.png', '官方品牌素材下载页', kuaishouSource],
+      [
+        'meituan',
+        'wordmark-rounded-google-play.png',
+        '官方应用商店 · 渲染图',
+        'https://play.google.com/store/apps/details?id=com.sankuai.meituan&hl=zh-CN',
+      ],
+      [
+        'zhihu',
+        'wordmark-rounded-google-play.png',
+        '官方应用商店 · 渲染图',
+        'https://play.google.com/store/apps/details?id=com.zhihu.android&hl=zh-CN',
+      ],
+    ]) {
+      await page.goto(`/logo/${id}/?asset=${file}`);
+      await expectSourceLink(page, sourceLabel, sourcePage);
+      if (rightsStatus === 'unverified') {
+        await expect(license).toHaveCount(0);
+        await expect(page.getByText(/许可未核实|许可已确认/)).toHaveCount(0);
+        await expect(sources.locator('summary')).not.toContainText('需署名');
+      }
+      await expect(download).toHaveAttribute('href', new RegExp(`${file}$`));
+      await expect(page.locator('.preview-stage img')).toBeVisible();
+      const downloaded = page.waitForEvent('download');
+      await download.click();
+      const fileDownload = await downloaded;
+      expect(fileDownload.suggestedFilename()).toBe(`${id}-${file}`);
+    }
+
+    await page.goto('/logo/zte/?asset=wordmark-blue-header-official.png');
     await expectSourceLink(page, '官网页头 Logo', 'https://www.zte.com.cn/global/');
     await expect(page.locator('.asset-action-panel .asset-warnings')).toContainText('低分辨率');
     await expect(page.locator('.asset-action-panel .asset-warnings')).toBeVisible();
     await sources.locator('summary').click();
     await expect(sources).toContainText('页头 Logo · 原始文件');
 
-    await page.goto('/logos/transsion/');
+    await page.goto('/logo/transsion/');
     await expectSourceLink(page, '官网页脚 Logo', 'https://www.transsion.com/zh-CN/about');
     await sources.locator('summary').click();
     await expect(sources).toContainText('页脚 Logo · 原始文件');
 
-    await page.goto('/logos/xiaomi/');
-    const xiaomiCommons = 'https://commons.wikimedia.org/wiki/File:Xiaomi_logo_(2021-).svg';
-    await expectSourceLink(page, 'Commons · 渲染图', xiaomiCommons);
+    await page.goto('/logo/xiaomi/');
+    await expectSourceLink(page, '官网页面用图 · 图形提取版', 'https://trust.mi.com/');
     await expect(sources).toHaveJSProperty('open', false);
     await sources.locator('summary').click();
-    await expect(sources).toContainText('Wikimedia Commons · 渲染文件');
+    await expect(sources).toContainText('小米信任中心 · 图形提取版');
     await page.locator('[data-select-asset="logo-horizontal-official.svg"]').click();
     await expectSourceLink(page, '官网页面用图', 'https://trust.mi.com/');
     await expect(sources).toHaveJSProperty('open', true);
     await expect(sources).toContainText('小米信任中心 · 原始文件');
     await page.goBack();
-    await expectSourceLink(page, 'Commons · 渲染图', xiaomiCommons);
+    await expectSourceLink(page, '官网页面用图 · 图形提取版', 'https://trust.mi.com/');
     await expect(sources).toHaveJSProperty('open', true);
-    await expect(sources).toContainText('Wikimedia Commons · 渲染文件');
+    await expect(sources).toContainText('小米信任中心 · 图形提取版');
 
-    await page.goto('/logos/gitlab/');
+    await page.goto('/logo/gitlab/?asset=icon-legacy.png');
     const gitlabSource =
       'https://gitlab.com/gitlab-com/gitlab-artwork/-/raw/9b07772f44a9fa51f395a95928a6e41c61a5b1cb/README.md';
     await expectSourceLink(page, '官方仓库', gitlabSource);

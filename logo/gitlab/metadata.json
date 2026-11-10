@@ -1,0 +1,322 @@
+{
+  "schemaVersion": 3,
+  "id": "gitlab",
+  "name": "GitLab",
+  "aliases": [
+    "GitLab Inc."
+  ],
+  "identity": {
+    "nameZh": null,
+    "nameEn": "GitLab",
+    "legalNames": [
+      {
+        "name": "GitLab Inc.",
+        "language": "en",
+        "role": "company",
+        "source": "https://about.gitlab.com/company/",
+        "reviewedAt": "2026-11-07"
+      }
+    ],
+    "sources": [
+      {
+        "label": "官方身份来源",
+        "url": "https://about.gitlab.com/company/",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "官方身份来源",
+        "url": "https://handbook.gitlab.com/handbook/marketing/brand-experience/trademark-guidelines/",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "GitLab 当前官方品牌素材页",
+        "url": "https://about.gitlab.com/press/press-kit/",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://about.gitlab.com/",
+  "assets": [
+    {
+      "file": "logo-color-official.svg",
+      "label": "彩色组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://about.gitlab.com/images/press/gitlab-logo-100-rgb.svg",
+      "sourcePage": "https://about.gitlab.com/press/press-kit/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library",
+        "pageTitle": "GitLab Logos and Brand Assets"
+      },
+      "qualityNotes": [
+        "透明背景，保留官方画板留白。"
+      ],
+      "sha256": "5ef94eb73c9720560c1741ed616754769350c70ba8651a4419cc6b3fd956f96d",
+      "bytes": 4621,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://about.gitlab.com/press/press-kit/",
+        "attribution": "GitLab。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "logo-white-official.svg",
+      "label": "反白组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "dark",
+      "source": "https://about.gitlab.com/images/press/gitlab-logo-200-rgb.svg",
+      "sourcePage": "https://about.gitlab.com/press/press-kit/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library",
+        "pageTitle": "GitLab Logos and Brand Assets"
+      },
+      "qualityNotes": [
+        "透明背景，保留官方画板留白。"
+      ],
+      "sha256": "1ed61e67b01c6a29ab377009364aed5135afadb39020f973377b0b06fa3f3d4b",
+      "bytes": 4641,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://about.gitlab.com/press/press-kit/",
+        "attribution": "GitLab。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "icon-color-official.svg",
+      "label": "彩色图形 · 原始画布",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "source": "https://about.gitlab.com/images/press/gitlab-logo-500-rgb.svg",
+      "sourcePage": "https://about.gitlab.com/press/press-kit/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library",
+        "pageTitle": "GitLab Logos and Brand Assets"
+      },
+      "qualityNotes": [
+        "透明背景，保留官方画板留白。"
+      ],
+      "sha256": "d8522f9bb83b35bcf0ab6e7fc25a312c26120028af308bec1dd9d20e15c1a615",
+      "bytes": 2116,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://about.gitlab.com/press/press-kit/",
+        "attribution": "GitLab。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "icon-white-official.svg",
+      "label": "白色图形 · 原始画布",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "white",
+      "background": "dark",
+      "source": "https://about.gitlab.com/images/press/gitlab-logo-700-rgb.svg",
+      "sourcePage": "https://about.gitlab.com/press/press-kit/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library",
+        "pageTitle": "GitLab Logos and Brand Assets"
+      },
+      "qualityNotes": [
+        "透明背景，保留官方画板留白。"
+      ],
+      "sha256": "3bf4ef1aa318ea98e07fd5c98ee5532a2b05aed019182d3be413ac3be72acc83",
+      "bytes": 530,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://about.gitlab.com/press/press-kit/",
+        "attribution": "GitLab。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "icon-legacy.png",
+      "variant": "icon",
+      "source": "https://gitlab.com/gitlab-com/gitlab-artwork/-/raw/9b07772f44a9fa51f395a95928a6e41c61a5b1cb/logo/logo-square.png",
+      "sourcePage": "https://gitlab.com/gitlab-com/gitlab-artwork/-/raw/9b07772f44a9fa51f395a95928a6e41c61a5b1cb/README.md",
+      "sha256": "ae908b6f071d761519ef4bc7d08689015b1651e241beb9110feaca03a4e0ce8d",
+      "bytes": 27272,
+      "rights": {
+        "status": "permitted",
+        "license": "CC-BY-NC-SA-4.0",
+        "reference": "https://gitlab.com/gitlab-com/gitlab-artwork/-/raw/9b07772f44a9fa51f395a95928a6e41c61a5b1cb/README.md",
+        "attribution": "GitLab logo artwork by GitLab, licensed under CC BY-NC-SA 4.0: https://creativecommons.org/licenses/by-nc-sa/4.0/ . Original file, unmodified.",
+        "reviewedAt": "2026-11-06",
+        "notes": "旧版 Artwork 图标适用 CC BY-NC-SA 4.0，仅限非商业用途，需保留署名及许可链接，改编须按相同方式共享。商标权保留，此许可适用范围限于本历史文件。当前商标要求见 https://handbook.gitlab.com/handbook/marketing/brand-experience/trademark-guidelines/ 。"
+      },
+      "label": "旧版图标",
+      "status": "historical",
+      "background": "any",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "repository",
+        "pageTitle": "GitLab Artwork 素材仓库"
+      },
+      "display": "alternative"
+    },
+    {
+      "file": "icon-color-square-extracted.svg",
+      "label": "彩色图形",
+      "variant": "icon",
+      "status": "current",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "brand-library",
+        "pageTitle": "GitLab Logos and Brand Assets",
+        "originalAsset": "icon-color-official.svg",
+        "originalSha256": "d8522f9bb83b35bcf0ab6e7fc25a312c26120028af308bec1dd9d20e15c1a615"
+      },
+      "source": "https://about.gitlab.com/images/press/gitlab-logo-500-rgb.svg",
+      "sourcePage": "https://about.gitlab.com/press/press-kit/",
+      "qualityNotes": [
+        "透明背景，长边贴边，短边居中补齐方形画布。"
+      ],
+      "sha256": "a5fb4c1a85c56d09fe6bd9226eddc2b8ed232618c8072c95a721aeeac14f0869",
+      "bytes": 2551,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://about.gitlab.com/press/press-kit/",
+        "attribution": "GitLab。原作品权利及来源依据沿用母稿记录，图形提取处理由 LogoDock 完成。",
+        "reviewedAt": "2026-11-10",
+        "notes": "许可及署名条件待核实。"
+      }
+    },
+    {
+      "file": "icon-white-square-extracted.svg",
+      "label": "白色图形",
+      "variant": "icon",
+      "status": "current",
+      "language": "none",
+      "layout": "standalone",
+      "color": "white",
+      "background": "dark",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "brand-library",
+        "pageTitle": "GitLab Logos and Brand Assets",
+        "originalAsset": "icon-white-official.svg",
+        "originalSha256": "3bf4ef1aa318ea98e07fd5c98ee5532a2b05aed019182d3be413ac3be72acc83"
+      },
+      "source": "https://about.gitlab.com/images/press/gitlab-logo-700-rgb.svg",
+      "sourcePage": "https://about.gitlab.com/press/press-kit/",
+      "qualityNotes": [
+        "透明背景，长边贴边，短边居中补齐方形画布。"
+      ],
+      "sha256": "6f4299355738f367d0f50ddab7cfbc59a6f828c86612752ab30bb793066a55b0",
+      "bytes": 1027,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://about.gitlab.com/press/press-kit/",
+        "attribution": "GitLab。原作品权利及来源依据沿用母稿记录，图形提取处理由 LogoDock 完成。",
+        "reviewedAt": "2026-11-10",
+        "notes": "许可及署名条件待核实。"
+      }
+    }
+  ],
+  "entityType": "company",
+  "categories": [
+    "code-hosting",
+    "developer-tools"
+  ],
+  "defaultAsset": "logo-color-official.svg",
+  "sourceFiles": [
+    {
+      "file": "logo-color-cmyk.pdf",
+      "label": "CMYK 印刷用稿",
+      "assetFiles": [
+        "logo-color-official.svg"
+      ],
+      "source": "https://about.gitlab.com/images/press/gitlab-logo-150-cmyk.pdf",
+      "sourcePage": "https://about.gitlab.com/press/press-kit/",
+      "sha256": "b017f7ce0a6ab290f42bf62320023e31510bc7f05177038985662cc4eca315ec",
+      "bytes": 411550,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://about.gitlab.com/press/press-kit/",
+        "attribution": "GitLab。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09",
+        "notes": "官方 CMYK 印刷附件，按标注色彩模式及画板取用。"
+      }
+    },
+    {
+      "file": "icon-color-cmyk.pdf",
+      "label": "CMYK 印刷用稿",
+      "assetFiles": [
+        "icon-color-official.svg"
+      ],
+      "source": "https://about.gitlab.com/images/press/gitlab-logo-550-cmyk.pdf",
+      "sourcePage": "https://about.gitlab.com/press/press-kit/",
+      "sha256": "94f41464d5efd892572e429fcc88a79c039715dddb78d3dc40c04cb7e7d39544",
+      "bytes": 410609,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://about.gitlab.com/press/press-kit/",
+        "attribution": "GitLab。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09",
+        "notes": "官方 CMYK 印刷附件，按标注色彩模式及画板取用。"
+      }
+    }
+  ],
+  "artworks": [
+    {
+      "id": "square-brand",
+      "label": "彩色图形",
+      "files": [
+        "icon-color-official.svg",
+        "icon-color-square-extracted.svg"
+      ],
+      "defaultAsset": "icon-color-square-extracted.svg"
+    },
+    {
+      "id": "square-white",
+      "label": "白色图形",
+      "files": [
+        "icon-white-official.svg",
+        "icon-white-square-extracted.svg"
+      ],
+      "defaultAsset": "icon-white-square-extracted.svg"
+    }
+  ]
+}

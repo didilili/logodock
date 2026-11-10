@@ -11,11 +11,9 @@ export default defineConfig(
   {
     ignores: [
       'node_modules/**',
-      'logos/**',
+      'logo/**',
       'static/**',
       '_site/**',
-      'local-artifacts/site-copy-review/**/site/**',
-      'local-artifacts/mianstack-287/**',
       '.svelte-kit/**',
       'coverage/**',
       'playwright-report/**',
@@ -41,8 +39,6 @@ export default defineConfig(
       'scripts/**/*.{js,mjs,ts}',
       'tests/**/*.{js,mjs,ts}',
       '*.config.{js,mjs,ts}',
-      'local-artifacts/**/server.mjs',
-      'local-artifacts/**/capture.mjs',
       ...serverFiles,
     ],
     languageOptions: { globals: globals.node },

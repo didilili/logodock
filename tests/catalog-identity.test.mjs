@@ -15,7 +15,7 @@ import {
 async function fixture(t, change = () => {}, data = Buffer.from(svg), file = 'icon.svg') {
   const root = await mkdtemp(join(tmpdir(), 'logodock-identity-'));
   t.after(() => rm(root, { recursive: true, force: true }));
-  const folder = join(root, 'logos/example');
+  const folder = join(root, 'logo/example');
   await mkdir(folder, { recursive: true });
   const metadata = brandMetadata({
     name: 'Example',
@@ -28,6 +28,67 @@ async function fixture(t, change = () => {}, data = Buffer.from(svg), file = 'ic
   await writeFile(join(folder, 'metadata.json'), JSON.stringify(metadata));
   return root;
 }
+
+async function extractedFixture(t, change = () => {}) {
+  const root = await fixture(t, (metadata) => {
+    metadata.assets.push(
+      assetMetadata({
+        file: 'symbol.svg',
+        provenance: {
+          sourceType: 'official',
+          processing: 'extracted',
+          originalAsset: 'icon.svg',
+          originalSha256: metadata.assets[0].sha256,
+        },
+      }),
+    );
+    change(metadata);
+  });
+  await writeFile(join(root, 'logo/example/symbol.svg'), svg);
+  return root;
+}
+
+test('extracted SVG symbols preserve their registered original relationship', async (t) => {
+  const catalog = await loadCatalog(await extractedFixture(t));
+  const symbol = catalog.brands[0].assets.find((asset) => asset.file === 'symbol.svg');
+  assert.equal(symbol.provenance.processing, 'extracted');
+  assert.equal(symbol.provenance.originalAsset, 'icon.svg');
+  assert.equal(symbol.provenance.originalSha256, catalog.brands[0].assets[0].sha256);
+});
+
+test('extracted symbols require an original SVG with matching acquisition sources', async (t) => {
+  for (const change of [
+    (m) => {
+      delete m.assets[1].provenance.originalAsset;
+    },
+    (m) => {
+      delete m.assets[1].provenance.originalSha256;
+    },
+    (m) => {
+      m.assets[1].provenance.originalSha256 = '0'.repeat(64);
+    },
+    (m) => {
+      m.assets[1].provenance.originalAsset = 'missing.svg';
+    },
+    (m) => {
+      m.assets[1].provenance.originalAsset = 'symbol.svg';
+    },
+    (m) => {
+      m.assets[0].provenance.processing = 'rendered';
+    },
+    (m) => {
+      m.assets[1].sourcePage = 'https://other.example/';
+    },
+    (m) => {
+      m.assets[1].source = 'https://other.example/file.svg';
+    },
+    (m) => {
+      m.assets[1].provenance.processing = 'original';
+    },
+  ]) {
+    await assert.rejects(loadCatalog(await extractedFixture(t, change)), /Invalid catalog:/);
+  }
+});
 
 test('catalog keeps unverified names null without deriving them from aliases', async (t) => {
   const catalog = await loadCatalog(await fixture(t));
@@ -202,14 +263,28 @@ test('minimal accepted JPEG headers never receive invented dimensions', async (t
   assert.equal(Object.hasOwn(asset, 'height'), false);
 });
 
-test('repository retains all 31 entities, precise identities and asset caveats', async () => {
+test('repository retains all 59 entities, precise identities and asset caveats', async () => {
   const catalog = await loadCatalog();
   const byId = Object.fromEntries(catalog.brands.map((b) => [b.id, b]));
-  assert.equal(catalog.brands.length, 31);
+  assert.equal(catalog.brands.length, 59);
+  const directIntake = catalog.brands.flatMap((brand) =>
+    brand.assets.filter((asset) => asset.rights.status === 'unverified'),
+  );
+  assert.equal(directIntake.length, 66);
+  assert.ok(directIntake.every((asset) => asset.provenance.sourceType === 'official'));
   assert.equal(byId.minimax.identity.nameZh, null);
   assert.equal(byId.codeberg.identity.legalNames[0].language, 'de');
   assert.equal(byId.oppo.identity.nameZh, 'OPPO');
   assert.equal(byId.vivo.identity.nameZh, 'vivo');
+  assert.equal(byId.baidu.defaultAsset, 'logo-bilingual-brand-library.jpg');
+  assert.equal(byId.gitlab.defaultAsset, 'logo-color-official.svg');
+  assert.equal(byId.hundsun.defaultAsset, 'wordmark-color-official.png');
+  assert.equal(byId.dewu.defaultAsset, 'wordmark-square-official.png');
+  const baiduPaw = byId.baidu.assets.find((asset) => asset.file === 'icon-blue-brand-library.jpg');
+  assert.equal(baiduPaw.provenance.channel, 'brand-library');
+  assert.equal(baiduPaw.language, 'en');
+  assert.equal(baiduPaw.display, 'alternative');
+  assert.match(baiduPaw.usageWarnings.join(' '), /13mm/);
   assert.deepEqual(byId.git.identity.legalNames, []);
   assert.equal(byId.bytedance.identity.legalNames[0].role, 'website-operator');
   assert.ok(byId['trip-com'].identity.legalNames.some((n) => n.role === 'website-operator'));
@@ -226,11 +301,20 @@ test('repository retains all 31 entities, precise identities and asset caveats',
   assert.equal(smallZte.width, 92);
   assert.equal(smallZte.height, 44);
   assert.match(smallZte.qualityNotes.join(' '), /#008ED3/);
-  assert.match(byId.zhipu.assets[0].qualityNotes.join(' '), /chat\.z\.ai/);
+  assert.match(
+    byId.zhipu.assets
+      .find((asset) => asset.file === 'icon-monochrome-commons.png')
+      .qualityNotes.join(' '),
+    /chat\.z\.ai/,
+  );
 });
 
 test('removed redundant originals have no metadata record or repository file', async () => {
   for (const [id, file] of [
+    ['sangfor', 'icon-official.png'],
+    ['xiaomi', 'icon-orange-2021.png'],
+    ['dewu', 'wordmark-square-small-official.png'],
+    ['bigo', 'wordmark-blue-micro-official.png'],
     ['meituan', 'logo-chinese.png'],
     ['yonyou', 'wordmark-red.jpg'],
     ['minimax', 'logo-gradient-vertical.png'],
@@ -253,14 +337,14 @@ test('removed redundant originals have no metadata record or repository file', a
     ['tencent', 'wordmark-blue.png'],
   ]) {
     const metadata = JSON.parse(
-      await readFile(new URL(`../logos/${id}/metadata.json`, import.meta.url), 'utf8'),
+      await readFile(new URL(`../logo/${id}/metadata.json`, import.meta.url), 'utf8'),
     );
     assert.equal(
       metadata.assets.some((asset) => asset.file === file),
       false,
       `${id}/${file}: removed from metadata`,
     );
-    await assert.rejects(access(new URL(`../logos/${id}/${file}`, import.meta.url)), {
+    await assert.rejects(access(new URL(`../logo/${id}/${file}`, import.meta.url)), {
       code: 'ENOENT',
     });
   }

@@ -81,6 +81,11 @@ test('concise labels keep provenance and file descriptions searchable on the sam
         label: '英文',
         provenance: { sourceType: 'commons', processing: 'rendered' },
       },
+      {
+        file: 'symbol.svg',
+        label: '黑色图形',
+        provenance: { sourceType: 'official', processing: 'extracted' },
+      },
     ],
   };
   const before = structuredClone(brand);
@@ -88,6 +93,8 @@ test('concise labels keep provenance and file descriptions searchable on the sam
     assert.deepEqual(search.matchingAssets(brand, query), [brand.assets[0]], query);
   for (const query of ['阿尔法 Commons 渲染', 'alpha commons rendered'])
     assert.deepEqual(search.matchingAssets(brand, query), [brand.assets[1]], query);
+  for (const query of ['阿尔法 图形提取版', 'alpha 官方 提取', 'alpha extracted'])
+    assert.deepEqual(search.matchingAssets(brand, query), [brand.assets[2]], query);
   assert.deepEqual(search.matchingAssets(brand, 'alpha 官方 png'), []);
   assert.deepEqual(search.matchingAssets(brand, 'alpha Commons 留白'), []);
   assert.deepEqual(brand, before);
@@ -117,13 +124,14 @@ test('catalog transparency searches return the matching downloadable files', asy
   const { loadCatalog } = await import('../scripts/lib/catalog.mjs');
   const { matchingBrands } = await import('../src/lib/catalog-presentation.mjs');
   const { brands: catalog } = await loadCatalog();
-  for (const query of ['金蝶 透明', '小红书 透明', '快手 透明 jpg'])
+  for (const query of ['金蝶 透明', '小红书 不透明', '快手 透明 jpg'])
     assert.deepEqual(matchingBrands(catalog, { q: query }), [], query);
   for (const [query, files] of [
-    ['快手 透明', ['icon-orange-official.png']],
+    ['快手 透明', ['icon-orange-official.png', 'icon-rounded-official.png']],
     ['快手 不透明', ['logo-english-official.jpg']],
     ['金蝶 不透明 白底', ['logo-color-english.jpg']],
-    ['小红书 红底', ['wordmark-square-appstore.jpg']],
+    ['小红书 红底', ['wordmark-capsule-official.svg', 'wordmark-rounded-google-play.png']],
+    ['小红书 透明', ['wordmark-capsule-official.svg', 'wordmark-rounded-google-play.png']],
   ]) {
     const matches = matchingBrands(catalog, { q: query });
     assert.equal(matches.length, 1, query);

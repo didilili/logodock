@@ -1,6 +1,6 @@
 * text=auto eol=lf
 *.svg text
-logos/**/*.svg -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+logo/**/*.svg -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 *.png binary
 *.webp binary
 *.jpg binary

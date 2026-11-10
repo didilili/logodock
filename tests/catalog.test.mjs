@@ -14,9 +14,9 @@ const digest = (data) => createHash('sha256').update(data).digest('hex');
 async function fixture(t, ids = ['example']) {
   const root = await mkdtemp(join(tmpdir(), 'logodock-'));
   t.after(() => rm(root, { recursive: true, force: true }));
-  await mkdir(join(root, 'logos'));
+  await mkdir(join(root, 'logo'));
   for (const id of ids) {
-    await mkdir(join(root, 'logos', id));
+    await mkdir(join(root, 'logo', id));
     await asset(root, id, svg);
   }
   return root;
@@ -24,13 +24,13 @@ async function fixture(t, ids = ['example']) {
 
 async function asset(root, id, data, patch = {}) {
   const metadata = brandMetadata({ id, assets: [assetMetadata({ data })], ...patch });
-  await writeFile(join(root, 'logos', id, 'icon.svg'), data);
-  await writeFile(join(root, 'logos', id, 'metadata.json'), JSON.stringify(metadata));
+  await writeFile(join(root, 'logo', id, 'icon.svg'), data);
+  await writeFile(join(root, 'logo', id, 'metadata.json'), JSON.stringify(metadata));
   return metadata;
 }
 
 async function mutate(root, change, id = 'example') {
-  const path = join(root, 'logos', id, 'metadata.json');
+  const path = join(root, 'logo', id, 'metadata.json');
   const data = JSON.parse(await readFile(path, 'utf8'));
   change(data);
   await writeFile(path, JSON.stringify(data));
@@ -40,17 +40,48 @@ test('valid catalog preserves metadata and adds repository-relative asset paths'
   const root = await fixture(t);
   const result = await loader(root);
   assert.equal(result.schemaVersion, 3);
-  assert.equal(result.brands[0].assets[0].path, 'logos/example/icon.svg');
+  assert.equal(result.brands[0].assets[0].path, 'logo/example/icon.svg');
   assert.equal(result.brands[0].assets[0].rights.status, 'permitted');
 });
 
-test('empty logos directory is a valid initialization state', async (t) => {
+test('catalog preserves an explicitly unverified rights record for direct intake', async (t) => {
+  const root = await fixture(t);
+  await mutate(root, (meta) => {
+    meta.assets[0].rights.status = 'unverified';
+    meta.assets[0].rights.license = '许可未核实';
+    meta.assets[0].rights.notes = 'Official original collected at the maintainer’s request.';
+  });
+  const rights = (await loader(root)).brands[0].assets[0].rights;
+  assert.equal(rights.status, 'unverified');
+  assert.equal(rights.license, '许可未核实');
+  assert.equal(rights.reference, 'https://example.com/');
+});
+
+test('empty logo directory is a valid initialization state', async (t) => {
   const root = await fixture(t, []);
   assert.deepEqual(await loader(root), { schemaVersion: 3, brands: [] });
-  await writeFile(join(root, 'logos/.gitkeep'), '');
+  await writeFile(join(root, 'logo/.gitkeep'), '');
   assert.deepEqual(await loader(root), { schemaVersion: 3, brands: [] });
-  await writeFile(join(root, 'logos/.gitkeep'), 'hidden content');
+  await writeFile(join(root, 'logo/.gitkeep'), 'hidden content');
   await assert.rejects(loader(root), /Invalid catalog:/);
+});
+
+test('catalog ignores Finder .DS_Store files at the root and inside brands', async (t) => {
+  for (const ids of [[], ['example']]) {
+    const root = await fixture(t, ids);
+    const expected = await loader(root);
+    await writeFile(join(root, 'logo/.DS_Store'), 'Finder metadata');
+    for (const id of ids) await writeFile(join(root, 'logo', id, '.DS_Store'), 'Finder metadata');
+    assert.deepEqual(await loader(root), expected);
+  }
+});
+
+test('catalog still rejects other unexpected files at the root and inside brands', async (t) => {
+  for (const path of ['logo/unexpected.txt', 'logo/.hidden', 'logo/example/.hidden']) {
+    const root = await fixture(t);
+    await writeFile(join(root, path), 'unexpected content');
+    await assert.rejects(loader(root), /expected a directory|orphan file/);
+  }
 });
 
 test('brand and asset order is deterministic independently of metadata key order', async (t) => {
@@ -63,7 +94,7 @@ test('brand and asset order is deterministic independently of metadata key order
     },
     'z-brand',
   );
-  await writeFile(join(root, 'logos/z-brand/a.svg'), svg);
+  await writeFile(join(root, 'logo/z-brand/a.svg'), svg);
   const first = JSON.stringify(await loader(root));
   await mutate(
     root,
@@ -72,7 +103,7 @@ test('brand and asset order is deterministic independently of metadata key order
     },
     'z-brand',
   );
-  const path = join(root, 'logos/a-brand/metadata.json');
+  const path = join(root, 'logo/a-brand/metadata.json');
   const entries = Object.entries(JSON.parse(await readFile(path, 'utf8'))).reverse();
   await writeFile(path, JSON.stringify(Object.fromEntries(entries)));
   assert.equal(JSON.stringify(await loader(root)), first);
@@ -119,15 +150,15 @@ test('rejects path traversal, backslashes, and unsupported asset extensions', as
   }
 });
 
-test('rejects symlinks at the logos root, brand directory, and asset levels', async (t) => {
+test('rejects symlinks at the logo root, brand directory, and asset levels', async (t) => {
   for (const level of ['root', 'brand', 'asset']) {
     const root = await fixture(t);
     const target =
       level === 'root'
-        ? join(root, 'logos')
+        ? join(root, 'logo')
         : level === 'brand'
-          ? join(root, 'logos/example')
-          : join(root, 'logos/example/icon.svg');
+          ? join(root, 'logo/example')
+          : join(root, 'logo/example/icon.svg');
     await rm(target, { recursive: true });
     await symlink(tmpdir(), target);
     await assert.rejects(loader(root), /symbolic link/i);
@@ -138,13 +169,13 @@ test('rejects edited hashes, incorrect sizes, missing assets, and orphan files',
   for (const mode of ['hash', 'size', 'missing', 'orphan']) {
     const root = await fixture(t);
     if (mode === 'hash')
-      await writeFile(join(root, 'logos/example/icon.svg'), svg.replace('8 8', '9 9'));
+      await writeFile(join(root, 'logo/example/icon.svg'), svg.replace('8 8', '9 9'));
     if (mode === 'size')
       await mutate(root, (meta) => {
         meta.assets[0].bytes++;
       });
-    if (mode === 'missing') await rm(join(root, 'logos/example/icon.svg'));
-    if (mode === 'orphan') await writeFile(join(root, 'logos/example/unlisted.svg'), svg);
+    if (mode === 'missing') await rm(join(root, 'logo/example/icon.svg'));
+    if (mode === 'orphan') await writeFile(join(root, 'logo/example/unlisted.svg'), svg);
     await assert.rejects(loader(root), /Invalid catalog:/);
   }
 });
@@ -177,8 +208,8 @@ test('raster extensions require matching format signatures and basic headers', a
         : Buffer.from(png),
     ]) {
       const root = await fixture(t);
-      await rm(join(root, 'logos/example/icon.svg'));
-      await writeFile(join(root, `logos/example/icon.${extension}`), data);
+      await rm(join(root, 'logo/example/icon.svg'));
+      await writeFile(join(root, `logo/example/icon.${extension}`), data);
       await mutate(root, (meta) => {
         meta.defaultAsset = `icon.${extension}`;
         Object.assign(meta.assets[0], {
@@ -219,7 +250,7 @@ test('rejects invalid public metadata and malformed JSON', async (t) => {
     await assert.rejects(loader(root), /Invalid catalog:/);
   }
   const root = await fixture(t);
-  await writeFile(join(root, 'logos/example/metadata.json'), '{');
+  await writeFile(join(root, 'logo/example/metadata.json'), '{');
   await assert.rejects(loader(root), /Invalid catalog:/);
 });
 
@@ -287,6 +318,7 @@ test('rejects active SVG elements, event handlers, unsafe CSS, and foreign names
     '<foreignObject/>',
     '<animate/>',
     '<style>@import "https://example.com/x.css";</style>',
+    '<style type="text/javascript">path{fill:red}</style>',
     '<path onload="alert(1)"/>',
     '<path style="fill:url(https://example.com/x)"/>',
     '<x:path xmlns:x="https://evil.example"/>',
@@ -333,9 +365,9 @@ test('build-index generates the resource document without rewriting README and c
   const readme =
     '# Preserve intro\n\nHandwritten usage and contribution links.\n\nPreserve footer\n';
   await writeFile(join(root, 'README.md'), readme);
-  await rm(join(root, 'logos/example/icon.svg'));
+  await rm(join(root, 'logo/example/icon.svg'));
   const unusualFile = 'icon "(1).svg';
-  await writeFile(join(root, 'logos/example', unusualFile), svg);
+  await writeFile(join(root, 'logo/example', unusualFile), svg);
   await mutate(root, (meta) => {
     meta.name = 'Example | <img src=x>\n**bold**';
     meta.assets[0].file = unusualFile;
@@ -351,7 +383,7 @@ test('build-index generates the resource document without rewriting README and c
   assert.match(generated, /^# Logo 资源清单\n/);
   assert.match(generated, /width="64">/);
   assert.doesNotMatch(generated, /height="64"/);
-  assert.match(generated, /\.\.\/logos\/example\/icon%20%22%281%29.svg/);
+  assert.match(generated, /\.\.\/logo\/example\/icon%20%22%281%29.svg/);
   assert.match(generated, /Historical &#124; &lt;script&gt; Use conditions/);
   assert.doesNotMatch(generated, /<img src=x>|\*\*bold\*\*|\[inject\]\(javascript:/);
   assert.equal(await readFile(join(root, 'README.md'), 'utf8'), readme);

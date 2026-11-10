@@ -62,6 +62,14 @@
         "$ref": "#/$defs/asset"
       }
     },
+    "sourceFiles": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Original design attachments associated with reviewed assets. Excluded from previews, format filters and asset counts.",
+      "items": {
+        "$ref": "#/$defs/sourceFile"
+      }
+    },
     "identity": {
       "$ref": "#/$defs/identity"
     },
@@ -93,6 +101,18 @@
       "type": "string",
       "pattern": "^(?!\\.)[^/\\\\:\\u0000-\\u001f]+\\.(svg|png|webp|jpg)$"
     },
+    "designFile": {
+      "type": "string",
+      "pattern": "^(?!\\.)[^/\\\\:\\u0000-\\u001f]+\\.(ai|eps|pdf)$"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "bytes": {
+      "type": "integer",
+      "minimum": 1
+    },
     "rights": {
       "type": "object",
       "additionalProperties": false,
@@ -100,7 +120,7 @@
       "properties": {
         "status": {
           "type": "string",
-          "enum": ["permitted"]
+          "enum": ["permitted", "unverified"]
         },
         "license": {
           "$ref": "#/$defs/nonemptyString"
@@ -173,12 +193,10 @@
           "$ref": "#/$defs/httpsUrl"
         },
         "sha256": {
-          "type": "string",
-          "pattern": "^[a-f0-9]{64}$"
+          "$ref": "#/$defs/sha256"
         },
         "bytes": {
-          "type": "integer",
-          "minimum": 1
+          "$ref": "#/$defs/bytes"
         },
         "rights": {
           "$ref": "#/$defs/rights"
@@ -212,6 +230,51 @@
           "items": {
             "$ref": "#/$defs/nonemptyString"
           }
+        }
+      }
+    },
+    "sourceFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "file",
+        "label",
+        "assetFiles",
+        "source",
+        "sourcePage",
+        "sha256",
+        "bytes",
+        "rights"
+      ],
+      "properties": {
+        "file": {
+          "$ref": "#/$defs/designFile"
+        },
+        "label": {
+          "$ref": "#/$defs/nonemptyString"
+        },
+        "assetFiles": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/imageFile"
+          }
+        },
+        "source": {
+          "$ref": "#/$defs/httpsUrl"
+        },
+        "sourcePage": {
+          "$ref": "#/$defs/httpsUrl"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "bytes": {
+          "$ref": "#/$defs/bytes"
+        },
+        "rights": {
+          "$ref": "#/$defs/rights"
         }
       }
     },
@@ -301,7 +364,15 @@
         },
         "processing": {
           "type": "string",
-          "enum": ["original", "rendered"]
+          "enum": ["original", "rendered", "extracted"]
+        },
+        "originalAsset": {
+          "$ref": "#/$defs/imageFile",
+          "description": "For extracted SVG symbols, the registered original SVG in the same brand. Acquisition sources must match."
+        },
+        "originalSha256": {
+          "$ref": "#/$defs/sha256",
+          "description": "Reviewed original SVG content hash for an extracted symbol."
         },
         "channel": {
           "type": "string",

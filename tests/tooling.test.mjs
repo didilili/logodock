@@ -81,9 +81,9 @@ test('source SVG bytes survive staging and checkout without line-ending conversi
   const cwd = await temporary(t);
   git(cwd, 'init', '--quiet');
   await cp(join(root, '.gitattributes'), join(cwd, '.gitattributes'));
-  const file = 'logos/example/logo.svg';
+  const file = 'logo/example/logo.svg';
   const original = '<svg xmlns="http://www.w3.org/2000/svg">\r\n</svg>\r\n';
-  await mkdir(join(cwd, 'logos/example'), { recursive: true });
+  await mkdir(join(cwd, 'logo/example'), { recursive: true });
   await writeFile(join(cwd, file), original);
   git(cwd, 'add', '--', '.gitattributes', file);
   assert.equal(git(cwd, 'show', `:${file}`), original);
@@ -161,7 +161,7 @@ test('staged checks refuse an unborn HEAD without changing staged or unstaged co
 test('format failures stay check-only and ignored source artwork is skipped', async (t) => {
   const cwd = await stagedFixture(t);
   const file = 'scripts/unformatted.mjs';
-  const artwork = 'logos/example/original.json';
+  const artwork = 'logo/example/original.json';
   await stage(cwd, artwork, '{ "original" :   true }');
   const ignoredBefore = await snapshot(cwd, [artwork]);
   const ignored = run(cwd, process.execPath, ['scripts/check-staged.mjs']);

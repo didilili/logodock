@@ -4,10 +4,28 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
 import { inspectAssetFile } from '../scripts/lib/catalog.mjs';
+import { checkSvg } from '../scripts/lib/svg.mjs';
 
 const namespaces =
   'xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"';
 const svg = (body, attributes = '') => `<svg ${namespaces} ${attributes}>${body}</svg>`;
+
+test('SVG canvas ratios use intrinsic dimensions or the root viewBox without claiming pixel sizes', () => {
+  for (const [attributes, ratio] of [
+    ['viewBox="0 0 32 32"', 1],
+    ['width="16" height="16" viewBox="0 0 4.2333332 4.2333335"', 1],
+    ['width="40" height="20" viewBox="0 0 10 10"', 2],
+    ['width="72pt" height="1in"', 1],
+    ['width="100%" height="100%" viewBox="0,0,40,20"', 2],
+    ['width="0" height="0"', undefined],
+    ['', undefined],
+  ]) {
+    const result = checkSvg(Buffer.from(svg('<svg viewBox="0 0 1 1"/>', attributes)), 'ratio.svg');
+    assert.equal(result.aspectRatio, ratio, attributes);
+    assert.equal(Object.hasOwn(result, 'width'), false);
+    assert.equal(Object.hasOwn(result, 'height'), false);
+  }
+});
 
 async function input(t) {
   const folder = await mkdtemp(join(tmpdir(), 'logodock-svg-'));
@@ -22,6 +40,7 @@ async function input(t) {
 test('inspects inert editor metadata and presentation styles without changing bytes', async (t) => {
   const file = await input(t);
   for (const data of [
+    svg('<path d="M0 0h8v8z"/>', 'style="enable-background:new 0 0 354.6 114.83"'),
     svg(
       '<sodipodi:namedview id="view" pagecolor="#fff" borderopacity="1" showgrid="false" fit-margin-top="0" inkscape:zoom="0.6" inkscape:current-layer="layer"/><g id="layer" inkscape:label="Layer 1" inkscape:groupmode="layer"><path inkscape:connector-curvature="0" d="M0 0" style="fill:#ff5a00;fill-opacity:1;stroke-width:6.38963"/></g>',
       'inkscape:version="1.2.2" sodipodi:docname="Original.svg"',
@@ -30,7 +49,7 @@ test('inspects inert editor metadata and presentation styles without changing by
       '<metadata id="meta"><rdf:RDF><cc:Work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/><dc:creator><cc:Agent><dc:title>Author</dc:title></cc:Agent></dc:creator><cc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/><dc:description>Original artwork</dc:description><dc:date>2026</dc:date></cc:Work></rdf:RDF></metadata><path d="M0 0"/>',
     ),
     svg(
-      '<defs><style>\n.cls-1 {fill:#ff6400} .cls-2, path, #mark {fill:rgb(45, 45, 45);stroke:none}\n</style></defs><path id="mark" class="cls-1" data-name="图层_1"/>',
+      '<defs><style type="text/css">\n.cls-1 {fill:#ff6400} .cls-2, path, #mark {fill:rgb(45, 45, 45);stroke:none}\n</style></defs><path id="mark" class="cls-1" data-name="图层_1"/>',
     ),
     svg(
       "<path style=\"font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2647.62px;line-height:1.25;font-family:'Geometr706 Md BT';-inkscape-font-specification:'Geometr706 Md BT';letter-spacing:0px;word-spacing:0px;fill:#3259b4;fill-opacity:1;stroke-width:93.437\"/>",
@@ -176,6 +195,7 @@ test('metadata and editor blocks cannot contain rendering, active, or unknown no
 test('rejects CSS resources, executable syntax, unknown properties, and unconsumed text', async (t) => {
   const file = await input(t);
   for (const css of [
+    'enable-background:url(https://example.com/a)',
     'fill:url(https://example.com/a)',
     'fill:url(data:image/svg+xml;base64,PHN2Zy8+)',
     'fill:url(//example.com/a)',

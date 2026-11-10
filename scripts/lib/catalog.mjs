@@ -180,6 +180,76 @@ function checkRaster(buffer, extension, context) {
   return {};
 }
 
+async function readRegisteredFile(entry, folder, context) {
+  requireValue(basename(entry.file) === entry.file, `${context}.file must be a basename`);
+  const path = join(folder, entry.file);
+  const stat = await realEntry(path, false);
+  requireValue(stat.size === entry.bytes, `${path}: byte size does not match metadata`);
+  const buffer = await readFile(path);
+  requireValue(
+    createHash('sha256').update(buffer).digest('hex') === entry.sha256,
+    `${path}: SHA-256 does not match metadata`,
+  );
+  return { path, buffer };
+}
+
+// Basic native-format identification only. Design attachments are downloaded,
+// never parsed as renderable images or inserted into the document.
+function checkSourceFile(buffer, extension, context) {
+  let header = buffer.toString('latin1', 0, 8192);
+  const pdf =
+    /^%PDF-\d\.\d[\r\n]/.test(header) &&
+    /%%EOF\s*$/.test(buffer.subarray(-1024).toString('latin1'));
+  if (buffer.length >= 30 && buffer.readUInt32BE(0) === 0xc5d0d3c6) {
+    const offset = buffer.readUInt32LE(4);
+    const length = buffer.readUInt32LE(8);
+    requireValue(
+      offset >= 30 && length > 0 && offset + length <= buffer.length,
+      `${context}: source file header contains invalid EPS offsets`,
+    );
+    header = buffer.toString('latin1', offset, offset + Math.min(length, 8192));
+  }
+  const postscript = /^%!PS-Adobe-[\d.]+(?: EPSF-[\d.]+)?[\r\n]/.test(header);
+  const illustrator = postscript && /%%Creator:[^\r\n]*Illustrator/i.test(header);
+  const eps = /^%!PS-Adobe-[\d.]+ EPSF-[\d.]+[\r\n]/.test(header);
+  requireValue(
+    (extension === '.pdf' && pdf) ||
+      (extension === '.ai' && (pdf || illustrator)) ||
+      (extension === '.eps' && eps),
+    `${context}: source file header does not match ${extension}`,
+  );
+}
+
+async function readSourceFiles(sourceFiles, assets, folder, id) {
+  if (sourceFiles === undefined) return undefined;
+  const files = new Set();
+  const assetFiles = new Set(assets.map((asset) => asset.file));
+  const result = [];
+  for (const entry of sourceFiles) {
+    const context = `${id}.sourceFiles.${entry.file}`;
+    requireValue(!files.has(entry.file), `${context}: duplicate source file`);
+    files.add(entry.file);
+    requireValue(
+      entry.assetFiles.every((file) => assetFiles.has(file)),
+      `${context}.assetFiles must reference registered assets`,
+    );
+    const { buffer, path } = await readRegisteredFile(entry, folder, context);
+    checkSourceFile(buffer, extname(entry.file), path);
+    result.push({
+      file: entry.file,
+      label: entry.label,
+      assetFiles: [...entry.assetFiles].sort(order),
+      source: entry.source,
+      sourcePage: entry.sourcePage,
+      sha256: entry.sha256,
+      bytes: entry.bytes,
+      rights: { ...entry.rights },
+      path: `logo/${id}/${entry.file}`,
+    });
+  }
+  return result.sort((a, b) => order(a.file, b.file));
+}
+
 async function readAsset(asset, folder, id) {
   const context = `${id}.assets`;
   validate(asset, assetSchema, context);
@@ -194,17 +264,9 @@ async function readAsset(asset, folder, id) {
     `${context}.provenance.placement requires the website channel`,
   );
   const file = asset.file;
-  requireValue(basename(file) === file, `${context}.file must be an image basename`);
-  const path = join(folder, file);
-  const stat = await realEntry(path, false);
-  requireValue(stat.size === asset.bytes, `${path}: byte size does not match metadata`);
-  const buffer = await readFile(path);
-  requireValue(
-    createHash('sha256').update(buffer).digest('hex') === asset.sha256,
-    `${path}: SHA-256 does not match metadata`,
-  );
-  let dimensions = {};
-  if (extname(file) === '.svg') checkSvg(buffer, path);
+  const { path, buffer } = await readRegisteredFile(asset, folder, context);
+  let dimensions;
+  if (extname(file) === '.svg') dimensions = checkSvg(buffer, path);
   else dimensions = checkRaster(buffer, extname(file), path);
   return {
     file,
@@ -222,6 +284,12 @@ async function readAsset(asset, folder, id) {
       ...(channel === undefined ? {} : { channel }),
       ...(placement === undefined ? {} : { placement }),
       ...(pageTitle === undefined ? {} : { pageTitle }),
+      ...(asset.provenance.originalAsset === undefined
+        ? {}
+        : { originalAsset: asset.provenance.originalAsset }),
+      ...(asset.provenance.originalSha256 === undefined
+        ? {}
+        : { originalSha256: asset.provenance.originalSha256 }),
     },
     ...(asset.qualityNotes === undefined ? {} : { qualityNotes: [...asset.qualityNotes] }),
     ...(asset.usageWarnings === undefined ? {} : { usageWarnings: [...asset.usageWarnings] }),
@@ -242,7 +310,7 @@ async function readAsset(asset, folder, id) {
       ...(asset.rights.notes === undefined ? {} : { notes: asset.rights.notes }),
     },
     ...dimensions,
-    path: `logos/${id}/${file}`,
+    path: `logo/${id}/${file}`,
   };
 }
 
@@ -286,11 +354,12 @@ function readArtworks(artworks, assets, context) {
 
 /** Validate local files and declared permission fields; does not verify legal permission. */
 export async function loadCatalog(root = repositoryRoot) {
-  const logos = join(root, 'logos');
+  const logos = join(root, 'logo');
   await realEntry(logos, true);
   const brands = [];
   const ids = new Set();
   for (const folderName of (await readdir(logos)).sort(order)) {
+    if (folderName === '.DS_Store') continue;
     const folder = join(logos, folderName);
     if (folderName === '.gitkeep') {
       requireValue(
@@ -301,7 +370,7 @@ export async function loadCatalog(root = repositoryRoot) {
     }
     await realEntry(folder, true);
     scalar(folderName, metadataSchema.properties.id, `${folder}: directory ID`);
-    const children = await readdir(folder);
+    const children = (await readdir(folder)).filter((name) => name !== '.DS_Store');
     for (const child of children) await realEntry(join(folder, child), false);
     let metadata;
     try {
@@ -328,7 +397,36 @@ export async function loadCatalog(root = repositoryRoot) {
     requireValue(new Set(files).size === files.length, `${folder}: duplicate asset file`);
     const assets = [];
     for (const item of metadata.assets) assets.push(await readAsset(item, folder, metadata.id));
+    for (const asset of assets) {
+      const originalFile = asset.provenance.originalAsset;
+      const extracted = asset.provenance.processing === 'extracted';
+      requireValue(
+        extracted || (originalFile === undefined && asset.provenance.originalSha256 === undefined),
+        `${folder}.${asset.file}: originalAsset requires extracted processing`,
+      );
+      if (!extracted) continue;
+      const original = assets.find((entry) => entry.file === originalFile);
+      requireValue(
+        extname(asset.file) === '.svg' &&
+          asset.variant === 'icon' &&
+          asset.layout === 'standalone' &&
+          original &&
+          extname(original.file) === '.svg' &&
+          original.provenance.processing === 'original',
+        `${folder}.${asset.file}: extracted symbols require a registered original SVG`,
+      );
+      requireValue(
+        asset.source === original.source &&
+          asset.provenance.originalSha256 === original.sha256 &&
+          asset.sourcePage === original.sourcePage &&
+          asset.provenance.sourceType === original.provenance.sourceType &&
+          asset.provenance.channel === original.provenance.channel &&
+          asset.provenance.placement === undefined,
+        `${folder}.${asset.file}: extracted symbols must preserve original acquisition sources`,
+      );
+    }
     const artworks = readArtworks(metadata.artworks, assets, `${folder}.artworks`);
+    const sourceFiles = await readSourceFiles(metadata.sourceFiles, assets, folder, metadata.id);
     const selected = assets.find((item) => item.file === metadata.defaultAsset);
     requireValue(selected, `${folder}.defaultAsset must reference a registered asset`);
     requireValue(
@@ -340,7 +438,12 @@ export async function loadCatalog(root = repositoryRoot) {
       `${folder}.defaultAsset must select a current asset when one exists`,
     );
     requireValue(
-      children.every((child) => child === 'metadata.json' || files.includes(child)),
+      children.every(
+        (child) =>
+          child === 'metadata.json' ||
+          files.includes(child) ||
+          sourceFiles?.some((entry) => entry.file === child),
+      ),
       `${folder}: orphan file`,
     );
     brands.push({
@@ -372,6 +475,7 @@ export async function loadCatalog(root = repositoryRoot) {
       ...(metadata.parentId === undefined ? {} : { parentId: metadata.parentId }),
       defaultAsset: metadata.defaultAsset,
       ...(artworks === undefined ? {} : { artworks }),
+      ...(sourceFiles === undefined ? {} : { sourceFiles }),
       assets: assets.sort((a, b) => order(a.file, b.file)),
     });
   }

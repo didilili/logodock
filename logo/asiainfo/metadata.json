@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 3,
+  "id": "asiainfo",
+  "name": "亚信科技",
+  "aliases": [],
+  "identity": {
+    "nameZh": "亚信科技",
+    "nameEn": "AsiaInfo",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "亚信科技官方来源",
+        "url": "https://www.asiainfo.com/zh_cn/index.html",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.asiainfo.com/zh_cn/index.html",
+  "entityType": "company",
+  "categories": [
+    "enterprise-software"
+  ],
+  "defaultAsset": "logo-bilingual-color-official.svg",
+  "assets": [
+    {
+      "file": "logo-bilingual-color-official.svg",
+      "label": "彩色组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.asiainfo.com/include/images/logo.svg",
+      "sourcePage": "https://www.asiainfo.com/zh_cn/index.html",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "a0169adbbbfe6118aec26d3c5db1c1c78d14bf8cbf5307a2e49700f4e55f5102",
+      "bytes": 43310,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.asiainfo.com/zh_cn/index.html",
+        "attribution": "亚信科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "logo-bilingual-white-official.svg",
+      "label": "反白组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.asiainfo.com/include/images/logo-white.svg",
+      "sourcePage": "https://www.asiainfo.com/zh_cn/index.html",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "dc93262a5f013564900f1359e980053dbde049d9f184195960bd2d2e72a68c3a",
+      "bytes": 22035,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.asiainfo.com/zh_cn/index.html",
+        "attribution": "亚信科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "icon-color-extracted.svg",
+      "label": "彩色图形",
+      "variant": "icon",
+      "status": "current",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "originalAsset": "logo-bilingual-color-official.svg",
+        "originalSha256": "a0169adbbbfe6118aec26d3c5db1c1c78d14bf8cbf5307a2e49700f4e55f5102"
+      },
+      "source": "https://www.asiainfo.com/include/images/logo.svg",
+      "sourcePage": "https://www.asiainfo.com/zh_cn/index.html",
+      "qualityNotes": [
+        "透明背景，长边贴边，短边居中补齐方形画布。"
+      ],
+      "sha256": "2460cdc80e1315db4e46f4fec112bbb4a25717e186654822599cdcf99800bb05",
+      "bytes": 8618,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.asiainfo.com/zh_cn/index.html",
+        "attribution": "亚信科技。原作品权利及来源依据沿用母稿记录，图形提取处理由 LogoDock 完成。",
+        "reviewedAt": "2026-11-10",
+        "notes": "许可及署名条件待核实。"
+      }
+    },
+    {
+      "file": "icon-white-extracted.svg",
+      "label": "白色图形",
+      "variant": "icon",
+      "status": "current",
+      "language": "none",
+      "layout": "standalone",
+      "color": "white",
+      "background": "dark",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "originalAsset": "logo-bilingual-white-official.svg",
+        "originalSha256": "dc93262a5f013564900f1359e980053dbde049d9f184195960bd2d2e72a68c3a"
+      },
+      "source": "https://www.asiainfo.com/include/images/logo-white.svg",
+      "sourcePage": "https://www.asiainfo.com/zh_cn/index.html",
+      "qualityNotes": [
+        "透明背景，长边贴边，短边居中补齐方形画布。"
+      ],
+      "sha256": "588aaccd65334132e1b86afe8cbda4ef8e93560fd333ce1bfaea0b792c70c541",
+      "bytes": 4224,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.asiainfo.com/zh_cn/index.html",
+        "attribution": "亚信科技。原作品权利及来源依据沿用母稿记录，图形提取处理由 LogoDock 完成。",
+        "reviewedAt": "2026-11-10",
+        "notes": "许可及署名条件待核实。"
+      }
+    }
+  ]
+}

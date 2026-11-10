@@ -13,9 +13,9 @@ import {
 async function fixture(t, ids = ['example']) {
   const root = await mkdtemp(join(tmpdir(), 'logodock-validation-'));
   t.after(() => rm(root, { recursive: true, force: true }));
-  await mkdir(join(root, 'logos'));
+  await mkdir(join(root, 'logo'));
   for (const id of ids) {
-    const folder = join(root, 'logos', id);
+    const folder = join(root, 'logo', id);
     await mkdir(folder);
     await writeFile(join(folder, 'icon.svg'), svg);
     await writeFile(
@@ -27,7 +27,7 @@ async function fixture(t, ids = ['example']) {
 }
 
 async function mutate(root, change, id = 'example') {
-  const path = join(root, 'logos', id, 'metadata.json');
+  const path = join(root, 'logo', id, 'metadata.json');
   const metadata = JSON.parse(await readFile(path, 'utf8'));
   change(metadata);
   await writeFile(path, JSON.stringify(metadata));
@@ -270,8 +270,8 @@ test('trailing newlines do not bypass the schema HTTPS and filename boundaries',
     m.defaultAsset = 'icon.svg\n';
     m.assets[0].file = 'icon.svg\n';
   });
-  await writeFile(join(root, 'logos/example/icon.svg\n'), svg);
-  await rm(join(root, 'logos/example/icon.svg'));
+  await writeFile(join(root, 'logo/example/icon.svg\n'), svg);
+  await rm(join(root, 'logo/example/icon.svg'));
   await assert.rejects(loadCatalog(root), /Invalid catalog:/);
 });
 
@@ -281,8 +281,8 @@ test('catalog rejects dot-prefixed asset filenames that the preview server canno
     m.defaultAsset = '.logo.svg';
     m.assets[0].file = '.logo.svg';
   });
-  await writeFile(join(root, 'logos/example/.logo.svg'), svg);
-  await rm(join(root, 'logos/example/icon.svg'));
+  await writeFile(join(root, 'logo/example/.logo.svg'), svg);
+  await rm(join(root, 'logo/example/icon.svg'));
   await assert.rejects(loadCatalog(root), /Invalid catalog:/);
 });
 
@@ -292,7 +292,7 @@ test('an explicit historical default is allowed only when no current asset exist
     m.assets[0].status = 'historical';
   });
   assert.equal((await loadCatalog(root)).brands[0].assets[0].status, 'historical');
-  await writeFile(join(root, 'logos/example/current.svg'), svg);
+  await writeFile(join(root, 'logo/example/current.svg'), svg);
   await mutate(root, (m) => {
     m.assets.push({ ...m.assets[0], file: 'current.svg', status: 'current' });
   });
@@ -306,7 +306,7 @@ test('an explicit historical default is allowed only when no current asset exist
 test('display is optional for existing records, preserved for alternatives and cannot replace the brand default', async (t) => {
   const root = await fixture(t);
   assert.equal(Object.hasOwn((await loadCatalog(root)).brands[0].assets[0], 'display'), false);
-  await writeFile(join(root, 'logos/example/alternative.svg'), svg);
+  await writeFile(join(root, 'logo/example/alternative.svg'), svg);
   await mutate(root, (m) => {
     m.assets.push({ ...m.assets[0], file: 'alternative.svg', display: 'alternative' });
   });
@@ -324,7 +324,7 @@ test('display is optional for existing records, preserved for alternatives and c
 test('an artwork must recommend a primary member when one exists but all-alternative groups are allowed', async (t) => {
   const root = await fixture(t);
   for (const file of ['blue.svg', 'blue-small.svg'])
-    await writeFile(join(root, 'logos/example', file), svg);
+    await writeFile(join(root, 'logo/example', file), svg);
   await mutate(root, (m) => {
     m.assets.push(
       { ...m.assets[0], file: 'blue.svg' },

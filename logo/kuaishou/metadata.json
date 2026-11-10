@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 3,
+  "id": "kuaishou",
+  "name": "快手",
+  "aliases": [
+    "Kuaishou"
+  ],
+  "website": "https://www.kuaishou.com/",
+  "identity": {
+    "nameZh": "快手",
+    "nameEn": "Kuaishou",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "快手官方素材库",
+        "url": "https://www.kuaishou.com/official/material-lib",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [
+    "internet"
+  ],
+  "defaultAsset": "icon-orange-official.png",
+  "assets": [
+    {
+      "file": "icon-orange-official.png",
+      "label": "橙色摄影机图形",
+      "variant": "icon",
+      "status": "current",
+      "background": "light",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library",
+        "pageTitle": "快手素材库"
+      },
+      "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/pure-logo-1-min.png",
+      "sourcePage": "https://www.kuaishou.com/official/material-lib",
+      "sha256": "dea4cc25d61910638339e6867009e89e95ef0da54ebf824fa1aea041ddd07305",
+      "bytes": 11543,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:Kuaishou_logo.png&oldid=686719154",
+        "attribution": "快手 / Kuaishou。图片来源：快手网站（kuaishou.com）；官方原件未修改。保留 Commons 对相同摄影机图形的第三方 PD-textlogo 判断，商标权保留。",
+        "reviewedAt": "2026-11-09",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围为相同摄影机图形及 KUAISHOU 英文组合。官方素材页另要求用于宣传推广快手产品、署名及保持标识完整性。"
+      },
+      "qualityNotes": [
+        "透明背景，有效图形约 680 × 781 像素。"
+      ]
+    },
+    {
+      "file": "logo-english-official.jpg",
+      "label": "橙灰英文横版组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library",
+        "pageTitle": "快手素材库"
+      },
+      "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/e-logo-1-min.jpeg",
+      "sourcePage": "https://www.kuaishou.com/official/material-lib",
+      "sha256": "0cf90382c21ccc008b3fa57fce28a6fb308aa7c869034f6e626ff3b30cc08a37",
+      "bytes": 399040,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:Kuaishou_logo.png&oldid=686719154",
+        "attribution": "快手 / Kuaishou。官方素材页原件未修改；保留Commons对同款简单摄影机和英文字标的PD-textlogo判断，商标权保留。",
+        "reviewedAt": "2026-11-09",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围为相同摄影机图形及 KUAISHOU 英文组合。官方素材页另要求用于宣传推广快手产品、署名及保持标识完整性。"
+      },
+      "qualityNotes": [
+        "不透明白底，画布留白较多。",
+        "有效图稿约 8559 × 1596 像素。"
+      ]
+    },
+    {
+      "file": "icon-rounded-official.png",
+      "label": "圆角应用图标",
+      "variant": "icon",
+      "status": "current",
+      "background": "any",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library",
+        "pageTitle": "快手素材库"
+      },
+      "source": "https://static.yximgs.com/udata/pkg/frontend-explore/material-lib-www/pure-logo-2.png",
+      "sourcePage": "https://www.kuaishou.com/official/material-lib",
+      "sha256": "a52b207fc03130e06c37c6963987f3e4355d04246ceb169b09299d44eef1b6b6",
+      "bytes": 66334,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:Kuaishou_logo.png&oldid=686719154",
+        "attribution": "快手 / Kuaishou。保留官方原始出处与商标声明，原文件未经修改。Commons对相应简单图形或字标作第三方PD-textlogo判断，无版权署名要求。",
+        "reviewedAt": "2026-11-09",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围为相同摄影机图形及 KUAISHOU 英文组合。官方素材页另要求用于宣传推广快手产品、署名及保持标识完整性。"
+      },
+      "qualityNotes": [
+        "四角透明。"
+      ]
+    }
+  ]
+}

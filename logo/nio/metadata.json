@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 3,
+  "id": "nio",
+  "name": "蔚来",
+  "aliases": [
+    "NIO",
+    "Nio"
+  ],
+  "identity": {
+    "nameZh": "蔚来",
+    "nameEn": "NIO",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "蔚来国际官网",
+        "url": "https://www.nio.com/",
+        "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "NIO 官方品牌说明",
+        "url": "https://us.nio.com/blog/showing-gratitude-and-celebrating-anniversaries",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.nio.com/",
+  "entityType": "company",
+  "categories": [
+    "automotive"
+  ],
+  "defaultAsset": "logo-black-english-official.svg",
+  "assets": [
+    {
+      "file": "icon-white-official.svg",
+      "label": "白色图形 · 原始画布",
+      "variant": "icon",
+      "status": "current",
+      "language": "none",
+      "layout": "standalone",
+      "color": "white",
+      "background": "dark",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header",
+        "pageTitle": "蔚来国际官网首页"
+      },
+      "source": "https://cdn-udp-public.eu.nio.com/www-nio/cdn-static/mynio/nextjs/images/icons/nio-logo-white.svg",
+      "sourcePage": "https://www.nio.com/",
+      "sha256": "3a6a38e9bf1cafcdd0a744c1345050ff5d432d98c90ef13f7b9bc6a2b4650d08",
+      "bytes": 1625,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:NIO_logo_emblem.svg&oldid=1124487383",
+        "attribution": "标识归属 NIO / 蔚来；Commons 的 PD-textlogo 判断无版权署名要求，保留原始来源与商标声明。文件原样保存。",
+        "reviewedAt": "2026-11-09",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围限于相同 NIO 独立图形。"
+      }
+    },
+    {
+      "file": "logo-black-english-official.svg",
+      "label": "黑色英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "pageTitle": "蔚来国际官网品牌介绍"
+      },
+      "source": "https://cdn-udp-public.eu.nio.com/www-nio/admin-file-upload/test/2026-02-05/837323/logo-NIO-desktop.svg",
+      "sourcePage": "https://www.nio.com/about?noredirect=",
+      "qualityNotes": [
+        "透明背景，左右保留官网留白。"
+      ],
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:NIO_logo.svg&oldid=1114774938",
+        "attribution": "NIO / 蔚来。保留官方来源及 Commons 对相同简单图形与 NIO 字标的第三方公共领域判断；来源原字节未修改，商标权保留。",
+        "reviewedAt": "2026-11-09",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围为相同 NIO 图形及对应英文组合。官方媒体 Kit 的使用范围限于媒体报道。"
+      },
+      "status": "current",
+      "sha256": "d57981391725098fd880a531ec3b3d15b843ac7571469b29525eedab54770552",
+      "bytes": 3025
+    },
+    {
+      "file": "icon-turquoise-app.png",
+      "label": "青绿底应用图标",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "rendered",
+        "channel": "app-store"
+      },
+      "source": "https://play-lh.googleusercontent.com/8DtACtbq912ncrZWQtyO0Op6TyvTeHci8QZRd1UQ8HMWKJVbhATWSismWYFi2gpWm97arfHQi55CK_kZ7v9Y=s0-br30",
+      "sourcePage": "https://play.google.com/store/apps/details?id=com.nio.nioapp",
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:NIO_logo_emblem.svg&oldid=1124487383",
+        "attribution": "NIO / 蔚来。Google Play 官方 NIO 应用商店展示图原样保存；保留 Commons 对相同简单几何图形的第三方 PD-textlogo 判断，商标权保留。",
+        "reviewedAt": "2026-11-09",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围限于相同 NIO 图形及简单青绿底形，本文件用于识别 NIO 官方应用。"
+      },
+      "status": "current",
+      "sha256": "21740d9b8b5695baaed1fb9dc5d338e8bc49c0730609032d9a7d138388e687dd",
+      "bytes": 23888
+    },
+    {
+      "file": "icon-black-extracted.svg",
+      "label": "黑色图形",
+      "variant": "icon",
+      "status": "current",
+      "language": "none",
+      "layout": "standalone",
+      "color": "black",
+      "background": "light",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "pageTitle": "蔚来国际官网品牌介绍",
+        "originalAsset": "logo-black-english-official.svg",
+        "originalSha256": "d57981391725098fd880a531ec3b3d15b843ac7571469b29525eedab54770552"
+      },
+      "source": "https://cdn-udp-public.eu.nio.com/www-nio/admin-file-upload/test/2026-02-05/837323/logo-NIO-desktop.svg",
+      "sourcePage": "https://www.nio.com/about?noredirect=",
+      "qualityNotes": [
+        "透明背景，长边贴边、短边居中补齐方形画布。"
+      ],
+      "sha256": "97d1270c1169dc401d7113db909078fa4ea97d8766f3cbf3ef5e8d49b8682a8f",
+      "bytes": 1835,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:NIO_logo.svg&oldid=1114774938",
+        "attribution": "NIO / 蔚来。图形提取处理由LogoDock完成，保留官方原稿来源、Commons对原作品的第三方公共领域判定及商标声明。",
+        "reviewedAt": "2026-11-10",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围为相同 NIO 图形及对应英文组合。官方媒体 Kit 的使用范围限于媒体报道。"
+      }
+    },
+    {
+      "file": "icon-white-square-extracted.svg",
+      "label": "白色图形",
+      "variant": "icon",
+      "status": "current",
+      "language": "none",
+      "layout": "standalone",
+      "color": "white",
+      "background": "dark",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "pageTitle": "蔚来国际官网首页",
+        "originalAsset": "icon-white-official.svg",
+        "originalSha256": "3a6a38e9bf1cafcdd0a744c1345050ff5d432d98c90ef13f7b9bc6a2b4650d08"
+      },
+      "source": "https://cdn-udp-public.eu.nio.com/www-nio/cdn-static/mynio/nextjs/images/icons/nio-logo-white.svg",
+      "sourcePage": "https://www.nio.com/",
+      "qualityNotes": [
+        "透明背景，长边贴边，短边居中补齐方形画布。"
+      ],
+      "sha256": "910779441f6d7432e9ac5448b223e0edf1da9dcec5ea34fdf8793a139aadf6a2",
+      "bytes": 2096,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:NIO_logo_emblem.svg&oldid=1124487383",
+        "attribution": "蔚来。原作品权利及来源依据沿用母稿记录，图形提取处理由 LogoDock 完成。",
+        "reviewedAt": "2026-11-10",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围限于相同 NIO 独立图形。"
+      }
+    }
+  ],
+  "artworks": [
+    {
+      "id": "square-white",
+      "label": "白色图形",
+      "files": [
+        "icon-white-official.svg",
+        "icon-white-square-extracted.svg"
+      ],
+      "defaultAsset": "icon-white-square-extracted.svg"
+    }
+  ]
+}

@@ -13,7 +13,7 @@ test(
   { timeout: 45000 },
   async (t) => {
     const root = await mkdtemp(join(tmpdir(), 'logodock-dev-'));
-    for (const folder of ['scripts', 'schema', 'logos', 'src']) {
+    for (const folder of ['scripts', 'schema', 'logo', 'src']) {
       await cp(new URL(folder, repository), join(root, folder), { recursive: true });
     }
     for (const file of await readdir(repository)) {
@@ -87,26 +87,26 @@ test(
       (await viteClient.text()).includes('createHotContext'),
       'The base path must serve Vite hot-update modules.',
     );
-    const detail = await fetch(`${url}logos/git/`);
+    const detail = await fetch(`${url}logo/git/`);
     assert.equal(detail.status, 200);
     assert.match(await detail.text(), /Git Logo|Git/);
-    const source = await fetch(`${url}logos/git/icon-orange.svg`);
+    const source = await fetch(`${url}logo/git/icon-orange.svg`);
     assert.equal(source.status, 200);
     assert.equal(
       await source.text(),
-      await readFile(new URL('logos/git/icon-orange.svg', repository), 'utf8'),
+      await readFile(new URL('logo/git/icon-orange.svg', repository), 'utf8'),
     );
 
     // Exercise Svelte's SSR escaping with real, schema-valid hostile metadata in
     // the same server. No string-renderer-specific fixture or extra build.
-    const metadataPath = join(root, 'logos/alibaba/metadata.json');
+    const metadataPath = join(root, 'logo/alibaba/metadata.json');
     const originalMetadata = await readFile(metadataPath, 'utf8');
     const hostile = JSON.parse(originalMetadata);
     const attack = `"><img src=x onerror=alert(1)></script><script>alert('x')</script>&\u2028`;
     hostile.name = hostile.identity.nameZh = attack;
     await writeFile(metadataPath, JSON.stringify(hostile));
     await eventually(async () => {
-      const response = await fetch(`${url}logos/alibaba/`);
+      const response = await fetch(`${url}logo/alibaba/`);
       const html = await response.text();
       if (response.status !== 200 || !html.includes('&lt;img src=x')) return false;
       assert.ok(!html.includes('<img src=x'), 'Metadata cannot create an image element.');

@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 3,
+  "id": "shopee",
+  "name": "虾皮",
+  "identity": {
+    "nameZh": "虾皮",
+    "nameEn": "Shopee",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "Shopee 官方招聘站（品牌身份与现用图稿）",
+        "url": "https://careers.shopee.sg/",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "aliases": [
+    "Shopee"
+  ],
+  "website": "https://shopee.sg/",
+  "entityType": "company",
+  "categories": [
+    "e-commerce"
+  ],
+  "defaultAsset": "logo-horizontal-official.svg",
+  "assets": [
+    {
+      "file": "logo-horizontal-official.svg",
+      "label": "橙色英文横版组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "footer",
+        "pageTitle": "Shopee 招聘官网首页"
+      },
+      "source": "https://deo.shopeemobile.com/shopee/shopee-careers-live-sg/assets/img/footer-shopee.62760462.svg",
+      "sourcePage": "https://careers.shopee.sg/",
+      "sha256": "3a15506fbbeaf7d7f75181687513ae4b14d08eb15642c063cc9c7e95f90b4a35",
+      "bytes": 8335,
+      "qualityNotes": [
+        "透明背景。"
+      ],
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:Shopee.svg&oldid=1284381307",
+        "attribution": "Shopee。Commons 对同款简单图形与字标作 PD-textlogo 判定，无版权署名要求；保留官方来源与商标声明。",
+        "reviewedAt": "2026-11-09",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围为相同购物袋图形、S 字形及 Shopee 字标。Sea 官方媒体库要求事先书面批准使用其标识。"
+      }
+    },
+    {
+      "file": "logo-vertical-commons.png",
+      "label": "橙色英文竖版组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "en",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "light",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "rendered",
+        "channel": "commons",
+        "pageTitle": "Wikimedia Commons · Shopee logo.svg"
+      },
+      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Shopee_logo.svg/1920px-Shopee_logo.svg.png",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Shopee_logo.svg",
+      "sha256": "bda90fa44173581ad1b33469ae9199b326b73997ad8d0a115c1901c3eaea8a1a",
+      "bytes": 61253,
+      "qualityNotes": [
+        "透明背景。"
+      ],
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:Shopee_logo.svg&oldid=1191573910",
+        "attribution": "Shopee。Commons 对该购物袋与 Shopee 英文竖版组合标识作 PD-textlogo 公共领域判断，无版权署名要求；商标权保留。",
+        "reviewedAt": "2026-11-09",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围为相同购物袋图形、S 字形及 Shopee 字标。Sea 官方媒体库要求事先书面批准使用其标识。"
+      }
+    },
+    {
+      "file": "icon-orange-extracted.svg",
+      "label": "橙色购物袋",
+      "variant": "icon",
+      "status": "current",
+      "language": "en",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "pageTitle": "Shopee 招聘官网首页",
+        "originalAsset": "logo-horizontal-official.svg",
+        "originalSha256": "3a15506fbbeaf7d7f75181687513ae4b14d08eb15642c063cc9c7e95f90b4a35"
+      },
+      "source": "https://deo.shopeemobile.com/shopee/shopee-careers-live-sg/assets/img/footer-shopee.62760462.svg",
+      "sourcePage": "https://careers.shopee.sg/",
+      "qualityNotes": [
+        "透明背景，长边贴边，短边居中补齐方形画布。",
+        "购物袋内保留 S 字母。"
+      ],
+      "sha256": "4c476b56b554bf94f5df408241a9d6d5e1ce0fbd7611fbc3c2868a6d18ba8f55",
+      "bytes": 2863,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:Shopee.svg&oldid=1284381307",
+        "attribution": "虾皮。原作品权利及来源依据沿用母稿记录，图形提取处理由 LogoDock 完成。",
+        "reviewedAt": "2026-11-10",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围为相同购物袋图形、S 字形及 Shopee 字标。Sea 官方媒体库要求事先书面批准使用其标识。"
+      }
+    }
+  ]
+}

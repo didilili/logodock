@@ -15,7 +15,7 @@ const cli = fileURLToPath(new URL('../scripts/prepare-asset.mjs', import.meta.ur
 async function workspace(t) {
   const root = await mkdtemp(join(tmpdir(), 'logodock-prepare-asset-'));
   t.after(() => rm(root, { recursive: true, force: true }));
-  await mkdir(join(root, 'logos'));
+  await mkdir(join(root, 'logo'));
   return root;
 }
 
@@ -61,9 +61,9 @@ test('prepare-asset creates an isolated draft with exact bytes and pending manua
   assert.equal(draft.assets[0].rights.reference, '');
   assert.equal(await readFile(join(output, 'source.svg'), 'utf8'), svg);
   assert.match(run.stdout, /manual|review|人工|审核/i);
-  await mkdir(join(root, 'logos/sample'));
-  await writeFile(join(root, 'logos/sample/source.svg'), svg);
-  await writeFile(join(root, 'logos/sample/metadata.json'), JSON.stringify(draft));
+  await mkdir(join(root, 'logo/sample'));
+  await writeFile(join(root, 'logo/sample/source.svg'), svg);
+  await writeFile(join(root, 'logo/sample/metadata.json'), JSON.stringify(draft));
   await assert.rejects(loadCatalog(root), /Invalid catalog:/);
 });
 
@@ -98,7 +98,7 @@ test('prepare-asset blocks catalog destinations including symlinked parents', as
   const input = join(root, 'source.svg');
   await writeFile(input, svg);
   const alias = join(root, 'catalog-alias');
-  await symlink(join(repositoryRoot, 'logos'), alias);
+  await symlink(join(repositoryRoot, 'logo'), alias);
   const output = join(alias, `draft-test-no-write-${process.pid}`);
   const run = spawnSync(
     process.execPath,
@@ -106,7 +106,7 @@ test('prepare-asset blocks catalog destinations including symlinked parents', as
     { encoding: 'utf8' },
   );
   assert.equal(run.status, 1);
-  assert.match(run.stderr, /outside logos/);
+  assert.match(run.stderr, /outside logo/);
   await assert.rejects(lstat(output), { code: 'ENOENT' });
 });
 

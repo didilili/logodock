@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 3,
+  "id": "trip-com",
+  "name": "携程集团",
+  "aliases": [
+    "Trip.com Group",
+    "Trip.com Group Limited",
+    "携程集团有限公司"
+  ],
+  "identity": {
+    "nameZh": "携程集团",
+    "nameEn": "Trip.com Group",
+    "legalNames": [
+      {
+        "name": "Trip.com Group Limited",
+        "language": "en",
+        "role": "group",
+        "source": "https://investors.trip.com/",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "name": "携程集团有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://investors.trip.com/zh-hans/news-releases/news-release-details/tripcom-group-limited-reports-unaudited-fourth-quarter-and-5/",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "name": "Trip.com Travel Singapore Pte. Ltd.",
+        "language": "en",
+        "role": "website-operator",
+        "source": "https://group.trip.com/",
+        "reviewedAt": "2026-11-07"
+      }
+    ],
+    "sources": [
+      {
+        "label": "携程集团官网",
+        "url": "https://group.trip.com/",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "官方中文2025全年业绩公告（2026-02-25）",
+        "url": "https://investors.trip.com/zh-hans/news-releases/news-release-details/tripcom-group-limited-reports-unaudited-fourth-quarter-and-5/",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "携程集团官方招聘站（雇主名称核对）",
+        "url": "https://job.ctrip.com/",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://group.trip.com/",
+  "entityType": "company",
+  "categories": [
+    "internet"
+  ],
+  "defaultAsset": "wordmark-white-official.png",
+  "assets": [
+    {
+      "file": "wordmark-white-official.png",
+      "label": "白色集团字标",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "dark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header",
+        "pageTitle": "携程集团官方网站"
+      },
+      "source": "https://dimg04.tripcdn.com/images/0x90212000n90afx071CB.png",
+      "sourcePage": "https://group.trip.com/",
+      "sha256": "edf3a1b21c9fa2dc9c8e1815869476acd8400dbff960ba4679b682c4d3f91998",
+      "bytes": 5841,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:Trip.com_Group_logo.svg&oldid=1245285677",
+        "attribution": "携程集团 / Trip.com Group。来源为集团官网直接提供的原始PNG，未修改；Commons对相同简单英文字标的第三方PD-textlogo判断无版权署名要求，商标权保留。",
+        "reviewedAt": "2026-11-09",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围限于相同 Trip.com Group 简单英文字标。"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ]
+    },
+    {
+      "file": "wordmark-blue-small-official.png",
+      "label": "蓝色小尺寸字标",
+      "variant": "wordmark",
+      "status": "current",
+      "display": "alternative",
+      "background": "light",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header",
+        "pageTitle": "携程集团官方网站"
+      },
+      "source": "https://dimg04.tripcdn.com/images/0x95212000n93ii0mB382.png",
+      "sourcePage": "https://group.trip.com/",
+      "sha256": "c9f1b844d1b0664cf7c6c04521617167d4767e674ee7decaa5202a60272324a7",
+      "bytes": 2456,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:Trip.com_Group_logo.svg&oldid=1245285677",
+        "attribution": "携程集团 / Trip.com Group。来源为集团官网直接提供的原始PNG，未修改；Commons对相同简单英文字标的第三方PD-textlogo判断无版权署名要求，商标权保留。",
+        "reviewedAt": "2026-11-09",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围限于相同 Trip.com Group 简单英文字标。"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ]
+    }
+  ]
+}

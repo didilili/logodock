@@ -8,7 +8,11 @@ export function normalizeQuery(value) {
 
 const names = new Intl.Collator('zh-CN', { sensitivity: 'base', numeric: true });
 const sourceLabels = { official: '官方', commons: 'Commons' };
-const processingLabels = { original: '原件 原始文件', rendered: '渲染' };
+const processingLabels = {
+  original: '原件 原始文件',
+  rendered: '渲染',
+  extracted: '图形提取版',
+};
 const shapeLabels = { icon: '图形 图标', wordmark: '文字 字标', logo: '组合标识' };
 const languageLabels = {
   none: '无字',

@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 3,
+  "id": "xpeng",
+  "name": "小鹏",
+  "aliases": [
+    "小鹏汽车",
+    "小鹏集团",
+    "XPeng",
+    "Xpeng Motors"
+  ],
+  "identity": {
+    "nameZh": "小鹏",
+    "nameEn": "XPENG",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "小鹏中国官网",
+        "url": "https://www.xiaopeng.com/",
+        "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "小鹏投资者关系",
+        "url": "https://ir.xiaopeng.com/",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.xiaopeng.com/",
+  "entityType": "company",
+  "categories": [
+    "automotive"
+  ],
+  "defaultAsset": "icon-black-square-extracted.svg",
+  "assets": [
+    {
+      "file": "icon-black-official.svg",
+      "label": "黑色图形 · 原始画布",
+      "variant": "icon",
+      "status": "current",
+      "language": "none",
+      "layout": "standalone",
+      "color": "black",
+      "background": "light",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header",
+        "pageTitle": "小鹏汽车官网"
+      },
+      "source": "https://xps01.xiaopeng.com/domestic/_next/static/media/black-logo.d7e75b41.svg",
+      "sourcePage": "https://www.xiaopeng.com/",
+      "sha256": "b3c739e433b12bc1587cd4caf23b1b4c485bd37f1ee684f1a8d5c6fd8084de3c",
+      "bytes": 2837,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:XPeng_logo.svg&oldid=1115665137",
+        "attribution": "标识归属 XPENG / 小鹏；Commons 的 PD-textlogo 判断无版权署名要求，保留原始来源与商标声明。文件原样保存。",
+        "reviewedAt": "2026-11-09",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围为相同 X 形图形及 XPENG 英文组合。"
+      }
+    },
+    {
+      "file": "icon-white-official.svg",
+      "label": "白色图形 · 原始画布",
+      "variant": "icon",
+      "status": "current",
+      "language": "none",
+      "layout": "standalone",
+      "color": "white",
+      "background": "dark",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header",
+        "pageTitle": "小鹏汽车官网"
+      },
+      "source": "https://xps01.xiaopeng.com/domestic/_next/static/media/white-logo.9330e0be.svg",
+      "sourcePage": "https://www.xiaopeng.com/",
+      "sha256": "c11bf1d7f744691816ea304265e7177f444d7a06573e6898b899671514bc97b4",
+      "bytes": 2837,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:XPeng_logo.svg&oldid=1115665137",
+        "attribution": "标识归属 XPENG / 小鹏；Commons 的 PD-textlogo 判断无版权署名要求，保留原始来源与商标声明。文件原样保存。",
+        "reviewedAt": "2026-11-09",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围为相同 X 形图形及 XPENG 英文组合。"
+      }
+    },
+    {
+      "file": "logo-black-commons.svg",
+      "label": "黑色英文组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "original",
+        "channel": "commons"
+      },
+      "source": "https://upload.wikimedia.org/wikipedia/commons/c/ca/XPeng_logo.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:XPeng_logo.svg",
+      "sha256": "e61c71cc54e8062b767822a53f02e96adb08e254dca6b5b342921220034cbad7",
+      "bytes": 4234,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:XPeng_logo.svg&oldid=1115665137",
+        "attribution": "标识归属 XPENG / 小鹏；Commons 的 PD-textlogo 判断无版权署名要求，保留原始来源与商标声明。文件原样保存。",
+        "reviewedAt": "2026-11-09",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围为相同 X 形图形及 XPENG 英文组合。"
+      }
+    },
+    {
+      "file": "icon-black-square-extracted.svg",
+      "label": "黑色图形",
+      "variant": "icon",
+      "status": "current",
+      "language": "none",
+      "layout": "standalone",
+      "color": "black",
+      "background": "light",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "pageTitle": "小鹏汽车官网",
+        "originalAsset": "icon-black-official.svg",
+        "originalSha256": "b3c739e433b12bc1587cd4caf23b1b4c485bd37f1ee684f1a8d5c6fd8084de3c"
+      },
+      "source": "https://xps01.xiaopeng.com/domestic/_next/static/media/black-logo.d7e75b41.svg",
+      "sourcePage": "https://www.xiaopeng.com/",
+      "qualityNotes": [
+        "透明背景，长边贴边，短边居中补齐方形画布。"
+      ],
+      "sha256": "beb2706269b422468124b19b1e325ea39012a735b904b54c181dcfc93e8f6b46",
+      "bytes": 3296,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:XPeng_logo.svg&oldid=1115665137",
+        "attribution": "小鹏。原作品权利及来源依据沿用母稿记录，图形提取处理由 LogoDock 完成。",
+        "reviewedAt": "2026-11-10",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围为相同 X 形图形及 XPENG 英文组合。"
+      }
+    },
+    {
+      "file": "icon-white-square-extracted.svg",
+      "label": "白色图形",
+      "variant": "icon",
+      "status": "current",
+      "language": "none",
+      "layout": "standalone",
+      "color": "white",
+      "background": "dark",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "pageTitle": "小鹏汽车官网",
+        "originalAsset": "icon-white-official.svg",
+        "originalSha256": "c11bf1d7f744691816ea304265e7177f444d7a06573e6898b899671514bc97b4"
+      },
+      "source": "https://xps01.xiaopeng.com/domestic/_next/static/media/white-logo.9330e0be.svg",
+      "sourcePage": "https://www.xiaopeng.com/",
+      "qualityNotes": [
+        "透明背景，长边贴边，短边居中补齐方形画布。"
+      ],
+      "sha256": "bf7e1d480106c0e74d0a59276b96860e0d294e7de08dccd38e2f879983f7ff29",
+      "bytes": 3296,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:XPeng_logo.svg&oldid=1115665137",
+        "attribution": "小鹏。原作品权利及来源依据沿用母稿记录，图形提取处理由 LogoDock 完成。",
+        "reviewedAt": "2026-11-10",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围为相同 X 形图形及 XPENG 英文组合。"
+      }
+    }
+  ],
+  "artworks": [
+    {
+      "id": "square-black",
+      "label": "黑色图形",
+      "files": [
+        "icon-black-official.svg",
+        "icon-black-square-extracted.svg"
+      ],
+      "defaultAsset": "icon-black-square-extracted.svg"
+    },
+    {
+      "id": "square-white",
+      "label": "白色图形",
+      "files": [
+        "icon-white-official.svg",
+        "icon-white-square-extracted.svg"
+      ],
+      "defaultAsset": "icon-white-square-extracted.svg"
+    }
+  ]
+}

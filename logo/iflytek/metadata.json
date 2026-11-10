@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 3,
+  "id": "iflytek",
+  "name": "科大讯飞",
+  "aliases": [
+    "讯飞",
+    "iFLYTEK",
+    "科大讯飞股份有限公司",
+    "iFLYTEK CO.,LTD"
+  ],
+  "identity": {
+    "nameZh": "科大讯飞",
+    "nameEn": "iFLYTEK",
+    "legalNames": [
+      {
+        "name": "科大讯飞股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-29/6982b351-77aa-4dc6-93df-4f4d3fe4e9bd.PDF",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "name": "iFLYTEK CO.,LTD",
+        "language": "en",
+        "role": "company",
+        "source": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-29/6982b351-77aa-4dc6-93df-4f4d3fe4e9bd.PDF",
+        "reviewedAt": "2026-11-07"
+      }
+    ],
+    "sources": [
+      {
+        "label": "官方身份来源",
+        "url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-29/6982b351-77aa-4dc6-93df-4f4d3fe4e9bd.PDF",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "官方身份来源",
+        "url": "https://www.iflytek.com/en/about-us/about.html",
+        "reviewedAt": "2026-11-07"
+      }
+    ]
+  },
+  "website": "https://www.iflytek.com/",
+  "entityType": "company",
+  "categories": [
+    "ai"
+  ],
+  "defaultAsset": "logo-english-official.svg",
+  "assets": [
+    {
+      "file": "logo-blue-bilingual.png",
+      "label": "蓝色中英组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/f/ff/IFlytek_logo.png",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:IFlytek_logo.png",
+      "sha256": "1bffea9a5f82a6be91fe4f2a14ae92f0dce2606204b086ae659d9fe8f2ed727a",
+      "bytes": 91358,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:IFlytek_logo.png&oldid=1015993493",
+        "attribution": "No copyright attribution required under the Wikimedia Commons PD-textlogo assessment. Source credit retained: 科大讯飞 / Wikimedia Commons, https://commons.wikimedia.org/wiki/File:IFlytek_logo.png . Original file, unmodified.",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围为科大讯飞 X 图形、中文名和 iFLYTEK 字标的相应组合及单色版本。"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "original",
+        "channel": "commons"
+      }
+    },
+    {
+      "file": "logo-white-bilingual.png",
+      "label": "白色中英组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "dark",
+      "source": "https://www.iflytek.com/cn/static/img/logo-white.c2064c0.png",
+      "sourcePage": "https://www.iflytek.com/cn/",
+      "sha256": "f87f08ca3d325fcf885ec04b9cd1479c9e3081af8cbd3744163450da50d91ce2",
+      "bytes": 15271,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:IFlytek_logo.png&oldid=1015993493",
+        "attribution": "No copyright attribution required under the Wikimedia Commons PD-textlogo assessment for the matching logo artwork. Original native asset credited to 科大讯飞 / iFLYTEK; source file retained without visual modification. Trademark rights remain with the respective owner.",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围为科大讯飞 X 图形、中文名和 iFLYTEK 字标的相应组合及单色版本。"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header",
+        "pageTitle": "科大讯飞中文首页"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ]
+    },
+    {
+      "file": "logo-black-bilingual.png",
+      "label": "黑色中英组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://www.iflytek.com/cn/static/js/index.eaba97afd11e2d3d87d8.js?97d64dd72195ce83a01e",
+      "sourcePage": "https://www.iflytek.com/cn/",
+      "sha256": "954b446990ad14c2d6979355e27310373e37ee29ac624886150ba1f067458115",
+      "bytes": 7051,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:IFlytek_logo.png&oldid=1015993493",
+        "attribution": "No copyright attribution required under the Wikimedia Commons PD-textlogo assessment for the matching logo artwork. Original native asset credited to 科大讯飞 / iFLYTEK; source file retained without visual modification. Trademark rights remain with the respective owner.",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围为科大讯飞 X 图形、中文名和 iFLYTEK 字标的相应组合及单色版本。"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "black",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header",
+        "pageTitle": "科大讯飞中文首页"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ]
+    },
+    {
+      "file": "logo-english-official.svg",
+      "label": "英文横版组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header",
+        "pageTitle": "科大讯飞英文首页"
+      },
+      "source": "https://www.iflytek.com/en/Public/Uploads/uploadfile/images/20230812/comlogo1.svg",
+      "sourcePage": "https://www.iflytek.com/en/",
+      "sha256": "ae825a3ddb3e7bed8c4a1691c6676cca9d003d673ba5089b246178c9bd43727f",
+      "bytes": 3327,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/wiki/File:IFlytek_logo.png",
+        "attribution": "科大讯飞 / iFLYTEK。官方原始 SVG，未修改；保留来源及 Commons 对相同 X 形标识与 iFLYTEK 字标的 PD-textlogo 第三方判断。商标权保留。",
+        "reviewedAt": "2026-11-09",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围限于相同 X 图形和 iFLYTEK 字标。"
+      }
+    },
+    {
+      "file": "icon-blue-extracted.svg",
+      "label": "深蓝图形",
+      "variant": "icon",
+      "status": "current",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "pageTitle": "科大讯飞英文首页",
+        "originalAsset": "logo-english-official.svg",
+        "originalSha256": "ae825a3ddb3e7bed8c4a1691c6676cca9d003d673ba5089b246178c9bd43727f"
+      },
+      "source": "https://www.iflytek.com/en/Public/Uploads/uploadfile/images/20230812/comlogo1.svg",
+      "sourcePage": "https://www.iflytek.com/en/",
+      "qualityNotes": [
+        "透明背景，长边贴边，短边居中补齐方形画布。"
+      ],
+      "sha256": "f2fe0b1483f36fb20ee2b0c4328d50565c067c0de48c58d9bbaa41745f1afe75",
+      "bytes": 2508,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/wiki/File:IFlytek_logo.png",
+        "attribution": "科大讯飞。原作品权利及来源依据沿用母稿记录，图形提取处理由 LogoDock 完成。",
+        "reviewedAt": "2026-11-10",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围限于相同 X 图形和 iFLYTEK 字标。"
+      }
+    }
+  ]
+}

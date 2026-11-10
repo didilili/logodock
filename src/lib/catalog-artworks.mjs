@@ -110,6 +110,20 @@ export function selectedArtwork(brand, assetOrFilename) {
   return group;
 }
 
+/** Native downloads follow reviewed artwork membership, including filtered views.
+ * @param {Brand} brand
+ * @param {Asset | string} assetOrFilename
+ * @returns {import('./types').SourceFile[]}
+ */
+export function artworkSourceFiles(brand, assetOrFilename) {
+  const artwork = selectedArtwork(brand, assetOrFilename);
+  const reviewed = brand.artworks?.find((item) => item.id === artwork.id);
+  const files = reviewed?.files ?? artwork.assets.map((asset) => asset.file);
+  return (brand.sourceFiles ?? []).filter((entry) =>
+    entry.assetFiles.some((file) => files.includes(file)),
+  );
+}
+
 /**
  * Retain the preferred representation when a format has multiple source files.
  * An unavailable requested format falls back to a real default file.

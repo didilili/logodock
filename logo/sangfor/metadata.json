@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 3,
+  "id": "sangfor",
+  "name": "深信服",
+  "aliases": [],
+  "identity": {
+    "nameZh": "深信服",
+    "nameEn": "SANGFOR",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "深信服官方来源",
+        "url": "https://www.sangfor.com.cn/",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.sangfor.com.cn/",
+  "entityType": "company",
+  "categories": [
+    "enterprise-software"
+  ],
+  "defaultAsset": "logo-bilingual-official.svg",
+  "assets": [
+    {
+      "file": "logo-bilingual-official.svg",
+      "label": "中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://download.sangfor.com.cn/cmsdownload/6D4BA729E12049FC919E560ED2498DB6.svg",
+      "sourcePage": "https://www.sangfor.com.cn/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "8d37763f47722bb132cf2bf090a058c285b315e43c745d3192f21444c217c189",
+      "bytes": 18787,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.sangfor.com.cn/",
+        "attribution": "深信服。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "icon-color-extracted.svg",
+      "label": "彩色图形",
+      "variant": "icon",
+      "status": "current",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "originalAsset": "logo-bilingual-official.svg",
+        "originalSha256": "8d37763f47722bb132cf2bf090a058c285b315e43c745d3192f21444c217c189"
+      },
+      "source": "https://download.sangfor.com.cn/cmsdownload/6D4BA729E12049FC919E560ED2498DB6.svg",
+      "sourcePage": "https://www.sangfor.com.cn/",
+      "qualityNotes": [
+        "透明背景，长边贴边，短边居中补齐方形画布。"
+      ],
+      "sha256": "76e7a323b3eeb2fa2eda0ffeeb464133691cf65b0443ff34173939f3e65ba8c4",
+      "bytes": 12217,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.sangfor.com.cn/",
+        "attribution": "深信服。原作品权利及来源依据沿用母稿记录，图形提取处理由 LogoDock 完成。",
+        "reviewedAt": "2026-11-10",
+        "notes": "许可及署名条件待核实。"
+      }
+    }
+  ]
+}

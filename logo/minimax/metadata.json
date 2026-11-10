@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 3,
+  "id": "minimax",
+  "name": "MiniMax",
+  "aliases": [
+    "稀宇科技",
+    "MiniMax Group",
+    "MiniMax Group Inc."
+  ],
+  "identity": {
+    "nameZh": null,
+    "nameEn": "MiniMax",
+    "legalNames": [
+      {
+        "name": "MiniMax Group Inc.",
+        "language": "en",
+        "role": "group",
+        "source": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0422/2026042202119_c.pdf",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "name": "上海稀宇极智科技有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0422/2026042202119_c.pdf",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "name": "上海稀宇科技有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0422/2026042202119_c.pdf",
+        "reviewedAt": "2026-11-07"
+      }
+    ],
+    "sources": [
+      {
+        "label": "官方身份来源",
+        "url": "https://www.minimax.cn/about",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "官方身份来源",
+        "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0422/2026042202119_c.pdf",
+        "reviewedAt": "2026-11-07"
+      }
+    ]
+  },
+  "website": "https://www.minimax.io/",
+  "entityType": "company",
+  "categories": [
+    "ai"
+  ],
+  "defaultAsset": "logo-gradient-horizontal.png",
+  "assets": [
+    {
+      "file": "logo-gradient-vertical-official.png",
+      "label": "渐变黑字竖版",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_Logo_Asset.zip",
+      "sourcePage": "https://www.minimax.io/brand-vi",
+      "sha256": "dead3bc35c62af9e13d8d341f0037c51c97dff543e9084468976b029f76acb59",
+      "bytes": 348254,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:MiniMax.png&oldid=1051737129",
+        "attribution": "No copyright attribution required under the Wikimedia Commons PD-textlogo assessment for the matching logo artwork. Original native asset credited to MiniMax; source file retained without visual modification. Trademark rights remain with the respective owner.",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围为相同简单波形和 MINIMAX 字形。官方品牌条款要求遵守比例、颜色、间距和组合规范，禁止歪曲、拆分、重新设计及转授权。官方使用许可为有限、非独占且不可转让，未涵盖的用途须另行申请批准。条款见 https://www.minimax.io/brand-vi 。"
+      },
+      "language": "en",
+      "layout": "vertical",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library",
+        "pageTitle": "MiniMax Brand VI"
+      },
+      "qualityNotes": [
+        "透明背景，画布含留白。"
+      ]
+    },
+    {
+      "file": "logo-gradient-horizontal.png",
+      "label": "渐变黑字横版",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_Logo_Asset.zip",
+      "sourcePage": "https://www.minimax.io/brand-vi",
+      "sha256": "dbcac9162afb10118cb0777df33262ffcba944cda321922743946cc60d1f2b24",
+      "bytes": 383619,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:MiniMax.png&oldid=1051737129",
+        "attribution": "No copyright attribution required under the Wikimedia Commons PD-textlogo assessment for the matching logo artwork. Original native asset credited to MiniMax; source file retained without visual modification. Trademark rights remain with the respective owner.",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围为相同简单波形和 MINIMAX 字形。官方品牌条款要求遵守比例、颜色、间距和组合规范，禁止歪曲、拆分、重新设计及转授权。官方使用许可为有限、非独占且不可转让，未涵盖的用途须另行申请批准。条款见 https://www.minimax.io/brand-vi 。"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library",
+        "pageTitle": "MiniMax Brand VI"
+      },
+      "qualityNotes": [
+        "透明背景，画布含留白。"
+      ]
+    },
+    {
+      "file": "logo-gradient-horizontal-white.png",
+      "label": "渐变白字横版",
+      "variant": "logo",
+      "status": "current",
+      "background": "dark",
+      "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_Logo_Asset.zip",
+      "sourcePage": "https://www.minimax.io/brand-vi",
+      "sha256": "e29cd54a7b399e7cbf12e418be339e298f85942e67ba2b38b96317ad116710fc",
+      "bytes": 385287,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:MiniMax.png&oldid=1051737129",
+        "attribution": "No copyright attribution required under the Wikimedia Commons PD-textlogo assessment for the matching logo artwork. Original native asset credited to MiniMax; source file retained without visual modification. Trademark rights remain with the respective owner.",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围为相同简单波形和 MINIMAX 字形。官方品牌条款要求遵守比例、颜色、间距和组合规范，禁止歪曲、拆分、重新设计及转授权。官方使用许可为有限、非独占且不可转让，未涵盖的用途须另行申请批准。条款见 https://www.minimax.io/brand-vi 。"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library",
+        "pageTitle": "MiniMax Brand VI"
+      },
+      "qualityNotes": [
+        "透明背景，画布含留白。"
+      ]
+    },
+    {
+      "file": "logo-black-horizontal.png",
+      "label": "黑色横版",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_Logo_Asset.zip",
+      "sourcePage": "https://www.minimax.io/brand-vi",
+      "sha256": "b5104a82a805cdd1a791a1f7e1e0a5e97b1a99bced926481ba137ae3445f3884",
+      "bytes": 48850,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:MiniMax.png&oldid=1051737129",
+        "attribution": "No copyright attribution required under the Wikimedia Commons PD-textlogo assessment for the matching logo artwork. Original native asset credited to MiniMax; source file retained without visual modification. Trademark rights remain with the respective owner.",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围为相同简单波形和 MINIMAX 字形。官方品牌条款要求遵守比例、颜色、间距和组合规范，禁止歪曲、拆分、重新设计及转授权。官方使用许可为有限、非独占且不可转让，未涵盖的用途须另行申请批准。条款见 https://www.minimax.io/brand-vi 。"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "black",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library",
+        "pageTitle": "MiniMax Brand VI"
+      },
+      "qualityNotes": [
+        "透明背景，画布含留白。"
+      ]
+    }
+  ]
+}

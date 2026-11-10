@@ -16,11 +16,14 @@ export interface Asset {
   bytes: number;
   width?: number;
   height?: number;
+  aspectRatio?: number;
   qualityNotes?: string[];
   usageWarnings?: string[];
   provenance: {
     sourceType: string;
     processing: string;
+    originalAsset?: string;
+    originalSha256?: string;
     channel?: 'brand-library' | 'repository' | 'website' | 'app-store' | 'commons';
     placement?: 'header' | 'footer';
     pageTitle?: string;
@@ -40,6 +43,17 @@ export interface Artwork {
   files: string[];
   defaultAsset: string;
 }
+export interface SourceFile {
+  file: string;
+  label: string;
+  path: string;
+  assetFiles: string[];
+  source: string;
+  sourcePage: string;
+  sha256: string;
+  bytes: number;
+  rights: Asset['rights'];
+}
 export interface ArtworkGroup {
   id: string;
   label: string;
@@ -57,6 +71,7 @@ export interface Brand {
   defaultAsset: string;
   assets: Asset[];
   artworks?: Artwork[];
+  sourceFiles?: SourceFile[];
   identity: {
     nameZh: string | null;
     nameEn: string | null;

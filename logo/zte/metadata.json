@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 3,
+  "id": "zte",
+  "name": "中兴通讯",
+  "aliases": [
+    "ZTE",
+    "中兴",
+    "ZTE Corporation",
+    "中兴通讯股份有限公司"
+  ],
+  "identity": {
+    "nameZh": "中兴通讯",
+    "nameEn": "ZTE",
+    "legalNames": [
+      {
+        "name": "中兴通讯股份有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://www.zte.com.cn/content/dam/zte-site/investorrelations/cn_annual_report/2025%E5%B9%B4%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "name": "ZTE Corporation",
+        "language": "en",
+        "role": "operating-company",
+        "source": "https://www.zte.com.cn/content/dam/zte-site/investorrelations/cn_annual_report/2025%E5%B9%B4%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf",
+        "reviewedAt": "2026-11-07"
+      }
+    ],
+    "sources": [
+      {
+        "label": "中兴通讯2025年度报告",
+        "url": "https://www.zte.com.cn/content/dam/zte-site/investorrelations/cn_annual_report/2025%E5%B9%B4%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf",
+        "reviewedAt": "2026-11-07"
+      }
+    ]
+  },
+  "website": "https://www.zte.com.cn/",
+  "entityType": "company",
+  "categories": [
+    "hardware",
+    "telecommunications"
+  ],
+  "defaultAsset": "wordmark-blue-official.png",
+  "assets": [
+    {
+      "file": "wordmark-blue-official.png",
+      "label": "蓝色字标",
+      "variant": "wordmark",
+      "background": "light",
+      "color": "other",
+      "source": "https://www.zte.com.cn/content/dam/zte-site/mediapics/file/zte_logo_en.7z",
+      "sourcePage": "https://www.zte.com.cn/global/new_events/media.html",
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AZTE-logo.svg&oldid=1281655836",
+        "attribution": "ZTE Corporation。保留官方文件来源、Commons 对相同 ZTE 简单字标的公共领域判断及商标声明；文件原样保存。",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围限于相同 ZTE 三字母字标，Commons 同时列出 PD-shape 判定。官网条款允许个人非商业目的拷贝、传播并保留版权声明，商标和标识使用须经明确许可。条款见 https://www.zte.com.cn/global/article/acknowledge.html 。"
+      },
+      "qualityNotes": [
+        "透明背景，画布含留白。"
+      ],
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library",
+        "pageTitle": "中兴通讯 Corporate Gallery"
+      },
+      "sha256": "1b1b6209036433aeb8f7aae65500e7137668da39250cd5e0e0465428a992584a",
+      "bytes": 19228,
+      "usageWarnings": [
+        "蓝色为 #0086D1，与官方标准蓝 #008ED3 有差异。"
+      ]
+    },
+    {
+      "file": "wordmark-white-official.png",
+      "label": "白色字标",
+      "variant": "wordmark",
+      "background": "dark",
+      "color": "white",
+      "source": "https://www.zte.com.cn/content/dam/zte-site/mediapics/file/zte_logo_en.7z",
+      "sourcePage": "https://www.zte.com.cn/global/new_events/media.html",
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AZTE-logo.svg&oldid=1281655836",
+        "attribution": "ZTE Corporation。保留官方文件来源、Commons 对相同 ZTE 简单字标的公共领域判断及商标声明；文件原样保存。",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围限于相同 ZTE 三字母字标，Commons 同时列出 PD-shape 判定。官网条款允许个人非商业目的拷贝、传播并保留版权声明，商标和标识使用须经明确许可。条款见 https://www.zte.com.cn/global/article/acknowledge.html 。"
+      },
+      "qualityNotes": [
+        "透明背景，画布含留白。"
+      ],
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library",
+        "pageTitle": "中兴通讯 Corporate Gallery"
+      },
+      "sha256": "72bc05c916617a95cc35ed78a84fe14ae89ed3fc1c248a6bf327b505bd883ed8",
+      "bytes": 18055
+    },
+    {
+      "file": "wordmark-blue-header-official.png",
+      "label": "标准蓝字标",
+      "display": "alternative",
+      "variant": "wordmark",
+      "background": "light",
+      "color": "brand",
+      "source": "https://www.zte.com.cn/content/dam/zte-site/res-www-zte-com-cn/navigator/global/main/img/logo-en.png",
+      "sourcePage": "https://www.zte.com.cn/global/",
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AZTE-logo.svg&oldid=1281655836",
+        "attribution": "ZTE Corporation。保留官方文件来源、Commons 对相同 ZTE 简单字标的公共领域判断及商标声明；文件原样保存。",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围限于相同 ZTE 三字母字标，Commons 同时列出 PD-shape 判定。官网条款允许个人非商业目的拷贝、传播并保留版权声明，商标和标识使用须经明确许可。条款见 https://www.zte.com.cn/global/article/acknowledge.html 。"
+      },
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header",
+        "pageTitle": "中兴通讯全球官网"
+      },
+      "sha256": "92aea76efc16df57dc57e2ccba3debd62f3634c7cbb1c5cd01e30f50473a1cad",
+      "bytes": 2914,
+      "qualityNotes": [
+        "色值 #008ED3，适合小尺寸展示。"
+      ]
+    }
+  ]
+}

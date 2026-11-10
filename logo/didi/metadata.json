@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 3,
+  "id": "didi",
+  "name": "滴滴",
+  "aliases": [
+    "DiDi",
+    "滴滴出行",
+    "DiDi Global Inc."
+  ],
+  "identity": {
+    "nameZh": "滴滴",
+    "nameEn": "DiDi",
+    "legalNames": [
+      {
+        "name": "DiDi Global Inc.",
+        "language": "en",
+        "role": "group",
+        "source": "https://ir.didiglobal.com/static-files/f1804651-ad87-4bcf-9053-2b80f643a372",
+        "reviewedAt": "2026-11-07"
+      }
+    ],
+    "sources": [
+      {
+        "label": "滴滴官网",
+        "url": "https://www.didiglobal.com/",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "滴滴2025年20-F（2026-04-13提交）",
+        "url": "https://ir.didiglobal.com/static-files/f1804651-ad87-4bcf-9053-2b80f643a372",
+        "reviewedAt": "2026-11-07"
+      }
+    ]
+  },
+  "website": "https://www.didiglobal.com/",
+  "entityType": "company",
+  "categories": [
+    "internet"
+  ],
+  "defaultAsset": "logo-english.svg",
+  "assets": [
+    {
+      "file": "logo-english.svg",
+      "label": "橙色英文组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/7/75/DiDi_Logo.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:DiDi_Logo.svg",
+      "sha256": "13dad88746bf5ba5767ecfa488735d575ba0803c2547098e8c4b93e2d437de02",
+      "bytes": 1563,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3ADiDi_Logo.svg&oldid=1219426260",
+        "attribution": "No copyright attribution required by the Commons PD-textlogo designation. Logo attributed to 滴滴; trademark rights remain with the respective owner.",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。判定范围为相同 D 形图形及 DiDi 英文组合。"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "original",
+        "channel": "commons"
+      }
+    },
+    {
+      "file": "icon-gray-official.svg",
+      "label": "灰色图形 · 原始画布",
+      "variant": "icon",
+      "status": "current",
+      "background": "any",
+      "language": "none",
+      "layout": "standalone",
+      "color": "monochrome",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "footer",
+        "pageTitle": "滴滴官网首页"
+      },
+      "source": "https://website.didiglobal.com/dist/media/footer-logo.7521c19c.svg",
+      "sourcePage": "https://www.didiglobal.com/",
+      "sha256": "49b12559cde733befbf01747be55ade2b243436d0c75d0d307facbd49162d047",
+      "bytes": 486,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:DiDi_Logo.svg&oldid=1219426260",
+        "attribution": "滴滴 / DiDi。官网 SVG 原件，未修改；保留 Commons 对相同 D 形几何标识的 PD-textlogo 判断及来源，商标权保留。",
+        "reviewedAt": "2026-11-09",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。判定范围限于 DiDi 组合标中的相同 D 形图形。"
+      },
+      "qualityNotes": [
+        "底部留白。"
+      ]
+    },
+    {
+      "file": "icon-orange-extracted.svg",
+      "label": "橙色图形",
+      "variant": "icon",
+      "status": "current",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "extracted",
+        "channel": "commons",
+        "originalAsset": "logo-english.svg",
+        "originalSha256": "13dad88746bf5ba5767ecfa488735d575ba0803c2547098e8c4b93e2d437de02"
+      },
+      "source": "https://upload.wikimedia.org/wikipedia/commons/7/75/DiDi_Logo.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:DiDi_Logo.svg",
+      "qualityNotes": [
+        "透明背景，长边贴边，短边居中补齐方形画布。"
+      ],
+      "sha256": "dbf9f3c0bf3727724988a4ab1b481a8f5d56470aab380dd05c62d38315cee179",
+      "bytes": 1035,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3ADiDi_Logo.svg&oldid=1219426260",
+        "attribution": "滴滴。原作品权利及来源依据沿用母稿记录，图形提取处理由 LogoDock 完成。",
+        "reviewedAt": "2026-11-10",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。判定范围为相同 D 形图形及 DiDi 英文组合。"
+      }
+    },
+    {
+      "file": "icon-gray-square-extracted.svg",
+      "label": "灰色图形",
+      "variant": "icon",
+      "status": "current",
+      "language": "none",
+      "layout": "standalone",
+      "color": "monochrome",
+      "background": "any",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "pageTitle": "滴滴官网首页",
+        "originalAsset": "icon-gray-official.svg",
+        "originalSha256": "49b12559cde733befbf01747be55ade2b243436d0c75d0d307facbd49162d047"
+      },
+      "source": "https://website.didiglobal.com/dist/media/footer-logo.7521c19c.svg",
+      "sourcePage": "https://www.didiglobal.com/",
+      "qualityNotes": [
+        "透明背景，长边贴边，短边居中补齐方形画布。"
+      ],
+      "sha256": "c7af775179195938ef7c3765271acc0ca53e5f8bf14a1fcc9497d0f08f0fb257",
+      "bytes": 929,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:DiDi_Logo.svg&oldid=1219426260",
+        "attribution": "滴滴。原作品权利及来源依据沿用母稿记录，图形提取处理由 LogoDock 完成。",
+        "reviewedAt": "2026-11-10",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。判定范围限于 DiDi 组合标中的相同 D 形图形。"
+      }
+    }
+  ],
+  "artworks": [
+    {
+      "id": "square-gray",
+      "label": "灰色图形",
+      "files": [
+        "icon-gray-official.svg",
+        "icon-gray-square-extracted.svg"
+      ],
+      "defaultAsset": "icon-gray-square-extracted.svg"
+    }
+  ]
+}

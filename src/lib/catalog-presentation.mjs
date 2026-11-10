@@ -34,7 +34,30 @@ export function defaultAsset(brand, requestedFile) {
 
 export function directoryAsset(brand, query = '') {
   const candidates = matchingAssets(brand, query);
-  return defaultAsset(candidates.length ? { ...brand, assets: candidates } : brand);
+  const scopedBrand = candidates.length ? { ...brand, assets: candidates } : brand;
+  const hasCurrent = scopedBrand.assets.some(
+    (asset) => asset.status === 'current' && asset.display !== 'alternative',
+  );
+  const squareAssets = scopedBrand.assets.filter((asset) => {
+    const ratio =
+      asset.aspectRatio ?? (asset.width && asset.height ? asset.width / asset.height : undefined);
+    return (
+      asset.display !== 'alternative' &&
+      (!hasCurrent || asset.status === 'current') &&
+      Number.isFinite(ratio) &&
+      Math.abs(ratio - 1) < 0.0001
+    );
+  });
+  const squares = artworkGroups({ ...scopedBrand, assets: squareAssets })
+    .map((group) => group.defaultAsset)
+    .sort(
+      (a, b) =>
+        Number(a.variant !== 'icon') - Number(b.variant !== 'icon') ||
+        Number(a.background === 'dark') - Number(b.background === 'dark') ||
+        Number(assetFormat(a) !== 'SVG') - Number(assetFormat(b) !== 'SVG') ||
+        Number(a.color !== 'brand') - Number(b.color !== 'brand'),
+    );
+  return squares[0] ?? defaultAsset(scopedBrand);
 }
 
 export function assetLabel(asset) {

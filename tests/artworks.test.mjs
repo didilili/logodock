@@ -158,7 +158,7 @@ test('grouping leaves source records untouched and allows UI labels for singleto
 async function fixture(t, change = () => {}) {
   const root = await mkdtemp(join(tmpdir(), 'logodock-artworks-'));
   t.after(() => rm(root, { recursive: true, force: true }));
-  const folder = join(root, 'logos/example');
+  const folder = join(root, 'logo/example');
   await mkdir(folder, { recursive: true });
   const assets = ['blue.svg', 'blue-other.svg', 'white.svg'].map((file) =>
     assetMetadata({ file, label: file, color: file === 'white.svg' ? 'white' : 'brand' }),
@@ -255,13 +255,13 @@ test('reviewed repository keeps distinct artworks after redundant format renditi
   const brands = Object.fromEntries((await loadCatalog()).brands.map((brand) => [brand.id, brand]));
   const expected = {
     alibaba: 2,
-    bytedance: 2,
+    bytedance: 3,
     codeberg: 4,
-    didi: 2,
+    didi: 3,
     iqiyi: 1,
-    oppo: 1,
+    oppo: 2,
     vivo: 1,
-    'trip-com': 1,
+    'trip-com': 2,
     zte: 3,
     tencent: 3,
   };
@@ -271,6 +271,7 @@ test('reviewed repository keeps distinct artworks after redundant format renditi
   const { selectedArtwork, primaryArtworkGroups, alternativeArtworkGroups } = await grouping();
   for (const [id, removed, replacement] of [
     ['meituan', 'logo-chinese.png', 'logo-chinese-official.png'],
+    ['trip-com', 'wordmark-color.svg', 'wordmark-white-official.png'],
     ['yonyou', 'wordmark-red.jpg', 'wordmark-red-transparent.png'],
   ]) {
     const brand = brands[id];

@@ -9,8 +9,14 @@
     assetFormat,
     entityLabels,
   } from '../catalog-presentation.mjs';
-  import { brandRoute, identityNames, websiteDomain } from '../catalog-display.mjs';
+  import {
+    brandRoute,
+    identityNames,
+    websiteDomain,
+    sourceInformation,
+  } from '../catalog-display.mjs';
   import AssetWorkspace from './AssetWorkspace.svelte';
+  import SourceInfo from './SourceInfo.svelte';
   import CopyFeedback, { type CopyFeedbackApi } from './CopyFeedback.svelte';
 
   interface Props {
@@ -29,6 +35,14 @@
   let workspace: HTMLDivElement | undefined;
   const names = $derived(identityNames(brand));
   const selectedAsset = $derived(defaultAsset(brand, selectedFile));
+  const nativeSourceFiles = $derived(
+    (brand.sourceFiles ?? []).map((entry) => {
+      const labels = brand.assets
+        .filter((asset) => entry.assetFiles.includes(asset.file))
+        .map(assetDisplayLabel);
+      return { ...entry, label: `${[...new Set(labels)].join('、')} · ${entry.label}` };
+    }),
+  );
 
   function external(value?: string) {
     return /^https:\/\/[^\s\\]+$/i.test(value || '') ? value : '#';
@@ -82,7 +96,8 @@
       const details = selected?.closest('details');
       if (details) details.open = true;
     }
-    selected?.focus({ preventScroll: true });
+    const focusTarget = selected ?? workspace?.querySelector<HTMLAnchorElement>('#download-link');
+    focusTarget?.focus({ preventScroll: true });
   }
 
   onMount(() => {
@@ -173,6 +188,17 @@
               >
             </li>{/each}
         </ul>
+      </details>{/if}
+    {#if brand.sourceFiles?.length}<details class="noscript-files">
+        <summary>全部原生设计文件下载</summary>
+        <ul>
+          {#each nativeSourceFiles as entry (entry.file)}<li>
+              <a href={`${basePath}/${assetPath(entry)}`} download={`${brand.id}-${entry.file}`}
+                >{entry.label} · {assetFormat(entry)}</a
+              >
+            </li>{/each}
+        </ul>
+        <SourceInfo information={sourceInformation(nativeSourceFiles)} />
       </details>{/if}
   </noscript>
 </main>

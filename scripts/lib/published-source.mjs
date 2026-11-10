@@ -10,9 +10,9 @@ export function publishedSourceCommit(root, catalog) {
     }).trim();
   try {
     if (realpathSync(git('rev-parse', '--show-toplevel')) !== realpathSync(root)) return '';
-    if (git('status', '--porcelain', '--untracked-files=all', '--', 'logos')) return '';
+    if (git('status', '--porcelain', '--untracked-files=all', '--', 'logo')) return '';
     const paths = catalog.brands.flatMap((brand) => [
-      `logos/${brand.id}/metadata.json`,
+      `logo/${brand.id}/metadata.json`,
       ...brand.assets.map((asset) => asset.path),
     ]);
     // Also reject ignored source files that exist locally but not in the commit.

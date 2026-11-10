@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 3,
+  "id": "honor",
+  "name": "荣耀",
+  "aliases": [
+    "HONOR",
+    "荣耀终端股份有限公司"
+  ],
+  "identity": {
+    "nameZh": "荣耀",
+    "nameEn": "HONOR",
+    "legalNames": [
+      {
+        "name": "荣耀终端股份有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://www.honor.com/cn/company-trademark-policy/",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "name": "Honor Device Co., Ltd.",
+        "language": "en",
+        "role": "operating-company",
+        "source": "https://www.honor.com/cn/company-trademark-policy/",
+        "reviewedAt": "2026-11-07"
+      }
+    ],
+    "sources": [
+      {
+        "label": "荣耀公司商标使用规范",
+        "url": "https://www.honor.com/cn/company-trademark-policy/",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "荣耀品牌标志规范",
+        "url": "https://www.honor.com/cn/brand-guideline/basics/logo/",
+        "reviewedAt": "2026-11-07"
+      }
+    ]
+  },
+  "website": "https://www.honor.com/",
+  "entityType": "company",
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "wordmark-black-2020.svg",
+  "assets": [
+    {
+      "file": "wordmark-black-2020.svg",
+      "label": "2020 黑色字标",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/2/20/Honor_Logo_%282020%29.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Honor_Logo_(2020).svg",
+      "sha256": "e38997a47a0ebdc4c342efc878fe124b2827ecab9eba599233e69e1942e82ea2",
+      "bytes": 1138,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AHonor_Logo_%282020%29.svg&oldid=1107928605",
+        "attribution": "HONOR。Commons 文件页标记为公共领域，无版权署名要求；保留来源和商标声明。文件下载原样保存。",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。官方品牌规范要求通过合同或协议取得标志使用授权。使用要求见 https://www.honor.com/cn/brand-guideline/basics/logo/ 和 https://www.honor.com/cn/company-trademark-policy/ 。"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "black",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "original",
+        "channel": "commons"
+      }
+    }
+  ]
+}

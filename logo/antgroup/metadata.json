@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 3,
+  "id": "antgroup",
+  "name": "蚂蚁集团",
+  "aliases": [],
+  "identity": {
+    "nameZh": "蚂蚁集团",
+    "nameEn": "Ant Group",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "蚂蚁集团官方来源",
+        "url": "https://www.antgroup.com/",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.antgroup.com/",
+  "entityType": "company",
+  "categories": [
+    "internet"
+  ],
+  "defaultAsset": "logo-bilingual-color-official.png",
+  "assets": [
+    {
+      "file": "logo-bilingual-color-official.png",
+      "label": "中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://mdn.alipayobjects.com/portal_ehkctf/uri/file/as/AntGroup.zip",
+      "sourcePage": "https://www.antgroup.com/news-media/media-library",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "qualityNotes": [
+        "透明背景，画布留白较多，有效图稿约 1805×570 像素。"
+      ],
+      "sha256": "7edddc64238fbb7e201b1e19e194410a227f3715aaecd08303f839e2aa9f5bdf",
+      "bytes": 106203,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.antgroup.com/news-media/media-library",
+        "attribution": "蚂蚁集团。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "logo-bilingual-white-official.png",
+      "label": "中英反白",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://mdn.alipayobjects.com/portal_ehkctf/uri/file/as/AntGroup.zip",
+      "sourcePage": "https://www.antgroup.com/news-media/media-library",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "qualityNotes": [
+        "透明背景，画布留白较多，有效图稿约 1805×570 像素。"
+      ],
+      "sha256": "615a83a5a0d4c4f7a0b34269c2f6bd497c56e568eb95156e244d9367ee847531",
+      "bytes": 72725,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.antgroup.com/news-media/media-library",
+        "attribution": "蚂蚁集团。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "logo-english-color-official.png",
+      "label": "英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://mdn.alipayobjects.com/portal_ehkctf/uri/file/as/AntGroup.zip",
+      "sourcePage": "https://www.antgroup.com/news-media/media-library",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "qualityNotes": [
+        "透明背景，画布留白较多，有效图稿约 1285×551 像素。"
+      ],
+      "sha256": "82dd934c21234a6b94c4ee21b25aca15999ca5231db2e5f05f2bf1174e70be95",
+      "bytes": 94556,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.antgroup.com/news-media/media-library",
+        "attribution": "蚂蚁集团。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "logo-english-white-official.png",
+      "label": "英文反白",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://mdn.alipayobjects.com/portal_ehkctf/uri/file/as/AntGroup.zip",
+      "sourcePage": "https://www.antgroup.com/news-media/media-library",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "qualityNotes": [
+        "透明背景，画布留白较多，有效图稿约 1284×551 像素。"
+      ],
+      "sha256": "1b0eb3e02fe0ce87edfa055e30109f1b3d9dc7a7d036d1320e2bd9d7e134b620",
+      "bytes": 62954,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.antgroup.com/news-media/media-library",
+        "attribution": "蚂蚁集团。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    }
+  ]
+}

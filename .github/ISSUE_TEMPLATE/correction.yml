@@ -6,7 +6,7 @@ body:
     id: resource
     attributes:
       label: 涉及的资源路径
-      placeholder: logos/<id>/<asset-file> 或对应 metadata.json
+      placeholder: logo/<id>/<asset-file> 或对应 metadata.json
     validations:
       required: true
   - type: textarea

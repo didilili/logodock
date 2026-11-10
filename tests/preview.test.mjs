@@ -12,8 +12,8 @@ async function preview(t, basePath = '/') {
   await writeFile(join(root, 'secret.txt'), 'outside');
   await writeFile(join(root, 'site/index.html'), '<h1>LogoDock</h1>');
   await writeFile(join(root, 'site/app.mjs'), 'export const ready = true;');
-  await mkdir(join(root, 'site/logos/example'), { recursive: true });
-  await writeFile(join(root, 'site/logos/example/index.html'), '<h1>Example</h1>');
+  await mkdir(join(root, 'site/logo/example'), { recursive: true });
+  await writeFile(join(root, 'site/logo/example/index.html'), '<h1>Example</h1>');
   const { createPreviewServer } = await import('../scripts/lib/preview-server.mjs');
   const server = createPreviewServer(join(root, 'site'), { basePath });
   server.listen(0, '127.0.0.1');
@@ -74,9 +74,9 @@ test('canonical directory redirects preserve asset selection and filters', async
   const query = '?asset=icon-white.png&format=PNG&q=%E5%85%AC%E5%8F%B8';
   for (const base of ['/', '/logodock/']) {
     const url = await preview(t, base);
-    const detail = await fetch(`${url}${base}logos/example${query}`, { redirect: 'manual' });
+    const detail = await fetch(`${url}${base}logo/example${query}`, { redirect: 'manual' });
     assert.equal(detail.status, 308);
-    assert.equal(detail.headers.get('location'), `${base}logos/example/${query}`);
+    assert.equal(detail.headers.get('location'), `${base}logo/example/${query}`);
     await detail.text();
     if (base !== '/') {
       const root = await fetch(`${url}${base.slice(0, -1)}${query}`, { redirect: 'manual' });

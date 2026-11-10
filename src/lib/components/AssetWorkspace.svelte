@@ -6,6 +6,7 @@
   import CopyField from './CopyField.svelte';
   import CopyMenu from './CopyMenu.svelte';
   import Icon from './Icon.svelte';
+  import SourceInfo from './SourceInfo.svelte';
   import {
     assetFormat,
     assetLabel,
@@ -19,6 +20,7 @@
     isAlternativeArtwork,
     preferredArtworkAsset,
     selectedArtwork,
+    artworkSourceFiles,
   } from '../catalog-artworks.mjs';
   import { assetPath, fixedAssetUrl, resourceLinks } from '../resource-links.mjs';
   import {
@@ -26,7 +28,7 @@
     fileInfo,
     provenanceLabel,
     sourceLabel,
-    licenseLabel,
+    sourceInformation,
   } from '../catalog-display.mjs';
   import { canCopyPngImage, copyPngImage } from '../clipboard-image.mjs';
   import { renderSvgPng } from '../svg-export';
@@ -83,6 +85,11 @@
   const artworks = $derived(primaryArtworkGroups(brand));
   const alternativeArtworks = $derived(alternativeArtworkGroups(brand));
   const artwork = $derived(selectedArtwork(brand, asset)!);
+  const originalAsset = $derived(
+    brand.assets.find((entry) => entry.file === asset.provenance.originalAsset),
+  );
+  const sourceFiles = $derived(artworkSourceFiles(brand, asset));
+  const sourceInfo = $derived(sourceInformation([asset, ...sourceFiles]));
   const canGeneratePng = $derived(
     format === 'SVG' && !artwork.assets.some((item) => assetFormat(item) === 'PNG'),
   );
@@ -106,11 +113,6 @@
     format === 'SVG' || !rasterSize.width || !rasterSize.height
       ? undefined
       : `${rasterSize.height / density}px`,
-  );
-  const attribution = $derived(
-    /^(?:Public domain\b|CC0(?:-|$))/i.test(asset.rights?.license || '')
-      ? ''
-      : asset.rights?.attribution,
   );
   const info = $derived(fileInfo({ ...asset, width: rasterSize.width, height: rasterSize.height }));
   const links = $derived.by(() => {
@@ -225,7 +227,7 @@
 
   const copyItems = $derived([
     ...(format === 'SVG'
-      ? [{ id: 'svg', label: 'SVG 源码', hint: '当前原始 SVG', onselect: copySvg }]
+      ? [{ id: 'svg', label: 'SVG 源码', hint: '当前 SVG 文件', onselect: copySvg }]
       : []),
     ...(format === 'PNG' && canCopyImage
       ? [
@@ -555,39 +557,48 @@
         {/if}
       </section>
     {/if}
+    {#if sourceFiles.length}
+      <section class="source-files" aria-label="原生设计文件">
+        <h2>原生设计文件</h2>
+        <ul>
+          {#each sourceFiles as entry (entry.file)}
+            <li data-source-file={entry.file}>
+              <a
+                class="source-file-download"
+                href={`${basePath}/${assetPath(entry)}`}
+                download={`${brand.id}-${entry.file}`}
+                ><span>{entry.label}</span><span
+                  >下载 {assetFormat(entry)}<Icon name="download" size={14} /></span
+                ></a
+              >
+              <div class="source-file-meta">
+                <span>{fileInfo(entry)}</span>
+              </div>
+            </li>
+          {/each}
+        </ul>
+      </section>
+    {/if}
     <details class="resource-details source-details" bind:open={sourceDetailsOpen}>
       <summary
-        >来源与许可{#if attribution}<span>需署名</span>{/if}</summary
+        >来源与使用说明{#if sourceInfo.attributions.length}<span>需署名</span>{/if}</summary
       >
       <div class="source-fields">
-        <dl class="source-list">
-          <dt>来源</dt>
-          <dd>
-            <a href={external(asset.sourcePage)} target="_blank" rel="noopener noreferrer"
-              >{provenanceLabel(asset)}<Icon name="external" /></a
-            >
-          </dd>
-          <dt>来源文件</dt>
-          <dd>
-            <a href={external(asset.source)} target="_blank" rel="noopener noreferrer"
-              >查看来源文件<Icon name="external" /></a
-            >
-          </dd>
-          <dt>许可</dt>
-          <dd>
-            <a
-              id="detail-license-link"
-              href={external(asset.rights?.reference)}
-              target="_blank"
-              rel="noopener noreferrer">{licenseLabel(asset)}<Icon name="external" /></a
-            >
-          </dd>
-        </dl>
-        {#if attribution}<div class="attribution">
-            <h2>署名</h2>
-            <p>{attribution}</p>
-          </div>{/if}
-        <p class="rights-note">商标权归各品牌所有。</p>
+        {#if originalAsset}
+          <dl class="source-list original-source">
+            <dt>原始素材</dt>
+            <dd>
+              <a
+                href={assetHref(originalAsset.file)}
+                data-original-asset={originalAsset.file}
+                data-selection-kind="artwork"
+                onclick={(event) => onSelectAsset(event, originalAsset.file)}
+                >{assetDisplayLabel(originalAsset)}</a
+              >
+            </dd>
+          </dl>
+        {/if}
+        <SourceInfo information={sourceInfo} licenseId="detail-license-link" />
       </div>
     </details>
   </div>
@@ -817,8 +828,51 @@
   .asset-action-panel {
     order: 3;
   }
-  .source-details {
+  .source-files {
     order: 4;
+  }
+  .source-details {
+    order: 5;
+  }
+  .source-files h2 {
+    margin-bottom: 8px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .source-files ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .source-files li + li {
+    margin-top: 12px;
+  }
+  .source-file-download {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 36px;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+  }
+  .source-file-download > span:last-child {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    flex: 0 0 auto;
+  }
+  .source-file-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+  }
+  .source-file-meta {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
   }
   .section-heading {
     display: flex;
@@ -1168,31 +1222,8 @@
     align-items: center;
     gap: 5px;
   }
-  .source-list :global(svg) {
-    width: 13px;
-    height: 13px;
-    flex: 0 0 auto;
-  }
-  .attribution {
-    margin-top: 18px;
-    padding: 12px;
-    border: 1px solid var(--line);
-    border-radius: 5px;
-    overflow-wrap: anywhere;
-  }
-  .attribution h2 {
-    margin-bottom: 5px;
-    font-size: 13px;
-    font-weight: 600;
-  }
-  .attribution p,
-  .rights-note {
-    color: var(--muted);
-    font-size: 12px;
-    line-height: 1.8;
-  }
-  .rights-note {
-    margin-top: 14px;
+  .original-source {
+    margin-bottom: 12px;
   }
   .detail-extras {
     margin-top: 38px;

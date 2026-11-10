@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 3,
+  "id": "bilibili",
+  "name": "哔哩哔哩",
+  "aliases": [
+    "B站"
+  ],
+  "identity": {
+    "nameZh": "哔哩哔哩",
+    "nameEn": "bilibili",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "哔哩哔哩官方来源",
+        "url": "https://www.bilibili.com/",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.bilibili.com/",
+  "entityType": "company",
+  "categories": [
+    "entertainment",
+    "social-media"
+  ],
+  "defaultAsset": "wordmark-blue-international-official.svg",
+  "assets": [
+    {
+      "file": "wordmark-blue-international-official.svg",
+      "label": "国际站蓝色字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://p.bstarstatic.com/fe-static/bstar-web/assets/top_logo.svg",
+      "sourcePage": "https://www.bilibili.tv/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "透明背景，原生路径字标。"
+      ],
+      "sha256": "e83beaa89357f9f3b4a7d2e97c12a46eb178640d2f2bdc1d93020d3fc4d531f8",
+      "bytes": 5802,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.bilibili.tv/",
+        "attribution": "哔哩哔哩。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "wordmark-white-small-official.png",
+      "label": "白色小尺寸字标",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://i0.hdslb.com/bfs/archive/a6fc20e8360913e8c796df1def661bf1d7f1b9c8.png",
+      "sourcePage": "https://www.bilibili.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "透明背景，画布留白较多，有效字标约 178 × 70 像素。"
+      ],
+      "sha256": "b88f745e0d6aa1dc3517bd3a1b1b9e8e7a3258d23159b4095d7ad49af93441e5",
+      "bytes": 6371,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.bilibili.com/",
+        "attribution": "哔哩哔哩。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "wordmark-ir-blue-official.svg",
+      "label": "IR 蓝色组合",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://ir.bilibili.com/media/mwvbaepv/logoenblue.svg",
+      "sourcePage": "https://ir.bilibili.com/en/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "display": "alternative",
+      "usageWarnings": [
+        "含 Investor Home 字样，用于投资者关系页面。"
+      ],
+      "sha256": "359a7647e98b2628846547423177d265ae2b61f5829526996086cddd72fc2dfe",
+      "bytes": 7700,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://ir.bilibili.com/en/",
+        "attribution": "哔哩哔哩。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "wordmark-ir-white-official.svg",
+      "label": "IR 反白组合",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://ir.bilibili.com/media/flrpsk1v/logoenwhite.svg",
+      "sourcePage": "https://ir.bilibili.com/en/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "display": "alternative",
+      "usageWarnings": [
+        "含 Investor Home 字样，用于投资者关系页面。"
+      ],
+      "sha256": "70d05a1dbd82e02b26c4de128f4a8206382ca6280d036af89e821f86ceceb513",
+      "bytes": 7697,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://ir.bilibili.com/en/",
+        "attribution": "哔哩哔哩。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    }
+  ]
+}

@@ -27,17 +27,17 @@ const brands = [
 async function fixture(t) {
   const root = await mkdtemp(join(tmpdir(), 'logodock-source-'));
   t.after(() => rm(root, { recursive: true, force: true }));
-  await mkdir(join(root, 'logos/example'), { recursive: true });
+  await mkdir(join(root, 'logo/example'), { recursive: true });
   await mkdir(join(root, 'src'), { recursive: true });
   const metadata = {
     id: 'example',
     aliases: [],
     assets: [
-      { file: 'icon.svg', path: 'logos/example/icon.svg' },
-      { file: 'wordmark.svg', path: 'logos/example/wordmark.svg' },
+      { file: 'icon.svg', path: 'logo/example/icon.svg' },
+      { file: 'wordmark.svg', path: 'logo/example/wordmark.svg' },
     ],
   };
-  await writeFile(join(root, 'logos/example/metadata.json'), JSON.stringify(metadata));
+  await writeFile(join(root, 'logo/example/metadata.json'), JSON.stringify(metadata));
   for (const asset of metadata.assets)
     await writeFile(
       join(root, asset.path),
@@ -60,7 +60,7 @@ function commitAssets(
   { published = true, origin = 'https://github.com/didilili/logodock.git' } = {},
 ) {
   git(root, 'init', '--quiet');
-  git(root, 'add', 'logos');
+  git(root, 'add', 'logo');
   git(
     root,
     '-c',
@@ -124,29 +124,29 @@ test('fixed links use HEAD only when source assets are tracked and unchanged', a
   const { root, catalog } = await fixture(t);
   const commit = commitAssets(root);
   assert.equal(publishedSourceCommit(root, catalog), commit);
-  const path = join(root, 'logos/example/metadata.json');
+  const path = join(root, 'logo/example/metadata.json');
   const metadata = JSON.parse(await readFile(path, 'utf8'));
   metadata.aliases.push('另一个名字');
   await writeFile(path, JSON.stringify(metadata));
   assert.equal(publishedSourceCommit(root, catalog), '');
-  git(root, 'add', 'logos');
+  git(root, 'add', 'logo');
   assert.equal(publishedSourceCommit(root, catalog), '');
 });
 
 test('uncommitted new asset content never gets a misleading fixed remote URL', async (t) => {
   const { root, catalog } = await fixture(t);
   commitAssets(root);
-  catalog.brands[0].assets.push({ file: 'new-icon.svg', path: 'logos/example/new-icon.svg' });
+  catalog.brands[0].assets.push({ file: 'new-icon.svg', path: 'logo/example/new-icon.svg' });
   await writeFile(
-    join(root, 'logos/example/new-icon.svg'),
-    await readFile(join(root, 'logos/example/icon.svg')),
+    join(root, 'logo/example/new-icon.svg'),
+    await readFile(join(root, 'logo/example/icon.svg')),
   );
   assert.equal(publishedSourceCommit(root, catalog), '');
 });
 
 test('ignored asset files absent from HEAD do not produce fixed links', async (t) => {
   const { root, catalog } = await fixture(t);
-  await writeFile(join(root, '.gitignore'), 'logos/example/wordmark.svg\n');
+  await writeFile(join(root, '.gitignore'), 'logo/example/wordmark.svg\n');
   commitAssets(root);
   assert.equal(publishedSourceCommit(root, catalog), '');
 });
@@ -168,10 +168,10 @@ test('unpushed commits do not become fixed remote links', async (t) => {
   const { root, catalog } = await fixture(t);
   commitAssets(root);
   await writeFile(
-    join(root, 'logos/example/metadata.json'),
+    join(root, 'logo/example/metadata.json'),
     '{"id":"example","aliases":["本地新提交"]}',
   );
-  git(root, 'add', 'logos');
+  git(root, 'add', 'logo');
   git(
     root,
     '-c',

@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 3,
+  "id": "fanruan",
+  "name": "帆软",
+  "aliases": [],
+  "identity": {
+    "nameZh": "帆软",
+    "nameEn": "FanRuan",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "帆软官方来源",
+        "url": "https://www.fanruan.com/",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.fanruan.com/",
+  "entityType": "company",
+  "categories": [
+    "enterprise-software"
+  ],
+  "defaultAsset": "logo-english-official.svg",
+  "assets": [
+    {
+      "file": "logo-english-official.svg",
+      "label": "英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "any",
+      "source": "https://www.fanruan.com/en/",
+      "sourcePage": "https://www.fanruan.com/en/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "ed34dd190250eac1b80d144630023e38045147613443ba8cffe180d7e72ae87e",
+      "bytes": 3571,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.fanruan.com/en/",
+        "attribution": "帆软。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "logo-chinese-small-official.png",
+      "label": "中文小尺寸组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "any",
+      "source": "https://src.fanruan.com/website/finereport/logo-fanruan.png",
+      "sourcePage": "https://www.fanruan.com/download/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "display": "alternative",
+      "qualityNotes": [
+        "透明背景。"
+      ],
+      "sha256": "6a83c35aee58b6d043eeeb20a0d8df976836728199a65d91369ef7768dd24919",
+      "bytes": 3591,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.fanruan.com/download/",
+        "attribution": "帆软。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "icon-blue-extracted.svg",
+      "label": "蓝色图形",
+      "variant": "icon",
+      "status": "current",
+      "language": "en",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "originalAsset": "logo-english-official.svg",
+        "originalSha256": "ed34dd190250eac1b80d144630023e38045147613443ba8cffe180d7e72ae87e"
+      },
+      "source": "https://www.fanruan.com/en/",
+      "sourcePage": "https://www.fanruan.com/en/",
+      "qualityNotes": [
+        "透明背景，长边贴边，短边居中补齐方形画布。",
+        "图形含字母造型。"
+      ],
+      "sha256": "20861ee62f491650839b4dc27896f1ea4785d133ec46dd6fc4c54c4f5a491c52",
+      "bytes": 1036,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.fanruan.com/en/",
+        "attribution": "帆软。原作品权利及来源依据沿用母稿记录，图形提取处理由 LogoDock 完成。",
+        "reviewedAt": "2026-11-10",
+        "notes": "许可及署名条件待核实。"
+      }
+    }
+  ]
+}

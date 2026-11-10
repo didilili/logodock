@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 3,
+  "id": "waterdrop",
+  "name": "水滴",
+  "aliases": [],
+  "identity": {
+    "nameZh": "水滴",
+    "nameEn": "WATERDROP INC.",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "水滴官方来源",
+        "url": "https://www.waterdrop-inc.com/",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.waterdrop-inc.com/",
+  "entityType": "company",
+  "categories": [
+    "internet"
+  ],
+  "defaultAsset": "logo-bilingual-small-official.png",
+  "assets": [
+    {
+      "file": "logo-bilingual-small-official.png",
+      "label": "白字蓝底组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "any",
+      "source": "https://cloud-image.shuiditech.com/waterdrop-inc/logo/wd_logo_1.png",
+      "sourcePage": "https://www.waterdrop-inc.com/downloads",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "07b92c0edd4c50776fbaa8f5294ce27596f54613cb6df9327cdcb005f8cfba33",
+      "bytes": 6326,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.waterdrop-inc.com/downloads",
+        "attribution": "水滴。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "logo-bilingual-white-background-official.png",
+      "label": "蓝字白底组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "any",
+      "source": "https://cloud-image.shuiditech.com/waterdrop-inc/water_logo1.png",
+      "sourcePage": "https://www.waterdrop-inc.com/downloads",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "footer"
+      },
+      "qualityNotes": [
+        "白色圆角底，蓝色中英文字，四角透明。"
+      ],
+      "sha256": "2949e9dc4ccccb5eaac62e47514c8aa9397d0c5955f917416e2b5e342488c094",
+      "bytes": 9807,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.waterdrop-inc.com/downloads",
+        "attribution": "水滴。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    }
+  ]
+}

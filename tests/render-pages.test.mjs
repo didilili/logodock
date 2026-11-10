@@ -6,6 +6,9 @@ import test from 'node:test';
 import { loadCatalog, repositoryRoot } from '../scripts/lib/catalog.mjs';
 import { toPosixPath } from '../scripts/lib/paths.mjs';
 import { sourceLabel, licenseLabel } from '../src/lib/catalog-display.mjs';
+import { artworkSourceFiles } from '../src/lib/catalog-artworks.mjs';
+import { assetPath } from '../src/lib/resource-links.mjs';
+import { directoryAsset } from '../src/lib/catalog-presentation.mjs';
 
 // These tests inspect one production build. `npm test` builds it once before
 // running the suite; fixtures for pure catalog logic do not rebuild SvelteKit.
@@ -28,16 +31,16 @@ async function filesBelow(directory, relative = '') {
   return files.sort();
 }
 
-test('production output includes a prerendered home and all 31 independent detail pages', async () => {
+test('production output includes the home and all 59 independent detail pages', async () => {
   assert.equal(
     catalog.brands.length,
-    31,
+    59,
     'Update this inventory deliberately when entries change.',
   );
   const files = await filesBelow(output);
   assert.deepEqual(
     files.filter((path) => path.endsWith('.html')),
-    ['index.html', ...catalog.brands.map((brand) => `logos/${brand.id}/index.html`)].sort(),
+    ['index.html', ...catalog.brands.map((brand) => `logo/${brand.id}/index.html`)].sort(),
   );
   const html = await readOutput('index.html');
   assert.match(html, /<html\b[^>]*lang="zh-CN"/);
@@ -49,7 +52,12 @@ test('production output includes a prerendered home and all 31 independent detai
       ),
       brand.id,
     );
-    assert.match(html, new RegExp(`href="[^"?#]*logos/${brand.id}/"`));
+    const selected = directoryAsset(brand);
+    const query =
+      selected.file === brand.defaultAsset
+        ? ''
+        : `\\?asset=${selected.file.replaceAll('.', '\\.')}`;
+    assert.match(html, new RegExp(`href="[^"?#]*logo/${brand.id}/${query}"`));
   }
   assert.equal(await readOutput('.nojekyll'), '');
 });
@@ -77,7 +85,7 @@ test('static index, source metadata and every original file keep their paths and
   let originals = 0;
   let active = 0;
   for (const brand of catalog.brands) {
-    const path = `logos/${brand.id}/metadata.json`;
+    const path = `logo/${brand.id}/metadata.json`;
     assert.deepEqual(
       await readFile(join(output, path)),
       await readFile(join(repositoryRoot, path)),
@@ -85,7 +93,7 @@ test('static index, source metadata and every original file keep their paths and
     );
     const metadata = JSON.parse(await readFile(join(repositoryRoot, path), 'utf8'));
     for (const asset of metadata.assets) {
-      const assetPath = `logos/${brand.id}/${asset.file}`;
+      const assetPath = `logo/${brand.id}/${asset.file}`;
       const original = await readFile(join(repositoryRoot, assetPath));
       const published = await readFile(join(output, assetPath));
       assert.deepEqual(published, original, assetPath);
@@ -95,8 +103,8 @@ test('static index, source metadata and every original file keep their paths and
     }
     active += brand.assets.length;
   }
-  assert.equal(originals, 57);
-  assert.equal(active, 57);
+  assert.equal(originals, 145);
+  assert.equal(active, 145);
 });
 
 test('each detail keeps downloads, brand names, sources and rights without exposing maintenance records', async () => {
@@ -104,7 +112,7 @@ test('each detail keeps downloads, brand names, sources and rights without expos
   const homeTitle = home.match(/<title>([^<]*)<\/title>/)?.[1];
   const homeDescription = home.match(/name="description"\s+content="([^"]*)"/)?.[1];
   for (const brand of catalog.brands) {
-    const html = await readOutput(`logos/${brand.id}/index.html`);
+    const html = await readOutput(`logo/${brand.id}/index.html`);
     const visible = withoutScripts(html);
     const selected = brand.assets.find((asset) => asset.file === brand.defaultAsset);
     assert.match(html, /<title>[^<]+LogoDock<\/title>/, brand.id);
@@ -118,7 +126,7 @@ test('each detail keeps downloads, brand names, sources and rights without expos
     assert.ok(download, `${brand.id}: default download anchor`);
     assert.match(
       download,
-      new RegExp(`href="[^"?#]*logos/${brand.id}/${selected.file.replaceAll('.', '\\.')}"`),
+      new RegExp(`href="[^"?#]*logo/${brand.id}/${selected.file.replaceAll('.', '\\.')}"`),
     );
     assert.match(download, /\bdownload(?:[\s=>])/);
     assert.ok(visible.includes(escaped(selected.sourcePage)), `${brand.id}: source page`);
@@ -127,7 +135,9 @@ test('each detail keeps downloads, brand names, sources and rights without expos
       `${brand.id}: visible source channel`,
     );
     assert.ok(visible.includes(escaped(selected.source)), `${brand.id}: original source`);
-    assert.ok(visible.includes(escaped(licenseLabel(selected))), `${brand.id}: license`);
+    if (selected.rights.status === 'permitted')
+      assert.ok(visible.includes(escaped(licenseLabel(selected))), `${brand.id}: license`);
+    assert.doesNotMatch(visible, /许可未核实|许可已确认/, brand.id);
     assert.ok(
       visible.includes(escaped(selected.rights.reference)),
       `${brand.id}: license reference`,
@@ -137,20 +147,23 @@ test('each detail keeps downloads, brand names, sources and rights without expos
       /品牌与主体信息|名称核对来源|未记录已核实|未单独登记公司主体|核对日期/,
       brand.id,
     );
-    if (selected.rights.notes)
+    if (selected.rights.notes && !selected.rights.notes.includes('许可及署名条件待核实'))
       assert.ok(
-        !visible.includes(escaped(selected.rights.notes)),
-        `${brand.id}: internal rights notes stay in metadata`,
+        visible.includes(escaped(selected.rights.notes)),
+        `${brand.id}: recorded usage conditions are available`,
       );
+    if (selected.rights.notes?.includes('官方协议列有书面同意要求'))
+      assert.ok(visible.includes('官方协议列有书面同意要求'), `${brand.id}: known condition`);
+    assert.doesNotMatch(visible, /许可及署名条件待核实/, brand.id);
     const publicDomain = /public domain|CC[ -]?0/i.test(selected.rights.license);
     assert.equal(
       visible.includes(escaped(selected.rights.attribution)),
-      !publicDomain,
+      !publicDomain && selected.rights.status !== 'unverified',
       `${brand.id}: only necessary attribution is displayed`,
     );
     for (const asset of brand.assets)
       assert.ok(
-        visible.includes(`logos/${brand.id}/${asset.file}`),
+        visible.includes(`logo/${brand.id}/${asset.file}`),
         `${brand.id}: noJS original variant`,
       );
     assert.doesNotMatch(html, /rel="canonical"/);
@@ -159,7 +172,7 @@ test('each detail keeps downloads, brand names, sources and rights without expos
 
 test('detail hydration contains only the requested brand, not a serialized whole catalog', async () => {
   for (const brand of catalog.brands) {
-    const html = await readOutput(`logos/${brand.id}/index.html`);
+    const html = await readOutput(`logo/${brand.id}/index.html`);
     assert.ok(!html.includes('id="catalog-data"'), `${brand.id}: retired full catalog script`);
     for (const other of catalog.brands.filter((item) => item.id !== brand.id)) {
       assert.ok(
@@ -167,7 +180,7 @@ test('detail hydration contains only the requested brand, not a serialized whole
         `${brand.id} must not serialize ${other.id}'s assets`,
       );
       assert.ok(
-        !html.includes(`logos/${other.id}/metadata.json`),
+        !html.includes(`logo/${other.id}/metadata.json`),
         `${brand.id} must not include another metadata document`,
       );
     }
@@ -180,7 +193,7 @@ test('reviewed artwork groups and no-JavaScript file links contain only active c
     ['codeberg', 4],
     ['tencent', 3],
   ]) {
-    const visible = withoutScripts(await readOutput(`logos/${id}/index.html`));
+    const visible = withoutScripts(await readOutput(`logo/${id}/index.html`));
     assert.equal(
       [...visible.matchAll(/\bdata-select-artwork="[^"]+"/g)].length,
       count,
@@ -188,14 +201,43 @@ test('reviewed artwork groups and no-JavaScript file links contain only active c
     );
   }
   for (const brand of catalog.brands) {
-    const visible = withoutScripts(await readOutput(`logos/${brand.id}/index.html`));
+    const visible = withoutScripts(await readOutput(`logo/${brand.id}/index.html`));
     const hrefs = [...visible.matchAll(/\bhref="([^"]+)"/g)].map((match) => match[1]);
     for (const asset of brand.assets) {
-      const suffix = `logos/${brand.id}/${asset.file}`;
+      const suffix = `logo/${brand.id}/${asset.file}`;
       assert.ok(
         hrefs.some((href) => href.endsWith(suffix)),
         `${suffix}: a no-JavaScript original-file link is retained`,
       );
+    }
+  }
+});
+
+test('native design downloads preserve original files and render only the selected artwork attachments', async () => {
+  for (const brand of catalog.brands) {
+    const visible = withoutScripts(await readOutput(`logo/${brand.id}/index.html`));
+    const interactive = visible.replace(/<noscript\b[^>]*>[\s\S]*?<\/noscript>/gi, '');
+    const selected = artworkSourceFiles(brand, brand.defaultAsset);
+    assert.deepEqual(
+      [...interactive.matchAll(/\bdata-source-file="([^"]+)"/g)].map((match) => match[1]),
+      selected.map((entry) => escaped(entry.file)),
+      `${brand.id}: only current artwork attachments appear in the workspace`,
+    );
+    const fallback = visible.match(/<noscript\b[^>]*>([\s\S]*?)<\/noscript>/i)?.[1] ?? '';
+    for (const entry of brand.sourceFiles ?? []) {
+      const original = await readFile(join(repositoryRoot, entry.path));
+      const published = await readFile(join(output, entry.path));
+      assert.deepEqual(published, original, entry.path);
+      assert.equal(published.byteLength, entry.bytes, entry.path);
+      assert.equal(createHash('sha256').update(published).digest('hex'), entry.sha256, entry.path);
+      const download = [...fallback.matchAll(/<a\b[^>]*\bdownload[^>]*>/g)].find((match) =>
+        match[0].includes(`/${assetPath(entry)}"`),
+      );
+      assert.ok(download, `${entry.path}: no-JavaScript download link`);
+      if (entry.rights.status === 'permitted')
+        assert.ok(fallback.includes(escaped(licenseLabel(entry))), `${entry.path}: license`);
+      assert.doesNotMatch(fallback, /许可未核实|许可已确认/, entry.path);
+      assert.ok(fallback.includes(escaped(entry.sourcePage)), `${entry.path}: source page`);
     }
   }
 });

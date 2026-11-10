@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 3,
+  "id": "kingdee",
+  "name": "金蝶",
+  "aliases": [
+    "Kingdee",
+    "金蝶国际",
+    "Kingdee International Software Group",
+    "金蝶国际软件集团有限公司",
+    "Kingdee International Software Group Company Limited"
+  ],
+  "identity": {
+    "nameZh": "金蝶",
+    "nameEn": "Kingdee",
+    "legalNames": [
+      {
+        "name": "金蝶国际软件集团有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://www.kingdee.com/company",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "name": "Kingdee International Software Group Company Limited",
+        "language": "en",
+        "role": "group",
+        "source": "https://www.kingdee.com/global/company-information/",
+        "reviewedAt": "2026-11-07"
+      }
+    ],
+    "sources": [
+      {
+        "label": "官方身份来源",
+        "url": "https://www.kingdee.com/company",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "官方身份来源",
+        "url": "https://www.kingdee.com/global/company-information/",
+        "reviewedAt": "2026-11-07"
+      }
+    ]
+  },
+  "website": "https://www.kingdee.com/",
+  "entityType": "company",
+  "categories": [
+    "software",
+    "enterprise-software"
+  ],
+  "defaultAsset": "logo-color-english.jpg",
+  "assets": [
+    {
+      "file": "logo-color-english.jpg",
+      "label": "四色圆点英文组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Kingdee_logo_wiki.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Kingdee_logo_wiki.jpg",
+      "sha256": "d7b291e6d80c24aa28774c418ac16b3a12210f1853f5445c9bd8d28ce8a626c8",
+      "bytes": 756221,
+      "rights": {
+        "status": "permitted",
+        "license": "CC-BY-SA-4.0",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:Kingdee_logo_wiki.jpg&oldid=1271741533",
+        "attribution": "Aiko Chung Kingdee. Kingdee logo wiki.jpg. Wikimedia Commons. Licensed under Creative Commons Attribution-ShareAlike 4.0 International: https://creativecommons.org/licenses/by-sa/4.0/ . Source: https://commons.wikimedia.org/wiki/File:Kingdee_logo_wiki.jpg . Original file, unmodified.",
+        "reviewedAt": "2026-11-07",
+        "notes": "本文件按 Commons 上传者所列 CC BY-SA 4.0 分发，需保留作者署名、文件来源、许可链接及修改说明，改编须按相同或兼容许可分享。商标权保留，使用不得暗示品牌背书。图稿为 2017 年发布的集团品牌标识。原件采用 CMYK / Coated FOGRA39 (ISO 12647-2:2004) 色彩配置。"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "original",
+        "channel": "commons"
+      },
+      "qualityNotes": [
+        "不透明白底，画布留白较多。"
+      ],
+      "usageWarnings": [
+        "CMYK 色彩显示受色彩管理影响。"
+      ]
+    }
+  ]
+}

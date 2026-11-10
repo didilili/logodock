@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 3,
+  "id": "netease",
+  "name": "网易",
+  "aliases": [],
+  "identity": {
+    "nameZh": "网易",
+    "nameEn": null,
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "网易官方来源",
+        "url": "https://hr.163.com/",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://hr.163.com/",
+  "entityType": "company",
+  "categories": [
+    "internet"
+  ],
+  "defaultAsset": "wordmark-red-official.svg",
+  "assets": [
+    {
+      "file": "wordmark-red-official.svg",
+      "label": "红色中文官网字标",
+      "variant": "wordmark",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "any",
+      "source": "https://campus.163.com/static/media/netease.13a58071.svg",
+      "sourcePage": "https://campus.163.com/app/index",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "15f89a996bff621d82bd37da0fffc5790f1b95a855cc905f75c75e2c6a932568",
+      "bytes": 27897,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://campus.163.com/app/index",
+        "attribution": "网易。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    }
+  ]
+}

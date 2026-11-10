@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 3,
+  "id": "inovance",
+  "name": "汇川技术",
+  "aliases": [
+    "INOVANCE",
+    "Inovance"
+  ],
+  "identity": {
+    "nameZh": "汇川技术",
+    "nameEn": "INOVANCE",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "汇川技术官方网站",
+        "url": "https://www.inovance.com/",
+        "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "汇川全球官网（页头原图来源）",
+        "url": "https://www.inovance.com/global",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.inovance.com/",
+  "entityType": "company",
+  "categories": [
+    "industrial-automation"
+  ],
+  "defaultAsset": "wordmark-blue-official.png",
+  "assets": [
+    {
+      "file": "wordmark-blue-official.png",
+      "label": "标准蓝英文字标",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://portal-file.inovance.com/upload/image/2025/03/28/0e86e631-cd0c-41ac-aa2d-a981e7a4dbfb.png",
+      "sourcePage": "https://www.inovance.com/global",
+      "sha256": "0ac55305f11f9d0dfd9384322f46d1e51afa5efe77cd4b7da0ad7c31ece8b9fc",
+      "bytes": 37976,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:Shenzhen_Inovance_Technology.svg&oldid=1117280283",
+        "attribution": "INOVANCE / 汇川技术。Commons 对相同英文字标作品作 PD-textlogo 公共领域判定，无版权署名要求；保留官方原图来源与商标声明。原文件未经修改。",
+        "reviewedAt": "2026-11-09",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围限于相同 INOVANCE 英文字形。"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header",
+        "pageTitle": "汇川技术全球官网首页"
+      },
+      "qualityNotes": [
+        "透明背景，横向画布紧凑。"
+      ]
+    }
+  ]
+}

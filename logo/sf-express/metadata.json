@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 3,
+  "id": "sf-express",
+  "name": "顺丰速运",
+  "aliases": [
+    "顺丰"
+  ],
+  "identity": {
+    "nameZh": "顺丰速运",
+    "nameEn": "SF Express",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "顺丰速运官方来源",
+        "url": "https://www.sf-express.com/chn/sc",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.sf-express.com/chn/sc",
+  "entityType": "company",
+  "categories": [
+    "internet"
+  ],
+  "defaultAsset": "icon-appstore.jpg",
+  "assets": [
+    {
+      "file": "icon-appstore.jpg",
+      "label": "顺丰速运应用图标",
+      "variant": "icon",
+      "language": "en",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/52/7d/4d/527d4d4f-7433-4925-b95d-517a22ea02bc/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg",
+      "sourcePage": "https://apps.apple.com/cn/app/%E9%A1%BA%E4%B8%B0%E9%80%9F%E8%BF%90-%E5%BF%AB%E9%80%92%E6%9F%A5%E5%AF%84%E6%94%B6-%E4%B8%8D%E6%AD%A2%E6%98%AF%E5%BF%AB/id899529698?uo=4",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "rendered",
+        "channel": "app-store"
+      },
+      "qualityNotes": [
+        "官方应用图标，不透明背景。"
+      ],
+      "sha256": "0e7db4ce355501bbde12ea6cb4de63c7844767b1e03c3ea206d1f07b88e5a86a",
+      "bytes": 23293,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://apps.apple.com/cn/app/%E9%A1%BA%E4%B8%B0%E9%80%9F%E8%BF%90-%E5%BF%AB%E9%80%92%E6%9F%A5%E5%AF%84%E6%94%B6-%E4%B8%8D%E6%AD%A2%E6%98%AF%E5%BF%AB/id899529698?uo=4",
+        "attribution": "顺丰速运。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "icon-black-official.png",
+      "label": "黑色图形",
+      "variant": "icon",
+      "language": "en",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www-static.sf-express.com/ssr2_blue/_next/static/media/ic-black-logo.c86816fe.png",
+      "sourcePage": "https://www.sf-express.com/chn/sc",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header"
+      },
+      "qualityNotes": [
+        "透明背景，圆环SF图形带红点。"
+      ],
+      "sha256": "6da4a712ae75c26d5694341e5d6c30b5492c2d72a63b1c49d4909088c0eac03b",
+      "bytes": 2726,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.sf-express.com/chn/sc/use",
+        "attribution": "顺丰速运。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09",
+        "notes": "官网使用条款限制站外使用。"
+      }
+    },
+    {
+      "file": "icon-white-official.png",
+      "label": "白色图形",
+      "variant": "icon",
+      "language": "en",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "dark",
+      "source": "https://www-static.sf-express.com/ssr2_blue/_next/static/media/ic-white-logo.abea573f.png",
+      "sourcePage": "https://www.sf-express.com/chn/sc",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header"
+      },
+      "qualityNotes": [
+        "透明背景，圆环SF图形带红点。"
+      ],
+      "sha256": "5d0fb5ca9a70fb1ce7140d4de9575f4892e0131e5e7391e4f2fc775a960592bf",
+      "bytes": 3047,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.sf-express.com/chn/sc/use",
+        "attribution": "顺丰速运。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09",
+        "notes": "官网使用条款限制站外使用。"
+      }
+    }
+  ]
+}

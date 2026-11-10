@@ -17,7 +17,7 @@ const enumOptions = [
 ];
 const help = `Usage: node scripts/prepare-asset.mjs <local-image> --id <brand-id> --name <name> --output <new-directory>
 
-Creates a local draft outside logos/. The destination must not exist.
+Creates a local draft outside logo/. The destination must not exist.
 No network access, publication or permission approval is performed.
 Schema: schema/metadata.schema.json (v${metadataSchema.properties.schemaVersion.const})
 
@@ -96,7 +96,7 @@ async function createDraft(config) {
     throw new Error('The output parent directory must already exist and be readable.');
   });
   const physicalOutput = join(parent, basename(output));
-  const logos = await realpath(join(repositoryRoot, 'logos'));
+  const logos = await realpath(join(repositoryRoot, 'logo'));
   const fromLogos = relative(logos, physicalOutput);
   if (
     fromLogos === '' ||
@@ -104,7 +104,7 @@ async function createDraft(config) {
       fromLogos !== '..' &&
       !fromLogos.startsWith(`..${process.platform === 'win32' ? '\\' : '/'}`))
   ) {
-    throw new Error('Draft output must be outside logos/. Choose a separate working directory.');
+    throw new Error('Draft output must be outside logo/. Choose a separate working directory.');
   }
   const draft = {
     schemaVersion: metadataSchema.properties.schemaVersion.const,

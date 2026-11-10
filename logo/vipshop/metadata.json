@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 3,
+  "id": "vipshop",
+  "name": "唯品会",
+  "aliases": [],
+  "identity": {
+    "nameZh": "唯品会",
+    "nameEn": null,
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "唯品会官方来源",
+        "url": "https://www.vip.com/",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.vip.com/",
+  "entityType": "company",
+  "categories": [
+    "e-commerce"
+  ],
+  "defaultAsset": "wordmark-slogan-official.png",
+  "assets": [
+    {
+      "file": "wordmark-slogan-official.png",
+      "label": "含口号中文组合",
+      "variant": "wordmark",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://b.appsimg.com/upload/momin/2020/06/16/82/1592278113502.png",
+      "sourcePage": "https://www.vip.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "透明背景，含“品牌特卖”口号，有效图稿约 240 × 108 像素。"
+      ],
+      "usageWarnings": [
+        "网页尺寸原件，适合小尺寸展示。"
+      ],
+      "sha256": "3061dd09cd60e48cc55064b4523fba3a412c6b578eeccaf9bfdf4a19e724a5bf",
+      "bytes": 6751,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.vip.com/",
+        "attribution": "唯品会。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    }
+  ]
+}

@@ -34,7 +34,7 @@ test('queues clipboard.write before fetch resolves and preserves the original PN
   let writeCalled = false;
   let written;
   const result = copyPngImage({
-    url: '/logos/example/logo.png',
+    url: '/logo/example/logo.png',
     fetcher: () => fetchResponse,
     ClipboardItemType: ClipboardItem,
     clipboard: {

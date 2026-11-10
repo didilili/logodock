@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 3,
+  "id": "vivo",
+  "name": "vivo",
+  "aliases": [
+    "维沃",
+    "维沃移动通信有限公司"
+  ],
+  "identity": {
+    "nameZh": "vivo",
+    "nameEn": "vivo",
+    "legalNames": [
+      {
+        "name": "维沃移动通信有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://mobile.vivo.com/",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "name": "vivo Mobile Communication Co., Ltd.",
+        "language": "en",
+        "role": "operating-company",
+        "source": "https://www.vivo.com/qa/en/activity/about-us",
+        "reviewedAt": "2026-11-07"
+      }
+    ],
+    "sources": [
+      {
+        "label": "vivo Mobile Technology",
+        "url": "https://mobile.vivo.com/",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "vivo Qatar Company Information",
+        "url": "https://www.vivo.com/qa/en/activity/about-us",
+        "reviewedAt": "2026-11-07"
+      }
+    ]
+  },
+  "website": "https://www.vivo.com/",
+  "entityType": "company",
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "wordmark-blue-2019.svg",
+  "assets": [
+    {
+      "file": "wordmark-blue-2019.svg",
+      "label": "2019 蓝色字标",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/0/04/Vivo_%28China%29_logo.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Vivo_(China)_logo.svg",
+      "sha256": "f5c38051398a9108d08020a33ab4f831a7eddaaee46dc6b4c7c1fdf921efc987",
+      "bytes": 2515,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AVivo_%28China%29_logo.svg&oldid=1276362702",
+        "attribution": "Vivo Mobile Communication Co., Ltd. (China)。Commons 文件页标记为公共领域，无版权署名要求；保留来源和商标声明。文件下载原样保存。",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "original",
+        "channel": "commons"
+      }
+    }
+  ]
+}

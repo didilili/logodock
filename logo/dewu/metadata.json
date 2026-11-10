@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 3,
+  "id": "dewu",
+  "name": "得物",
+  "aliases": [],
+  "identity": {
+    "nameZh": "得物",
+    "nameEn": null,
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "得物官方来源",
+        "url": "https://www.dewu.com/",
+        "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "得物官网链接的官方招聘网站",
+        "url": "https://poizon.jobs.feishu.cn/index",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.dewu.com/",
+  "entityType": "company",
+  "categories": [
+    "e-commerce"
+  ],
+  "defaultAsset": "wordmark-square-official.png",
+  "assets": [
+    {
+      "file": "wordmark-square-official.png",
+      "label": "方形字标",
+      "variant": "wordmark",
+      "language": "zh",
+      "layout": "standalone",
+      "color": "monochrome",
+      "background": "any",
+      "source": "https://lf3-atsx-tob.feishucdn.com/obj/static-atsx-online-ee-tob/939416d59711a3ad896a1b64e01fff97/91555bdbe9c40cf8b0a0e50ee792b9c8b96e84e3b4a40b5fe7c14655de546bf8.png",
+      "sourcePage": "https://poizon.jobs.feishu.cn/index",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header"
+      },
+      "qualityNotes": [
+        "黑底白字，带白色圆角边框。"
+      ],
+      "sha256": "f7dedf8b628057dbf5d270d5ac24001482cda3ab16895ded089a23989d0dcab4",
+      "bytes": 4949,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://poizon.jobs.feishu.cn/index",
+        "attribution": "得物。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    }
+  ]
+}

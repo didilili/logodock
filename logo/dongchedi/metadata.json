@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 3,
+  "id": "dongchedi",
+  "name": "懂车帝",
+  "aliases": [],
+  "identity": {
+    "nameZh": "懂车帝",
+    "nameEn": null,
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "懂车帝官方来源",
+        "url": "https://www.dongchedi.com/",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.dongchedi.com/",
+  "entityType": "product",
+  "categories": [
+    "automotive"
+  ],
+  "defaultAsset": "logo-chinese-official.svg",
+  "assets": [
+    {
+      "file": "logo-chinese-official.svg",
+      "label": "图文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://lf3-motor.dcarstatic.com/obj/motor-fe-static/motor/pc/_next/./static/images/logo-fcf421caf44b23091eee..svg",
+      "sourcePage": "https://www.dongchedi.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "含官网网址。"
+      ],
+      "sha256": "d01f5c00d22b040b0c7ceb1a0b868755ca354664b666c5d23e707732b5001dfc",
+      "bytes": 7694,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dongchedi.com/",
+        "attribution": "懂车帝。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09",
+        "notes": "官方协议列有书面同意要求，相应许可及署名条件待核实。"
+      }
+    },
+    {
+      "file": "icon-appstore.jpg",
+      "label": "立体应用图标",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/6e/2a/81/6e2a81b3-80bd-1d66-91bf-f1e02af10a29/DCDAppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+      "sourcePage": "https://apps.apple.com/cn/app/%E6%87%82%E8%BD%A6%E5%B8%9D-%E9%80%89%E4%B9%B0%E6%96%B0%E8%BD%A6%E4%BA%8C%E6%89%8B%E8%BD%A6/id1232131998?uo=4",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "rendered",
+        "channel": "app-store"
+      },
+      "qualityNotes": [
+        "官方应用图标，不透明背景。"
+      ],
+      "sha256": "db1a7121513d9b6d08ca49c830de19bcfa21cb5503e23f905daac03650107e96",
+      "bytes": 29984,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://apps.apple.com/cn/app/%E6%87%82%E8%BD%A6%E5%B8%9D-%E9%80%89%E4%B9%B0%E6%96%B0%E8%BD%A6%E4%BA%8C%E6%89%8B%E8%BD%A6/id1232131998?uo=4",
+        "attribution": "懂车帝。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "icon-yellow-extracted.svg",
+      "label": "黄色图形",
+      "variant": "icon",
+      "status": "current",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "originalAsset": "logo-chinese-official.svg",
+        "originalSha256": "d01f5c00d22b040b0c7ceb1a0b868755ca354664b666c5d23e707732b5001dfc"
+      },
+      "source": "https://lf3-motor.dcarstatic.com/obj/motor-fe-static/motor/pc/_next/./static/images/logo-fcf421caf44b23091eee..svg",
+      "sourcePage": "https://www.dongchedi.com/",
+      "qualityNotes": [
+        "透明背景，长边贴边，短边居中补齐方形画布。"
+      ],
+      "sha256": "668a34b6019214cb052443ac87153fb4cad0fd51ccffba291f3527e77655ddae",
+      "bytes": 2219,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dongchedi.com/",
+        "attribution": "懂车帝。原作品权利及来源依据沿用母稿记录，图形提取处理由 LogoDock 完成。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方协议列有书面同意要求，相应许可及署名条件待核实。"
+      }
+    }
+  ]
+}

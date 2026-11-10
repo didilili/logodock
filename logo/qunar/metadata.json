@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 3,
+  "id": "qunar",
+  "name": "去哪儿",
+  "aliases": [],
+  "identity": {
+    "nameZh": "去哪儿",
+    "nameEn": "QUNAR",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "去哪儿官方来源",
+        "url": "https://www.qunar.com/",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.qunar.com/",
+  "entityType": "company",
+  "categories": [
+    "internet"
+  ],
+  "defaultAsset": "logo-english-official.svg",
+  "assets": [
+    {
+      "file": "logo-english-official.svg",
+      "label": "英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://images3.c-ctrip.com/HrCareers/CareersHome/QunarEN.svg?__ares_maxage=0",
+      "sourcePage": "https://careers.trip.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "a974214076b63416cf5963fcd2954b23065c414811970980f1c0ac56a6870a97",
+      "bytes": 5234,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://careers.trip.com/",
+        "attribution": "去哪儿。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "logo-chinese-official.svg",
+      "label": "中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://images3.c-ctrip.com/HrCareers/CareersHome/QunarCN.svg?__ares_maxage=0",
+      "sourcePage": "https://job.ctrip.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "usageWarnings": [
+        "内嵌 594 × 120 像素位图，放大后清晰度受限。"
+      ],
+      "sha256": "ccc03066a13e5900850bc0413c4a5568902fad194fa287d01c70a4429a16289c",
+      "bytes": 19745,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://job.ctrip.com/",
+        "attribution": "去哪儿。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "icon-cyan-extracted.svg",
+      "label": "青色骆驼图形",
+      "variant": "icon",
+      "status": "current",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "originalAsset": "logo-english-official.svg",
+        "originalSha256": "a974214076b63416cf5963fcd2954b23065c414811970980f1c0ac56a6870a97"
+      },
+      "source": "https://images3.c-ctrip.com/HrCareers/CareersHome/QunarEN.svg?__ares_maxage=0",
+      "sourcePage": "https://careers.trip.com/",
+      "qualityNotes": [
+        "透明背景，长边贴边，短边居中补齐方形画布。"
+      ],
+      "sha256": "4d80a97c7c27700c0ab8b5def6e3f6f69a9b8f8be4e814acb73c836c60c63345",
+      "bytes": 2726,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://careers.trip.com/",
+        "attribution": "去哪儿。原作品权利及来源依据沿用母稿记录，图形提取处理由 LogoDock 完成。",
+        "reviewedAt": "2026-11-10",
+        "notes": "许可及署名条件待核实。"
+      }
+    }
+  ]
+}

@@ -12,7 +12,7 @@ trim_trailing_whitespace = true
 trim_trailing_whitespace = false
 
 # Original catalog assets are maintained without automatic formatting.
-[logos/**]
+[logo/**]
 charset = unset
 indent_style = unset
 indent_size = unset

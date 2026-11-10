@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 3,
+  "id": "iqiyi",
+  "name": "爱奇艺",
+  "aliases": [
+    "iQIYI",
+    "iQIYI, Inc."
+  ],
+  "identity": {
+    "nameZh": "爱奇艺",
+    "nameEn": "iQIYI",
+    "legalNames": [
+      {
+        "name": "iQIYI, Inc.",
+        "language": "en",
+        "role": "group",
+        "source": "https://ir.iqiyi.com/",
+        "reviewedAt": "2026-11-07"
+      }
+    ],
+    "sources": [
+      {
+        "label": "爱奇艺官方投资者关系公司概览",
+        "url": "https://ir.iqiyi.com/",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "官方标志使用规范",
+        "url": "https://www.iqiyi.com/common/biaozhiguifan.html",
+        "reviewedAt": "2026-11-07"
+      }
+    ]
+  },
+  "website": "https://ir.iqiyi.com/",
+  "entityType": "company",
+  "categories": [
+    "internet"
+  ],
+  "defaultAsset": "wordmark-green.svg",
+  "assets": [
+    {
+      "file": "wordmark-green.svg",
+      "label": "2022 绿色中英字标",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/0/0f/IQIYI_logo_%282022%29.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:IQIYI_logo_(2022).svg",
+      "sha256": "79db877b92d15dac61cc23ef4513faef3fc28e581ba27b8d15f9f880cee540c5",
+      "bytes": 17364,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AIQIYI_logo_%282022%29.svg&oldid=1277926211",
+        "attribution": "No copyright attribution required by the Commons PD-textlogo designation. Logo attributed to iQIYI, Inc.; trademark rights remain with the respective owner.",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "original",
+        "channel": "commons"
+      }
+    }
+  ]
+}

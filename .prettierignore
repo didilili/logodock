@@ -1,11 +1,10 @@
 node_modules/
-logos/
+logo/
 index.json
 package-lock.json
 docs/catalog.md
 static/
 _site/
-local-artifacts/site-copy-review/**/site/
 .svelte-kit/
 coverage/
 playwright-report/

@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 3,
+  "id": "lenovo",
+  "name": "联想",
+  "aliases": [
+    "Lenovo",
+    "联想集团",
+    "Lenovo Group Limited"
+  ],
+  "identity": {
+    "nameZh": "联想",
+    "nameEn": "Lenovo",
+    "legalNames": [
+      {
+        "name": "聯想集團有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://investor.lenovo.com/en/cg/pdf/articles_of_association.pdf",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "name": "Lenovo Group Limited",
+        "language": "en",
+        "role": "group",
+        "source": "https://investor.lenovo.com/en/cg/pdf/articles_of_association.pdf",
+        "reviewedAt": "2026-11-07"
+      }
+    ],
+    "sources": [
+      {
+        "label": "联想2025年7月17日公司章程",
+        "url": "https://investor.lenovo.com/en/cg/pdf/articles_of_association.pdf",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "联想IR公司资料",
+        "url": "https://investor.lenovo.com/tc/about/corpinfo.php",
+        "reviewedAt": "2026-11-07"
+      }
+    ]
+  },
+  "website": "https://www.lenovo.com/",
+  "entityType": "company",
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "logo-red-official.svg",
+  "assets": [
+    {
+      "file": "logo-red-official.svg",
+      "label": "红色标识",
+      "variant": "logo",
+      "background": "any",
+      "color": "brand",
+      "source": "https://p3-ofp.static.pub/fes/cms/2023/03/22/8hjmcte754uauw07ypikjkjtx0m5ib450914.svg",
+      "sourcePage": "https://www.lenovo.com/us/en/",
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3ALenovo_%282015%29.svg&oldid=1251613811",
+        "attribution": "Lenovo Group Limited。保留官方文件来源、Commons 公共领域判断及商标声明；下载文件原样保存。",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围为 Lenovo 字样与纯色矩形标识。官方要求其他公司使用 Logo 时取得书面许可或品牌授权，品牌资源禁止用于训练 AI 模型。相关条款见 https://www.lenovo.com/us/en/legal/copytrade/ 和 https://brandworld.lenovo.com/visual-identity/logo/ 。"
+      },
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header",
+        "pageTitle": "联想美国官网首页"
+      },
+      "sha256": "422f42f97bc8d3d17313dff4781262115246e060b385b6f53ece2ac1ee99a68a",
+      "bytes": 1475,
+      "usageWarnings": [
+        "长宽比约 3.1:1，与品牌指南的 3:1 有差异。"
+      ]
+    }
+  ]
+}

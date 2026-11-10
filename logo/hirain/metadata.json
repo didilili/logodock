@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 3,
+  "id": "hirain",
+  "name": "经纬恒润",
+  "aliases": [],
+  "identity": {
+    "nameZh": "经纬恒润",
+    "nameEn": "JINGWEI HIRAIN",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "经纬恒润官方来源",
+        "url": "https://www.hirain.com/",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.hirain.com/",
+  "entityType": "company",
+  "categories": [
+    "automotive"
+  ],
+  "defaultAsset": "logo-bilingual-small-official.png",
+  "assets": [
+    {
+      "file": "logo-bilingual-small-official.png",
+      "label": "中英小尺寸组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://omo-oss-image.thefastimg.com/portal-saas/pg2025022811165511155/cms/image/3f356044-6591-4712-85b1-f36359d822a9.png",
+      "sourcePage": "https://www.hirain.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ],
+      "sha256": "63953389c3a7e4ec26c8405df7ab91a9afec3ac5972fad892480aaf3d4fc8c3e",
+      "bytes": 25518,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.hirain.com/",
+        "attribution": "经纬恒润。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    }
+  ]
+}

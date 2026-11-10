@@ -31,7 +31,7 @@ const cssProperties = words(
     'stroke-linejoin stroke-miterlimit stroke-dasharray stroke-dashoffset opacity clip-path clip-rule mask ' +
     'display visibility stop-color stop-opacity text-anchor dominant-baseline alignment-baseline ' +
     'font-family font-size font-weight font-style letter-spacing word-spacing overflow vector-effect ' +
-    'shape-rendering color font-variant font-stretch line-height -inkscape-font-specification paint-order ' +
+    'shape-rendering color enable-background font-variant font-stretch line-height -inkscape-font-specification paint-order ' +
     'font-variation-settings font-variant-ligatures font-variant-caps font-variant-numeric font-variant-east-asian',
 );
 const normalFontProperties = words(
@@ -159,7 +159,26 @@ function stylesheet(text, reject) {
   }
 }
 
-/** Throws on unsupported content; callers retain and hash the original Buffer. */
+function canvasAspectRatio(attributes) {
+  const units = { px: 1, pt: 96 / 72, pc: 16, in: 96, cm: 96 / 2.54, mm: 96 / 25.4, q: 96 / 101.6 };
+  const lengths = ['width', 'height'].map((name) => {
+    const match = attributes[name]?.value
+      .trim()
+      .match(new RegExp(`^(${number})(px|pt|pc|in|cm|mm|q)?$`, 'i'));
+    return match ? Number(match[1]) * units[match[2]?.toLowerCase() || 'px'] : undefined;
+  });
+  if (lengths.some((value) => value !== undefined && value <= 0)) return undefined;
+  if (lengths.every((value) => Number.isFinite(value))) return lengths[0] / lengths[1];
+  const box = attributes.viewBox?.value
+    .trim()
+    .split(/[\s,]+/)
+    .map(Number);
+  return box?.length === 4 && box.every(Number.isFinite) && box[2] > 0 && box[3] > 0
+    ? box[2] / box[3]
+    : undefined;
+}
+
+/** Throws on unsupported content and reports the intrinsic canvas ratio. Original bytes stay intact. */
 export function checkSvg(buffer, context) {
   const reject = (reason) => {
     throw new Error(`Invalid catalog: ${context}: SVG ${reason}`);
@@ -173,12 +192,14 @@ export function checkSvg(buffer, context) {
   const parser = new SaxesParser({ xmlns: true });
   const stack = [];
   let first = true;
+  let aspectRatio;
   parser.on('error', () => reject('is malformed XML'));
   parser.on('doctype', () => reject('DOCTYPE is forbidden'));
   parser.on('processinginstruction', () => reject('processing instructions are forbidden'));
   parser.on('opentag', (tag) => {
     const parent = stack.at(-1);
     if (first && (tag.local !== 'svg' || tag.uri !== ns.svg)) reject('root must be svg');
+    if (first) aspectRatio = canvasAspectRatio(tag.attributes);
     first = false;
     if (parent?.kind === 'grid' || parent?.kind === 'style')
       reject('grid and style elements must contain no elements');
@@ -210,6 +231,7 @@ export function checkSvg(buffer, context) {
         continue;
       }
       if (/^on/i.test(local)) reject(`attribute ${name} is outside the static subset`);
+      if (kind === 'style' && !uri && local === 'type' && value === 'text/css') continue;
       if (kind === 'grid') {
         if (!uri && (local === 'id' || (local === 'type' && value === 'xygrid'))) continue;
         reject(`attribute ${name} is outside the static grid subset`);
@@ -288,4 +310,5 @@ export function checkSvg(buffer, context) {
     if (error.message.startsWith('Invalid catalog:')) throw error;
     reject('is malformed XML');
   }
+  return Number.isFinite(aspectRatio) && aspectRatio > 0 ? { aspectRatio } : {};
 }

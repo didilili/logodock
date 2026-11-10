@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 3,
+  "id": "sensetime",
+  "name": "商汤科技",
+  "aliases": [
+    "商汤",
+    "SenseTime",
+    "商汤集团",
+    "商湯集團股份有限公司",
+    "SenseTime Group Inc."
+  ],
+  "identity": {
+    "nameZh": "商汤科技",
+    "nameEn": "SenseTime",
+    "legalNames": [
+      {
+        "name": "商湯集團股份有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://www.sensetime.com/hk/news/2026H1-results",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "name": "SenseTime Group Inc.",
+        "language": "en",
+        "role": "group",
+        "source": "https://www.sensetime.com/en/news/2026H1-results",
+        "reviewedAt": "2026-11-07"
+      }
+    ],
+    "sources": [
+      {
+        "label": "官方身份来源",
+        "url": "https://www.sensetime.com/hk/news/2026H1-results",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "官方身份来源",
+        "url": "https://www.sensetime.com/en/news/2026H1-results",
+        "reviewedAt": "2026-11-07"
+      }
+    ]
+  },
+  "website": "https://www.sensetime.com/",
+  "entityType": "company",
+  "categories": [
+    "ai"
+  ],
+  "defaultAsset": "logo-color.png",
+  "assets": [
+    {
+      "file": "logo-color.png",
+      "label": "彩色中英横版组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/c/c9/SenseTime_logo.png",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:SenseTime_logo.png",
+      "sha256": "7708d37d4b2367d866aee732020be22d2f5086f5c85869a01221ef722f068001",
+      "bytes": 229437,
+      "rights": {
+        "status": "permitted",
+        "license": "CC-BY-SA-4.0",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:SenseTime_logo.png&oldid=1255679577",
+        "attribution": "SenseTime. SenseTime logo.png. Wikimedia Commons (uploaded by Katherinelouis). Licensed under Creative Commons Attribution-ShareAlike 4.0 International: https://creativecommons.org/licenses/by-sa/4.0/ . Source: https://commons.wikimedia.org/wiki/File:SenseTime_logo.png . Original file, unmodified.",
+        "reviewedAt": "2026-11-07",
+        "notes": "本文件按 Commons 文件页所列 CC BY-SA 4.0 分发，需保留作者署名、文件来源、许可链接及修改说明，改编须按相同或兼容许可分享。商标权保留，使用不得暗示品牌背书。"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "original",
+        "channel": "commons"
+      }
+    }
+  ]
+}

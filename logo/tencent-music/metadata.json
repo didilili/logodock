@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 3,
+  "id": "tencent-music",
+  "name": "腾讯音乐娱乐集团",
+  "aliases": [
+    "腾讯音乐",
+    "TME",
+    "Tencent Music"
+  ],
+  "website": "https://www.tencentmusic.com/",
+  "entityType": "company",
+  "categories": [
+    "internet",
+    "entertainment"
+  ],
+  "identity": {
+    "nameZh": "腾讯音乐娱乐集团",
+    "nameEn": "Tencent Music Entertainment Group",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "腾讯音乐集团官网",
+        "url": "https://www.tencentmusic.com/",
+        "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "腾讯音乐官方投资者关系",
+        "url": "https://ir.tencentmusic.com/",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "defaultAsset": "wordmark-tme-blue-official.png",
+  "assets": [
+    {
+      "file": "wordmark-tme-blue-official.png",
+      "label": "蓝色 TME 字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header",
+        "pageTitle": "腾讯音乐官网首页"
+      },
+      "source": "https://www.tencentmusic.com/img/tme-blue.cafd93f9.png",
+      "sourcePage": "https://www.tencentmusic.com/",
+      "sha256": "e1ddc3718baac847063240897c06c80f61375cf8b939d61f997176324ec443f7",
+      "bytes": 3825,
+      "qualityNotes": [
+        "透明背景。"
+      ],
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:%E9%A8%B0%E8%A8%8A%E9%9F%B3%E6%A8%82%E5%A8%9B%E6%A8%82%E9%9B%86%E5%9C%98logo.jpg&oldid=1254296409",
+        "attribution": "Tencent Music Entertainment Group / 腾讯音乐娱乐集团。Commons 对相同 TME 简单字母图形的 PD-textlogo 判断无版权署名要求；保留官方来源与商标声明，文件原样保存。",
+        "reviewedAt": "2026-11-09",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围限于相同 TME 简单字母图形。"
+      }
+    }
+  ]
+}

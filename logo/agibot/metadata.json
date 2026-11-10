@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 3,
+  "id": "agibot",
+  "name": "智元机器人",
+  "aliases": [],
+  "identity": {
+    "nameZh": "智元机器人",
+    "nameEn": "AGIBOT",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "智元机器人官方来源",
+        "url": "https://www.agibot.com/",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.agibot.com/",
+  "entityType": "company",
+  "categories": [
+    "ai",
+    "hardware"
+  ],
+  "defaultAsset": "logo-english-gray-small-official.png",
+  "assets": [
+    {
+      "file": "logo-english-gray-small-official.png",
+      "label": "灰色英文小尺寸组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.agibot.com/public/static/index/en/images/logo2.png",
+      "sourcePage": "https://www.agibot.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ],
+      "sha256": "83535ee96d57a776b05e4f8f0c3b0c65014ea7994ff1bab96d18b173f87f5aa9",
+      "bytes": 5382,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.agibot.com/",
+        "attribution": "智元机器人。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "logo-english-white-small-official.png",
+      "label": "白色英文小尺寸组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "dark",
+      "source": "https://www.agibot.com/public/static/index/en/images/logo.png",
+      "sourcePage": "https://www.agibot.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ],
+      "sha256": "3632c1641f5566dc998bc5e7104842fee64214986db0fcd1ff1304d6ff787b1d",
+      "bytes": 5232,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.agibot.com/",
+        "attribution": "智元机器人。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "logo-bilingual-small-official.png",
+      "label": "中英小尺寸组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.agibot.com.cn/public/static/index/images/index2/new-logo.png",
+      "sourcePage": "https://www.agibot.com.cn/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "display": "alternative",
+      "qualityNotes": [
+        "透明背景。"
+      ],
+      "sha256": "22673db8b8b7e192574cee6c127a21d44c1ba7d7a32835c82c94c5f25e0a18f9",
+      "bytes": 4123,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.agibot.com.cn/",
+        "attribution": "智元机器人。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "icon-appstore.jpg",
+      "label": "AGIBOT GO 应用图标",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/bf/78/3d/bf783dc3-b42f-9bbd-5608-98323edf7f83/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg",
+      "sourcePage": "https://apps.apple.com/cn/app/agibot-go/id6745000316?uo=4",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "rendered",
+        "channel": "app-store"
+      },
+      "qualityNotes": [
+        "官方应用图标，不透明背景。"
+      ],
+      "sha256": "dd38b2517a1664286e1e3433d75b1eb5601c153c458611d0687d26cbf209bd56",
+      "bytes": 20431,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://apps.apple.com/cn/app/agibot-go/id6745000316?uo=4",
+        "attribution": "智元机器人。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    }
+  ]
+}

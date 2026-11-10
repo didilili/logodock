@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 3,
+  "id": "taotian",
+  "name": "淘天集团",
+  "aliases": [
+    "淘天"
+  ],
+  "identity": {
+    "nameZh": "淘天集团",
+    "nameEn": "TAOBAO&TMALL GROUP",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "淘天集团官方来源",
+        "url": "https://talent.taotian.com/",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://talent.taotian.com/",
+  "entityType": "organization",
+  "categories": [
+    "e-commerce"
+  ],
+  "defaultAsset": "logo-recruitment-official.png",
+  "assets": [
+    {
+      "file": "logo-recruitment-official.png",
+      "label": "招聘组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://img.alicdn.com/imgextra/i1/O1CN01mZqDrs1hwEBiEJMje_!!6000000004341-2-tps-1523-298.png",
+      "sourcePage": "https://talent.taotian.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "usageWarnings": [
+        "含招聘字样，适用于招聘场景。"
+      ],
+      "sha256": "f2cdebde51c14839fca8ea4716a0660dd65d23c34978774ce00ee2992a69b270",
+      "bytes": 15705,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://talent.taotian.com/",
+        "attribution": "淘天集团。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    }
+  ]
+}

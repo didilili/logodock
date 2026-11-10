@@ -44,7 +44,7 @@ try {
   const path = join(repositoryRoot, 'index.json');
   const documentPath = join(repositoryRoot, 'docs/catalog.md');
   const count = catalog.brands.reduce((total, brand) => total + brand.assets.length, 0);
-  const document = `# Logo 资源清单\n\n此文件由 \`npm run build:index\` 生成，请修改 \`logos/<id>/metadata.json\` 和原始素材后重新生成。\n\n当前收录 ${catalog.brands.length} 个品牌、${count} 个文件。使用条件以逐文件记录及其来源为准，收录不代表品牌方授权或背书；详见 [第三方资源说明](../NOTICE.md)。\n\n返回 [项目说明](../README.md) · [贡献指南](../CONTRIBUTING.md) · [完整 JSON 索引](../index.json)\n\n${resourceTable(catalog)}\n`;
+  const document = `# Logo 资源清单\n\n此文件由 \`npm run build:index\` 生成，请修改 \`logo/<id>/metadata.json\` 和原始素材后重新生成。\n\n当前收录 ${catalog.brands.length} 个品牌、${count} 个文件。使用条件以逐文件记录及其来源为准，收录不代表品牌方授权或背书；详见 [第三方资源说明](../NOTICE.md)。\n\n返回 [项目说明](../README.md) · [贡献指南](../CONTRIBUTING.md) · [完整 JSON 索引](../index.json)\n\n${resourceTable(catalog)}\n`;
   if (args.includes('--check')) {
     const current = await readFile(path, 'utf8').catch(() => null);
     if (current !== serialized)

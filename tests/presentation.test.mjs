@@ -1,7 +1,154 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import { sourceInformation } from '../src/lib/catalog-display.mjs';
 
 const presentation = () => import('../src/lib/catalog-presentation.mjs');
+
+test('shared source information keeps distinct licenses and deduplicates matching conditions', () => {
+  const entry = {
+    label: 'RGB 用稿',
+    sourcePage: 'https://example.com/brand/',
+    source: 'https://example.com/design.zip',
+    rights: {
+      status: 'permitted',
+      license: 'CC-BY-3.0',
+      reference: 'https://example.com/brand/',
+      attribution: 'Example designer',
+      notes: '保持原始比例。',
+    },
+  };
+  const information = sourceInformation([
+    entry,
+    {
+      ...entry,
+      label: 'CMYK 用稿',
+      rights: { ...entry.rights, license: 'CC-BY-SA-4.0' },
+    },
+  ]);
+  assert.equal(information.links.length, 2);
+  const license = information.links.find((link) => link.url === entry.sourcePage);
+  assert.ok(license.primaryLicense);
+  assert.deepEqual(license.licenses, [
+    { label: 'CC-BY-3.0', files: ['RGB 用稿'] },
+    { label: 'CC-BY-SA-4.0', files: ['CMYK 用稿'] },
+  ]);
+  assert.equal(information.notes.length, 1);
+  assert.equal(information.attributions.length, 1);
+  const unverified = sourceInformation([
+    { ...entry, rights: { ...entry.rights, status: 'unverified', license: '许可未核实' } },
+  ]);
+  assert.ok(unverified.links.every((link) => !link.primaryLicense));
+  assert.doesNotMatch(JSON.stringify(unverified), /许可未核实|许可已确认/);
+  const pending = sourceInformation([
+    { ...entry, rights: { ...entry.rights, notes: '许可及署名条件待核实。' } },
+  ]);
+  assert.equal(pending.notes.length, 0);
+  const mixed = sourceInformation([
+    { ...entry, label: '预览图', rights: { ...entry.rights, status: 'unverified' } },
+    entry,
+  ]);
+  const sharedSource = mixed.links.find((link) => link.url === entry.sourcePage);
+  assert.deepEqual(sharedSource.files, ['预览图', 'RGB 用稿']);
+  assert.deepEqual(sharedSource.licenses, [{ label: 'CC-BY-3.0', files: ['RGB 用稿'] }]);
+});
+
+test('brand detail routes use the singular logo path below the explicit site root', async () => {
+  const { brandRoute } = await import('../src/lib/catalog-display.mjs');
+  assert.equal(brandRoute({ id: 'jd' }), './logo/jd/');
+  assert.equal(brandRoute({ id: 'jd' }, '/logodock/'), '/logodock/logo/jd/');
+});
+
+test('directory prefers current primary square symbols within the active search and format', async () => {
+  const { directoryAsset, matchingBrands, defaultAsset } = await presentation();
+  const brand = {
+    ...brands[0],
+    defaultAsset: 'lockup.svg',
+    assets: [
+      { file: 'lockup.svg', label: '英文组合', status: 'current', variant: 'logo', aspectRatio: 4 },
+      {
+        file: 'app.png',
+        label: '应用图标',
+        status: 'current',
+        variant: 'icon',
+        width: 512,
+        height: 512,
+      },
+      {
+        file: 'white.svg',
+        label: '白色图形',
+        status: 'current',
+        variant: 'icon',
+        background: 'dark',
+        color: 'white',
+        aspectRatio: 1,
+      },
+      {
+        file: 'old.svg',
+        label: '旧版图形',
+        status: 'historical',
+        variant: 'icon',
+        color: 'brand',
+        aspectRatio: 1,
+      },
+      {
+        file: 'alternative.svg',
+        label: '备选图形',
+        status: 'current',
+        display: 'alternative',
+        variant: 'icon',
+        color: 'brand',
+        aspectRatio: 1,
+      },
+      {
+        file: 'symbol.svg',
+        label: '彩色图形',
+        status: 'current',
+        variant: 'icon',
+        color: 'brand',
+        aspectRatio: 1,
+      },
+    ],
+  };
+  const before = structuredClone(brand);
+  assert.equal(directoryAsset(brand).file, 'symbol.svg');
+  assert.equal(directoryAsset(brand, '应用').file, 'app.png');
+  assert.equal(directoryAsset(brand, '英文').file, 'lockup.svg');
+  assert.equal(directoryAsset(matchingBrands([brand], { format: 'PNG' })[0]).file, 'app.png');
+  assert.equal(
+    directoryAsset({ ...brand, assets: [brand.assets[0], brand.assets[3], brand.assets[4]] }).file,
+    'lockup.svg',
+  );
+  assert.equal(defaultAsset(brand).file, 'lockup.svg');
+  const grouped = {
+    ...brand,
+    assets: [brand.assets[0], { ...brand.assets[1], variant: 'logo' }],
+    artworks: [
+      {
+        id: 'same-design',
+        label: '同款',
+        files: ['lockup.svg', 'app.png'],
+        defaultAsset: 'lockup.svg',
+      },
+    ],
+  };
+  assert.equal(directoryAsset(grouped).file, 'app.png');
+  assert.deepEqual(brand, before);
+});
+
+test('extracted symbol labels describe the processing and preserve the original source page', async () => {
+  const { sourceLabel, provenanceLabel } = await import('../src/lib/catalog-display.mjs');
+  const asset = {
+    provenance: {
+      sourceType: 'official',
+      channel: 'website',
+      processing: 'extracted',
+      pageTitle: '品牌介绍',
+      originalAsset: 'logo.svg',
+    },
+  };
+  assert.equal(sourceLabel(asset), '官网页面用图 · 图形提取版');
+  assert.equal(provenanceLabel(asset), '品牌介绍 · 图形提取版');
+});
 
 test('source labels use reviewed channels and preserve original or rendered distinctions', async () => {
   const { sourceLabel } = await import('../src/lib/catalog-display.mjs');
@@ -74,6 +221,10 @@ test('website source labels describe reviewed placement and the actual source pa
 test('public domain labels identify the distribution assessment while preserving named licenses', async () => {
   const { licenseLabel } = await import('../src/lib/catalog-display.mjs');
   assert.equal(
+    licenseLabel({ rights: { status: 'unverified', license: 'Not yet reviewed' } }),
+    '许可未核实',
+  );
+  assert.equal(
     licenseLabel({
       rights: {
         license: 'Public domain (textlogo; third-party assessment)',
@@ -119,7 +270,7 @@ const brands = [
     assets: [
       {
         file: 'old.png',
-        path: 'logos/z/old.png',
+        path: 'logo/z/old.png',
         status: 'historical',
         label: '旧版图形',
         background: 'any',
@@ -127,7 +278,7 @@ const brands = [
       },
       {
         file: 'new.svg',
-        path: 'logos/z/new.svg',
+        path: 'logo/z/new.svg',
         status: 'current',
         label: '现行图形',
         background: 'light',
@@ -146,7 +297,7 @@ const brands = [
     assets: [
       {
         file: 'old.png',
-        path: 'logos/a/old.png',
+        path: 'logo/a/old.png',
         status: 'historical',
         label: '历史图形',
         background: 'any',

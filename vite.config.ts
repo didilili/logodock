@@ -17,7 +17,7 @@ function catalogWatch(): Plugin {
     name: 'logodock-catalog-watch',
     configureServer(server) {
       const root = process.cwd();
-      const folders = ['logos', 'schema', 'scripts'].map((folder) => resolve(root, folder));
+      const folders = ['logo', 'schema', 'scripts'].map((folder) => resolve(root, folder));
       server.watcher.add(folders);
       let timer: ReturnType<typeof setTimeout>;
       let pending = Promise.resolve();

@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 3,
+  "id": "zuoyebang",
+  "name": "作业帮",
+  "aliases": [],
+  "identity": {
+    "nameZh": "作业帮",
+    "nameEn": null,
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "作业帮官方来源",
+        "url": "https://www.zuoyebang.com/",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.zuoyebang.com/",
+  "entityType": "company",
+  "categories": [
+    "internet"
+  ],
+  "defaultAsset": "logo-slogan-official.png",
+  "assets": [
+    {
+      "file": "logo-slogan-official.png",
+      "label": "含口号组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://iotcdn.cdnjtzy.com/ty-website/images/pc/pc_logo.png",
+      "sourcePage": "https://smart.zuoyebang.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "透明背景，含“让努力更聪明”口号。"
+      ],
+      "sha256": "7f51bd071be8d3cb8396795866d20bb41bc31f5501f4e74659f8c7eb67bf2f6d",
+      "bytes": 21002,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://smart.zuoyebang.com/",
+        "attribution": "作业帮。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "icon-appstore.jpg",
+      "label": "应用图标",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4a/80/69/4a8069b1-62ab-0c5b-c539-da04cde577d1/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/512x512bb.jpg",
+      "sourcePage": "https://apps.apple.com/cn/app/%E4%BD%9C%E4%B8%9A%E5%B8%AE-%E4%B8%AD%E5%B0%8F%E5%AD%A6%E5%AE%B6%E9%95%BF%E4%BD%9C%E4%B8%9A%E6%A3%80%E6%9F%A5%E5%92%8Cai%E4%BC%B4%E5%AD%A6%E8%BE%85%E5%AF%BC%E5%B7%A5%E5%85%B7/id803781859?uo=4",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "rendered",
+        "channel": "app-store"
+      },
+      "qualityNotes": [
+        "官方应用图标，不透明背景。"
+      ],
+      "sha256": "71abc060ec08b33ae0b545cf89c52ebec42a8de5ac04c78e360dee2e89be5927",
+      "bytes": 33208,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://apps.apple.com/cn/app/%E4%BD%9C%E4%B8%9A%E5%B8%AE-%E4%B8%AD%E5%B0%8F%E5%AD%A6%E5%AE%B6%E9%95%BF%E4%BD%9C%E4%B8%9A%E6%A3%80%E6%9F%A5%E5%92%8Cai%E4%BC%B4%E5%AD%A6%E8%BE%85%E5%AF%BC%E5%B7%A5%E5%85%B7/id803781859?uo=4",
+        "attribution": "作业帮。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "logo-compact-official.png",
+      "label": "无口号小尺寸组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://plat-h5.cdnjtzy.com/www/img/data_homework_logo.8386503.png",
+      "sourcePage": "https://www.zuoyebang.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "display": "alternative",
+      "qualityNotes": [
+        "透明背景。"
+      ],
+      "sha256": "2e0c041a406a9158f3b4a8ae4af0e6dceab15eb77941fd1186f4644b064c6646",
+      "bytes": 4131,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.zuoyebang.com/",
+        "attribution": "作业帮。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    }
+  ]
+}

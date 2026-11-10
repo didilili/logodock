@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 3,
+  "id": "bigo",
+  "name": "BIGO",
+  "aliases": [],
+  "identity": {
+    "nameZh": null,
+    "nameEn": "BIGO",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "BIGO官方来源",
+        "url": "https://www.bigo.sg/",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.bigo.sg/",
+  "entityType": "company",
+  "categories": [
+    "internet"
+  ],
+  "defaultAsset": "wordmark-blue-official.png",
+  "assets": [
+    {
+      "file": "wordmark-blue-official.png",
+      "label": "蓝色字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://static-web.bigolive.tv/as/bigo-static/official_website/pc/img/about/logo-blue-big.png",
+      "sourcePage": "https://www.bigo.sg/about",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "透明背景，有效图稿约 381 × 114 像素。"
+      ],
+      "sha256": "a7cec787a851b98f85dc2f5291dc0cec0fc7f6c32ba48b21ab7fb11694799e41",
+      "bytes": 12335,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.bigo.sg/about",
+        "attribution": "BIGO。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "wordmark-white-official.png",
+      "label": "白色网页字标",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.bigo.sg/mobile/js/app.d3d1d23d.js",
+      "sourcePage": "https://www.bigo.sg/mobile/about",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ],
+      "sha256": "4b65383655a04a6622a4df87952fc572857f93509652e5cf6d5c295bdacd6802",
+      "bytes": 2883,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.bigo.sg/mobile/about",
+        "attribution": "BIGO。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    }
+  ]
+}

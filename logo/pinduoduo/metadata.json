@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 3,
+  "id": "pinduoduo",
+  "name": "拼多多",
+  "aliases": [],
+  "identity": {
+    "nameZh": "拼多多",
+    "nameEn": null,
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "拼多多官方来源",
+        "url": "https://www.pinduoduo.com/",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.pinduoduo.com/",
+  "entityType": "company",
+  "categories": [
+    "e-commerce"
+  ],
+  "defaultAsset": "logo-slogan-official.png",
+  "assets": [
+    {
+      "file": "logo-slogan-official.png",
+      "label": "含口号组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://cdn.pinduoduo.com/upload/home/img/common/pdd_logo_v2.png",
+      "sourcePage": "https://www.pinduoduo.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "含“拼着买，才便宜”口号。"
+      ],
+      "sha256": "eaecdaab33edb3937f222fa906a188f923212328bce4c1aacd59f52ce4b1f61c",
+      "bytes": 35323,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.pinduoduo.com/",
+        "attribution": "拼多多。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    }
+  ]
+}

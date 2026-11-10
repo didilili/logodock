@@ -41,15 +41,22 @@
   const selectionKey = $derived(
     JSON.stringify([brand.id, query, brand.assets.map((item) => item.file)]),
   );
+  const preferredAsset = $derived(directoryAsset(brand, query));
   const asset = $derived.by(() => {
     const currentSelection = selection;
     return (
       (currentSelection?.key === selectionKey &&
         brand.assets.find((item) => item.file === currentSelection.file)) ||
-      directoryAsset(brand, query)
+      preferredAsset
     );
   });
-  const artworks = $derived(primaryArtworkGroups(brand, assetDisplayLabel));
+  const artworks = $derived.by(() => {
+    const groups = primaryArtworkGroups(brand, assetDisplayLabel);
+    const preferred = groups.find((group) =>
+      group.assets.some((entry) => entry.file === preferredAsset.file),
+    );
+    return preferred ? [preferred, ...groups.filter((group) => group !== preferred)] : groups;
+  });
   const rasterSize = $derived(
     loadedSize && loadedSize.file === asset.file
       ? loadedSize

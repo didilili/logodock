@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 3,
+  "id": "bytedance",
+  "name": "字节跳动",
+  "aliases": [
+    "ByteDance"
+  ],
+  "identity": {
+    "nameZh": "字节跳动",
+    "nameEn": "ByteDance",
+    "legalNames": [
+      {
+        "name": "Bytedance Ltd",
+        "language": "en",
+        "role": "website-operator",
+        "source": "https://lf3-static.bytednsdoc.com/obj/eden-cn/shjpmmv_ljuhklafi/ljhwZthlaukjlkulzlp/files/PrivacyPolicy_ByteDance.com.pdf",
+        "reviewedAt": "2026-11-07"
+      }
+    ],
+    "sources": [
+      {
+        "label": "字节跳动官网（中/英）",
+        "url": "https://www.bytedance.com/?locale=en",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "官网页脚隐私政策（2021-03-16版）",
+        "url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/shjpmmv_ljuhklafi/ljhwZthlaukjlkulzlp/files/PrivacyPolicy_ByteDance.com.pdf",
+        "reviewedAt": "2026-11-07"
+      }
+    ]
+  },
+  "website": "https://www.bytedance.com/",
+  "entityType": "company",
+  "categories": [
+    "internet"
+  ],
+  "defaultAsset": "logo-english.svg",
+  "assets": [
+    {
+      "file": "logo-english.svg",
+      "label": "彩色英文组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/0/07/ByteDance_logo_English.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:ByteDance_logo_English.svg",
+      "sha256": "062b0eb7f19fd38d590600a244e61b609c0f76d4578bf464c892b638abee86c2",
+      "bytes": 6886,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AByteDance_logo_English.svg&oldid=1117279263",
+        "attribution": "No copyright attribution required by the Commons PD-textlogo designation. Logo attributed to 字节跳动; trademark rights remain with the respective owner.",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。判定范围为字节跳动四柱图形及对应英文组合。"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "original",
+        "channel": "commons"
+      }
+    },
+    {
+      "file": "icon-white-official.svg",
+      "label": "白色图形 · 原始画布",
+      "variant": "icon",
+      "status": "current",
+      "background": "dark",
+      "language": "none",
+      "layout": "standalone",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "pageTitle": "字节跳动中文首页"
+      },
+      "source": "https://www.bytedance.com/zh/#embedded-svg-img-2",
+      "sourcePage": "https://www.bytedance.com/zh/",
+      "sha256": "31320dac45abdc933122c9980cea790fa12ee99f46a0b7ca926c59b5637da0a8",
+      "bytes": 450,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AByteDance_logo_English.svg&oldid=1117279263",
+        "attribution": "字节跳动 / ByteDance。原样保存官网首页主体区域内嵌 SVG；保留来源及 Commons 对相同四柱几何标识的第三方 PD-textlogo 判断，商标权保留。",
+        "reviewedAt": "2026-11-09",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。判定范围限于相同四柱简单几何图形。"
+      }
+    },
+    {
+      "file": "icon-color-extracted.svg",
+      "label": "彩色图形",
+      "variant": "icon",
+      "status": "current",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "extracted",
+        "channel": "commons",
+        "originalAsset": "logo-english.svg",
+        "originalSha256": "062b0eb7f19fd38d590600a244e61b609c0f76d4578bf464c892b638abee86c2"
+      },
+      "source": "https://upload.wikimedia.org/wikipedia/commons/0/07/ByteDance_logo_English.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:ByteDance_logo_English.svg",
+      "qualityNotes": [
+        "透明背景，长边贴边，短边居中补齐方形画布。"
+      ],
+      "sha256": "440ce5b117ed68518c5ce58f4939c6107ed5173357ff291c8d173335483c068b",
+      "bytes": 1970,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AByteDance_logo_English.svg&oldid=1117279263",
+        "attribution": "字节跳动。原作品权利及来源依据沿用母稿记录，图形提取处理由 LogoDock 完成。",
+        "reviewedAt": "2026-11-10",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。判定范围为字节跳动四柱图形及对应英文组合。"
+      }
+    },
+    {
+      "file": "icon-white-square-extracted.svg",
+      "label": "白色图形",
+      "variant": "icon",
+      "status": "current",
+      "language": "none",
+      "layout": "standalone",
+      "color": "white",
+      "background": "dark",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "pageTitle": "字节跳动中文首页",
+        "originalAsset": "icon-white-official.svg",
+        "originalSha256": "31320dac45abdc933122c9980cea790fa12ee99f46a0b7ca926c59b5637da0a8"
+      },
+      "source": "https://www.bytedance.com/zh/#embedded-svg-img-2",
+      "sourcePage": "https://www.bytedance.com/zh/",
+      "qualityNotes": [
+        "透明背景，长边贴边，短边居中补齐方形画布。"
+      ],
+      "sha256": "a74d3a6bdf082583832f15ef8f7cb5db770399c703cecc32f13765b686f7626f",
+      "bytes": 876,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AByteDance_logo_English.svg&oldid=1117279263",
+        "attribution": "字节跳动。原作品权利及来源依据沿用母稿记录，图形提取处理由 LogoDock 完成。",
+        "reviewedAt": "2026-11-10",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。判定范围限于相同四柱简单几何图形。"
+      }
+    }
+  ],
+  "artworks": [
+    {
+      "id": "square-white",
+      "label": "白色图形",
+      "files": [
+        "icon-white-official.svg",
+        "icon-white-square-extracted.svg"
+      ],
+      "defaultAsset": "icon-white-square-extracted.svg"
+    }
+  ]
+}

@@ -12,6 +12,7 @@
   import type { Asset, Brand } from '#lib/types.ts';
   import { identityNames, shapeLabels } from '#lib/catalog-display.mjs';
   import {
+    defaultAsset,
     directoryAsset,
     sortCatalogBrands,
     matchingBrands,
@@ -61,9 +62,7 @@
     const params = new URLSearchParams();
     for (const [key, value] of Object.entries(filters)) if (value) params.set(key, value);
     if (asset.file !== brand.defaultAsset) params.set('asset', asset.file);
-    return (
-      base + '/logos/' + encodeURIComponent(brand.id) + '/' + (params.size ? '?' + params : '')
-    );
+    return base + '/logo/' + encodeURIComponent(brand.id) + '/' + (params.size ? '?' + params : '');
   }
   function updateHistory(replace = false) {
     feedback?.reset();
@@ -128,8 +127,9 @@
       url.searchParams.delete('brand');
       const requested = url.searchParams.get('asset');
       const file =
-        legacyBrand.assets.find((asset) => asset.file === requested)?.file ||
-        directoryAsset(legacyBrand, filters.q).file;
+        requested === null
+          ? directoryAsset(legacyBrand, filters.q).file
+          : defaultAsset(legacyBrand, requested).file;
       if (file === legacyBrand.defaultAsset) url.searchParams.delete('asset');
       else url.searchParams.set('asset', file);
       location.replace(url);

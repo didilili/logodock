@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 3,
+  "id": "oppo",
+  "name": "OPPO",
+  "aliases": [
+    "OPPO广东移动通信有限公司"
+  ],
+  "identity": {
+    "nameZh": "OPPO",
+    "nameEn": "OPPO",
+    "legalNames": [
+      {
+        "name": "OPPO广东移动通信有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://privacy.oppo.com/cn/policy",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "name": "Guangdong OPPO Mobile Telecommunications Corp., Ltd.",
+        "language": "en",
+        "role": "operating-company",
+        "source": "https://www.oppo.com/en/app-privacy/",
+        "reviewedAt": "2026-11-07"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OPPO中国个人信息保护政策",
+        "url": "https://privacy.oppo.com/cn/policy",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "OPPO Global Privacy Policy",
+        "url": "https://www.oppo.com/en/app-privacy/",
+        "reviewedAt": "2026-11-07"
+      }
+    ]
+  },
+  "website": "https://www.oppo.com/",
+  "entityType": "company",
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "wordmark-black-official.svg",
+  "assets": [
+    {
+      "file": "wordmark-green-2019.svg",
+      "label": "2019 绿色字标",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/0/0a/OPPO_LOGO_2019.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:OPPO_LOGO_2019.svg",
+      "sha256": "ba1c57d007cdde379c35a674750d87be21a2a1905e0fcefe76a979b50e13496f",
+      "bytes": 6216,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AOPPO_LOGO_2019.svg&oldid=1291432638",
+        "attribution": "OPPO；SVG 转制：Wikimedia Commons 用户 Sushant savla。Commons 文件页标记为公共领域，无版权署名要求；保留来源和商标声明。文件下载原样保存。",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围为相同 OPPO 英文字标。"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "original",
+        "channel": "commons"
+      }
+    },
+    {
+      "file": "wordmark-black-official.svg",
+      "label": "黑色字标",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "black",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header",
+        "pageTitle": "OPPO中国官网"
+      },
+      "source": "https://www.oppo.com/cn/",
+      "sourcePage": "https://www.oppo.com/cn/",
+      "sha256": "297c469a60d6be652328c2624ef9b61b0d95ba901e294bd464a857696d1682a0",
+      "bytes": 2978,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:OPPO_LOGO_2019.svg&oldid=1291432638",
+        "attribution": "OPPO。保留官方原始出处与商标声明，原文件未经修改。Commons对相应简单图形或字标作第三方PD-textlogo判断，无版权署名要求。",
+        "reviewedAt": "2026-11-09",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围为相同 OPPO 英文字标。"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ]
+    }
+  ]
+}

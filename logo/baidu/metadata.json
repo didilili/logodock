@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 3,
+  "id": "baidu",
+  "name": "百度",
+  "aliases": [],
+  "identity": {
+    "nameZh": "百度",
+    "nameEn": "Baidu",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "百度官方来源",
+        "url": "https://home.baidu.com/",
+        "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "百度官方媒体资源库",
+        "url": "https://home.baidu.com/media_resource/",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://home.baidu.com/",
+  "entityType": "company",
+  "categories": [
+    "internet",
+    "ai"
+  ],
+  "defaultAsset": "logo-bilingual-brand-library.jpg",
+  "assets": [
+    {
+      "file": "logo-bilingual-brand-library.jpg",
+      "label": "中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://static.home.baidu.com/homebd/afndhbmgcijkel1565603510.jpg?authorization=bce-auth-v1%2Fe6803def36ae467f81ebdb4bdc75f119%2F2019-08-12T09%3A51%3A50Z%2F-1%2F%2Ff79de27280ce1cdcbdd31c4d64a1e2b520ec4b9470f967ae0068444fde76a2a1",
+      "sourcePage": "https://home.baidu.com/media_resource/show_detail/res_id/2/tab_id/1",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library",
+        "pageTitle": "百度标准彩色标志"
+      },
+      "qualityNotes": [
+        "白底网页预览原图，含留白，有效图稿约756 × 236像素。"
+      ],
+      "usageWarnings": [
+        "须整体使用并保持比例与配色，适用背景见官方规范。"
+      ],
+      "sha256": "50368171d80704c038d2b7f7d7778f338cdae54a1822243311f5b19ec68c4690",
+      "bytes": 149007,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://home.baidu.com/media_resource/show_detail/res_id/2/tab_id/1",
+        "attribution": "百度。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09",
+        "notes": "官方标准色规范注明 du 字母采用白色填充，须整体使用并保持比例与配色，适用背景见对应规范。"
+      }
+    },
+    {
+      "file": "icon-appstore.jpg",
+      "label": "百度应用图标",
+      "variant": "icon",
+      "language": "en",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/79/52/73/795273ed-8a69-f161-a490-6a5145f6b2a4/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
+      "sourcePage": "https://apps.apple.com/cn/app/%E7%99%BE%E5%BA%A6-ai%E6%99%BA%E8%83%BD%E6%90%9C%E7%B4%A2/id382201985?uo=4",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "rendered",
+        "channel": "app-store"
+      },
+      "qualityNotes": [
+        "官方应用图标，不透明背景。"
+      ],
+      "sha256": "5cf36cd3ff9a6b06225aa36f98485becfe145038dadd08fe9fd91374be0afe4c",
+      "bytes": 27985,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://apps.apple.com/cn/app/%E7%99%BE%E5%BA%A6-ai%E6%99%BA%E8%83%BD%E6%90%9C%E7%B4%A2/id382201985?uo=4",
+        "attribution": "百度。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "icon-blue-brand-library.jpg",
+      "label": "熊掌图形",
+      "variant": "icon",
+      "language": "en",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "source": "https://static.home.baidu.com/homebd/jdfihclnegakbm1565604013.jpg?authorization=bce-auth-v1%2Fe6803def36ae467f81ebdb4bdc75f119%2F2019-08-12T10%3A00%3A14Z%2F-1%2F%2F0f5e7ada1ca7a17e3eb8f68ffa794c50a3d3b12d8e10758f83e1710d2cb55134",
+      "sourcePage": "https://home.baidu.com/media_resource/show_detail/res_id/5/tab_id/1",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library",
+        "pageTitle": "百度熊掌图形"
+      },
+      "qualityNotes": [
+        "白底网页预览原图，含留白，有效图稿约355 × 376像素。"
+      ],
+      "usageWarnings": [
+        "官方将此图限定为设计应用参考，单独作为标志使用限使用面积高度≤13mm。"
+      ],
+      "sha256": "bf03edc8435a1eb92aac883017c6b70a34b7136d91f923bb32f35b62fc579ba6",
+      "bytes": 130424,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://home.baidu.com/media_resource/show_detail/res_id/5/tab_id/1",
+        "attribution": "百度。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09",
+        "notes": "熊掌内含 du 字母。官方将此图限定为设计应用参考，单独作为标志使用限使用面积高度≤13mm。"
+      },
+      "display": "alternative"
+    },
+    {
+      "file": "logo-bilingual-small-official.png",
+      "label": "透明小尺寸组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://home.baidu.com/Public/img/logo.png?v=15",
+      "sourcePage": "https://home.baidu.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "display": "alternative",
+      "qualityNotes": [
+        "透明背景。"
+      ],
+      "sha256": "d95942708a67aaac7bf4da585384fdf5841d4ce69a28cfbe5beb1c47ac72f406",
+      "bytes": 2805,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://home.baidu.com/",
+        "attribution": "百度。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09",
+        "notes": "品牌规范要求整体使用并保持比例与配色。"
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "file": "logo-bilingual-cmyk.ai",
+      "label": "CMYK 印刷用稿",
+      "assetFiles": [
+        "logo-bilingual-brand-library.jpg"
+      ],
+      "source": "https://static.home.baidu.com/homebd/heaikgnlfdmjbc1565603510.rar?authorization=bce-auth-v1%2Fe6803def36ae467f81ebdb4bdc75f119%2F2019-08-12T09%3A51%3A50Z%2F-1%2F%2F0390dfab18dbd5670ff2d80eb4ba96ee73eec173f32f4a88aca5996e908677b7",
+      "sourcePage": "https://home.baidu.com/media_resource/show_detail/res_id/2/tab_id/1",
+      "sha256": "d09e92e49bae03110c5a1346d0b1cb17b982bca30a069a84a5fa5ee4916455c4",
+      "bytes": 1116623,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://home.baidu.com/media_resource/show_detail/res_id/2/tab_id/1",
+        "attribution": "百度。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09",
+        "notes": "官方 AI 设计附件，包含图稿及使用规范，按标注的 RGB 或 CMYK 色彩模式取用。"
+      }
+    },
+    {
+      "file": "logo-bilingual-rgb.ai",
+      "label": "RGB 屏幕用稿",
+      "assetFiles": [
+        "logo-bilingual-brand-library.jpg"
+      ],
+      "source": "https://static.home.baidu.com/homebd/heaikgnlfdmjbc1565603510.rar?authorization=bce-auth-v1%2Fe6803def36ae467f81ebdb4bdc75f119%2F2019-08-12T09%3A51%3A50Z%2F-1%2F%2F0390dfab18dbd5670ff2d80eb4ba96ee73eec173f32f4a88aca5996e908677b7",
+      "sourcePage": "https://home.baidu.com/media_resource/show_detail/res_id/2/tab_id/1",
+      "sha256": "2b1fb558b9ed84af85fe747dbe6439dd4fca8c14eabcaf7258017623acdc33b6",
+      "bytes": 287837,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://home.baidu.com/media_resource/show_detail/res_id/2/tab_id/1",
+        "attribution": "百度。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09",
+        "notes": "官方 AI 设计附件，包含图稿及使用规范，按标注的 RGB 或 CMYK 色彩模式取用。"
+      }
+    },
+    {
+      "file": "icon-blue-cmyk.ai",
+      "label": "CMYK 印刷用稿",
+      "assetFiles": [
+        "icon-blue-brand-library.jpg"
+      ],
+      "source": "https://static.home.baidu.com/homebd/hcenlifmbjadkg1565604014.rar?authorization=bce-auth-v1%2Fe6803def36ae467f81ebdb4bdc75f119%2F2019-08-12T10%3A00%3A14Z%2F-1%2F%2Fa288d4974181324bbc44668f8c6a51c54fed2561b883a5ee2c2bbca139650241",
+      "sourcePage": "https://home.baidu.com/media_resource/show_detail/res_id/5/tab_id/1",
+      "sha256": "d5b61a438496c37c464496878a857026828bd8e7a5c3ffce3efa491b7851e5a7",
+      "bytes": 1239513,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://home.baidu.com/media_resource/show_detail/res_id/5/tab_id/1",
+        "attribution": "百度。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09",
+        "notes": "官方 AI 设计附件，包含图稿及使用规范，按标注的 RGB 或 CMYK 色彩模式取用。"
+      }
+    },
+    {
+      "file": "icon-blue-rgb.ai",
+      "label": "RGB 屏幕用稿",
+      "assetFiles": [
+        "icon-blue-brand-library.jpg"
+      ],
+      "source": "https://static.home.baidu.com/homebd/hcenlifmbjadkg1565604014.rar?authorization=bce-auth-v1%2Fe6803def36ae467f81ebdb4bdc75f119%2F2019-08-12T10%3A00%3A14Z%2F-1%2F%2Fa288d4974181324bbc44668f8c6a51c54fed2561b883a5ee2c2bbca139650241",
+      "sourcePage": "https://home.baidu.com/media_resource/show_detail/res_id/5/tab_id/1",
+      "sha256": "e2c73d5822374b7fa573aad9e6d79765a2b6e47830e6722af1c89b96c25bf108",
+      "bytes": 286309,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://home.baidu.com/media_resource/show_detail/res_id/5/tab_id/1",
+        "attribution": "百度。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09",
+        "notes": "官方 AI 设计附件，包含图稿及使用规范，按标注的 RGB 或 CMYK 色彩模式取用。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 3,
+  "id": "yaowu-tech",
+  "name": "要务科技",
+  "aliases": [],
+  "identity": {
+    "nameZh": "要务科技",
+    "nameEn": null,
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "要务科技官方来源",
+        "url": "https://www.yaowutech.com/",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.yaowutech.com/",
+  "entityType": "company",
+  "categories": [
+    "software"
+  ],
+  "defaultAsset": "icon-small-official.png",
+  "assets": [
+    {
+      "file": "icon-small-official.png",
+      "label": "小尺寸独立图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "source": "https://www.yaowutech.com/images/logo-icon.png",
+      "sourcePage": "https://www.yaowutech.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "5a97e92f2c441b46f1e97783d80707224daf286acfd0a3ade80b29d53767c763",
+      "bytes": 4261,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.yaowutech.com/",
+        "attribution": "要务科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    }
+  ]
+}

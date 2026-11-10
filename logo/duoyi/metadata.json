@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 3,
+  "id": "duoyi",
+  "name": "多益网络",
+  "aliases": [],
+  "identity": {
+    "nameZh": "多益网络",
+    "nameEn": null,
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "多益网络官方来源",
+        "url": "https://www.duoyi.com/",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.duoyi.com/",
+  "entityType": "company",
+  "categories": [
+    "entertainment"
+  ],
+  "defaultAsset": "logo-chinese-small-official.png",
+  "assets": [
+    {
+      "file": "logo-chinese-small-official.png",
+      "label": "中文小尺寸组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "any",
+      "source": "https://image.duoyi.com/img/logo_duoyigroup.png",
+      "sourcePage": "https://www.duoyigroup.cn/dycommerce/ch/business.shtm",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ],
+      "sha256": "3d339f1e41185843c317bab0b5e7d3d425ff703ec626a94dedc5369b7d260ba2",
+      "bytes": 4516,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.duoyigroup.cn/dycommerce/ch/business.shtm",
+        "attribution": "多益网络。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    }
+  ]
+}

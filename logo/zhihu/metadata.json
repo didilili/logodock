@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 3,
+  "id": "zhihu",
+  "name": "知乎",
+  "aliases": [
+    "Zhihu",
+    "知乎网"
+  ],
+  "website": "https://www.zhihu.com/",
+  "identity": {
+    "nameZh": "知乎",
+    "nameEn": "Zhihu",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "知乎官方联系页面",
+        "url": "https://www.zhihu.com/contact",
+        "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "知乎官方Google Play页面",
+        "url": "https://play.google.com/store/apps/details?id=com.zhihu.android&hl=zh-CN",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [
+    "internet"
+  ],
+  "defaultAsset": "wordmark-rounded-google-play.png",
+  "assets": [
+    {
+      "file": "wordmark-rounded-google-play.png",
+      "label": "圆角应用字标",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "any",
+      "language": "zh",
+      "layout": "standalone",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "rendered",
+        "channel": "app-store",
+        "pageTitle": "知乎 · Google Play"
+      },
+      "source": "https://play-lh.googleusercontent.com/2t_12vLlJhW_eqCUvzecvpt0XDWb47uvoeUY8HF57pdgiyUxyKti4kt11nxFFJyfNmqLWH0CTTJWcZOU2Imz4w=s0-br30",
+      "sourcePage": "https://play.google.com/store/apps/details?id=com.zhihu.android&hl=zh-CN",
+      "sha256": "3efe76b09a6db75faec151a7a3c8060d5a96dc7e7c650d36be0d4744bd3f6e6f",
+      "bytes": 175016,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:Zhihu_logo.svg&oldid=1117280600",
+        "attribution": "知乎 / Zhihu。保留官方原始出处与商标声明，原文件未经修改。Commons对相应简单图形或字标作第三方PD-textlogo判断，无版权署名要求。",
+        "reviewedAt": "2026-11-09",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围为相同知乎字形及简单几何底形。"
+      },
+      "qualityNotes": [
+        "四角透明。"
+      ]
+    }
+  ]
+}

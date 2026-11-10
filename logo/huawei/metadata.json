@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 3,
+  "id": "huawei",
+  "name": "华为",
+  "aliases": [
+    "Huawei",
+    "华为技术有限公司"
+  ],
+  "identity": {
+    "nameZh": "华为",
+    "nameEn": "Huawei",
+    "legalNames": [
+      {
+        "name": "华为投资控股有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://www-file.huawei.com/admin/asset/v1/pro/view/3022d6c92652427fa0d7f72dcc72daa2.pdf",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "name": "Huawei Investment & Holding Co., Ltd.",
+        "language": "en",
+        "role": "group",
+        "source": "https://www.huawei.com/en/media-center/company-facts",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "name": "华为技术有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://www-file.huawei.com/admin/asset/v1/pro/view/3022d6c92652427fa0d7f72dcc72daa2.pdf",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "name": "Huawei Technologies Co., Ltd.",
+        "language": "en",
+        "role": "operating-company",
+        "source": "https://www.huawei.com/en/corporate-information",
+        "reviewedAt": "2026-11-07"
+      }
+    ],
+    "sources": [
+      {
+        "label": "华为2025年年度报告",
+        "url": "https://www-file.huawei.com/admin/asset/v1/pro/view/3022d6c92652427fa0d7f72dcc72daa2.pdf",
+        "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "Huawei Corporate Fact Sheet（2026年4月）",
+        "url": "https://www.huawei.com/en/media-center/company-facts",
+        "reviewedAt": "2026-11-07"
+      }
+    ]
+  },
+  "website": "https://www.huawei.com/",
+  "entityType": "company",
+  "categories": [
+    "hardware",
+    "telecommunications"
+  ],
+  "defaultAsset": "wordmark-dark-2018.png",
+  "assets": [
+    {
+      "file": "wordmark-dark-2018.png",
+      "label": "2018 深色字标",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Huawei_wordmark_2019.svg/1280px-Huawei_wordmark_2019.svg.png",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Huawei_wordmark_2019.svg",
+      "sha256": "38ee78b24f6fac758ff1b3a6a4438e834839ca54e04f29236ede8741f1da39c3",
+      "bytes": 20086,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File%3AHuawei_wordmark_2019.svg&oldid=1123513783",
+        "attribution": "Huawei。Commons 文件页标记为公共领域，无版权署名要求；保留来源和商标声明。文件下载原样保存。",
+        "reviewedAt": "2026-11-07",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用作品为 2018 年起使用的 HUAWEI 文字标识。"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "monochrome",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "rendered",
+        "channel": "commons"
+      }
+    }
+  ]
+}

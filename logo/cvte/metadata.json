@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 3,
+  "id": "cvte",
+  "name": "视源股份",
+  "aliases": [
+    "CVTE"
+  ],
+  "identity": {
+    "nameZh": "视源股份",
+    "nameEn": "CVTE",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "视源股份官方来源",
+        "url": "https://www.cvte.com/",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.cvte.com/",
+  "entityType": "company",
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "wordmark-bilingual-official.png",
+  "assets": [
+    {
+      "file": "wordmark-bilingual-official.png",
+      "label": "中英组合",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://cos-pro-pub.cvtestatic.com/cvte-official-website/uwixkqpjminhnhlwhxkhopvpunphihhh",
+      "sourcePage": "https://www.cvte.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "透明背景，含口号与股票代码。"
+      ],
+      "sha256": "47e124096236a9106814169dc3612a6f17732a381405d666f39984d2351aafc2",
+      "bytes": 19438,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.cvte.com/common/page/legal-notice",
+        "attribution": "视源股份。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09",
+        "notes": "官网法律声明要求复制、镜像及使用标识事先取得书面许可。"
+      }
+    },
+    {
+      "file": "wordmark-english-official.webp",
+      "label": "英文简标",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "any",
+      "source": "https://www.cvte.com/public/images/other/logo-02.webp",
+      "sourcePage": "https://www.cvte.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "display": "alternative",
+      "qualityNotes": [
+        "透明背景。"
+      ],
+      "sha256": "dccd373ee9f32972f1946003d4441f9e0191b7acb8d433e0a0b465f622f049ab",
+      "bytes": 1676,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.cvte.com/common/page/legal-notice",
+        "attribution": "视源股份。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09",
+        "notes": "官网法律声明要求复制、镜像及使用标识事先取得书面许可。"
+      },
+      "usageWarnings": [
+        "仅供小尺寸网页展示。"
+      ]
+    }
+  ]
+}

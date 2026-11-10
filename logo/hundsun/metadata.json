@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 3,
+  "id": "hundsun",
+  "name": "恒生电子",
+  "aliases": [],
+  "identity": {
+    "nameZh": "恒生电子",
+    "nameEn": "HUNDSUN",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "恒生电子官方来源",
+        "url": "https://www.hundsun.com/",
+        "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "恒生电子官方校园招聘网站",
+        "url": "https://campus.hundsun.com/campus",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.hundsun.com/",
+  "entityType": "company",
+  "categories": [
+    "enterprise-software"
+  ],
+  "defaultAsset": "wordmark-color-official.png",
+  "assets": [
+    {
+      "file": "wordmark-color-official.png",
+      "label": "彩色字标",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "any",
+      "source": "https://stcms.beisen.com/image/606053/27fbe7789329484788a9ca8217449117_o.png",
+      "sourcePage": "https://campus.hundsun.com/campus",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "透明背景，完整彩色阶梯式字标。",
+        "有效图稿约2326×854像素。"
+      ],
+      "sha256": "102e335cc221dae6e5eb63a6b7ef766fa3f5ae7af39dc699197ce21786f6aa4b",
+      "bytes": 50358,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://campus.hundsun.com/campus",
+        "attribution": "恒生电子。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    },
+    {
+      "file": "wordmark-header-original.png",
+      "label": "深底小尺寸字标",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "monochrome",
+      "background": "dark",
+      "source": "https://www.hundsun.com/",
+      "sourcePage": "https://www.hundsun.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "透明背景，白色块与镂空文字，原画布留白较多。",
+        "有效图稿约145×54像素。"
+      ],
+      "sha256": "b2d3638bed3aec1b865e8abfd732e328ace6a4226d2b6f083e44d6391b841ee5",
+      "bytes": 1365,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.hundsun.com/",
+        "attribution": "恒生电子。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-09"
+      }
+    }
+  ]
+}

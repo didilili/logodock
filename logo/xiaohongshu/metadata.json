@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 3,
+  "id": "xiaohongshu",
+  "name": "小红书",
+  "aliases": [
+    "Xiaohongshu"
+  ],
+  "identity": {
+    "nameZh": "小红书",
+    "nameEn": null,
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "小红书官方关于我们",
+        "url": "https://www.xiaohongshu.com/protocols/about",
+        "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "官方应用 App Store 页面（Xingin）",
+        "url": "https://apps.apple.com/cn/app/id741292507",
+        "reviewedAt": "2026-11-09"
+      }
+    ]
+  },
+  "website": "https://www.xiaohongshu.com/",
+  "entityType": "company",
+  "categories": [
+    "internet",
+    "social-media"
+  ],
+  "defaultAsset": "wordmark-capsule-official.svg",
+  "assets": [
+    {
+      "file": "wordmark-capsule-official.svg",
+      "label": "红底白字胶囊字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "any",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header",
+        "pageTitle": "小红书专业号平台登录"
+      },
+      "source": "https://fe-static.xhscdn.com/formula-static/pro-enterprise-next/public/resource/svg/logo_xhs.aa540050.svg",
+      "sourcePage": "https://pro.xiaohongshu.com/login?redirectTo=%2F",
+      "qualityNotes": [
+        "透明圆角。"
+      ],
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:XiaohongshuLOGO.png&oldid=1059366505",
+        "attribution": "小红书 / Xingin。保留官方文件来源及 Commons 对相同简单文字标识的 PD-textlogo 第三方判断，商标权保留。",
+        "reviewedAt": "2026-11-09",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围限于相同“小红书”三字及简单几何底形。"
+      },
+      "sha256": "33874e4ca4652e7ed7c92a20b638f79c2221d46f9f5b853cc75d081680cb6bfb",
+      "bytes": 4421
+    },
+    {
+      "file": "wordmark-rounded-google-play.png",
+      "label": "红底白字圆角应用标识",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "any",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "rendered",
+        "channel": "app-store",
+        "pageTitle": "Google Play · 小红书 — 你的生活兴趣社区"
+      },
+      "source": "https://play-lh.googleusercontent.com/c6Ipks61J7b4qgJMxo965UqsSo0M7ZwTDzQrmLKeBNneCk2gub-RitqSC-fnrmLGXTk3mNEceiBN5N3i26BmYHc=s0-br30",
+      "sourcePage": "https://play.google.com/store/apps/details?hl=zh-CN&id=com.xingin.xhs",
+      "qualityNotes": [
+        "四角透明。"
+      ],
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (textlogo; third-party assessment)",
+        "reference": "https://commons.wikimedia.org/w/index.php?title=File:XiaohongshuLOGO.png&oldid=1059366505",
+        "attribution": "小红书 / Xingin。保留官方文件来源及 Commons 对相同简单文字标识的 PD-textlogo 第三方判断，商标权保留。",
+        "reviewedAt": "2026-11-09",
+        "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围限于相同“小红书”三字及简单几何底形。"
+      },
+      "sha256": "d9510f568a4e2149db9ed0bee63347254ce172e0ddfebf31661f0fa6356c3d94",
+      "bytes": 11188
+    }
+  ]
+}
