@@ -31,7 +31,7 @@ async function filesBelow(directory, relative = '') {
   return files.sort();
 }
 
-test('production output includes the home and all 59 independent detail pages', async () => {
+test('production output includes the home, changelog and all 59 independent detail pages', async () => {
   assert.equal(
     catalog.brands.length,
     59,
@@ -40,7 +40,11 @@ test('production output includes the home and all 59 independent detail pages', 
   const files = await filesBelow(output);
   assert.deepEqual(
     files.filter((path) => path.endsWith('.html')),
-    ['index.html', ...catalog.brands.map((brand) => `logo/${brand.id}/index.html`)].sort(),
+    [
+      'index.html',
+      'changelog/index.html',
+      ...catalog.brands.map((brand) => `logo/${brand.id}/index.html`),
+    ].sort(),
   );
   const html = await readOutput('index.html');
   assert.match(html, /<html\b[^>]*lang="zh-CN"/);
@@ -60,6 +64,18 @@ test('production output includes the home and all 59 independent detail pages', 
     assert.match(html, new RegExp(`href="[^"?#]*logo/${brand.id}/${query}"`));
   }
   assert.equal(await readOutput('.nojekyll'), '');
+});
+
+test('changelog prerenders published updates and omits unpublished content', async () => {
+  const html = await readOutput('changelog/index.html');
+  const visible = withoutScripts(html);
+  assert.match(html, /<title>更新日志 · LogoDock<\/title>/);
+  assert.match(visible, /2026-11-08/);
+  assert.match(visible, /2026-11-06/);
+  assert.match(visible, /品牌目录与取用体验升级/);
+  assert.doesNotMatch(html, /2048px|未发布|发布前核对/);
+  assert.match(visible, /href="[^"?#]*logo\/tencent\/"/);
+  assert.match(visible, /aria-current="page"/);
 });
 
 test('production HTML loads generated SvelteKit modules and CSS rather than the retired client renderer', async () => {

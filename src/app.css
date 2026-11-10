@@ -220,6 +220,49 @@ svg {
 .site-header nav a:hover {
   color: var(--accent);
 }
+.site-header nav a[aria-current='page'] {
+  color: var(--accent);
+}
+.site-header nav > a {
+  min-height: 40px;
+}
+.mobile-navigation {
+  display: none;
+  position: relative;
+}
+.mobile-navigation summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+.mobile-navigation summary::-webkit-details-marker {
+  display: none;
+}
+.mobile-navigation[open] summary {
+  background: var(--hover);
+}
+.mobile-nav-panel {
+  display: grid;
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 180px;
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: var(--control-radius);
+  background: var(--paper);
+  box-shadow: 0 8px 24px #00000012;
+}
+.site-header .mobile-nav-panel a {
+  min-height: 44px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  font-size: var(--type-body);
+}
+.mobile-nav-panel a:hover {
+  background: var(--hover);
+}
 .icon-button {
   display: inline-grid;
   place-items: center;
@@ -762,7 +805,13 @@ svg {
     display: none;
   }
   .site-header nav {
-    gap: 16px;
+    gap: 8px;
+  }
+  .site-header nav > .desktop-nav-link {
+    display: none;
+  }
+  .mobile-navigation {
+    display: block;
   }
   .site-header nav a svg {
     display: none;
