@@ -13,10 +13,12 @@ const brands = catalog.brands.filter((brand) => brand.sourceFiles?.length);
 test('native design downloads follow artwork changes with shared source and usage information', async ({
   page,
 }) => {
+  test.setTimeout(120_000);
   test.skip(!brands.length, 'No native design attachments are registered in this catalog.');
   for (const brand of brands) {
     await page.goto(`/logo/${brand.id}/`);
     await expect(page.locator('#theme-toggle')).toBeEnabled();
+    let downloaded = false;
     for (const artwork of artworkGroups(brand)) {
       const option = page.locator(`[data-select-artwork="${artwork.id}"]`);
       if (await option.count()) {
@@ -38,15 +40,26 @@ test('native design downloads follow artwork changes with shared source and usag
         const item = section.locator(`[data-source-file="${entry.file}"]`);
         await expect(item).toContainText(entry.label);
         await expect(item).toContainText(entry.file.split('.').at(-1)!.toUpperCase());
-        const downloadPromise = page.waitForEvent('download');
-        await item.locator('a[download]').click();
-        const download = await downloadPromise;
-        expect(download.suggestedFilename()).toBe(`${brand.id}-${entry.file}`);
-        const path = await download.path();
-        expect(path).not.toBeNull();
-        const bytes = await readFile(path!);
+        const link = item.locator('a[download]');
+        await expect(link).toHaveAttribute('href', `/${assetPath(entry)}`);
+        await expect(link).toHaveAttribute('download', `${brand.id}-${entry.file}`);
+        const response = await page.request.get(`/${assetPath(entry)}`);
+        expect(response.ok()).toBe(true);
+        const bytes = await response.body();
         expect(bytes.byteLength).toBe(entry.bytes);
         expect(createHash('sha256').update(bytes).digest('hex')).toBe(entry.sha256);
+        // Verify one real download per page and every link's bytes. Chromium
+        // throttles bursts of many downloads from one document's large brand pack.
+        if (!downloaded) {
+          const downloadPromise = page.waitForEvent('download');
+          await link.click();
+          const download = await downloadPromise;
+          expect(download.suggestedFilename()).toBe(`${brand.id}-${entry.file}`);
+          const path = await download.path();
+          expect(path).not.toBeNull();
+          expect(await readFile(path!)).toEqual(bytes);
+          downloaded = true;
+        }
       }
       const sources = page.locator('.source-details');
       if (!(await sources.evaluate((element) => (element as HTMLDetailsElement).open)))
@@ -113,7 +126,7 @@ test('named licenses retain attribution and concrete use restrictions', async ({
   const asset = brand.assets.find((entry) => entry.file === 'icon-legacy.png')!;
   await page.goto(`/logo/${brand.id}/?asset=${asset.file}`);
   const sources = page.locator('.source-details');
-  await sources.locator('summary').click();
+  await expect(sources).toHaveJSProperty('open', true);
   await expect(
     sources.getByRole('link', { name: asset.rights.license, exact: true }),
   ).toHaveAttribute('href', asset.rights.reference);

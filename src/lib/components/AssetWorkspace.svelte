@@ -57,7 +57,7 @@
     basePath,
     pageUrl,
     backgroundChoice,
-    sourceDetailsOpen = $bindable(false),
+    sourceDetailsOpen = $bindable(true),
     feedback,
     assetHref,
     shareHref,

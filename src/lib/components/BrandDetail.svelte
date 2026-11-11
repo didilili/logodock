@@ -21,7 +21,7 @@
 
   interface Props {
     brand: Brand;
-    parent?: Brand;
+    parent?: Pick<Brand, 'id' | 'name' | 'identity' | 'defaultAsset'>;
     sourceCommit: string;
     basePath: string;
   }
@@ -30,7 +30,7 @@
   let pageUrl = $state('');
   let workspaceVersion = $state(0);
   let backgroundChoice = $state<'light' | 'dark' | 'transparent'>();
-  let sourceDetailsOpen = $state(false);
+  let sourceDetailsOpen = $state(true);
   let feedback = $state<CopyFeedbackApi>();
   let workspace: HTMLDivElement | undefined;
   const names = $derived(identityNames(brand));
@@ -57,7 +57,7 @@
     }
     return result.href;
   }
-  function detailHref(target: Brand, file?: string) {
+  function detailHref(target: Pick<Brand, 'id' | 'defaultAsset'>, file?: string) {
     const path = brandRoute(target, `${basePath}/`);
     const url = withDirectoryState(path);
     if (!pageUrl) return url;

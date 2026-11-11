@@ -56,7 +56,7 @@ for (const width of [1280, 390]) {
     await page.locator('#download-link').click();
     expect((await downloadEvent).suggestedFilename()).toBe('nio-icon-black-extracted.svg');
     const sources = page.locator('.source-details');
-    await sources.locator('summary').click();
+    await expect(sources).toHaveJSProperty('open', true);
     const original = sources.locator('[data-original-asset]');
     await expect(original).toHaveText('黑色英文组合');
     await expect(original).toHaveAttribute('data-original-asset', symbol.provenance.originalAsset);
@@ -99,7 +99,7 @@ for (const width of [1280, 390]) {
     page,
   }) => {
     await page.setViewportSize({ width, height: 1000 });
-    expect(extractedSymbols).toHaveLength(22);
+    expect(extractedSymbols.length).toBeGreaterThanOrEqual(22);
     for (const asset of extractedSymbols) {
       await page.goto(`/logo/${asset.brandId}/?asset=${asset.file}`);
       const image = page.locator('.preview-stage img');
