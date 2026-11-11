@@ -1,5 +1,6 @@
 node_modules/
 logo/
+local-artifacts/
 index.json
 package-lock.json
 docs/catalog.md

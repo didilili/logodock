@@ -12,6 +12,7 @@ export default defineConfig(
     ignores: [
       'node_modules/**',
       'logo/**',
+      'local-artifacts/**',
       'static/**',
       '_site/**',
       '.svelte-kit/**',
