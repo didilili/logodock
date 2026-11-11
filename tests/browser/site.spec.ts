@@ -57,7 +57,7 @@ async function chooseFilter(page: Page, id: string, label: string) {
   await page.getByRole('option', { name: label, exact: true }).click();
 }
 
-type CopyKind = 'current' | 'svg' | 'png' | 'share' | 'html' | 'markdown';
+type CopyKind = 'current' | 'svg' | 'image' | 'share' | 'html' | 'markdown';
 
 async function chooseCopy(page: Page, kind: CopyKind, trigger = page.locator('#detail-copy-menu')) {
   await trigger.click();
@@ -1558,9 +1558,9 @@ for (const denied of [false, true]) {
     await page.goto('/logo/huawei/?asset=wordmark-dark-2018.png');
     await expect(page.locator('#theme-toggle')).toBeEnabled();
     await expect(page.locator('.export-details, #copy-png-image')).toHaveCount(0);
-    await chooseCopy(page, 'png');
+    await chooseCopy(page, 'image');
     await expect(page.locator('#action-status')).toHaveText(
-      denied ? '无法复制图片，请下载原图或复制图片地址。' : '已复制原始 PNG 图片。',
+      denied ? '无法复制图片，请重试。' : '已复制原始 PNG 图片。',
     );
     await expect(page.locator('#detail-copy-menu')).toBeFocused();
     await expect(page.locator('#download-link')).toHaveAttribute(
@@ -1585,7 +1585,7 @@ for (const denied of [false, true]) {
     await page.goto('/logo/didi/?asset=logo-english.svg');
     await expect(page.locator('#theme-toggle')).toBeEnabled();
     await page.locator('#detail-copy-menu').click();
-    await expect(page.getByRole('menu').locator('[data-copy-kind="png"]')).toHaveCount(0);
+    await expect(page.getByRole('menu').locator('[data-copy-kind="image"]')).toBeEnabled();
     await page.keyboard.press('Escape');
   });
 }

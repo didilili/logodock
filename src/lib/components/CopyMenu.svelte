@@ -15,6 +15,7 @@
     id,
     items,
     disabled = false,
+    busy = false,
     label = '复制',
     ariaLabel,
     brandId,
@@ -23,6 +24,7 @@
     id?: string;
     items: CopyMenuItem[];
     disabled?: boolean;
+    busy?: boolean;
     label?: string;
     ariaLabel?: string;
     brandId?: string;
@@ -54,24 +56,40 @@
     data-copy-brand={brandId}
     bind:ref={trigger}
     disabled={disabled || items.length === 0}
+    aria-busy={busy}
     aria-label={ariaLabel || label || '复制标识'}
     class={['copy-menu-trigger', className]}
   >
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="1.6"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      aria-hidden="true"
-      ><rect x="8" y="8" width="12" height="13" rx="2" /><path
-        d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"
-      /></svg
-    >
-    {#if label}<span>{label}</span>{/if}
+    {#if busy}
+      <svg
+        class="copy-spinner"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        aria-hidden="true"
+        ><circle cx="12" cy="12" r="9" opacity="0.25" /><path
+          d="M12 3a9 9 0 0 1 9 9"
+          stroke-linecap="round"
+        /></svg
+      >
+    {:else}<svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+        ><rect x="8" y="8" width="12" height="13" rx="2" /><path
+          d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"
+        /></svg
+      >{/if}
+    {#if label}<span>{busy ? '正在复制…' : label}</span>{/if}
   </DropdownMenu.Trigger>
   <DropdownMenu.Portal>
     <DropdownMenu.Content
@@ -98,6 +116,19 @@
 </DropdownMenu.Root>
 
 <style>
+  .copy-spinner {
+    animation: copy-spin 800ms linear infinite;
+  }
+  @keyframes copy-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .copy-spinner {
+      animation: none;
+    }
+  }
   :global(.copy-menu-trigger) {
     display: inline-flex;
     align-items: center;
@@ -165,7 +196,11 @@
   :global(.copy-menu-content .copy-menu-item small) {
     color: var(--muted);
     font-size: var(--type-caption);
-    white-space: nowrap;
+    text-align: right;
+    overflow-wrap: anywhere;
+  }
+  :global(.copy-menu-content .copy-menu-item > span) {
+    flex-shrink: 0;
   }
   @media (max-width: 720px) {
     :global(.copy-menu-content .copy-menu-item) {

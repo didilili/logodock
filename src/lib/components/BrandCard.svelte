@@ -20,14 +20,22 @@
     oncopy,
     onsave,
     ready,
+    canCopyImage = false,
+    copying = false,
     query = '',
   }: {
     brand: Brand;
     basePath: string;
     href: string;
     ready: boolean;
+    canCopyImage?: boolean;
+    copying?: boolean;
     query?: string;
-    oncopy: (brand: Brand, asset: Asset, kind: 'current' | 'html' | 'markdown' | 'svg') => void;
+    oncopy: (
+      brand: Brand,
+      asset: Asset,
+      kind: 'current' | 'html' | 'markdown' | 'svg' | 'image',
+    ) => void;
     onsave: () => void;
   } = $props();
 
@@ -63,28 +71,47 @@
       .join(' · '),
   );
   const copyItems = $derived([
+    {
+      id: 'image',
+      label: '复制图片',
+      hint: !canCopyImage
+        ? '浏览器不支持'
+        : assetFormat(asset) === 'PNG'
+          ? '原始 PNG'
+          : assetFormat(asset) === 'SVG'
+            ? 'PNG · 长边 2048px'
+            : 'PNG · 原始尺寸',
+      disabled: !canCopyImage || copying,
+      onselect: () => oncopy(brand, asset, 'image'),
+    },
     ...(assetFormat(asset) === 'SVG'
       ? [
           {
             id: 'svg',
             label: 'SVG 源码',
             hint: '原始代码',
+            disabled: copying,
             onselect: () => oncopy(brand, asset, 'svg'),
           },
         ]
       : []),
-    { id: 'html', label: 'HTML', hint: '嵌入图片', onselect: () => oncopy(brand, asset, 'html') },
-    {
-      id: 'markdown',
-      label: 'Markdown',
-      hint: '文档引用',
-      onselect: () => oncopy(brand, asset, 'markdown'),
-    },
     {
       id: 'current',
       label: '图片地址',
       hint: '当前文件',
       onselect: () => oncopy(brand, asset, 'current'),
+    },
+    {
+      id: 'markdown',
+      label: 'Markdown 引用',
+      hint: '文档引用',
+      onselect: () => oncopy(brand, asset, 'markdown'),
+    },
+    {
+      id: 'html',
+      label: 'HTML 代码',
+      hint: '嵌入图片',
+      onselect: () => oncopy(brand, asset, 'html'),
     },
   ]);
 
@@ -189,6 +216,7 @@
       <CopyMenu
         brandId={brand.id}
         items={copyItems}
+        busy={copying}
         label=""
         ariaLabel={`复制 ${names.primary} 标识`}
         class="card-copy"

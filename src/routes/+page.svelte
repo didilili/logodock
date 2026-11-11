@@ -15,6 +15,7 @@
   import {
     defaultAsset,
     directoryAsset,
+    assetFormat,
     sortCatalogBrands,
     matchingBrands,
     readDirectoryState,
@@ -27,6 +28,7 @@
     topicLabels,
   } from '#lib/catalog-presentation.mjs';
   import { resourceLinks, assetPath } from '#lib/resource-links.mjs';
+  import { canCopyPngImage } from '#lib/clipboard-image.mjs';
 
   const base = resolve('/').replace(/\/$/, '');
   let { data } = $props();
@@ -73,6 +75,7 @@
   let categoryQuery = $state('');
   let extraFiltersOpen = $state(false);
   let feedback = $state<CopyFeedbackApi>();
+  let canCopyImage = $state(false);
   let typing = false;
 
   function savePosition() {
@@ -124,34 +127,35 @@
   async function copyBrand(
     brand: Brand,
     asset: Asset,
-    kind: 'current' | 'html' | 'markdown' | 'svg',
+    kind: 'current' | 'html' | 'markdown' | 'svg' | 'image',
   ) {
     const controller = feedback;
     if (!controller) return;
+    const options = {
+      url: new URL(base + '/' + assetPath(asset), location.origin).href,
+      downloadName: `${brand.id}-${asset.file}`,
+      label: identityNames(brand).primary,
+    };
+    if (kind === 'image') {
+      await controller.copyImage({ ...options, format: assetFormat(asset) });
+      return;
+    }
+    if (kind === 'svg') {
+      await controller.copySvg(options);
+      return;
+    }
     const links = resourceLinks({
       asset,
       brand,
       baseUrl: new URL(base + '/', location.origin).href,
       sourceCommit: data.sourceCommit,
     });
-    if (kind !== 'svg') {
-      const labels = { current: '图片地址', html: 'HTML', markdown: 'Markdown' };
-      await controller.copy(links[kind], identityNames(brand).primary + ' ' + labels[kind]);
-      return;
-    }
-    const token = controller.reset();
-    try {
-      const response = await fetch(base + '/' + assetPath(asset));
-      if (!response.ok) throw new Error('Source unavailable');
-      const value = await response.text();
-      if (controller.isCurrent(token)) await controller.copy(value, 'SVG 源码');
-    } catch {
-      if (controller.isCurrent(token))
-        await controller.show('SVG 源码未能加载，请下载原始 SVG 文件。');
-    }
+    const labels = { current: '图片地址', html: 'HTML 代码', markdown: 'Markdown 引用' };
+    await controller.copy(links[kind], identityNames(brand).primary + ' ' + labels[kind]);
   }
   onMount(() => {
     ready = true;
+    canCopyImage = canCopyPngImage(navigator.clipboard, globalThis.ClipboardItem);
     filters = readDirectoryState(location.href, brands);
     const legacyBrand = brands.find(
       (brand) => brand.id === new URL(location.href).searchParams.get('brand'),
@@ -375,6 +379,9 @@
             basePath={base}
             href={hrefFor(brand)}
             oncopy={copyBrand}
+            {canCopyImage}
+            copying={feedback?.pending(base + '/' + assetPath(directoryAsset(brand, filters.q))) ??
+              false}
             onsave={savePosition}
             {ready}
           />

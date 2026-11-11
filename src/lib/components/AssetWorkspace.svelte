@@ -30,7 +30,7 @@
     sourceLabel,
     sourceInformation,
   } from '../catalog-display.mjs';
-  import { canCopyPngImage, copyPngImage } from '../clipboard-image.mjs';
+  import { canCopyPngImage } from '../clipboard-image.mjs';
   import { renderSvgPng } from '../svg-export';
 
   type Asset = Brand['assets'][number];
@@ -75,13 +75,13 @@
   let dimensions = $state<{ file: string; width: number; height: number }>();
   let density = $state(1);
   let exporting = $state(false);
-  let copyingImage = $state(false);
   let previewImage: HTMLImageElement | undefined;
   let downloadLink: HTMLAnchorElement | undefined;
   let alive = true;
 
   const path = $derived(`${basePath}/${assetPath(asset)}`);
   const format = $derived(assetFormat(asset));
+  const copying = $derived(feedback?.pending(path) ?? false);
   const artworks = $derived(primaryArtworkGroups(brand));
   const alternativeArtworks = $derived(alternativeArtworkGroups(brand));
   const artwork = $derived(selectedArtwork(brand, asset)!);
@@ -188,75 +188,55 @@
     downloadLink?.focus({ preventScroll: true });
   }
 
-  async function copyOriginalPng() {
-    if (format !== 'PNG' || !feedback || copyingImage) return;
-    const controller = feedback;
-    const token = controller.reset();
-    const isCurrent = () => alive && controller.isCurrent(token);
-    copyingImage = true;
-    try {
-      const result = await copyPngImage({
-        url: sourceUrl(),
-        clipboard: navigator.clipboard,
-        ClipboardItemType: globalThis.ClipboardItem,
-        isCurrent,
-      });
-      if (!isCurrent() || result === 'stale') return;
-      await controller.show(
-        result === 'copied' ? '已复制原始 PNG 图片。' : '无法复制图片，请下载原图或复制图片地址。',
-      );
-    } finally {
-      copyingImage = false;
-    }
+  function copyImage() {
+    return feedback?.copyImage({
+      url: sourceUrl(),
+      format,
+      downloadName: `${brand.id}-${asset.file}`,
+    });
   }
 
-  async function copySvg() {
-    if (format !== 'SVG' || !feedback) return;
-    const controller = feedback;
-    const token = controller.reset();
-    const isCurrent = () => alive && controller.isCurrent(token);
-    try {
-      const response = await fetch(sourceUrl());
-      if (!response.ok) throw new Error('Source unavailable');
-      const value = await response.text();
-      if (isCurrent()) await controller.copy(value, 'SVG 源码');
-    } catch {
-      if (isCurrent()) await controller.show('SVG 源码未能加载，请下载原始 SVG 文件。');
-    }
+  function copySvg() {
+    return feedback?.copySvg({
+      url: sourceUrl(),
+      downloadName: `${brand.id}-${asset.file}`,
+    });
   }
 
   const copyItems = $derived([
+    {
+      id: 'image',
+      label: '复制图片',
+      hint: !canCopyImage
+        ? '浏览器不支持'
+        : format === 'PNG'
+          ? '原始 PNG'
+          : format === 'SVG'
+            ? 'PNG · 长边 2048px'
+            : 'PNG · 原始尺寸',
+      disabled: !canCopyImage || copying,
+      onselect: copyImage,
+    },
     ...(format === 'SVG'
-      ? [{ id: 'svg', label: 'SVG 源码', hint: '当前 SVG 文件', onselect: copySvg }]
+      ? [{ id: 'svg', label: 'SVG 源码', hint: '原始代码', disabled: copying, onselect: copySvg }]
       : []),
-    ...(format === 'PNG' && canCopyImage
-      ? [
-          {
-            id: 'png',
-            label: copyingImage ? '正在复制 PNG…' : 'PNG 图片',
-            hint: '当前原始 PNG',
-            disabled: copyingImage,
-            onselect: copyOriginalPng,
-          },
-        ]
-      : []),
-    {
-      id: 'html',
-      label: 'HTML',
-      hint: links.fixed ? '使用固定版本图片地址' : '使用当前图片地址',
-      onselect: () => feedback?.copy(links.html, 'HTML'),
-    },
-    {
-      id: 'markdown',
-      label: 'Markdown',
-      hint: links.fixed ? '使用固定版本图片地址' : '使用当前图片地址',
-      onselect: () => feedback?.copy(links.markdown, 'Markdown'),
-    },
     {
       id: 'current',
       label: '图片地址',
       hint: '当前原文件的地址',
       onselect: () => feedback?.copy(links.current, '图片地址'),
+    },
+    {
+      id: 'markdown',
+      label: 'Markdown 引用',
+      hint: links.fixed ? '固定版本链接' : '当前文件链接',
+      onselect: () => feedback?.copy(links.markdown, 'Markdown 引用'),
+    },
+    {
+      id: 'html',
+      label: 'HTML 代码',
+      hint: links.fixed ? '固定版本链接' : '当前文件链接',
+      onselect: () => feedback?.copy(links.html, 'HTML 代码'),
     },
     ...(links.fixed
       ? [
@@ -482,6 +462,7 @@
         <CopyMenu
           id="detail-copy-menu"
           items={copyItems}
+          busy={copying}
           disabled={!feedback}
           ariaLabel="复制当前标识"
           class="detail-copy-trigger"
