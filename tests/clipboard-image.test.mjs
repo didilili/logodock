@@ -118,3 +118,75 @@ test('revision changes during clipboard completion suppress stale success feedba
     'stale',
   );
 });
+
+test('queues a converted PNG before loading finishes without fetching a second source', async () => {
+  let finishConversion;
+  const conversion = new Promise((resolve) => {
+    finishConversion = resolve;
+  });
+  let writeCalled = false;
+  let copied;
+  const result = copyPngImage({
+    clipboard: {
+      write: async (items) => {
+        writeCalled = true;
+        copied = await items[0].data['image/png'];
+      },
+    },
+    ClipboardItemType: ClipboardItem,
+    loadPng: () => conversion,
+    fetcher: () => assert.fail('a supplied PNG loader must own source loading'),
+  });
+  assert.equal(writeCalled, true);
+  finishConversion(png);
+  assert.equal(await result, 'copied');
+  assert.equal(copied, png);
+});
+
+test('a failed or invalid PNG conversion reports failure before bytes are written', async () => {
+  for (const loadPng of [
+    async () => {
+      throw new Error('Conversion unavailable');
+    },
+    async () => new Blob(['jpeg'], { type: 'image/jpeg' }),
+  ]) {
+    let wroteBytes = false;
+    assert.equal(
+      await copyPngImage({
+        clipboard: {
+          write: async (items) => {
+            await items[0].data['image/png'];
+            wroteBytes = true;
+          },
+        },
+        ClipboardItemType: ClipboardItem,
+        loadPng,
+      }),
+      'failed',
+    );
+    assert.equal(wroteBytes, false);
+  }
+});
+
+test('switching selection during PNG conversion prevents the obsolete image being written', async () => {
+  let current = true;
+  let wroteBytes = false;
+  assert.equal(
+    await copyPngImage({
+      clipboard: {
+        write: async (items) => {
+          await items[0].data['image/png'];
+          wroteBytes = true;
+        },
+      },
+      ClipboardItemType: ClipboardItem,
+      loadPng: async () => {
+        current = false;
+        return png;
+      },
+      isCurrent: () => current,
+    }),
+    'stale',
+  );
+  assert.equal(wroteBytes, false);
+});

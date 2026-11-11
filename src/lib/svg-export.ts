@@ -73,3 +73,41 @@ export async function renderSvgPng(
     if (objectUrl) URL.revokeObjectURL(objectUrl);
   }
 }
+
+/** Decode a raster original at its native size and preserve transparent pixels. */
+export async function renderRasterPng(
+  url: string,
+  isCurrent: () => boolean,
+): Promise<PngExport | null> {
+  let objectUrl: string | undefined;
+  try {
+    const response = await fetch(url);
+    if (!isCurrent()) return null;
+    if (!response.ok) throw new Error('Source unavailable');
+    const source = await response.blob();
+    if (!isCurrent()) return null;
+    objectUrl = URL.createObjectURL(source);
+    const image = new Image();
+    image.src = objectUrl;
+    await image.decode();
+    if (!isCurrent()) return null;
+    const width = image.naturalWidth;
+    const height = image.naturalHeight;
+    if (!(width > 0 && height > 0)) throw new Error('Unknown image size');
+    const canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    const context = canvas.getContext('2d');
+    if (!context) throw new Error('Canvas unavailable');
+    context.drawImage(image, 0, 0);
+    const blob = await new Promise<Blob>((resolve, reject) =>
+      canvas.toBlob(
+        (result) => (result ? resolve(result) : reject(new Error('PNG export failed'))),
+        'image/png',
+      ),
+    );
+    return isCurrent() ? { blob, width, height } : null;
+  } finally {
+    if (objectUrl) URL.revokeObjectURL(objectUrl);
+  }
+}

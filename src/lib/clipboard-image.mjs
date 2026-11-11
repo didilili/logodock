@@ -1,5 +1,4 @@
-// Clipboard image copying accepts only the original PNG Blob. Other formats
-// retain their original download / URL / SVG-code actions instead of conversion.
+// PNG originals keep their source Blob. Other formats can supply a PNG loader.
 export function canCopyPngImage(clipboard, ClipboardItemType) {
   try {
     return (
@@ -12,11 +11,22 @@ export function canCopyPngImage(clipboard, ClipboardItemType) {
   }
 }
 
+/**
+ * @param {{
+ *   url?: string,
+ *   clipboard?: Clipboard,
+ *   ClipboardItemType?: typeof ClipboardItem,
+ *   fetcher?: typeof fetch,
+ *   loadPng?: () => Promise<Blob>,
+ *   isCurrent?: () => boolean,
+ * }} options
+ */
 export async function copyPngImage({
   url,
   clipboard,
   ClipboardItemType,
   fetcher = globalThis.fetch,
+  loadPng,
   isCurrent = () => true,
 }) {
   if (!canCopyPngImage(clipboard, ClipboardItemType)) return 'unsupported';
@@ -24,19 +34,24 @@ export async function copyPngImage({
   try {
     // Queue write synchronously in the click's activation scope. WebKit loses
     // activation if fetch/blob are awaited before calling clipboard.write.
-    const originalPng = (async () => {
-      const response = await fetcher(url);
-      if (!isCurrent()) throw new Error('Stale image selection');
-      if (!response.ok) throw new Error('PNG source unavailable');
-      const blob = await response.blob();
+    const png = (async () => {
+      let blob;
+      if (loadPng) {
+        blob = await loadPng();
+      } else {
+        const response = await fetcher(url);
+        if (!isCurrent()) throw new Error('Stale image selection');
+        if (!response.ok) throw new Error('PNG source unavailable');
+        blob = await response.blob();
+      }
       if (!isCurrent()) throw new Error('Stale image selection');
       if (blob.type !== 'image/png') throw new Error('Source is not a PNG');
       return blob;
     })();
     // If construction or clipboard permission fails immediately, a subsequent
     // source rejection must still be handled without an unhandled promise.
-    originalPng.catch(() => {});
-    await clipboard.write([new ClipboardItemType({ 'image/png': originalPng })]);
+    png.catch(() => {});
+    await clipboard.write([new ClipboardItemType({ 'image/png': png })]);
     return isCurrent() ? 'copied' : 'stale';
   } catch {
     return isCurrent() ? 'failed' : 'stale';
