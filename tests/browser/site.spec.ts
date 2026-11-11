@@ -2,6 +2,8 @@ import { expect, test, type Page } from '@playwright/test';
 import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 
+const catalog = JSON.parse(await readFile(new URL('../../index.json', import.meta.url), 'utf8'));
+
 const removedSources = [
   ['trip-com', 'wordmark-color.svg'],
   ['meituan', 'logo-chinese.png'],
@@ -97,55 +99,58 @@ async function expectLastCopy(page: Page, value: string) {
 }
 
 for (const width of [1280, 390]) {
-  test(`directory square-first previews keep actions and filtering aligned at ${width}px`, async ({
+  test(`directory covers keep summaries, actions and filtering aligned at ${width}px`, async ({
     page,
   }) => {
     await page.setViewportSize({ width, height: 1000 });
     await recordTextCopies(page);
     await page.goto('/');
     await expect(page.locator('#theme-toggle')).toBeEnabled();
-    for (const [id, file] of [
-      ['dongchedi', 'icon-yellow-extracted.svg'],
-      ['bytedance', 'icon-color-extracted.svg'],
-      ['nio', 'icon-black-extracted.svg'],
+    for (const [id, file, count] of [
+      ['dongchedi', 'logo-chinese-official.svg', 3],
+      ['bytedance', 'logo-bilingual-color-official.svg', 7],
+      ['nio', 'logo-black-english-official.svg', 5],
     ]) {
       const card = page.locator(`.brand-card[data-brand="${id}"]`);
       await expect(card.locator('.brand-art img')).toHaveAttribute('src', `/logo/${id}/${file}`);
       await expect(card.locator('.card-download')).toHaveAttribute('href', `/logo/${id}/${file}`);
-      await expect(card.locator('.version-thumbnail').first()).toHaveAttribute(
-        'aria-current',
-        'true',
+      await expect(card.locator('.card-materials')).toContainText(`${count} 份素材`);
+      await expect(card.locator('.card-materials')).toHaveAttribute(
+        'href',
+        (await card.locator('[data-brand-link]').getAttribute('href'))!,
       );
       const detail = new URL(
         (await card.locator('[data-brand-link]').getAttribute('href'))!,
         page.url(),
       );
-      expect(detail.searchParams.get('asset')).toBe(file);
+      expect(detail.searchParams.has('asset')).toBe(false);
     }
     const card = page.locator('.brand-card[data-brand="dongchedi"]');
     await chooseCopy(page, 'current', card.locator('[data-copy-brand="dongchedi"]'));
     await expectLastCopy(
       page,
-      new URL('/logo/dongchedi/icon-yellow-extracted.svg', page.url()).href,
+      new URL('/logo/dongchedi/logo-chinese-official.svg', page.url()).href,
     );
     const download = page.waitForEvent('download');
     await card.locator('.card-download').click();
-    expect((await download).suggestedFilename()).toBe('dongchedi-icon-yellow-extracted.svg');
-    await card.locator('[data-brand-link]').click();
+    expect((await download).suggestedFilename()).toBe('dongchedi-logo-chinese-official.svg');
+    await card.locator('.card-materials').click();
     await expect(page.locator('#detail-image')).toHaveAttribute(
       'src',
-      '/logo/dongchedi/icon-yellow-extracted.svg',
+      '/logo/dongchedi/logo-chinese-official.svg',
     );
     await page.goto('/?q=懂车帝&format=JPG');
     await expect(card.locator('.brand-art img')).toHaveAttribute(
       'src',
       '/logo/dongchedi/icon-appstore.jpg',
     );
+    await expect(card.locator('.card-materials')).toContainText('1 份素材');
     await page.goto('/?q=懂车帝%20logo-chinese-official.svg');
     await expect(card.locator('.brand-art img')).toHaveAttribute(
       'src',
       '/logo/dongchedi/logo-chinese-official.svg',
     );
+    await expect(card.locator('.card-materials')).toContainText('1 份素材');
     expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)).toBe(
       false,
     );
@@ -153,12 +158,12 @@ for (const width of [1280, 390]) {
 }
 
 test('card previews keep Codeberg color variants at a consistent icon size', async ({ page }) => {
-  await page.goto('/?q=Codeberg');
-  await expect(page.locator('#theme-toggle')).toBeEnabled();
   const card = page.locator('[data-brand="codeberg"]');
   const widths: number[] = [];
   for (const file of ['icon-blue.svg', 'icon-white.svg']) {
-    await card.locator(`[data-card-artwork="file:${file}"]`).click();
+    await page.goto(`/?q=${encodeURIComponent(`Codeberg ${file}`)}`);
+    await expect(page.locator('#theme-toggle')).toBeEnabled();
+    await expect(card.locator('.card-materials')).toContainText('1 份素材');
     const image = card.locator('.brand-art img');
     await expect(image).toHaveAttribute('src', `/logo/codeberg/${file}`);
     await image.evaluate((element: HTMLImageElement) => element.decode());
@@ -274,7 +279,7 @@ test('removed source files leave selection, search and format filters and their 
   await expect(page.locator('#theme-toggle')).toBeEnabled();
   // Useful JPG originals remain available after redundant JPG files are removed.
   await chooseFilter(page, 'format-filter', 'JPG');
-  await expect(page.locator('#brand-grid .brand-card')).toHaveCount(7);
+  await expect(page.locator('#brand-grid .brand-card')).toHaveCount(17);
   await expect(page.locator('[data-brand="kingdee"]')).toHaveCount(0);
   await expect(page.locator('[data-brand="kuaishou"]')).toHaveCount(1);
   await expect(page.locator('[data-brand="xiaohongshu"]')).toHaveCount(0);
@@ -318,7 +323,7 @@ test('legacy brand links use the directory preference only when no file is reque
   page,
 }) => {
   for (const [requested, expected] of [
-    [undefined, 'logo-gradient-vertical-official.png'],
+    [undefined, 'logo-gradient-horizontal.png'],
     ['', 'logo-gradient-horizontal.png'],
     ['logo-gradient-horizontal.png', 'logo-gradient-horizontal.png'],
     ['logo-gradient-vertical-official.png', 'logo-gradient-vertical-official.png'],
@@ -351,8 +356,7 @@ test('an explicit alternative search keeps the standard-color source and disclos
     'src',
     /wordmark-blue-header-official\.png$/,
   );
-  await expect(card.locator('.card-alternative')).toContainText('备选');
-  await expect(card.locator('.card-alternative')).toContainText('92 × 44');
+  await expect(card.locator('.card-restrictions')).toContainText('备选');
   await expect(card.locator('.card-download')).toHaveAttribute(
     'href',
     /wordmark-blue-header-official\.png$/,
@@ -816,39 +820,35 @@ test('format buttons and extra filters work by keyboard and theme survives narro
   );
 });
 
-test('card artwork choices keep preview, original download, detail and copied address on the same file', async ({
+test('card material summaries open details while preview, download and copied address share the cover', async ({
   page,
 }) => {
   await recordTextCopies(page);
-  await page.goto('/?q=阿里巴巴&format=SVG');
+  await page.goto('/?q=阿里巴巴');
   await expect(page.locator('#theme-toggle')).toBeEnabled();
   const card = page.locator('.brand-card[data-brand="alibaba"]');
-  const files = [
-    { group: 'file:wordmark-orange-chinese.svg', file: 'wordmark-orange-chinese.svg' },
-    { group: 'file:wordmark-orange.svg', file: 'wordmark-orange.svg' },
-    { group: 'file:wordmark-orange-chinese.svg', file: 'wordmark-orange-chinese.svg' },
-  ];
+  const file = 'logo-chinese-horizontal-official.png';
   const directory = page.url();
-  for (const { group, file } of files) {
-    const choice = card.locator(`[data-card-artwork="${group}"]`);
-    await choice.click();
-    await expect(choice).toHaveAttribute('aria-current', 'true');
-    const address = new URL(`/logo/alibaba/${file}`, page.url()).href;
-    await expect(card.locator('.brand-art img')).toHaveAttribute('src', `/logo/alibaba/${file}`);
-    await expect(card.locator('.card-download')).toHaveAttribute('href', `/logo/alibaba/${file}`);
-    await expect(card.locator('.card-download')).toHaveAttribute('download', `alibaba-${file}`);
-    const detail = new URL(
-      (await card.locator('[data-brand-link]').getAttribute('href')) || '',
-      page.url(),
-    );
-    expect(detail.searchParams.get('asset') || 'wordmark-orange.svg').toBe(file);
-    expect(detail.searchParams.get('q')).toBe('阿里巴巴');
-    await chooseCopy(page, 'current', card.locator('[data-copy-brand="alibaba"]'));
-    await expectLastCopy(page, address);
-    // Switching the card preview is local and does not replace directory filters.
-    expect(page.url()).toBe(directory);
-  }
-  await card.locator('[data-brand-link]').click();
+  const address = new URL(`/logo/alibaba/${file}`, page.url()).href;
+  await expect(card.locator('.brand-art img')).toHaveAttribute('src', `/logo/alibaba/${file}`);
+  await expect(card.locator('.card-download')).toHaveAttribute('href', `/logo/alibaba/${file}`);
+  await expect(card.locator('.card-download')).toHaveAttribute('download', `alibaba-${file}`);
+  await expect(card.locator('.card-materials')).toContainText('6 份素材');
+  const detailHref = (await card.locator('[data-brand-link]').getAttribute('href'))!;
+  await expect(card.locator('.card-materials')).toHaveAttribute('href', detailHref);
+  const detail = new URL(detailHref, page.url());
+  expect(detail.searchParams.has('asset')).toBe(false);
+  expect(detail.searchParams.get('q')).toBe('阿里巴巴');
+  await chooseCopy(page, 'current', card.locator('[data-copy-brand="alibaba"]'));
+  await expectLastCopy(page, address);
+  expect(page.url()).toBe(directory);
+  await card.locator('.card-materials').focus();
+  await page.keyboard.press('Enter');
+  await expect(page.locator('#detail-image')).toHaveAttribute('src', `/logo/alibaba/${file}`);
+  const chineseWordmark = page.locator(
+    '.version-section > .variant-list [data-select-asset="wordmark-orange-chinese.svg"]',
+  );
+  await chineseWordmark.click();
   await expect(page.locator('#detail-image')).toHaveAttribute(
     'src',
     /\/wordmark-orange-chinese\.svg$/,
@@ -862,7 +862,35 @@ test('card artwork choices keep preview, original download, detail and copied ad
   await expect(page.locator('#search')).toHaveValue('阿里巴巴');
 });
 
-test('switching a card artwork discards a pending SVG copy from the previous selection', async ({
+test('reviewed horizontal covers share their selected file with details, downloads and copied addresses', async ({
+  page,
+}) => {
+  await recordTextCopies(page);
+  const covers = {
+    xiaomi: 'logo-horizontal-official.svg',
+    huawei: 'logo-flat-horizontal-official.svg',
+    weibo: 'logo-chinese-horizontal-official.svg',
+    'alibaba-cloud': 'logo-chinese-horizontal.svg',
+    'ping-an': 'logo-horizontal.svg',
+  };
+  for (const [id, file] of Object.entries(covers)) {
+    await page.goto('/');
+    await expect(page.locator('#theme-toggle')).toBeEnabled();
+    const card = page.locator(`article[data-brand="${id}"]`);
+    const path = `/logo/${id}/${file}`;
+    await expect(card.locator('.brand-art img')).toHaveAttribute('src', path);
+    await expect(card.locator('.card-download')).toHaveAttribute('href', path);
+    const detailHref = (await card.locator('[data-brand-link]').getAttribute('href'))!;
+    await expect(card.locator('.card-materials')).toHaveAttribute('href', detailHref);
+    expect(new URL(detailHref, page.url()).searchParams.get('asset')).toBe(file);
+    await chooseCopy(page, 'current', card.locator('[data-copy-brand]'));
+    await expectLastCopy(page, new URL(path, page.url()).href);
+    await card.locator('.card-materials').click();
+    await expect(page.locator('#detail-image')).toHaveAttribute('src', path);
+  }
+});
+
+test('changing a file filter discards a pending SVG copy from the previous cover', async ({
   page,
 }) => {
   await recordTextCopies(page);
@@ -871,7 +899,7 @@ test('switching a card artwork discards a pending SVG copy from the previous sel
     releaseSource = resolve;
   });
   let sourceRequested = false;
-  await page.route('**/logo/alibaba/wordmark-orange.svg', async (route) => {
+  await page.route('**/logo/alibaba/wordmark-orange-chinese.svg', async (route) => {
     if (route.request().resourceType() !== 'fetch') return route.continue();
     sourceRequested = true;
     await sourceGate;
@@ -881,17 +909,16 @@ test('switching a card artwork discards a pending SVG copy from the previous sel
     await page.goto('/?q=阿里巴巴&format=SVG');
     await expect(page.locator('#theme-toggle')).toBeEnabled();
     const card = page.locator('.brand-card[data-brand="alibaba"]');
-    await card.locator('[data-card-artwork="file:wordmark-orange.svg"]').click();
     await chooseCopy(page, 'svg', card.locator('[data-copy-brand="alibaba"]'));
     await expect.poll(() => sourceRequested).toBe(true);
-    await card.locator('[data-card-artwork="file:wordmark-orange-chinese.svg"]').click();
+    await page.locator('#format-filter [data-format="PNG"]').click();
     await expect(card.locator('.brand-art img')).toHaveAttribute(
       'src',
-      /\/wordmark-orange-chinese\.svg$/,
+      /\/logo-chinese-horizontal-official\.png$/,
     );
     const sourceResponse = page.waitForResponse(
       (response) =>
-        response.url().endsWith('/logo/alibaba/wordmark-orange.svg') &&
+        response.url().endsWith('/logo/alibaba/wordmark-orange-chinese.svg') &&
         response.request().resourceType() === 'fetch',
     );
     releaseSource();
@@ -939,14 +966,17 @@ test('opening category drawer discards pending copy feedback', async ({ page }) 
     await route.continue();
   });
   try {
-    await page.goto('/?q=阿里巴巴&format=SVG');
+    await page.goto(`/?q=${encodeURIComponent('阿里巴巴 wordmark-orange.svg')}&format=SVG`);
     await expect(page.locator('#theme-toggle')).toBeEnabled();
+    const card = page.locator('[data-brand="alibaba"]');
     const copyTrigger = page.locator('[data-copy-brand="alibaba"]');
     const categoryTrigger = page.getByRole('button', { name: '打开品牌分类', exact: true });
     const drawer = page.getByRole('dialog', { name: '资源分类', exact: true });
-    await page
-      .locator('[data-brand="alibaba"] [data-card-artwork="file:wordmark-orange.svg"]')
-      .click();
+    await expect(card.locator('.brand-art img')).toHaveAttribute(
+      'src',
+      '/logo/alibaba/wordmark-orange.svg',
+    );
+    await expect(card.locator('.card-materials')).toContainText('1 份素材');
     await chooseCopy(page, 'svg', copyTrigger);
     await expect.poll(() => sourceRequested).toBe(true);
     await categoryTrigger.click();
@@ -1001,7 +1031,7 @@ test('opening category drawer discards pending copy feedback', async ({ page }) 
   }
 });
 
-test('PNG filtering limits card previews and artwork thumbnails to available PNG originals', async ({
+test('PNG filtering limits covers, material counts and downloads to available PNG originals', async ({
   page,
 }) => {
   await page.goto('/?format=PNG');
@@ -1018,11 +1048,14 @@ test('PNG filtering limits card previews and artwork thumbnails to available PNG
   expect(wrongFormats).toEqual([]);
   const nio = page.locator('.brand-card[data-brand="nio"]');
   await expect(nio.locator('.brand-art img')).toHaveAttribute('src', /\/icon-turquoise-app\.png$/);
-  await expect(
-    nio.locator('[data-card-artwork="file:logo-black-english-official.svg"]'),
-  ).toHaveCount(0);
+  await expect(nio.locator('.card-materials')).toContainText('1 份素材');
   await expect(nio.locator('.card-download')).toHaveAttribute('href', /\/icon-turquoise-app\.png$/);
-  await expect(page.locator('.brand-card[data-brand="alibaba"]')).toHaveCount(1);
+  const alibaba = page.locator('.brand-card[data-brand="alibaba"]');
+  await expect(alibaba.locator('.brand-art img')).toHaveAttribute(
+    'src',
+    /\/logo-chinese-horizontal-official\.png$/,
+  );
+  await expect(alibaba.locator('.card-materials')).toContainText('4 份素材');
   await expect(page.locator('.brand-card[data-brand="xiaomi"]')).toHaveCount(0);
   await nio.locator('[data-brand-link]').click();
   await expect(page.locator('#detail-image')).toHaveAttribute('src', /\/icon-turquoise-app\.png$/);
@@ -1055,6 +1088,10 @@ test('mobile category drawer and copy menu support keyboard use while original d
   await expect(categoryTrigger).toBeFocused();
   await page.locator('[data-brand-link="alibaba"]').click();
   await expect(page.locator('#detail-copy-menu')).toBeEnabled();
+  await page
+    .locator('.version-section > .variant-list [data-select-asset="wordmark-orange.svg"]')
+    .click();
+  await expect(page.locator('#detail-image')).toHaveAttribute('src', /\/wordmark-orange\.svg$/);
   const download = page.locator('#download-link');
   await expect(download).toBeInViewport();
   const bounds = await download.boundingBox();
@@ -1068,7 +1105,7 @@ test('mobile category drawer and copy menu support keyboard use while original d
   await expect(menu).toBeVisible();
   // Bits applies opening focus after the menu becomes visible. Let that focus
   // settle before navigation so it cannot overwrite the result of End.
-  const firstCopyItem = menu.locator('[data-copy-kind="html"]');
+  const firstCopyItem = menu.locator('[data-copy-kind="svg"]');
   await expect(firstCopyItem).toBeFocused();
   await firstCopyItem.press('End');
   await expect(menu.locator('[data-copy-kind="share"]')).toBeFocused();
@@ -1145,17 +1182,17 @@ test('without JavaScript the static home, source disclosure and original downloa
   const page = await context.newPage();
   try {
     await page.goto('/');
-    await expect(page.locator('#brand-grid .brand-card')).toHaveCount(59);
+    await expect(page.locator('#brand-grid .brand-card')).toHaveCount(catalog.brands.length);
     const dongchedi = page.locator('.brand-card[data-brand="dongchedi"]');
     await expect(dongchedi.locator('.brand-art img')).toHaveAttribute(
       'src',
-      '/logo/dongchedi/icon-yellow-extracted.svg',
+      '/logo/dongchedi/logo-chinese-official.svg',
     );
     await expect(dongchedi.locator('[data-brand-link]')).toHaveAttribute(
       'href',
-      '/logo/dongchedi/?asset=icon-yellow-extracted.svg',
+      '/logo/dongchedi/',
     );
-    await page.locator('[data-brand-link="alibaba"]').click();
+    await page.locator('.brand-card[data-brand="alibaba"] .card-materials').click();
     await expect(page).toHaveURL(/\/logo\/alibaba\/$/);
     await expect(
       page.getByRole('heading', { name: '阿里巴巴集团', exact: true, level: 1 }),
@@ -1164,8 +1201,7 @@ test('without JavaScript the static home, source disclosure and original downloa
     const sources = page
       .locator('details')
       .filter({ has: page.locator('summary').filter({ hasText: /^来源与使用说明/ }) });
-    await expect(sources).toHaveJSProperty('open', false);
-    await sources.locator('summary').click();
+    await expect(sources).toHaveJSProperty('open', true);
     await expect(
       page.locator('a[href="https://www.alibabagroup.com/en-US/resource-logos"]').first(),
     ).toBeVisible();
@@ -1195,7 +1231,7 @@ test('without JavaScript the static home, source disclosure and original downloa
     await expect(page.locator('a[href$="/wordmark-orange.png"]')).toHaveCount(0);
     await expect(page.locator('#download-options')).toHaveCount(0);
     await page.locator('#back-directory').click();
-    await expect(page.locator('#brand-grid .brand-card')).toHaveCount(59);
+    await expect(page.locator('#brand-grid .brand-card')).toHaveCount(catalog.brands.length);
     for (const id of new Set(removedSources.map(([brand]) => brand))) {
       await page.goto(`/logo/${id}/`);
       for (const [, file] of removedSources.filter(([brand]) => brand === id)) {
@@ -1209,7 +1245,7 @@ test('without JavaScript the static home, source disclosure and original downloa
   }
 });
 
-test('compact details disclose sources on demand and preserve attribution, restrictions and embed copying', async ({
+test('details show sources by default and preserve attribution, restrictions and embed copying', async ({
   page,
 }) => {
   await recordTextCopies(page);
@@ -1222,8 +1258,7 @@ test('compact details disclose sources on demand and preserve attribution, restr
   const sources = page
     .locator('details')
     .filter({ has: page.locator('summary').filter({ hasText: /^来源与使用说明/ }) });
-  await expect(sources).toHaveJSProperty('open', false);
-  await sources.locator('summary').click();
+  await expect(sources).toHaveJSProperty('open', true);
   await expect(
     sources.getByRole('link', { name: 'Commons 公共领域判定', exact: true }),
   ).toHaveCount(1);
@@ -1252,7 +1287,7 @@ test('compact details disclose sources on demand and preserve attribution, restr
     .locator('details')
     .filter({ has: page.locator('summary').filter({ hasText: /^来源与使用说明/ }) });
   await expect(gitSources.locator('summary')).toContainText('需署名');
-  await gitSources.locator('summary').click();
+  await expect(gitSources).toHaveJSProperty('open', true);
   await expect(gitSources.getByText(/Git Logo by Jason Long/)).toBeVisible();
   await page.goto('/logo/gitlab/?asset=icon-legacy.png');
   await expect(
@@ -1492,7 +1527,7 @@ test('artwork choices retain distinct designs and colors after redundant formats
     ['lenovo', 0],
     ['meituan', 3],
     ['minimax', 4],
-    ['yonyou', 2],
+    ['yonyou', 3],
     ['zte', 2],
   ] as const) {
     await page.goto(`/logo/${id}/`);
@@ -1534,7 +1569,7 @@ test('Tencent color choices retain their original files and sources without the 
   await expect(page.locator('#detail-fileinfo')).toContainText('2953 × 889');
   await expect(page.locator('.format-option')).toHaveCount(0);
   const sources = page.locator('.source-details');
-  await sources.locator('summary').click();
+  await expect(sources).toHaveJSProperty('open', true);
   await expect(
     sources.locator('a[href="https://www.tencent.com/zh-cn/newsroom/media-resources/"]'),
   ).toBeVisible();

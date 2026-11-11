@@ -1,4 +1,8 @@
 import { expect, test, type Locator, type Page } from '@playwright/test';
+import { readFile } from 'node:fs/promises';
+import { directoryPreviewBounds } from '../../src/lib/catalog-preview.mjs';
+import { directoryAsset } from '../../src/lib/catalog-presentation.mjs';
+import type { Catalog } from '../../src/lib/types';
 
 async function expectMinimumHeight(controls: Locator, minimum: number) {
   await expect(controls.first()).toBeVisible();
@@ -47,7 +51,7 @@ async function expectFilterTypography(page: Page) {
 async function expectCardTypography(page: Page, nameSize: number) {
   await expectTypography(page.locator('.brand-identity h2'), nameSize);
   await expectTypography(page.locator('.card-download, .card-copy'), 13);
-  await expectTypography(page.locator('.brand-english, .asset-format, .download-format'), 12);
+  await expectTypography(page.locator('.brand-english, .card-materials, .download-format'), 12);
 }
 
 async function expectGridColumns(page: Page, count: number) {
@@ -176,6 +180,102 @@ test('directory uses wider screens while keeping filtered cards at the same size
   expect(cardWidth).toBeCloseTo(232, 0);
 });
 
+test('reviewed directory preview bounds keep artwork centered and fully visible on desktop and mobile', async ({
+  page,
+}) => {
+  const catalog = JSON.parse(
+    await readFile(new URL('../../index.json', import.meta.url), 'utf8'),
+  ) as Catalog;
+  for (const width of [390, 2048]) {
+    await page.setViewportSize({ width, height: 1000 });
+    await page.goto('/');
+    await expect(page.locator('#theme-toggle')).toBeEnabled();
+    for (const id of [
+      'antgroup',
+      'baidu',
+      'nio',
+      'tencent-music',
+      'bytedance',
+      'haier',
+      'huawei',
+      'weibo',
+      'honor',
+      'zte',
+    ]) {
+      const brand = catalog.brands.find((item) => item.id === id)!;
+      const asset = directoryAsset(brand);
+      const bounds = directoryPreviewBounds(asset);
+      expect(bounds, `${id} still uses its reviewed source`).toBeDefined();
+      if (!bounds) throw new Error(`Missing reviewed preview bounds for ${id}`);
+
+      const card = page.locator(`.brand-card[data-brand="${id}"]`);
+      await expect(card.locator('.brand-art')).toHaveAttribute('data-shape', 'horizontal');
+      const image = card.locator('.brand-art img');
+      await expect(image).toHaveAttribute('src', `/logo/${id}/${asset.file}`);
+      await image.scrollIntoViewIfNeeded();
+      await image.evaluate((element: HTMLImageElement) => element.decode());
+      const rendered = await image.evaluate((element: HTMLImageElement) => {
+        const imageRect = element.getBoundingClientRect();
+        const frameRect = element.closest('.preview-frame')!.getBoundingClientRect();
+        return {
+          image: {
+            left: imageRect.left,
+            top: imageRect.top,
+            width: imageRect.width,
+            height: imageRect.height,
+          },
+          frame: {
+            left: frameRect.left,
+            top: frameRect.top,
+            right: frameRect.right,
+            bottom: frameRect.bottom,
+            width: frameRect.width,
+            height: frameRect.height,
+          },
+          naturalWidth: element.naturalWidth,
+          naturalHeight: element.naturalHeight,
+        };
+      });
+      const context = `${id} at ${width}px`;
+      expect(rendered.naturalWidth, context).toBe(bounds.sourceWidth);
+      expect(Math.abs(rendered.naturalHeight - bounds.sourceHeight), context).toBeLessThanOrEqual(
+        1,
+      );
+      expect(rendered.image.width / rendered.image.height, context).toBeCloseTo(
+        bounds.sourceWidth / bounds.sourceHeight,
+        2,
+      );
+
+      const scaleX = rendered.image.width / bounds.sourceWidth;
+      const scaleY = rendered.image.height / bounds.sourceHeight;
+      const artwork = {
+        left: rendered.image.left + bounds.x * scaleX,
+        top: rendered.image.top + bounds.y * scaleY,
+        width: bounds.width * scaleX,
+        height: bounds.height * scaleY,
+      };
+      expect(artwork.left, context).toBeGreaterThanOrEqual(rendered.frame.left - 1);
+      expect(artwork.top, context).toBeGreaterThanOrEqual(rendered.frame.top - 1);
+      expect(artwork.left + artwork.width, context).toBeLessThanOrEqual(rendered.frame.right + 1);
+      expect(artwork.top + artwork.height, context).toBeLessThanOrEqual(rendered.frame.bottom + 1);
+      expect(artwork.width, context).toBeGreaterThanOrEqual(110);
+      expect(artwork.width, context).toBeLessThanOrEqual(rendered.frame.width + 1);
+      expect(
+        Math.abs(
+          artwork.left + artwork.width / 2 - (rendered.frame.left + rendered.frame.width / 2),
+        ),
+        context,
+      ).toBeLessThanOrEqual(1);
+      expect(
+        Math.abs(
+          artwork.top + artwork.height / 2 - (rendered.frame.top + rendered.frame.height / 2),
+        ),
+        context,
+      ).toBeLessThanOrEqual(1);
+    }
+  }
+});
+
 test('desktop filters use readable control sizing and keyboard focus stays visible in both themes', async ({
   page,
 }) => {
@@ -257,7 +357,8 @@ test('390px home and Alibaba detail retain usable targets without horizontal scr
   await page.goto('/');
   await expect(page.locator('#theme-toggle')).toBeEnabled();
   await expectMinimumHeight(page.locator('button:visible'), 40);
-  await expectMinimumHeight(page.locator('.card-download, .card-copy, .version-thumbnail'), 44);
+  await expectMinimumHeight(page.locator('.card-download, .card-copy'), 44);
+  await expectMinimumHeight(page.locator('.card-materials'), 40);
   await openExtraFilters(page);
   await expectFilterTypography(page);
   await expectCardTypography(page, 13);
@@ -285,7 +386,7 @@ test('390px home and Alibaba detail retain usable targets without horizontal scr
     'true',
   );
   await expect(page.locator('.brand-card').first()).toBeVisible();
-  for (const format of await page.locator('.brand-card .asset-format').all())
+  for (const format of await page.locator('.brand-card .download-format').all())
     await expect(format).toHaveText('PNG');
   await expectNoHorizontalOverflow(page);
 
@@ -451,56 +552,46 @@ test('cards keep usage restrictions visible and details disclose useful material
   await expect(gitlab.locator('.brand-link')).toHaveAccessibleName(/^查看 GitLab，/);
   await expect(gitlab.locator('.brand-art img')).toHaveAttribute(
     'src',
-    /icon-color-square-extracted\.svg$/,
+    /logo-color-official\.svg$/,
   );
   await expect(gitlab.locator('.card-download')).toHaveAttribute(
     'href',
-    /icon-color-square-extracted\.svg$/,
+    /logo-color-official\.svg$/,
   );
   expect(
     new URL(
       (await gitlab.locator('.brand-link').getAttribute('href')) || '',
       page.url(),
     ).searchParams.get('asset'),
-  ).toBe('icon-color-square-extracted.svg');
-  await expect(gitlab.locator('.version-thumbnail[aria-current="true"] img')).toHaveAttribute(
-    'src',
-    /icon-color-square-extracted\.svg$/,
-  );
+  ).toBe(null);
+  await expect(gitlab.locator('.card-materials')).toContainText('10 份素材');
   await expect(gitlab.locator('.card-warning')).toHaveCount(0);
 
   const zte = page.getByRole('article').filter({ has: page.locator('[data-brand-link="zte"]') });
   await expect(zte.locator('.brand-link')).toHaveAccessibleName(/^查看 中兴通讯，/);
-  await expect(zte.locator('.version-thumbnails')).toBeVisible();
-  await expect(zte.locator('.version-thumbnail')).toHaveCount(2);
-  await expect(zte.locator('.more-versions')).toHaveCount(0);
-  await expect(zte.locator('.version-thumbnail img').last()).toHaveAttribute(
-    'src',
-    /wordmark-white-official\.png$/,
-  );
+  await expect(zte.locator('.card-materials')).toContainText('3 份素材');
   await expect(zte.locator('.card-download')).toHaveAttribute(
     'href',
     /wordmark-blue-official\.png$/,
   );
 
-  await zte.locator('.brand-link').click();
+  await zte.locator('.card-materials').click();
   await expect(page).toHaveURL(/\/logo\/zte\//);
   await expect(page.locator('#download-link')).toHaveAttribute(
     'href',
     /wordmark-blue-official\.png$/,
   );
   const sources = page.locator('.source-details');
-  await expect(sources).toHaveJSProperty('open', false);
+  await expect(sources).toHaveJSProperty('open', true);
   const notes = page.locator('.asset-action-panel .asset-warnings li');
   await expect(notes).not.toHaveCount(0);
   for (const note of await notes.all()) await expect(note).toBeVisible();
   await expect(page.locator('.asset-action-panel')).toContainText('留白');
   await expect(page.locator('.asset-action-panel')).toContainText('#0086D1');
   await expect(page.locator('.asset-action-panel')).toContainText('#008ED3');
-  await sources.locator('summary').click();
-  await expect(sources).toHaveJSProperty('open', true);
   await expect(sources).not.toContainText('zte_logo_en/');
   await sources.locator('summary').click();
+  await expect(sources).toHaveJSProperty('open', false);
   for (const note of await notes.all()) await expect(note).toBeVisible();
 });
 
@@ -549,10 +640,8 @@ for (const width of [1280, 390]) {
       await expect(fileInfo).toContainText('SVG');
       await expect(fileInfo.locator('span')).toHaveCount(0);
       await expect(panel.locator('.asset-description, .asset-warnings')).toHaveCount(0);
-      await expect(sources).toHaveJSProperty('open', false);
-      await sources.locator('summary').click();
+      await expect(sources).toHaveJSProperty('open', true);
       await expect(sources).toContainText('Wikimedia Commons · 原始文件');
-      await sources.locator('summary').click();
     }
     await expectNoHorizontalOverflow(page);
 
@@ -595,7 +684,7 @@ for (const width of [1280, 390]) {
     await expect(panel.locator('.asset-description')).toContainText('留白');
     await expect(panel.locator('.asset-warnings')).toContainText('#0086D1');
     await expect(panel.locator('.asset-warnings')).toContainText('#008ED3');
-    await expect(sources).toHaveJSProperty('open', false);
+    await expect(sources).toHaveJSProperty('open', true);
     const alternatives = page.locator('.artwork-alternatives');
     await alternatives.locator('summary').click();
     await alternatives.locator('[data-select-asset="wordmark-blue-header-official.png"]').click();
@@ -638,8 +727,7 @@ for (const width of [1280, 390]) {
     await page.goto('/logo/kuaishou/');
     await expect(page.locator('#detail-copy-menu')).toBeEnabled();
     await expectSourceLink(page, '官方品牌素材下载页', kuaishouSource);
-    await expect(sources).toHaveJSProperty('open', false);
-    await sources.locator('summary').click();
+    await expect(sources).toHaveJSProperty('open', true);
     await expect(license).toHaveText('Commons 公共领域判定');
     await expect(license).toHaveAttribute(
       'href',
@@ -660,8 +748,7 @@ for (const width of [1280, 390]) {
 
     await page.goto('/logo/alibaba/?asset=wordmark-orange.svg');
     await expectSourceLink(page, 'Commons', alibabaSource);
-    await expect(sources).toHaveJSProperty('open', false);
-    await sources.locator('summary').click();
+    await expect(sources).toHaveJSProperty('open', true);
     await expect(license).toHaveText('Commons 公共领域判定');
     await expect(license).toHaveAttribute(
       'href',
@@ -688,8 +775,7 @@ for (const width of [1280, 390]) {
     await page.goto('/logo/tencent/');
     await expectSourceLink(page, '官方品牌素材下载页', tencentSource);
     await expect(page.locator('.format-choices, .file-options')).toHaveCount(0);
-    await expect(sources).toHaveJSProperty('open', false);
-    await sources.locator('summary').click();
+    await expect(sources).toHaveJSProperty('open', true);
     await expect(license).toHaveText('Commons 公共领域判定');
     await expect(sourceFile).toHaveAttribute('href', tencentBlue);
     await page.locator('[data-select-asset="wordmark-black-official.png"]').click();
@@ -726,12 +812,12 @@ for (const width of [1280, 390]) {
       '官方应用商店 · 渲染图',
       'https://play.google.com/store/apps/details?hl=zh-CN&id=com.xingin.xhs',
     );
-    await expect(sources).toHaveJSProperty('open', false);
+    await expect(sources).toHaveJSProperty('open', true);
 
     await page.goto('/logo/nio/');
     await expectSourceLink(page, '官网页面用图', 'https://www.nio.com/about?noredirect=');
     await expect(download).toHaveAttribute('href', /logo-black-english-official\.svg$/);
-    await sources.locator('summary').click();
+    await expect(sources).toHaveJSProperty('open', true);
     await page.locator('[data-select-asset="icon-turquoise-app.png"]').click();
     await expectSourceLink(
       page,
@@ -742,7 +828,7 @@ for (const width of [1280, 390]) {
 
     await page.goto('/logo/shopee/');
     await expectSourceLink(page, '官网页脚 Logo', 'https://careers.shopee.sg/');
-    await sources.locator('summary').click();
+    await expect(sources).toHaveJSProperty('open', true);
     await page.locator('[data-select-asset="logo-vertical-commons.png"]').click();
     await expectSourceLink(
       page,
@@ -802,7 +888,6 @@ for (const width of [1280, 390]) {
         'wordmark-white-official.png',
         '官方品牌素材下载页',
         'https://group.trip.com/media',
-        'unverified',
       ],
       ['trip-com', 'wordmark-blue-small-official.png', '官网页头 Logo', 'https://group.trip.com/'],
       [
@@ -1036,18 +1121,17 @@ for (const width of [1280, 390]) {
     await expectSourceLink(page, '官网页头 Logo', 'https://www.zte.com.cn/global/');
     await expect(page.locator('.asset-action-panel .asset-warnings')).toContainText('低分辨率');
     await expect(page.locator('.asset-action-panel .asset-warnings')).toBeVisible();
-    await sources.locator('summary').click();
+    await expect(sources).toHaveJSProperty('open', true);
     await expect(sources).toContainText('页头 Logo · 原始文件');
 
     await page.goto('/logo/transsion/');
     await expectSourceLink(page, '官网页脚 Logo', 'https://www.transsion.com/zh-CN/about');
-    await sources.locator('summary').click();
+    await expect(sources).toHaveJSProperty('open', true);
     await expect(sources).toContainText('页脚 Logo · 原始文件');
 
     await page.goto('/logo/xiaomi/');
     await expectSourceLink(page, '官网页面用图 · 图形提取版', 'https://trust.mi.com/');
-    await expect(sources).toHaveJSProperty('open', false);
-    await sources.locator('summary').click();
+    await expect(sources).toHaveJSProperty('open', true);
     await expect(sources).toContainText('小米信任中心 · 图形提取版');
     await page.locator('[data-select-asset="logo-horizontal-official.svg"]').click();
     await expectSourceLink(page, '官网页面用图', 'https://trust.mi.com/');
@@ -1062,12 +1146,11 @@ for (const width of [1280, 390]) {
     const gitlabSource =
       'https://gitlab.com/gitlab-com/gitlab-artwork/-/raw/9b07772f44a9fa51f395a95928a6e41c61a5b1cb/README.md';
     await expectSourceLink(page, '官方仓库', gitlabSource);
-    await expect(sources).toHaveJSProperty('open', false);
+    await expect(sources).toHaveJSProperty('open', true);
     const warnings = page.locator('.asset-action-panel .asset-warnings');
     await expect(warnings).toBeVisible();
     await expect(warnings).toContainText('历史素材');
     await expect(warnings).toContainText('仅限非商业用途');
-    await sources.locator('summary').click();
     await expect(license).toHaveText('CC-BY-NC-SA-4.0');
     await expect(license).toHaveAttribute('href', gitlabSource);
     await expect(warnings).toBeVisible();

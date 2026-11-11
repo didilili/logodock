@@ -1,5 +1,7 @@
 import { filterBrands, matchingAssets, sortBrands } from './catalog-search.mjs';
 import { artworkGroups } from './catalog-artworks.mjs';
+import { brandPriorities } from './catalog-order.mjs';
+import { directoryCover } from './catalog-preview.mjs';
 
 export const entityLabels = { company: '公司', product: '产品', organization: '组织' };
 export const categoryLabels = {
@@ -17,7 +19,13 @@ export const categoryLabels = {
   'industrial-automation': '工业自动化',
   'social-media': '社交媒体',
 };
-export const sortCatalogBrands = sortBrands;
+export function sortCatalogBrands(brands) {
+  return sortBrands(brands).sort(
+    (a, b) =>
+      (brandPriorities.get(a.id) ?? Number.MAX_SAFE_INTEGER) -
+      (brandPriorities.get(b.id) ?? Number.MAX_SAFE_INTEGER),
+  );
+}
 const variantLabels = { icon: '图形标识', wordmark: '文字标识', logo: '组合标识' };
 
 export function assetFormat(asset) {
@@ -35,29 +43,11 @@ export function defaultAsset(brand, requestedFile) {
 export function directoryAsset(brand, query = '') {
   const candidates = matchingAssets(brand, query);
   const scopedBrand = candidates.length ? { ...brand, assets: candidates } : brand;
-  const hasCurrent = scopedBrand.assets.some(
-    (asset) => asset.status === 'current' && asset.display !== 'alternative',
-  );
-  const squareAssets = scopedBrand.assets.filter((asset) => {
-    const ratio =
-      asset.aspectRatio ?? (asset.width && asset.height ? asset.width / asset.height : undefined);
-    return (
-      asset.display !== 'alternative' &&
-      (!hasCurrent || asset.status === 'current') &&
-      Number.isFinite(ratio) &&
-      Math.abs(ratio - 1) < 0.0001
-    );
-  });
-  const squares = artworkGroups({ ...scopedBrand, assets: squareAssets })
-    .map((group) => group.defaultAsset)
-    .sort(
-      (a, b) =>
-        Number(a.variant !== 'icon') - Number(b.variant !== 'icon') ||
-        Number(a.background === 'dark') - Number(b.background === 'dark') ||
-        Number(assetFormat(a) !== 'SVG') - Number(assetFormat(b) !== 'SVG') ||
-        Number(a.color !== 'brand') - Number(b.color !== 'brand'),
-    );
-  return squares[0] ?? defaultAsset(scopedBrand);
+  const primary = scopedBrand.assets.filter((asset) => asset.display !== 'alternative');
+  const available = primary.length ? primary : scopedBrand.assets;
+  const current = available.filter((asset) => asset.status === 'current');
+  const eligible = { ...scopedBrand, assets: current.length ? current : available };
+  return directoryCover(eligible) || defaultAsset(eligible);
 }
 
 export function assetLabel(asset) {
@@ -130,7 +120,7 @@ export function matchingBrands(
   brands,
   { q = '', type = '', format = '', shape = '', category = '' } = {},
 ) {
-  const available = sortBrands(brands)
+  const available = sortCatalogBrands(brands)
     .filter((brand) => !type || brand.entityType === type)
     .filter((brand) => !category || brand.categories?.includes(category))
     .map((brand) => {

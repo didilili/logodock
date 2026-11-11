@@ -326,9 +326,7 @@
             query={filters.q}
             basePath={base}
             href={hrefFor(brand)}
-            assetHref={(asset) => hrefFor(brand, asset)}
             oncopy={copyBrand}
-            onAssetChange={() => feedback?.reset()}
             onsave={savePosition}
             {ready}
           />

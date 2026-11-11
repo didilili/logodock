@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
 import test from 'node:test';
 import { sourceInformation } from '../src/lib/catalog-display.mjs';
 
@@ -58,7 +59,7 @@ test('brand detail routes use the singular logo path below the explicit site roo
   assert.equal(brandRoute({ id: 'jd' }, '/logodock/'), '/logodock/logo/jd/');
 });
 
-test('directory prefers current primary square symbols within the active search and format', async () => {
+test('directory keeps the reviewed default within the active search, format and shape', async () => {
   const { directoryAsset, matchingBrands, defaultAsset } = await presentation();
   const brand = {
     ...brands[0],
@@ -110,10 +111,14 @@ test('directory prefers current primary square symbols within the active search 
     ],
   };
   const before = structuredClone(brand);
-  assert.equal(directoryAsset(brand).file, 'symbol.svg');
+  assert.equal(directoryAsset(brand).file, 'lockup.svg');
   assert.equal(directoryAsset(brand, '应用').file, 'app.png');
   assert.equal(directoryAsset(brand, '英文').file, 'lockup.svg');
   assert.equal(directoryAsset(matchingBrands([brand], { format: 'PNG' })[0]).file, 'app.png');
+  assert.equal(
+    directoryAsset(matchingBrands([brand], { shape: 'icon', format: 'SVG', q: '彩色' })[0]).file,
+    'symbol.svg',
+  );
   assert.equal(
     directoryAsset({ ...brand, assets: [brand.assets[0], brand.assets[3], brand.assets[4]] }).file,
     'lockup.svg',
@@ -131,8 +136,100 @@ test('directory prefers current primary square symbols within the active search 
       },
     ],
   };
-  assert.equal(directoryAsset(grouped).file, 'app.png');
+  assert.equal(directoryAsset(grouped).file, 'lockup.svg');
+  assert.equal(directoryAsset({ ...grouped, defaultAsset: 'symbol.svg' }).file, 'lockup.svg');
+  for (const file of ['old.svg', 'alternative.svg']) {
+    assert.equal(directoryAsset({ ...brand, defaultAsset: file }).file, 'lockup.svg');
+  }
+  assert.equal(directoryAsset(brand, '旧版').file, 'old.svg');
+  assert.equal(directoryAsset(brand, '备选').file, 'alternative.svg');
   assert.deepEqual(brand, before);
+});
+
+test('directory preview ranges match reviewed originals and stay inside their source canvases', async () => {
+  const { directoryPreviewBounds } = await import('../src/lib/catalog-preview.mjs');
+  const catalog = JSON.parse(await readFile(new URL('../index.json', import.meta.url), 'utf8'));
+  for (const id of ['antgroup', 'baidu', 'nio', 'tencent-music']) {
+    const brand = catalog.brands.find((item) => item.id === id);
+    const asset = brand.assets.find((item) => item.file === brand.defaultAsset);
+    const bounds = directoryPreviewBounds(asset);
+    assert.ok(bounds, `${id} still uses the reviewed source SHA-256`);
+    assert.ok(bounds.width > 0 && bounds.height > 0);
+    assert.ok(bounds.x >= 0 && bounds.y >= 0);
+    assert.ok(bounds.x + bounds.width <= bounds.sourceWidth);
+    assert.ok(bounds.y + bounds.height <= bounds.sourceHeight);
+    if (asset.width && asset.height) {
+      assert.equal(bounds.sourceWidth, asset.width);
+      assert.equal(bounds.sourceHeight, asset.height);
+    } else {
+      const svg = await readFile(new URL(`../${asset.path}`, import.meta.url), 'utf8');
+      assert.match(svg, new RegExp(`viewBox="0 0 ${bounds.sourceWidth} ${bounds.sourceHeight}"`));
+    }
+    assert.equal(directoryPreviewBounds({ ...asset, sha256: '0'.repeat(64) }), undefined);
+  }
+  assert.equal(directoryPreviewBounds({ sha256: '__proto__' }), undefined);
+});
+
+test('reviewed directory covers respect matching files and fall back when their source changes', async () => {
+  const { directoryAsset, matchingBrands } = await presentation();
+  const { brands } = JSON.parse(await readFile(new URL('../index.json', import.meta.url), 'utf8'));
+  const covers = {
+    xiaomi: 'logo-horizontal-official.svg',
+    huawei: 'logo-flat-horizontal-official.svg',
+    weibo: 'logo-chinese-horizontal-official.svg',
+    'alibaba-cloud': 'logo-chinese-horizontal.svg',
+    'ping-an': 'logo-horizontal.svg',
+  };
+  for (const [id, file] of Object.entries(covers)) {
+    const brand = brands.find((item) => item.id === id);
+    const before = structuredClone(brand);
+    assert.equal(directoryAsset(brand).file, file);
+    const changed = {
+      ...brand,
+      assets: brand.assets.map((asset) =>
+        asset.file === file ? { ...asset, sha256: '0'.repeat(64) } : asset,
+      ),
+    };
+    assert.equal(directoryAsset(changed).file, brand.defaultAsset);
+    assert.equal(directoryAsset(brand, brand.defaultAsset).file, brand.defaultAsset);
+    assert.deepEqual(brand, before);
+  }
+  const weibo = brands.find((brand) => brand.id === 'weibo');
+  assert.equal(
+    directoryAsset(matchingBrands([weibo], { format: 'JPG' })[0]).file,
+    'icon-appstore.jpg',
+  );
+  const xiaomi = brands.find((brand) => brand.id === 'xiaomi');
+  assert.equal(
+    directoryAsset(matchingBrands([xiaomi], { shape: 'icon' })[0]).file,
+    'icon-orange-extracted.svg',
+  );
+});
+
+test('balanced directory sizing uses visible artwork proportions and handles missing dimensions', async () => {
+  const { directoryPreviewSize } = await import('../src/lib/catalog-preview.mjs');
+  const catalog = JSON.parse(await readFile(new URL('../index.json', import.meta.url), 'utf8'));
+  const sizeFor = (id, file) => {
+    const brand = catalog.brands.find((item) => item.id === id);
+    return directoryPreviewSize(
+      brand.assets.find((asset) => asset.file === (file || brand.defaultAsset)),
+    );
+  };
+  assert.deepEqual(sizeFor('haier'), { shape: 'horizontal', width: 156, height: 46 });
+  assert.deepEqual(sizeFor('netease'), { shape: 'horizontal', width: 140, height: 56 });
+  assert.deepEqual(sizeFor('xiaomi', 'logo-horizontal-official.svg'), {
+    shape: 'horizontal',
+    width: 156,
+    height: 46,
+  });
+  assert.deepEqual(sizeFor('xiaomi'), { shape: 'symbol', width: 60, height: 60 });
+  assert.deepEqual(sizeFor('huawei'), { shape: 'vertical', width: 76, height: 76 });
+  assert.deepEqual(sizeFor('tencent-music'), { shape: 'horizontal', width: 140, height: 56 });
+  assert.deepEqual(directoryPreviewSize({ variant: 'logo' }), {
+    shape: 'horizontal',
+    width: 156,
+    height: 46,
+  });
 });
 
 test('extracted symbol labels describe the processing and preserve the original source page', async () => {
