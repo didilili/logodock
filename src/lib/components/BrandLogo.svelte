@@ -25,6 +25,7 @@
   let pointer = { x: 0, y: 0 };
   let finishTimer: ReturnType<typeof setTimeout> | undefined;
   const animations = new SvelteSet<Animation>();
+  const greetingDuration = 2200;
 
   function animate(
     target: Element | undefined,
@@ -62,36 +63,41 @@
     animate(
       character,
       [
-        { transform: 'none' },
-        { transform: 'translateY(-1px) rotate(-4deg)', offset: 0.35 },
-        { transform: 'none' },
+        { transform: 'none', offset: 0 },
+        { transform: 'translateY(0.5px) rotate(-2deg)', offset: 0.16 },
+        { transform: 'translateY(-1px) rotate(3deg)', offset: 0.34 },
+        { transform: 'translateY(0.3px) rotate(-1deg)', offset: 0.54 },
+        { transform: 'none', offset: 0.72 },
+        { transform: 'none', offset: 1 },
       ],
-      740,
+      greetingDuration,
     );
     animate(
       card,
       [
-        { transform: 'none' },
-        { transform: 'translate(3px, -1px) rotate(10deg)', offset: 0.4 },
-        { transform: 'translate(1.3px, 0) rotate(-3deg)', offset: 0.73 },
-        { transform: 'none' },
+        { transform: 'none', offset: 0 },
+        { transform: 'translateX(-0.5px) rotate(-2deg)', offset: 0.18 },
+        { transform: 'translate(2px, -0.6px) rotate(5deg)', offset: 0.38 },
+        { transform: 'translate(0.4px, -0.2px) rotate(1deg)', offset: 0.62 },
+        { transform: 'none', offset: 0.78 },
+        { transform: 'none', offset: 1 },
       ],
-      820,
+      greetingDuration,
     );
     animate(
       eyeBlink,
       [
-        { transform: 'scaleY(1)' },
-        { transform: 'scaleY(0.12)', offset: 0.45 },
-        { transform: 'scaleY(1)' },
+        { transform: 'none', offset: 0 },
+        { transform: 'none', offset: 0.43 },
+        { transform: 'scaleY(0.12)', offset: 0.47 },
+        { transform: 'none', offset: 0.52 },
+        { transform: 'none', offset: 1 },
       ],
-      210,
-      190,
-      'ease-in-out',
+      greetingDuration,
     );
     finishTimer = setTimeout(() => {
       state = active ? 'watching' : 'idle';
-    }, 860);
+    }, greetingDuration);
   }
 
   function settle() {
@@ -210,7 +216,22 @@
 
 <style>
   .brand-logo {
+    --brand-bird: #001b59;
+    --brand-card: #008dfe;
+    --brand-word: #021e3b;
     min-height: 44px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :global(:root:not([data-theme='light'])) .brand-logo {
+      --brand-bird: #a3c9f1;
+      --brand-card: #19b4ff;
+      --brand-word: #e6f2ff;
+    }
+  }
+  :global(:root[data-theme='dark']) .brand-logo {
+    --brand-bird: #a3c9f1;
+    --brand-card: #19b4ff;
+    --brand-word: #e6f2ff;
   }
   .brand-mark {
     --brand-scale: 0.88;
@@ -222,6 +243,7 @@
     line-height: 0;
   }
   .brand-character {
+    color: var(--brand-bird);
     position: relative;
     display: block;
     flex: none;
@@ -241,7 +263,7 @@
     transform-origin: 84.5% 41.2%;
   }
   .brand-card path {
-    fill: var(--accent);
+    fill: var(--brand-card);
   }
   .brand-eye {
     fill: var(--paper);
@@ -254,6 +276,7 @@
     transform-origin: center;
   }
   .brand-wordmark {
+    color: var(--brand-word);
     display: block;
     flex: none;
     width: calc(var(--brand-cap-size) * 962 / 161);
