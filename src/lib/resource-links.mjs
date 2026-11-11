@@ -60,3 +60,56 @@ export async function copyText(value, clipboard) {
     return false;
   }
 }
+
+/**
+ * @param {{
+ *   loadText: () => Promise<string>,
+ *   clipboard?: Clipboard,
+ *   ClipboardItemType?: typeof ClipboardItem,
+ *   isCurrent?: () => boolean,
+ * }} options
+ * @returns {Promise<{status: 'copied' | 'failed' | 'stale', value?: string}>}
+ */
+export async function copyDeferredText({
+  loadText,
+  clipboard,
+  ClipboardItemType,
+  isCurrent = () => true,
+}) {
+  if (!isCurrent()) return { status: 'stale' };
+  let canWriteDeferred = false;
+  try {
+    canWriteDeferred =
+      typeof clipboard?.write === 'function' &&
+      typeof ClipboardItemType === 'function' &&
+      (typeof ClipboardItemType.supports !== 'function' ||
+        ClipboardItemType.supports('text/plain'));
+  } catch {
+    // A failed capability probe can still leave writeText or manual copying available.
+  }
+
+  const text = (async () => loadText())();
+  text.catch(() => {});
+  if (!canWriteDeferred) {
+    const value = await text;
+    if (!isCurrent()) return { status: 'stale' };
+    const copied = await copyText(value, clipboard);
+    return isCurrent() ? { status: copied ? 'copied' : 'failed', value } : { status: 'stale' };
+  }
+
+  const textBlob = text.then((value) => {
+    if (!isCurrent()) throw new Error('Stale text selection');
+    return new Blob([value], { type: 'text/plain' });
+  });
+  textBlob.catch(() => {});
+  let copied = false;
+  try {
+    // Submit within the click. Loading the source can outlast user activation.
+    await clipboard.write([new ClipboardItemType({ 'text/plain': textBlob })]);
+    copied = true;
+  } catch {
+    // Wait for the source below so permission failures retain the manual fallback.
+  }
+  const value = await text;
+  return isCurrent() ? { status: copied ? 'copied' : 'failed', value } : { status: 'stale' };
+}

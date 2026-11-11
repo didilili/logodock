@@ -114,3 +114,124 @@ test('nested detail pages resolve the explicit site root before creating image a
   }
   assert.throws(() => siteRootUrl('https://example.com/', 'https://evil.example/'));
 });
+
+class TextClipboardItem {
+  constructor(data) {
+    this.data = data;
+  }
+  static supports(type) {
+    return type === 'text/plain';
+  }
+}
+
+test('deferred text queues a native write during the click before source loading finishes', async () => {
+  const { copyDeferredText } = await resources();
+  let finishLoading;
+  const source = new Promise((resolve) => {
+    finishLoading = resolve;
+  });
+  let writeCalled = false;
+  let copied;
+  const result = copyDeferredText({
+    loadText: () => source,
+    ClipboardItemType: TextClipboardItem,
+    clipboard: {
+      write: async (items) => {
+        writeCalled = true;
+        const blob = await items[0].data['text/plain'];
+        assert.equal(blob.type, 'text/plain');
+        copied = await blob.text();
+      },
+    },
+  });
+  assert.equal(writeCalled, true);
+  finishLoading('<svg>中文</svg>');
+  assert.equal((await result).status, 'copied');
+  assert.equal(copied, '<svg>中文</svg>');
+});
+
+test('immediate clipboard denial still waits for deferred text to offer manual copying', async () => {
+  const { copyDeferredText } = await resources();
+  let finishLoading;
+  const source = new Promise((resolve) => {
+    finishLoading = resolve;
+  });
+  let settled = false;
+  const result = copyDeferredText({
+    loadText: () => source,
+    ClipboardItemType: TextClipboardItem,
+    clipboard: {
+      write: async () => {
+        throw new Error('Permission denied');
+      },
+    },
+  }).then((value) => {
+    settled = true;
+    return value;
+  });
+  await Promise.resolve();
+  await Promise.resolve();
+  assert.equal(settled, false);
+  finishLoading('<svg/>');
+  assert.deepEqual(await result, { status: 'failed', value: '<svg/>' });
+});
+
+test('deferred text propagates source failure even if clipboard permission is denied first', async () => {
+  const { copyDeferredText } = await resources();
+  const error = new Error('SVG source unavailable');
+  await assert.rejects(
+    copyDeferredText({
+      loadText: async () => {
+        throw error;
+      },
+      ClipboardItemType: TextClipboardItem,
+      clipboard: {
+        write: async () => {
+          throw new Error('Permission denied');
+        },
+      },
+    }),
+    error,
+  );
+});
+
+test('a stale deferred source cannot reach the native clipboard', async () => {
+  const { copyDeferredText } = await resources();
+  let current = true;
+  let wroteText = false;
+  const result = await copyDeferredText({
+    loadText: async () => {
+      current = false;
+      return '<svg/>';
+    },
+    ClipboardItemType: TextClipboardItem,
+    clipboard: {
+      write: async (items) => {
+        await items[0].data['text/plain'];
+        wroteText = true;
+      },
+    },
+    isCurrent: () => current,
+  });
+  assert.equal(result.status, 'stale');
+  assert.equal(wroteText, false);
+});
+
+test('environments with only writeText retain automatic and manual deferred text copying', async () => {
+  const { copyDeferredText } = await resources();
+  const copied = [];
+  assert.equal(
+    (
+      await copyDeferredText({
+        loadText: async () => '<svg/>',
+        clipboard: { writeText: async (value) => copied.push(value) },
+      })
+    ).status,
+    'copied',
+  );
+  assert.deepEqual(copied, ['<svg/>']);
+  assert.deepEqual(
+    await copyDeferredText({ loadText: async () => '<svg/>', clipboard: undefined }),
+    { status: 'failed', value: '<svg/>' },
+  );
+});
