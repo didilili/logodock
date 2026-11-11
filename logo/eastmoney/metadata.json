@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "eastmoney",
   "name": "东方财富",
   "aliases": [],
@@ -23,7 +23,8 @@
   "website": "https://www.eastmoney.com/",
   "entityType": "company",
   "categories": [
-    "金融"
+    "financial-information",
+    "securities-investment"
   ],
   "defaultAsset": "logo-bilingual.png",
   "assets": [

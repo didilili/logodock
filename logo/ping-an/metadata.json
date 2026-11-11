@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "ping-an",
   "name": "中国平安",
   "aliases": [
@@ -35,7 +35,7 @@
   "website": "https://www.pingan.com/",
   "entityType": "company",
   "categories": [
-    "金融"
+    "insurance"
   ],
   "defaultAsset": "logo.svg",
   "assets": [

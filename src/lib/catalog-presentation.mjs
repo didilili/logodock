@@ -2,23 +2,15 @@ import { filterBrands, matchingAssets, sortBrands } from './catalog-search.mjs';
 import { artworkGroups } from './catalog-artworks.mjs';
 import { brandPriorities } from './catalog-order.mjs';
 import { directoryCover } from './catalog-preview.mjs';
+import {
+  categoryOptions,
+  topicOptions,
+  matchesCategory,
+  normalizeCategory,
+} from './catalog-taxonomy.mjs';
 
 export const entityLabels = { company: '公司', product: '产品', organization: '组织' };
-export const categoryLabels = {
-  internet: '互联网',
-  'code-hosting': '代码托管',
-  'developer-tools': '开发工具',
-  hardware: '硬件与设备',
-  telecommunications: '通信',
-  ai: '人工智能',
-  'enterprise-software': '企业软件',
-  software: '软件与服务',
-  automotive: '汽车',
-  'e-commerce': '电子商务',
-  entertainment: '娱乐',
-  'industrial-automation': '工业自动化',
-  'social-media': '社交媒体',
-};
+export { categoryLabels, categoryOptions, topicLabels, topicOptions } from './catalog-taxonomy.mjs';
 export function sortCatalogBrands(brands) {
   return sortBrands(brands).sort(
     (a, b) =>
@@ -96,33 +88,14 @@ export function filterOptions(brands) {
   };
 }
 
-export function categoryOptions(brands) {
-  const counts = new Map();
-  for (const brand of brands)
-    for (const category of new Set(brand.categories ?? []))
-      counts.set(category, (counts.get(category) ?? 0) + 1);
-  // Known labels keep their established order; metadata supplies any other tags.
-  const categories = [
-    ...Object.keys(categoryLabels).filter((id) => counts.has(id)),
-    ...[...counts.keys()].filter((id) => !Object.hasOwn(categoryLabels, id)).sort(),
-  ];
-  return [
-    { id: '', label: '全部品牌', count: brands.length },
-    ...categories.map((id) => ({
-      id,
-      label: Object.hasOwn(categoryLabels, id) ? categoryLabels[id] : id,
-      count: counts.get(id),
-    })),
-  ];
-}
-
 export function matchingBrands(
   brands,
-  { q = '', type = '', format = '', shape = '', category = '' } = {},
+  { q = '', type = '', format = '', shape = '', category = '', topic = '' } = {},
 ) {
   const available = sortCatalogBrands(brands)
     .filter((brand) => !type || brand.entityType === type)
-    .filter((brand) => !category || brand.categories?.includes(category))
+    .filter((brand) => matchesCategory(brand, category))
+    .filter((brand) => !topic || brand.topics?.includes(topic))
     .map((brand) => {
       const eligible = brand.assets.filter(
         (asset) =>
@@ -145,20 +118,29 @@ export function readDirectoryState(url, brands) {
   const type = params.get('type') || '';
   const format = params.get('format') || '';
   const shape = params.get('shape') || '';
-  const category = params.get('category') || '';
+  // The former AI category spans several industries in the current catalog.
+  const legacyAi = params.get('category') === 'ai';
+  const category = legacyAi ? '' : normalizeCategory(params.get('category') || '');
+  const topic = params.get('topic') || (legacyAi ? 'ai' : '');
+  const availableCategories = categoryOptions(brands).flatMap((group) => [
+    group,
+    ...(group.children ?? []),
+  ]);
   return {
     q: params.get('q') || '',
     type: options.types.includes(type) ? type : '',
     format: options.formats.includes(format) ? format : '',
     shape: shapes.includes(shape) ? shape : '',
-    category: categoryOptions(brands).some((option) => option.id === category) ? category : '',
+    category: availableCategories.some((option) => option.id === category) ? category : '',
+    topic: topicOptions(brands).some((option) => option.id === topic) ? topic : '',
   };
 }
 
 export function directoryUrl(baseUrl, state) {
   const url = new URL(baseUrl);
-  for (const key of ['q', 'type', 'format', 'shape', 'category']) {
-    if (state[key]) url.searchParams.set(key, state[key]);
+  for (const key of ['q', 'type', 'format', 'shape', 'category', 'topic']) {
+    if (state[key])
+      url.searchParams.set(key, key === 'category' ? normalizeCategory(state[key]) : state[key]);
     else url.searchParams.delete(key);
   }
   return url;

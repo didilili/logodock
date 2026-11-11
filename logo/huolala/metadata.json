@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "huolala",
   "name": "货拉拉",
   "aliases": [
@@ -29,7 +29,9 @@
     ]
   },
   "entityType": "company",
-  "categories": [],
+  "categories": [
+    "freight-warehousing"
+  ],
   "defaultAsset": "wordmark-zh.png",
   "assets": [
     {

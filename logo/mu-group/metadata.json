@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "mu-group",
   "name": "凯越集团",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://www.mugroup.com/",
   "entityType": "company",
   "categories": [
-    "供应链"
+    "wholesale-trade"
   ],
   "defaultAsset": "logo.webp",
   "assets": [

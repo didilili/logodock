@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "transsion",
   "name": "传音控股",
   "aliases": [
@@ -29,7 +29,7 @@
   "website": "https://www.transsion.com/",
   "entityType": "company",
   "categories": [
-    "hardware"
+    "consumer-electronics"
   ],
   "defaultAsset": "wordmark-black-official.svg",
   "assets": [

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "bochu",
   "name": "柏楚电子",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://www.bochu.com/",
   "entityType": "company",
   "categories": [
-    "industrial-automation"
+    "automation"
   ],
   "defaultAsset": "logo-blue.svg",
   "assets": [

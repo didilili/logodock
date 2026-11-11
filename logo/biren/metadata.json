@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "biren",
   "name": "壁仞科技",
   "aliases": [],
@@ -18,8 +18,7 @@
   "website": "https://www.birentech.com/",
   "entityType": "company",
   "categories": [
-    "hardware",
-    "ai"
+    "semiconductors"
   ],
   "defaultAsset": "symbol-square.svg",
   "assets": [
@@ -155,5 +154,8 @@
       ],
       "defaultAsset": "symbol-square.svg"
     }
+  ],
+  "topics": [
+    "ai"
   ]
 }

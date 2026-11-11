@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "uniview",
   "name": "宇视科技",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://cn.uniview.com/",
   "entityType": "company",
   "categories": [
-    "hardware"
+    "security-imaging"
   ],
   "defaultAsset": "logo.png",
   "assets": [

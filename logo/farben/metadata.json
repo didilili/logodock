@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "farben",
   "name": "法本信息",
   "aliases": [],
@@ -17,7 +17,9 @@
     ]
   },
   "entityType": "company",
-  "categories": [],
+  "categories": [
+    "outsourcing"
+  ],
   "defaultAsset": "wordmark-blue.svg",
   "assets": [
     {

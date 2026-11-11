@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "bilibili",
   "name": "哔哩哔哩",
   "aliases": [
@@ -20,8 +20,8 @@
   "website": "https://www.bilibili.com/",
   "entityType": "company",
   "categories": [
-    "entertainment",
-    "social-media"
+    "social-community",
+    "video-music"
   ],
   "defaultAsset": "wordmark-blue-international-official.svg",
   "assets": [

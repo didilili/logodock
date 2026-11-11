@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "git",
   "name": "Git",
   "aliases": [],
@@ -225,5 +225,9 @@
         "notes": "官方 Logo 下载页采用 CC BY 3.0，分发须保留作者署名和许可链接。Git 名称与 Logo 商标权由 Software Freedom Conservancy 代表 Git 项目持有。使用须遵循商标政策，商品销售等用途须另行取得许可，使用不得暗示官方背书。商标政策见 https://git-scm.com/about/trademark 。"
       }
     }
+  ],
+  "topics": [
+    "developer-ecosystem",
+    "open-source-ecosystem"
   ]
 }

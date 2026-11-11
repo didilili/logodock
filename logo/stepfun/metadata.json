@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "stepfun",
   "name": "阶跃星辰",
   "aliases": [],
@@ -17,7 +17,9 @@
     ]
   },
   "entityType": "company",
-  "categories": [],
+  "categories": [
+    "ai-products"
+  ],
   "defaultAsset": "symbol-black.svg",
   "assets": [
     {
@@ -77,5 +79,8 @@
         "从已登记官方组合标保留独立图形路径，方形长边贴边，短边居中，额外边距为零。"
       ]
     }
+  ],
+  "topics": [
+    "ai"
   ]
 }

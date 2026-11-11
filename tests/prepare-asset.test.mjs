@@ -39,12 +39,16 @@ test('prepare-asset creates an isolated draft with exact bytes and pending manua
       'organization',
       '--label',
       'Original icon',
+      '--category',
+      'developer-tools',
+      '--topic',
+      'developer-ecosystem',
     ],
     { cwd: tmpdir(), encoding: 'utf8' },
   );
   assert.equal(run.status, 0, run.stderr);
   const draft = JSON.parse(await readFile(join(output, 'metadata.json'), 'utf8'));
-  assert.equal(draft.schemaVersion, 3);
+  assert.equal(draft.schemaVersion, 4);
   assert.equal(draft.entityType, 'organization');
   assert.deepEqual(draft.identity, { nameZh: null, nameEn: null, legalNames: [], sources: [] });
   assert.equal(draft.assets[0].language, 'none');
@@ -52,7 +56,8 @@ test('prepare-asset creates an isolated draft with exact bytes and pending manua
   assert.equal(draft.assets[0].color, 'brand');
   assert.deepEqual(draft.assets[0].provenance, { sourceType: '', processing: '' });
   assert.equal(draft.defaultAsset, 'source.svg');
-  assert.deepEqual(draft.categories, []);
+  assert.deepEqual(draft.categories, ['developer-tools']);
+  assert.deepEqual(draft.topics, ['developer-ecosystem']);
   assert.equal(draft.assets[0].label, 'Original icon');
   assert.equal(draft.assets[0].sha256, digest);
   assert.equal(draft.assets[0].bytes, Buffer.byteLength(svg));

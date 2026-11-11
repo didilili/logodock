@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "cheetah-mobile",
   "name": "猎豹移动",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://www.cmcm.com/zh-CN/",
   "entityType": "company",
   "categories": [
-    "internet"
+    "creative-software"
   ],
   "defaultAsset": "logo-white-zh.png",
   "assets": [

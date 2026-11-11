@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "antgroup",
   "name": "蚂蚁集团",
   "aliases": [],
@@ -18,7 +18,7 @@
   "website": "https://www.antgroup.com/",
   "entityType": "company",
   "categories": [
-    "internet"
+    "payments"
   ],
   "defaultAsset": "logo-bilingual-color-official.png",
   "assets": [

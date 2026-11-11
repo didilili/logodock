@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "baidu",
   "name": "百度",
   "aliases": [],
@@ -31,8 +31,8 @@
   "website": "https://home.baidu.com/",
   "entityType": "company",
   "categories": [
-    "internet",
-    "ai"
+    "search",
+    "ai-products"
   ],
   "defaultAsset": "logo-bilingual-brand-library.jpg",
   "assets": [
@@ -281,5 +281,8 @@
         "notes": "官方反白规范 AI，包含完整中英组合图稿及使用规范。CMYK 用于印刷，反白图稿须整体使用，比例与颜色按原规范取用。"
       }
     }
+  ],
+  "topics": [
+    "ai"
   ]
 }

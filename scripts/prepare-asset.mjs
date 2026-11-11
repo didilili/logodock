@@ -1,6 +1,7 @@
 import { mkdir, realpath, rmdir, unlink, writeFile } from 'node:fs/promises';
 import { basename, dirname, isAbsolute, join, relative, resolve } from 'node:path';
 import { inspectAssetFile, metadataSchema, repositoryRoot } from './lib/catalog.mjs';
+import { categoryDefinitions, topicLabels } from '../src/lib/catalog-taxonomy.mjs';
 
 const assetFields = metadataSchema.$defs.asset.properties;
 const provenanceFields = metadataSchema.$defs.provenance.properties;
@@ -24,7 +25,8 @@ Schema: schema/metadata.schema.json (v${metadataSchema.properties.schemaVersion.
 Options:
 ${enumOptions.map(([name, spec]) => `  --${name} <${spec.enum.join('|')}> (default: ${spec.default ?? 'unverified; fill manually'})`).join('\n')}
   --label <readable-version-name> (default: Original asset)
-  --category <tag> (repeatable)
+  --category <leaf-industry-id> (repeatable; see src/lib/catalog-taxonomy.mjs)
+  --topic <topic-id> (repeatable; ${Object.keys(topicLabels).join('|')})
   --help
 
 Manually verify identity, language, layout, color, provenance, version and background;
@@ -34,13 +36,14 @@ Only a human source/rights review can justify changing it to permitted.
 `;
 
 function options(args) {
-  const result = { categories: [] };
+  const result = { categories: [], topics: [] };
   const names = new Set([
     'id',
     'name',
     'output',
     'label',
     'category',
+    'topic',
     ...enumOptions.map(([name]) => name),
   ]);
   for (let index = 0; index < args.length; index++) {
@@ -56,6 +59,7 @@ function options(args) {
     if (!value || value.startsWith('--') || !value.trim())
       throw new Error(`${arg} needs a value. Use --help.`);
     if (name === 'category') result.categories.push(value);
+    else if (name === 'topic') result.topics.push(value);
     else {
       if (result[name] !== undefined) throw new Error(`${arg} can only be supplied once.`);
       result[name] = value;
@@ -79,6 +83,12 @@ function options(args) {
       throw new Error(`--${name} must be ${spec.enum.join(' or ')}.`);
   }
   result.categories = [...new Set(result.categories)];
+  result.topics = [...new Set(result.topics)];
+  for (const id of result.categories)
+    if (!categoryDefinitions.get(id)?.parent)
+      throw new Error(`Unknown leaf industry: ${id}. See src/lib/catalog-taxonomy.mjs.`);
+  for (const id of result.topics)
+    if (!Object.hasOwn(topicLabels, id)) throw new Error(`Unknown topic: ${id}.`);
   return result;
 }
 
@@ -115,6 +125,7 @@ async function createDraft(config) {
     entityType: config['entity-type'],
     identity: { nameZh: null, nameEn: null, legalNames: [], sources: [] },
     categories: config.categories,
+    ...(config.topics.length ? { topics: config.topics } : {}),
     defaultAsset: file,
     assets: [
       {

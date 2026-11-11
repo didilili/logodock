@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "dahua",
   "name": "大华",
   "aliases": [],
@@ -17,7 +17,9 @@
     ]
   },
   "entityType": "company",
-  "categories": [],
+  "categories": [
+    "security-imaging"
+  ],
   "defaultAsset": "logo-bilingual.png",
   "assets": [
     {

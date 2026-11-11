@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "weride",
   "name": "文远知行",
   "aliases": [],
@@ -17,7 +17,9 @@
     ]
   },
   "entityType": "company",
-  "categories": [],
+  "categories": [
+    "autonomous-driving"
+  ],
   "defaultAsset": "logo-bilingual.png",
   "assets": [
     {

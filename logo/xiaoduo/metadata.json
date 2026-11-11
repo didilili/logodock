@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "xiaoduo",
   "name": "晓多科技",
   "aliases": [],
@@ -28,8 +28,7 @@
     ]
   },
   "categories": [
-    "ai",
-    "enterprise-software"
+    "ai-products"
   ],
   "defaultAsset": "logo-chinese-ai-official.png",
   "assets": [
@@ -88,5 +87,8 @@
         "原生 264×60 像素，适合小尺寸深色背景展示。"
       ]
     }
+  ],
+  "topics": [
+    "ai"
   ]
 }

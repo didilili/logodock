@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "cmb-bank",
   "name": "招商银行",
   "aliases": [
@@ -21,7 +21,7 @@
   "website": "https://www.cmbchina.com/",
   "entityType": "company",
   "categories": [
-    "金融"
+    "banking"
   ],
   "defaultAsset": "logo.png",
   "assets": [

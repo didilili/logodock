@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "thunderbit",
   "name": "雷鸣比特",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://thunderbit.com/",
   "entityType": "company",
   "categories": [
-    "ai"
+    "developer-tools"
   ],
   "defaultAsset": "logo.svg",
   "assets": [
@@ -50,5 +50,8 @@
         "reviewedAt": "2026-11-10"
       }
     }
+  ],
+  "topics": [
+    "ai"
   ]
 }

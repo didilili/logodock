@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "01-ai",
   "name": "零一万物",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://www.lingyiwanwu.com/",
   "entityType": "company",
   "categories": [
-    "ai"
+    "ai-products"
   ],
   "defaultAsset": "symbol.svg",
   "assets": [
@@ -79,5 +79,8 @@
         "reviewedAt": "2026-11-10"
       }
     }
+  ],
+  "topics": [
+    "ai"
   ]
 }

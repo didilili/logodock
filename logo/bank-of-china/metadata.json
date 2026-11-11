@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "bank-of-china",
   "name": "中国银行",
   "aliases": [],
@@ -18,7 +18,7 @@
   "website": "https://www.boc.cn/",
   "entityType": "company",
   "categories": [
-    "金融"
+    "banking"
   ],
   "defaultAsset": "logo-bilingual.png",
   "assets": [

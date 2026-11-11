@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "united-imaging",
   "name": "联影",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://www.united-imaging.com/",
   "entityType": "company",
   "categories": [
-    "医疗设备"
+    "medical-devices"
   ],
   "defaultAsset": "logo-zh.png",
   "assets": [

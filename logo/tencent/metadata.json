@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "tencent",
   "name": "腾讯",
   "aliases": [
@@ -48,7 +48,9 @@
   "website": "https://www.tencent.com/",
   "entityType": "company",
   "categories": [
-    "internet"
+    "internet-platforms",
+    "social-community",
+    "games"
   ],
   "defaultAsset": "wordmark-blue-official.png",
   "assets": [

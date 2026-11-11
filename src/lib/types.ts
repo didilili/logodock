@@ -67,6 +67,7 @@ export interface Brand {
   website: string;
   entityType: 'company' | 'product' | 'organization';
   categories: string[];
+  topics?: string[];
   parentId?: string;
   defaultAsset: string;
   assets: Asset[];
@@ -88,4 +89,11 @@ export interface Brand {
 export interface Catalog {
   schemaVersion: number;
   brands: Brand[];
+}
+export interface CategoryOption {
+  id: string;
+  label: string;
+  count: number;
+  aliases?: string[];
+  children?: CategoryOption[];
 }

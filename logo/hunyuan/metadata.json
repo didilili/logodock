@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "hunyuan",
   "name": "腾讯混元",
   "aliases": [],
@@ -18,7 +18,7 @@
     ]
   },
   "categories": [
-    "ai"
+    "ai-products"
   ],
   "defaultAsset": "logo-chinese-color-official.png",
   "assets": [
@@ -117,5 +117,8 @@
       ],
       "defaultAsset": "symbol-color-square-extracted.svg"
     }
+  ],
+  "topics": [
+    "ai"
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "xpeng",
   "name": "小鹏",
   "aliases": [
@@ -28,7 +28,7 @@
   "website": "https://www.xiaopeng.com/",
   "entityType": "company",
   "categories": [
-    "automotive"
+    "automakers"
   ],
   "defaultAsset": "icon-black-square-extracted.svg",
   "assets": [

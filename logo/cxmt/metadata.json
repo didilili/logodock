@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "cxmt",
   "name": "长鑫存储",
   "aliases": [],
@@ -18,7 +18,7 @@
   "website": "https://www.cxmt.com/",
   "entityType": "company",
   "categories": [
-    "hardware"
+    "semiconductors"
   ],
   "defaultAsset": "wordmark-blue.svg",
   "assets": [

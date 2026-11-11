@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "yaowu-tech",
   "name": "要务科技",
   "aliases": [
@@ -28,7 +28,8 @@
   "website": "https://www.yaowutech.com/",
   "entityType": "company",
   "categories": [
-    "software"
+    "heavy-equipment",
+    "industrial-software"
   ],
   "defaultAsset": "logo-bilingual-official.png",
   "assets": [
@@ -87,5 +88,8 @@
         "透明背景，保留官网原始组合与比例。"
       ]
     }
+  ],
+  "topics": [
+    "ai"
   ]
 }

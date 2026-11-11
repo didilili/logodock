@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "dewu",
   "name": "得物",
   "aliases": [],
@@ -28,7 +28,7 @@
   "website": "https://www.dewu.com/",
   "entityType": "company",
   "categories": [
-    "e-commerce"
+    "ecommerce"
   ],
   "defaultAsset": "wordmark-square-official.png",
   "assets": [

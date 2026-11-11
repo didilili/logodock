@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "jac",
   "name": "江淮汽车",
   "aliases": [],
@@ -17,7 +17,9 @@
     ]
   },
   "entityType": "company",
-  "categories": [],
+  "categories": [
+    "automakers"
+  ],
   "defaultAsset": "wordmark-bilingual.png",
   "assets": [
     {

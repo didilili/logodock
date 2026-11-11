@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "yuanqi-forest",
   "name": "元气森林",
   "aliases": [],
@@ -23,7 +23,7 @@
   "website": "https://www.yuanqisenlin.com/",
   "entityType": "company",
   "categories": [
-    "食品饮料"
+    "food-beverages"
   ],
   "defaultAsset": "logo.png",
   "assets": [

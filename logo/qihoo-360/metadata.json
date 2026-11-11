@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "qihoo-360",
   "name": "360",
   "aliases": [],
@@ -23,8 +23,7 @@
   "website": "https://www.360.cn/",
   "entityType": "company",
   "categories": [
-    "software",
-    "internet"
+    "security"
   ],
   "defaultAsset": "logo-horizontal-official.png",
   "assets": [

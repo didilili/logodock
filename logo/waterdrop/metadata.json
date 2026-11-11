@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "waterdrop",
   "name": "水滴",
   "aliases": [
@@ -33,7 +33,8 @@
   "website": "https://www.waterdrop-inc.com/",
   "entityType": "company",
   "categories": [
-    "internet"
+    "insurance",
+    "wellness"
   ],
   "defaultAsset": "logo-bilingual-small-official.png",
   "assets": [

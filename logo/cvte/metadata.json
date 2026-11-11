@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "cvte",
   "name": "视源股份",
   "aliases": [
@@ -28,7 +28,7 @@
   "website": "https://www.cvte.com/",
   "entityType": "company",
   "categories": [
-    "hardware"
+    "consumer-electronics"
   ],
   "defaultAsset": "wordmark-bilingual-official.png",
   "assets": [

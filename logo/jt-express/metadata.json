@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "jt-express",
   "name": "极兔",
   "aliases": [],
@@ -18,7 +18,7 @@
   "website": "https://www.jtexpress.com.cn/",
   "entityType": "company",
   "categories": [
-    "物流"
+    "express-logistics"
   ],
   "defaultAsset": "logo-brand.png",
   "assets": [

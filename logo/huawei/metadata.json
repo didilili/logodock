@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "huawei",
   "name": "华为",
   "aliases": [
@@ -55,8 +55,8 @@
   "website": "https://www.huawei.com/",
   "entityType": "company",
   "categories": [
-    "hardware",
-    "telecommunications"
+    "consumer-electronics",
+    "telecom-equipment"
   ],
   "defaultAsset": "logo-color-vertical-official.svg",
   "assets": [

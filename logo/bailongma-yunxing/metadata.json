@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "bailongma-yunxing",
   "name": "白龙马云行科技",
   "aliases": [],
@@ -18,8 +18,7 @@
   "website": "https://www.bailongma.com/about",
   "entityType": "company",
   "categories": [
-    "enterprise-software",
-    "automotive"
+    "enterprise-software"
   ],
   "defaultAsset": "logo-white.png",
   "assets": [

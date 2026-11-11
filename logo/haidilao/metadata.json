@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "haidilao",
   "name": "海底捞",
   "aliases": [],
@@ -18,7 +18,7 @@
   "website": "https://www.haidilao.com/",
   "entityType": "company",
   "categories": [
-    "餐饮"
+    "dining"
   ],
   "defaultAsset": "logo-bilingual.svg",
   "assets": [

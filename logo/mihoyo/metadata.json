@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "mihoyo",
   "name": "米哈游",
   "aliases": [],
@@ -18,7 +18,7 @@
   "website": "https://www.mihoyo.com/",
   "entityType": "company",
   "categories": [
-    "entertainment"
+    "games"
   ],
   "defaultAsset": "wordmark.png",
   "assets": [

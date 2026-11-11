@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "netease",
   "name": "网易",
   "aliases": [],
@@ -31,7 +31,8 @@
   "website": "https://hr.163.com/",
   "entityType": "company",
   "categories": [
-    "internet"
+    "internet-platforms",
+    "games"
   ],
   "defaultAsset": "wordmark-red-official.svg",
   "assets": [

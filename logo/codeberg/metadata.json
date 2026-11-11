@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "codeberg",
   "name": "Codeberg e.V.",
   "aliases": [
@@ -207,8 +207,11 @@
   ],
   "entityType": "organization",
   "categories": [
-    "code-hosting",
     "developer-tools"
   ],
-  "defaultAsset": "icon-blue.svg"
+  "defaultAsset": "icon-blue.svg",
+  "topics": [
+    "developer-ecosystem",
+    "open-source-ecosystem"
+  ]
 }

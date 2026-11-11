@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "dongchedi",
   "name": "懂车帝",
   "aliases": [],
@@ -31,7 +31,7 @@
   "website": "https://www.dongchedi.com/",
   "entityType": "product",
   "categories": [
-    "automotive"
+    "auto-information"
   ],
   "defaultAsset": "logo-chinese-official.svg",
   "assets": [

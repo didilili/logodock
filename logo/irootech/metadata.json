@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "irootech",
   "name": "树根科技",
   "aliases": [
@@ -21,8 +21,7 @@
     ]
   },
   "categories": [
-    "enterprise-software",
-    "industrial-automation"
+    "industrial-software"
   ],
   "defaultAsset": "logo-bilingual-black-official.png",
   "assets": [

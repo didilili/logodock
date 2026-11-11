@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "brilliant-data",
   "name": "佰聆数据",
   "aliases": [],
@@ -18,7 +18,7 @@
   "website": "https://www.brilliant-solution.com/",
   "entityType": "company",
   "categories": [
-    "enterprise-software"
+    "data-platforms"
   ],
   "defaultAsset": "logo-zh.png",
   "assets": [

@@ -34,7 +34,7 @@ export function assetMetadata({ file = 'icon.svg', data = fixtureSvg, ...overrid
 // Each call owns its arrays and nested records, including explicit overrides.
 export function brandMetadata({ id = 'example', ...overrides } = {}) {
   return {
-    schemaVersion: 3,
+    schemaVersion: 4,
     id,
     name: id,
     aliases: [],

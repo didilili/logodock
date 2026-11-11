@@ -20,7 +20,7 @@ async function fixture(t, ids = ['example']) {
     await writeFile(join(folder, 'icon.svg'), svg);
     await writeFile(
       join(folder, 'metadata.json'),
-      JSON.stringify(brandMetadata({ id, entityType: 'product', categories: ['Developer tools'] })),
+      JSON.stringify(brandMetadata({ id, entityType: 'product', categories: ['developer-tools'] })),
     );
   }
   return root;
@@ -40,15 +40,40 @@ test('catalog preserves explicit entity, tags, readable versions and the selecte
   });
   const catalog = await loadCatalog(root);
   const product = catalog.brands.find((brand) => brand.id === 'example');
-  assert.equal(catalog.schemaVersion, 3);
-  assert.equal(product.schemaVersion, 3);
+  assert.equal(catalog.schemaVersion, 4);
+  assert.equal(product.schemaVersion, 4);
   assert.equal(product.parentId, 'company');
   assert.equal(product.entityType, 'product');
-  assert.deepEqual(product.categories, ['Developer tools']);
+  assert.deepEqual(product.categories, ['developer-tools']);
   assert.equal(product.defaultAsset, 'icon.svg');
   assert.equal(product.assets[0].label, 'Current icon');
   assert.equal(product.assets[0].status, 'current');
   assert.equal(product.assets[0].background, 'any');
+});
+
+test('industry validation requires registered leaves and topic IDs while allowing omitted topics', async (t) => {
+  const root = await fixture(t);
+  assert.equal(Object.hasOwn((await loadCatalog(root)).brands[0], 'topics'), false);
+  await mutate(root, (metadata) => {
+    metadata.topics = ['ai', 'developer-ecosystem'];
+  });
+  assert.deepEqual((await loadCatalog(root)).brands[0].topics, ['ai', 'developer-ecosystem']);
+  for (const category of ['technology', 'internet', 'Unknown industry', '工业设计']) {
+    await mutate(root, (metadata) => {
+      metadata.categories = [category];
+    });
+    await assert.rejects(loadCatalog(root), /unknown leaf industry/);
+  }
+  await mutate(root, (metadata) => {
+    metadata.categories = ['developer-tools'];
+    metadata.topics = ['unknown-topic'];
+  });
+  await assert.rejects(loadCatalog(root), /unknown topic/);
+  await mutate(root, (metadata) => {
+    metadata.topics = [];
+    metadata.schemaVersion = 3;
+  });
+  await assert.rejects(loadCatalog(root), /schemaVersion must be 4/);
 });
 
 test('catalog preserves usage warnings separately from ordinary quality notes', async (t) => {
@@ -61,7 +86,7 @@ test('catalog preserves usage warnings separately from ordinary quality notes', 
   });
   const catalog = await loadCatalog(root);
   const asset = JSON.parse(JSON.stringify(catalog)).brands[0].assets[0];
-  assert.equal(catalog.schemaVersion, 3);
+  assert.equal(catalog.schemaVersion, 4);
   assert.deepEqual(asset.usageWarnings, usageWarnings);
   assert.deepEqual(asset.qualityNotes, qualityNotes);
 });
@@ -117,7 +142,7 @@ test('catalog preserves every supported provenance channel in serialized output'
       metadata.assets[0].provenance = provenance;
     });
     const catalog = JSON.parse(JSON.stringify(await loadCatalog(root)));
-    assert.equal(catalog.schemaVersion, 3);
+    assert.equal(catalog.schemaVersion, 4);
     assert.deepEqual(catalog.brands[0].assets[0].provenance, provenance);
   }
 });

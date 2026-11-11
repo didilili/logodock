@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "gitlab",
   "name": "GitLab",
   "aliases": [
@@ -342,7 +342,6 @@
   ],
   "entityType": "company",
   "categories": [
-    "code-hosting",
     "developer-tools"
   ],
   "defaultAsset": "logo-color-official.svg",
@@ -502,5 +501,9 @@
       ],
       "defaultAsset": "icon-white-square-extracted.svg"
     }
+  ],
+  "topics": [
+    "developer-ecosystem",
+    "open-source-ecosystem"
   ]
 }

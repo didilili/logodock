@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "hello-group",
   "name": "挚文集团",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://www.hellogroup.com/",
   "entityType": "company",
   "categories": [
-    "internet"
+    "social-community"
   ],
   "defaultAsset": "brand-logo.png",
   "assets": [

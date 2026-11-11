@@ -369,6 +369,79 @@ test('an explicit alternative search keeps the standard-color source and disclos
   await expect(page.locator('details.artwork-alternatives')).toHaveJSProperty('open', true);
 });
 
+test('industry navigation expands without selection, deduplicates parents and searches aliases', async ({
+  page,
+}) => {
+  await page.goto('/');
+  await expect(page.locator('#theme-toggle')).toBeEnabled();
+  const sidebar = page.locator('.category-sidebar');
+  await sidebar.locator('[data-expand="media"]').click();
+  await expect(page.locator('#brand-grid .brand-card')).toHaveCount(236);
+  await sidebar.locator('[data-category="media"]').click();
+  await expect(page.locator('#brand-grid .brand-card')).toHaveCount(32);
+  await expect(sidebar.locator('[data-category="media"] small')).toHaveText('32');
+  await sidebar.getByRole('searchbox', { name: '查找行业分类' }).fill('芯片');
+  await expect(sidebar.locator('[data-category="semiconductors"]')).toBeVisible();
+  await sidebar.locator('[data-category="semiconductors"]').click();
+  await expect(page.locator('#brand-grid .brand-card')).toHaveCount(7);
+  await page.getByRole('searchbox', { name: '搜索 Logo' }).fill('寒武纪');
+  await expect(page.locator('#brand-grid .brand-card')).toHaveCount(1);
+  await expect(page.locator('[data-brand="cambricon"]')).toBeVisible();
+  await page.getByRole('button', { name: '清除全部', exact: true }).click();
+  await expect(sidebar.getByRole('searchbox', { name: '查找行业分类' })).toHaveValue('');
+  await expect(page.locator('#brand-grid .brand-card')).toHaveCount(236);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)).toBe(false);
+});
+
+test('legacy AI category links retain brands from other industries and canonicalize to the topic', async ({
+  page,
+}) => {
+  for (const [query, id] of [
+    ['壁仞', 'biren'],
+    ['智元', 'agibot'],
+  ]) {
+    await page.goto(`/?category=ai&q=${encodeURIComponent(query)}`);
+    await expect(page.locator('#theme-toggle')).toBeEnabled();
+    await expect(page).toHaveURL(
+      (url) => url.searchParams.get('topic') === 'ai' && !url.searchParams.has('category'),
+    );
+    await expect(page.locator('#search')).toHaveValue(query);
+    await expect(page.locator('#brand-grid .brand-card')).toHaveCount(1);
+    await expect(page.locator(`[data-brand="${id}"]`)).toBeVisible();
+    await expect(page.locator('.category-sidebar [data-topic="ai"]')).toHaveAttribute(
+      'aria-pressed',
+      'true',
+    );
+  }
+});
+
+test('industry topics intersect formats and survive detail navigation and reload', async ({
+  page,
+}) => {
+  await page.goto('/?category=hardware&topic=ai');
+  await expect(page.locator('#theme-toggle')).toBeEnabled();
+  await expect(page).toHaveURL(/category=electronics/);
+  await expect(page.locator('#brand-grid .brand-card')).toHaveCount(3);
+  await page.getByRole('searchbox', { name: '搜索 Logo' }).fill('壁仞');
+  await chooseFilter(page, 'format-filter', 'SVG');
+  await expect(page.locator('#brand-grid .brand-card')).toHaveCount(1);
+  const card = page.locator('[data-brand="biren"]');
+  await expect(card.locator('.card-download')).toHaveAttribute('href', /\.svg$/);
+  const directory = page.url();
+  await card.locator('.brand-link').click();
+  await expect(page.locator('#detail-copy-menu')).toBeEnabled();
+  expect(new URL(page.url()).searchParams.get('topic')).toBe('ai');
+  await page.locator('#back-directory').click();
+  await expect(page).toHaveURL((url) => canonicalUrl(url.href) === canonicalUrl(directory));
+  await page.reload();
+  await expect(page.locator('#theme-toggle')).toBeEnabled();
+  await expect(page.locator('#brand-grid .brand-card')).toHaveCount(1);
+  await expect(page.locator('.category-sidebar [data-topic="ai"]')).toHaveAttribute(
+    'aria-pressed',
+    'true',
+  );
+});
+
 test('search and file filters survive detail navigation, browser back and a reload', async ({
   page,
 }) => {
@@ -376,6 +449,7 @@ test('search and file filters survive detail navigation, browser back and a relo
   page.on('pageerror', (error) => errors.push(error.message));
   await page.goto('/');
   await expect(page.locator('#theme-toggle')).toBeEnabled();
+  await page.locator('.category-sidebar [data-expand="technology"]').click();
   await page.locator('.category-sidebar [data-category="developer-tools"]').click();
   await page.getByRole('searchbox', { name: '搜索 Logo' }).fill('Git');
   await chooseFilter(page, 'shape-filter', '图形');
@@ -1075,12 +1149,13 @@ test('mobile category drawer and copy menu support keyboard use while original d
   await categoryTrigger.press('Enter');
   const drawer = page.getByRole('dialog', { name: '资源分类', exact: true });
   await expect(drawer).toBeVisible();
-  const category = drawer.locator('[data-category="internet"]');
+  await drawer.locator('[data-expand="technology"]').click();
+  const category = drawer.locator('[data-category="internet-platforms"]');
   await category.focus();
   await category.press('Enter');
   await expect(drawer).toBeHidden();
   await expect(categoryTrigger).toBeFocused();
-  expect(new URL(page.url()).searchParams.get('category')).toBe('internet');
+  expect(new URL(page.url()).searchParams.get('category')).toBe('internet-platforms');
   await categoryTrigger.press('Enter');
   await expect(category).toHaveAttribute('aria-pressed', 'true');
   await page.keyboard.press('Escape');
@@ -1119,13 +1194,13 @@ test('mobile category drawer and copy menu support keyboard use while original d
   await expect(menu).toBeHidden();
   await expect(copyTrigger).toBeFocused();
   await page.locator('#back-directory').click();
-  expect(new URL(page.url()).searchParams.get('category')).toBe('internet');
-  await expect(page.locator('.directory-title h1')).toHaveText('互联网');
+  expect(new URL(page.url()).searchParams.get('category')).toBe('internet-platforms');
+  await expect(page.locator('.directory-title h1')).toHaveText('综合互联网');
   await page.getByRole('button', { name: '打开品牌分类', exact: true }).click();
   await expect(
     page
       .getByRole('dialog', { name: '资源分类', exact: true })
-      .locator('[data-category="internet"]'),
+      .locator('[data-category="internet-platforms"]'),
   ).toHaveAttribute('aria-pressed', 'true');
   await page.keyboard.press('Escape');
   await expect(page.getByRole('button', { name: '打开品牌分类', exact: true })).toBeFocused();

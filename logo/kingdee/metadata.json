@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "kingdee",
   "name": "金蝶",
   "aliases": [
@@ -44,7 +44,6 @@
   "website": "https://www.kingdee.com/",
   "entityType": "company",
   "categories": [
-    "software",
     "enterprise-software"
   ],
   "defaultAsset": "logo-color-english-official.svg",

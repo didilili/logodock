@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "aixcut",
   "name": "构序智能",
   "aliases": [],
@@ -17,7 +17,9 @@
     ]
   },
   "entityType": "company",
-  "categories": [],
+  "categories": [
+    "creative-software"
+  ],
   "defaultAsset": "icon.svg",
   "assets": [
     {
@@ -72,5 +74,8 @@
         "channel": "website"
       }
     }
+  ],
+  "topics": [
+    "ai"
   ]
 }

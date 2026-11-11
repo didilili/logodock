@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "three-k-games",
   "name": "3K游戏",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://www.3k.com/joinUs.html",
   "entityType": "company",
   "categories": [
-    "entertainment"
+    "games"
   ],
   "defaultAsset": "logo-brand.png",
   "assets": [

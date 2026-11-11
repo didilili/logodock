@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "autohome",
   "name": "汽车之家",
   "aliases": [],
@@ -23,8 +23,7 @@
   "website": "https://www.autohome.com.cn/",
   "entityType": "company",
   "categories": [
-    "automotive",
-    "internet"
+    "auto-information"
   ],
   "defaultAsset": "wordmark-blue.png",
   "assets": [

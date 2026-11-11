@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "didi",
   "name": "滴滴",
   "aliases": [
@@ -35,7 +35,7 @@
   "website": "https://www.didiglobal.com/",
   "entityType": "company",
   "categories": [
-    "internet"
+    "ride-services"
   ],
   "defaultAsset": "logo-chinese-official.svg",
   "assets": [

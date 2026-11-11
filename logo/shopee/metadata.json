@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "shopee",
   "name": "虾皮",
   "identity": {
@@ -20,7 +20,7 @@
   "website": "https://shopee.sg/",
   "entityType": "company",
   "categories": [
-    "e-commerce"
+    "cross-border-commerce"
   ],
   "defaultAsset": "logo-horizontal-official.svg",
   "assets": [

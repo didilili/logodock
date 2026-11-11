@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "kylinsoft",
   "name": "麒麟软件",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://www.kylinos.cn/",
   "entityType": "company",
   "categories": [
-    "software"
+    "operating-systems"
   ],
   "defaultAsset": "logo.png",
   "assets": [

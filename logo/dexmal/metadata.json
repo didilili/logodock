@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "dexmal",
   "name": "原力灵机",
   "aliases": [
@@ -21,7 +21,7 @@
   "website": "https://www.dexmal.com/",
   "entityType": "company",
   "categories": [
-    "ai"
+    "robotics"
   ],
   "defaultAsset": "logo.svg",
   "assets": [
@@ -375,5 +375,8 @@
         "notes": "品牌规范要求标识保持完整及既定比例，并遵循安全空间、黑白反白和联合标识规范。"
       }
     }
+  ],
+  "topics": [
+    "ai"
   ]
 }

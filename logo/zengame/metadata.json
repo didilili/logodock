@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "zengame",
   "name": "禅游科技",
   "aliases": [],
@@ -18,7 +18,7 @@
   "website": "https://www.zen-game.com/",
   "entityType": "company",
   "categories": [
-    "entertainment"
+    "games"
   ],
   "defaultAsset": "logo-white.png",
   "assets": [

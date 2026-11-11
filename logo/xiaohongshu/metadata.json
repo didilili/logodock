@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "xiaohongshu",
   "name": "小红书",
   "aliases": [
@@ -30,8 +30,7 @@
   "website": "https://www.xiaohongshu.com/",
   "entityType": "company",
   "categories": [
-    "internet",
-    "social-media"
+    "social-community"
   ],
   "defaultAsset": "wordmark-capsule-official.svg",
   "assets": [

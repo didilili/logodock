@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "miniso",
   "name": "名创优品",
   "aliases": [
@@ -30,7 +30,7 @@
   "website": "https://www.miniso.com/",
   "entityType": "company",
   "categories": [
-    "零售"
+    "retail"
   ],
   "defaultAsset": "logo.png",
   "assets": [

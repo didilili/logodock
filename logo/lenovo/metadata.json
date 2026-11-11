@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "lenovo",
   "name": "联想",
   "aliases": [
@@ -42,7 +42,7 @@
   "website": "https://www.lenovo.com/",
   "entityType": "company",
   "categories": [
-    "hardware"
+    "computing-hardware"
   ],
   "defaultAsset": "logo-red-official.svg",
   "assets": [

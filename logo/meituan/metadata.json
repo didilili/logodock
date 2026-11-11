@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "meituan",
   "name": "美团",
   "aliases": [
@@ -40,7 +40,7 @@
   "website": "https://www.meituan.com/",
   "entityType": "company",
   "categories": [
-    "internet"
+    "local-services"
   ],
   "defaultAsset": "logo-chinese-official.png",
   "assets": [

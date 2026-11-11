@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "amap",
   "name": "高德",
   "aliases": [],
@@ -23,7 +23,7 @@
   "website": "https://www.amap.com/",
   "entityType": "company",
   "categories": [
-    "internet"
+    "auto-information"
   ],
   "defaultAsset": "icon-appstore.jpg",
   "assets": [

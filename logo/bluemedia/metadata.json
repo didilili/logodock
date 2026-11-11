@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "bluemedia",
   "name": "蓝标传媒",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://bluemediagroup.cn/",
   "entityType": "company",
   "categories": [
-    "营销服务"
+    "marketing"
   ],
   "defaultAsset": "logo-color.png",
   "assets": [

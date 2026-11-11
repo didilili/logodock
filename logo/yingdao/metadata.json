@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "yingdao",
   "name": "影刀",
   "aliases": [
@@ -43,7 +43,9 @@
     ]
   },
   "entityType": "company",
-  "categories": [],
+  "categories": [
+    "enterprise-software"
+  ],
   "defaultAsset": "logo-zh.svg",
   "assets": [
     {

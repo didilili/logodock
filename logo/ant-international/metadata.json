@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "ant-international",
   "name": "蚂蚁国际",
   "aliases": [],
@@ -18,7 +18,7 @@
   "website": "https://www.ant-intl.com/cn/",
   "entityType": "company",
   "categories": [
-    "金融"
+    "payments"
   ],
   "defaultAsset": "logo-brand.svg",
   "assets": [

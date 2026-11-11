@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "celbot-ai",
   "name": "璇溟科技",
   "aliases": [
@@ -20,8 +20,7 @@
     ]
   },
   "categories": [
-    "ai",
-    "hardware"
+    "robotics"
   ],
   "defaultAsset": "logo-chinese-black-official.png",
   "assets": [
@@ -51,5 +50,8 @@
         "reviewedAt": "2026-11-10"
       }
     }
+  ],
+  "topics": [
+    "ai"
   ]
 }

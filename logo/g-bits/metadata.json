@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "g-bits",
   "name": "吉比特",
   "aliases": [],
@@ -17,7 +17,9 @@
     ]
   },
   "entityType": "company",
-  "categories": [],
+  "categories": [
+    "games"
+  ],
   "defaultAsset": "logo-bilingual.svg",
   "assets": [
     {

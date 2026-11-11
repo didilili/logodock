@@ -92,7 +92,7 @@ test('extracted symbols require an original SVG with matching acquisition source
 
 test('catalog keeps unverified names null without deriving them from aliases', async (t) => {
   const catalog = await loadCatalog(await fixture(t));
-  assert.equal(catalog.schemaVersion, 3);
+  assert.equal(catalog.schemaVersion, 4);
   assert.deepEqual(catalog.brands[0].identity, {
     nameZh: null,
     nameEn: null,

@@ -1,8 +1,8 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "brands": [
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "01-ai",
       "name": "零一万物",
       "aliases": [
@@ -23,6 +23,9 @@
       "website": "https://www.lingyiwanwu.com/",
       "entityType": "company",
       "categories": [
+        "ai-products"
+      ],
+      "topics": [
         "ai"
       ],
       "defaultAsset": "symbol.svg",
@@ -90,7 +93,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "9yundata",
       "name": "九云数智",
       "aliases": [
@@ -111,7 +114,7 @@
       "website": "https://www.9yundata.com/about-us.html",
       "entityType": "company",
       "categories": [
-        "enterprise-software"
+        "data-platforms"
       ],
       "defaultAsset": "icon-blue-official.png",
       "assets": [
@@ -147,7 +150,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "agibot",
       "name": "智元机器人",
       "aliases": [],
@@ -181,8 +184,10 @@
       "website": "https://www.agibot.com/",
       "entityType": "company",
       "categories": [
-        "ai",
-        "hardware"
+        "robotics"
+      ],
+      "topics": [
+        "ai"
       ],
       "defaultAsset": "logo-english-gray-small-official.png",
       "assets": [
@@ -318,7 +323,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "aihuishou",
       "name": "爱回收",
       "aliases": [],
@@ -342,7 +347,7 @@
       "website": "https://www.aihuishou.com/",
       "entityType": "company",
       "categories": [
-        "e-commerce"
+        "resale"
       ],
       "defaultAsset": "logo-brand.png",
       "assets": [
@@ -407,7 +412,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "aixcoder",
       "name": "硅心科技",
       "aliases": [],
@@ -425,7 +430,13 @@
       },
       "website": "https://www.aixcoder.com/zh/about",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "developer-tools"
+      ],
+      "topics": [
+        "ai",
+        "developer-ecosystem"
+      ],
       "defaultAsset": "wordmark.png",
       "assets": [
         {
@@ -460,7 +471,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "aixcut",
       "name": "构序智能",
       "aliases": [],
@@ -478,7 +489,12 @@
       },
       "website": "https://aixcut.cn/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "creative-software"
+      ],
+      "topics": [
+        "ai"
+      ],
       "defaultAsset": "icon.svg",
       "assets": [
         {
@@ -540,7 +556,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "alibaba",
       "name": "阿里巴巴集团",
       "aliases": [
@@ -584,7 +600,7 @@
       "website": "https://www.alibabagroup.com/",
       "entityType": "company",
       "categories": [
-        "internet"
+        "internet-platforms"
       ],
       "defaultAsset": "logo-chinese-horizontal-official.png",
       "assets": [
@@ -781,7 +797,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "alibaba-cloud",
       "name": "阿里云",
       "aliases": [],
@@ -800,7 +816,10 @@
       "website": "https://www.aliyun.com/",
       "entityType": "product",
       "categories": [
-        "developer-tools"
+        "cloud"
+      ],
+      "topics": [
+        "developer-ecosystem"
       ],
       "defaultAsset": "symbol-orange.svg",
       "assets": [
@@ -896,7 +915,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "alibaba-international",
       "name": "阿里国际",
       "aliases": [],
@@ -920,7 +939,7 @@
       "website": "https://aidc-jobs.alibaba.com/",
       "entityType": "company",
       "categories": [
-        "e-commerce"
+        "cross-border-commerce"
       ],
       "defaultAsset": "wordmark-bilingual.svg",
       "assets": [
@@ -991,7 +1010,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "amap",
       "name": "高德",
       "aliases": [],
@@ -1015,7 +1034,7 @@
       "website": "https://www.amap.com/",
       "entityType": "company",
       "categories": [
-        "internet"
+        "auto-information"
       ],
       "defaultAsset": "icon-appstore.jpg",
       "assets": [
@@ -1089,7 +1108,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "ant-international",
       "name": "蚂蚁国际",
       "aliases": [],
@@ -1108,7 +1127,7 @@
       "website": "https://www.ant-intl.com/cn/",
       "entityType": "company",
       "categories": [
-        "金融"
+        "payments"
       ],
       "defaultAsset": "logo-brand.svg",
       "assets": [
@@ -1204,7 +1223,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "antgroup",
       "name": "蚂蚁集团",
       "aliases": [],
@@ -1223,7 +1242,7 @@
       "website": "https://www.antgroup.com/",
       "entityType": "company",
       "categories": [
-        "internet"
+        "payments"
       ],
       "defaultAsset": "logo-bilingual-color-official.png",
       "assets": [
@@ -1358,7 +1377,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "asiainfo",
       "name": "亚信科技",
       "aliases": [],
@@ -1516,7 +1535,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "asiainfo-security",
       "name": "亚信安全",
       "aliases": [],
@@ -1555,7 +1574,7 @@
       "website": "https://www.asiainfo-sec.com/",
       "entityType": "company",
       "categories": [
-        "enterprise-software"
+        "security"
       ],
       "defaultAsset": "logo-chinese-official.png",
       "assets": [
@@ -1623,7 +1642,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "autohome",
       "name": "汽车之家",
       "aliases": [],
@@ -1647,8 +1666,7 @@
       "website": "https://www.autohome.com.cn/",
       "entityType": "company",
       "categories": [
-        "automotive",
-        "internet"
+        "auto-information"
       ],
       "defaultAsset": "wordmark-blue.png",
       "assets": [
@@ -1684,7 +1702,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "baidu",
       "name": "百度",
       "aliases": [],
@@ -1716,8 +1734,11 @@
       "website": "https://home.baidu.com/",
       "entityType": "company",
       "categories": [
-        "ai",
-        "internet"
+        "ai-products",
+        "search"
+      ],
+      "topics": [
+        "ai"
       ],
       "defaultAsset": "logo-bilingual-brand-library.jpg",
       "sourceFiles": [
@@ -1987,7 +2008,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "bailongma-yunxing",
       "name": "白龙马云行科技",
       "aliases": [],
@@ -2006,7 +2027,6 @@
       "website": "https://www.bailongma.com/about",
       "entityType": "company",
       "categories": [
-        "automotive",
         "enterprise-software"
       ],
       "defaultAsset": "logo-white.png",
@@ -2072,7 +2092,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "bambu-lab",
       "name": "拓竹",
       "aliases": [],
@@ -2090,7 +2110,9 @@
       },
       "website": "https://bambulab.com/zh-cn",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "manufacturing-equipment"
+      ],
       "defaultAsset": "symbol-square.svg",
       "artworks": [
         {
@@ -2196,7 +2218,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "bank-of-china",
       "name": "中国银行",
       "aliases": [],
@@ -2215,7 +2237,7 @@
       "website": "https://www.boc.cn/",
       "entityType": "company",
       "categories": [
-        "金融"
+        "banking"
       ],
       "defaultAsset": "logo-bilingual.png",
       "assets": [
@@ -2255,7 +2277,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "bank-of-ningbo",
       "name": "宁波银行",
       "aliases": [],
@@ -2274,7 +2296,7 @@
       "website": "https://www.nbcb.com.cn/",
       "entityType": "company",
       "categories": [
-        "金融"
+        "banking"
       ],
       "defaultAsset": "logo-bilingual.png",
       "assets": [
@@ -2313,7 +2335,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "bank-of-shanghai",
       "name": "上海银行",
       "aliases": [],
@@ -2332,7 +2354,7 @@
       "website": "https://www.bosc.cn/zh/",
       "entityType": "company",
       "categories": [
-        "金融服务"
+        "banking"
       ],
       "defaultAsset": "logo-bilingual.png",
       "assets": [
@@ -2400,7 +2422,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "bifu",
       "name": "比孚信息科技",
       "aliases": [],
@@ -2454,7 +2476,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "bigo",
       "name": "BIGO",
       "aliases": [],
@@ -2481,7 +2503,7 @@
       "website": "https://www.bigo.sg/",
       "entityType": "company",
       "categories": [
-        "internet"
+        "video-music"
       ],
       "defaultAsset": "wordmark-blue-official.png",
       "assets": [
@@ -2552,7 +2574,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "bilibili",
       "name": "哔哩哔哩",
       "aliases": [
@@ -2573,8 +2595,8 @@
       "website": "https://www.bilibili.com/",
       "entityType": "company",
       "categories": [
-        "entertainment",
-        "social-media"
+        "social-community",
+        "video-music"
       ],
       "defaultAsset": "wordmark-blue-international-official.svg",
       "assets": [
@@ -2742,7 +2764,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "biren",
       "name": "壁仞科技",
       "aliases": [],
@@ -2761,8 +2783,10 @@
       "website": "https://www.birentech.com/",
       "entityType": "company",
       "categories": [
-        "ai",
-        "hardware"
+        "semiconductors"
+      ],
+      "topics": [
+        "ai"
       ],
       "defaultAsset": "symbol-square.svg",
       "artworks": [
@@ -2909,7 +2933,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "bluemedia",
       "name": "蓝标传媒",
       "aliases": [
@@ -2930,7 +2954,7 @@
       "website": "https://bluemediagroup.cn/",
       "entityType": "company",
       "categories": [
-        "营销服务"
+        "marketing"
       ],
       "defaultAsset": "logo-color.png",
       "assets": [
@@ -2997,7 +3021,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "bochu",
       "name": "柏楚电子",
       "aliases": [
@@ -3018,7 +3042,7 @@
       "website": "https://www.bochu.com/",
       "entityType": "company",
       "categories": [
-        "industrial-automation"
+        "automation"
       ],
       "defaultAsset": "logo-blue.svg",
       "assets": [
@@ -3143,7 +3167,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "boke",
       "name": "波克",
       "aliases": [],
@@ -3162,7 +3186,7 @@
       "website": "https://www.boke.com/",
       "entityType": "company",
       "categories": [
-        "entertainment"
+        "games"
       ],
       "defaultAsset": "logo-square.png",
       "assets": [
@@ -3227,7 +3251,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "boomingtech",
       "name": "不鸣科技",
       "aliases": [],
@@ -3246,7 +3270,7 @@
       "website": "https://www.boomingtech.com/",
       "entityType": "company",
       "categories": [
-        "entertainment"
+        "games"
       ],
       "defaultAsset": "logo-white.png",
       "assets": [
@@ -3311,7 +3335,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "brilliant-data",
       "name": "佰聆数据",
       "aliases": [],
@@ -3330,7 +3354,7 @@
       "website": "https://www.brilliant-solution.com/",
       "entityType": "company",
       "categories": [
-        "enterprise-software"
+        "data-platforms"
       ],
       "defaultAsset": "logo-zh.png",
       "assets": [
@@ -3366,7 +3390,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "byd",
       "name": "比亚迪",
       "aliases": [],
@@ -3385,7 +3409,7 @@
       "website": "https://www.bydglobal.com/cn",
       "entityType": "company",
       "categories": [
-        "automotive"
+        "automakers"
       ],
       "defaultAsset": "logo-group.png",
       "assets": [
@@ -3424,7 +3448,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "bytedance",
       "name": "字节跳动",
       "aliases": [
@@ -3458,7 +3482,8 @@
       "website": "https://www.bytedance.com/",
       "entityType": "company",
       "categories": [
-        "internet"
+        "internet-platforms",
+        "video-music"
       ],
       "defaultAsset": "logo-bilingual-color-official.svg",
       "artworks": [
@@ -3694,7 +3719,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "callnovo",
       "name": "客诺信息技术",
       "aliases": [
@@ -3720,7 +3745,7 @@
       "website": "https://www.callnovocx.com/request-a-quote",
       "entityType": "company",
       "categories": [
-        "企业服务"
+        "outsourcing"
       ],
       "defaultAsset": "logo-color.webp",
       "assets": [
@@ -3816,7 +3841,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "cambricon",
       "name": "寒武纪",
       "aliases": [],
@@ -3834,7 +3859,12 @@
       },
       "website": "https://www.cambricon.com/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "semiconductors"
+      ],
+      "topics": [
+        "ai"
+      ],
       "defaultAsset": "logo-bilingual-brand-library.png",
       "sourceFiles": [
         {
@@ -3966,7 +3996,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "caocao",
       "name": "曹操出行",
       "aliases": [],
@@ -3985,7 +4015,7 @@
       "website": "https://www.caocao.com.cn/",
       "entityType": "company",
       "categories": [
-        "automotive"
+        "ride-services"
       ],
       "defaultAsset": "logo-zh-brand.svg",
       "assets": [
@@ -4137,7 +4167,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "capitalonline",
       "name": "首都在线",
       "aliases": [
@@ -4178,7 +4208,7 @@
       "website": "https://www.capitalonline.net.cn/",
       "entityType": "company",
       "categories": [
-        "enterprise-software"
+        "cloud"
       ],
       "defaultAsset": "logo-gray.svg",
       "assets": [
@@ -4245,7 +4275,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "celbot-ai",
       "name": "璇溟科技",
       "aliases": [
@@ -4266,8 +4296,10 @@
       "website": "https://www.celbot-ai.com/",
       "entityType": "company",
       "categories": [
-        "ai",
-        "hardware"
+        "robotics"
+      ],
+      "topics": [
+        "ai"
       ],
       "defaultAsset": "logo-chinese-black-official.png",
       "assets": [
@@ -4303,7 +4335,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "century-games",
       "name": "点点互动",
       "aliases": [],
@@ -4321,7 +4353,9 @@
       },
       "website": "https://www.centurygames.com/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "games"
+      ],
       "defaultAsset": "wordmark-white.svg",
       "assets": [
         {
@@ -4390,7 +4424,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "changan-auto",
       "name": "长安汽车",
       "aliases": [
@@ -4411,7 +4445,7 @@
       "website": "https://www.changan.com.cn/",
       "entityType": "company",
       "categories": [
-        "automotive"
+        "automakers"
       ],
       "defaultAsset": "logo-home.png",
       "assets": [
@@ -4450,7 +4484,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "changhong",
       "name": "四川长虹",
       "aliases": [],
@@ -4469,7 +4503,7 @@
       "website": "https://cn.changhong.com/",
       "entityType": "company",
       "categories": [
-        "hardware"
+        "appliances"
       ],
       "defaultAsset": "wordmark-english.svg",
       "assets": [
@@ -4534,7 +4568,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "che300",
       "name": "车300",
       "aliases": [],
@@ -4553,7 +4587,7 @@
       "website": "https://www.che300.com/",
       "entityType": "company",
       "categories": [
-        "automotive"
+        "auto-information"
       ],
       "defaultAsset": "logo-bilingual.png",
       "assets": [
@@ -4592,7 +4626,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "cheetah-mobile",
       "name": "猎豹移动",
       "aliases": [
@@ -4613,7 +4647,7 @@
       "website": "https://www.cmcm.com/zh-CN/",
       "entityType": "company",
       "categories": [
-        "internet"
+        "creative-software"
       ],
       "defaultAsset": "logo-white-zh.png",
       "assets": [
@@ -4678,7 +4712,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "china-telecom",
       "name": "中国电信",
       "aliases": [
@@ -4699,7 +4733,7 @@
       "website": "https://www.chinatelecom-h.com/sc/global/home.php",
       "entityType": "company",
       "categories": [
-        "telecommunications"
+        "telecom-operators"
       ],
       "defaultAsset": "logo-bilingual.png",
       "assets": [
@@ -4738,7 +4772,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "cmb-bank",
       "name": "招商银行",
       "aliases": [
@@ -4760,7 +4794,7 @@
       "website": "https://www.cmbchina.com/",
       "entityType": "company",
       "categories": [
-        "金融"
+        "banking"
       ],
       "defaultAsset": "logo.png",
       "assets": [
@@ -4831,7 +4865,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "cmb-network-tech",
       "name": "招银网络科技",
       "aliases": [
@@ -4852,7 +4886,7 @@
       "website": "https://cmbnt.cmbchina.com/home.html",
       "entityType": "company",
       "categories": [
-        "software"
+        "enterprise-software"
       ],
       "defaultAsset": "logo.png",
       "assets": [
@@ -4891,7 +4925,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "codeberg",
       "name": "Codeberg e.V.",
       "aliases": [
@@ -4925,8 +4959,11 @@
       "website": "https://codeberg.org/",
       "entityType": "organization",
       "categories": [
-        "code-hosting",
         "developer-tools"
+      ],
+      "topics": [
+        "developer-ecosystem",
+        "open-source-ecosystem"
       ],
       "defaultAsset": "icon-blue.svg",
       "assets": [
@@ -5119,7 +5156,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "cvte",
       "name": "视源股份",
       "aliases": [
@@ -5148,7 +5185,7 @@
       "website": "https://www.cvte.com/",
       "entityType": "company",
       "categories": [
-        "hardware"
+        "consumer-electronics"
       ],
       "defaultAsset": "wordmark-bilingual-official.png",
       "assets": [
@@ -5223,7 +5260,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "cxmt",
       "name": "长鑫存储",
       "aliases": [],
@@ -5242,7 +5279,7 @@
       "website": "https://www.cxmt.com/",
       "entityType": "company",
       "categories": [
-        "hardware"
+        "semiconductors"
       ],
       "defaultAsset": "wordmark-blue.svg",
       "assets": [
@@ -5305,7 +5342,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "cyriex",
       "name": "思锐卓远",
       "aliases": [],
@@ -5324,8 +5361,7 @@
       "website": "https://www.cyriex.com/",
       "entityType": "company",
       "categories": [
-        "enterprise-software",
-        "industrial-automation"
+        "industrial-software"
       ],
       "defaultAsset": "logo-wide-brand.png",
       "assets": [
@@ -5425,7 +5461,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "dahua",
       "name": "大华",
       "aliases": [],
@@ -5443,7 +5479,9 @@
       },
       "website": "https://www.dahuatech.com/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "security-imaging"
+      ],
       "defaultAsset": "logo-bilingual.png",
       "assets": [
         {
@@ -5509,7 +5547,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "dbappsecurity",
       "name": "安恒信息",
       "aliases": [],
@@ -5528,7 +5566,7 @@
       "website": "https://www.dbappsecurity.com.cn/",
       "entityType": "company",
       "categories": [
-        "software"
+        "security"
       ],
       "defaultAsset": "logo-bilingual.jpg",
       "assets": [
@@ -5596,7 +5634,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "deeproute",
       "name": "元戎启行",
       "aliases": [
@@ -5617,7 +5655,7 @@
       "website": "https://www.deeproute.ai/",
       "entityType": "company",
       "categories": [
-        "automotive"
+        "autonomous-driving"
       ],
       "defaultAsset": "logo.png",
       "assets": [
@@ -5656,7 +5694,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "deepseek",
       "name": "深度求索",
       "aliases": [
@@ -5677,7 +5715,11 @@
       "website": "https://www.deepseek.com/",
       "entityType": "company",
       "categories": [
-        "ai"
+        "ai-products"
+      ],
+      "topics": [
+        "ai",
+        "open-source-ecosystem"
       ],
       "defaultAsset": "logo-brand.svg",
       "assets": [
@@ -5745,7 +5787,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "dewu",
       "name": "得物",
       "aliases": [],
@@ -5774,7 +5816,7 @@
       "website": "https://www.dewu.com/",
       "entityType": "company",
       "categories": [
-        "e-commerce"
+        "ecommerce"
       ],
       "defaultAsset": "wordmark-square-official.png",
       "assets": [
@@ -5814,7 +5856,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "dexmal",
       "name": "原力灵机",
       "aliases": [
@@ -5836,6 +5878,9 @@
       "website": "https://www.dexmal.com/",
       "entityType": "company",
       "categories": [
+        "robotics"
+      ],
+      "topics": [
         "ai"
       ],
       "defaultAsset": "logo.svg",
@@ -6228,7 +6273,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "didi",
       "name": "滴滴",
       "aliases": [
@@ -6264,7 +6309,7 @@
       "website": "https://www.didiglobal.com/",
       "entityType": "company",
       "categories": [
-        "internet"
+        "ride-services"
       ],
       "defaultAsset": "logo-chinese-official.svg",
       "artworks": [
@@ -6498,7 +6543,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "digiwin",
       "name": "鼎捷数智",
       "aliases": [],
@@ -6516,7 +6561,9 @@
       },
       "website": "https://www.digiwin.com/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "industrial-software"
+      ],
       "defaultAsset": "wordmark-en-commons.png",
       "assets": [
         {
@@ -6587,7 +6634,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "dmall",
       "name": "多点数智",
       "aliases": [],
@@ -6605,7 +6652,9 @@
       },
       "website": "https://www.dmall.com/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "enterprise-software"
+      ],
       "defaultAsset": "logo-bilingual.png",
       "assets": [
         {
@@ -6640,7 +6689,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "dongchedi",
       "name": "懂车帝",
       "aliases": [],
@@ -6672,7 +6721,7 @@
       "website": "https://www.dongchedi.com/",
       "entityType": "product",
       "categories": [
-        "automotive"
+        "auto-information"
       ],
       "defaultAsset": "logo-chinese-official.svg",
       "assets": [
@@ -6777,7 +6826,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "doxue",
       "name": "都学网",
       "aliases": [],
@@ -6795,7 +6844,9 @@
       },
       "website": "https://www.doxue.com/index",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "training"
+      ],
       "defaultAsset": "logo-bilingual.png",
       "assets": [
         {
@@ -6833,7 +6884,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "dp-tech",
       "name": "深势科技",
       "aliases": [],
@@ -6852,6 +6903,9 @@
       "website": "https://www.dp.tech/",
       "entityType": "company",
       "categories": [
+        "ai-products"
+      ],
+      "topics": [
         "ai"
       ],
       "defaultAsset": "wordmark-bilingual-black.webp",
@@ -6967,7 +7021,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "dtstack",
       "name": "袋鼠云",
       "aliases": [],
@@ -6985,7 +7039,12 @@
       },
       "website": "https://www.dtstack.com/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "data-platforms"
+      ],
+      "topics": [
+        "developer-ecosystem"
+      ],
       "defaultAsset": "symbol-brand.svg",
       "assets": [
         {
@@ -7080,7 +7139,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "duoyi",
       "name": "多益网络",
       "aliases": [],
@@ -7112,7 +7171,7 @@
       "website": "https://www.duoyi.com/",
       "entityType": "company",
       "categories": [
-        "entertainment"
+        "games"
       ],
       "defaultAsset": "logo-chinese-small-official.png",
       "assets": [
@@ -7151,7 +7210,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "duxiaoman",
       "name": "度小满",
       "aliases": [],
@@ -7179,7 +7238,9 @@
       },
       "website": "https://www.duxiaoman.com/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "consumer-finance"
+      ],
       "defaultAsset": "logo-zh.png",
       "assets": [
         {
@@ -7243,7 +7304,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "eastmoney",
       "name": "东方财富",
       "aliases": [],
@@ -7267,7 +7328,8 @@
       "website": "https://www.eastmoney.com/",
       "entityType": "company",
       "categories": [
-        "金融"
+        "financial-information",
+        "securities-investment"
       ],
       "defaultAsset": "logo-bilingual.png",
       "assets": [
@@ -7342,7 +7404,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "eaton",
       "name": "伊顿",
       "aliases": [
@@ -7376,7 +7438,7 @@
       "website": "https://www.eaton.com/",
       "entityType": "company",
       "categories": [
-        "hardware"
+        "electrical-equipment"
       ],
       "defaultAsset": "wordmark-blue.png",
       "sourceFiles": [
@@ -7509,7 +7571,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "ecovacs",
       "name": "科沃斯",
       "aliases": [
@@ -7530,7 +7592,7 @@
       "website": "https://www.ecovacsgroup.com/about-us",
       "entityType": "company",
       "categories": [
-        "hardware"
+        "appliances"
       ],
       "defaultAsset": "logo.png",
       "assets": [
@@ -7566,7 +7628,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "emsoft",
       "name": "英迈软件",
       "aliases": [],
@@ -7658,7 +7720,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "epsoft",
       "name": "网新软件",
       "aliases": [],
@@ -7713,7 +7775,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "fadada",
       "name": "法大大",
       "aliases": [],
@@ -7739,7 +7801,9 @@
       },
       "website": "https://www.fadada.com/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "enterprise-software"
+      ],
       "defaultAsset": "icon-appstore.jpg",
       "assets": [
         {
@@ -7774,7 +7838,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "fanruan",
       "name": "帆软",
       "aliases": [],
@@ -7808,7 +7872,7 @@
       "website": "https://www.fanruan.com/",
       "entityType": "company",
       "categories": [
-        "enterprise-software"
+        "data-platforms"
       ],
       "defaultAsset": "logo-english-official.svg",
       "assets": [
@@ -7911,7 +7975,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "fantuan",
       "name": "饭团外卖",
       "aliases": [],
@@ -7937,7 +8001,9 @@
       },
       "website": "https://www.fantuan.ca/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "local-services"
+      ],
       "defaultAsset": "icon-appstore.jpg",
       "assets": [
         {
@@ -8008,7 +8074,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "farben",
       "name": "法本信息",
       "aliases": [],
@@ -8026,7 +8092,9 @@
       },
       "website": "https://farben.com.cn/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "outsourcing"
+      ],
       "defaultAsset": "wordmark-blue.svg",
       "assets": [
         {
@@ -8088,7 +8156,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "funplus",
       "name": "趣加",
       "aliases": [
@@ -8109,7 +8177,7 @@
       "website": "https://funplus.com/",
       "entityType": "company",
       "categories": [
-        "entertainment"
+        "games"
       ],
       "defaultAsset": "logo.svg",
       "assets": [
@@ -8177,7 +8245,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "fxiaoke",
       "name": "纷享销客",
       "aliases": [],
@@ -8205,7 +8273,9 @@
       },
       "website": "https://www.fxiaoke.com/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "enterprise-software"
+      ],
       "defaultAsset": "logo-zh-tagline.png",
       "assets": [
         {
@@ -8240,7 +8310,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "g-bits",
       "name": "吉比特",
       "aliases": [],
@@ -8258,7 +8328,9 @@
       },
       "website": "https://www.g-bits.com/zh/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "games"
+      ],
       "defaultAsset": "logo-bilingual.svg",
       "assets": [
         {
@@ -8292,7 +8364,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "geekplus",
       "name": "极智嘉",
       "aliases": [],
@@ -8310,7 +8382,9 @@
       },
       "website": "https://www.geekplus.com/en",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "robotics"
+      ],
       "defaultAsset": "wordmark.png",
       "assets": [
         {
@@ -8345,7 +8419,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "geely",
       "name": "吉利",
       "aliases": [],
@@ -8363,7 +8437,9 @@
       },
       "website": "https://www.geely.com/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "automakers"
+      ],
       "defaultAsset": "logo-black-horizontal.svg",
       "assets": [
         {
@@ -8462,7 +8538,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "giant-network",
       "name": "巨人网络",
       "aliases": [
@@ -8483,7 +8559,7 @@
       "website": "https://www.ztgame.com/",
       "entityType": "company",
       "categories": [
-        "entertainment"
+        "games"
       ],
       "defaultAsset": "logo.png",
       "assets": [
@@ -8519,7 +8595,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "git",
       "name": "Git",
       "aliases": [],
@@ -8544,6 +8620,10 @@
       "entityType": "product",
       "categories": [
         "developer-tools"
+      ],
+      "topics": [
+        "developer-ecosystem",
+        "open-source-ecosystem"
       ],
       "defaultAsset": "icon-orange.svg",
       "assets": [
@@ -8762,7 +8842,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "gitlab",
       "name": "GitLab",
       "aliases": [
@@ -8801,8 +8881,11 @@
       "website": "https://about.gitlab.com/",
       "entityType": "company",
       "categories": [
-        "code-hosting",
         "developer-tools"
+      ],
+      "topics": [
+        "developer-ecosystem",
+        "open-source-ecosystem"
       ],
       "defaultAsset": "logo-color-official.svg",
       "artworks": [
@@ -9296,7 +9379,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "goodix",
       "name": "汇顶科技",
       "aliases": [],
@@ -9314,7 +9397,9 @@
       },
       "website": "https://www.goodix.com/zh/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "semiconductors"
+      ],
       "defaultAsset": "wordmark-brand.svg",
       "assets": [
         {
@@ -9376,7 +9461,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "haidilao",
       "name": "海底捞",
       "aliases": [],
@@ -9395,7 +9480,7 @@
       "website": "https://www.haidilao.com/",
       "entityType": "company",
       "categories": [
-        "餐饮"
+        "dining"
       ],
       "defaultAsset": "logo-bilingual.svg",
       "assets": [
@@ -9430,7 +9515,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "haier",
       "name": "海尔",
       "aliases": [],
@@ -9448,7 +9533,9 @@
       },
       "website": "https://www.haier.com/careers/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "appliances"
+      ],
       "defaultAsset": "wordmark-blue.png",
       "assets": [
         {
@@ -9640,7 +9727,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "hbada",
       "name": "黑白调",
       "aliases": [],
@@ -9658,7 +9745,9 @@
       },
       "website": "https://hbada.com/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "home-goods"
+      ],
       "defaultAsset": "wordmark.png",
       "assets": [
         {
@@ -9696,7 +9785,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "hello",
       "name": "哈啰",
       "aliases": [],
@@ -9714,7 +9803,9 @@
       },
       "website": "https://www.hello-inc.com/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "ride-services"
+      ],
       "defaultAsset": "wordmark-zh.png",
       "assets": [
         {
@@ -9776,7 +9867,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "hello-group",
       "name": "挚文集团",
       "aliases": [
@@ -9797,7 +9888,7 @@
       "website": "https://www.hellogroup.com/",
       "entityType": "company",
       "categories": [
-        "internet"
+        "social-community"
       ],
       "defaultAsset": "brand-logo.png",
       "assets": [
@@ -9897,7 +9988,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "hikvision",
       "name": "海康威视",
       "aliases": [],
@@ -9915,7 +10006,9 @@
       },
       "website": "https://iberia.hikvision.com/es/hikcentral",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "security-imaging"
+      ],
       "defaultAsset": "wordmark.png",
       "assets": [
         {
@@ -9950,7 +10043,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "hirain",
       "name": "经纬恒润",
       "aliases": [],
@@ -9984,7 +10077,7 @@
       "website": "https://www.hirain.com/",
       "entityType": "company",
       "categories": [
-        "automotive"
+        "auto-components"
       ],
       "defaultAsset": "logo-bilingual-small-official.png",
       "assets": [
@@ -10023,7 +10116,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "honor",
       "name": "荣耀",
       "aliases": [
@@ -10065,7 +10158,7 @@
       "website": "https://www.honor.com/",
       "entityType": "company",
       "categories": [
-        "hardware"
+        "consumer-electronics"
       ],
       "defaultAsset": "logo-color-black-horizontal-2026.svg",
       "assets": [
@@ -10357,7 +10450,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "hstong",
       "name": "华盛通",
       "aliases": [],
@@ -10385,7 +10478,9 @@
       },
       "website": "https://www.hstong.com/about/recruit",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "securities-investment"
+      ],
       "defaultAsset": "logo-zh.png",
       "assets": [
         {
@@ -10455,7 +10550,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "huaqin",
       "name": "华勤",
       "aliases": [],
@@ -10478,7 +10573,9 @@
       },
       "website": "https://www.huaqin.com/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "consumer-electronics"
+      ],
       "defaultAsset": "logo-zh.png",
       "assets": [
         {
@@ -10541,7 +10638,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "huashunxinan",
       "name": "华顺信安",
       "aliases": [],
@@ -10559,7 +10656,9 @@
       },
       "website": "https://huashunxinan.net/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "security"
+      ],
       "defaultAsset": "logo-bilingual.svg",
       "assets": [
         {
@@ -10593,7 +10692,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "huawei",
       "name": "华为",
       "aliases": [
@@ -10649,8 +10748,8 @@
       "website": "https://www.huawei.com/",
       "entityType": "company",
       "categories": [
-        "hardware",
-        "telecommunications"
+        "consumer-electronics",
+        "telecom-equipment"
       ],
       "defaultAsset": "logo-color-vertical-official.svg",
       "assets": [
@@ -10815,7 +10914,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "huaxiaoxiao",
       "name": "花小小新疆炒米粉",
       "aliases": [],
@@ -10833,7 +10932,9 @@
       },
       "website": "https://huaxx.cn/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "dining"
+      ],
       "defaultAsset": "icon.png",
       "assets": [
         {
@@ -10897,7 +10998,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "hundsun",
       "name": "恒生电子",
       "aliases": [],
@@ -11014,7 +11115,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "hunyuan",
       "name": "腾讯混元",
       "aliases": [],
@@ -11033,6 +11134,9 @@
       "website": "https://hunyuan.tencent.com/",
       "entityType": "product",
       "categories": [
+        "ai-products"
+      ],
+      "topics": [
         "ai"
       ],
       "parentId": "tencent",
@@ -11142,7 +11246,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "huolala",
       "name": "货拉拉",
       "aliases": [
@@ -11172,7 +11276,9 @@
       },
       "website": "https://www.huolala.cn/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "freight-warehousing"
+      ],
       "defaultAsset": "wordmark-zh.png",
       "assets": [
         {
@@ -11207,7 +11313,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "huya",
       "name": "虎牙",
       "aliases": [],
@@ -11226,7 +11332,7 @@
       "website": "https://www.huya.com/",
       "entityType": "company",
       "categories": [
-        "entertainment"
+        "video-music"
       ],
       "defaultAsset": "logo-corporate.png",
       "sourceFiles": [
@@ -11285,7 +11391,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "icbc",
       "name": "中国工商银行",
       "aliases": [
@@ -11306,7 +11412,7 @@
       "website": "https://www.icbc.com.cn/ICBC/",
       "entityType": "company",
       "categories": [
-        "金融"
+        "banking"
       ],
       "defaultAsset": "logo.png",
       "assets": [
@@ -11346,7 +11452,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "iflytek",
       "name": "科大讯飞",
       "aliases": [
@@ -11390,6 +11496,9 @@
       "website": "https://www.iflytek.com/",
       "entityType": "company",
       "categories": [
+        "ai-products"
+      ],
+      "topics": [
         "ai"
       ],
       "defaultAsset": "logo-english-official.svg",
@@ -11591,7 +11700,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "imou",
       "name": "华橙",
       "aliases": [],
@@ -11628,7 +11737,7 @@
       "website": "https://www.imou.com/cn/",
       "entityType": "company",
       "categories": [
-        "hardware"
+        "security-imaging"
       ],
       "defaultAsset": "wordmark-imou-white.png",
       "assets": [
@@ -11702,7 +11811,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "inovance",
       "name": "汇川技术",
       "aliases": [
@@ -11729,7 +11838,7 @@
       "website": "https://www.inovance.com/",
       "entityType": "company",
       "categories": [
-        "industrial-automation"
+        "automation"
       ],
       "defaultAsset": "wordmark-blue-official.png",
       "assets": [
@@ -11771,7 +11880,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "insta360",
       "name": "影石",
       "aliases": [
@@ -11792,7 +11901,7 @@
       "website": "https://www.insta360.com/",
       "entityType": "company",
       "categories": [
-        "hardware"
+        "consumer-electronics"
       ],
       "defaultAsset": "wordmark-black.svg",
       "sourceFiles": [
@@ -13545,7 +13654,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "iqiyi",
       "name": "爱奇艺",
       "aliases": [
@@ -13580,7 +13689,7 @@
       "website": "https://ir.iqiyi.com/",
       "entityType": "company",
       "categories": [
-        "internet"
+        "video-music"
       ],
       "defaultAsset": "wordmark-green.svg",
       "sourceFiles": [
@@ -13708,7 +13817,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "irootech",
       "name": "树根科技",
       "aliases": [
@@ -13730,8 +13839,7 @@
       "website": "https://www.irootech.com/",
       "entityType": "company",
       "categories": [
-        "enterprise-software",
-        "industrial-automation"
+        "industrial-software"
       ],
       "defaultAsset": "logo-bilingual-black-official.png",
       "assets": [
@@ -13800,7 +13908,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "isvision",
       "name": "易思维",
       "aliases": [],
@@ -13827,7 +13935,7 @@
       "website": "https://www.isv-tech.com/",
       "entityType": "company",
       "categories": [
-        "industrial-automation"
+        "automation"
       ],
       "defaultAsset": "logo-bilingual.png",
       "assets": [
@@ -13892,7 +14000,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "jac",
       "name": "江淮汽车",
       "aliases": [],
@@ -13910,7 +14018,9 @@
       },
       "website": "https://www.jac.com.cn/rczp/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "automakers"
+      ],
       "defaultAsset": "wordmark-bilingual.png",
       "assets": [
         {
@@ -13948,7 +14058,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "jd",
       "name": "京东",
       "aliases": [
@@ -13987,7 +14097,7 @@
       "website": "https://www.jd.com/",
       "entityType": "company",
       "categories": [
-        "e-commerce"
+        "ecommerce"
       ],
       "defaultAsset": "logo-header-official.png",
       "assets": [
@@ -14093,7 +14203,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "jfzt",
       "name": "九方智投",
       "aliases": [],
@@ -14112,7 +14222,7 @@
       "website": "https://www.9fzt.com/",
       "entityType": "company",
       "categories": [
-        "金融"
+        "financial-information"
       ],
       "defaultAsset": "logo-with-tagline.png",
       "assets": [
@@ -14148,7 +14258,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "jingan-tech",
       "name": "靖安科技",
       "aliases": [
@@ -14177,6 +14287,9 @@
       "website": "https://www.jing-an.com/",
       "entityType": "company",
       "categories": [
+        "ai-products"
+      ],
+      "topics": [
         "ai"
       ],
       "defaultAsset": "logo-bilingual.png",
@@ -14217,7 +14330,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "joycastle",
       "name": "乐堡互娱",
       "aliases": [
@@ -14238,7 +14351,7 @@
       "website": "https://www.joycastle.mobi/",
       "entityType": "company",
       "categories": [
-        "entertainment"
+        "games"
       ],
       "defaultAsset": "logo.svg",
       "assets": [
@@ -14334,7 +14447,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "jt-express",
       "name": "极兔",
       "aliases": [],
@@ -14353,7 +14466,7 @@
       "website": "https://www.jtexpress.com.cn/",
       "entityType": "company",
       "categories": [
-        "物流"
+        "express-logistics"
       ],
       "defaultAsset": "logo-brand.png",
       "assets": [
@@ -14418,7 +14531,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "kingdee",
       "name": "金蝶",
       "aliases": [
@@ -14463,8 +14576,7 @@
       "website": "https://www.kingdee.com/",
       "entityType": "company",
       "categories": [
-        "enterprise-software",
-        "software"
+        "enterprise-software"
       ],
       "defaultAsset": "logo-color-english-official.svg",
       "assets": [
@@ -14538,7 +14650,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "kingsoft",
       "name": "金山软件",
       "aliases": [],
@@ -14556,7 +14668,9 @@
       },
       "website": "https://www.kingsoft.com/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "creative-software"
+      ],
       "defaultAsset": "logo-bilingual.png",
       "assets": [
         {
@@ -14591,7 +14705,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "kingsoft-office",
       "name": "金山办公",
       "aliases": [],
@@ -14614,7 +14728,9 @@
       },
       "website": "https://www.wps.cn/KINGSOFT",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "enterprise-software"
+      ],
       "defaultAsset": "symbol-brand.svg",
       "assets": [
         {
@@ -14681,7 +14797,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "klook",
       "name": "客路",
       "aliases": [
@@ -14702,7 +14818,7 @@
       "website": "https://www.klook.com/",
       "entityType": "company",
       "categories": [
-        "旅游"
+        "travel"
       ],
       "defaultAsset": "logo-rgb-official.png",
       "assets": [
@@ -14743,7 +14859,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "ktc",
       "name": "康冠科技",
       "aliases": [
@@ -14764,7 +14880,7 @@
       "website": "https://www.ktc.cn/",
       "entityType": "company",
       "categories": [
-        "hardware"
+        "consumer-electronics"
       ],
       "defaultAsset": "logo.png",
       "assets": [
@@ -14803,7 +14919,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "kuaishang",
       "name": "快商通",
       "aliases": [
@@ -14824,6 +14940,9 @@
       "website": "https://www.kuaishang.cn/",
       "entityType": "company",
       "categories": [
+        "ai-products"
+      ],
+      "topics": [
         "ai"
       ],
       "defaultAsset": "logo.png",
@@ -14860,7 +14979,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "kuaishou",
       "name": "快手",
       "aliases": [
@@ -14894,7 +15013,7 @@
       "website": "https://www.kuaishou.com/",
       "entityType": "company",
       "categories": [
-        "internet"
+        "video-music"
       ],
       "defaultAsset": "icon-orange-official.png",
       "assets": [
@@ -15375,7 +15494,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "kylinsoft",
       "name": "麒麟软件",
       "aliases": [
@@ -15396,7 +15515,7 @@
       "website": "https://www.kylinos.cn/",
       "entityType": "company",
       "categories": [
-        "software"
+        "operating-systems"
       ],
       "defaultAsset": "logo.png",
       "assets": [
@@ -15435,7 +15554,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "lanyou-tech",
       "name": "联友科技",
       "aliases": [
@@ -15461,7 +15580,7 @@
       "website": "https://www.szlanyou.com/",
       "entityType": "company",
       "categories": [
-        "software"
+        "enterprise-software"
       ],
       "defaultAsset": "logo-footer.png",
       "assets": [
@@ -15497,7 +15616,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "lcfc",
       "name": "联宝科技",
       "aliases": [
@@ -15518,7 +15637,7 @@
       "website": "https://www.lcfc.com.cn/index.aspx",
       "entityType": "company",
       "categories": [
-        "hardware"
+        "computing-hardware"
       ],
       "defaultAsset": "logo.png",
       "assets": [
@@ -15554,7 +15673,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "leapmotor",
       "name": "零跑汽车",
       "aliases": [
@@ -15575,7 +15694,7 @@
       "website": "https://leapmotor.cn/",
       "entityType": "company",
       "categories": [
-        "automotive"
+        "automakers"
       ],
       "defaultAsset": "logo-black.png",
       "assets": [
@@ -15640,7 +15759,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "lenovo",
       "name": "联想",
       "aliases": [
@@ -15683,7 +15802,7 @@
       "website": "https://www.lenovo.com/",
       "entityType": "company",
       "categories": [
-        "hardware"
+        "computing-hardware"
       ],
       "defaultAsset": "logo-red-official.svg",
       "assets": [
@@ -15724,7 +15843,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "li-auto",
       "name": "理想",
       "aliases": [
@@ -15745,7 +15864,7 @@
       "website": "https://www.lixiang.com/",
       "entityType": "company",
       "categories": [
-        "automotive"
+        "automakers"
       ],
       "defaultAsset": "symbol.svg",
       "assets": [
@@ -15864,7 +15983,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "lianwei",
       "name": "联蔚数科",
       "aliases": [
@@ -15958,7 +16077,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "liepin",
       "name": "猎聘",
       "aliases": [],
@@ -15982,7 +16101,7 @@
       "website": "https://www.liepin.com/",
       "entityType": "company",
       "categories": [
-        "internet"
+        "recruitment"
       ],
       "defaultAsset": "logo.png",
       "assets": [
@@ -16018,7 +16137,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "lingxi-games",
       "name": "灵犀互娱",
       "aliases": [
@@ -16039,7 +16158,7 @@
       "website": "https://www.lingxigames.com/",
       "entityType": "company",
       "categories": [
-        "entertainment"
+        "games"
       ],
       "defaultAsset": "logo.png",
       "assets": [
@@ -16075,7 +16194,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "meitu",
       "name": "美图",
       "aliases": [
@@ -16096,7 +16215,7 @@
       "website": "https://www.meitu.com/zh",
       "entityType": "company",
       "categories": [
-        "internet"
+        "creative-software"
       ],
       "defaultAsset": "logo-zh.png",
       "sourceFiles": [
@@ -16154,7 +16273,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "meituan",
       "name": "美团",
       "aliases": [
@@ -16195,7 +16314,7 @@
       "website": "https://www.meituan.com/",
       "entityType": "company",
       "categories": [
-        "internet"
+        "local-services"
       ],
       "defaultAsset": "logo-chinese-official.png",
       "assets": [
@@ -16300,7 +16419,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "metax",
       "name": "沐曦",
       "aliases": [
@@ -16321,7 +16440,7 @@
       "website": "https://www.metax-tech.com/",
       "entityType": "company",
       "categories": [
-        "hardware"
+        "semiconductors"
       ],
       "defaultAsset": "logo.svg",
       "assets": [
@@ -16384,7 +16503,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "midea",
       "name": "美的",
       "aliases": [
@@ -16405,7 +16524,7 @@
       "website": "https://www.midea.com.cn/zh",
       "entityType": "company",
       "categories": [
-        "hardware"
+        "appliances"
       ],
       "defaultAsset": "logo.png",
       "assets": [
@@ -16444,7 +16563,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "mihoyo",
       "name": "米哈游",
       "aliases": [],
@@ -16463,7 +16582,7 @@
       "website": "https://www.mihoyo.com/",
       "entityType": "company",
       "categories": [
-        "entertainment"
+        "games"
       ],
       "defaultAsset": "wordmark.png",
       "assets": [
@@ -16535,7 +16654,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "minimax",
       "name": "MiniMax",
       "aliases": [
@@ -16585,6 +16704,9 @@
       "website": "https://www.minimax.io/",
       "entityType": "company",
       "categories": [
+        "ai-products"
+      ],
+      "topics": [
         "ai"
       ],
       "defaultAsset": "logo-gradient-horizontal.png",
@@ -17060,7 +17182,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "miniso",
       "name": "名创优品",
       "aliases": [
@@ -17091,7 +17213,7 @@
       "website": "https://www.miniso.com/",
       "entityType": "company",
       "categories": [
-        "零售"
+        "retail"
       ],
       "defaultAsset": "logo.png",
       "assets": [
@@ -17227,7 +17349,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "moka",
       "name": "Moka",
       "aliases": [],
@@ -17282,7 +17404,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "momenta",
       "name": "Momenta",
       "aliases": [],
@@ -17301,8 +17423,10 @@
       "website": "https://www.momenta.cn/",
       "entityType": "company",
       "categories": [
-        "ai",
-        "automotive"
+        "autonomous-driving"
+      ],
+      "topics": [
+        "ai"
       ],
       "defaultAsset": "logo-brand.png",
       "assets": [
@@ -17399,7 +17523,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "moonton",
       "name": "沐瞳科技",
       "aliases": [
@@ -17420,7 +17544,7 @@
       "website": "https://cn.moonton.com/",
       "entityType": "company",
       "categories": [
-        "entertainment"
+        "games"
       ],
       "defaultAsset": "logo-black.svg",
       "assets": [
@@ -17544,7 +17668,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "mu-group",
       "name": "凯越集团",
       "aliases": [
@@ -17565,7 +17689,7 @@
       "website": "https://www.mugroup.com/",
       "entityType": "company",
       "categories": [
-        "供应链"
+        "wholesale-trade"
       ],
       "defaultAsset": "logo.webp",
       "assets": [
@@ -17599,7 +17723,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "mucfc",
       "name": "招联",
       "aliases": [
@@ -17625,7 +17749,7 @@
       "website": "https://www.mucfc.com/",
       "entityType": "company",
       "categories": [
-        "金融"
+        "consumer-finance"
       ],
       "defaultAsset": "logo.png",
       "assets": [
@@ -17698,7 +17822,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "navinfo",
       "name": "四维图新",
       "aliases": [],
@@ -17717,8 +17841,7 @@
       "website": "https://www.seewayai.com/",
       "entityType": "company",
       "categories": [
-        "automotive",
-        "enterprise-software"
+        "auto-components"
       ],
       "defaultAsset": "logo-bilingual-gradient-official.png",
       "assets": [
@@ -17812,7 +17935,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "netease",
       "name": "网易",
       "aliases": [],
@@ -17844,7 +17967,8 @@
       "website": "https://hr.163.com/",
       "entityType": "company",
       "categories": [
-        "internet"
+        "games",
+        "internet-platforms"
       ],
       "defaultAsset": "wordmark-red-official.svg",
       "assets": [
@@ -17879,7 +18003,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "netease-cloud-music",
       "name": "网易云音乐",
       "aliases": [],
@@ -17898,7 +18022,7 @@
       "website": "https://music.163.com/",
       "entityType": "company",
       "categories": [
-        "entertainment"
+        "video-music"
       ],
       "defaultAsset": "logo-en-white.svg",
       "assets": [
@@ -17997,7 +18121,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "netease-leihuo",
       "name": "网易雷火",
       "aliases": [],
@@ -18015,7 +18139,9 @@
       },
       "website": "https://leihuo.163.com/",
       "entityType": "organization",
-      "categories": [],
+      "categories": [
+        "games"
+      ],
       "parentId": "netease",
       "defaultAsset": "logo-brand-image.png",
       "assets": [
@@ -18054,7 +18180,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "neuehct",
       "name": "智驾新程",
       "aliases": [
@@ -18075,7 +18201,7 @@
       "website": "https://www.neuehct.auto/",
       "entityType": "company",
       "categories": [
-        "automotive"
+        "autonomous-driving"
       ],
       "defaultAsset": "logo-dark-text.png",
       "assets": [
@@ -18146,7 +18272,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "new-oriental",
       "name": "新东方",
       "aliases": [],
@@ -18170,7 +18296,7 @@
       "website": "https://www.neworiental.org/",
       "entityType": "company",
       "categories": [
-        "教育"
+        "training"
       ],
       "defaultAsset": "wordmark-green-official.png",
       "assets": [
@@ -18237,7 +18363,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "ninebot",
       "name": "九号公司",
       "aliases": [
@@ -18263,7 +18389,7 @@
       "website": "https://ninebot.com/",
       "entityType": "company",
       "categories": [
-        "hardware"
+        "micro-mobility"
       ],
       "defaultAsset": "symbol-black.svg",
       "assets": [
@@ -18372,7 +18498,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "nio",
       "name": "蔚来",
       "aliases": [
@@ -18412,7 +18538,7 @@
       "website": "https://www.nio.com/",
       "entityType": "company",
       "categories": [
-        "automotive"
+        "automakers"
       ],
       "defaultAsset": "logo-black-english-official.svg",
       "artworks": [
@@ -18594,7 +18720,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "nsfocus",
       "name": "绿盟科技",
       "aliases": [
@@ -18615,7 +18741,7 @@
       "website": "https://www.nsfocus.com.cn/html/7/11/",
       "entityType": "company",
       "categories": [
-        "software"
+        "security"
       ],
       "defaultAsset": "logo.png",
       "assets": [
@@ -18654,7 +18780,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "oppo",
       "name": "OPPO",
       "aliases": [
@@ -18695,7 +18821,7 @@
       "website": "https://www.oppo.com/",
       "entityType": "company",
       "categories": [
-        "hardware"
+        "consumer-electronics"
       ],
       "defaultAsset": "wordmark-black-official.svg",
       "assets": [
@@ -18765,7 +18891,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "osda",
       "name": "欧达光电",
       "aliases": [
@@ -18786,7 +18912,7 @@
       "website": "https://osdasol.com.cn/",
       "entityType": "company",
       "categories": [
-        "能源"
+        "new-energy"
       ],
       "defaultAsset": "logo.svg",
       "assets": [
@@ -18821,7 +18947,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "parametrix",
       "name": "超参数科技",
       "aliases": [
@@ -18842,6 +18968,9 @@
       "website": "https://www.parametrix.ai/",
       "entityType": "company",
       "categories": [
+        "ai-products"
+      ],
+      "topics": [
         "ai"
       ],
       "defaultAsset": "logo-white.png",
@@ -18878,7 +19007,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "pcgroup",
       "name": "太平洋网络",
       "aliases": [],
@@ -18896,7 +19025,9 @@
       },
       "website": "https://corp.pconline.com.cn/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "news-publishing"
+      ],
       "defaultAsset": "logo-bilingual.png",
       "assets": [
         {
@@ -18934,7 +19065,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "pinduoduo",
       "name": "拼多多",
       "aliases": [],
@@ -18958,7 +19089,7 @@
       "website": "https://www.pinduoduo.com/",
       "entityType": "company",
       "categories": [
-        "e-commerce"
+        "ecommerce"
       ],
       "defaultAsset": "logo-slogan-official.png",
       "assets": [
@@ -19029,7 +19160,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "ping-an",
       "name": "中国平安",
       "aliases": [
@@ -19065,7 +19196,7 @@
       "website": "https://www.pingan.com/",
       "entityType": "company",
       "categories": [
-        "金融"
+        "insurance"
       ],
       "defaultAsset": "logo.svg",
       "sourceFiles": [
@@ -19806,7 +19937,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "pingan-health-insurance",
       "name": "平安健康保险",
       "aliases": [],
@@ -19830,7 +19961,7 @@
       "website": "https://health.pingan.com/",
       "entityType": "company",
       "categories": [
-        "金融"
+        "insurance"
       ],
       "defaultAsset": "logo.png",
       "assets": [
@@ -19902,7 +20033,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "pingan-tech",
       "name": "平安科技",
       "aliases": [],
@@ -19921,7 +20052,7 @@
       "website": "https://tech.pingan.com/",
       "entityType": "company",
       "categories": [
-        "software"
+        "enterprise-software"
       ],
       "defaultAsset": "logo.png",
       "assets": [
@@ -19957,7 +20088,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "qcraft",
       "name": "轻舟智航",
       "aliases": [
@@ -19978,7 +20109,7 @@
       "website": "https://www.qcraft.ai/cn",
       "entityType": "company",
       "categories": [
-        "automotive"
+        "autonomous-driving"
       ],
       "defaultAsset": "logo.png",
       "assets": [
@@ -20014,7 +20145,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "qfei",
       "name": "智书企飞",
       "aliases": [],
@@ -20072,7 +20203,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "qihoo-360",
       "name": "360",
       "aliases": [],
@@ -20096,8 +20227,7 @@
       "website": "https://www.360.cn/",
       "entityType": "company",
       "categories": [
-        "internet",
-        "software"
+        "security"
       ],
       "defaultAsset": "logo-horizontal-official.png",
       "assets": [
@@ -20297,7 +20427,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "qiyunfang",
       "name": "启云方",
       "aliases": [
@@ -20318,7 +20448,7 @@
       "website": "https://www.qiyunfang.com/",
       "entityType": "company",
       "categories": [
-        "software"
+        "industrial-software"
       ],
       "defaultAsset": "logo.png",
       "assets": [
@@ -20354,7 +20484,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "qunar",
       "name": "去哪儿",
       "aliases": [],
@@ -20373,7 +20503,7 @@
       "website": "https://www.qunar.com/",
       "entityType": "company",
       "categories": [
-        "internet"
+        "travel"
       ],
       "defaultAsset": "logo-english-official.svg",
       "assets": [
@@ -20473,7 +20603,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "reolink",
       "name": "睿联",
       "aliases": [],
@@ -20497,7 +20627,7 @@
       "website": "https://reolink.com/",
       "entityType": "company",
       "categories": [
-        "hardware"
+        "security-imaging"
       ],
       "defaultAsset": "wordmark-white-official.svg",
       "assets": [
@@ -20661,7 +20791,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "sangfor",
       "name": "深信服",
       "aliases": [],
@@ -20680,7 +20810,7 @@
       "website": "https://www.sangfor.com.cn/",
       "entityType": "company",
       "categories": [
-        "enterprise-software"
+        "security"
       ],
       "defaultAsset": "logo-bilingual-official.svg",
       "assets": [
@@ -20749,7 +20879,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "sany",
       "name": "三一重工",
       "aliases": [],
@@ -20768,8 +20898,7 @@
       "website": "https://www.sany.com.cn/",
       "entityType": "company",
       "categories": [
-        "hardware",
-        "industrial-automation"
+        "heavy-equipment"
       ],
       "defaultAsset": "logo-bilingual-official.png",
       "assets": [
@@ -20837,7 +20966,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "selectdb",
       "name": "飞轮科技",
       "aliases": [
@@ -20865,7 +20994,13 @@
       },
       "website": "https://www.selectdb.com/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "data-platforms"
+      ],
+      "topics": [
+        "developer-ecosystem",
+        "open-source-ecosystem"
+      ],
       "defaultAsset": "logo-selectdb.png",
       "assets": [
         {
@@ -20903,7 +21038,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "sensetime",
       "name": "商汤科技",
       "aliases": [
@@ -20948,6 +21083,9 @@
       "website": "https://www.sensetime.com/",
       "entityType": "company",
       "categories": [
+        "ai-products"
+      ],
+      "topics": [
         "ai"
       ],
       "defaultAsset": "logo-color.png",
@@ -20985,7 +21123,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "sf-express",
       "name": "顺丰速运",
       "aliases": [
@@ -21006,7 +21144,7 @@
       "website": "https://www.sf-express.com/chn/sc",
       "entityType": "company",
       "categories": [
-        "internet"
+        "express-logistics"
       ],
       "defaultAsset": "icon-appstore.jpg",
       "sourceFiles": [
@@ -21157,7 +21295,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "sf-tech",
       "name": "顺丰科技",
       "aliases": [],
@@ -21211,7 +21349,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "shanda",
       "name": "盛大",
       "aliases": [],
@@ -21230,7 +21368,7 @@
       "website": "https://shanda.com/",
       "entityType": "company",
       "categories": [
-        "internet"
+        "securities-investment"
       ],
       "defaultAsset": "icon-color-official.png",
       "assets": [
@@ -21330,7 +21468,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "shopee",
       "name": "虾皮",
       "aliases": [
@@ -21351,7 +21489,7 @@
       "website": "https://shopee.sg/",
       "entityType": "company",
       "categories": [
-        "e-commerce"
+        "cross-border-commerce"
       ],
       "defaultAsset": "logo-horizontal-official.svg",
       "assets": [
@@ -21462,7 +21600,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "sinolink-securities",
       "name": "国金证券",
       "aliases": [],
@@ -21480,7 +21618,9 @@
       },
       "website": "https://www.gjzq.com.cn/main/index.html",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "securities-investment"
+      ],
       "defaultAsset": "logo-bilingual-tagline.png",
       "assets": [
         {
@@ -21515,7 +21655,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "soul",
       "name": "Soul",
       "aliases": [],
@@ -21534,7 +21674,7 @@
       "website": "https://www.soulapp.cn/",
       "entityType": "company",
       "categories": [
-        "social-media"
+        "social-community"
       ],
       "defaultAsset": "logo-brand.png",
       "assets": [
@@ -21599,7 +21739,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "southchip",
       "name": "南芯",
       "aliases": [
@@ -21620,7 +21760,7 @@
       "website": "https://www.southchip.com/",
       "entityType": "company",
       "categories": [
-        "hardware"
+        "semiconductors"
       ],
       "defaultAsset": "logo-nav.png",
       "assets": [
@@ -21685,7 +21825,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "spdb-bank",
       "name": "浦发银行",
       "aliases": [
@@ -21706,7 +21846,7 @@
       "website": "https://www.spdb.com.cn/",
       "entityType": "company",
       "categories": [
-        "金融"
+        "banking"
       ],
       "defaultAsset": "logo.svg",
       "assets": [
@@ -21741,7 +21881,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "spicyliu",
       "name": "刘文祥麻辣烫",
       "aliases": [],
@@ -21760,7 +21900,7 @@
       "website": "https://www.spicyliu.com/",
       "entityType": "company",
       "categories": [
-        "餐饮"
+        "dining"
       ],
       "defaultAsset": "logo.png",
       "assets": [
@@ -21796,7 +21936,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "spirit-ai",
       "name": "千寻智能",
       "aliases": [
@@ -21817,6 +21957,9 @@
       "website": "https://docs.spirit-ai.com/zh",
       "entityType": "company",
       "categories": [
+        "robotics"
+      ],
+      "topics": [
         "ai"
       ],
       "defaultAsset": "logo-zh.png",
@@ -21882,7 +22025,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "srhino",
       "name": "石犀科技",
       "aliases": [
@@ -21916,7 +22059,7 @@
       "website": "https://www.srhino.com/",
       "entityType": "company",
       "categories": [
-        "enterprise-software"
+        "data-platforms"
       ],
       "defaultAsset": "logo-zh-brand.png",
       "assets": [
@@ -21955,7 +22098,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "stepfun",
       "name": "阶跃星辰",
       "aliases": [],
@@ -21973,7 +22116,12 @@
       },
       "website": "https://www.stepfun.com/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "ai-products"
+      ],
+      "topics": [
+        "ai"
+      ],
       "defaultAsset": "symbol-black.svg",
       "assets": [
         {
@@ -22040,7 +22188,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "sundray",
       "name": "信锐技术",
       "aliases": [
@@ -22061,8 +22209,7 @@
       "website": "https://www.sundray.com.cn/",
       "entityType": "company",
       "categories": [
-        "enterprise-software",
-        "telecommunications"
+        "telecom-equipment"
       ],
       "defaultAsset": "logo-bilingual-color-official.png",
       "assets": [
@@ -22133,7 +22280,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "sungrow",
       "name": "阳光电源",
       "aliases": [],
@@ -22152,7 +22299,7 @@
       "website": "https://www.sungrowpower.com/us/en",
       "entityType": "company",
       "categories": [
-        "industrial-automation"
+        "new-energy"
       ],
       "defaultAsset": "wordmark-orange-official.svg",
       "assets": [
@@ -22187,7 +22334,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "sunshine-insurance",
       "name": "阳光保险",
       "aliases": [],
@@ -22206,7 +22353,7 @@
       "website": "https://www.sinosig.com/",
       "entityType": "company",
       "categories": [
-        "保险"
+        "insurance"
       ],
       "defaultAsset": "logo-bilingual.png",
       "assets": [
@@ -22271,7 +22418,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "taotian",
       "name": "淘天集团",
       "aliases": [
@@ -22292,7 +22439,7 @@
       "website": "https://talent.taotian.com/",
       "entityType": "organization",
       "categories": [
-        "e-commerce"
+        "ecommerce"
       ],
       "defaultAsset": "logo-recruitment-official.png",
       "assets": [
@@ -22331,7 +22478,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "td-tech",
       "name": "鼎桥",
       "aliases": [],
@@ -22349,7 +22496,9 @@
       },
       "website": "https://www.td-tech.com/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "telecom-equipment"
+      ],
       "defaultAsset": "logo-bilingual.svg",
       "assets": [
         {
@@ -22383,7 +22532,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "tencent",
       "name": "腾讯",
       "aliases": [
@@ -22432,7 +22581,9 @@
       "website": "https://www.tencent.com/",
       "entityType": "company",
       "categories": [
-        "internet"
+        "games",
+        "internet-platforms",
+        "social-community"
       ],
       "defaultAsset": "wordmark-blue-official.png",
       "assets": [
@@ -22839,7 +22990,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "tencent-cloud",
       "name": "腾讯云",
       "aliases": [],
@@ -22858,7 +23009,10 @@
       "website": "https://cloud.tencent.com/",
       "entityType": "product",
       "categories": [
-        "developer-tools"
+        "cloud"
+      ],
+      "topics": [
+        "developer-ecosystem"
       ],
       "defaultAsset": "logo-brand.svg",
       "assets": [
@@ -22954,7 +23108,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "tencent-music",
       "name": "腾讯音乐娱乐集团",
       "aliases": [
@@ -22982,8 +23136,7 @@
       "website": "https://www.tencentmusic.com/",
       "entityType": "company",
       "categories": [
-        "entertainment",
-        "internet"
+        "video-music"
       ],
       "defaultAsset": "logo-chinese-official.png",
       "assets": [
@@ -23089,7 +23242,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "tenyu",
       "name": "腾娱互动",
       "aliases": [],
@@ -23113,7 +23266,7 @@
       "website": "https://zhaotalent-tenyu.ihr.tencent-cloud.com/tenant/",
       "entityType": "company",
       "categories": [
-        "entertainment"
+        "games"
       ],
       "defaultAsset": "logo-recruitment-official.png",
       "assets": [
@@ -23153,7 +23306,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "threatbook",
       "name": "微步在线",
       "aliases": [],
@@ -23177,7 +23330,7 @@
       "website": "https://threatbook.cn/",
       "entityType": "company",
       "categories": [
-        "enterprise-software"
+        "security"
       ],
       "defaultAsset": "logo-chinese-white-official.png",
       "assets": [
@@ -23213,7 +23366,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "three-k-games",
       "name": "3K游戏",
       "aliases": [
@@ -23234,7 +23387,7 @@
       "website": "https://www.3k.com/joinUs.html",
       "entityType": "company",
       "categories": [
-        "entertainment"
+        "games"
       ],
       "defaultAsset": "logo-brand.png",
       "assets": [
@@ -23299,7 +23452,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "thunderbit",
       "name": "雷鸣比特",
       "aliases": [
@@ -23320,6 +23473,9 @@
       "website": "https://thunderbit.com/",
       "entityType": "company",
       "categories": [
+        "developer-tools"
+      ],
+      "topics": [
         "ai"
       ],
       "defaultAsset": "logo.svg",
@@ -23355,7 +23511,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "tiger-brokers",
       "name": "老虎国际",
       "aliases": [],
@@ -23384,7 +23540,7 @@
       "website": "https://www.itigerup.com/hans/job",
       "entityType": "company",
       "categories": [
-        "金融"
+        "securities-investment"
       ],
       "defaultAsset": "logo.png",
       "assets": [
@@ -23483,7 +23639,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "tongcheng-travel",
       "name": "同程旅行",
       "aliases": [],
@@ -23509,7 +23665,9 @@
       },
       "website": "https://www.tongchengir.com/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "travel"
+      ],
       "defaultAsset": "logo-zh.png",
       "assets": [
         {
@@ -23547,7 +23705,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "tonghuashun",
       "name": "同花顺",
       "aliases": [],
@@ -23576,7 +23734,7 @@
       "website": "https://www.10jqka.com.cn/",
       "entityType": "company",
       "categories": [
-        "金融"
+        "financial-information"
       ],
       "defaultAsset": "logo-brand.png",
       "assets": [
@@ -23641,7 +23799,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "transsion",
       "name": "传音控股",
       "aliases": [
@@ -23671,7 +23829,7 @@
       "website": "https://www.transsion.com/",
       "entityType": "company",
       "categories": [
-        "hardware"
+        "consumer-electronics"
       ],
       "defaultAsset": "wordmark-black-official.svg",
       "assets": [
@@ -23709,7 +23867,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "trip-com",
       "name": "携程集团",
       "aliases": [
@@ -23764,7 +23922,7 @@
       "website": "https://group.trip.com/",
       "entityType": "company",
       "categories": [
-        "internet"
+        "travel"
       ],
       "defaultAsset": "wordmark-white-official.png",
       "sourceFiles": [
@@ -23862,7 +24020,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "tsingmicro",
       "name": "清微智能",
       "aliases": [
@@ -23888,8 +24046,10 @@
       "website": "https://www.tsingmicro.com/",
       "entityType": "company",
       "categories": [
-        "ai",
-        "hardware"
+        "semiconductors"
+      ],
+      "topics": [
+        "ai"
       ],
       "defaultAsset": "logo-color-official.svg",
       "assets": [
@@ -23980,7 +24140,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "united-imaging",
       "name": "联影",
       "aliases": [
@@ -24001,7 +24161,7 @@
       "website": "https://www.united-imaging.com/",
       "entityType": "company",
       "categories": [
-        "医疗设备"
+        "medical-devices"
       ],
       "defaultAsset": "logo-zh.png",
       "assets": [
@@ -24098,7 +24258,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "unitree",
       "name": "宇树科技",
       "aliases": [
@@ -24120,7 +24280,10 @@
       "website": "https://www.unitree.com/cn",
       "entityType": "company",
       "categories": [
-        "hardware"
+        "robotics"
+      ],
+      "topics": [
+        "ai"
       ],
       "defaultAsset": "logo.svg",
       "assets": [
@@ -24183,7 +24346,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "uniview",
       "name": "宇视科技",
       "aliases": [
@@ -24204,7 +24367,7 @@
       "website": "https://cn.uniview.com/",
       "entityType": "company",
       "categories": [
-        "hardware"
+        "security-imaging"
       ],
       "defaultAsset": "logo.png",
       "assets": [
@@ -24243,7 +24406,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "urovo",
       "name": "优博讯",
       "aliases": [],
@@ -24262,7 +24425,7 @@
       "website": "https://www.urovo.com/",
       "entityType": "company",
       "categories": [
-        "hardware"
+        "consumer-electronics"
       ],
       "defaultAsset": "logo-bilingual-blue-official.png",
       "assets": [
@@ -24397,7 +24560,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "vipshop",
       "name": "唯品会",
       "aliases": [
@@ -24431,7 +24594,7 @@
       "website": "https://www.vip.com/",
       "entityType": "company",
       "categories": [
-        "e-commerce"
+        "ecommerce"
       ],
       "defaultAsset": "wordmark-slogan-official.png",
       "assets": [
@@ -24473,7 +24636,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "vis-signal",
       "name": "杭州可见信号科技",
       "aliases": [],
@@ -24491,7 +24654,12 @@
       },
       "website": "https://vis-signal.com/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "ai-products"
+      ],
+      "topics": [
+        "ai"
+      ],
       "defaultAsset": "icon.svg",
       "assets": [
         {
@@ -24528,7 +24696,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "vitasoy",
       "name": "维他奶",
       "aliases": [],
@@ -24554,7 +24722,9 @@
       },
       "website": "https://www.vitasoy.com/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "food-beverages"
+      ],
       "defaultAsset": "logo-bilingual.png",
       "assets": [
         {
@@ -24624,7 +24794,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "vitco",
       "name": "远见聚众",
       "aliases": [
@@ -24720,7 +24890,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "vivo",
       "name": "vivo",
       "aliases": [
@@ -24762,7 +24932,7 @@
       "website": "https://www.vivo.com/",
       "entityType": "company",
       "categories": [
-        "hardware"
+        "consumer-electronics"
       ],
       "defaultAsset": "wordmark-blue-2019.svg",
       "assets": [
@@ -24798,7 +24968,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "voyah",
       "name": "岚图",
       "aliases": [
@@ -24834,7 +25004,7 @@
       "website": "https://www.voyah.com.cn/",
       "entityType": "company",
       "categories": [
-        "automotive"
+        "automakers"
       ],
       "defaultAsset": "icon-appstore.jpg",
       "assets": [
@@ -25018,7 +25188,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "waterdrop",
       "name": "水滴",
       "aliases": [
@@ -25052,7 +25222,8 @@
       "website": "https://www.waterdrop-inc.com/",
       "entityType": "company",
       "categories": [
-        "internet"
+        "insurance",
+        "wellness"
       ],
       "defaultAsset": "logo-bilingual-small-official.png",
       "assets": [
@@ -25121,7 +25292,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "weibo",
       "name": "微博",
       "aliases": [],
@@ -25139,7 +25310,9 @@
       },
       "website": "https://weibo.com/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "social-community"
+      ],
       "defaultAsset": "icon-appstore.jpg",
       "assets": [
         {
@@ -25205,7 +25378,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "weidian",
       "name": "微店",
       "aliases": [],
@@ -25229,7 +25402,7 @@
       "website": "https://www.weidian.com/",
       "entityType": "company",
       "categories": [
-        "e-commerce"
+        "ecommerce"
       ],
       "defaultAsset": "wordmark-zh.png",
       "assets": [
@@ -25294,7 +25467,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "weride",
       "name": "文远知行",
       "aliases": [],
@@ -25312,7 +25485,9 @@
       },
       "website": "https://www.weride.ai/zh",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "autonomous-driving"
+      ],
       "defaultAsset": "logo-bilingual.png",
       "assets": [
         {
@@ -25376,7 +25551,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "whalecloud",
       "name": "浩鲸",
       "aliases": [],
@@ -25399,7 +25574,9 @@
       },
       "website": "https://www.iwhalecloud.com/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "outsourcing"
+      ],
       "defaultAsset": "logo-zh.png",
       "assets": [
         {
@@ -25434,7 +25611,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "wondershare",
       "name": "万兴科技",
       "aliases": [],
@@ -25458,7 +25635,7 @@
       "website": "https://www.wondershare.cn/",
       "entityType": "company",
       "categories": [
-        "software"
+        "creative-software"
       ],
       "defaultAsset": "logo-english-black-official.svg",
       "artworks": [
@@ -25723,7 +25900,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "wuxiapptec",
       "name": "药明康德",
       "aliases": [],
@@ -25742,7 +25919,7 @@
       "website": "https://www.wuxiapptec.com/",
       "entityType": "company",
       "categories": [
-        "医疗健康"
+        "pharma-biotech"
       ],
       "defaultAsset": "logo-english-white-official.svg",
       "assets": [
@@ -25777,7 +25954,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "xfusion",
       "name": "超聚变",
       "aliases": [],
@@ -25796,7 +25973,7 @@
       "website": "https://www.xfusion.com/en",
       "entityType": "company",
       "categories": [
-        "hardware"
+        "computing-hardware"
       ],
       "defaultAsset": "wordmark-brand.png",
       "sourceFiles": [
@@ -26125,7 +26302,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "xiaoduo",
       "name": "晓多科技",
       "aliases": [],
@@ -26154,8 +26331,10 @@
       "website": "https://www.xiaoduoai.com/",
       "entityType": "company",
       "categories": [
-        "ai",
-        "enterprise-software"
+        "ai-products"
+      ],
+      "topics": [
+        "ai"
       ],
       "defaultAsset": "logo-chinese-ai-official.png",
       "assets": [
@@ -26223,7 +26402,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "xiaohongshu",
       "name": "小红书",
       "aliases": [
@@ -26254,8 +26433,7 @@
       "website": "https://www.xiaohongshu.com/",
       "entityType": "company",
       "categories": [
-        "internet",
-        "social-media"
+        "social-community"
       ],
       "defaultAsset": "wordmark-capsule-official.svg",
       "assets": [
@@ -26330,7 +26508,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "xiaoman",
       "name": "小满科技",
       "aliases": [],
@@ -26471,7 +26649,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "xiaomi",
       "name": "小米",
       "aliases": [
@@ -26521,7 +26699,7 @@
       "website": "https://www.mi.com/",
       "entityType": "company",
       "categories": [
-        "hardware"
+        "consumer-electronics"
       ],
       "defaultAsset": "icon-orange-extracted.svg",
       "assets": [
@@ -26594,7 +26772,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "xiaotiancai",
       "name": "小天才",
       "aliases": [],
@@ -26623,7 +26801,7 @@
       "website": "https://www.okii.com/",
       "entityType": "company",
       "categories": [
-        "hardware"
+        "consumer-electronics"
       ],
       "defaultAsset": "wordmark-orange.png",
       "assets": [
@@ -26688,7 +26866,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "xpeng",
       "name": "小鹏",
       "aliases": [
@@ -26717,7 +26895,7 @@
       "website": "https://www.xiaopeng.com/",
       "entityType": "company",
       "categories": [
-        "automotive"
+        "automakers"
       ],
       "defaultAsset": "icon-black-square-extracted.svg",
       "artworks": [
@@ -26937,7 +27115,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "xunlei",
       "name": "迅雷",
       "aliases": [],
@@ -26956,7 +27134,7 @@
       "website": "https://www.xunlei.com/",
       "entityType": "company",
       "categories": [
-        "software"
+        "creative-software"
       ],
       "defaultAsset": "logo-brand.svg",
       "assets": [
@@ -27024,7 +27202,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "yaowu-tech",
       "name": "要务科技",
       "aliases": [
@@ -27053,7 +27231,11 @@
       "website": "https://www.yaowutech.com/",
       "entityType": "company",
       "categories": [
-        "software"
+        "heavy-equipment",
+        "industrial-software"
+      ],
+      "topics": [
+        "ai"
       ],
       "defaultAsset": "logo-bilingual-official.png",
       "assets": [
@@ -27121,7 +27303,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "yingdao",
       "name": "影刀",
       "aliases": [
@@ -27165,7 +27347,9 @@
       },
       "website": "https://www.yingdao.com/",
       "entityType": "company",
-      "categories": [],
+      "categories": [
+        "enterprise-software"
+      ],
       "defaultAsset": "logo-zh.svg",
       "assets": [
         {
@@ -27229,7 +27413,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "yonyou",
       "name": "用友",
       "aliases": [
@@ -27273,8 +27457,7 @@
       "website": "https://www.yonyou.com/",
       "entityType": "company",
       "categories": [
-        "enterprise-software",
-        "software"
+        "enterprise-software"
       ],
       "defaultAsset": "wordmark-red-transparent.png",
       "assets": [
@@ -27385,7 +27568,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "youzan",
       "name": "有赞",
       "aliases": [],
@@ -27404,7 +27587,6 @@
       "website": "https://www.youzan.com/",
       "entityType": "company",
       "categories": [
-        "e-commerce",
         "enterprise-software"
       ],
       "defaultAsset": "logo-zh-brand.png",
@@ -27770,7 +27952,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "yuanbao",
       "name": "腾讯元宝",
       "aliases": [
@@ -27814,6 +27996,9 @@
       "website": "https://yuanbao.tencent.com/",
       "entityType": "product",
       "categories": [
+        "ai-products"
+      ],
+      "topics": [
         "ai"
       ],
       "parentId": "tencent",
@@ -27886,7 +28071,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "yuanqi-forest",
       "name": "元气森林",
       "aliases": [],
@@ -27910,7 +28095,7 @@
       "website": "https://www.yuanqisenlin.com/",
       "entityType": "company",
       "categories": [
-        "食品饮料"
+        "food-beverages"
       ],
       "defaultAsset": "logo.png",
       "assets": [
@@ -27949,7 +28134,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "yuanyou-games",
       "name": "乐享元游",
       "aliases": [],
@@ -27968,7 +28153,7 @@
       "website": "https://www.yyxxgames.com/",
       "entityType": "company",
       "categories": [
-        "entertainment"
+        "games"
       ],
       "defaultAsset": "logo.png",
       "assets": [
@@ -28007,7 +28192,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "zengame",
       "name": "禅游科技",
       "aliases": [],
@@ -28026,7 +28211,7 @@
       "website": "https://www.zen-game.com/",
       "entityType": "company",
       "categories": [
-        "entertainment"
+        "games"
       ],
       "defaultAsset": "logo-white.png",
       "assets": [
@@ -28062,7 +28247,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "zhihu",
       "name": "知乎",
       "aliases": [
@@ -28102,7 +28287,7 @@
       "website": "https://www.zhihu.com/",
       "entityType": "company",
       "categories": [
-        "internet"
+        "social-community"
       ],
       "defaultAsset": "wordmark-slogan-official.svg",
       "assets": [
@@ -28174,7 +28359,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "zhipu",
       "name": "智谱",
       "aliases": [
@@ -28219,6 +28404,9 @@
       "website": "https://www.zhipuai.cn/",
       "entityType": "company",
       "categories": [
+        "ai-products"
+      ],
+      "topics": [
         "ai"
       ],
       "defaultAsset": "logo-black-chinese.svg",
@@ -28393,7 +28581,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "zhuanzhuan",
       "name": "转转",
       "aliases": [],
@@ -28417,7 +28605,7 @@
       "website": "https://www.zhuanzhuan.com/",
       "entityType": "company",
       "categories": [
-        "e-commerce"
+        "resale"
       ],
       "defaultAsset": "logo-zh.png",
       "assets": [
@@ -28453,7 +28641,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "zte",
       "name": "中兴通讯",
       "aliases": [
@@ -28492,8 +28680,7 @@
       "website": "https://www.zte.com.cn/",
       "entityType": "company",
       "categories": [
-        "hardware",
-        "telecommunications"
+        "telecom-equipment"
       ],
       "defaultAsset": "wordmark-blue-official.png",
       "assets": [
@@ -28607,7 +28794,7 @@
       ]
     },
     {
-      "schemaVersion": 3,
+      "schemaVersion": 4,
       "id": "zuoyebang",
       "name": "作业帮",
       "aliases": [
@@ -28633,7 +28820,7 @@
       "website": "https://www.zuoyebang.com/",
       "entityType": "company",
       "categories": [
-        "internet"
+        "education-technology"
       ],
       "defaultAsset": "logo-slogan-official.png",
       "assets": [

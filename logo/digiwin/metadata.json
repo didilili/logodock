@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "digiwin",
   "name": "鼎捷数智",
   "aliases": [],
@@ -17,7 +17,9 @@
     ]
   },
   "entityType": "company",
-  "categories": [],
+  "categories": [
+    "industrial-software"
+  ],
   "defaultAsset": "wordmark-en-commons.png",
   "assets": [
     {

@@ -3,6 +3,7 @@ import { lstat, readdir, readFile } from 'node:fs/promises';
 import { basename, extname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { checkSvg } from './svg.mjs';
+import { categoryDefinitions, topicLabels } from '../../src/lib/catalog-taxonomy.mjs';
 
 export const repositoryRoot = fileURLToPath(new URL('../../', import.meta.url));
 export const metadataSchema = JSON.parse(
@@ -392,6 +393,20 @@ export async function loadCatalog(root = repositoryRoot) {
       metadataSchema.properties.categories,
       `${folder}.categories`,
     );
+    for (const id of categories)
+      requireValue(
+        categoryDefinitions.get(id)?.parent,
+        `${folder}.categories: unknown leaf industry ${id}. See src/lib/catalog-taxonomy.mjs.`,
+      );
+    const topics =
+      metadata.topics === undefined
+        ? undefined
+        : stringList(metadata.topics, metadataSchema.properties.topics, `${folder}.topics`);
+    for (const id of topics ?? [])
+      requireValue(
+        Object.hasOwn(topicLabels, id),
+        `${folder}.topics: unknown topic ${id}. See src/lib/catalog-taxonomy.mjs.`,
+      );
     list(metadata.assets, metadataSchema.properties.assets, `${folder}.assets`);
     const files = metadata.assets.map((item) => item?.file);
     requireValue(new Set(files).size === files.length, `${folder}: duplicate asset file`);
@@ -472,6 +487,7 @@ export async function loadCatalog(root = repositoryRoot) {
       website: httpsUrl(metadata.website, `${folder}.website`, metadataSchema.properties.website),
       entityType: metadata.entityType,
       categories,
+      ...(topics === undefined ? {} : { topics }),
       ...(metadata.parentId === undefined ? {} : { parentId: metadata.parentId }),
       defaultAsset: metadata.defaultAsset,
       ...(artworks === undefined ? {} : { artworks }),

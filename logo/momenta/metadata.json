@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "momenta",
   "name": "Momenta",
   "aliases": [],
@@ -18,8 +18,7 @@
   "website": "https://www.momenta.cn/",
   "entityType": "company",
   "categories": [
-    "ai",
-    "automotive"
+    "autonomous-driving"
   ],
   "defaultAsset": "logo-brand.png",
   "assets": [
@@ -106,5 +105,8 @@
         "从同品牌原始 SVG 提取图形，方形画布长边贴边，短边居中，额外边距为零。"
       ]
     }
+  ],
+  "topics": [
+    "ai"
   ]
 }

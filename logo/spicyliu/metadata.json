@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "spicyliu",
   "name": "刘文祥麻辣烫",
   "aliases": [],
@@ -18,7 +18,7 @@
   "website": "https://www.spicyliu.com/",
   "entityType": "company",
   "categories": [
-    "餐饮"
+    "dining"
   ],
   "defaultAsset": "logo.png",
   "assets": [

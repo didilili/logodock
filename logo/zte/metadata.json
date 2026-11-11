@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "zte",
   "name": "中兴通讯",
   "aliases": [
@@ -38,8 +38,7 @@
   "website": "https://www.zte.com.cn/",
   "entityType": "company",
   "categories": [
-    "hardware",
-    "telecommunications"
+    "telecom-equipment"
   ],
   "defaultAsset": "wordmark-blue-official.png",
   "assets": [

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "xfusion",
   "name": "超聚变",
   "aliases": [],
@@ -18,7 +18,7 @@
   "website": "https://www.xfusion.com/en",
   "entityType": "company",
   "categories": [
-    "hardware"
+    "computing-hardware"
   ],
   "defaultAsset": "wordmark-brand.png",
   "assets": [

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "kuaishang",
   "name": "快商通",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://www.kuaishang.cn/",
   "entityType": "company",
   "categories": [
-    "ai"
+    "ai-products"
   ],
   "defaultAsset": "logo.png",
   "assets": [
@@ -50,5 +50,8 @@
         "reviewedAt": "2026-11-10"
       }
     }
+  ],
+  "topics": [
+    "ai"
   ]
 }

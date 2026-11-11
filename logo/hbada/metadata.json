@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "hbada",
   "name": "黑白调",
   "aliases": [],
@@ -17,7 +17,9 @@
     ]
   },
   "entityType": "company",
-  "categories": [],
+  "categories": [
+    "home-goods"
+  ],
   "defaultAsset": "wordmark.png",
   "assets": [
     {

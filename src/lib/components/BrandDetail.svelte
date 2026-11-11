@@ -51,7 +51,7 @@
     if (!pageUrl) return path;
     const result = new URL(path, pageUrl);
     const current = new URL(pageUrl);
-    for (const key of ['q', 'type', 'format', 'shape', 'category']) {
+    for (const key of ['q', 'type', 'format', 'shape', 'category', 'topic']) {
       const value = current.searchParams.get(key);
       if (value) result.searchParams.set(key, value);
     }

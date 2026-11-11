@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "inovance",
   "name": "汇川技术",
   "aliases": [
@@ -26,7 +26,7 @@
   "website": "https://www.inovance.com/",
   "entityType": "company",
   "categories": [
-    "industrial-automation"
+    "automation"
   ],
   "defaultAsset": "wordmark-blue-official.png",
   "assets": [

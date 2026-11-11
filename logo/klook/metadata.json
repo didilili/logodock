@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "klook",
   "name": "客路",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://www.klook.com/",
   "entityType": "company",
   "categories": [
-    "旅游"
+    "travel"
   ],
   "defaultAsset": "logo-rgb-official.png",
   "assets": [

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "tongcheng-travel",
   "name": "同程旅行",
   "aliases": [],
@@ -25,7 +25,9 @@
     ]
   },
   "entityType": "company",
-  "categories": [],
+  "categories": [
+    "travel"
+  ],
   "defaultAsset": "logo-zh.png",
   "assets": [
     {

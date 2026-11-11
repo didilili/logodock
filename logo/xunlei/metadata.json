@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "xunlei",
   "name": "迅雷",
   "aliases": [],
@@ -18,7 +18,7 @@
   "website": "https://www.xunlei.com/",
   "entityType": "company",
   "categories": [
-    "software"
+    "creative-software"
   ],
   "defaultAsset": "logo-brand.svg",
   "assets": [

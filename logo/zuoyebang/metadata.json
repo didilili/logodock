@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "zuoyebang",
   "name": "作业帮",
   "aliases": [
@@ -25,7 +25,7 @@
   "website": "https://www.zuoyebang.com/",
   "entityType": "company",
   "categories": [
-    "internet"
+    "education-technology"
   ],
   "defaultAsset": "logo-slogan-official.png",
   "assets": [

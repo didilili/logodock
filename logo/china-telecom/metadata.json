@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "china-telecom",
   "name": "中国电信",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://www.chinatelecom-h.com/sc/global/home.php",
   "entityType": "company",
   "categories": [
-    "telecommunications"
+    "telecom-operators"
   ],
   "defaultAsset": "logo-bilingual.png",
   "assets": [

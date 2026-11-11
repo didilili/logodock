@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "metax",
   "name": "沐曦",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://www.metax-tech.com/",
   "entityType": "company",
   "categories": [
-    "hardware"
+    "semiconductors"
   ],
   "defaultAsset": "logo.svg",
   "assets": [

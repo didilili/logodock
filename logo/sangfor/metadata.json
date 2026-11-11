@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "sangfor",
   "name": "深信服",
   "aliases": [],
@@ -18,7 +18,7 @@
   "website": "https://www.sangfor.com.cn/",
   "entityType": "company",
   "categories": [
-    "enterprise-software"
+    "security"
   ],
   "defaultAsset": "logo-bilingual-official.svg",
   "assets": [

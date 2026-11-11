@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "wuxiapptec",
   "name": "药明康德",
   "aliases": [],
@@ -18,7 +18,7 @@
     ]
   },
   "categories": [
-    "医疗健康"
+    "pharma-biotech"
   ],
   "defaultAsset": "logo-english-white-official.svg",
   "assets": [

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "yuanyou-games",
   "name": "乐享元游",
   "aliases": [],
@@ -18,7 +18,7 @@
   "website": "https://www.yyxxgames.com/",
   "entityType": "company",
   "categories": [
-    "entertainment"
+    "games"
   ],
   "defaultAsset": "logo.png",
   "assets": [

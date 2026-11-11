@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "dtstack",
   "name": "袋鼠云",
   "aliases": [],
@@ -17,7 +17,9 @@
     ]
   },
   "entityType": "company",
-  "categories": [],
+  "categories": [
+    "data-platforms"
+  ],
   "defaultAsset": "symbol-brand.svg",
   "assets": [
     {
@@ -103,5 +105,8 @@
         "从已登记官方组合标保留独立图形路径，方形长边贴边，短边居中，额外边距为零。"
       ]
     }
+  ],
+  "topics": [
+    "developer-ecosystem"
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "callnovo",
   "name": "客诺信息技术",
   "aliases": [
@@ -25,7 +25,7 @@
   "website": "https://www.callnovocx.com/request-a-quote",
   "entityType": "company",
   "categories": [
-    "企业服务"
+    "outsourcing"
   ],
   "defaultAsset": "logo-color.webp",
   "assets": [

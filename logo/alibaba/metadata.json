@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "alibaba",
   "name": "阿里巴巴集团",
   "aliases": [
@@ -43,7 +43,7 @@
   "website": "https://www.alibabagroup.com/",
   "entityType": "company",
   "categories": [
-    "internet"
+    "internet-platforms"
   ],
   "defaultAsset": "logo-chinese-horizontal-official.png",
   "assets": [

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "zhuanzhuan",
   "name": "转转",
   "aliases": [],
@@ -23,7 +23,7 @@
   "website": "https://www.zhuanzhuan.com/",
   "entityType": "company",
   "categories": [
-    "e-commerce"
+    "resale"
   ],
   "defaultAsset": "logo-zh.png",
   "assets": [

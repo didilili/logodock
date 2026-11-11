@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "9yundata",
   "name": "九云数智",
   "aliases": [
@@ -20,7 +20,7 @@
     ]
   },
   "categories": [
-    "enterprise-software"
+    "data-platforms"
   ],
   "defaultAsset": "icon-blue-official.png",
   "assets": [

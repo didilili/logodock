@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "honor",
   "name": "荣耀",
   "aliases": [
@@ -41,7 +41,7 @@
   "website": "https://www.honor.com/",
   "entityType": "company",
   "categories": [
-    "hardware"
+    "consumer-electronics"
   ],
   "defaultAsset": "logo-color-black-horizontal-2026.svg",
   "assets": [

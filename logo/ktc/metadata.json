@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "ktc",
   "name": "康冠科技",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://www.ktc.cn/",
   "entityType": "company",
   "categories": [
-    "hardware"
+    "consumer-electronics"
   ],
   "defaultAsset": "logo.png",
   "assets": [

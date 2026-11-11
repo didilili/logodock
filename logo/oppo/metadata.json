@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "oppo",
   "name": "OPPO",
   "aliases": [
@@ -40,7 +40,7 @@
   "website": "https://www.oppo.com/",
   "entityType": "company",
   "categories": [
-    "hardware"
+    "consumer-electronics"
   ],
   "defaultAsset": "wordmark-black-official.svg",
   "assets": [

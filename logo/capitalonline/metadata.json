@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "capitalonline",
   "name": "首都在线",
   "aliases": [
@@ -40,7 +40,7 @@
     ]
   },
   "categories": [
-    "enterprise-software"
+    "cloud"
   ],
   "defaultAsset": "logo-gray.svg",
   "assets": [

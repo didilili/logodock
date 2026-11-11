@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "huaxiaoxiao",
   "name": "花小小新疆炒米粉",
   "aliases": [],
@@ -17,7 +17,9 @@
     ]
   },
   "entityType": "company",
-  "categories": [],
+  "categories": [
+    "dining"
+  ],
   "defaultAsset": "icon.png",
   "assets": [
     {

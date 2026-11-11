@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "trip-com",
   "name": "携程集团",
   "aliases": [
@@ -54,7 +54,7 @@
   "website": "https://group.trip.com/",
   "entityType": "company",
   "categories": [
-    "internet"
+    "travel"
   ],
   "defaultAsset": "wordmark-white-official.png",
   "assets": [

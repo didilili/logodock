@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "dbappsecurity",
   "name": "安恒信息",
   "aliases": [],
@@ -18,7 +18,7 @@
   "website": "https://www.dbappsecurity.com.cn/",
   "entityType": "company",
   "categories": [
-    "software"
+    "security"
   ],
   "defaultAsset": "logo-bilingual.jpg",
   "assets": [

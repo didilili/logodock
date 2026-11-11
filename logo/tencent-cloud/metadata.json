@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "tencent-cloud",
   "name": "腾讯云",
   "aliases": [],
@@ -18,7 +18,7 @@
   "website": "https://cloud.tencent.com/",
   "entityType": "product",
   "categories": [
-    "developer-tools"
+    "cloud"
   ],
   "defaultAsset": "logo-brand.svg",
   "assets": [
@@ -105,5 +105,8 @@
         "从同品牌原始 SVG 提取图形，方形画布长边贴边，短边居中，额外边距为零。"
       ]
     }
+  ],
+  "topics": [
+    "developer-ecosystem"
   ]
 }

@@ -48,7 +48,7 @@ npm run preview -- --base /logodock/
 
 ```text
 logo/<id>/        原始素材与 metadata.json，唯一维护来源
-schema/           元数据契约，当前 schemaVersion 为 3
+schema/           元数据契约，当前 schemaVersion 为 4
 src/              页面、组件、搜索、预览与取用逻辑
 scripts/          录入、校验、索引生成、构建与预览工具
 tests/            数据、工具与浏览器回归测试

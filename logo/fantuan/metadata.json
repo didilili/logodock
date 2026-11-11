@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "fantuan",
   "name": "饭团外卖",
   "aliases": [],
@@ -25,7 +25,9 @@
     ]
   },
   "entityType": "company",
-  "categories": [],
+  "categories": [
+    "local-services"
+  ],
   "defaultAsset": "icon-appstore.jpg",
   "assets": [
     {

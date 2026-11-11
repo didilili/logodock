@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "srhino",
   "name": "石犀科技",
   "aliases": [
@@ -33,7 +33,7 @@
   "website": "https://www.srhino.com/",
   "entityType": "company",
   "categories": [
-    "enterprise-software"
+    "data-platforms"
   ],
   "defaultAsset": "logo-zh-brand.png",
   "assets": [

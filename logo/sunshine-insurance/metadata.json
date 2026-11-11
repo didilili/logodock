@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "sunshine-insurance",
   "name": "阳光保险",
   "aliases": [],
@@ -18,7 +18,7 @@
   "website": "https://www.sinosig.com/",
   "entityType": "company",
   "categories": [
-    "保险"
+    "insurance"
   ],
   "defaultAsset": "logo-bilingual.png",
   "assets": [

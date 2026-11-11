@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "pingan-tech",
   "name": "平安科技",
   "aliases": [],
@@ -18,7 +18,7 @@
   "website": "https://tech.pingan.com/",
   "entityType": "company",
   "categories": [
-    "software"
+    "enterprise-software"
   ],
   "defaultAsset": "logo.png",
   "assets": [

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "aihuishou",
   "name": "爱回收",
   "aliases": [],
@@ -23,7 +23,7 @@
   "website": "https://www.aihuishou.com/",
   "entityType": "company",
   "categories": [
-    "e-commerce"
+    "resale"
   ],
   "defaultAsset": "logo-brand.png",
   "assets": [

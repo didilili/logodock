@@ -420,79 +420,131 @@ test('generates only available entity and file-format filters', async () => {
   });
 });
 
-test('category options use actual memberships and the declared Chinese labels', async () => {
-  const { categoryLabels, categoryOptions } = await presentation();
-  assert.deepEqual(categoryLabels, {
-    internet: '互联网',
-    'code-hosting': '代码托管',
-    'developer-tools': '开发工具',
-    hardware: '硬件与设备',
-    telecommunications: '通信',
-    ai: '人工智能',
-    'enterprise-software': '企业软件',
-    software: '软件与服务',
-    automotive: '汽车',
-    'e-commerce': '电子商务',
-    entertainment: '娱乐',
-    'industrial-automation': '工业自动化',
-    'social-media': '社交媒体',
-  });
-  assert.deepEqual(categoryOptions(brands), [
-    { id: '', label: '全部品牌', count: 2 },
-    { id: 'internet', label: '互联网', count: 1 },
-    { id: 'developer-tools', label: '开发工具', count: 1 },
-  ]);
+test('industry navigation groups leaves and deduplicates parent counts', async () => {
+  const { categoryLabels, categoryOptions, matchingBrands } = await presentation();
+  const sample = structuredClone(brands);
+  sample[0].categories = ['games', 'social-community'];
+  sample[1].categories = ['games', 'consumer-electronics'];
+  const before = structuredClone(sample);
+  const options = categoryOptions(sample);
+  const media = options.find((item) => item.id === 'media');
+  assert.equal(categoryLabels['consumer-electronics'], '消费电子');
+  assert.equal(media.count, 2);
+  assert.deepEqual(
+    media.children.map(({ id, count }) => ({ id, count })),
+    [
+      { id: 'social-community', count: 1 },
+      { id: 'games', count: 2 },
+    ],
+  );
+  assert.deepEqual(
+    matchingBrands(sample, { category: 'media' }).map((brand) => brand.id),
+    ['a', 'z'],
+  );
+  assert.deepEqual(
+    matchingBrands(sample, { category: 'social-community' }).map((brand) => brand.id),
+    ['z'],
+  );
+  assert.deepEqual(categoryOptions([...sample].reverse()), options);
+  assert.deepEqual(sample, before);
   assert.deepEqual(categoryOptions([]), [{ id: '', label: '全部品牌', count: 0 }]);
 });
 
-test('custom categories stay visible, count each brand once and filter exact memberships', async () => {
-  const { categoryOptions, matchingBrands } = await presentation();
-  const custom = structuredClone(brands);
-  custom[0].categories = ['internet', '设计 & 工具', 'Developer tools', '设计 & 工具'];
-  custom[1].categories = ['设计 & 工具', 'constructor'];
-  const before = structuredClone(custom);
-  assert.deepEqual(categoryOptions(custom), [
-    { id: '', label: '全部品牌', count: 2 },
-    { id: 'internet', label: '互联网', count: 1 },
-    { id: 'Developer tools', label: 'Developer tools', count: 1 },
-    { id: 'constructor', label: 'constructor', count: 1 },
-    { id: '设计 & 工具', label: '设计 & 工具', count: 2 },
-  ]);
+test('industry and topic facets keep available entries and intersect real assets', async () => {
+  const { categoryOptions, topicOptions, matchingBrands } = await presentation();
+  const { filterCategoryOptions } = await import('../src/lib/catalog-taxonomy.mjs');
+  const sample = structuredClone(brands);
+  sample[0].categories = ['semiconductors'];
+  sample[0].topics = ['ai'];
+  sample[1].categories = ['developer-tools'];
+  sample[1].topics = ['developer-ecosystem'];
+  const pool = matchingBrands(sample, { topic: 'ai', format: 'SVG' });
   assert.deepEqual(
-    categoryOptions([...custom].reverse()),
-    categoryOptions(custom),
-    'Category ordering must not depend on the brand order.',
-  );
-  assert.deepEqual(
-    matchingBrands(custom, { category: 'Developer tools' }).map((brand) => brand.id),
+    pool.map((brand) => brand.id),
     ['z'],
   );
+  const options = categoryOptions(pool, sample);
+  assert.equal(options.find((item) => item.id === 'technology').count, 0);
+  assert.equal(options.find((item) => item.id === 'electronics').count, 1);
+  assert.equal(filterCategoryOptions(options, '芯片')[1].children[0].id, 'semiconductors');
+  assert.equal(filterCategoryOptions(options, 'SaaS').length, 1);
   assert.deepEqual(
-    matchingBrands(custom, { category: '设计 & 工具' }).map((brand) => brand.id),
-    ['a', 'z'],
+    topicOptions(pool, sample).map(({ id, count }) => ({ id, count })),
+    [
+      { id: 'ai', count: 1 },
+      { id: 'developer-ecosystem', count: 0 },
+    ],
   );
-  assert.deepEqual(matchingBrands(custom, { category: 'unregistered' }), []);
-  assert.deepEqual(custom, before);
+  assert.deepEqual(matchingBrands(sample, { category: 'technology', topic: 'ai' }), []);
 });
 
-test('directory URLs round-trip custom categories and reject categories absent from the catalog on read', async () => {
+test('directory URLs preserve industry and topic and canonicalize legacy industry links', async () => {
   const { directoryUrl, readDirectoryState } = await presentation();
-  const custom = structuredClone(brands);
-  custom[0].categories = ['设计 & 工具'];
+  const sample = structuredClone(brands);
+  sample[0].categories = ['consumer-electronics'];
+  sample[0].topics = ['ai'];
   const state = {
     q: '动物园',
     type: 'company',
     format: 'PNG',
     shape: 'icon',
-    category: '设计 & 工具',
+    category: 'electronics',
+    topic: 'ai',
   };
   const url = directoryUrl('https://example.com/logodock/?other=1', state);
-  assert.equal(url.searchParams.get('category'), '设计 & 工具');
+  assert.deepEqual(readDirectoryState(url, sample), state);
   assert.equal(url.searchParams.get('other'), '1');
-  assert.deepEqual(readDirectoryState(url, custom), state);
-  const stale = directoryUrl(url, { ...state, category: 'removed-category' });
-  assert.deepEqual(readDirectoryState(stale, custom), { ...state, category: '' });
-  assert.equal(directoryUrl(url, { ...state, category: '' }).searchParams.has('category'), false);
+  url.searchParams.set('category', 'hardware');
+  assert.deepEqual(readDirectoryState(url, sample), state);
+  assert.equal(
+    directoryUrl(url, { ...state, category: 'hardware' }).searchParams.get('category'),
+    'electronics',
+  );
+  url.searchParams.set('topic', 'missing-topic');
+  assert.deepEqual(readDirectoryState(url, sample), { ...state, topic: '' });
+  url.searchParams.set('category', 'removed-category');
+  assert.deepEqual(readDirectoryState(url, sample), { ...state, category: '', topic: '' });
+});
+
+test('legacy AI category links migrate to the cross-industry topic without losing filters', async () => {
+  const { directoryUrl, readDirectoryState, matchingBrands } = await presentation();
+  const { brands: catalog } = JSON.parse(
+    await readFile(new URL('../index.json', import.meta.url), 'utf8'),
+  );
+  const url = new URL('https://example.com/?category=ai&q=壁仞&type=company&format=SVG&other=1');
+  const state = readDirectoryState(url, catalog);
+  assert.deepEqual(state, {
+    q: '壁仞',
+    type: 'company',
+    format: 'SVG',
+    shape: '',
+    category: '',
+    topic: 'ai',
+  });
+  assert.deepEqual(
+    matchingBrands(catalog, state).map((brand) => brand.id),
+    ['biren'],
+  );
+  const canonical = directoryUrl(url, state);
+  assert.equal(canonical.searchParams.has('category'), false);
+  assert.equal(canonical.searchParams.get('topic'), 'ai');
+  assert.equal(canonical.searchParams.get('other'), '1');
+  assert.deepEqual(readDirectoryState(canonical, catalog), state);
+
+  const legacy = readDirectoryState('https://example.com/?category=ai', catalog);
+  assert.deepEqual(
+    matchingBrands(catalog, legacy).map((brand) => brand.id),
+    matchingBrands(catalog, { topic: 'ai' }).map((brand) => brand.id),
+  );
+  url.searchParams.set('topic', 'developer-ecosystem');
+  assert.equal(readDirectoryState(url, catalog).topic, 'developer-ecosystem');
+
+  const current = readDirectoryState('https://example.com/?category=ai-products', catalog);
+  assert.equal(current.category, 'ai-products');
+  assert.equal(current.topic, '');
+  assert.ok(
+    matchingBrands(catalog, current).every((brand) => brand.categories.includes('ai-products')),
+  );
 });
 
 test('filters by actual file format and entity type while sorting real names', async () => {
@@ -599,6 +651,7 @@ test('directory URL state round-trips with query and filters and rejects absent 
   const directory = {
     q: '动物园 旧版',
     category: 'developer-tools',
+    topic: '',
     type: 'company',
     format: 'PNG',
     shape: 'icon',

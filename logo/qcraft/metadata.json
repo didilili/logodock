@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "qcraft",
   "name": "轻舟智航",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://www.qcraft.ai/cn",
   "entityType": "company",
   "categories": [
-    "automotive"
+    "autonomous-driving"
   ],
   "defaultAsset": "logo.png",
   "assets": [

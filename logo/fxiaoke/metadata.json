@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "fxiaoke",
   "name": "纷享销客",
   "aliases": [],
@@ -27,7 +27,9 @@
     ]
   },
   "entityType": "company",
-  "categories": [],
+  "categories": [
+    "enterprise-software"
+  ],
   "defaultAsset": "logo-zh-tagline.png",
   "assets": [
     {

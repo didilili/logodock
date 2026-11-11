@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "hirain",
   "name": "经纬恒润",
   "aliases": [],
@@ -33,7 +33,7 @@
   "website": "https://www.hirain.com/",
   "entityType": "company",
   "categories": [
-    "automotive"
+    "auto-components"
   ],
   "defaultAsset": "logo-bilingual-small-official.png",
   "assets": [

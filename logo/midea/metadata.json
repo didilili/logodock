@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "midea",
   "name": "美的",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://www.midea.com.cn/zh",
   "entityType": "company",
   "categories": [
-    "hardware"
+    "appliances"
   ],
   "defaultAsset": "logo.png",
   "assets": [

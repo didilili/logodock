@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "minimax",
   "name": "MiniMax",
   "aliases": [
@@ -49,7 +49,7 @@
   "website": "https://www.minimax.io/",
   "entityType": "company",
   "categories": [
-    "ai"
+    "ai-products"
   ],
   "defaultAsset": "logo-gradient-horizontal.png",
   "assets": [
@@ -483,5 +483,8 @@
         "notes": "遵守官方比例、颜色、间距和完整组合要求。官方使用许可为有限、非独占且不可转让，未涵盖的用途须另行申请批准。"
       }
     }
+  ],
+  "topics": [
+    "ai"
   ]
 }

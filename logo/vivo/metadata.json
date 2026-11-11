@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "vivo",
   "name": "vivo",
   "aliases": [
@@ -41,7 +41,7 @@
   "website": "https://www.vivo.com/",
   "entityType": "company",
   "categories": [
-    "hardware"
+    "consumer-electronics"
   ],
   "defaultAsset": "wordmark-blue-2019.svg",
   "assets": [

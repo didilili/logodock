@@ -143,8 +143,8 @@ test('directory uses wider screens while keeping filtered cards at the same size
   for (const [width, columns] of [
     [721, 3],
     [1050, 3],
-    [1462, 5],
-    [1920, 7],
+    [1462, 4],
+    [1920, 6],
     [2376, 8],
     [2560, 8],
   ]) {
@@ -171,13 +171,18 @@ test('directory uses wider screens while keeping filtered cards at the same size
   }
 
   await page.setViewportSize({ width: 2376, height: 1000 });
+  const unfilteredCardWidth = await page
+    .locator('#brand-grid > .brand-card')
+    .first()
+    .evaluate((element) => element.getBoundingClientRect().width);
   await page.locator('#search').fill('阿里巴巴');
   await expect(page.locator('#brand-grid > .brand-card')).toHaveCount(1);
   await expectGridColumns(page, 8);
   const cardWidth = await page
     .locator('#brand-grid > .brand-card')
     .evaluate((element) => element.getBoundingClientRect().width);
-  expect(cardWidth).toBeCloseTo(232, 0);
+  expect(cardWidth).toBeGreaterThanOrEqual(220);
+  expect(cardWidth).toBeCloseTo(unfilteredCardWidth, 1);
 });
 
 test('reviewed directory preview bounds keep artwork centered and fully visible on desktop and mobile', async ({
@@ -285,7 +290,24 @@ test('desktop filters use readable control sizing and keyboard focus stays visib
   await expect(page.locator('#more-filters-trigger')).toHaveAttribute('aria-expanded', 'false');
   await expect(page.getByRole('group', { name: '文件格式', exact: true })).toBeVisible();
   await expectMinimumHeight(page.locator('#format-filter button'), 40);
-  await expectMinimumHeight(page.locator('.category-sidebar [data-category]'), 42);
+  const sidebar = page.locator('.category-sidebar');
+  await expectMinimumHeight(
+    sidebar.locator(
+      '.category-tree > [data-category], .category-parent > [data-category], .category-expand',
+    ),
+    40,
+  );
+  const expand = sidebar.locator('[data-expand]').first();
+  const children = sidebar.locator('.category-children').first();
+  await expect(children).toBeHidden();
+  await expand.click();
+  await expect(expand).toHaveAttribute('aria-expanded', 'true');
+  await expect(children).toBeVisible();
+  await expectMinimumHeight(sidebar.locator('.category-child:visible'), 35);
+  await expectMinimumHeight(sidebar.locator('[data-topic]'), 36);
+  await expand.click();
+  await expect(expand).toHaveAttribute('aria-expanded', 'false');
+  await expect(children).toBeHidden();
   await expectMinimumHeight(page.locator('.card-download, .card-copy'), 44);
   await openExtraFilters(page);
   await expectMinimumHeight(page.getByRole('combobox'), 36);

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "sensetime",
   "name": "商汤科技",
   "aliases": [
@@ -44,7 +44,7 @@
   "website": "https://www.sensetime.com/",
   "entityType": "company",
   "categories": [
-    "ai"
+    "ai-products"
   ],
   "defaultAsset": "logo-color.png",
   "assets": [
@@ -75,5 +75,8 @@
         "channel": "commons"
       }
     }
+  ],
+  "topics": [
+    "ai"
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "tencent-music",
   "name": "腾讯音乐娱乐集团",
   "aliases": [
@@ -10,8 +10,7 @@
   "website": "https://www.tencentmusic.com/",
   "entityType": "company",
   "categories": [
-    "internet",
-    "entertainment"
+    "video-music"
   ],
   "identity": {
     "nameZh": "腾讯音乐娱乐集团",

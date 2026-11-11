@@ -222,6 +222,7 @@ test('directory URL state round-trips only available filters without adding a br
     shape: 'icon',
     format: 'SVG',
     category: '',
+    topic: '',
   };
   const url = directoryUrl('https://example.com/logodock/?other=1', state);
   assert.equal(url.pathname, '/logodock/');
@@ -230,6 +231,6 @@ test('directory URL state round-trips only available filters without adding a br
   assert.deepEqual(readDirectoryState(url, available), state);
   assert.deepEqual(
     readDirectoryState('https://example.com/?shape=fake&type=bad&format=EXE', available),
-    { q: '', type: '', format: '', shape: '', category: '' },
+    { q: '', type: '', format: '', shape: '', category: '', topic: '' },
   );
 });

@@ -39,7 +39,7 @@ async function mutate(root, change, id = 'example') {
 test('valid catalog preserves metadata and adds repository-relative asset paths', async (t) => {
   const root = await fixture(t);
   const result = await loader(root);
-  assert.equal(result.schemaVersion, 3);
+  assert.equal(result.schemaVersion, 4);
   assert.equal(result.brands[0].assets[0].path, 'logo/example/icon.svg');
   assert.equal(result.brands[0].assets[0].rights.status, 'permitted');
 });
@@ -59,9 +59,9 @@ test('catalog preserves an explicitly unverified rights record for direct intake
 
 test('empty logo directory is a valid initialization state', async (t) => {
   const root = await fixture(t, []);
-  assert.deepEqual(await loader(root), { schemaVersion: 3, brands: [] });
+  assert.deepEqual(await loader(root), { schemaVersion: 4, brands: [] });
   await writeFile(join(root, 'logo/.gitkeep'), '');
-  assert.deepEqual(await loader(root), { schemaVersion: 3, brands: [] });
+  assert.deepEqual(await loader(root), { schemaVersion: 4, brands: [] });
   await writeFile(join(root, 'logo/.gitkeep'), 'hidden content');
   await assert.rejects(loader(root), /Invalid catalog:/);
 });
@@ -430,7 +430,7 @@ test('build-index generates the resource document without rewriting README and c
     'Repository validation must reject untranslated categories.',
   );
   assert.match(untranslated.stderr, /untranslated-industry/);
-  for (const category of ['industrial-automation', '工业设计']) {
+  for (const category of ['automation', 'industrial-software']) {
     await mutate(root, (meta) => {
       meta.categories = [category];
     });

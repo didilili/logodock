@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "mucfc",
   "name": "招联",
   "aliases": [
@@ -25,7 +25,7 @@
   "website": "https://www.mucfc.com/",
   "entityType": "company",
   "categories": [
-    "金融"
+    "consumer-finance"
   ],
   "defaultAsset": "logo.png",
   "assets": [

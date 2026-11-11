@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "tsingmicro",
   "name": "清微智能",
   "aliases": [
@@ -25,8 +25,7 @@
   "website": "https://www.tsingmicro.com/",
   "entityType": "company",
   "categories": [
-    "ai",
-    "hardware"
+    "semiconductors"
   ],
   "defaultAsset": "logo-color-official.svg",
   "assets": [
@@ -108,5 +107,8 @@
         "reviewedAt": "2026-11-09"
       }
     }
+  ],
+  "topics": [
+    "ai"
   ]
 }

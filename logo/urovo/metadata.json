@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "urovo",
   "name": "优博讯",
   "aliases": [],
@@ -18,7 +18,7 @@
     ]
   },
   "categories": [
-    "hardware"
+    "consumer-electronics"
   ],
   "defaultAsset": "logo-bilingual-blue-official.png",
   "assets": [

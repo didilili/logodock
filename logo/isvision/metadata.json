@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "isvision",
   "name": "易思维",
   "aliases": [],
@@ -26,7 +26,7 @@
   "website": "https://www.isv-tech.com/",
   "entityType": "company",
   "categories": [
-    "industrial-automation"
+    "automation"
   ],
   "defaultAsset": "logo-bilingual.png",
   "assets": [

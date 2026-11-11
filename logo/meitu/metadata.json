@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "meitu",
   "name": "美图",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://www.meitu.com/zh",
   "entityType": "company",
   "categories": [
-    "internet"
+    "creative-software"
   ],
   "defaultAsset": "logo-zh.png",
   "assets": [

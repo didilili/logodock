@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "zhihu",
   "name": "知乎",
   "aliases": [
@@ -39,7 +39,7 @@
   },
   "entityType": "company",
   "categories": [
-    "internet"
+    "social-community"
   ],
   "defaultAsset": "wordmark-slogan-official.svg",
   "assets": [

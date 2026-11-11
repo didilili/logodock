@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "southchip",
   "name": "南芯",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://www.southchip.com/",
   "entityType": "company",
   "categories": [
-    "hardware"
+    "semiconductors"
   ],
   "defaultAsset": "logo-nav.png",
   "assets": [

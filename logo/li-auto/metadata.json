@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "li-auto",
   "name": "理想",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://www.lixiang.com/",
   "entityType": "company",
   "categories": [
-    "automotive"
+    "automakers"
   ],
   "defaultAsset": "symbol.svg",
   "assets": [

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "weidian",
   "name": "微店",
   "aliases": [],
@@ -23,7 +23,7 @@
   "website": "https://www.weidian.com/",
   "entityType": "company",
   "categories": [
-    "e-commerce"
+    "ecommerce"
   ],
   "defaultAsset": "wordmark-zh.png",
   "assets": [

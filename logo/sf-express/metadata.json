@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "sf-express",
   "name": "顺丰速运",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://www.sf-express.com/chn/sc",
   "entityType": "company",
   "categories": [
-    "internet"
+    "express-logistics"
   ],
   "defaultAsset": "icon-appstore.jpg",
   "assets": [

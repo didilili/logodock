@@ -1,20 +1,30 @@
 <script lang="ts">
   import { Dialog } from 'bits-ui';
   import Icon from '../Icon.svelte';
+  import CategoryNavigation from './CategoryNavigation.svelte';
+  import type { CategoryOption } from '../../types';
 
   let {
     open = $bindable(false),
     categories,
+    topics,
     selected,
+    selectedTopic,
+    query = $bindable(''),
     disabled = false,
     onselect,
+    ontopic,
     onOpenChange,
   }: {
     open?: boolean;
-    categories: { id: string; label: string; count: number }[];
+    categories: CategoryOption[];
+    topics: CategoryOption[];
     selected: string;
+    selectedTopic: string;
+    query?: string;
     disabled?: boolean;
     onselect: (id: string) => void;
+    ontopic: (id: string) => void;
     onOpenChange?: (open: boolean) => void;
   } = $props();
 </script>
@@ -35,19 +45,16 @@
         <Dialog.Title class="drawer-title" level={2}>资源分类</Dialog.Title>
         <Dialog.Close type="button" class="icon-button" aria-label="关闭分类">×</Dialog.Close>
       </div>
-      <nav class="category-list" aria-label="品牌分类">
-        {#each categories as category (category.id)}
-          <button
-            type="button"
-            data-category={category.id}
-            aria-pressed={selected === category.id}
-            {disabled}
-            onclick={() => onselect(category.id)}
-          >
-            <span>{category.label}</span><small>{category.count}</small>
-          </button>
-        {/each}
-      </nav>
+      <CategoryNavigation
+        {categories}
+        {topics}
+        {selected}
+        {selectedTopic}
+        bind:query
+        {disabled}
+        {onselect}
+        {ontopic}
+      />
     </Dialog.Content>
   </Dialog.Portal>
 </Dialog.Root>

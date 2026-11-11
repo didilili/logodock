@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "lanyou-tech",
   "name": "联友科技",
   "aliases": [
@@ -25,7 +25,7 @@
   "website": "https://www.szlanyou.com/",
   "entityType": "company",
   "categories": [
-    "software"
+    "enterprise-software"
   ],
   "defaultAsset": "logo-footer.png",
   "assets": [

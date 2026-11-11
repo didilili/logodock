@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "whalecloud",
   "name": "浩鲸",
   "aliases": [],
@@ -22,7 +22,9 @@
     ]
   },
   "entityType": "company",
-  "categories": [],
+  "categories": [
+    "outsourcing"
+  ],
   "defaultAsset": "logo-zh.png",
   "assets": [
     {

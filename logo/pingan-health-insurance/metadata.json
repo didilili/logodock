@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "pingan-health-insurance",
   "name": "平安健康保险",
   "aliases": [],
@@ -23,7 +23,7 @@
   "website": "https://health.pingan.com/",
   "entityType": "company",
   "categories": [
-    "金融"
+    "insurance"
   ],
   "defaultAsset": "logo.png",
   "assets": [

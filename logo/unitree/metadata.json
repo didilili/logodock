@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "unitree",
   "name": "宇树科技",
   "aliases": [
@@ -21,7 +21,7 @@
   "website": "https://www.unitree.com/cn",
   "entityType": "company",
   "categories": [
-    "hardware"
+    "robotics"
   ],
   "defaultAsset": "logo.svg",
   "assets": [
@@ -77,5 +77,8 @@
         "reviewedAt": "2026-11-10"
       }
     }
+  ],
+  "topics": [
+    "ai"
   ]
 }

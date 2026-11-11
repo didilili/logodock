@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "eaton",
   "name": "伊顿",
   "aliases": [
@@ -33,7 +33,7 @@
   "website": "https://www.eaton.com/",
   "entityType": "company",
   "categories": [
-    "hardware"
+    "electrical-equipment"
   ],
   "defaultAsset": "wordmark-blue.png",
   "assets": [

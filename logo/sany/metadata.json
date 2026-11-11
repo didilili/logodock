@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "sany",
   "name": "三一重工",
   "aliases": [],
@@ -18,8 +18,7 @@
     ]
   },
   "categories": [
-    "industrial-automation",
-    "hardware"
+    "heavy-equipment"
   ],
   "defaultAsset": "logo-bilingual-official.png",
   "assets": [

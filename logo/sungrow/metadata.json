@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "sungrow",
   "name": "阳光电源",
   "aliases": [],
@@ -18,7 +18,7 @@
     ]
   },
   "categories": [
-    "industrial-automation"
+    "new-energy"
   ],
   "defaultAsset": "wordmark-orange-official.svg",
   "assets": [

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "voyah",
   "name": "岚图",
   "aliases": [
@@ -35,7 +35,7 @@
   "website": "https://www.voyah.com.cn/",
   "entityType": "company",
   "categories": [
-    "automotive"
+    "automakers"
   ],
   "defaultAsset": "icon-appstore.jpg",
   "assets": [

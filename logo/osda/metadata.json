@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "osda",
   "name": "欧达光电",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://osdasol.com.cn/",
   "entityType": "company",
   "categories": [
-    "能源"
+    "new-energy"
   ],
   "defaultAsset": "logo.svg",
   "assets": [

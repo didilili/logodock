@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "parametrix",
   "name": "超参数科技",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://www.parametrix.ai/",
   "entityType": "company",
   "categories": [
-    "ai"
+    "ai-products"
   ],
   "defaultAsset": "logo-white.png",
   "assets": [
@@ -50,5 +50,8 @@
         "reviewedAt": "2026-11-10"
       }
     }
+  ],
+  "topics": [
+    "ai"
   ]
 }

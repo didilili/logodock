@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "nsfocus",
   "name": "绿盟科技",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://www.nsfocus.com.cn/html/7/11/",
   "entityType": "company",
   "categories": [
-    "software"
+    "security"
   ],
   "defaultAsset": "logo.png",
   "assets": [

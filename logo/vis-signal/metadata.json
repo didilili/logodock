@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "vis-signal",
   "name": "杭州可见信号科技",
   "aliases": [],
@@ -17,7 +17,9 @@
     ]
   },
   "entityType": "company",
-  "categories": [],
+  "categories": [
+    "ai-products"
+  ],
   "defaultAsset": "icon.svg",
   "assets": [
     {
@@ -49,5 +51,8 @@
         "官网提供的静态独立图形。"
       ]
     }
+  ],
+  "topics": [
+    "ai"
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "dmall",
   "name": "多点数智",
   "aliases": [],
@@ -17,7 +17,9 @@
     ]
   },
   "entityType": "company",
-  "categories": [],
+  "categories": [
+    "enterprise-software"
+  ],
   "defaultAsset": "logo-bilingual.png",
   "assets": [
     {

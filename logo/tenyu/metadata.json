@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "tenyu",
   "name": "腾娱互动",
   "aliases": [],
@@ -23,7 +23,7 @@
     ]
   },
   "categories": [
-    "entertainment"
+    "games"
   ],
   "defaultAsset": "logo-recruitment-official.png",
   "assets": [

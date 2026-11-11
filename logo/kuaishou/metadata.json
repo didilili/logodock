@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "kuaishou",
   "name": "快手",
   "aliases": [
@@ -33,7 +33,7 @@
   },
   "entityType": "company",
   "categories": [
-    "internet"
+    "video-music"
   ],
   "defaultAsset": "icon-orange-official.png",
   "assets": [

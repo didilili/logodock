@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "navinfo",
   "name": "四维图新",
   "aliases": [],
@@ -18,8 +18,7 @@
     ]
   },
   "categories": [
-    "automotive",
-    "enterprise-software"
+    "auto-components"
   ],
   "defaultAsset": "logo-bilingual-gradient-official.png",
   "assets": [

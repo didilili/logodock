@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "leapmotor",
   "name": "零跑汽车",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://leapmotor.cn/",
   "entityType": "company",
   "categories": [
-    "automotive"
+    "automakers"
   ],
   "defaultAsset": "logo-black.png",
   "assets": [

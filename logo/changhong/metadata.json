@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "changhong",
   "name": "四川长虹",
   "aliases": [],
@@ -18,7 +18,7 @@
     ]
   },
   "categories": [
-    "hardware"
+    "appliances"
   ],
   "defaultAsset": "wordmark-english.svg",
   "assets": [

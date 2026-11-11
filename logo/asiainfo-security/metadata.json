@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "asiainfo-security",
   "name": "亚信安全",
   "aliases": [],
@@ -38,7 +38,7 @@
     ]
   },
   "categories": [
-    "enterprise-software"
+    "security"
   ],
   "defaultAsset": "logo-chinese-official.png",
   "assets": [

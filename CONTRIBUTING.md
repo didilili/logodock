@@ -57,13 +57,15 @@
 
 ### 元数据
 
-结构、必填字段和枚举的事实来源为 [schema/metadata.schema.json](schema/metadata.schema.json)，当前严格使用 `schemaVersion: 3`；运行时校验器复用这份契约，再检查文件、关系与许可声明。旧的无版本记录需显式迁移，不能依赖文件名猜测版本状态。
+结构、必填字段和枚举的事实来源为 [schema/metadata.schema.json](schema/metadata.schema.json)，当前严格使用 `schemaVersion: 4`；运行时校验器复用这份契约，再检查文件、关系与许可声明。v3 记录先按分类字典迁移行业标签，再升级结构版本。旧的无版本记录需显式迁移，不能依赖文件名猜测版本状态。
 
 品牌记录需要 `schemaVersion`、`id`、`name`、`identity`、`aliases`、`website`、`entityType`、`categories`、`defaultAsset` 和 `assets`。没有别名或分类时使用空数组；只填写真实名称，不把产品名当作公司同义词。
 
 - `entityType` 为 `company`（公司）、`product`（产品）或 `organization`（组织）。
 - 可选的 `parentId` 必须指向已收录实体，不能指向自身或形成循环；没有可靠对应记录时省略。
-- `categories` 保存开放的非空分类标签，建议复用 `internet`、`ai`、`developer-tools` 等已有标签。网页从实际元数据生成分类，正式库使用的分类须有中文显示名。新增英文分类标识时，同步补充 `src/lib/catalog-presentation.mjs` 中的 `categoryLabels`。自定义中文标签可直接显示。`npm run validate` 会列出缺少中文显示名的分类并报错。新增分类无需移动品牌目录或修改 Schema。
+- `categories` 保存 [分类字典](src/lib/catalog-taxonomy.mjs) 中的叶级行业 ID，例如 `consumer-electronics`、`enterprise-software`、`developer-tools`。按品牌实际提供的产品或服务归类，独立的重要业务可以多归属。网页按两级行业展示，父级计数取品牌 ID 的并集。业务尚未确认时使用空数组，并在采集待办记录核验入口。
+- 可选的 `topics` 保存同一字典中的跨行业专题 ID，目前包括 `ai`、`developer-ecosystem`、`open-source-ecosystem`。按核心产品或生态关系填写，开源生态的归属依据单独核实。图稿的许可继续逐文件登记。
+- 分类字典统一维护稳定 ID、中文名称、业务范围和搜索别名。现有分类覆盖不了新业务时，先补充合适的子类，出现独立行业时再增加一级行业。暂无品牌的分类默认隐藏。新增分类同步字典及使用说明，运行资源和索引校验，目录及主体类型、文件格式、标识形态使用各自的筛选字段。
 - `defaultAsset` 必须是本条目登记且未标为 `alternative` 的文件名。有当前版本时必须默认当前素材；仅有历史文件的条目可以显式默认历史素材，网页会标明历史。推荐文件按上述准确性和质量依据人工选择，不由格式或来源标签自动决定。
 
 可选的 `artworks` 用于将已核实的同款标识归组，让 SVG、PNG 等文件共用一个标识预览。每组填写稳定的 `id`、简短的 `label`、成员文件名数组 `files` 和首选文件名 `defaultAsset`。组名与资产名称保持一致的版本含义，同页共同属性可省略，例如只有橙色字标的阿里巴巴使用“英文”“中文”。

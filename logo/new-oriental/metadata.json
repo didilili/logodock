@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "new-oriental",
   "name": "新东方",
   "aliases": [],
@@ -23,7 +23,7 @@
     ]
   },
   "categories": [
-    "教育"
+    "training"
   ],
   "defaultAsset": "wordmark-green-official.png",
   "assets": [

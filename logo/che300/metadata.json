@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "che300",
   "name": "车300",
   "aliases": [],
@@ -18,7 +18,7 @@
   "website": "https://www.che300.com/",
   "entityType": "company",
   "categories": [
-    "automotive"
+    "auto-information"
   ],
   "defaultAsset": "logo-bilingual.png",
   "assets": [

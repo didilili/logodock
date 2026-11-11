@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "nio",
   "name": "蔚来",
   "aliases": [
@@ -39,7 +39,7 @@
   "website": "https://www.nio.com/",
   "entityType": "company",
   "categories": [
-    "automotive"
+    "automakers"
   ],
   "defaultAsset": "logo-black-english-official.svg",
   "assets": [

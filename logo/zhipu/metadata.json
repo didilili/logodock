@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "zhipu",
   "name": "智谱",
   "aliases": [
@@ -44,7 +44,7 @@
   "website": "https://www.zhipuai.cn/",
   "entityType": "company",
   "categories": [
-    "ai"
+    "ai-products"
   ],
   "defaultAsset": "logo-black-chinese.svg",
   "assets": [
@@ -204,5 +204,8 @@
         "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围限于所引 JPG 文件页中的“Z + 智谱”中文组合设计。"
       }
     }
+  ],
+  "topics": [
+    "ai"
   ]
 }

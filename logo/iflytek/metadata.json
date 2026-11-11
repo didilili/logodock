@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "iflytek",
   "name": "科大讯飞",
   "aliases": [
@@ -43,7 +43,7 @@
   "website": "https://www.iflytek.com/",
   "entityType": "company",
   "categories": [
-    "ai"
+    "ai-products"
   ],
   "defaultAsset": "logo-english-official.svg",
   "assets": [
@@ -226,5 +226,8 @@
         "reviewedAt": "2026-11-10"
       }
     }
+  ],
+  "topics": [
+    "ai"
   ]
 }

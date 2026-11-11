@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "yuanbao",
   "name": "腾讯元宝",
   "aliases": [
@@ -43,7 +43,7 @@
   "website": "https://yuanbao.tencent.com/",
   "entityType": "product",
   "categories": [
-    "ai"
+    "ai-products"
   ],
   "defaultAsset": "app-icon-flat.png",
   "assets": [
@@ -106,5 +106,8 @@
       }
     }
   ],
-  "parentId": "tencent"
+  "parentId": "tencent",
+  "topics": [
+    "ai"
+  ]
 }

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "cambricon",
   "name": "寒武纪",
   "aliases": [],
@@ -17,7 +17,9 @@
     ]
   },
   "entityType": "company",
-  "categories": [],
+  "categories": [
+    "semiconductors"
+  ],
   "defaultAsset": "logo-bilingual-brand-library.png",
   "assets": [
     {
@@ -136,5 +138,8 @@
         "notes": "官网法律声明要求商标使用事先取得书面许可。品牌书要求保留标识比例与配色并遵守安全空间。"
       }
     }
+  ],
+  "topics": [
+    "ai"
   ]
 }

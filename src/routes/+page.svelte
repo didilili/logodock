@@ -7,6 +7,7 @@
   import FilterSelect from '#lib/components/ui/FilterSelect.svelte';
   import FilterPopover from '#lib/components/ui/FilterPopover.svelte';
   import CategoryDrawer from '#lib/components/ui/CategoryDrawer.svelte';
+  import CategoryNavigation from '#lib/components/ui/CategoryNavigation.svelte';
   import Icon from '#lib/components/Icon.svelte';
   import ActionButton from '#lib/components/ActionButton.svelte';
   import type { Asset, Brand } from '#lib/types.ts';
@@ -21,23 +22,55 @@
     filterOptions,
     entityLabels,
     categoryOptions,
+    categoryLabels,
+    topicOptions,
+    topicLabels,
   } from '#lib/catalog-presentation.mjs';
   import { resourceLinks, assetPath } from '#lib/resource-links.mjs';
 
   const base = resolve('/').replace(/\/$/, '');
   let { data } = $props();
   let brands: Brand[] = $derived(sortCatalogBrands(data.brands));
-  let filters = $state({ q: '', category: '', type: '', format: '', shape: '' });
+  let filters = $state({ q: '', category: '', topic: '', type: '', format: '', shape: '' });
   let matches: Brand[] = $derived(matchingBrands(brands, filters));
   let options = $derived(filterOptions(brands));
-  let categories = $derived(categoryOptions(brands));
-  let selectedCategory = $derived(categories.find((item) => item.id === filters.category));
+  let categories = $derived(
+    categoryOptions(matchingBrands(brands, { ...filters, category: '' }), brands),
+  );
+  let topics = $derived(topicOptions(matchingBrands(brands, { ...filters, topic: '' }), brands));
+  let selectedCategory = $derived(
+    categoryLabels[filters.category] ||
+      topicLabels[filters.topic as keyof typeof topicLabels] ||
+      '全部品牌',
+  );
+  let activeFilters = $derived(
+    [
+      { key: 'category' as const, value: filters.category, label: selectedCategory },
+      {
+        key: 'topic' as const,
+        value: filters.topic,
+        label: topicLabels[filters.topic as keyof typeof topicLabels],
+      },
+      { key: 'format' as const, value: filters.format, label: filters.format },
+      {
+        key: 'type' as const,
+        value: filters.type,
+        label: entityLabels[filters.type as keyof typeof entityLabels],
+      },
+      {
+        key: 'shape' as const,
+        value: filters.shape,
+        label: shapeLabels[filters.shape as keyof typeof shapeLabels],
+      },
+    ].filter((item) => item.value),
+  );
   let shapes: Asset['variant'][] = $derived(
     [...new Set(brands.flatMap((brand) => brand.assets.map((asset) => asset.variant)))].sort(),
   );
   let ready = $state(false);
   let searchInput: HTMLInputElement;
   let categoryOpen = $state(false);
+  let categoryQuery = $state('');
   let extraFiltersOpen = $state(false);
   let feedback = $state<CopyFeedbackApi>();
   let typing = false;
@@ -72,15 +105,18 @@
     // eslint-disable-next-line svelte/no-navigation-without-resolve -- Based on the resolved current URL; changes filters only.
     if (url.href !== location.href) (replace ? replaceState : pushState)(url, {});
   }
-  function changeFilter(key: 'category' | 'type' | 'shape' | 'format', value: string) {
+  function changeFilter(key: 'category' | 'topic' | 'type' | 'shape' | 'format', value: string) {
     filters[key] = value;
     typing = false;
     updateHistory();
-    if (key === 'category') categoryOpen = false;
+    if (key === 'category' || key === 'topic') categoryOpen = false;
   }
   function reset(all = true) {
     filters.q = '';
-    if (all) filters.category = filters.type = filters.format = filters.shape = '';
+    if (all) {
+      filters.category = filters.topic = filters.type = filters.format = filters.shape = '';
+      categoryQuery = '';
+    }
     typing = false;
     updateHistory();
     searchInput?.focus();
@@ -180,25 +216,18 @@
   onpageshow={restorePosition}
 />
 
-{#snippet categoryList()}
-  <nav class="category-list" aria-label="品牌分类">
-    {#each categories as category (category.id)}
-      <button
-        type="button"
-        data-category={category.id}
-        aria-pressed={filters.category === category.id}
-        onclick={() => changeFilter('category', category.id)}
-      >
-        <span>{category.label}</span><small>{category.count}</small>
-      </button>
-    {/each}
-  </nav>
-{/snippet}
-
 <div class="directory-layout">
   <aside class="category-sidebar" aria-label="资源分类">
-    <p class="nav-caption">资源分类</p>
-    {@render categoryList()}
+    <CategoryNavigation
+      {categories}
+      {topics}
+      selected={filters.category}
+      selectedTopic={filters.topic}
+      bind:query={categoryQuery}
+      disabled={!ready}
+      onselect={(id) => changeFilter('category', id)}
+      ontopic={(id) => changeFilter('topic', id)}
+    />
   </aside>
   <main id="main" class="directory-main">
     <div class="directory-search-row">
@@ -243,9 +272,13 @@
       <CategoryDrawer
         bind:open={categoryOpen}
         {categories}
+        {topics}
         selected={filters.category}
+        selectedTopic={filters.topic}
+        bind:query={categoryQuery}
         disabled={!ready}
         onselect={(id) => changeFilter('category', id)}
+        ontopic={(id) => changeFilter('topic', id)}
         onOpenChange={(open) => {
           if (open) {
             extraFiltersOpen = false;
@@ -256,7 +289,7 @@
     </div>
     <div class="catalog-toolbar">
       <div class="directory-title">
-        <h1>{filters.q ? '搜索结果' : selectedCategory?.label || '全部品牌'}</h1>
+        <h1>{filters.q ? '搜索结果' : selectedCategory}</h1>
         <p class="result-count" id="result-count" role="status" aria-live="polite">
           {matches.length}<span class="sr-only">&nbsp;个结果</span>
         </p>
@@ -318,6 +351,21 @@
         </FilterPopover>
       </div>
     </div>
+    {#if activeFilters.length}
+      <div class="active-directory-filters" aria-label="已选筛选条件">
+        {#each activeFilters as item (item.key)}
+          <button
+            type="button"
+            aria-label={`移除${item.label}筛选`}
+            onclick={() => changeFilter(item.key, '')}
+            >{item.label}<span aria-hidden="true">×</span></button
+          >
+        {/each}
+        <button type="button" class="clear-directory-filters" onclick={() => reset()}
+          >清除全部</button
+        >
+      </div>
+    {/if}
     <section aria-label="Logo 目录">
       <div id="brand-grid" class="brand-grid">
         {#each matches as brand (brand.id)}

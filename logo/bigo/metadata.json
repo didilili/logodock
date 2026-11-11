@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "bigo",
   "name": "BIGO",
   "aliases": [],
@@ -26,7 +26,7 @@
   "website": "https://www.bigo.sg/",
   "entityType": "company",
   "categories": [
-    "internet"
+    "video-music"
   ],
   "defaultAsset": "wordmark-blue-official.png",
   "assets": [

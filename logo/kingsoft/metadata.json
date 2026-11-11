@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "kingsoft",
   "name": "金山软件",
   "aliases": [],
@@ -17,7 +17,9 @@
     ]
   },
   "entityType": "company",
-  "categories": [],
+  "categories": [
+    "creative-software"
+  ],
   "defaultAsset": "logo-bilingual.png",
   "assets": [
     {

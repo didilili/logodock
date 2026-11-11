@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "LogoDock brand metadata v3",
+  "title": "LogoDock brand metadata v4",
   "description": "Public, reviewed metadata. File integrity, default selection and parent graph invariants are checked by the catalog loader.",
   "type": "object",
   "additionalProperties": false,
@@ -19,7 +19,7 @@
   "properties": {
     "schemaVersion": {
       "type": "integer",
-      "const": 3
+      "const": 4
     },
     "id": {
       "$ref": "#/$defs/id"
@@ -44,9 +44,18 @@
     },
     "categories": {
       "type": "array",
+      "description": "Leaf industry IDs from src/lib/catalog-taxonomy.mjs. The catalog loader validates membership.",
       "uniqueItems": true,
       "items": {
         "$ref": "#/$defs/nonemptyString"
+      }
+    },
+    "topics": {
+      "type": "array",
+      "description": "Optional cross-industry topic IDs from src/lib/catalog-taxonomy.mjs.",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/id"
       }
     },
     "parentId": {

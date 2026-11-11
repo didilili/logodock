@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "imou",
   "name": "华橙",
   "aliases": [],
@@ -36,7 +36,7 @@
   "website": "https://www.imou.com/cn/",
   "entityType": "company",
   "categories": [
-    "hardware"
+    "security-imaging"
   ],
   "defaultAsset": "wordmark-imou-white.png",
   "assets": [

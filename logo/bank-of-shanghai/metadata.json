@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "bank-of-shanghai",
   "name": "上海银行",
   "aliases": [],
@@ -18,7 +18,7 @@
     ]
   },
   "categories": [
-    "金融服务"
+    "banking"
   ],
   "defaultAsset": "logo-bilingual.png",
   "assets": [

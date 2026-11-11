@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "cmb-network-tech",
   "name": "招银网络科技",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://cmbnt.cmbchina.com/home.html",
   "entityType": "company",
   "categories": [
-    "software"
+    "enterprise-software"
   ],
   "defaultAsset": "logo.png",
   "assets": [

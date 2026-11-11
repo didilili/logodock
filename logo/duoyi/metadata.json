@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "duoyi",
   "name": "多益网络",
   "aliases": [],
@@ -31,7 +31,7 @@
   "website": "https://www.duoyi.com/",
   "entityType": "company",
   "categories": [
-    "entertainment"
+    "games"
   ],
   "defaultAsset": "logo-chinese-small-official.png",
   "assets": [

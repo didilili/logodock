@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "dp-tech",
   "name": "深势科技",
   "aliases": [],
@@ -18,7 +18,7 @@
     ]
   },
   "categories": [
-    "ai"
+    "ai-products"
   ],
   "defaultAsset": "wordmark-bilingual-black.webp",
   "assets": [
@@ -126,5 +126,8 @@
         "reviewedAt": "2026-11-10"
       }
     }
+  ],
+  "topics": [
+    "ai"
   ]
 }

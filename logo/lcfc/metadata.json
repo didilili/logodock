@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "lcfc",
   "name": "联宝科技",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://www.lcfc.com.cn/index.aspx",
   "entityType": "company",
   "categories": [
-    "hardware"
+    "computing-hardware"
   ],
   "defaultAsset": "logo.png",
   "assets": [

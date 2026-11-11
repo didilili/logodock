@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "soul",
   "name": "Soul",
   "aliases": [],
@@ -18,7 +18,7 @@
   "website": "https://www.soulapp.cn/",
   "entityType": "company",
   "categories": [
-    "social-media"
+    "social-community"
   ],
   "defaultAsset": "logo-brand.png",
   "assets": [

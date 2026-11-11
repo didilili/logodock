@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "threatbook",
   "name": "微步在线",
   "aliases": [],
@@ -23,7 +23,7 @@
     ]
   },
   "categories": [
-    "enterprise-software"
+    "security"
   ],
   "defaultAsset": "logo-chinese-white-official.png",
   "assets": [

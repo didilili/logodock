@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "jingan-tech",
   "name": "靖安科技",
   "aliases": [
@@ -28,7 +28,7 @@
   "website": "https://www.jing-an.com/",
   "entityType": "company",
   "categories": [
-    "ai"
+    "ai-products"
   ],
   "defaultAsset": "logo-bilingual.png",
   "assets": [
@@ -62,5 +62,8 @@
         "reviewedAt": "2026-11-10"
       }
     }
+  ],
+  "topics": [
+    "ai"
   ]
 }

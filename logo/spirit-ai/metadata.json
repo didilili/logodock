@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "spirit-ai",
   "name": "千寻智能",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://docs.spirit-ai.com/zh",
   "entityType": "company",
   "categories": [
-    "ai"
+    "robotics"
   ],
   "defaultAsset": "logo-zh.png",
   "assets": [
@@ -76,5 +76,8 @@
         "reviewedAt": "2026-11-10"
       }
     }
+  ],
+  "topics": [
+    "ai"
   ]
 }

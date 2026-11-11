@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "deeproute",
   "name": "元戎启行",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://www.deeproute.ai/",
   "entityType": "company",
   "categories": [
-    "automotive"
+    "autonomous-driving"
   ],
   "defaultAsset": "logo.png",
   "assets": [

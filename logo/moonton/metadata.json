@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "moonton",
   "name": "沐瞳科技",
   "aliases": [
@@ -20,7 +20,7 @@
   "website": "https://cn.moonton.com/",
   "entityType": "company",
   "categories": [
-    "entertainment"
+    "games"
   ],
   "defaultAsset": "logo-black.svg",
   "assets": [
