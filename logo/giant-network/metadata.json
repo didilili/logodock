@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 3,
+  "id": "giant-network",
+  "name": "巨人网络",
+  "aliases": [
+    "Giant Network"
+  ],
+  "identity": {
+    "nameZh": "巨人网络",
+    "nameEn": "Giant Network",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.ztgame.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.ztgame.com/",
+  "entityType": "company",
+  "categories": [
+    "entertainment"
+  ],
+  "defaultAsset": "logo.png",
+  "assets": [
+    {
+      "file": "logo.png",
+      "label": "白色中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.ztgame.com/_nuxt/entry.CTRBstS9.css",
+      "sourcePage": "https://www.ztgame.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "a0d97615122eb8c60fcfba898aaac75f878b80066bbf98a8ff1711a213a7cd50",
+      "bytes": 3674,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.ztgame.com/",
+        "attribution": "巨人网络。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

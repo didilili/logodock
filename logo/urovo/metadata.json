@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 3,
+  "id": "urovo",
+  "name": "优博讯",
+  "aliases": [],
+  "website": "https://www.urovo.com/",
+  "entityType": "company",
+  "identity": {
+    "nameZh": "优博讯",
+    "nameEn": "UROVO",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "品牌官网",
+        "url": "https://www.urovo.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "logo-bilingual-blue-official.png",
+  "assets": [
+    {
+      "file": "logo-bilingual-blue-official.png",
+      "label": "蓝色中英组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://youboxunguanwang.oss-cn-shenzhen.aliyuncs.com/index/100014Qky72C.png",
+      "sourcePage": "https://www.urovo.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "bffc4bc50aafa0ded49193799b3c0ce6d0db310034500a1cf6ce97d56029f00b",
+      "bytes": 4835,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.urovo.com/",
+        "attribution": "优博讯，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "原生 200×46 像素，保留官网不含股票代码的组合原稿，适合小尺寸展示。"
+      ]
+    },
+    {
+      "file": "logo-bilingual-white-official.png",
+      "label": "白色中英组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://youboxunguanwang.oss-cn-shenzhen.aliyuncs.com/index/100048H6Na2H.png",
+      "sourcePage": "https://www.urovo.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "8a1f8f68eb9f22e253460a76846de6570e71e728e64fc46591462865d791718a",
+      "bytes": 4435,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.urovo.com/",
+        "attribution": "优博讯，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "原生 200×46 像素，保留官网不含股票代码的组合原稿，适合小尺寸展示。"
+      ]
+    },
+    {
+      "file": "wordmark-english-blue.png",
+      "label": "蓝色英文字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://enoss.urovo.com/index/77z6emAr.png",
+      "sourcePage": "https://en.urovo.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "4afbf22df4dc30fb88dc574ec48e446ff2fe18bd8d931eb3d3e2bcf04c98338a",
+      "bytes": 6118,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://en.urovo.com/",
+        "attribution": "优博讯，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "国际站原生 200×46 像素字标，适合小尺寸英文场景。"
+      ]
+    },
+    {
+      "file": "wordmark-english-white.png",
+      "label": "白色英文字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://enoss.urovo.com/index/89JNXRes.png",
+      "sourcePage": "https://en.urovo.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "13b7f1f4ed01ba7cd3862308a1862e459b9f9cc515560afe0c15a5625a31428f",
+      "bytes": 5748,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://en.urovo.com/",
+        "attribution": "优博讯，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "国际站原生 200×46 像素字标，适合小尺寸英文深色背景场景。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 3,
+  "id": "mucfc",
+  "name": "招联",
+  "aliases": [
+    "招联金融"
+  ],
+  "identity": {
+    "nameZh": "招联",
+    "nameEn": "MUCFC",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.mucfc.com/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "招联官网英文介绍",
+        "url": "https://www.mucfc.com/en/",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "website": "https://www.mucfc.com/",
+  "entityType": "company",
+  "categories": [
+    "金融"
+  ],
+  "defaultAsset": "logo.png",
+  "assets": [
+    {
+      "file": "logo.png",
+      "label": "蓝色中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://file.mucfc.com/cop/0/0/202211/2022110919085859d24b.png",
+      "sourcePage": "https://www.mucfc.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "6de426b26eed28b7ec53af7980ef78c3dffe4ac3ad0d44a6087e02af4b1fe2c8",
+      "bytes": 1347,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.mucfc.com/",
+        "attribution": "招联。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官网声明商标、LOGO等未经书面授权不得展示、使用或作其他处理。"
+      },
+      "qualityNotes": [
+        "官网小尺寸原件，适合按原生像素取用。"
+      ]
+    },
+    {
+      "file": "logo-footer.png",
+      "label": "白色中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://file.mucfc.com/cop/0/0/202211/2022111811131695de5d.png",
+      "sourcePage": "https://www.mucfc.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "3bc3c0468d481a9b498a411eb0993192bfdd8651bcb81ee1ce9d4de1b5d26339",
+      "bytes": 1142,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.mucfc.com/",
+        "attribution": "招联。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官网声明商标、LOGO等未经书面授权不得展示、使用或作其他处理。"
+      },
+      "qualityNotes": [
+        "官网小尺寸原件，适合按原生像素取用。"
+      ]
+    }
+  ]
+}

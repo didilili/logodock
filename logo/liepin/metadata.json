@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 3,
+  "id": "liepin",
+  "name": "猎聘",
+  "aliases": [],
+  "identity": {
+    "nameZh": "猎聘",
+    "nameEn": "Liepin",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.liepin.com/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方品牌介绍中的中英文名称",
+        "url": "https://ir.liepin.com/knowledge",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "website": "https://www.liepin.com/",
+  "entityType": "company",
+  "categories": [
+    "internet"
+  ],
+  "defaultAsset": "logo.png",
+  "assets": [
+    {
+      "file": "logo.png",
+      "label": "橙色中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.liepin.com/",
+      "sourcePage": "https://www.liepin.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "3725a84785fbda54473202bae351327cbbd286b06222f633b65468f3aab33569",
+      "bytes": 4458,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.liepin.com/",
+        "attribution": "猎聘。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 3,
+  "id": "bank-of-ningbo",
+  "name": "宁波银行",
+  "aliases": [],
+  "identity": {
+    "nameZh": "宁波银行",
+    "nameEn": "Bank of Ningbo",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.nbcb.com.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.nbcb.com.cn/",
+  "entityType": "company",
+  "categories": [
+    "金融"
+  ],
+  "defaultAsset": "logo-bilingual.png",
+  "assets": [
+    {
+      "file": "logo-bilingual.png",
+      "label": "中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://www.nbcb.com.cn/images/logo.png",
+      "sourcePage": "https://www.nbcb.com.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "5a23c538cef0cf3afe3147bb21a1358c0663767fbff9270644bfd0586e209ef0",
+      "bytes": 9973,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.nbcb.com.cn/",
+        "attribution": "宁波银行。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网页头原图，图稿高度49像素，适合小尺寸屏幕使用。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 3,
+  "id": "kuaishang",
+  "name": "快商通",
+  "aliases": [
+    "KRISTON.AI"
+  ],
+  "identity": {
+    "nameZh": "快商通",
+    "nameEn": "KRISTON.AI",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.kuaishang.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.kuaishang.cn/",
+  "entityType": "company",
+  "categories": [
+    "ai"
+  ],
+  "defaultAsset": "logo.png",
+  "assets": [
+    {
+      "file": "logo.png",
+      "label": "青色中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.kuaishang.cn/images/icon_logo_scale.png",
+      "sourcePage": "https://www.kuaishang.cn/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "7617c3e205b215db1a6bb5aac631b59da4f841a96c1b3b09af145aca19d5b996",
+      "bytes": 41605,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.kuaishang.cn/",
+        "attribution": "快商通。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

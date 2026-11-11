@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 3,
+  "id": "moka",
+  "name": "Moka",
+  "aliases": [],
+  "identity": {
+    "nameZh": null,
+    "nameEn": "Moka",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.mokahr.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.mokahr.com/",
+  "entityType": "company",
+  "categories": [
+    "enterprise-software"
+  ],
+  "defaultAsset": "logo-brand.png",
+  "assets": [
+    {
+      "file": "logo-brand.png",
+      "label": "英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://www.mokahr.com/static/common/logo.png",
+      "sourcePage": "https://www.mokahr.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "eec1492ae106379810e461ddadf994a7e922dbbdaa20325b2cc93eb89a0be118",
+      "bytes": 34020,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.mokahr.com/",
+        "attribution": "Moka。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 3,
+  "id": "che300",
+  "name": "车300",
+  "aliases": [],
+  "identity": {
+    "nameZh": "车300",
+    "nameEn": null,
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.che300.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.che300.com/",
+  "entityType": "company",
+  "categories": [
+    "automotive"
+  ],
+  "defaultAsset": "logo-bilingual.png",
+  "assets": [
+    {
+      "file": "logo-bilingual.png",
+      "label": "中文组合与网址",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://assets.che300.com/feimg/web3.0/home/logo.png",
+      "sourcePage": "https://www.che300.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "8cfd45bf9f32283eb2a8c1e2ba0edfdf2d3d7b361bff7abe5067b8dab815580c",
+      "bytes": 7109,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.che300.com/",
+        "attribution": "车300。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网页头原图，适合小尺寸屏幕使用。"
+      ]
+    }
+  ]
+}

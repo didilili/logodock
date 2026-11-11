@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 3,
+  "id": "mihoyo",
+  "name": "米哈游",
+  "aliases": [],
+  "identity": {
+    "nameZh": "米哈游",
+    "nameEn": "miHoYo",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.mihoyo.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.mihoyo.com/",
+  "entityType": "company",
+  "categories": [
+    "entertainment"
+  ],
+  "defaultAsset": "wordmark.png",
+  "assets": [
+    {
+      "file": "wordmark.png",
+      "label": "英文与口号",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://www.mihoyo.com/_nuxt/img/m-logo.3fdead4.png",
+      "sourcePage": "https://www.mihoyo.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "dbcb906b526cea8fd934ebd1040bbb9a32f4c1399f63797a46042d67d40712f2",
+      "bytes": 17308,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.mihoyo.com/",
+        "attribution": "米哈游。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "wordmark-white-header.png",
+      "label": "白色字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.mihoyo.com/",
+      "sourcePage": "https://www.mihoyo.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header"
+      },
+      "qualityNotes": [
+        "透明背景，附英文标语。"
+      ],
+      "usageWarnings": [
+        "适合原生尺寸或缩小使用。"
+      ],
+      "sha256": "abe9480c7b7dc8aa095c72d23262af79b524ec8925fd05ad90e31c733526e571",
+      "bytes": 9243,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.mihoyo.com/",
+        "attribution": "米哈游。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-11"
+      }
+    }
+  ]
+}

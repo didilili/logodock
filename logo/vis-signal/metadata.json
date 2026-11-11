@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 3,
+  "id": "vis-signal",
+  "name": "杭州可见信号科技",
+  "aliases": [],
+  "website": "https://vis-signal.com/",
+  "identity": {
+    "nameZh": "杭州可见信号科技",
+    "nameEn": "Visible Signals",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官网页脚中英文品牌名称",
+        "url": "https://vis-signal.com/",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "icon.svg",
+  "assets": [
+    {
+      "file": "icon.svg",
+      "label": "橙黑信号图形",
+      "variant": "icon",
+      "status": "current",
+      "background": "light",
+      "source": "https://vis-signal.com/favicon.svg",
+      "sourcePage": "https://vis-signal.com/",
+      "sha256": "8131f23bb6c4cb2bbfd83b8bbfe8ba1417040cda585557fdc67e66f71b846acc",
+      "bytes": 660,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://vis-signal.com/",
+        "attribution": "杭州可见信号科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "官网提供的静态独立图形。"
+      ]
+    }
+  ]
+}

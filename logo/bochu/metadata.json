@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 3,
+  "id": "bochu",
+  "name": "柏楚电子",
+  "aliases": [
+    "柏楚"
+  ],
+  "identity": {
+    "nameZh": "柏楚电子",
+    "nameEn": "BOCHU",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.bochu.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.bochu.com/",
+  "entityType": "company",
+  "categories": [
+    "industrial-automation"
+  ],
+  "defaultAsset": "logo-blue.svg",
+  "assets": [
+    {
+      "file": "logo-blue.svg",
+      "label": "蓝色英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://d.fscut.com/wordpress-fscut/2024/01/baichulogo1.svg",
+      "sourcePage": "https://www.bochu.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "0eb87274df0f69f151f2d365d142936e0be3bd2d4fc3aedc78072a63460cd83f",
+      "bytes": 5462,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.bochu.com/",
+        "attribution": "柏楚。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-white.svg",
+      "label": "反白英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://d.fscut.com/wordpress-fscut/2024/01/baichulogo2.svg",
+      "sourcePage": "https://www.bochu.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "2ebd3947175475b9a95360de6ef18dd7dee0691dd063649fbf2d70b6f8f6ecee",
+      "bytes": 5450,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.bochu.com/",
+        "attribution": "柏楚。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-vertical.png",
+      "label": "竖版英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://d.fscut.com/wordpress-fscut/2024/04/logo%E6%AD%A3%E6%96%B9%E5%BD%A2-%E9%80%8F%E6%98%8E%E5%BA%95.png",
+      "sourcePage": "https://www.bochu.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "d1339512b8f370c74b5aac2d39ca3334190235ca4f732731be150a39c9c9e8c5",
+      "bytes": 75171,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.bochu.com/",
+        "attribution": "柏楚。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "symbol-blue.svg",
+      "label": "蓝色圆形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://d.fscut.com/wordpress-fscut/2024/01/baichulogo1.svg",
+      "sourcePage": "https://www.bochu.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "originalAsset": "logo-blue.svg",
+        "originalSha256": "0eb87274df0f69f151f2d365d142936e0be3bd2d4fc3aedc78072a63460cd83f"
+      },
+      "sha256": "c9650c18aee29b931857a0372e01684888c31d1d6f928d92da4914d96ef4622b",
+      "bytes": 1745,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.bochu.com/",
+        "attribution": "柏楚。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "从同品牌原始 SVG 提取图形，方形画布长边贴边，短边居中，额外边距为零。"
+      ]
+    }
+  ]
+}

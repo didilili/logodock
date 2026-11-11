@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 3,
+  "id": "china-telecom",
+  "name": "中国电信",
+  "aliases": [
+    "电信"
+  ],
+  "identity": {
+    "nameZh": "中国电信",
+    "nameEn": "China Telecom",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.chinatelecom-h.com/sc/global/home.php",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.chinatelecom-h.com/sc/global/home.php",
+  "entityType": "company",
+  "categories": [
+    "telecommunications"
+  ],
+  "defaultAsset": "logo-bilingual.png",
+  "assets": [
+    {
+      "file": "logo-bilingual.png",
+      "label": "中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://www.chinatelecom-h.com/sc/images/global/logo.png",
+      "sourcePage": "https://www.chinatelecom-h.com/sc/global/home.php",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "28b25c403eaab7d9dd3899ac0c35db5a0f2ba00ba039ffff47ad70c7a38b0a69",
+      "bytes": 4782,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.chinatelecom-h.com/sc/global/home.php",
+        "attribution": "电信。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网页头小尺寸原图，适合原生尺寸附近的屏幕使用。"
+      ]
+    }
+  ]
+}

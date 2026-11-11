@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 3,
+  "id": "fxiaoke",
+  "name": "纷享销客",
+  "aliases": [],
+  "website": "https://www.fxiaoke.com/",
+  "identity": {
+    "nameZh": "纷享销客",
+    "nameEn": "ShareCRM",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "中文官网与英文品牌站的关联",
+        "url": "https://www.fxiaoke.com/",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "官方英文品牌站",
+        "url": "https://www.sharecrm.com/",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "官方英文帮助中心品牌介绍",
+        "url": "https://help.sharecrm.com/28876/b697a/5f0c8",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "logo-zh-tagline.png",
+  "assets": [
+    {
+      "file": "logo-zh-tagline.png",
+      "label": "中文组合与英文标语",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://a9.fspage.com/FSR/official-site/img/fxiaoke-logo-v5.png",
+      "sourcePage": "https://www.fxiaoke.com/",
+      "sha256": "c99a8d9d001cf2e9d6a9e2af6129d8dcd091da885066c4386548a551fc0f9171",
+      "bytes": 56372,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.fxiaoke.com/",
+        "attribution": "纷享销客。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    }
+  ]
+}

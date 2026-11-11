@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 3,
+  "id": "moonton",
+  "name": "沐瞳科技",
+  "aliases": [
+    "MOONTON"
+  ],
+  "identity": {
+    "nameZh": "沐瞳科技",
+    "nameEn": "MOONTON",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://cn.moonton.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://cn.moonton.com/",
+  "entityType": "company",
+  "categories": [
+    "entertainment"
+  ],
+  "defaultAsset": "logo-black.svg",
+  "assets": [
+    {
+      "file": "logo-black.svg",
+      "label": "彩色深字组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://cn.moonton.com/static/skin/images/logob.svg",
+      "sourcePage": "https://cn.moonton.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "6fdd9ad1f8401e6dbadb4d7efb5dd041ed2049bd5bf930f296cd7199eb4581dd",
+      "bytes": 8140,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://cn.moonton.com/",
+        "attribution": "沐瞳科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo.svg",
+      "label": "彩色白字组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "dark",
+      "source": "https://cn.moonton.com/static/skin/images/logo.svg",
+      "sourcePage": "https://cn.moonton.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "edf21846fb1e5c04bef7cff648bec23f2a6840e8580b91e6c6d27159e3bf3cc1",
+      "bytes": 7677,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://cn.moonton.com/",
+        "attribution": "沐瞳科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-footer.svg",
+      "label": "浅灰英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "monochrome",
+      "background": "dark",
+      "source": "https://cn.moonton.com/static/skin/images/flogo.svg",
+      "sourcePage": "https://cn.moonton.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "0a7aaa2e05da1c9a877ae2f1afcc22eb35978ed1b164283b33750db6e5acf1b9",
+      "bytes": 5723,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://cn.moonton.com/",
+        "attribution": "沐瞳科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "symbol.svg",
+      "label": "彩色旋涡图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "source": "https://cn.moonton.com/static/skin/images/logob.svg",
+      "sourcePage": "https://cn.moonton.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "originalAsset": "logo-black.svg",
+        "originalSha256": "6fdd9ad1f8401e6dbadb4d7efb5dd041ed2049bd5bf930f296cd7199eb4581dd"
+      },
+      "sha256": "8abe8bab15c54d534fff25250979dce7f056e17fc11bccba81e93ef14933fea7",
+      "bytes": 5246,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://cn.moonton.com/",
+        "attribution": "沐瞳科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "方形透明画布，长边贴边，短边居中，额外边距为零。"
+      ]
+    }
+  ]
+}

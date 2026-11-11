@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 3,
+  "id": "bailongma-yunxing",
+  "name": "白龙马云行科技",
+  "aliases": [],
+  "identity": {
+    "nameZh": "白龙马云行科技",
+    "nameEn": null,
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.bailongma.com/about",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.bailongma.com/about",
+  "entityType": "company",
+  "categories": [
+    "enterprise-software",
+    "automotive"
+  ],
+  "defaultAsset": "logo-white.png",
+  "assets": [
+    {
+      "file": "logo-white.png",
+      "label": "反白中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "dark",
+      "status": "current",
+      "source": "https://www.bailongma.com/_nuxt/img/top_logo@3x.90c6b69.png",
+      "sourcePage": "https://www.bailongma.com/about",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "3b92f6980d35c96a3756e23af7cd771c7fc77a18b36b40041fe8a181ad39444c",
+      "bytes": 7981,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.bailongma.com/about",
+        "attribution": "白龙马云行科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "symbol.png",
+      "label": "龙形图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "dark",
+      "status": "current",
+      "source": "https://www.bailongma.com/favicon.ico",
+      "sourcePage": "https://www.bailongma.com/about",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "7e4646c896a28a6a5f5862bd9e65a36835f733dbc4329990e431a949a6616ca6",
+      "bytes": 3301,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.bailongma.com/about",
+        "attribution": "白龙马云行科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

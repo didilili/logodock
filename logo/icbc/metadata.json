@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 3,
+  "id": "icbc",
+  "name": "中国工商银行",
+  "aliases": [
+    "ICBC"
+  ],
+  "identity": {
+    "nameZh": "中国工商银行",
+    "nameEn": "ICBC",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.icbc.com.cn/ICBC/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.icbc.com.cn/ICBC/",
+  "entityType": "company",
+  "categories": [
+    "金融"
+  ],
+  "defaultAsset": "logo.png",
+  "assets": [
+    {
+      "file": "logo.png",
+      "label": "红黑中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://v.icbc.com.cn/userfiles/Resources/ICBC/shouye/images/2017/logo.png",
+      "sourcePage": "https://www.icbc.com.cn/ICBC/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "24be2a6d6747c9b8ee2d602d448aeb65d233d1d3380bd2e0d1fc7d3e3df0a90e",
+      "bytes": 5131,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.icbc.com.cn/ICBCLtd/%E5%85%B3%E4%BA%8E%E6%88%91%E8%A1%8C/%E9%9B%86%E5%9B%A2%E5%93%81%E7%89%8C/jcgf.htm",
+        "attribution": "中国工商银行。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "集团标识基础规范声明，未经许可不得修改、复制或以其它方式使用工商银行商业标识。"
+      },
+      "qualityNotes": [
+        "官网小尺寸原件，适合按原生像素取用。"
+      ]
+    }
+  ]
+}

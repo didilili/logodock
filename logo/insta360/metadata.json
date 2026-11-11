@@ -1,0 +1,1656 @@
+{
+  "schemaVersion": 3,
+  "id": "insta360",
+  "name": "影石",
+  "aliases": [
+    "影石创新"
+  ],
+  "identity": {
+    "nameZh": "影石",
+    "nameEn": "Insta360",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌身份来源",
+        "url": "https://www.insta360.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.insta360.com/",
+  "entityType": "company",
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "wordmark-black.svg",
+  "assets": [
+    {
+      "file": "wordmark-black.svg",
+      "label": "黑色中英文字",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "status": "current",
+      "source": "https://wassets.insta360.com/common/739ce316523b43ed953175d4d4f03c64/black-sc.svg",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "6d791a12c8230f4d2bce67465ce34dae4dd4ec1b60846881223585a96bc4f799",
+      "bytes": 8814,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。"
+      }
+    },
+    {
+      "file": "wordmark-white.svg",
+      "label": "反白中英文字",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://wassets.insta360.com/common/c8fed7f221e64e7d82f009b18965fb8f/white-sc.svg",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "5163563911650fc9d6f47a8e7694b6e1d78c5d713fef2dfca492bb435314d034",
+      "bytes": 8814,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。"
+      }
+    },
+    {
+      "file": "wordmark-yellow-horizontal.png",
+      "label": "黄底黑字·横版",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "any",
+      "status": "current",
+      "source": "https://wassets.insta360.com/common/c563354e06c945749ed493cae4a13040/Insta360_Logo_Black&yellow_Print_cn.png",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "31424b05776a49eba503bd08eafaa7d6731bdc5f325f3c21887da454d7b4a441",
+      "bytes": 17566,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。"
+      },
+      "qualityNotes": [
+        "品牌页原始预览文件，保留其背景与画布留白。"
+      ]
+    },
+    {
+      "file": "wordmark-yellow-slogan-en-right.png",
+      "label": "黄底黑字·英文口号右齐",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "any",
+      "status": "current",
+      "source": "https://wassets.insta360.com/common/f59317830ada4aa6bdceee33d130efed/Insta360_Slogan_Black&yellow_Print_cn.png",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "aa7b9b1a348068af366641429810d24c53aad5d9fe2c1466824453e234a864ef",
+      "bytes": 21425,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。"
+      },
+      "qualityNotes": [
+        "品牌页原始预览文件，保留其背景与画布留白。"
+      ]
+    },
+    {
+      "file": "wordmark-yellow-slogan-zh-right.png",
+      "label": "黄底黑字·中文口号右齐",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "any",
+      "status": "current",
+      "source": "https://wassets.insta360.com/common/b223946868bd46de9e55d204ccce769a/Insta360_CN_Slogan_Black&yellow_Print_cn.png",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "50747d77985ddeda7e7bca39ae2466ec2c31d7536973e0f7302863f0ae494d19",
+      "bytes": 23777,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。"
+      },
+      "qualityNotes": [
+        "品牌页原始预览文件，保留其背景与画布留白。"
+      ]
+    },
+    {
+      "file": "wordmark-yellow-vertical.jpg",
+      "label": "黄底黑字·竖版",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "any",
+      "status": "current",
+      "source": "https://wassets.insta360.com/common/b42aac3f7d74475391f4a9c1bfa2b048/Insta360_Logo_Black&yellow_Print_mid_cn.jpeg",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "d7af1f8a166feca9cf796532510f23b79b6ea69f03e44e16cb5fb090cac413d5",
+      "bytes": 171383,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。"
+      },
+      "qualityNotes": [
+        "品牌页原始预览文件，保留其背景与画布留白。"
+      ]
+    },
+    {
+      "file": "wordmark-yellow-slogan-en-center.png",
+      "label": "黄底黑字·英文口号居中",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "any",
+      "status": "current",
+      "source": "https://wassets.insta360.com/common/ee3e82ae48b54adc8bbeff09fa810c3a/Insta360_Slogan_Black&yellow_Print_mid_cn.png",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "0d4d7d84479dd3637bcd16ece25ffa19b60322fe31f1378517deaec0ad92dd2d",
+      "bytes": 21659,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。"
+      },
+      "qualityNotes": [
+        "品牌页原始预览文件，保留其背景与画布留白。"
+      ]
+    },
+    {
+      "file": "wordmark-yellow-slogan-zh-center.jpg",
+      "label": "黄底黑字·中文口号居中",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "any",
+      "status": "current",
+      "source": "https://wassets.insta360.com/common/731217498d8846e2ad045bccde7a17f5/Insta360_CN_Slogan_Black&yellow_Print_mid_cn.jpeg",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "1726054894c36e1beaafd61734927202445053d43de2f4e1cf9bf7c6f0a1603c",
+      "bytes": 224592,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。"
+      },
+      "qualityNotes": [
+        "品牌页原始预览文件，保留其背景与画布留白。"
+      ]
+    },
+    {
+      "file": "wordmark-black-horizontal.png",
+      "label": "黑底白字·横版",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "any",
+      "status": "current",
+      "source": "https://wassets.insta360.com/common/3b1b95d74c9c46ddb872bc7bf6c55bad/Insta360_Logo_White&black_Print_cn.png",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "ef46930827caa9cfe79ca1b2428c8ab9f47fa89bbf53c168ea8aab39266a4d3b",
+      "bytes": 18074,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。"
+      },
+      "qualityNotes": [
+        "品牌页原始预览文件，保留其背景与画布留白。"
+      ]
+    },
+    {
+      "file": "wordmark-black-slogan-en-right.png",
+      "label": "黑底白字·英文口号右齐",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "any",
+      "status": "current",
+      "source": "https://wassets.insta360.com/common/a46f703470af49cf8df4c38c45f8bf6d/Insta360_Slogan_White&black_Print_cn.png",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "d4048796cd932c024a357c246fb344ba01aee9221c0809875e3aad4d080c69e7",
+      "bytes": 22440,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。"
+      },
+      "qualityNotes": [
+        "品牌页原始预览文件，保留其背景与画布留白。"
+      ]
+    },
+    {
+      "file": "wordmark-black-slogan-zh-right.png",
+      "label": "黑底白字·中文口号右齐",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "any",
+      "status": "current",
+      "source": "https://wassets.insta360.com/common/78eca503a6904ef38829f8d2231d1a5a/Insta360_CN_Slogan_White&black_Print.png",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "dff9fd154957a696dac50126d47b6c0c9bb5d51868cc22e12b6f1d60b29b3a26",
+      "bytes": 24297,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。"
+      },
+      "qualityNotes": [
+        "品牌页原始预览文件，保留其背景与画布留白。"
+      ]
+    },
+    {
+      "file": "wordmark-black-vertical.png",
+      "label": "黑底白字·竖版",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "any",
+      "status": "current",
+      "source": "https://wassets.insta360.com/common/9b69e1d0ed044f37bc2f8c98436ead99/Insta360_Logo_White&black_Print_mid_cn.png",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "f1f79c81b693f52c3885d28adf3d52f0e12ddf6ec27b7c2c577fa81e106643de",
+      "bytes": 19747,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。"
+      },
+      "qualityNotes": [
+        "品牌页原始预览文件，保留其背景与画布留白。"
+      ]
+    },
+    {
+      "file": "wordmark-black-slogan-en-center.png",
+      "label": "黑底白字·英文口号居中",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "any",
+      "status": "current",
+      "source": "https://wassets.insta360.com/common/296a4f6a213540ccac1f9b435df84194/Insta360_Slogan_White&black_Print_mid_cn.png",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "b1a63c52354b23ade296c07e6949dd9777ed0faca9e213d1eddcbc288d0a5184",
+      "bytes": 22599,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。"
+      },
+      "qualityNotes": [
+        "品牌页原始预览文件，保留其背景与画布留白。"
+      ]
+    },
+    {
+      "file": "wordmark-black-slogan-zh-center.png",
+      "label": "黑底白字·中文口号居中",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "any",
+      "status": "current",
+      "source": "https://wassets.insta360.com/common/b0aa1eb8f4e54826abdb2e86edceec5a/Insta360_CN_Slogan_White&black_Print_mid.png",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "7e6b91d31741be6064c9343249a2e0e2daa6cac002a8a5b8aebdc4cc76a15dfb",
+      "bytes": 24405,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。"
+      },
+      "qualityNotes": [
+        "品牌页原始预览文件，保留其背景与画布留白。"
+      ]
+    },
+    {
+      "file": "wordmark-transparent-black-slogan-en-right.png",
+      "label": "透明底黑字·英文口号右齐",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "status": "current",
+      "source": "https://wassets.insta360.com/common/82e6a5e20a3942db9abc67990f86b184/Insta360_Slogan_Black&transparent_Print_cn.png",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "fdf1e8475d19e722e01d11ef0bfb3e7576d28ee211a77a6d5a451abdbe944498",
+      "bytes": 20675,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。"
+      },
+      "qualityNotes": [
+        "品牌页原始预览文件，保留其背景与画布留白。"
+      ]
+    },
+    {
+      "file": "wordmark-transparent-black-slogan-zh-right.png",
+      "label": "透明底黑字·中文口号右齐",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "status": "current",
+      "source": "https://wassets.insta360.com/common/b208af868b904ac8aa6dc694a010d351/Insta360_CN_Slogan_Black&transparent_Print.png",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "60cba5dad1f7b27e37cb0aa8e026f291449083e9d3daf07824fd02d051107393",
+      "bytes": 22698,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。"
+      },
+      "qualityNotes": [
+        "品牌页原始预览文件，保留其背景与画布留白。"
+      ]
+    },
+    {
+      "file": "wordmark-transparent-black-vertical.png",
+      "label": "透明底黑字·竖版",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "vertical",
+      "color": "black",
+      "background": "light",
+      "status": "current",
+      "source": "https://wassets.insta360.com/common/fac8927f4bf8451abaa031e4b18980eb/Insta360_Logo_Black&transparent_Print_cn_mid.png",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "4bdeab8806c414f53f426af8527ae96a28002946118f20fed34eb0a0913f7ef1",
+      "bytes": 18017,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。"
+      },
+      "qualityNotes": [
+        "品牌页原始预览文件，保留其背景与画布留白。"
+      ]
+    },
+    {
+      "file": "wordmark-transparent-black-slogan-en-center.png",
+      "label": "透明底黑字·英文口号居中",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "status": "current",
+      "source": "https://wassets.insta360.com/common/3a365893ee434e1289dbbabbe88b5de0/Insta360_Slogan_Black&transparent_Print_mid_cn.png",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "ad91573188bcc115dcbaa891e5ccf15906e70f6682a59723139f4ad72e9acce8",
+      "bytes": 20884,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。"
+      },
+      "qualityNotes": [
+        "品牌页原始预览文件，保留其背景与画布留白。"
+      ]
+    },
+    {
+      "file": "wordmark-transparent-black-slogan-zh-center.png",
+      "label": "透明底黑字·中文口号居中",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "status": "current",
+      "source": "https://wassets.insta360.com/common/85d8c0dc6fc1428db4c4890933405bc3/Insta360_CN_Slogan_Black&transparent_Print_mid.png",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "5fa9bad087ed936029c5042c4181474cf71ff31bea1f3b8070a7c26416317c1d",
+      "bytes": 22722,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。"
+      },
+      "qualityNotes": [
+        "品牌页原始预览文件，保留其背景与画布留白。"
+      ]
+    },
+    {
+      "file": "wordmark-transparent-white-slogan-en-right.png",
+      "label": "透明底白字·英文口号右齐",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://wassets.insta360.com/common/1335072816bf4d5da48af3b08d1ab55a/Insta360_Slogan_White&transparent_Print_cn.png",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "47830272fa6cc11f6ae699a12b1b756a3b2d1c5a7eb0fc9127bae6fd523d7049",
+      "bytes": 19391,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。"
+      },
+      "qualityNotes": [
+        "品牌页原始预览文件，保留其背景与画布留白。"
+      ]
+    },
+    {
+      "file": "wordmark-transparent-white-slogan-zh-right.png",
+      "label": "透明底白字·中文口号右齐",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://wassets.insta360.com/common/47ac8d7d649d41d594dd52a7b79ae3f2/Insta360_CN_Slogan_White&transparent_Print.png",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "b73a7b6614b43a4828225d278547dcf2113e5ab4b750407a254f7588f1374747",
+      "bytes": 21128,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。"
+      },
+      "qualityNotes": [
+        "品牌页原始预览文件，保留其背景与画布留白。"
+      ]
+    },
+    {
+      "file": "wordmark-transparent-white-vertical.png",
+      "label": "透明底白字·竖版",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "vertical",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://wassets.insta360.com/common/ad0ab73ca62145b2b4303aed1189f11f/Insta360_Logo_White&transparent_Print_mid_cn.png",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "d6531c40399e3b4aacbd8ab4ec6933f2f53f2324b1b442c804ea9b98d7869ce3",
+      "bytes": 16772,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。"
+      },
+      "qualityNotes": [
+        "品牌页原始预览文件，保留其背景与画布留白。"
+      ]
+    },
+    {
+      "file": "wordmark-transparent-white-slogan-en-center.png",
+      "label": "透明底白字·英文口号居中",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://wassets.insta360.com/common/bacb39bf79a9436b8196c78ef3e84a94/Insta360_Slogan_White&transparent_Print_mid_cn.png",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "e824eafdafcdae6648a3aecf8f16bb00feba1d6f07504940acf1beb69e8240b9",
+      "bytes": 19562,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。"
+      },
+      "qualityNotes": [
+        "品牌页原始预览文件，保留其背景与画布留白。"
+      ]
+    },
+    {
+      "file": "wordmark-transparent-white-slogan-zh-center.png",
+      "label": "透明底白字·中文口号居中",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://wassets.insta360.com/common/9a1dc53160034b7989b79df0243edaa6/Insta360_CN_Slogan_White&transparent_Print_mid.png",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "7dbd677537fcc320590f4587c0dbd8ce70a41cc5b42a1980c866e069a9875126",
+      "bytes": 21170,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。"
+      },
+      "qualityNotes": [
+        "品牌页原始预览文件，保留其背景与画布留白。"
+      ]
+    }
+  ],
+  "sourceFiles": [
+    {
+      "file": "design-1-1-cmyk.pdf",
+      "label": "黄底黑字·横版 CMYK",
+      "assetFiles": [
+        "wordmark-yellow-horizontal.png"
+      ],
+      "source": "https://wassets.insta360.com/common/0d10d80784fb46c99b8f694697784aaf/logo-black-on-yellow-cmyk.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "d171cf30b2b82651faf80e96f8a24a428c7dc64f9413ce328c4014f3c44d9b3a",
+      "bytes": 61297,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-1-1-rgb.pdf",
+      "label": "黄底黑字·横版 RGB",
+      "assetFiles": [
+        "wordmark-yellow-horizontal.png"
+      ],
+      "source": "https://wassets.insta360.com/common/82f62e9b8dcb45819fda1cd265e42ac4/logo-black-on-yellow-rgb.pdf.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "7f187d6e451a55bf3a60cfe97d9455f501ba2097c523d49eb88d29ce284355c1",
+      "bytes": 45003,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-1-2-cmyk.pdf",
+      "label": "黄底黑字·英文口号右齐 CMYK",
+      "assetFiles": [
+        "wordmark-yellow-slogan-en-right.png"
+      ],
+      "source": "https://wassets.insta360.com/common/472ccd7e39544e8cb90b28e46751beaf/slogan-black-on-yellow-cmyk.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "a498d44797646d3fd7e40a1d0d5982daf784603c2a5db2d2250d2078bc7f146f",
+      "bytes": 67810,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-1-2-rgb.pdf",
+      "label": "黄底黑字·英文口号右齐 RGB",
+      "assetFiles": [
+        "wordmark-yellow-slogan-en-right.png"
+      ],
+      "source": "https://wassets.insta360.com/common/8b7785a8f1964790b7ddce0b12279a34/logo-slogan-black-on-yellow-rgb.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "0597c6576962d5703566630a91a947f9c77a0b458383133515b66e046fc61f8e",
+      "bytes": 46723,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-1-3-cmyk.pdf",
+      "label": "黄底黑字·中文口号右齐 CMYK",
+      "assetFiles": [
+        "wordmark-yellow-slogan-zh-right.png"
+      ],
+      "source": "https://wassets.insta360.com/common/fc931505ab5345209b1b0911d5a126b7/CN-slogan-black-on-yellow-cmy.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "af2b09fa436fe8aea21494306ba197d321ba717715c2ad5bea885255fc14c2ef",
+      "bytes": 30149,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-1-3-rgb.pdf",
+      "label": "黄底黑字·中文口号右齐 RGB",
+      "assetFiles": [
+        "wordmark-yellow-slogan-zh-right.png"
+      ],
+      "source": "https://wassets.insta360.com/common/aed2a79cd7ae4f73b5a4d402032ed47b/CN-logo-slogan-black-on-yellow-rgb.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "4f65947cb5a45133bf14063da85e95a9346312d398db3ab7ec3b32693832c085",
+      "bytes": 49097,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-1-4-cmyk.pdf",
+      "label": "黄底黑字·竖版 CMYK",
+      "assetFiles": [
+        "wordmark-yellow-vertical.jpg"
+      ],
+      "source": "https://wassets.insta360.com/common/76c83a2d6e2448d596d0fcabca818ab0/logo-black-on-yellow-cmyk-mid.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "ef98e26ef9264fa357288dab43346491263890338bb035f3b033098fa44a798b",
+      "bytes": 26059,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-1-4-rgb.pdf",
+      "label": "黄底黑字·竖版 RGB",
+      "assetFiles": [
+        "wordmark-yellow-vertical.jpg"
+      ],
+      "source": "https://wassets.insta360.com/common/607026e7c5044ecba6a6384a9cc1f016/logo-black-on-yellow-mid-rgb.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "089b8cd34e631c1e82e5154568d06416b40f4150f6a3de40e4fa102f01949d9f",
+      "bytes": 45063,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-1-5-cmyk.pdf",
+      "label": "黄底黑字·英文口号居中 CMYK",
+      "assetFiles": [
+        "wordmark-yellow-slogan-en-center.png"
+      ],
+      "source": "https://wassets.insta360.com/common/2ad3d03ba3d74da08d23f8667dc474c5/slogan-black-on-yellow-cmyk-mid.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "4cd2db8814ce4473da283865b666e7161c81b845a8c9c8e7fe247311972e8caf",
+      "bytes": 27771,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-1-5-rgb.pdf",
+      "label": "黄底黑字·英文口号居中 RGB",
+      "assetFiles": [
+        "wordmark-yellow-slogan-en-center.png"
+      ],
+      "source": "https://wassets.insta360.com/common/4bf028915de84bb2b3aa1535507fe25a/logo-slogan-black-on-yellow-mid-rgb.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "1dbf55155ef7bb8deacf0d172a7a60310619acbc56025e60b99dae61577ea06c",
+      "bytes": 46714,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-1-6-cmyk.pdf",
+      "label": "黄底黑字·中文口号居中 CMYK",
+      "assetFiles": [
+        "wordmark-yellow-slogan-zh-center.jpg"
+      ],
+      "source": "https://wassets.insta360.com/common/e321e8b536b9463aa46f3770cd74a21f/CN-slogan-black-on-yellow-cmy-mid.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "4a90415e97e591a1bc3f180fc0267fa8f4c69892bb17fe1271f805042927c6fe",
+      "bytes": 30131,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-1-6-rgb.pdf",
+      "label": "黄底黑字·中文口号居中 RGB",
+      "assetFiles": [
+        "wordmark-yellow-slogan-zh-center.jpg"
+      ],
+      "source": "https://wassets.insta360.com/common/65ed47833b0d4323b1e9bb66db5c15f9/CN-logo-slogan-black-on-yellow-mid-rgb.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "8f087853cd9d4542f2f2655243c4c393f61dad66034072b5b62d98aa8234711e",
+      "bytes": 49140,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-2-1-cmyk.pdf",
+      "label": "黑底白字·横版 CMYK",
+      "assetFiles": [
+        "wordmark-black-horizontal.png"
+      ],
+      "source": "https://wassets.insta360.com/common/946dfced7f5047e0bdc2e31505bdd684/logo-white-on-black-cmyk.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "3fdaf8293e4a2a7b0727fd43e7b5ec1206e1105a858441203d714ad9a83b5c8d",
+      "bytes": 57695,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-2-1-rgb.pdf",
+      "label": "黑底白字·横版 RGB",
+      "assetFiles": [
+        "wordmark-black-horizontal.png"
+      ],
+      "source": "https://wassets.insta360.com/common/2e25447fc6384522bfdedc239c9093dd/logo-white-on-black-rgb.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "6e28b25e217833cf878c98ba782f426dc17255c20a4c44c1cc3ab338b3bc19dd",
+      "bytes": 45003,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-2-2-cmyk.pdf",
+      "label": "黑底白字·英文口号右齐 CMYK",
+      "assetFiles": [
+        "wordmark-black-slogan-en-right.png"
+      ],
+      "source": "https://wassets.insta360.com/common/c59d0da16fc34b33b221c53bb2b28c42/slogan-white-on-black-cmyk.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "4e49cdd25dfa58b99cb8d9ce3cd45149369594f9d3eb3c65686c094552587f12",
+      "bytes": 64909,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-2-2-rgb.pdf",
+      "label": "黑底白字·英文口号右齐 RGB",
+      "assetFiles": [
+        "wordmark-black-slogan-en-right.png"
+      ],
+      "source": "https://wassets.insta360.com/common/e4465ee4fcb6494d9a9210f1670f1322/logo-slogan-white-on-black-rgb.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "5af19f495423afde05b25f3bc4261263ed221f3b9bf7b45423c52c18db07ede4",
+      "bytes": 46721,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-2-3-cmyk.pdf",
+      "label": "黑底白字·中文口号右齐 CMYK",
+      "assetFiles": [
+        "wordmark-black-slogan-zh-right.png"
+      ],
+      "source": "https://wassets.insta360.com/common/59f3266169334f86a046cdf0e9be0fb3/CN-slogan-white-on-black-cmyk.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "dcd5b796f4fedc5adf318a23fa916ad9ef0e233d9033610987c5424a0543ccd7",
+      "bytes": 30139,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-2-3-rgb.pdf",
+      "label": "黑底白字·中文口号右齐 RGB",
+      "assetFiles": [
+        "wordmark-black-slogan-zh-right.png"
+      ],
+      "source": "https://wassets.insta360.com/common/d997bb5be9d141fcbc0bf8dc547eb2f7/CN-slogan-white-on-black-rgb.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "b67949c6fcede9c24dee862446a8cde8974296f576b897c4beb639240d552e1e",
+      "bytes": 49088,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-2-4-cmyk.pdf",
+      "label": "黑底白字·竖版 CMYK",
+      "assetFiles": [
+        "wordmark-black-vertical.png"
+      ],
+      "source": "https://wassets.insta360.com/common/8bd806e7642441d89f66748aeaad64f5/logo-white-on-black-cmyk-mid.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "3dbb7814902d7ab02fa807be049b68cd9d789eb41d52934f64ba06f378d7cae6",
+      "bytes": 26050,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-2-4-rgb.pdf",
+      "label": "黑底白字·竖版 RGB",
+      "assetFiles": [
+        "wordmark-black-vertical.png"
+      ],
+      "source": "https://wassets.insta360.com/common/3c0c0aba442d420a8eadb6d6cd4a7d55/logo-white-on-black-mid-rgb.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "2a8cbc81b11769166783bccceaf659e2325ab920b865411d0de0c46a00354d7a",
+      "bytes": 45060,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-2-5-cmyk.pdf",
+      "label": "黑底白字·英文口号居中 CMYK",
+      "assetFiles": [
+        "wordmark-black-slogan-en-center.png"
+      ],
+      "source": "https://wassets.insta360.com/common/886851b122424f3585d4e81a872b6dba/slogan-white-on-black-cmyk-mid.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "88017a2c1933b92647e9db94750a19590041c9e7914abd999f434229e34c9574",
+      "bytes": 27747,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-2-5-rgb.pdf",
+      "label": "黑底白字·英文口号居中 RGB",
+      "assetFiles": [
+        "wordmark-black-slogan-en-center.png"
+      ],
+      "source": "https://wassets.insta360.com/common/3b1670d5602649a7a766d9626336ec61/slogan-white-on-black-mid-rgb.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "f9189b569d0640deaf61311a182a31195ed46c385d07a8be0965accb634bd1d4",
+      "bytes": 46699,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-2-6-cmyk.pdf",
+      "label": "黑底白字·中文口号居中 CMYK",
+      "assetFiles": [
+        "wordmark-black-slogan-zh-center.png"
+      ],
+      "source": "https://wassets.insta360.com/common/46fabe95e7d642ae9a62668d180e53fc/CN-slogan-white-on-black-cmyk-mid.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "7bd07928c22d3a65b20a239e9196157e66aaadcd2704e4fb175723baedab90e6",
+      "bytes": 30119,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-2-6-rgb.pdf",
+      "label": "黑底白字·中文口号居中 RGB",
+      "assetFiles": [
+        "wordmark-black-slogan-zh-center.png"
+      ],
+      "source": "https://wassets.insta360.com/common/e89c2b397ddd4303a601c158f44b0856/CN-slogan-white-on-black-mid-rgb.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "737007a171cc4d79a51a66ccdaa6bbd1aa4a6cc309a6394ad880d411a18750be",
+      "bytes": 49133,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-3-1-cmyk.pdf",
+      "label": "透明底黑字·横版 CMYK",
+      "assetFiles": [
+        "wordmark-black.svg"
+      ],
+      "source": "https://wassets.insta360.com/common/fcf33e1e318848f69f38b2a8736dbd29/logo-black-on-transparent-cmyk.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "d8324edbbde448f10b675dd53368efc07bf35fc426596d81f62648245d6c4f72",
+      "bytes": 57340,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-3-1-rgb.pdf",
+      "label": "透明底黑字·横版 RGB",
+      "assetFiles": [
+        "wordmark-black.svg"
+      ],
+      "source": "https://wassets.insta360.com/common/5ecf508756e4435492f92abfe0197041/logo-black-on-transparent-rgb.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "0c98cafdfa546830e3d3328da1d83431aac3c6160a4e90a8e4be586c7471ed6f",
+      "bytes": 45004,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-3-2-cmyk.pdf",
+      "label": "透明底黑字·英文口号右齐 CMYK",
+      "assetFiles": [
+        "wordmark-transparent-black-slogan-en-right.png"
+      ],
+      "source": "https://wassets.insta360.com/common/ea9bdfd923ab47268bedd54e80206c9a/slogan-black-on-transparent-cmyk.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "74cceeab45157e61e68bfc8a05253d3289036f6c1176e83aa8fa330abc7174a8",
+      "bytes": 64253,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-3-2-rgb.pdf",
+      "label": "透明底黑字·英文口号右齐 RGB",
+      "assetFiles": [
+        "wordmark-transparent-black-slogan-en-right.png"
+      ],
+      "source": "https://wassets.insta360.com/common/06292fb033cc49fbab519e9817ff0f94/logo-slogan-black-on-%2520transparent-rgb.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "33df5ea503c19fecdd84670b666d73c64b3c2969a397f16230957656f11de592",
+      "bytes": 46704,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-3-3-cmyk.pdf",
+      "label": "透明底黑字·中文口号右齐 CMYK",
+      "assetFiles": [
+        "wordmark-transparent-black-slogan-zh-right.png"
+      ],
+      "source": "https://wassets.insta360.com/common/cc36ad7365eb48e4a0dae0cce9610527/CN-logo-black-on-%20transparent-cmyk.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "162ec042e0581d3caa7db4073fd06bd363f3745edc7c8fae45ee05c4a111379a",
+      "bytes": 30150,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-3-3-rgb.pdf",
+      "label": "透明底黑字·中文口号右齐 RGB",
+      "assetFiles": [
+        "wordmark-transparent-black-slogan-zh-right.png"
+      ],
+      "source": "https://wassets.insta360.com/common/4080f3f4694a462889e326bbf5845fb4/CN-logo-black-on-%20transparent-rgb.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "a2e6296f7dbca007ee4056fab666aa55c76b67cf39e3017f6d7a5f6aca854914",
+      "bytes": 49099,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-3-4-cmyk.pdf",
+      "label": "透明底黑字·竖版 CMYK",
+      "assetFiles": [
+        "wordmark-transparent-black-vertical.png"
+      ],
+      "source": "https://wassets.insta360.com/common/dfd4e11a699442b8a8146a7d9b87943f/logo-black-on-%20transparent-cmyk-mid.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "0f7acca2410f7cc0f125d68dbe33775a1a2d9a56731c36cab71e374be4c39945",
+      "bytes": 26053,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-3-4-rgb.pdf",
+      "label": "透明底黑字·竖版 RGB",
+      "assetFiles": [
+        "wordmark-transparent-black-vertical.png"
+      ],
+      "source": "https://wassets.insta360.com/common/18238704c873412394353941c2ddd1d8/logo-black-on-%20transparent-rgb-mid.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "73108d965e6369e4483a3960e3efb43b9a0625be65aaf41e705442a94729005e",
+      "bytes": 45062,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-3-5-cmyk.pdf",
+      "label": "透明底黑字·英文口号居中 CMYK",
+      "assetFiles": [
+        "wordmark-transparent-black-slogan-en-center.png"
+      ],
+      "source": "https://wassets.insta360.com/common/c948853179434541af40ccae627772b7/solgan-black-on-%20transparent-cmyk-mid.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "30398b231a561539b87f3a089b76f0b6aad9197c0b28e2d82f30d3d8d04b5d40",
+      "bytes": 27700,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-3-5-rgb.pdf",
+      "label": "透明底黑字·英文口号居中 RGB",
+      "assetFiles": [
+        "wordmark-transparent-black-slogan-en-center.png"
+      ],
+      "source": "https://wassets.insta360.com/common/70aeefa9f62845668a8cdf61ae0e87b6/slogan-black-on-%20transparent-rgb-mid.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "dba9b862765e658a8fc9fb11337bc8b9b2a6ef11e3ebc7236c10fd8570f421cc",
+      "bytes": 46718,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-3-6-cmyk.pdf",
+      "label": "透明底黑字·中文口号居中 CMYK",
+      "assetFiles": [
+        "wordmark-transparent-black-slogan-zh-center.png"
+      ],
+      "source": "https://wassets.insta360.com/common/0c59d14e74ae48b4b854af1a65c88fc1/CN-logo-black-on-%20transparent-cmyk-mid.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "62df576480f3e5ac78b614374cce586e2ced550840606ceb1f21a0b883e876e2",
+      "bytes": 30121,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-3-6-rgb.pdf",
+      "label": "透明底黑字·中文口号居中 RGB",
+      "assetFiles": [
+        "wordmark-transparent-black-slogan-zh-center.png"
+      ],
+      "source": "https://wassets.insta360.com/common/7e31af5b670746df8d084aa031a779d8/CN-logo-black-on-%20transparent-rgb-mid.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "416a5533c6cb36e1f30566c9d4eac4f13b7d07faefa8c2ebfce7c094474073df",
+      "bytes": 49134,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-4-1-cmyk.pdf",
+      "label": "透明底白字·横版 CMYK",
+      "assetFiles": [
+        "wordmark-white.svg"
+      ],
+      "source": "https://wassets.insta360.com/common/f8ce1c3920aa4e839ddf0a6fd9e1f0d1/logo-white-on-transparent-cmyk.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "c46fcbefbb7a11c3230db3025ada32d64167ecbfc059de9092beae762c12b74f",
+      "bytes": 21765,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-4-1-rgb.pdf",
+      "label": "透明底白字·横版 RGB",
+      "assetFiles": [
+        "wordmark-white.svg"
+      ],
+      "source": "https://wassets.insta360.com/common/1855c859f730475d8c47cf45857bc35d/logo-white-on-transparent-rgb.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "18020d9f8b071675c44251cf035fe4e68c23b0db0fc728b7baa628a95bf27025",
+      "bytes": 23892,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-4-2-cmyk.pdf",
+      "label": "透明底白字·英文口号右齐 CMYK",
+      "assetFiles": [
+        "wordmark-transparent-white-slogan-en-right.png"
+      ],
+      "source": "https://wassets.insta360.com/common/44bda1a2dfe34f72bb478168d86ce2ff/slogan-white-on-transparent-cmyk.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "70008c04e8d18dd9297724723c4a219bdb68391a66b4278a29840c6d618b889c",
+      "bytes": 23465,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-4-2-rgb.pdf",
+      "label": "透明底白字·英文口号右齐 RGB",
+      "assetFiles": [
+        "wordmark-transparent-white-slogan-en-right.png"
+      ],
+      "source": "https://wassets.insta360.com/common/38a2ae916a3a4697a8ac6a2c00478bf2/logo-slogan-white-on-transparent-rgb.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "6fcd591e22c68537d8965b035fe9c5ed4a8e6c09369c4b076f4c67e2f0248b57",
+      "bytes": 25567,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-4-3-cmyk.pdf",
+      "label": "透明底白字·中文口号右齐 CMYK",
+      "assetFiles": [
+        "wordmark-transparent-white-slogan-zh-right.png"
+      ],
+      "source": "https://wassets.insta360.com/common/d9ce7a6848f54368ad2f032397f45dfc/CN-logo-white-on-transparent-cmyk.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "f567460053005211a50fb2140bd7ddf726e5f15ebfd95d2135f9189c99f8160d",
+      "bytes": 30137,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-4-3-rgb.pdf",
+      "label": "透明底白字·中文口号右齐 RGB",
+      "assetFiles": [
+        "wordmark-transparent-white-slogan-zh-right.png"
+      ],
+      "source": "https://wassets.insta360.com/common/b8de5f57e15f41ea873b0fc552c89fc3/CN-logo-white-on-transparent-rgb.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "87d492467ba1897688cc6e92720462e05321024fce1081e52567c292618551d6",
+      "bytes": 27958,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-4-4-cmyk.pdf",
+      "label": "透明底白字·竖版 CMYK",
+      "assetFiles": [
+        "wordmark-transparent-white-vertical.png"
+      ],
+      "source": "https://wassets.insta360.com/common/173d36ba196d4fd49c5e94b98b56624d/logo-white-on-transparent-cmyk.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "da4f629834c574a2620475995f5b6b16a39b30b98a39f8b4762c5d6f88e65b33",
+      "bytes": 26069,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-4-4-rgb.pdf",
+      "label": "透明底白字·竖版 RGB",
+      "assetFiles": [
+        "wordmark-transparent-white-vertical.png"
+      ],
+      "source": "https://wassets.insta360.com/common/013e51a89481455a89d020eff2d0f1e7/logo-white-on-transparent-mid-rgb.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "881a7d3c857c6d456fb7939c03f0e46b7fcc4bbbbc94752b1eefdb34c28c3a0c",
+      "bytes": 23869,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-4-5-cmyk.pdf",
+      "label": "透明底白字·英文口号居中 CMYK",
+      "assetFiles": [
+        "wordmark-transparent-white-slogan-en-center.png"
+      ],
+      "source": "https://wassets.insta360.com/common/525c684aa150450683c99b1bc22f891e/slogan-white-on-transparent-cmyk.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "41ee1261494f012f885e15848e00cb78b55d9b13fde7b5b90ece3f5233ebeb51",
+      "bytes": 27780,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-4-5-rgb.pdf",
+      "label": "透明底白字·英文口号居中 RGB",
+      "assetFiles": [
+        "wordmark-transparent-white-slogan-en-center.png"
+      ],
+      "source": "https://wassets.insta360.com/common/f94bac350cf5420194ac72ee2b42a8a0/slogan-white-on-transparent-mid-rgb.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "a207e241d13dd23043c77dd662f2dde6b52e3935d2b3d49469be567b1d450de3",
+      "bytes": 25600,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-4-6-cmyk.pdf",
+      "label": "透明底白字·中文口号居中 CMYK",
+      "assetFiles": [
+        "wordmark-transparent-white-slogan-zh-center.png"
+      ],
+      "source": "https://wassets.insta360.com/common/09484dea8d414ca683a07cdd6f0246b2/CN-logo-white-on-transparent-mid-cmyk.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "b9bc8f96b44f1d6f902adaa5b5423b44e67179da542091298bcd0c0dca46a3ab",
+      "bytes": 30123,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    },
+    {
+      "file": "design-4-6-rgb.pdf",
+      "label": "透明底白字·中文口号居中 RGB",
+      "assetFiles": [
+        "wordmark-transparent-white-slogan-zh-center.png"
+      ],
+      "source": "https://wassets.insta360.com/common/39f6ded38ddd4913a8aa9a8a4c32fa62/CN-logo-white-on-transparent-mid-rgb.pdf",
+      "sourcePage": "https://www.insta360.com/cn/press/logo",
+      "sha256": "6c7ec04eb910131e09a920ee252de76bdb8507ed96a25d0ac5c5c870ef312ca8",
+      "bytes": 27924,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.insta360.com/cn/press/logo",
+        "attribution": "影石。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌销售方向直接使用 Logo；品牌传播方向酌情使用 Logo 与 Slogan 组合。CMYK 用于印刷，RGB 用于线上。"
+      }
+    }
+  ]
+}

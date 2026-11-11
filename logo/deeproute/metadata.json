@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 3,
+  "id": "deeproute",
+  "name": "元戎启行",
+  "aliases": [
+    "DEEPROUTE.AI"
+  ],
+  "identity": {
+    "nameZh": "元戎启行",
+    "nameEn": "DEEPROUTE.AI",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.deeproute.ai/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.deeproute.ai/",
+  "entityType": "company",
+  "categories": [
+    "automotive"
+  ],
+  "defaultAsset": "logo.png",
+  "assets": [
+    {
+      "file": "logo.png",
+      "label": "彩色白字中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "dark",
+      "source": "https://www.deeproute.ai/_nuxt/img/logo_img.64da405.png",
+      "sourcePage": "https://www.deeproute.ai/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "e855c05e21cb5004c4a8dccc9fe78f44a47fe62d8ca618c918383e0245d995db",
+      "bytes": 6415,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.deeproute.ai/",
+        "attribution": "元戎启行。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网小尺寸原件，适合按原生像素取用。"
+      ]
+    }
+  ]
+}

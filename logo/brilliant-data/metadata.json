@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 3,
+  "id": "brilliant-data",
+  "name": "佰聆数据",
+  "aliases": [],
+  "identity": {
+    "nameZh": "佰聆数据",
+    "nameEn": null,
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.brilliant-solution.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.brilliant-solution.com/",
+  "entityType": "company",
+  "categories": [
+    "enterprise-software"
+  ],
+  "defaultAsset": "logo-zh.png",
+  "assets": [
+    {
+      "file": "logo-zh.png",
+      "label": "中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://www.brilliant-solution.com/uploads/images/20250714/de1eadf4f6cca92b751f6b99927ac05b.png",
+      "sourcePage": "https://www.brilliant-solution.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "9f66f4cf5eca9cdb5fe3b7e9b4e5d102f1e1680daa9dd1107de2feb29f859e39",
+      "bytes": 6362,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.brilliant-solution.com/",
+        "attribution": "佰聆数据。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 3,
+  "id": "caocao",
+  "name": "曹操出行",
+  "aliases": [],
+  "identity": {
+    "nameZh": "曹操出行",
+    "nameEn": "caocao",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.caocao.com.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.caocao.com.cn/",
+  "entityType": "company",
+  "categories": [
+    "automotive"
+  ],
+  "defaultAsset": "logo-zh-brand.svg",
+  "assets": [
+    {
+      "file": "logo-zh-brand.svg",
+      "label": "绿色中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://cdncc-frontend.caocaokeji.cn/2/marketing-frontend/caocao-official/logo_svg_green.svg",
+      "sourcePage": "https://www.caocao.com.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "0bb18980a367abd9fc7166d29659c1b561aede4f9a6d8bad68a76052d9d45175",
+      "bytes": 3639,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.caocao.com.cn/",
+        "attribution": "曹操出行。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-zh-white.svg",
+      "label": "反白中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://cdncc-frontend.caocaokeji.cn/2/marketing-frontend/caocao-official/logo_svg_white.svg",
+      "sourcePage": "https://www.caocao.com.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "01c2204e4fda794cbd7095b7ed06f91733056fcd18f9cfcc5f36f2014a24d062",
+      "bytes": 3626,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.caocao.com.cn/",
+        "attribution": "曹操出行。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "wordmark-en-black.svg",
+      "label": "黑色英文",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "status": "current",
+      "source": "https://cdncc-frontend.caocaokeji.cn/2/marketing-frontend/caocao-official/delta/home/logo_svg_B.svg",
+      "sourcePage": "https://www.caocao.com.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "bc927029eee559a607d1363a100ef922a63fd97fe90c6b0fb539831cded970e3",
+      "bytes": 3549,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.caocao.com.cn/",
+        "attribution": "曹操出行。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "wordmark-en-white.svg",
+      "label": "反白英文",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://cdncc-frontend.caocaokeji.cn/2/marketing-frontend/caocao-official/delta/home/logo_svg_W.svg",
+      "sourcePage": "https://www.caocao.com.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "91fc1d9f72c507efa2c3d75f14ba5e9f50162f222a50e5d3381d49de593da2aa",
+      "bytes": 3546,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.caocao.com.cn/",
+        "attribution": "曹操出行。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "symbol-green.svg",
+      "label": "绿色C图形",
+      "variant": "icon",
+      "language": "en",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://cdncc-frontend.caocaokeji.cn/2/marketing-frontend/caocao-official/logo_svg_green.svg",
+      "sourcePage": "https://www.caocao.com.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "originalAsset": "logo-zh-brand.svg",
+        "originalSha256": "0bb18980a367abd9fc7166d29659c1b561aede4f9a6d8bad68a76052d9d45175"
+      },
+      "sha256": "f07d8f6bbd8242cd6ea0291983b96f0d2b6328861ee3578bc1d64ba8a9a95824",
+      "bytes": 1576,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.caocao.com.cn/",
+        "attribution": "曹操出行。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "从同品牌原始 SVG 提取图形，方形画布长边贴边，短边居中，额外边距为零。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 3,
+  "id": "weride",
+  "name": "文远知行",
+  "aliases": [],
+  "website": "https://www.weride.ai/zh",
+  "identity": {
+    "nameZh": "文远知行",
+    "nameEn": "WeRide",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.weride.ai/zh",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "logo-bilingual.png",
+  "assets": [
+    {
+      "file": "logo-bilingual.png",
+      "label": "中英组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://webui.weride.ai/webui/logo_zh_2a3f780c50.png",
+      "sourcePage": "https://www.weride.ai/zh",
+      "sha256": "0f6efa8430958d1048a7e59b7c78860ef7b8b3be1f904e059b87f5cb6417722f",
+      "bytes": 6701,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.weride.ai/zh",
+        "attribution": "文远知行。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    },
+    {
+      "file": "logo-en.png",
+      "label": "英文组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://webui.weride.ai/webui/logo_en_bfeb79be23.png",
+      "sourcePage": "https://www.weride.ai/",
+      "sha256": "f04abd398c2002d59a175ab6edaa16eb28ffb2cc74c7ed2827e80cf95daf5c6c",
+      "bytes": 7131,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.weride.ai/",
+        "attribution": "文远知行。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    }
+  ]
+}

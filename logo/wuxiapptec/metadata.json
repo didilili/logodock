@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 3,
+  "id": "wuxiapptec",
+  "name": "药明康德",
+  "aliases": [],
+  "website": "https://www.wuxiapptec.com/",
+  "entityType": "company",
+  "identity": {
+    "nameZh": "药明康德",
+    "nameEn": "WuXi AppTec",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "品牌官网",
+        "url": "https://www.wuxiapptec.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "categories": [
+    "医疗健康"
+  ],
+  "defaultAsset": "logo-english-white-official.svg",
+  "assets": [
+    {
+      "file": "logo-english-white-official.svg",
+      "label": "白色英文组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.wuxiapptec.com/_nuxt/f58e33a.B7GB6Bhj.svg",
+      "sourcePage": "https://www.wuxiapptec.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "ef22b79d07136366db39e4288fc46e2fee3be6176ee0c1b1005a5fd49b2e6983",
+      "bytes": 20788,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.wuxiapptec.com/",
+        "attribution": "药明康德，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

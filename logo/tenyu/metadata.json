@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 3,
+  "id": "tenyu",
+  "name": "腾娱互动",
+  "aliases": [],
+  "website": "https://zhaotalent-tenyu.ihr.tencent-cloud.com/tenant/",
+  "entityType": "company",
+  "identity": {
+    "nameZh": "腾娱互动",
+    "nameEn": "TENG YU",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方招聘页品牌标识",
+        "url": "https://zhaotalent-tenyu.ihr.tencent-cloud.com/tenant/",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "官方招聘页中英品牌原图",
+        "url": "https://zhaotalent-tenyu.ihr.tencent-cloud.com/tenant/imgs/logo.png",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "categories": [
+    "entertainment"
+  ],
+  "defaultAsset": "logo-recruitment-official.png",
+  "assets": [
+    {
+      "file": "logo-recruitment-official.png",
+      "label": "招聘组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://zhaotalent-tenyu.ihr.tencent-cloud.com/tenant/imgs/logo.png",
+      "sourcePage": "https://zhaotalent-tenyu.ihr.tencent-cloud.com/tenant/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "8f088749019c7dd75758658850ce796572c47105f2a593eeab17aa45e9c7d9bd",
+      "bytes": 56528,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://zhaotalent-tenyu.ihr.tencent-cloud.com/tenant/",
+        "attribution": "腾娱互动，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10",
+        "notes": "招聘场景专用组合。"
+      },
+      "usageWarnings": [
+        "含“腾讯子公司招聘”字样，适用于招聘场景。"
+      ]
+    }
+  ]
+}

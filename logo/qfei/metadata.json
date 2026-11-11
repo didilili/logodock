@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 3,
+  "id": "qfei",
+  "name": "智书企飞",
+  "aliases": [],
+  "identity": {
+    "nameZh": "智书企飞",
+    "nameEn": null,
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.qfei.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.qfei.cn/",
+  "entityType": "company",
+  "categories": [
+    "enterprise-software"
+  ],
+  "defaultAsset": "brand-logo.png",
+  "assets": [
+    {
+      "file": "brand-logo.png",
+      "label": "彩色中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.qfei.cn/assets/images/logo-qf-1.png",
+      "sourcePage": "https://www.qfei.cn/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "5729e3199b86877e2f31d56de91cb8ceae986b11d86f3243f425f05e28e7ea62",
+      "bytes": 5803,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.qfei.cn/",
+        "attribution": "智书企飞。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网原生尺寸稿，适合按原生像素取用。"
+      ]
+    }
+  ]
+}

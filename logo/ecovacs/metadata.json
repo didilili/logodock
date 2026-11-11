@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 3,
+  "id": "ecovacs",
+  "name": "科沃斯",
+  "aliases": [
+    "ECOVACS"
+  ],
+  "identity": {
+    "nameZh": "科沃斯",
+    "nameEn": "ECOVACS",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.ecovacsgroup.com/about-us",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.ecovacsgroup.com/about-us",
+  "entityType": "company",
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "logo.png",
+  "assets": [
+    {
+      "file": "logo.png",
+      "label": "科沃斯集团组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.ecovacsgroup.com/_next/static/media/logo.3e16334a.png",
+      "sourcePage": "https://www.ecovacsgroup.com/about-us",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "498b4ba635b2c2d226b452de86c76e35f9e20dc20e3c993d3688891592f046ab",
+      "bytes": 13904,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.ecovacsgroup.com/about-us",
+        "attribution": "科沃斯。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

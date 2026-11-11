@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 3,
+  "id": "pcgroup",
+  "name": "太平洋网络",
+  "aliases": [],
+  "website": "https://corp.pconline.com.cn/",
+  "identity": {
+    "nameZh": "太平洋网络",
+    "nameEn": "PCGROUP",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://corp.pconline.com.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "logo-bilingual.png",
+  "assets": [
+    {
+      "file": "logo-bilingual.png",
+      "label": "中英组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://www1.pconline.com.cn/2011/pcgroup/images/groupLogo.png",
+      "sourcePage": "https://corp.pconline.com.cn/",
+      "sha256": "7108e3100666f5b660334ea5bfd1b845fbbe58894696e92e78561fb0a402be31",
+      "bytes": 4560,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://corp.pconline.com.cn/",
+        "attribution": "太平洋网络。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "bilingual",
+      "layout": "vertical",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "不透明白底，原件右侧包含浅灰色分隔线，适合按原生像素或缩小使用。"
+      ]
+    }
+  ]
+}

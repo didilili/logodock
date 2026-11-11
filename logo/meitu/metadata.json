@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 3,
+  "id": "meitu",
+  "name": "美图",
+  "aliases": [
+    "Meitu"
+  ],
+  "identity": {
+    "nameZh": "美图",
+    "nameEn": "Meitu",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.meitu.com/zh",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.meitu.com/zh",
+  "entityType": "company",
+  "categories": [
+    "internet"
+  ],
+  "defaultAsset": "logo-zh.png",
+  "assets": [
+    {
+      "file": "logo-zh.png",
+      "label": "红色中英字标",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://js.app.meitudata.com/corp-new/image/logo-zh.@3f027871.png",
+      "sourcePage": "https://www.meitu.com/zh",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "6c8c705e5d694f192f720ec3fef5f11bc2307fd67197045d2565d1028ba94016",
+      "bytes": 21431,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.meitu.com/zh",
+        "attribution": "美图。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "file": "brand-guidelines-2025.pdf",
+      "label": "2025品牌VI规范",
+      "assetFiles": [
+        "logo-zh.png"
+      ],
+      "source": "https://corp-static.meitu.com/corp-new/20250930/%E7%BE%8E%E5%9B%BE%E5%93%81%E7%89%8CVI%E8%A7%84%E8%8C%83-202510.pdf",
+      "sourcePage": "https://www.meitu.com/zh/media#database",
+      "sha256": "c5cc034e1a0eadfbdc60c9886655ef3d06da19a57a9396eb68a6c0b8425f3caa",
+      "bytes": 4711626,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.meitu.com/zh/media#database",
+        "attribution": "美图。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方品牌规范列出标准色、背景、留白、比例、子品牌组合及禁止使用方式，取用时应遵循对应规范。"
+      }
+    }
+  ]
+}

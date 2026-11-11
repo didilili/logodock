@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 3,
+  "id": "thunderbit",
+  "name": "雷鸣比特",
+  "aliases": [
+    "Thunderbit"
+  ],
+  "identity": {
+    "nameZh": "雷鸣比特",
+    "nameEn": "Thunderbit",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://thunderbit.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://thunderbit.com/",
+  "entityType": "company",
+  "categories": [
+    "ai"
+  ],
+  "defaultAsset": "logo.svg",
+  "assets": [
+    {
+      "file": "logo.svg",
+      "label": "渐变图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "source": "https://strapi.thunderbit.com/uploads/thunderbit_logo_d77bee029d.svg",
+      "sourcePage": "https://thunderbit.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "5e98cea3771da6f11e6bfc8a522a4abe7d454cd484124dd0e71ba162351b77fa",
+      "bytes": 2071,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://thunderbit.com/",
+        "attribution": "雷鸣比特。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

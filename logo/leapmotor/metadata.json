@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 3,
+  "id": "leapmotor",
+  "name": "零跑汽车",
+  "aliases": [
+    "Leapmotor"
+  ],
+  "identity": {
+    "nameZh": "零跑汽车",
+    "nameEn": "Leapmotor",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://leapmotor.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://leapmotor.cn/",
+  "entityType": "company",
+  "categories": [
+    "automotive"
+  ],
+  "defaultAsset": "logo-black.png",
+  "assets": [
+    {
+      "file": "logo-black.png",
+      "label": "黑色中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "source": "https://leapmotor.cn/js/main.3480088c.js",
+      "sourcePage": "https://leapmotor.cn/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "1c64129a497321c431fb97738c5b48e62c5807683eb40fbae70b119ee4edb066",
+      "bytes": 5885,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://leapmotor.cn/",
+        "attribution": "零跑汽车。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-white.png",
+      "label": "白色中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://leapmotor.cn/js/main.3480088c.js",
+      "sourcePage": "https://leapmotor.cn/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "a56d81bec7e866173d93bf2ae4f394ac4c725f75f2d90a9aa85c5366a865e05d",
+      "bytes": 5782,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://leapmotor.cn/",
+        "attribution": "零跑汽车。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

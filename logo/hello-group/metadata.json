@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 3,
+  "id": "hello-group",
+  "name": "挚文集团",
+  "aliases": [
+    "Hello Group"
+  ],
+  "identity": {
+    "nameZh": "挚文集团",
+    "nameEn": "Hello Group",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.hellogroup.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.hellogroup.com/",
+  "entityType": "company",
+  "categories": [
+    "internet"
+  ],
+  "defaultAsset": "brand-logo.png",
+  "assets": [
+    {
+      "file": "brand-logo.png",
+      "label": "彩色英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://framerusercontent.com/images/dWmeHMvSHw9dDOQNonTSgq9UHx8.png?width=3187&height=1449",
+      "sourcePage": "https://www.hellogroup.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "c7752fae4f57692abefcba39c79977bc526d258d2bf33b950ee3afae9c909d80",
+      "bytes": 24448,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.hellogroup.com/",
+        "attribution": "挚文集团。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "symbol.png",
+      "label": "红色图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "source": "https://framerusercontent.com/images/4A8iru4prSEd2EdMSuzEEquXJbY.png",
+      "sourcePage": "https://www.hellogroup.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "7c198f39cca854d7641e19610530d894f5ff46cd09833c2e717450755373a2cf",
+      "bytes": 8572,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.hellogroup.com/",
+        "attribution": "挚文集团。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "白色不透明背景。"
+      ]
+    },
+    {
+      "file": "logo-zh-white-header.svg",
+      "label": "白色中文横版",
+      "variant": "logo",
+      "status": "current",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.hellogroup.com/",
+      "sourcePage": "https://www.hellogroup.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ],
+      "sha256": "82721f31d75311185d3fb4a9d8a9885e115278a1718e5497d3ea691c69690dcc",
+      "bytes": 4440,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.hellogroup.com/",
+        "attribution": "挚文集团。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-11"
+      }
+    }
+  ]
+}

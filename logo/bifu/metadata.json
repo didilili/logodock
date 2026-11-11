@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 3,
+  "id": "bifu",
+  "name": "比孚信息科技",
+  "aliases": [],
+  "identity": {
+    "nameZh": "比孚信息科技",
+    "nameEn": "Bizfocus",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://bizfocus.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://bizfocus.cn/",
+  "entityType": "company",
+  "categories": [
+    "enterprise-software"
+  ],
+  "defaultAsset": "logo-bilingual.svg",
+  "assets": [
+    {
+      "file": "logo-bilingual.svg",
+      "label": "中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "dark",
+      "status": "current",
+      "source": "https://bizfocus.cn/images/home/logo.svg",
+      "sourcePage": "https://bizfocus.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "ec5b92205f1e80b7855fb93386e51e1af9c03123405386b9f9ae33517ac3bba6",
+      "bytes": 6834,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://bizfocus.cn/",
+        "attribution": "比孚信息科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

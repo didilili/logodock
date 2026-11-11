@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 3,
+  "id": "hstong",
+  "name": "华盛通",
+  "aliases": [],
+  "website": "https://www.hstong.com/about/recruit",
+  "identity": {
+    "nameZh": "华盛通",
+    "nameEn": "VBrokers",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://www.hstong.com/about/recruit",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方应用商店中文名称",
+        "url": "https://play.google.com/store/apps/details?id=com.huasheng.stock.gg&hl=zh",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "官方应用商店英文名称",
+        "url": "https://play.google.com/store/apps/details?id=com.huasheng.stock.gg&hl=en",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "logo-zh.png",
+  "assets": [
+    {
+      "file": "logo-zh.png",
+      "label": "中文组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://r.hstong.com/fe/hs-web-nuxt-hstong-www/img/logo@2x.1bf97b3.png",
+      "sourcePage": "https://www.hstong.com/about/recruit",
+      "sha256": "8628f3ffc890cd65dcc67ca035d6d0dc8eb6e0e4c786ebb26f367e9413001447",
+      "bytes": 15664,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.hstong.com/about/recruit",
+        "attribution": "华盛通。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "官网原生小尺寸文件，适合按原生像素或缩小使用。"
+      ]
+    },
+    {
+      "file": "wordmark-white.png",
+      "label": "反白中文",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "dark",
+      "source": "https://r.hstong.com/fe/hs-web-nuxt-hstong-www/img/logo-text@2x.b81ef7e.png",
+      "sourcePage": "https://www.hstong.com/about/recruit",
+      "sha256": "4cfbcb48633b0ac4ec37c894339b00f877715741711acac621fbd809df7666a0",
+      "bytes": 3642,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.hstong.com/about/recruit",
+        "attribution": "华盛通。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "官网原生小尺寸文件，适合按原生像素或缩小使用。"
+      ]
+    }
+  ]
+}

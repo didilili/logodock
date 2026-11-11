@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 3,
+  "id": "srhino",
+  "name": "石犀科技",
+  "aliases": [
+    "石犀"
+  ],
+  "identity": {
+    "nameZh": "石犀科技",
+    "nameEn": "STONE RHINO",
+    "legalNames": [
+      {
+        "name": "深圳市石犀科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.srhino.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
+    "sources": [
+      {
+        "label": "官网首页与页脚公司全称",
+        "url": "https://www.srhino.com/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "公司发布的产品用户手册品牌标识",
+        "url": "https://mkp-res.hc-cdn.com/marketplace/public/app_temp/attachment/20230628/437aeadd-5262-45a1-a54d-991fd4241b63.pdf",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "website": "https://www.srhino.com/",
+  "entityType": "company",
+  "categories": [
+    "enterprise-software"
+  ],
+  "defaultAsset": "logo-zh-brand.png",
+  "assets": [
+    {
+      "file": "logo-zh-brand.png",
+      "label": "蓝灰中文组合",
+      "source": "https://www.srhino.com/_nuxt/js/entry-2zJ1F_-6.js#icon-sr-logo",
+      "sourcePage": "https://www.srhino.com/",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "qualityNotes": [
+        "官网图像采用内嵌PNG，保留原生618×158像素与透明画布。"
+      ],
+      "status": "current",
+      "sha256": "f81245eddbc5224e9241c248b1de7c98e1a9fe811c6c041bcb25a3c5fcaa7d21",
+      "bytes": 7179,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.srhino.com/",
+        "attribution": "石犀科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

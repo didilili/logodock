@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 3,
+  "id": "zhuanzhuan",
+  "name": "转转",
+  "aliases": [],
+  "identity": {
+    "nameZh": "转转",
+    "nameEn": "Zhuanzhuan",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.zhuanzhuan.com/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方开放平台中英文品牌名称",
+        "url": "https://developer.zhuanzhuan.com/skills",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "website": "https://www.zhuanzhuan.com/",
+  "entityType": "company",
+  "categories": [
+    "e-commerce"
+  ],
+  "defaultAsset": "logo-zh.png",
+  "assets": [
+    {
+      "file": "logo-zh.png",
+      "label": "中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://pic3.zhuanstatic.com/zhuanzh/0b9628d5-c909-453c-93ed-14266b243727.png",
+      "sourcePage": "https://www.zhuanzhuan.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "dca91fbc433bd905214c51ef3f0717a318898640517132906910b8dbb094fbaa",
+      "bytes": 2747,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.zhuanzhuan.com/",
+        "attribution": "转转。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

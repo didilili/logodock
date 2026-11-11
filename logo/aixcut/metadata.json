@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 3,
+  "id": "aixcut",
+  "name": "构序智能",
+  "aliases": [],
+  "website": "https://aixcut.cn/",
+  "identity": {
+    "nameZh": "构序智能",
+    "nameEn": "Aixcut",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://aixcut.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "icon.svg",
+  "assets": [
+    {
+      "file": "icon.svg",
+      "label": "渐变图形",
+      "variant": "icon",
+      "status": "current",
+      "background": "any",
+      "source": "https://aixcut.cn/logo.svg",
+      "sourcePage": "https://aixcut.cn/",
+      "sha256": "98d96603e58af80785c36b4d88314c629e3afbdc6c848766bdae3c75cf564528",
+      "bytes": 1180,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://aixcut.cn/",
+        "attribution": "构序智能。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    },
+    {
+      "file": "logo-white.svg",
+      "label": "反白英文组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "dark",
+      "source": "https://aixcut.cn/_astro/logo.92VHpuwm.svg",
+      "sourcePage": "https://aixcut.cn/",
+      "sha256": "4963549e283ae55c678814579bafcaf013b48b2b3e0828a2b92397e7df604c1d",
+      "bytes": 4358,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://aixcut.cn/",
+        "attribution": "构序智能。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    }
+  ]
+}

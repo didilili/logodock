@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 3,
+  "id": "navinfo",
+  "name": "四维图新",
+  "aliases": [],
+  "website": "https://www.seewayai.com/",
+  "entityType": "company",
+  "identity": {
+    "nameZh": "四维图新",
+    "nameEn": "SeeWay.AI",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌信息",
+        "url": "https://www.seewayai.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "categories": [
+    "automotive",
+    "enterprise-software"
+  ],
+  "defaultAsset": "logo-bilingual-gradient-official.png",
+  "assets": [
+    {
+      "file": "logo-bilingual-gradient-official.png",
+      "label": "渐变中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.seewayai.com/uploads/images/20251028/e8b088129ba760f1208d69b4ec6fe201.png",
+      "sourcePage": "https://www.seewayai.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "1977264787f5991646f6585986f2c10fbf62f7d6676fe2450a322fd77063b10d",
+      "bytes": 15099,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.seewayai.com/",
+        "attribution": "四维图新，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-bilingual-white-official.png",
+      "label": "白色中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "vertical",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.seewayai.com/uploads/images/20251028/99482559c07aae3ec08a19a4c862c2f5.png",
+      "sourcePage": "https://www.seewayai.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "9c75ed89dcd44036ebc3e42c28dfecaf4dc06d8f8294762fae4768d38b23f7e0",
+      "bytes": 11651,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.seewayai.com/",
+        "attribution": "四维图新，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "symbol-blue-official.png",
+      "label": "蓝色图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "source": "https://www.seewayai.com/uploads/images/20251028/0218556f704efd6232e97bafec624ff3.png",
+      "sourcePage": "https://www.seewayai.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "d9021ce74521724b141270cefe5118ff7004fae6f323e6ec327b8423f082a6c1",
+      "bytes": 10884,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.seewayai.com/",
+        "attribution": "四维图新，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

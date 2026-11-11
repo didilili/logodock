@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 3,
+  "id": "hunyuan",
+  "name": "腾讯混元",
+  "aliases": [],
+  "website": "https://hunyuan.tencent.com/",
+  "entityType": "product",
+  "identity": {
+    "nameZh": "腾讯混元",
+    "nameEn": "Hunyuan",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌信息",
+        "url": "https://hunyuan.tencent.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "categories": [
+    "ai"
+  ],
+  "defaultAsset": "logo-chinese-color-official.png",
+  "assets": [
+    {
+      "file": "logo-chinese-color-official.png",
+      "label": "中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://hunyuan-blog-web-prod-1258344703.cos.ap-guangzhou.myqcloud.com/assets/hy-blog-logo-zh-DxX4P937.png",
+      "sourcePage": "https://hunyuan.tencent.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "1cb3b40981afc1561e1ef1e8de8f7f00ef197680f987b8cb6bcd82d19cc0d8b4",
+      "bytes": 10168,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://hunyuan.tencent.com/",
+        "attribution": "腾讯混元，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "symbol-color-official.svg",
+      "label": "彩色图形 · 原始画布",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "source": "https://hunyuan-blog-web-prod-1258344703.cos.ap-guangzhou.myqcloud.com/logo.svg",
+      "sourcePage": "https://hunyuan.tencent.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "564d1900032b018e8ffb4760608aa913a30d5a1717a6c1e72472395dfdd47e71",
+      "bytes": 2853,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://hunyuan.tencent.com/",
+        "attribution": "腾讯混元，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "symbol-color-square-extracted.svg",
+      "label": "彩色图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "source": "https://hunyuan-blog-web-prod-1258344703.cos.ap-guangzhou.myqcloud.com/logo.svg",
+      "sourcePage": "https://hunyuan.tencent.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "originalAsset": "symbol-color-official.svg",
+        "originalSha256": "564d1900032b018e8ffb4760608aa913a30d5a1717a6c1e72472395dfdd47e71"
+      },
+      "sha256": "3e6347fb78b2a951780aa11c56b2058099e72c50a4d5a66f0c8d26038036442a",
+      "bytes": 2913,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://hunyuan.tencent.com/",
+        "attribution": "腾讯混元，商标及其他权利归相应权利人。 图形提取由LogoDock完成。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "透明背景，长边贴边，短边居中补齐方形画布。"
+      ]
+    }
+  ],
+  "parentId": "tencent",
+  "artworks": [
+    {
+      "id": "symbol-brand",
+      "label": "彩色图形",
+      "files": [
+        "symbol-color-official.svg",
+        "symbol-color-square-extracted.svg"
+      ],
+      "defaultAsset": "symbol-color-square-extracted.svg"
+    }
+  ]
+}

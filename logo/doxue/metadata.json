@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 3,
+  "id": "doxue",
+  "name": "都学网",
+  "aliases": [],
+  "website": "https://www.doxue.com/index",
+  "identity": {
+    "nameZh": "都学网",
+    "nameEn": null,
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://www.doxue.com/index",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "logo-bilingual.png",
+  "assets": [
+    {
+      "file": "logo-bilingual.png",
+      "label": "中英组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://www.doxue.com/resources/index_new/new_images/doxue-logo.png",
+      "sourcePage": "https://www.doxue.com/index",
+      "sha256": "1227ffd2c1d4799a138efd1bc7ffdd682a878a2c91b790f7cd4ad0a5a1e03053",
+      "bytes": 6403,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.doxue.com/index",
+        "attribution": "都学网。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "官网原生小尺寸文件，适合按原生像素或缩小使用。"
+      ]
+    }
+  ]
+}

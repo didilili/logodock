@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 3,
+  "id": "deepseek",
+  "name": "深度求索",
+  "aliases": [
+    "DeepSeek"
+  ],
+  "identity": {
+    "nameZh": "深度求索",
+    "nameEn": "DeepSeek",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.deepseek.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.deepseek.com/",
+  "entityType": "company",
+  "categories": [
+    "ai"
+  ],
+  "defaultAsset": "logo-brand.svg",
+  "assets": [
+    {
+      "file": "logo-brand.svg",
+      "label": "英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://raw.githubusercontent.com/deepseek-ai/DeepSeek-LLM/main/images/logo.svg",
+      "sourcePage": "https://github.com/deepseek-ai/DeepSeek-LLM/blob/main/images/logo.svg",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "repository"
+      },
+      "sha256": "ac13bdc805820c46bf0faf053aa5d31f72b051794abfe1dd72a682f09de2966b",
+      "bytes": 10656,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://github.com/deepseek-ai/DeepSeek-LLM/blob/main/images/logo.svg",
+        "attribution": "DeepSeek。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "symbol-brand.svg",
+      "label": "蓝色鲸形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://raw.githubusercontent.com/deepseek-ai/DeepSeek-LLM/main/images/logo.svg",
+      "sourcePage": "https://github.com/deepseek-ai/DeepSeek-LLM/blob/main/images/logo.svg",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "repository",
+        "originalAsset": "logo-brand.svg",
+        "originalSha256": "ac13bdc805820c46bf0faf053aa5d31f72b051794abfe1dd72a682f09de2966b"
+      },
+      "sha256": "57d11097c53e2fa1a19c1e8c5643440c6d42e739584cc1673ee1677d605d0d2e",
+      "bytes": 4155,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://github.com/deepseek-ai/DeepSeek-LLM/blob/main/images/logo.svg",
+        "attribution": "DeepSeek。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "从同品牌原始 SVG 提取图形，方形画布长边贴边，短边居中，额外边距为零。"
+      ]
+    }
+  ]
+}

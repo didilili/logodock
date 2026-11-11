@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 3,
+  "id": "aixcoder",
+  "name": "硅心科技",
+  "aliases": [],
+  "website": "https://www.aixcoder.com/zh/about",
+  "identity": {
+    "nameZh": "硅心科技",
+    "nameEn": "aiXcoder",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://www.aixcoder.com/zh/about",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "wordmark.png",
+  "assets": [
+    {
+      "file": "wordmark.png",
+      "label": "英文",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://www.aixcoder.com/_next/static/media/aixcoder-logo.07dl153ha8v2u.png",
+      "sourcePage": "https://www.aixcoder.com/zh/about",
+      "sha256": "04ba6315301c6c6ac3797abbba87410019930563ec78afcdd36cdc20164fdd24",
+      "bytes": 60334,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.aixcoder.com/zh/about",
+        "attribution": "硅心科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    }
+  ]
+}

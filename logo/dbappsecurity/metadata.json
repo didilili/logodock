@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 3,
+  "id": "dbappsecurity",
+  "name": "安恒信息",
+  "aliases": [],
+  "identity": {
+    "nameZh": "安恒信息",
+    "nameEn": "DAS-security",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.dbappsecurity.com.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.dbappsecurity.com.cn/",
+  "entityType": "company",
+  "categories": [
+    "software"
+  ],
+  "defaultAsset": "logo-bilingual.jpg",
+  "assets": [
+    {
+      "file": "logo-bilingual.jpg",
+      "label": "中英组合与口号",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://www.dbappsecurity.com.cn/Upload/image/20240925/20240925181105_9935.jpg",
+      "sourcePage": "https://www.dbappsecurity.com.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "17ba91aff842bc439cd797c4fb78f620abfa31fc47c690f5f765e1434bab1dee",
+      "bytes": 75841,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dbappsecurity.com.cn/",
+        "attribution": "安恒信息。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网页头原稿，不透明白底。"
+      ]
+    },
+    {
+      "file": "symbol-red.png",
+      "label": "红色龙形图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://www.dbappsecurity.com.cn/images/icon.png",
+      "sourcePage": "https://www.dbappsecurity.com.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "0eb26ffc529dc95cb099b4e6101757eb0e8aac284745e5f4c80233bbfe3e28d6",
+      "bytes": 7150,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dbappsecurity.com.cn/",
+        "attribution": "安恒信息。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

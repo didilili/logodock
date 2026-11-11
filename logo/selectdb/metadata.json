@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 3,
+  "id": "selectdb",
+  "name": "飞轮科技",
+  "aliases": [
+    "飞轮数据"
+  ],
+  "website": "https://www.selectdb.com/",
+  "identity": {
+    "nameZh": "飞轮科技",
+    "nameEn": "SelectDB",
+    "legalNames": [
+      {
+        "name": "北京飞轮数据科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.selectdb.com/about",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
+    "sources": [
+      {
+        "label": "官方公司信息",
+        "url": "https://www.selectdb.com/about",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "logo-selectdb.png",
+  "assets": [
+    {
+      "file": "logo-selectdb.png",
+      "label": "SelectDB商业品牌组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://www.selectdb.com/selectdb-new-logo.png",
+      "sourcePage": "https://www.selectdb.com/about",
+      "sha256": "030b83aa9a68f2e915cfb42c9577099ed04162050a0f980dd404b31a331d4279",
+      "bytes": 780266,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.selectdb.com/about",
+        "attribution": "飞轮科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "官网关于飞轮科技页使用的SelectDB商业品牌组合。"
+      ]
+    }
+  ]
+}

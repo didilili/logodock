@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 3,
+  "id": "pingan-health-insurance",
+  "name": "平安健康保险",
+  "aliases": [],
+  "identity": {
+    "nameZh": "平安健康保险",
+    "nameEn": "Ping An Health Insurance",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://health.pingan.com/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "平安健康保险官网英文版",
+        "url": "https://health.pingan.com/health_new/en",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "website": "https://health.pingan.com/",
+  "entityType": "company",
+  "categories": [
+    "金融"
+  ],
+  "defaultAsset": "logo.png",
+  "assets": [
+    {
+      "file": "logo.png",
+      "label": "平安健康保险组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://health.pingan.com/health_new/_nuxt/logo.DUz7Db6s.png",
+      "sourcePage": "https://health.pingan.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "4ec8599f936b0fcfcb7c36792c12873b91e10a82310540ab7ea1592fbb077360",
+      "bytes": 11095,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://health.pingan.com/",
+        "attribution": "平安健康保险。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-white-header.png",
+      "label": "白色横版",
+      "variant": "logo",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://health.pingan.com/health_new/_nuxt/logo-white.DaPjxMT4.png",
+      "sourcePage": "https://health.pingan.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ],
+      "usageWarnings": [
+        "适合原生尺寸或缩小使用。左侧品牌文字边缘保留浅橙色细边，按官网深色背景用途取用。"
+      ],
+      "sha256": "8c4011d4850337ec6d7a68fd93293183f0b0193a9345acda9a57bc169001db9c",
+      "bytes": 11514,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://health.pingan.com/",
+        "attribution": "平安健康保险。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-11"
+      }
+    }
+  ]
+}

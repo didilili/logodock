@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 3,
+  "id": "hello",
+  "name": "哈啰",
+  "aliases": [],
+  "website": "https://www.hello-inc.com/",
+  "identity": {
+    "nameZh": "哈啰",
+    "nameEn": "Hello",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://www.hello-inc.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "wordmark-zh.png",
+  "assets": [
+    {
+      "file": "wordmark-zh.png",
+      "label": "中文",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://m.hellobike.com/resource/helloyun/12399/QgoaP_header__logo--colored.png",
+      "sourcePage": "https://www.hello-inc.com/",
+      "sha256": "40f026a0ce6faf02fff2b40e7a317f09aa3fb4c471a899034ad39871f40970ee",
+      "bytes": 5388,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.hello-inc.com/",
+        "attribution": "哈啰。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    },
+    {
+      "file": "icon-app.webp",
+      "label": "应用图标",
+      "variant": "icon",
+      "status": "current",
+      "background": "any",
+      "source": "https://www.hello-inc.com/assets/images/logo-hellobike.webp",
+      "sourcePage": "https://www.hello-inc.com/",
+      "sha256": "9f28a903211546f5b2568dfcd0945e515e5e11d4ee3c2dc5861c8141feb786d4",
+      "bytes": 18212,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.hello-inc.com/",
+        "attribution": "哈啰。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "zh",
+      "layout": "standalone",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    }
+  ]
+}

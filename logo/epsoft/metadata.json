@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 3,
+  "id": "epsoft",
+  "name": "网新软件",
+  "aliases": [],
+  "website": "https://www.epsoft.com.cn/",
+  "entityType": "company",
+  "identity": {
+    "nameZh": "网新软件",
+    "nameEn": "INSIGMA",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "品牌官网",
+        "url": "https://www.epsoft.com.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "categories": [
+    "enterprise-software"
+  ],
+  "defaultAsset": "logo-bilingual-official.png",
+  "assets": [
+    {
+      "file": "logo-bilingual-official.png",
+      "label": "中英双行字标",
+      "variant": "logo",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.epsoft.com.cn//websitefiles/AppContent/2023/10/13/202310131600440207.png",
+      "sourcePage": "https://www.epsoft.com.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "156d1a1f48ce769b378e88a9214413684b2dbbad36d3ab800af9afb065c57f1e",
+      "bytes": 23837,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.epsoft.com.cn/",
+        "attribution": "网新软件，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

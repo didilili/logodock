@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 3,
+  "id": "alibaba-international",
+  "name": "阿里国际",
+  "aliases": [],
+  "identity": {
+    "nameZh": "阿里国际",
+    "nameEn": "Alibaba International Digital Commerce Group",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://aidc-jobs.alibaba.com/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "阿里巴巴官方业务介绍",
+        "url": "https://www.alibabagroup.com/en-US/about-alibaba-businesses",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://aidc-jobs.alibaba.com/",
+  "entityType": "company",
+  "categories": [
+    "e-commerce"
+  ],
+  "defaultAsset": "wordmark-bilingual.svg",
+  "assets": [
+    {
+      "file": "wordmark-bilingual.svg",
+      "label": "中英文字标识",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://img.alicdn.com/imgextra/i1/O1CN016WVLcE1SYDP0vnXaJ_!!6000000002258-55-tps-156-55.svg",
+      "sourcePage": "https://talent.alibaba.com/?lang=zh",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "cb495a796f31147ce19a6a2c25517b3069ec16ec9e6e0601e75ad19262f81b28",
+      "bytes": 53610,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://talent.alibaba.com/?lang=zh",
+        "attribution": "阿里国际。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "wordmark-careers-white.png",
+      "label": "招聘英文反白字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://gw.alicdn.com/imgextra/i4/O1CN01HXrLcw1dtFEsVDwOH_!!6000000003793-2-tps-460-80.png",
+      "sourcePage": "https://aidc-jobs.alibaba.com/zh/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header"
+      },
+      "sha256": "86e254d8c19996488fc0acd13b9cbe2005a9127d2bd9960074167ada873a4588",
+      "bytes": 8131,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://aidc-jobs.alibaba.com/zh/",
+        "attribution": "阿里国际，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-11"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ],
+      "usageWarnings": [
+        "带 Careers 招聘用途字样，细节受原生像素限制。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 3,
+  "id": "geekplus",
+  "name": "极智嘉",
+  "aliases": [],
+  "website": "https://www.geekplus.com/en",
+  "identity": {
+    "nameZh": "极智嘉",
+    "nameEn": "Geek+",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://www.geekplus.com/en",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "wordmark.png",
+  "assets": [
+    {
+      "file": "wordmark.png",
+      "label": "彩色英文",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://www.geekplus.com/hubfs/geek+%20logo%20transparent-1.png",
+      "sourcePage": "https://www.geekplus.com/en",
+      "sha256": "e7c67ccf575f93123e8844912ee9b85f2314da05775ff4840315bad4edb1dee8",
+      "bytes": 61670,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.geekplus.com/en",
+        "attribution": "极智嘉。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    }
+  ]
+}

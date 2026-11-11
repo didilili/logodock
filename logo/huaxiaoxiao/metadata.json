@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 3,
+  "id": "huaxiaoxiao",
+  "name": "花小小新疆炒米粉",
+  "aliases": [],
+  "website": "https://huaxx.cn/",
+  "identity": {
+    "nameZh": "花小小新疆炒米粉",
+    "nameEn": null,
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://huaxx.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "icon.png",
+  "assets": [
+    {
+      "file": "icon.png",
+      "label": "花朵女孩图形",
+      "variant": "icon",
+      "status": "current",
+      "background": "any",
+      "source": "https://huaxx.cn/assets/images/logo_larger.png",
+      "sourcePage": "https://huaxx.cn/",
+      "sha256": "f492df51501b6154cf6f5b0d2c529f886c33cbf2bf84f4b6227a2e51704486ba",
+      "bytes": 54814,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://huaxx.cn/",
+        "attribution": "花小小新疆炒米粉。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    },
+    {
+      "file": "logo-zh.png",
+      "label": "中文组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://huaxx.cn/assets/images/logo.png",
+      "sourcePage": "https://huaxx.cn/",
+      "sha256": "c79302d979e27c5353d9494e92dc62226014603fa51fbd2201e1cfa21968c4cd",
+      "bytes": 11298,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://huaxx.cn/",
+        "attribution": "花小小新疆炒米粉。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    }
+  ]
+}

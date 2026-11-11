@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 3,
+  "id": "sf-tech",
+  "name": "顺丰科技",
+  "aliases": [],
+  "website": "https://www.sf-tech.com.cn/join/",
+  "entityType": "company",
+  "identity": {
+    "nameZh": "顺丰科技",
+    "nameEn": "SF Technology",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "品牌官网",
+        "url": "https://www.sf-tech.com.cn/join/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "categories": [
+    "enterprise-software"
+  ],
+  "defaultAsset": "logo-bilingual-white-official.svg",
+  "assets": [
+    {
+      "file": "logo-bilingual-white-official.svg",
+      "label": "反白中英组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://file-cdn.sf-tech.com.cn/4b0e8166vodcq1252208358/bdca0b1d388912589288217241/je8y8PlicMkA.svg",
+      "sourcePage": "https://www.sf-tech.com.cn/join/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "27d27f02d07df4bdcc2bb3c0cf1d1dfc2d831396758ababef170971016c8cd78",
+      "bytes": 15002,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.sf-tech.com.cn/join/",
+        "attribution": "顺丰科技，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 3,
+  "id": "cheetah-mobile",
+  "name": "猎豹移动",
+  "aliases": [
+    "Cheetah Mobile"
+  ],
+  "identity": {
+    "nameZh": "猎豹移动",
+    "nameEn": "Cheetah Mobile",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.cmcm.com/zh-CN/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.cmcm.com/zh-CN/",
+  "entityType": "company",
+  "categories": [
+    "internet"
+  ],
+  "defaultAsset": "logo-white-zh.png",
+  "assets": [
+    {
+      "file": "logo-white-zh.png",
+      "label": "白色中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "vertical",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.cmcm.com/includes/assets/8419a16b5821b874d5e915c1cb9124b9.png",
+      "sourcePage": "https://www.cmcm.com/zh-CN/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "22447a79ba5a7864221583ccb890fd1709b7db41dd72919152e7a58d7db15891",
+      "bytes": 5942,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.cmcm.com/zh-CN/",
+        "attribution": "猎豹移动。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-footer-zh.png",
+      "label": "灰色中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "vertical",
+      "color": "monochrome",
+      "background": "light",
+      "source": "https://www.cmcm.com/includes/assets/dd7a26bce518af0357bbd7c1f60e4fc5.png",
+      "sourcePage": "https://www.cmcm.com/zh-CN/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "dcb77ffdabc31997ed7b8fce7c4f5f938bfdaee1b7939a9e73b4f7c9bfc971f0",
+      "bytes": 5973,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.cmcm.com/zh-CN/",
+        "attribution": "猎豹移动。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

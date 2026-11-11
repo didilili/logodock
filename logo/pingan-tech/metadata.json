@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 3,
+  "id": "pingan-tech",
+  "name": "平安科技",
+  "aliases": [],
+  "identity": {
+    "nameZh": "平安科技",
+    "nameEn": "Ping An Technology",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "平安科技官网英文版（EN 切换）",
+        "url": "https://tech.pingan.com/",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "website": "https://tech.pingan.com/",
+  "entityType": "company",
+  "categories": [
+    "software"
+  ],
+  "defaultAsset": "logo.png",
+  "assets": [
+    {
+      "file": "logo.png",
+      "label": "平安科技组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://tech.pingan.com/img/logo-color.2545c935.png",
+      "sourcePage": "https://tech.pingan.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "1ae6cb11160cb23d1774660fecc12d8ae2bfb9c9b8b4904ace0a65ba0666f6c2",
+      "bytes": 21143,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://tech.pingan.com/",
+        "attribution": "平安科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 3,
+  "id": "digiwin",
+  "name": "鼎捷数智",
+  "aliases": [],
+  "website": "https://www.digiwin.com/",
+  "identity": {
+    "nameZh": "鼎捷数智",
+    "nameEn": "Digiwin",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://www.digiwin.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "wordmark-en-commons.png",
+  "assets": [
+    {
+      "file": "logo-zh.png",
+      "label": "中文组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://static.digiwin.com/upload/user/20211230/982e28b3167618b73ba4f913206ee5ac.png",
+      "sourcePage": "https://www.digiwin.com/",
+      "sha256": "eb8294846b3350be971ffca7906a31dac915280578ab3ff64c3371f33c1c7627",
+      "bytes": 4693,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.digiwin.com/",
+        "attribution": "鼎捷数智。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "官网原生小尺寸文件，适合按原生像素或缩小使用。"
+      ]
+    },
+    {
+      "file": "wordmark-en-commons.png",
+      "label": "英文",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/9/96/Digiwin.png",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Digiwin.png",
+      "sha256": "3dab71c0d3e26c426b6faa72e2f310c0aa6f9f3185b47b76acee0864bf050508",
+      "bytes": 53508,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (PD-textlogo)",
+        "reference": "https://commons.wikimedia.org/wiki/File:Digiwin.png",
+        "attribution": "Digiwin Software。Commons文件页标记为公有领域，无署名要求。",
+        "reviewedAt": "2026-11-10",
+        "notes": "商标权仍由相应权利人保留。"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "original",
+        "channel": "commons"
+      },
+      "qualityNotes": [
+        "透明背景，英文品牌字标。"
+      ]
+    }
+  ]
+}

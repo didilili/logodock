@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 3,
+  "id": "dahua",
+  "name": "大华",
+  "aliases": [],
+  "website": "https://www.dahuatech.com/",
+  "identity": {
+    "nameZh": "大华",
+    "nameEn": "Dahua",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://www.dahuatech.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "logo-bilingual.png",
+  "assets": [
+    {
+      "file": "logo-bilingual.png",
+      "label": "中英组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://www.dahuatech.com/bocweb/web/img/logo.png",
+      "sourcePage": "https://www.dahuatech.com/",
+      "sha256": "715f9c6a9f57bdaf6ea01867879c66d20c458023efc3158aea79bb1fac12daa5",
+      "bytes": 615760,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dahuatech.com/law.html",
+        "attribution": "大华。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "法律声明要求使用商标事先取得书面许可，网站内容保留版权。"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    },
+    {
+      "file": "logo-bilingual-white.png",
+      "label": "反白中英组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "dark",
+      "source": "https://www.dahuatech.com/bocweb/web/img/logo_white.png",
+      "sourcePage": "https://www.dahuatech.com/",
+      "sha256": "cd7067fd17037d9338b7e05010833309cfd83a870e6d7ddd3321277d97c0cc71",
+      "bytes": 38436,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dahuatech.com/law.html",
+        "attribution": "大华。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "法律声明要求使用商标事先取得书面许可，网站内容保留版权。"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 3,
+  "id": "uniview",
+  "name": "宇视科技",
+  "aliases": [
+    "uniview"
+  ],
+  "identity": {
+    "nameZh": "宇视科技",
+    "nameEn": "uniview",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://cn.uniview.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://cn.uniview.com/",
+  "entityType": "company",
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "logo.png",
+  "assets": [
+    {
+      "file": "logo.png",
+      "label": "蓝色中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://cn.uniview.com/tres/images/2022/CSS/style.css",
+      "sourcePage": "https://cn.uniview.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "df7161dbd5bf6cbcb188186d5ef6dc00449b8f17c1852b3b2c071ffd239c0438",
+      "bytes": 3551,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://cn.uniview.com/",
+        "attribution": "宇视科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网小尺寸原件，适合按原生像素取用。"
+      ]
+    }
+  ]
+}

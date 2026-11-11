@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 3,
+  "id": "aihuishou",
+  "name": "爱回收",
+  "aliases": [],
+  "identity": {
+    "nameZh": "爱回收",
+    "nameEn": "AHS Recycle",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.aihuishou.com/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "集团官网爱回收中英文业务页",
+        "url": "https://www.atrenew.com/en-us/business/aihuishou",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "website": "https://www.aihuishou.com/",
+  "entityType": "company",
+  "categories": [
+    "e-commerce"
+  ],
+  "defaultAsset": "logo-brand.png",
+  "assets": [
+    {
+      "file": "logo-brand.png",
+      "label": "中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "status": "current",
+      "source": "https://www.atrenew.com/static/media/logo-ahs.21fbc431abe81534270a.png",
+      "sourcePage": "https://www.atrenew.com/en-us/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "0b09cc3e17840d624740558b7fdbf7e1c4f1ed0bd65099f9f8c187bd3b4a3da0",
+      "bytes": 12889,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.atrenew.com/en-us/",
+        "attribution": "爱回收。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "icon-yellow.png",
+      "label": "黄底图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "status": "current",
+      "source": "https://www.atrenew.com/icons/icon-192x192.png",
+      "sourcePage": "https://www.atrenew.com/en-us/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "df6b81deee296fe7ec4174d098e64e57a874e45fa9e63a0e68d32ec40e8f0a49",
+      "bytes": 7874,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.atrenew.com/en-us/",
+        "attribution": "爱回收。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

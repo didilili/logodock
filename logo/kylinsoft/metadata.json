@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 3,
+  "id": "kylinsoft",
+  "name": "麒麟软件",
+  "aliases": [
+    "Kylinsoft"
+  ],
+  "identity": {
+    "nameZh": "麒麟软件",
+    "nameEn": "Kylinsoft",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.kylinos.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.kylinos.cn/",
+  "entityType": "company",
+  "categories": [
+    "software"
+  ],
+  "defaultAsset": "logo.png",
+  "assets": [
+    {
+      "file": "logo.png",
+      "label": "红色中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.kylinos.cn/upload/1/appLogo/20250820/1957999505938382848.png",
+      "sourcePage": "https://www.kylinos.cn/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "98397497b49338607a7a4e1c1db562ce6fd1cdc1a6f35cb1f5f3a0b524876086",
+      "bytes": 10564,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.kylinos.cn/",
+        "attribution": "麒麟软件。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网小尺寸原图，适合按原生像素取用。"
+      ]
+    }
+  ]
+}

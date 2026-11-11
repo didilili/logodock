@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 3,
+  "id": "bank-of-shanghai",
+  "name": "上海银行",
+  "aliases": [],
+  "website": "https://www.bosc.cn/zh/",
+  "entityType": "company",
+  "identity": {
+    "nameZh": "上海银行",
+    "nameEn": "Bank of Shanghai",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "品牌官网",
+        "url": "https://www.bosc.cn/zh/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "categories": [
+    "金融服务"
+  ],
+  "defaultAsset": "logo-bilingual.png",
+  "assets": [
+    {
+      "file": "logo-bilingual-slogan-official.png",
+      "label": "中英口号组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.bosc.cn/images/logo_new.png",
+      "sourcePage": "https://www.bosc.cn/zh/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "03a304bc523e5967d77c67f022b4ae7a57c4a7252bfd5cd58bfd2cf182506097",
+      "bytes": 41394,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.bosc.cn/zh/",
+        "attribution": "上海银行，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-bilingual.png",
+      "label": "不带标语的中英组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.bosc.cn/en/images/logo.png",
+      "sourcePage": "https://www.bosc.cn/en/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "ac97463143dc70ab7f7268f21e0440cf1717039b8125626654e3a7a0bd4bc352",
+      "bytes": 11575,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.bosc.cn/en/",
+        "attribution": "上海银行，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官方英文站原生 348×92 像素中英组合。"
+      ]
+    }
+  ]
+}

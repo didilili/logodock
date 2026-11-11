@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 3,
+  "id": "jt-express",
+  "name": "极兔",
+  "aliases": [],
+  "identity": {
+    "nameZh": "极兔",
+    "nameEn": "J&T Express",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.jtexpress.com.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.jtexpress.com.cn/",
+  "entityType": "company",
+  "categories": [
+    "物流"
+  ],
+  "defaultAsset": "logo-brand.png",
+  "assets": [
+    {
+      "file": "logo-brand.png",
+      "label": "红色中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://www.jtexpress.com.cn/images/v3/index/logo_red@2x.png",
+      "sourcePage": "https://www.jtexpress.com.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "1e87b75932730b457effb04a7a5ae94ffbd4565cc6ada0b534c2e37a2298fa8e",
+      "bytes": 15134,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.jtexpress.com.cn/",
+        "attribution": "极兔。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-white.png",
+      "label": "反白中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://www.jtexpress.com.cn/images/v3/index/logo_white@2x.png",
+      "sourcePage": "https://www.jtexpress.com.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "2f0cc79a24df0c8d099913f80b8673b07858a477ee388ae1ff9cb6de1f29dc4a",
+      "bytes": 13477,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.jtexpress.com.cn/",
+        "attribution": "极兔。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

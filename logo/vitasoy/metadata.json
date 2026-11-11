@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 3,
+  "id": "vitasoy",
+  "name": "维他奶",
+  "aliases": [],
+  "website": "https://www.vitasoy.com/",
+  "identity": {
+    "nameZh": "维他奶",
+    "nameEn": "Vitasoy",
+    "legalNames": [
+      {
+        "name": "Vitasoy International Holdings Ltd.",
+        "language": "en",
+        "role": "group",
+        "source": "https://www.vitasoy.com/contact-us/",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.vitasoy.com/contact-us/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "logo-bilingual.png",
+  "assets": [
+    {
+      "file": "logo-bilingual.png",
+      "label": "集团中英组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://www.vitasoy.com/wp-content/uploads/2022/08/Vitasoy-logo.png",
+      "sourcePage": "https://www.vitasoy.com/contact-us/",
+      "sha256": "2c599786a0f745023fb4c510f97133da422b6500bfa7004fbcc3a7b15baf5571",
+      "bytes": 3084,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.vitasoy.com/contact-us/",
+        "attribution": "维他奶。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "官网原生小尺寸位图，适合按原生像素或缩小使用。"
+      ]
+    },
+    {
+      "file": "logo-white.png",
+      "label": "集团反白组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "dark",
+      "source": "https://www.vitasoy.com/wp-content/uploads/2022/08/Vitasoy-white-logo.png",
+      "sourcePage": "https://www.vitasoy.com/contact-us/",
+      "sha256": "ca81082ad27b22301891b02011c803d86fa4f97cf040f77a2b8f4b4e1bac8619",
+      "bytes": 5166,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.vitasoy.com/contact-us/",
+        "attribution": "维他奶。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "官网原生小尺寸位图，适合按原生像素或缩小使用。"
+      ]
+    }
+  ]
+}

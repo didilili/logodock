@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 3,
+  "id": "lianwei",
+  "name": "联蔚数科",
+  "aliases": [
+    "上海联蔚数科"
+  ],
+  "website": "https://www.lianwei.com.cn/",
+  "entityType": "company",
+  "identity": {
+    "nameZh": "联蔚数科",
+    "nameEn": "LIANWEI",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "品牌官网",
+        "url": "https://www.lianwei.com.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "categories": [
+    "enterprise-software"
+  ],
+  "defaultAsset": "logo-anniversary-white-official.png",
+  "assets": [
+    {
+      "file": "logo-anniversary-white-official.png",
+      "label": "反白25周年组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.lianwei.com.cn/Public/Uploads/uploadfile/images/20250522/logo.png",
+      "sourcePage": "https://www.lianwei.com.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "25d987ee4a1ef4244e2405fdecb2a109fd317c1480b81b42ac20ad462ba26f55",
+      "bytes": 37891,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.lianwei.com.cn/",
+        "attribution": "联蔚数科，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10",
+        "notes": "25周年纪念构图，使用时须结合对应纪念场景。"
+      },
+      "usageWarnings": [
+        "含25周年纪念字样，适用于对应纪念场景。"
+      ]
+    },
+    {
+      "file": "logo-anniversary-red-official.png",
+      "label": "红色25周年组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.lianwei.com.cn/Public/Uploads/uploadfile/images/20250611/logo21.png",
+      "sourcePage": "https://www.lianwei.com.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "6b8caf100861f6d6a13b61a01ea04cead5f7c9f6f0a90f5ade809b1cc213493f",
+      "bytes": 43024,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.lianwei.com.cn/",
+        "attribution": "联蔚数科，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10",
+        "notes": "25周年纪念构图，使用时须结合对应纪念场景。"
+      },
+      "usageWarnings": [
+        "含25周年纪念字样，适用于对应纪念场景。"
+      ]
+    }
+  ]
+}

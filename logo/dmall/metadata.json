@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 3,
+  "id": "dmall",
+  "name": "多点数智",
+  "aliases": [],
+  "website": "https://www.dmall.com/",
+  "identity": {
+    "nameZh": "多点数智",
+    "nameEn": "DMALL",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://www.dmall.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "logo-bilingual.png",
+  "assets": [
+    {
+      "file": "logo-bilingual.png",
+      "label": "中英组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://img.dmallcdn.com/dshop/202507/011dcef4-1b0b-4d01-afc0-1eca0ed5f971",
+      "sourcePage": "https://www.dmall.com/",
+      "sha256": "4abc98df25cba264435d3fe9579fb09b579ff66e63ddeaf54350655ab105b055",
+      "bytes": 17550,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dmall.com/",
+        "attribution": "多点数智。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    }
+  ]
+}

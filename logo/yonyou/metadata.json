@@ -110,6 +110,39 @@
       "qualityNotes": [
         "透明背景。"
       ]
+    },
+    {
+      "file": "wordmark-bilingual-red-gray-official.png",
+      "label": "红灰中英字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.yonyou.com/assets/images/version26/logo.png",
+      "sourcePage": "https://www.yonyou.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header"
+      },
+      "sha256": "06809413d9b92b1cca8329826c3525f3e1c22c9485e309378b954b0f76cc43d0",
+      "bytes": 3143,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.yonyou.com/",
+        "attribution": "用友，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-11"
+      },
+      "qualityNotes": [
+        "透明背景，红色“用友”下附灰色yonyou字样。"
+      ],
+      "usageWarnings": [
+        "适合原生尺寸附近展示，放大后小字和边缘清晰度受限。"
+      ]
     }
   ]
 }

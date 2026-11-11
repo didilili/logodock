@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 3,
+  "id": "voyah",
+  "name": "岚图",
+  "aliases": [
+    "VOYAH"
+  ],
+  "identity": {
+    "nameZh": "岚图",
+    "nameEn": "VOYAH",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.voyah.com.cn/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方 App Store 岚图汽车",
+        "url": "https://apps.apple.com/cn/app/%E5%B2%9A%E5%9B%BE%E6%B1%BD%E8%BD%A6-%E4%B8%AD%E5%9B%BD%E9%AB%98%E7%AB%AF%E6%96%B0%E8%83%BD%E6%BA%90%E6%B1%BD%E8%BD%A6%E9%A2%86%E5%AF%BC%E8%80%85/id1550056350?uo=4",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "东风集团岚图品牌页及海外官网入口",
+        "url": "https://www.dongfeng-global.com/business/voyah",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "岚图官方海外品牌介绍",
+        "url": "https://www.voyah-auto.com/about/brand",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.voyah.com.cn/",
+  "entityType": "company",
+  "categories": [
+    "automotive"
+  ],
+  "defaultAsset": "icon-appstore.jpg",
+  "assets": [
+    {
+      "file": "logo.png",
+      "label": "岚图汽车组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.voyah.com.cn/sitelogo/pc/brand.png",
+      "sourcePage": "https://www.voyah.com.cn/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "84859be9c1da9379b3f3daa0c74a5c2b7906786d15263ebbc0ecfed77df47ac3",
+      "bytes": 1961,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.voyah.com.cn/",
+        "attribution": "岚图。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网小尺寸原图，适合按原生像素取用。"
+      ]
+    },
+    {
+      "file": "icon-appstore.jpg",
+      "label": "岚图汽车应用图标",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/db/2e/29/db2e29fe-3c5b-b8bb-9412-597269213e40/AppIcon-0-0-1x_U007ephone-0-1-0-0-85-220.png/512x512bb.jpg",
+      "sourcePage": "https://apps.apple.com/cn/app/%E5%B2%9A%E5%9B%BE%E6%B1%BD%E8%BD%A6-%E4%B8%AD%E5%9B%BD%E9%AB%98%E7%AB%AF%E6%96%B0%E8%83%BD%E6%BA%90%E6%B1%BD%E8%BD%A6%E9%A2%86%E5%AF%BC%E8%80%85/id1550056350?uo=4",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "app-store"
+      },
+      "sha256": "2388886f0bd4fca17dcfe793d84653563cd61026716e83df80b584c2eb6caffc",
+      "bytes": 14805,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://apps.apple.com/cn/app/%E5%B2%9A%E5%9B%BE%E6%B1%BD%E8%BD%A6-%E4%B8%AD%E5%9B%BD%E9%AB%98%E7%AB%AF%E6%96%B0%E8%83%BD%E6%BA%90%E6%B1%BD%E8%BD%A6%E9%A2%86%E5%AF%BC%E8%80%85/id1550056350?uo=4",
+        "attribution": "岚图，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-chinese-black.png",
+      "label": "黑色中文横式组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "source": "https://www.voyah.com.cn/static/js/icons-b6ccc29d.js",
+      "sourcePage": "https://www.voyah.com.cn/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "88b488d42f415928133943a8430d81dd5a3b513de6679ce2812c70d75cbf6bbf",
+      "bytes": 4100,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.voyah.com.cn/",
+        "attribution": "岚图，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-chinese-white.png",
+      "label": "白色中文横式组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.voyah.com.cn/static/js/icons-b6ccc29d.js",
+      "sourcePage": "https://www.voyah.com.cn/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "36c8108dead0506f5dc73d6acaa2db3c9dbb031bf3f617ca49a4eaedaf15da6d",
+      "bytes": 3030,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.voyah.com.cn/",
+        "attribution": "岚图，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-english-black.png",
+      "label": "黑色英文横式组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "source": "https://www.voyah-auto.com/img/common/footer-logo.png",
+      "sourcePage": "https://www.voyah-auto.com/about/brand",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "537610d8c8f5ad4d51207412abac573ac36938007819982fb0dba853e326db32",
+      "bytes": 11092,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.voyah-auto.com/about/brand",
+        "attribution": "岚图，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "wordmark-english-white.png",
+      "label": "白色英文字标",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.voyah-auto.com/img/home/pic-logo.png",
+      "sourcePage": "https://www.voyah-auto.com/about/brand",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "3da9130dc483aaf1165c6ec7e084491a1e9afc65144756807bb5b037bbd865b9",
+      "bytes": 15132,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.voyah-auto.com/about/brand",
+        "attribution": "岚图，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

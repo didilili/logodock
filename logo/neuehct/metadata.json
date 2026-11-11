@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 3,
+  "id": "neuehct",
+  "name": "智驾新程",
+  "aliases": [
+    "neueHCT"
+  ],
+  "identity": {
+    "nameZh": "智驾新程",
+    "nameEn": "neueHCT",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.neuehct.auto/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.neuehct.auto/",
+  "entityType": "company",
+  "categories": [
+    "automotive"
+  ],
+  "defaultAsset": "logo-dark-text.png",
+  "assets": [
+    {
+      "file": "logo-dark-text.png",
+      "label": "彩色深字字标",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.neuehct.auto/uploads/upload/images/20260227/3de487b76a049b5a5c37da94882e66f2.png",
+      "sourcePage": "https://www.neuehct.auto/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "2a51aca449edb11d83e2025f2bf4d422122cbe97f4c127c885b7bc263a615ed7",
+      "bytes": 13863,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.neuehct.auto/",
+        "attribution": "智驾新程。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网小尺寸原件，适合按原生像素取用。"
+      ]
+    },
+    {
+      "file": "logo-light-text.png",
+      "label": "彩色白字字标",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "dark",
+      "source": "https://www.neuehct.auto/uploads/upload/images/20260227/0eed0c8bcc3f689cb9909b350fbb4904.png",
+      "sourcePage": "https://www.neuehct.auto/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "696b027add5065d9e6bae0b36d9f501cd31c71aaa5ba82568ea37bd5669798d8",
+      "bytes": 8220,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.neuehct.auto/",
+        "attribution": "智驾新程。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网小尺寸原件，适合按原生像素取用。"
+      ]
+    }
+  ]
+}

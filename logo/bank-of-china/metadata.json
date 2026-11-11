@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 3,
+  "id": "bank-of-china",
+  "name": "中国银行",
+  "aliases": [],
+  "identity": {
+    "nameZh": "中国银行",
+    "nameEn": "Bank of China",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.boc.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.boc.cn/",
+  "entityType": "company",
+  "categories": [
+    "金融"
+  ],
+  "defaultAsset": "logo-bilingual.png",
+  "assets": [
+    {
+      "file": "logo-bilingual.png",
+      "label": "中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://www.boc.cn/images/boc2013_logo.png",
+      "sourcePage": "https://www.boc.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "a61810be66550d5d97b745636aa540a5fde60bc5576be0c95e0f6a49a7d780dc",
+      "bytes": 2949,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.boc.cn/custserv/cs1/200812/t20081209_135606.html",
+        "attribution": "中国银行。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官网版权声明要求商业用途先取得中国银行书面许可，并注明来源和版权。"
+      },
+      "qualityNotes": [
+        "官网页头小尺寸原图，适合原生尺寸附近的屏幕使用。"
+      ]
+    }
+  ]
+}

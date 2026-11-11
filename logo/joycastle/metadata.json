@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 3,
+  "id": "joycastle",
+  "name": "乐堡互娱",
+  "aliases": [
+    "JoyCastle"
+  ],
+  "identity": {
+    "nameZh": "乐堡互娱",
+    "nameEn": "JoyCastle",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.joycastle.mobi/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.joycastle.mobi/",
+  "entityType": "company",
+  "categories": [
+    "entertainment"
+  ],
+  "defaultAsset": "logo.svg",
+  "assets": [
+    {
+      "file": "logo.svg",
+      "label": "彩色英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.joycastle.mobi/images/logo.svg",
+      "sourcePage": "https://www.joycastle.mobi/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "c61f6640c7122486ab993318be4861959635cdb87a386fae88c0d76b14f72d5f",
+      "bytes": 11027,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.joycastle.mobi/",
+        "attribution": "乐堡互娱。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-light.svg",
+      "label": "浅色英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "monochrome",
+      "background": "dark",
+      "source": "https://www.joycastle.mobi/images/logo-light.svg",
+      "sourcePage": "https://www.joycastle.mobi/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "9937cf4d07cb05c30316ff0ad7acc58b797f6b6783002a3df76db2c152a940f9",
+      "bytes": 11045,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.joycastle.mobi/",
+        "attribution": "乐堡互娱。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "symbol.svg",
+      "label": "蓝色城堡图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.joycastle.mobi/images/logo.svg",
+      "sourcePage": "https://www.joycastle.mobi/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "originalAsset": "logo.svg",
+        "originalSha256": "c61f6640c7122486ab993318be4861959635cdb87a386fae88c0d76b14f72d5f"
+      },
+      "sha256": "accdeb47c5bf6c278e6ea7397541061b0b9042fa069f6b93197f4cec213c991b",
+      "bytes": 2113,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.joycastle.mobi/",
+        "attribution": "乐堡互娱。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "方形透明画布，长边贴边，短边居中，额外边距为零。"
+      ]
+    }
+  ]
+}

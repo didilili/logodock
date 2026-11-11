@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 3,
+  "id": "dp-tech",
+  "name": "深势科技",
+  "aliases": [],
+  "website": "https://www.dp.tech/",
+  "entityType": "company",
+  "identity": {
+    "nameZh": "深势科技",
+    "nameEn": "DP Technology",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "品牌官网",
+        "url": "https://www.dp.tech/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "categories": [
+    "ai"
+  ],
+  "defaultAsset": "wordmark-bilingual-black.webp",
+  "assets": [
+    {
+      "file": "wordmark-bilingual-white-official.webp",
+      "label": "反白中英字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://cdn1.deepmd.net/home/img/logo-light-cn.webp",
+      "sourcePage": "https://www.dp.tech/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "c28a8b110c58bbb252c85d65f5773e952d4ae8740365eee2b01b2b32ff6944c4",
+      "bytes": 3548,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dp.tech/",
+        "attribution": "深势科技，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "wordmark-bilingual-black.webp",
+      "label": "黑色中英字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "source": "https://cdn1.deepmd.net/home/img/logo-dark-cn.webp",
+      "sourcePage": "https://www.dp.tech/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "9abfd492a68dd5d019cdf7b7b42e6124b1c83a8861ed855140ffb50c3149ff30",
+      "bytes": 5026,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dp.tech/",
+        "attribution": "深势科技，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "wordmark-english-black.webp",
+      "label": "黑色英文字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "source": "https://cdn1.deepmd.net/home/img/logo-dark-en.webp",
+      "sourcePage": "https://www.dp.tech/en/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "95961f2340461105f4664488da89e8bf1fba868ad7d19c3d9644b0831a584da2",
+      "bytes": 8722,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dp.tech/en/",
+        "attribution": "深势科技，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "wordmark-english-white.webp",
+      "label": "白色英文字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://cdn1.deepmd.net/home/img/logo-light-en.webp",
+      "sourcePage": "https://www.dp.tech/en/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "14aad9bd10604627f1bef8a7e2c871fe572f6314c26c78e636dec0fb5064bf3e",
+      "bytes": 7910,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dp.tech/en/",
+        "attribution": "深势科技，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 3,
+  "id": "threatbook",
+  "name": "微步在线",
+  "aliases": [],
+  "website": "https://threatbook.cn/",
+  "entityType": "company",
+  "identity": {
+    "nameZh": "微步在线",
+    "nameEn": "ThreatBook",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "品牌官网",
+        "url": "https://threatbook.cn/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方英文品牌网站",
+        "url": "https://threatbook.io/",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "categories": [
+    "enterprise-software"
+  ],
+  "defaultAsset": "logo-chinese-white-official.png",
+  "assets": [
+    {
+      "file": "logo-chinese-white-official.png",
+      "label": "反白口号组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "dark",
+      "source": "https://assets.threatbook.cn/prod/_next/static/media/logo.7b08615f.png",
+      "sourcePage": "https://threatbook.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "419ee3e772aaa81eeb7e523b008eececc71cc1c00d45e1757de52e824bbcf022",
+      "bytes": 26160,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://threatbook.cn/",
+        "attribution": "微步在线，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

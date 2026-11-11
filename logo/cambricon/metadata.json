@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 3,
+  "id": "cambricon",
+  "name": "寒武纪",
+  "aliases": [],
+  "website": "https://www.cambricon.com/",
+  "identity": {
+    "nameZh": "寒武纪",
+    "nameEn": "Cambricon",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://www.cambricon.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "logo-bilingual-brand-library.png",
+  "assets": [
+    {
+      "file": "logo-bilingual.png",
+      "label": "官网浅蓝中英双行字标",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://www.cambricon.com/statics/zhang/images/header-logo2.png",
+      "sourcePage": "https://www.cambricon.com/",
+      "sha256": "57c6570e6f18d67a0a25529b47bf144f2a5f3a630d67ad6c3c03075f07e83bc3",
+      "bytes": 3103,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.cambricon.com/",
+        "attribution": "寒武纪。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "other",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header"
+      },
+      "qualityNotes": [
+        "透明背景，官网当前页头原件，原生 133 × 46 像素。"
+      ],
+      "display": "alternative",
+      "usageWarnings": [
+        "蓝色与官网品牌书的 #0059C4 不同，适合复现当前网页页头，细节受原生像素限制。"
+      ]
+    },
+    {
+      "file": "logo-bilingual-white.png",
+      "label": "反白中英双行字标",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "dark",
+      "source": "https://www.cambricon.com/statics/zhang/images/header-logo.png",
+      "sourcePage": "https://www.cambricon.com/",
+      "sha256": "0686cb9c78fb2eeffea92c5af583ab9fdfc5f8be4c819545f53b5813b8548186",
+      "bytes": 2977,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.cambricon.com/",
+        "attribution": "寒武纪。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header"
+      },
+      "qualityNotes": [
+        "官网原生小尺寸文件，适合按原生像素或缩小使用。"
+      ]
+    },
+    {
+      "file": "logo-bilingual-brand-library.png",
+      "label": "标准蓝中英双行字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.cambricon.com/uploadfile/poster/%E5%AF%92%E6%AD%A6%E7%BA%AA-LOGO.zip#PNG",
+      "sourcePage": "https://www.cambricon.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library",
+        "pageTitle": "寒武纪官网品牌资料下载"
+      },
+      "sha256": "546ffd301dc54e2f81f495c0d1c4198c91bb104aef5b05ef79a07cd18946c993",
+      "bytes": 62230,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.cambricon.com/",
+        "attribution": "寒武纪，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-11",
+        "notes": "官网法律声明要求商标使用事先取得书面许可。品牌书要求保留标识比例与配色并遵守安全空间。"
+      },
+      "qualityNotes": [
+        "透明背景，标准蓝 #0059C4。"
+      ]
+    }
+  ],
+  "sourceFiles": [
+    {
+      "file": "logo-bilingual-white.ai",
+      "label": "反白中英双行原稿",
+      "assetFiles": [
+        "logo-bilingual-white.png"
+      ],
+      "source": "https://www.cambricon.com/uploadfile/poster/%E5%AF%92%E6%AD%A6%E7%BA%AA-LOGO.zip#AI",
+      "sourcePage": "https://www.cambricon.com/",
+      "sha256": "1718ae9dfce8b8db6eec93a951523381ec97e74b591aa6c8be3793bff85aa99c",
+      "bytes": 540645,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.cambricon.com/",
+        "attribution": "寒武纪，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-11",
+        "notes": "官网法律声明要求商标使用事先取得书面许可。品牌书要求保留标识比例与配色并遵守安全空间。"
+      }
+    }
+  ]
+}

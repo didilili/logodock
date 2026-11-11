@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 3,
+  "id": "osda",
+  "name": "欧达光电",
+  "aliases": [
+    "OSDA"
+  ],
+  "identity": {
+    "nameZh": "欧达光电",
+    "nameEn": "OSDA",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://osdasol.com.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://osdasol.com.cn/",
+  "entityType": "company",
+  "categories": [
+    "能源"
+  ],
+  "defaultAsset": "logo.svg",
+  "assets": [
+    {
+      "file": "logo.svg",
+      "label": "欧圣达白色组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "dark",
+      "source": "https://osdasol.com.cn/uploads/image/20220615/62a9aa5a79406.svg",
+      "sourcePage": "https://osdasol.com.cn/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "287a03d0304eaf43645215ac6626e423440c9bbd39963130dbedb09423a0a2eb",
+      "bytes": 6249,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://osdasol.com.cn/",
+        "attribution": "欧达光电。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

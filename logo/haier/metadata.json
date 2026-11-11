@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 3,
+  "id": "haier",
+  "name": "海尔",
+  "aliases": [],
+  "website": "https://www.haier.com/careers/",
+  "identity": {
+    "nameZh": "海尔",
+    "nameEn": "Haier",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://www.haier.com/careers/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "wordmark-blue.png",
+  "assets": [
+    {
+      "file": "wordmark-tagline.png",
+      "label": "英文与中文标语",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://imagegroup1.haier.com/images/hg2020_header_logo_2026.png",
+      "sourcePage": "https://www.haier.com/careers/",
+      "sha256": "c4886ea61f761e62c31c62eecb6be5c786e1740cc95b2a5e05cbcea6fb8cef29",
+      "bytes": 27300,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.haier.com/careers/",
+        "attribution": "海尔。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    },
+    {
+      "file": "wordmark-tagline-white.png",
+      "label": "反白英文与中文标语",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "dark",
+      "source": "https://imagegroup1.haier.com/images/hg2020_header_logo_w_2026.png",
+      "sourcePage": "https://www.haier.com/careers/",
+      "sha256": "a66f9ed00f46f440a0e132a3bdd9edd44f8c4b5181b365cd95a5c96775442681",
+      "bytes": 14567,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.haier.com/careers/",
+        "attribution": "海尔。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    },
+    {
+      "file": "wordmark-blue.png",
+      "label": "蓝色英文",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://image.haier.com/my/media-kit/haier-logos/W020250324671463345597.png",
+      "sourcePage": "https://www.haier.com/my/media-kit/haier-logos/20250324_258124.shtml",
+      "sha256": "d142d481d2fb466c34641cd291a3e54541e23c6ebcc9de21baf8c3ef50e571bc",
+      "bytes": 64102,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.haier.com/my/media-kit/haier-logos/20250324_258124.shtml",
+        "attribution": "海尔。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "qualityNotes": [
+        "透明背景，原始大画布保留周边留白。"
+      ]
+    },
+    {
+      "file": "wordmark-black.png",
+      "label": "黑色英文",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://download.haier.com/my/media-kit/haier-logos/W020250324671475522844.png",
+      "sourcePage": "https://www.haier.com/my/media-kit/haier-logos/20250324_258125.shtml",
+      "sha256": "f86364824b62f731521a8c62887d41def42368e379abbd3e20f06de84bb262db",
+      "bytes": 63421,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.haier.com/my/media-kit/haier-logos/20250324_258125.shtml",
+        "attribution": "海尔。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "black",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "qualityNotes": [
+        "透明背景，原始大画布保留周边留白。"
+      ]
+    },
+    {
+      "file": "wordmark-white-black-bg.png",
+      "label": "黑底反白英文",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "dark",
+      "source": "https://download.haier.com/my/media-kit/haier-logos/W020250324671500444811.png",
+      "sourcePage": "https://www.haier.com/my/media-kit/haier-logos/20250324_258127.shtml",
+      "sha256": "fd84b7087952291c4a7eb5356fc0c6c66f47cf2f783f4cc231a09837d84aa184",
+      "bytes": 49612,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.haier.com/my/media-kit/haier-logos/20250324_258127.shtml",
+        "attribution": "海尔。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "qualityNotes": [
+        "原件为不透明黑底。"
+      ]
+    },
+    {
+      "file": "wordmark-white-blue-bg.png",
+      "label": "蓝底反白英文",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "any",
+      "source": "https://download.haier.com/my/media-kit/haier-logos/W020250324671490568445.png",
+      "sourcePage": "https://www.haier.com/my/media-kit/haier-logos/20250324_258126.shtml",
+      "sha256": "fdb8128e5ea6be38b361b08563ddb3de5362c44450f404a22232737729e8e0ac",
+      "bytes": 59566,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.haier.com/my/media-kit/haier-logos/20250324_258126.shtml",
+        "attribution": "海尔。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "qualityNotes": [
+        "原件为不透明品牌蓝背景。"
+      ]
+    }
+  ]
+}

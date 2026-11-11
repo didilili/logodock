@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 3,
+  "id": "xiaotiancai",
+  "name": "小天才",
+  "aliases": [],
+  "identity": {
+    "nameZh": "小天才",
+    "nameEn": "imoo",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.okii.com/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方英文开发平台品牌用名（imoo）",
+        "url": "https://developer.okii.com/docs/en/",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "imoo 官方英文品牌介绍",
+        "url": "https://www.imoo.com/en/about",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "website": "https://www.okii.com/",
+  "entityType": "company",
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "wordmark-orange.png",
+  "assets": [
+    {
+      "file": "wordmark-orange.png",
+      "label": "橙色中文",
+      "variant": "wordmark",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://static-assets-prod.okii.com/xtc-products/portal-resource/xtc-logo.png",
+      "sourcePage": "https://www.okii.com/html/mobile/brand/brand.html?tab=ad",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "7a047036e7a9b28d5f7749243efb17646cd9b8415845c7f42409dd4863fd07f6",
+      "bytes": 23728,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.okii.com/html/mobile/brand/brand.html?tab=ad",
+        "attribution": "小天才。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "wordmark-white.png",
+      "label": "反白中文",
+      "variant": "wordmark",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://static.okii.com/static/mobile/public/img/logo-2_ac47380.png",
+      "sourcePage": "https://www.okii.com/html/mobile/brand/brand.html?tab=ad",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "24e81c771f10c73c83601c4e1d9eebee36284dfcd34900aba5c32972a183748f",
+      "bytes": 1789,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.okii.com/html/mobile/brand/brand.html?tab=ad",
+        "attribution": "小天才。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

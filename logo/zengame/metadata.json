@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 3,
+  "id": "zengame",
+  "name": "禅游科技",
+  "aliases": [],
+  "identity": {
+    "nameZh": "禅游科技",
+    "nameEn": "ZEN GAME",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.zen-game.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.zen-game.com/",
+  "entityType": "company",
+  "categories": [
+    "entertainment"
+  ],
+  "defaultAsset": "logo-white.png",
+  "assets": [
+    {
+      "file": "logo-white.png",
+      "label": "中英组合反白字",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "dark",
+      "status": "current",
+      "source": "https://res.12317wan.com/platform/ows_zengame/static/image/logo.png",
+      "sourcePage": "https://www.zen-game.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "85e5723b08c8c4838046cdc7f8aa2267122a144aa367d6665cf80e286a65be9e",
+      "bytes": 96684,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.zen-game.com/",
+        "attribution": "禅游科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

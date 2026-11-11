@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 3,
+  "id": "jac",
+  "name": "江淮汽车",
+  "aliases": [],
+  "website": "https://www.jac.com.cn/rczp/",
+  "identity": {
+    "nameZh": "江淮汽车",
+    "nameEn": "JAC GROUP",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://www.jac.com.cn/rczp/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "wordmark-bilingual.png",
+  "assets": [
+    {
+      "file": "wordmark-bilingual.png",
+      "label": "江汽集团中英组合",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://www.jac.com.cn/r/cms/www/default/index2025/pc/img/logo.png",
+      "sourcePage": "https://www.jac.com.cn/rczp/",
+      "sha256": "1e15c0d9ebec867701c0de95daa6fbd4a439f73587525256c11e122766b65901",
+      "bytes": 44621,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.jac.com.cn/rczp/",
+        "attribution": "江淮汽车。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "bilingual",
+      "layout": "vertical",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "江汽集团当前中英文字组合，区别于单独汽车车标。"
+      ]
+    }
+  ]
+}

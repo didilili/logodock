@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 3,
+  "id": "goodix",
+  "name": "汇顶科技",
+  "aliases": [],
+  "website": "https://www.goodix.com/zh/",
+  "identity": {
+    "nameZh": "汇顶科技",
+    "nameEn": "GOODiX",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://www.goodix.com/zh/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "wordmark-brand.svg",
+  "assets": [
+    {
+      "file": "wordmark-brand.svg",
+      "label": "蓝红英文",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://www.goodix.com/zh/webimages/logo2.svg",
+      "sourcePage": "https://www.goodix.com/zh/",
+      "sha256": "eac61f71235bc2bdc13a63b4975f38d0296015a252967a9c95083b2b45fbf9aa",
+      "bytes": 4685,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.goodix.com/zh/",
+        "attribution": "汇顶科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    },
+    {
+      "file": "wordmark-white.svg",
+      "label": "反白英文",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "dark",
+      "source": "https://www.goodix.com/zh/webimages/logo.svg",
+      "sourcePage": "https://www.goodix.com/zh/",
+      "sha256": "b4f6e45ae4963a8e731e3698ff733ed48bbc548c978283ac36adb817f484f831",
+      "bytes": 4664,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.goodix.com/zh/",
+        "attribution": "汇顶科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 3,
+  "id": "cxmt",
+  "name": "长鑫存储",
+  "aliases": [],
+  "identity": {
+    "nameZh": "长鑫存储",
+    "nameEn": "CXMT",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.cxmt.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.cxmt.com/",
+  "entityType": "company",
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "wordmark-blue.svg",
+  "assets": [
+    {
+      "file": "wordmark-blue.svg",
+      "label": "蓝色英文",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://www.cxmt.com/statics/shuwon//assets/img/svg/logo.svg",
+      "sourcePage": "https://www.cxmt.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "e28766b94004619bd9f04109f79351c7f023774b7d6511d7c2805cf211cfeee7",
+      "bytes": 8130,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.cxmt.com/",
+        "attribution": "长鑫存储。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "wordmark-white.svg",
+      "label": "反白英文",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://www.cxmt.com/statics/shuwon//assets/img/svg/logo-w.svg",
+      "sourcePage": "https://www.cxmt.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "144fb403cb2e7f9190f4a87935199f94c5f7fa1c86396f6aba3ae2d9cb4b0011",
+      "bytes": 8132,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.cxmt.com/",
+        "attribution": "长鑫存储。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

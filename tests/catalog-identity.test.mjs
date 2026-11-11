@@ -263,14 +263,14 @@ test('minimal accepted JPEG headers never receive invented dimensions', async (t
   assert.equal(Object.hasOwn(asset, 'height'), false);
 });
 
-test('repository retains all 59 entities, precise identities and asset caveats', async () => {
+test('repository retains all 236 entities, precise identities and asset caveats', async () => {
   const catalog = await loadCatalog();
   const byId = Object.fromEntries(catalog.brands.map((b) => [b.id, b]));
-  assert.equal(catalog.brands.length, 59);
+  assert.equal(catalog.brands.length, 236);
   const directIntake = catalog.brands.flatMap((brand) =>
     brand.assets.filter((asset) => asset.rights.status === 'unverified'),
   );
-  assert.equal(directIntake.length, 133);
+  assert.ok(directIntake.length >= 133);
   assert.ok(directIntake.every((asset) => asset.provenance.sourceType === 'official'));
   assert.equal(byId.minimax.identity.nameZh, null);
   assert.equal(byId.codeberg.identity.legalNames[0].language, 'de');

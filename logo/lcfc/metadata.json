@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 3,
+  "id": "lcfc",
+  "name": "联宝科技",
+  "aliases": [
+    "LCFC"
+  ],
+  "identity": {
+    "nameZh": "联宝科技",
+    "nameEn": "LCFC",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.lcfc.com.cn/index.aspx",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.lcfc.com.cn/index.aspx",
+  "entityType": "company",
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "logo.png",
+  "assets": [
+    {
+      "file": "logo.png",
+      "label": "红色中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.lcfc.com.cn/uploadfiles/2020/09/20200925145348676.png?bG9nby5wbmc=",
+      "sourcePage": "https://www.lcfc.com.cn/index.aspx",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "98ab6d6ff213f0da8d2292bebf563c1fca9f1c3003663e3460646771ea435a67",
+      "bytes": 6375,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.lcfc.com.cn/index.aspx",
+        "attribution": "联宝科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

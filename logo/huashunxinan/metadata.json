@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 3,
+  "id": "huashunxinan",
+  "name": "华顺信安",
+  "aliases": [],
+  "website": "https://huashunxinan.net/",
+  "identity": {
+    "nameZh": "华顺信安",
+    "nameEn": "HuaShun XinAn",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://huashunxinan.net/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "logo-bilingual.svg",
+  "assets": [
+    {
+      "file": "logo-bilingual.svg",
+      "label": "中英组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://huashunxinan.net/_nuxt/huashunxinanlogo.PmJOrkC9.svg",
+      "sourcePage": "https://huashunxinan.net/",
+      "sha256": "5117f821a0f9e8d70e2bb7c936a4257dd6925735fb4b814288112cfd54df22d5",
+      "bytes": 15770,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://huashunxinan.net/",
+        "attribution": "华顺信安。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 3,
+  "id": "netease-cloud-music",
+  "name": "网易云音乐",
+  "aliases": [],
+  "identity": {
+    "nameZh": "网易云音乐",
+    "nameEn": "NetEase Cloud Music",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://music.163.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://music.163.com/",
+  "entityType": "company",
+  "categories": [
+    "entertainment"
+  ],
+  "defaultAsset": "logo-en-white.svg",
+  "assets": [
+    {
+      "file": "logo-en-white.svg",
+      "label": "英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "dark",
+      "status": "current",
+      "source": "https://ir.music.163.com/images/logo_en.svg",
+      "sourcePage": "https://ir.music.163.com/en/index.php",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "27d59c7cd5d460f34ea235c9bbf3495acfa6f031c5e29586e008dfa1c3df17f5",
+      "bytes": 24569,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://ir.music.163.com/en/index.php",
+        "attribution": "网易云音乐。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-zh-ir.svg",
+      "label": "中文组合·投资者关系",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "dark",
+      "status": "current",
+      "source": "https://ir.music.163.com/images/logo_sc.svg",
+      "sourcePage": "https://ir.music.163.com/sc/index.php",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "d1f28a78837d4e239cdea8ca1199b89e5dcedad8c88f03c72162377ca415b860",
+      "bytes": 25722,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://ir.music.163.com/sc/index.php",
+        "attribution": "网易云音乐。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官方投资者关系页面专用组合，含“投资者关系”文字。"
+      ]
+    },
+    {
+      "file": "symbol-red.svg",
+      "label": "红底音符图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "status": "current",
+      "source": "https://ir.music.163.com/images/logo_en.svg",
+      "sourcePage": "https://ir.music.163.com/en/index.php",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "originalAsset": "logo-en-white.svg",
+        "originalSha256": "27d59c7cd5d460f34ea235c9bbf3495acfa6f031c5e29586e008dfa1c3df17f5"
+      },
+      "sha256": "1f14edaaf4323d6e1baa5fb8daa9bae31c8c840c1d40d98f7d44349b0f1cb7bc",
+      "bytes": 6449,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://ir.music.163.com/en/index.php",
+        "attribution": "网易云音乐。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "从同品牌原始 SVG 提取图形，方形画布长边贴边，短边居中，额外边距为零。"
+      ]
+    }
+  ]
+}

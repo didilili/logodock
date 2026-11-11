@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 3,
+  "id": "tiger-brokers",
+  "name": "老虎国际",
+  "aliases": [],
+  "identity": {
+    "nameZh": "老虎国际",
+    "nameEn": "Tiger Brokers",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.itigerup.com/hans/job",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方投资者关系品牌与集团关系",
+        "url": "https://itiger.gcs-web.com/investor-relations/",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "官方平台公司介绍",
+        "url": "https://www.itiger.com/stock/TIGR/company",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "website": "https://www.itigerup.com/hans/job",
+  "entityType": "company",
+  "categories": [
+    "金融"
+  ],
+  "defaultAsset": "logo.png",
+  "assets": [
+    {
+      "file": "logo.png",
+      "label": "黄色虎头图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "source": "https://c1.itigergrowtha.com/portal5/static/media/logo.152.1b48fddb.png",
+      "sourcePage": "https://www.itigerup.com/hans/job",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "98e0d88ad76aaed2905f8529dc01f7957ce2e7cf338fe97624da7bbb84bfeabc",
+      "bytes": 18421,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.itigerup.com/hans/job",
+        "attribution": "老虎国际。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-chinese-color-official.svg",
+      "label": "彩色中文组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://c1.itigergrowtha.com/portal5/static/media/tigerglobal.zh.color.15ca4e23.svg",
+      "sourcePage": "https://www.itigerup.com/hans/job",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "f1d02ca1f010d5a86445474ba6d7f1d30f45ee142673469037fa5291b0dbe236",
+      "bytes": 8944,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.itigerup.com/hans/job",
+        "attribution": "老虎国际，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-11"
+      },
+      "qualityNotes": [
+        "透明背景，黄色虎头与繁体中文品牌名的无附注组合。"
+      ]
+    },
+    {
+      "file": "logo-chinese-white-listed-official.svg",
+      "label": "白色中文上市组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://c1.itigergrowtha.com/portal5/static/media/tigerglobal.tigr.zh.white.17999fe9.svg",
+      "sourcePage": "https://www.itigerup.com/hans/job",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header"
+      },
+      "sha256": "19a0dd5698d2581479c3239381dee931a8f5cf12334021c416eaa70c41e5a27b",
+      "bytes": 13514,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.itigerup.com/hans/job",
+        "attribution": "老虎国际，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-11"
+      },
+      "qualityNotes": [
+        "透明背景，包含“納斯達克上市公司”附注的官网页头横版。"
+      ]
+    }
+  ]
+}

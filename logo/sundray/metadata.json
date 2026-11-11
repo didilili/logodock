@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 3,
+  "id": "sundray",
+  "name": "信锐技术",
+  "aliases": [
+    "信锐网科"
+  ],
+  "website": "https://www.sundray.com.cn/",
+  "entityType": "company",
+  "identity": {
+    "nameZh": "信锐技术",
+    "nameEn": "SUNDRAY",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌信息",
+        "url": "https://www.sundray.com.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "categories": [
+    "telecommunications",
+    "enterprise-software"
+  ],
+  "defaultAsset": "logo-bilingual-color-official.png",
+  "assets": [
+    {
+      "file": "logo-bilingual-color-official.png",
+      "label": "彩色中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://download.sangfor.com.cn/%E9%BB%91%E8%89%B2%281%29.svg#img1",
+      "sourcePage": "https://www.sundray.com.cn/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "c2775f9d898076171e87ec9528db4b991e6cd1807f5b7b9fe550cc91edf00ff7",
+      "bytes": 120762,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.sundray.com.cn/",
+        "attribution": "信锐技术，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "来源SVG内嵌的原生PNG，保留原始像素。"
+      ]
+    },
+    {
+      "file": "symbol-color-raster-official.svg",
+      "label": "官网图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "source": "https://download.sangfor.com.cn/%E9%BB%91%E8%89%B2%281%29.svg",
+      "sourcePage": "https://www.sundray.com.cn/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "8e554e453fff5a83f9aeaa849aab4dcc5f441ec7c5c8fdebd05d9804198eb9ed",
+      "bytes": 161315,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.sundray.com.cn/",
+        "attribution": "信锐技术，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      },
+      "usageWarnings": [
+        "SVG内嵌1542×572像素位图，放大后清晰度受限。"
+      ],
+      "display": "alternative"
+    }
+  ]
+}

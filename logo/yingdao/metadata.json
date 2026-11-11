@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 3,
+  "id": "yingdao",
+  "name": "影刀",
+  "aliases": [
+    "分叉智能",
+    "分叉智能科技"
+  ],
+  "website": "https://www.yingdao.com/",
+  "identity": {
+    "nameZh": "影刀",
+    "nameEn": "ShadowBot",
+    "legalNames": [
+      {
+        "name": "杭州分叉智能科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.yingdao.com/html/user_license.html",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
+    "sources": [
+      {
+        "label": "官方公司信息",
+        "url": "https://www.yingdao.com/html/user_license.html",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "公司招聘官网的对外品牌",
+        "url": "https://join.yingdao.com/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方产品介绍中的中英品牌标识",
+        "url": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/assets/pdf/%E5%BD%B1%E5%88%80RPA%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.pdf",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "官方帮助中心现用软件名称",
+        "url": "https://www.yingdao.com/yddoc/yingdao/zh-CN/940905043183464448",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "logo-zh.svg",
+  "assets": [
+    {
+      "file": "logo-zh.svg",
+      "label": "红色中文组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://winrobot-pub-a-cos.yingdao.com/static/xybot-front-homepage-v3/online/377/static/header-logo.4903a3b5.svg",
+      "sourcePage": "https://www.yingdao.com/",
+      "sha256": "4aacff104e03755b1f7fad247a4631bb83a4a5d2bc264a84a82dbabd2ec8dfc2",
+      "bytes": 5614,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.yingdao.com/html/user_license.html",
+        "attribution": "影刀。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "用户协议要求使用相关图形、标识取得分叉智能明确授权。"
+      },
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    },
+    {
+      "file": "logo-white.svg",
+      "label": "反白中文组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "dark",
+      "source": "https://winrobot-pub-a-cos.yingdao.com/static/xybot-front-homepage-v3/online/377/static/footer-logo.949f8787.svg",
+      "sourcePage": "https://www.yingdao.com/",
+      "sha256": "8cd35963332224302799edd69787e64e4430b39fb1a367138d929889fa0fddcc",
+      "bytes": 5538,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.yingdao.com/html/user_license.html",
+        "attribution": "影刀。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "用户协议要求使用相关图形、标识取得分叉智能明确授权。"
+      },
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    }
+  ]
+}

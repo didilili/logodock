@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 3,
+  "id": "callnovo",
+  "name": "客诺信息技术",
+  "aliases": [
+    "Callnovo"
+  ],
+  "identity": {
+    "nameZh": "客诺信息技术",
+    "nameEn": "Callnovo",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.callnovocx.com/request-a-quote",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "英文官方网站",
+        "url": "https://callnovo.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.callnovocx.com/request-a-quote",
+  "entityType": "company",
+  "categories": [
+    "企业服务"
+  ],
+  "defaultAsset": "logo-color.webp",
+  "assets": [
+    {
+      "file": "logo-color.webp",
+      "label": "彩色英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://callnovo.com/logos/callnovo-logo.webp",
+      "sourcePage": "https://callnovo.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "b74e0afd695ba02abf2f66ec22364a57ae7055558027a9bb8b3ccec519402004",
+      "bytes": 6930,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://callnovo.com/",
+        "attribution": "客诺信息技术。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": []
+    },
+    {
+      "file": "logo-white.svg",
+      "label": "白色英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.callnovocx.com/mtsc/uploads/Ckeditor/Images/2025-03-19/logo-white.svg",
+      "sourcePage": "https://www.callnovocx.com/request-a-quote",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "78f031e7aebd03a64c78f7e6765a9a07b083bc5106ed99b5a89d4a03a4327184",
+      "bytes": 7348,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.callnovocx.com/request-a-quote",
+        "attribution": "客诺信息技术。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "symbol-white.svg",
+      "label": "白色对话气泡图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.callnovocx.com/mtsc/uploads/Ckeditor/Images/2025-03-19/logo-white.svg",
+      "sourcePage": "https://www.callnovocx.com/request-a-quote",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "originalAsset": "logo-white.svg",
+        "originalSha256": "78f031e7aebd03a64c78f7e6765a9a07b083bc5106ed99b5a89d4a03a4327184"
+      },
+      "sha256": "7f25ca2d87922611f0411f2551893eeaaf9756b0a68b26018b2e5055b2b42422",
+      "bytes": 1937,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.callnovocx.com/request-a-quote",
+        "attribution": "客诺信息技术。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "方形透明画布，长边贴边，短边居中，额外边距为零。"
+      ]
+    }
+  ]
+}

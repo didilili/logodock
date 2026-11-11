@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 3,
+  "id": "lingxi-games",
+  "name": "灵犀互娱",
+  "aliases": [
+    "LINGXIGAMES"
+  ],
+  "identity": {
+    "nameZh": "灵犀互娱",
+    "nameEn": "LINGXIGAMES",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.lingxigames.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.lingxigames.com/",
+  "entityType": "company",
+  "categories": [
+    "entertainment"
+  ],
+  "defaultAsset": "logo.png",
+  "assets": [
+    {
+      "file": "logo.png",
+      "label": "彩色中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "dark",
+      "source": "https://cdn.aligames.com/wukongbuild/lingxi-website/1.0.0/prod/views/umi.d52f9089.js",
+      "sourcePage": "https://www.lingxigames.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "207d0addf5d80dcaa67e5721f62f57b24548eadc02b4d98d1e629af188c94535",
+      "bytes": 8348,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.lingxigames.com/",
+        "attribution": "灵犀互娱。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

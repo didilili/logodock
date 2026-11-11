@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 3,
+  "id": "9yundata",
+  "name": "九云数智",
+  "aliases": [
+    "上海九云数智"
+  ],
+  "website": "https://www.9yundata.com/about-us.html",
+  "entityType": "company",
+  "identity": {
+    "nameZh": "九云数智",
+    "nameEn": null,
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "品牌官网",
+        "url": "https://www.9yundata.com/about-us.html",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "categories": [
+    "enterprise-software"
+  ],
+  "defaultAsset": "icon-blue-official.png",
+  "assets": [
+    {
+      "file": "icon-blue-official.png",
+      "label": "蓝色图形",
+      "variant": "icon",
+      "status": "current",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "source": "https://www.9yundata.com/assets/images/logo.png?v=2",
+      "sourcePage": "https://www.9yundata.com/about-us.html",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "c10559c9db00b788d821d8a7391a1db2060301e69bbb7b861545331f01551f85",
+      "bytes": 39831,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.9yundata.com/about-us.html",
+        "attribution": "九云数智，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 3,
+  "id": "changhong",
+  "name": "四川长虹",
+  "aliases": [],
+  "website": "https://cn.changhong.com/",
+  "entityType": "company",
+  "identity": {
+    "nameZh": "四川长虹",
+    "nameEn": "CHANGHONG",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "品牌官网",
+        "url": "https://cn.changhong.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "wordmark-english.svg",
+  "assets": [
+    {
+      "file": "wordmark-red-official.png",
+      "label": "红色中英字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://cn.changhong.com/gwsy/images/P020161125568572860644.png",
+      "sourcePage": "https://cn.changhong.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "cfbf4202fccbd9f779cfc02e1b39aac5ae8b1877ce461cdab09fedfb9e96b125",
+      "bytes": 3842,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://cn.changhong.com/",
+        "attribution": "四川长虹，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "wordmark-english.svg",
+      "label": "红色英文字标矢量",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Changhong.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Changhong.svg",
+      "provenance": {
+        "sourceType": "commons",
+        "processing": "original",
+        "channel": "commons"
+      },
+      "sha256": "09a38ebeb3980e1f35809b3253d50afcb7c049aca102e3d1b587211c9b8ab463",
+      "bytes": 5285,
+      "rights": {
+        "status": "permitted",
+        "license": "Public domain (PD-textlogo)",
+        "reference": "https://commons.wikimedia.org/wiki/File:Changhong.svg",
+        "attribution": "Sichuan Changhong Electric Co., Ltd.，经 Wikimedia Commons 收录。",
+        "reviewedAt": "2026-11-10",
+        "notes": "Commons 文件页按 PD-textlogo 标示为公有领域，商标权仍归相应权利人。"
+      }
+    }
+  ]
+}

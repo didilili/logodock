@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 3,
+  "id": "reolink",
+  "name": "睿联",
+  "aliases": [],
+  "website": "https://reolink.com/",
+  "entityType": "company",
+  "identity": {
+    "nameZh": "睿联",
+    "nameEn": "Reolink",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌信息",
+        "url": "https://www.reolink.com.cn/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方品牌信息",
+        "url": "https://reolink.com/gb/press/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "wordmark-white-official.svg",
+  "assets": [
+    {
+      "file": "wordmark-white-official.svg",
+      "label": "白色字标",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://home-cdn.reolink.us/wp-content/assets/header-svg-white.svg?v=1793155118489",
+      "sourcePage": "https://reolink.com/gb/press/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "afc0b7b9b14e024cd7e913766eabb3c4f4608b8900837f58e46989e80bbe7350",
+      "bytes": 2268,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://reolink.com/gb/press/",
+        "attribution": "睿联，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "wordmark-blue-official.png",
+      "label": "蓝色字标",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://home-cdn.reolink.us/wp-content/assets/2019/02/reolink-logo-blue.zip?v=1793155118489#logo_Bule_2000x2000.png",
+      "sourcePage": "https://reolink.com/gb/press/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "2be0512c29571cc26ae857edcaa83c357dcba1f9dffb553cf03e54c1f3a04b74",
+      "bytes": 26690,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://reolink.com/gb/press/",
+        "attribution": "睿联，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "透明背景，画布含原始留白，有效字标约1464×308像素。"
+      ]
+    },
+    {
+      "file": "wordmark-black-official.png",
+      "label": "黑色字标",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "source": "https://home-cdn.reolink.us/wp-content/assets/2019/02/reolink-logo-blue.zip?v=1793155118489#logo_Black_2000x2000.png",
+      "sourcePage": "https://reolink.com/gb/press/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "0078158618bcad7048e455b7978241f8335f816de2fe66741cbdda5a8f1961df",
+      "bytes": 27703,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://reolink.com/gb/press/",
+        "attribution": "睿联，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "透明背景，画布含原始留白。"
+      ]
+    },
+    {
+      "file": "icon-blue-background-official.png",
+      "label": "蓝底R图形",
+      "variant": "icon",
+      "language": "en",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "source": "https://home-cdn.reolink.us/wp-content/assets/2019/02/reolink-logo-blue.zip?v=1793155118489#logo_icon_1000x1000.png",
+      "sourcePage": "https://reolink.com/gb/press/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "71c43c8378757932294ab4fc5aaffa5e0be23c90f6bac4cc079ebab5d88997f9",
+      "bytes": 10941,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://reolink.com/gb/press/",
+        "attribution": "睿联，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "蓝色底，白色R图形。"
+      ]
+    },
+    {
+      "file": "symbol-white-extracted.svg",
+      "label": "白色R图形",
+      "variant": "icon",
+      "language": "en",
+      "layout": "standalone",
+      "color": "white",
+      "background": "dark",
+      "source": "https://home-cdn.reolink.us/wp-content/assets/header-svg-white.svg?v=1793155118489",
+      "sourcePage": "https://reolink.com/gb/press/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "originalAsset": "wordmark-white-official.svg",
+        "originalSha256": "afc0b7b9b14e024cd7e913766eabb3c4f4608b8900837f58e46989e80bbe7350"
+      },
+      "sha256": "4ab37fa4ed4c05e268bd2129f01ed2dd7c90c2519475fb2d0f6e1765ed961214",
+      "bytes": 559,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://reolink.com/gb/press/",
+        "attribution": "睿联，商标及其他权利归相应权利人。 图形提取由LogoDock完成。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "透明背景，长边贴边，短边居中补齐方形画布。"
+      ]
+    }
+  ]
+}

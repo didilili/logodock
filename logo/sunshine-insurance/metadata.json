@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 3,
+  "id": "sunshine-insurance",
+  "name": "阳光保险",
+  "aliases": [],
+  "identity": {
+    "nameZh": "阳光保险",
+    "nameEn": "Sunshine Insurance Group",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.sinosig.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.sinosig.com/",
+  "entityType": "company",
+  "categories": [
+    "保险"
+  ],
+  "defaultAsset": "logo-bilingual.png",
+  "assets": [
+    {
+      "file": "logo-bilingual.png",
+      "label": "中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://static.sinosig.com/c/assert/image/new/img_logo.png",
+      "sourcePage": "https://www.sinosig.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "1a7375c6443f52cdb01390020e5105c23b046e903cb0c213818e902a582b0b5d",
+      "bytes": 36941,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.sinosig.com/",
+        "attribution": "阳光保险。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-white.png",
+      "label": "反白中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://static.sinosig.com/view/static/img/logo_white.25915a33.png",
+      "sourcePage": "https://www.sinosig.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "14fc28db9d93ec95bde8af377f903da27b228b3bbafd9c4d69f0df1d9a050bb7",
+      "bytes": 10059,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.sinosig.com/",
+        "attribution": "阳光保险。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

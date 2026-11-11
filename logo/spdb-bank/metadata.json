@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 3,
+  "id": "spdb-bank",
+  "name": "浦发银行",
+  "aliases": [
+    "SPD BANK"
+  ],
+  "identity": {
+    "nameZh": "浦发银行",
+    "nameEn": "SPD BANK",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.spdb.com.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.spdb.com.cn/",
+  "entityType": "company",
+  "categories": [
+    "金融"
+  ],
+  "defaultAsset": "logo.svg",
+  "assets": [
+    {
+      "file": "logo.svg",
+      "label": "蓝色中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.spdb.com.cn/images/spdb-logo-header_sy.svg",
+      "sourcePage": "https://www.spdb.com.cn/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "673ff6d35d0c368662bfa2b3d541b978a8d015231de8f6a1456e19bc4889beda",
+      "bytes": 9481,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.spdb.com.cn/",
+        "attribution": "浦发银行。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

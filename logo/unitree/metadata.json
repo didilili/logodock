@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 3,
+  "id": "unitree",
+  "name": "宇树科技",
+  "aliases": [
+    "宇树机器人",
+    "Unitree"
+  ],
+  "identity": {
+    "nameZh": "宇树科技",
+    "nameEn": "Unitree",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.unitree.com/cn",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.unitree.com/cn",
+  "entityType": "company",
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "logo.svg",
+  "assets": [
+    {
+      "file": "logo.svg",
+      "label": "黑色英文字标",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "source": "https://www.unitree.com/images/0079f8938336436e955ea3a98c4e1e59.svg",
+      "sourcePage": "https://www.unitree.com/cn",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "f2ace736d962af69eea6eb5b692c623388b7de7e041a68a2cb2d663261ec13be",
+      "bytes": 3454,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.unitree.com/cn",
+        "attribution": "宇树科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-white.svg",
+      "label": "白色英文字标",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.unitree.com/images/37d3d40c1272402a9c363a50b405276d.svg",
+      "sourcePage": "https://www.unitree.com/cn",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "491825e0596f5a012afd9dc6adac07d320b3db73299b788aa198a24dddebb474",
+      "bytes": 3374,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.unitree.com/cn",
+        "attribution": "宇树科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

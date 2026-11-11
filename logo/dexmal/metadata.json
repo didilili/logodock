@@ -1,0 +1,379 @@
+{
+  "schemaVersion": 3,
+  "id": "dexmal",
+  "name": "原力灵机",
+  "aliases": [
+    "Dexmal",
+    "DEXMAL"
+  ],
+  "identity": {
+    "nameZh": "原力灵机",
+    "nameEn": "DEXMAL",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.dexmal.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.dexmal.com/",
+  "entityType": "company",
+  "categories": [
+    "ai"
+  ],
+  "defaultAsset": "logo.svg",
+  "assets": [
+    {
+      "file": "logo.svg",
+      "label": "黑色中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "source": "https://www.dexmal.com/assets/logo-dark-DaarB4HZ.svg",
+      "sourcePage": "https://www.dexmal.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "e25d9d559d4aa34effc486869ff41dcae8d20ab01a2981ca8be25da8ab198b39",
+      "bytes": 7269,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dexmal.com/",
+        "attribution": "原力灵机。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌规范要求标识保持完整及既定比例，并遵循安全空间、黑白反白和联合标识规范。"
+      }
+    },
+    {
+      "file": "logo-white.svg",
+      "label": "白色中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.dexmal.com/assets/logo-light-o1Waujlx.svg",
+      "sourcePage": "https://www.dexmal.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "604df9054788828f866b4f31c024c454771b1895990f90b037dc1731c38908cc",
+      "bytes": 7271,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dexmal.com/",
+        "attribution": "原力灵机。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌规范要求标识保持完整及既定比例，并遵循安全空间、黑白反白和联合标识规范。"
+      }
+    },
+    {
+      "file": "logo-en-vertical-white.png",
+      "label": "白色英文竖版组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "vertical",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.dexmal.com/downloads/DEXMAL%E5%8E%9F%E5%8A%9B%E7%81%B5%E6%9C%BA%E6%A0%87%E5%BF%97%E6%96%87%E4%BB%B6.zip",
+      "sourcePage": "https://www.dexmal.com/about/brand",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "c9c7c4711fcb152640395f1dd4cec9a30b6fb453dc403f0f1fc67227c81154d7",
+      "bytes": 153981,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dexmal.com/about/brand",
+        "attribution": "原力灵机。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌规范要求标识保持完整及既定比例，并遵循安全空间、黑白反白和联合标识规范。"
+      }
+    },
+    {
+      "file": "wordmark-bilingual-white.png",
+      "label": "白色中英字标组合",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "vertical",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.dexmal.com/downloads/DEXMAL%E5%8E%9F%E5%8A%9B%E7%81%B5%E6%9C%BA%E6%A0%87%E5%BF%97%E6%96%87%E4%BB%B6.zip",
+      "sourcePage": "https://www.dexmal.com/about/brand",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "41dfd948eae6f9dffb47725aeda6f8f11bb7a3bc951d0414dbf8212cd1707b85",
+      "bytes": 117831,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dexmal.com/about/brand",
+        "attribution": "原力灵机。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌规范要求标识保持完整及既定比例，并遵循安全空间、黑白反白和联合标识规范。"
+      }
+    },
+    {
+      "file": "symbol-white.png",
+      "label": "白色图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.dexmal.com/downloads/DEXMAL%E5%8E%9F%E5%8A%9B%E7%81%B5%E6%9C%BA%E6%A0%87%E5%BF%97%E6%96%87%E4%BB%B6.zip",
+      "sourcePage": "https://www.dexmal.com/about/brand",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "bd36a7492735249cbf3dbb05062b7765446cc289505a2c11f0678bb42fa6a6c4",
+      "bytes": 80991,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dexmal.com/about/brand",
+        "attribution": "原力灵机。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌规范要求标识保持完整及既定比例，并遵循安全空间、黑白反白和联合标识规范。"
+      }
+    },
+    {
+      "file": "logo-zh-vertical-white.png",
+      "label": "白色中文竖版组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "vertical",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.dexmal.com/downloads/DEXMAL%E5%8E%9F%E5%8A%9B%E7%81%B5%E6%9C%BA%E6%A0%87%E5%BF%97%E6%96%87%E4%BB%B6.zip",
+      "sourcePage": "https://www.dexmal.com/about/brand",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "ddb7b70820151226adcd5f2706be2b6715879e10bfab8060214ffe50134404c0",
+      "bytes": 118989,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dexmal.com/about/brand",
+        "attribution": "原力灵机。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌规范要求标识保持完整及既定比例，并遵循安全空间、黑白反白和联合标识规范。"
+      }
+    },
+    {
+      "file": "logo-en-horizontal-white.png",
+      "label": "白色英文横版组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.dexmal.com/downloads/DEXMAL%E5%8E%9F%E5%8A%9B%E7%81%B5%E6%9C%BA%E6%A0%87%E5%BF%97%E6%96%87%E4%BB%B6.zip",
+      "sourcePage": "https://www.dexmal.com/about/brand",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "580c4fb7bc406162f735c53bc261956dbf3815024001b61656869c79f33e08e7",
+      "bytes": 118027,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dexmal.com/about/brand",
+        "attribution": "原力灵机。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌规范要求标识保持完整及既定比例，并遵循安全空间、黑白反白和联合标识规范。"
+      }
+    },
+    {
+      "file": "logo-en-horizontal.png",
+      "label": "黑色英文横版组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "source": "https://www.dexmal.com/downloads/DEXMAL%E5%8E%9F%E5%8A%9B%E7%81%B5%E6%9C%BA%E6%A0%87%E5%BF%97%E6%96%87%E4%BB%B6.zip",
+      "sourcePage": "https://www.dexmal.com/about/brand",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "05e24fffa0ee84bd5349cad975791c293edf7fa472ccf11080a11e6c17a902b5",
+      "bytes": 128725,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dexmal.com/about/brand",
+        "attribution": "原力灵机。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌规范要求标识保持完整及既定比例，并遵循安全空间、黑白反白和联合标识规范。"
+      }
+    },
+    {
+      "file": "wordmark-bilingual.png",
+      "label": "黑色中英字标组合",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "vertical",
+      "color": "black",
+      "background": "light",
+      "source": "https://www.dexmal.com/downloads/DEXMAL%E5%8E%9F%E5%8A%9B%E7%81%B5%E6%9C%BA%E6%A0%87%E5%BF%97%E6%96%87%E4%BB%B6.zip",
+      "sourcePage": "https://www.dexmal.com/about/brand",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "a42442c25b99e5fe92667864e295aa52d397aa3ce8069f14cd3ab77a976d9b03",
+      "bytes": 69308,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dexmal.com/about/brand",
+        "attribution": "原力灵机。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌规范要求标识保持完整及既定比例，并遵循安全空间、黑白反白和联合标识规范。"
+      }
+    },
+    {
+      "file": "symbol.png",
+      "label": "黑色图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "black",
+      "background": "light",
+      "source": "https://www.dexmal.com/downloads/DEXMAL%E5%8E%9F%E5%8A%9B%E7%81%B5%E6%9C%BA%E6%A0%87%E5%BF%97%E6%96%87%E4%BB%B6.zip",
+      "sourcePage": "https://www.dexmal.com/about/brand",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "41fd26705a721ad5e3a42d30a7323b81c35bc6104001a76c11f0eab8d75ad797",
+      "bytes": 86663,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dexmal.com/about/brand",
+        "attribution": "原力灵机。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌规范要求标识保持完整及既定比例，并遵循安全空间、黑白反白和联合标识规范。"
+      }
+    },
+    {
+      "file": "logo-zh-vertical.png",
+      "label": "黑色中文竖版组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "vertical",
+      "color": "black",
+      "background": "light",
+      "source": "https://www.dexmal.com/downloads/DEXMAL%E5%8E%9F%E5%8A%9B%E7%81%B5%E6%9C%BA%E6%A0%87%E5%BF%97%E6%96%87%E4%BB%B6.zip",
+      "sourcePage": "https://www.dexmal.com/about/brand",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "bfe86774382ce131dd48c1fa3c1ee2994b6d54ba58d693609ca6cc646ec32ffb",
+      "bytes": 127376,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dexmal.com/about/brand",
+        "attribution": "原力灵机。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌规范要求标识保持完整及既定比例，并遵循安全空间、黑白反白和联合标识规范。"
+      }
+    },
+    {
+      "file": "logo-en-vertical.png",
+      "label": "黑色英文竖版组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "vertical",
+      "color": "black",
+      "background": "light",
+      "source": "https://www.dexmal.com/downloads/DEXMAL%E5%8E%9F%E5%8A%9B%E7%81%B5%E6%9C%BA%E6%A0%87%E5%BF%97%E6%96%87%E4%BB%B6.zip",
+      "sourcePage": "https://www.dexmal.com/about/brand",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "f86abf886f5f26c46704b73f78ba0f9e664576e62f5f850c0a8ba201e0395808",
+      "bytes": 165875,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dexmal.com/about/brand",
+        "attribution": "原力灵机。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌规范要求标识保持完整及既定比例，并遵循安全空间、黑白反白和联合标识规范。"
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "file": "logo-master.ai",
+      "label": "六种黑色标识组合源文件",
+      "assetFiles": [
+        "logo.svg",
+        "logo-en-horizontal.png",
+        "wordmark-bilingual.png",
+        "symbol.png",
+        "logo-zh-vertical.png",
+        "logo-en-vertical.png"
+      ],
+      "source": "https://www.dexmal.com/downloads/DEXMAL%E5%8E%9F%E5%8A%9B%E7%81%B5%E6%9C%BA%E6%A0%87%E5%BF%97%E6%96%87%E4%BB%B6.zip",
+      "sourcePage": "https://www.dexmal.com/about/brand",
+      "sha256": "4157c6adf4b2f54d41bf060b9fd55e09fb2761abf8f74fa74a0b8cd9e4942443",
+      "bytes": 250455,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dexmal.com/about/brand",
+        "attribution": "原力灵机。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "品牌规范要求标识保持完整及既定比例，并遵循安全空间、黑白反白和联合标识规范。"
+      }
+    }
+  ]
+}

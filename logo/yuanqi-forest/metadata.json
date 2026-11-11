@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 3,
+  "id": "yuanqi-forest",
+  "name": "元气森林",
+  "aliases": [],
+  "identity": {
+    "nameZh": "元气森林",
+    "nameEn": "CHI FOREST",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官网首页英文品牌名称",
+        "url": "https://www.yuanqisenlin.com/",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "官方英文品牌网站",
+        "url": "https://www.chiforest.com/",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "website": "https://www.yuanqisenlin.com/",
+  "entityType": "company",
+  "categories": [
+    "食品饮料"
+  ],
+  "defaultAsset": "logo.png",
+  "assets": [
+    {
+      "file": "logo.png",
+      "label": "黑底白色中文字标",
+      "variant": "wordmark",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "any",
+      "source": "https://www.yuanqisenlin.com/public/assets/brand/logo.png",
+      "sourcePage": "https://www.yuanqisenlin.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "7b9f04247ba92f0a3905883eacd39c2a198e42820e6acaea77592a21de13e0d1",
+      "bytes": 46806,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.yuanqisenlin.com/",
+        "attribution": "元气森林。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "黑色不透明背景。"
+      ]
+    }
+  ]
+}

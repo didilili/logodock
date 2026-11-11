@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 3,
+  "id": "hikvision",
+  "name": "海康威视",
+  "aliases": [],
+  "website": "https://iberia.hikvision.com/es/hikcentral",
+  "identity": {
+    "nameZh": "海康威视",
+    "nameEn": "HIKVISION",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://iberia.hikvision.com/es/hikcentral",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "wordmark.png",
+  "assets": [
+    {
+      "file": "wordmark.png",
+      "label": "英文",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://iberia.hikvision.com/hubfs/Hikvision%20Logo-Mar-14-2024-08-53-56-7723-AM.png",
+      "sourcePage": "https://iberia.hikvision.com/es/hikcentral",
+      "sha256": "bff70f0d441402b9c265b8bfd4825d359e530ded24c60f238aa90671c4780960",
+      "bytes": 129843,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://iberia.hikvision.com/es/hikcentral",
+        "attribution": "海康威视。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    }
+  ]
+}

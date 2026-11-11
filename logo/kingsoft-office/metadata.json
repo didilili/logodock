@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 3,
+  "id": "kingsoft-office",
+  "name": "金山办公",
+  "aliases": [],
+  "website": "https://www.wps.cn/KINGSOFT",
+  "identity": {
+    "nameZh": "金山办公",
+    "nameEn": "KINGSOFT OFFICE",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://www.wps.cn/KINGSOFT",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "公司页与官网页头公司标",
+        "url": "https://www.wps.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "symbol-brand.svg",
+  "assets": [
+    {
+      "file": "logo-bilingual.svg",
+      "label": "中英组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://volcengine-kdocs-cache.wpscdn.cn/kdocs/img/logo.5c78b00f.svg",
+      "sourcePage": "https://www.wps.cn/",
+      "sha256": "e07df4b08dcf6d2d45b192f2a470bd5b30d866308b3dabe9053e4432d354218c",
+      "bytes": 8008,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.wps.cn/KINGSOFT",
+        "attribution": "金山办公。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    },
+    {
+      "file": "symbol-brand.svg",
+      "label": "K图形",
+      "variant": "icon",
+      "status": "current",
+      "background": "light",
+      "source": "https://volcengine-kdocs-cache.wpscdn.cn/kdocs/img/logo.5c78b00f.svg",
+      "sourcePage": "https://www.wps.cn/",
+      "sha256": "e2c7a9c1798831b6ae287a7e8c0ed463268fddb788ba3cd9264478fba96ba803",
+      "bytes": 1018,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.wps.cn/KINGSOFT",
+        "attribution": "金山办公。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "en",
+      "layout": "standalone",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "originalAsset": "logo-bilingual.svg",
+        "originalSha256": "e07df4b08dcf6d2d45b192f2a470bd5b30d866308b3dabe9053e4432d354218c"
+      },
+      "qualityNotes": [
+        "保留官方组合标中的K图形路径与三种填色，方形长边贴边，短边居中，额外边距为零。"
+      ]
+    }
+  ]
+}

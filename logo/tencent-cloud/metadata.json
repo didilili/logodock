@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 3,
+  "id": "tencent-cloud",
+  "name": "腾讯云",
+  "aliases": [],
+  "identity": {
+    "nameZh": "腾讯云",
+    "nameEn": "Tencent Cloud",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://cloud.tencent.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://cloud.tencent.com/",
+  "entityType": "product",
+  "categories": [
+    "developer-tools"
+  ],
+  "defaultAsset": "logo-brand.svg",
+  "assets": [
+    {
+      "file": "logo-brand.svg",
+      "label": "中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://cloudcache.tencent-cloud.com/qcloud/portal/kit/images/slice/logo.23996906.svg",
+      "sourcePage": "https://cloud.tencent.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "eff6a17a78c1aa027a05449e0e16424da5909cdc3cc540908aef46ccb1710f82",
+      "bytes": 5837,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://cloud.tencent.com/",
+        "attribution": "腾讯云。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-white.svg",
+      "label": "反白中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://cloudcache.tencent-cloud.com/qcloud/portal/kit/images/slice/logo-dark.72522ce9.svg",
+      "sourcePage": "https://cloud.tencent.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "f78434b5828df61ccf423bf4b84da24c73287e533d507dfde875b3eaca45d310",
+      "bytes": 6794,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://cloud.tencent.com/",
+        "attribution": "腾讯云。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "symbol-brand.svg",
+      "label": "彩色云形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://cloudcache.tencent-cloud.com/qcloud/portal/kit/images/slice/logo.23996906.svg",
+      "sourcePage": "https://cloud.tencent.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "originalAsset": "logo-brand.svg",
+        "originalSha256": "eff6a17a78c1aa027a05449e0e16424da5909cdc3cc540908aef46ccb1710f82"
+      },
+      "sha256": "347b744fb0c47be5f9c1207d08d537b629a665d2f271574a7dd9da13d12c0f3e",
+      "bytes": 1964,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://cloud.tencent.com/",
+        "attribution": "腾讯云。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "从同品牌原始 SVG 提取图形，方形画布长边贴边，短边居中，额外边距为零。"
+      ]
+    }
+  ]
+}

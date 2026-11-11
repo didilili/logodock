@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 3,
+  "id": "huya",
+  "name": "虎牙",
+  "aliases": [],
+  "identity": {
+    "nameZh": "虎牙",
+    "nameEn": "huya",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.huya.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.huya.com/",
+  "entityType": "company",
+  "categories": [
+    "entertainment"
+  ],
+  "defaultAsset": "logo-corporate.png",
+  "assets": [
+    {
+      "file": "logo-corporate.png",
+      "label": "公司中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://hd.huya.com/pc/contactUs/static/download/huya_logo.png",
+      "sourcePage": "https://hd.huya.com/pc/contactUs/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "f380c3968cbc030bb43ddc2ad590e0d9c2d0735eebc99608adc2d91f73df3f43",
+      "bytes": 62986,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://hd.huya.com/pc/contactUs/",
+        "attribution": "虎牙。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方标志下载页注明本公司 Logo 禁止授权之外的使用。"
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "file": "logo-corporate.ai",
+      "label": "公司标志及配色规范",
+      "assetFiles": [
+        "logo-corporate.png"
+      ],
+      "source": "https://hd.huya.com/pc/contactUs/static/download/huya_logo2.ai",
+      "sourcePage": "https://hd.huya.com/pc/contactUs/",
+      "sha256": "aa0d8bdd5614bd6a0bc683e1178f01888cf355b390df7b5bd234f7f08717dca7",
+      "bytes": 695381,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://hd.huya.com/pc/contactUs/",
+        "attribution": "虎牙。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方标志下载页注明本公司 Logo 禁止授权之外的使用。"
+      }
+    }
+  ]
+}

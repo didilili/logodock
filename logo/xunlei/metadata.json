@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 3,
+  "id": "xunlei",
+  "name": "迅雷",
+  "aliases": [],
+  "identity": {
+    "nameZh": "迅雷",
+    "nameEn": "Xunlei",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.xunlei.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.xunlei.com/",
+  "entityType": "company",
+  "categories": [
+    "software"
+  ],
+  "defaultAsset": "logo-brand.svg",
+  "assets": [
+    {
+      "file": "logo-brand.svg",
+      "label": "中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://www.xunlei.com/icons/logo.svg",
+      "sourcePage": "https://www.xunlei.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "f1e71969591c09b4116b971b2ec51fced2f2689bab29797aa2637ab59858b62a",
+      "bytes": 6213,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.xunlei.com/",
+        "attribution": "迅雷。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "symbol-brand.svg",
+      "label": "蓝色鸟形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://www.xunlei.com/icons/logo.svg",
+      "sourcePage": "https://www.xunlei.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "originalAsset": "logo-brand.svg",
+        "originalSha256": "f1e71969591c09b4116b971b2ec51fced2f2689bab29797aa2637ab59858b62a"
+      },
+      "sha256": "41ea7e4ecc2eec6106eff47eff8ce6e9c3b628ec342d383fca2cf88ae2e769a1",
+      "bytes": 2515,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.xunlei.com/",
+        "attribution": "迅雷。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "从同品牌原始 SVG 提取图形，方形画布长边贴边，短边居中，额外边距为零。"
+      ]
+    }
+  ]
+}

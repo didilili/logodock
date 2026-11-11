@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 3,
+  "id": "bambu-lab",
+  "name": "拓竹",
+  "aliases": [],
+  "website": "https://bambulab.com/zh-cn",
+  "identity": {
+    "nameZh": "拓竹",
+    "nameEn": "Bambu Lab",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://github.com/bambulab/BambuStudio",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "symbol-square.svg",
+  "assets": [
+    {
+      "file": "symbol-green.svg",
+      "label": "绿色图形",
+      "variant": "icon",
+      "status": "current",
+      "background": "any",
+      "source": "https://raw.githubusercontent.com/bambulab/BambuStudio/master/resources/images/splash_logo.svg",
+      "sourcePage": "https://github.com/bambulab/BambuStudio",
+      "sha256": "2258eb3b56d03eed9c067a5d6ac73fc9237d18c847b966f90e0c59d292996b03",
+      "bytes": 381,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://github.com/bambulab/BambuStudio",
+        "attribution": "拓竹。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "repository"
+      }
+    },
+    {
+      "file": "symbol-square.svg",
+      "label": "方形图形",
+      "variant": "icon",
+      "status": "current",
+      "background": "any",
+      "source": "https://raw.githubusercontent.com/bambulab/BambuStudio/master/resources/images/splash_logo.svg",
+      "sourcePage": "https://github.com/bambulab/BambuStudio",
+      "sha256": "27c8ac65800cbd693a9bcce6ccd2263f0cb1ce6b02e6425cd9e867c810a98d4e",
+      "bytes": 385,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://github.com/bambulab/BambuStudio",
+        "attribution": "拓竹。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "repository",
+        "originalAsset": "symbol-green.svg",
+        "originalSha256": "2258eb3b56d03eed9c067a5d6ac73fc9237d18c847b966f90e0c59d292996b03"
+      }
+    },
+    {
+      "file": "logo-black-horizontal.svg",
+      "label": "黑色英文横版",
+      "variant": "logo",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "source": "https://store.bblcdn.com/static/bambu_logo__1_110x.svg",
+      "sourcePage": "https://us.store.bambulab.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "fcfb6c344bfc38edef692b4e3f4e14e256d8c83611235469217568a7891ceca0",
+      "bytes": 3316,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://us.store.bambulab.com/",
+        "attribution": "拓竹，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-11"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ]
+    }
+  ],
+  "artworks": [
+    {
+      "id": "green-symbol",
+      "label": "绿色图形",
+      "files": [
+        "symbol-square.svg",
+        "symbol-green.svg"
+      ],
+      "defaultAsset": "symbol-square.svg"
+    }
+  ]
+}

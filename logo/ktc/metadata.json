@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 3,
+  "id": "ktc",
+  "name": "康冠科技",
+  "aliases": [
+    "KTC"
+  ],
+  "identity": {
+    "nameZh": "康冠科技",
+    "nameEn": "KTC",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.ktc.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.ktc.cn/",
+  "entityType": "company",
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "logo.png",
+  "assets": [
+    {
+      "file": "logo.png",
+      "label": "康冠科技组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.ktc.cn/static/index/img/logo.png",
+      "sourcePage": "https://www.ktc.cn/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "3683cde251705912b99069e42c83b1e709a236b4462a4add4d8b39bf60bdc640",
+      "bytes": 5038,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.ktc.cn/",
+        "attribution": "康冠科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网小尺寸原图，适合按原生像素取用。"
+      ]
+    }
+  ]
+}

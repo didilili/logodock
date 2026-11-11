@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 3,
+  "id": "alibaba-cloud",
+  "name": "阿里云",
+  "aliases": [],
+  "identity": {
+    "nameZh": "阿里云",
+    "nameEn": "Alibaba Cloud",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.aliyun.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.aliyun.com/",
+  "entityType": "product",
+  "categories": [
+    "developer-tools"
+  ],
+  "defaultAsset": "symbol-orange.svg",
+  "assets": [
+    {
+      "file": "logo-en.png",
+      "label": "英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://img.alicdn.com/tfs/TB1xEUv3UH1gK0jSZSyXXXtlpXa-251-34.png",
+      "sourcePage": "https://www.aliyun.com/about/branddesign/guidelines",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "e918165e6c4b3f4299fce28684696653da4821da4c27683980bd136e8ee03dd9",
+      "bytes": 1414,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.aliyun.com/about/branddesign/guidelines",
+        "attribution": "阿里云。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "symbol-orange.svg",
+      "label": "橙色图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://img.alicdn.com/imgextra/i1/O1CN01uyu1jv1wqTfUivtDu_!!6000000006359-55-tps-118-74.svg",
+      "sourcePage": "https://talent.alibaba.com/?lang=zh",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "1428422552dc5871bc89c84af51ec5e9c7004cd987311f3e915c5a7131491aac",
+      "bytes": 1644,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://talent.alibaba.com/?lang=zh",
+        "attribution": "阿里云。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-chinese-horizontal.svg",
+      "label": "橙色中文组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.aliyun.com/#aliyun-header-logo",
+      "sourcePage": "https://www.aliyun.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header"
+      },
+      "sha256": "7c191cc2f82b64e7d45d34b2a08aa548cce39e5b7bea2388022ea98e19da48e6",
+      "bytes": 1603,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.aliyun.com/",
+        "attribution": "阿里云，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-11"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 3,
+  "id": "byd",
+  "name": "比亚迪",
+  "aliases": [],
+  "identity": {
+    "nameZh": "比亚迪",
+    "nameEn": "BYD",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.bydglobal.com/cn",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.bydglobal.com/cn",
+  "entityType": "company",
+  "categories": [
+    "automotive"
+  ],
+  "defaultAsset": "logo-group.png",
+  "assets": [
+    {
+      "file": "logo-group.png",
+      "label": "集团椭圆标识",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://www.bydglobal.com/material/group-official-website/common/logo.png",
+      "sourcePage": "https://www.bydglobal.com/cn",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "b1e4d81d1c764f2287a2481758f5f9930277a5ea6e69331b867fdcfae5c9a6c2",
+      "bytes": 5027,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.bydglobal.com/cn",
+        "attribution": "比亚迪。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网集团页头小尺寸原图，适合原生尺寸附近的屏幕使用。"
+      ]
+    }
+  ]
+}

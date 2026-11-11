@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 3,
+  "id": "cmb-network-tech",
+  "name": "招银网络科技",
+  "aliases": [
+    "CMB NETWORK TECHNOLOGY"
+  ],
+  "identity": {
+    "nameZh": "招银网络科技",
+    "nameEn": "CMB NETWORK TECHNOLOGY",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://cmbnt.cmbchina.com/home.html",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://cmbnt.cmbchina.com/home.html",
+  "entityType": "company",
+  "categories": [
+    "software"
+  ],
+  "defaultAsset": "logo.png",
+  "assets": [
+    {
+      "file": "logo.png",
+      "label": "白色中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://cmbnt.cmbchina.com/assets/images/common/com_logo_zhaoyin.png",
+      "sourcePage": "https://cmbnt.cmbchina.com/home.html",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "ca569b536773203256cd803d1c4bf2143cc1d45e7c1feaa02d1efecc21222658",
+      "bytes": 6931,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://cmbnt.cmbchina.com/home.html",
+        "attribution": "招银网络科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网小尺寸原件，适合按原生像素取用。"
+      ]
+    }
+  ]
+}

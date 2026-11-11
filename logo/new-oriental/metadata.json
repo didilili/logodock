@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 3,
+  "id": "new-oriental",
+  "name": "新东方",
+  "aliases": [],
+  "website": "https://www.neworiental.org/",
+  "entityType": "company",
+  "identity": {
+    "nameZh": "新东方",
+    "nameEn": "New Oriental",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "品牌官网",
+        "url": "https://www.neworiental.org/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方英文公司介绍",
+        "url": "https://www.neworiental.org/english/who/201507/8213540.html",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "categories": [
+    "教育"
+  ],
+  "defaultAsset": "wordmark-green-official.png",
+  "assets": [
+    {
+      "file": "wordmark-green-official.png",
+      "label": "绿色中文字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://g.xdfimage.cn/upload/96190859a11bdd413991b4e154a3431a.png",
+      "sourcePage": "https://www.neworiental.org/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "9286bcc113e517ad3fdce84679682a1f5a794bfc8f16373f07ec2710236346cf",
+      "bytes": 4382,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://nc.xdf.cn/fuwu/202103/158614096.html",
+        "attribution": "新东方，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方品牌声明要求在经营活动中使用“新东方”中英文商标及品牌前取得授权。"
+      }
+    },
+    {
+      "file": "wordmark-white-official.png",
+      "label": "白色中文字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://g.xdfimage.cn/upload/7ab2db350b29f7767f18c1b51c9b7680.png",
+      "sourcePage": "https://www.neworiental.org/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "366a535d654d2608646c464cc376cf07c8f200f1d9fe806fdd56371d7b119ef1",
+      "bytes": 4917,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://nc.xdf.cn/fuwu/202103/158614096.html",
+        "attribution": "新东方，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10",
+        "notes": "官方品牌声明要求在经营活动中使用“新东方”中英文商标及品牌前取得授权。"
+      }
+    }
+  ]
+}

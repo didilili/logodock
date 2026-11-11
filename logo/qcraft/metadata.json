@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 3,
+  "id": "qcraft",
+  "name": "轻舟智航",
+  "aliases": [
+    "QCRAFT"
+  ],
+  "identity": {
+    "nameZh": "轻舟智航",
+    "nameEn": "QCRAFT",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.qcraft.ai/cn",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.qcraft.ai/cn",
+  "entityType": "company",
+  "categories": [
+    "automotive"
+  ],
+  "defaultAsset": "logo.png",
+  "assets": [
+    {
+      "file": "logo.png",
+      "label": "黑色中英字标",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "source": "https://qcraft-assets-cn.oss-cn-zhangjiakou.aliyuncs.com/assets/brand/logo/QCRAFTLOGOblack.png",
+      "sourcePage": "https://www.qcraft.ai/cn",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "3de6dedd4d9b5e9f2c7943a66c97383d39b476beb9a6f73c8f4a5ae7ed4e99ba",
+      "bytes": 146006,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.qcraft.ai/cn",
+        "attribution": "轻舟智航。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

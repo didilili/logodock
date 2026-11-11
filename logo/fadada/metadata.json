@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 3,
+  "id": "fadada",
+  "name": "法大大",
+  "aliases": [],
+  "website": "https://www.fadada.com/",
+  "identity": {
+    "nameZh": "法大大",
+    "nameEn": "FADADA",
+    "legalNames": [
+      {
+        "name": "Shenzhen Fadada Network Technology Co., Ltd",
+        "language": "en",
+        "role": "operating-company",
+        "source": "https://apps.apple.com/cn/app/%E6%B3%95%E5%A4%A7%E5%A4%A7-%E7%AD%BE%E5%90%88%E5%90%8C-%E5%B0%B1%E4%B8%8A%E6%B3%95%E5%A4%A7%E5%A4%A7/id1103204022?uo=4",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
+    "sources": [
+      {
+        "label": "官方应用商店",
+        "url": "https://apps.apple.com/cn/app/%E6%B3%95%E5%A4%A7%E5%A4%A7-%E7%AD%BE%E5%90%88%E5%90%8C-%E5%B0%B1%E4%B8%8A%E6%B3%95%E5%A4%A7%E5%A4%A7/id1103204022?uo=4",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "icon-appstore.jpg",
+  "assets": [
+    {
+      "file": "icon-appstore.jpg",
+      "label": "中英字标应用图标",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9a/c4/58/9ac458b5-51c7-1e92-ee6c-e7ac6d4c529b/AppIcon-1x_U007emarketing-0-6-0-0-85-220-0.png/512x512bb.jpg",
+      "sourcePage": "https://apps.apple.com/cn/app/%E6%B3%95%E5%A4%A7%E5%A4%A7-%E7%AD%BE%E5%90%88%E5%90%8C-%E5%B0%B1%E4%B8%8A%E6%B3%95%E5%A4%A7%E5%A4%A7/id1103204022?uo=4",
+      "sha256": "4f64a78a8b6354cf4f686ce49f370b34df9201f300a9dc7ce37271a1751be205",
+      "bytes": 28459,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://apps.apple.com/cn/app/%E6%B3%95%E5%A4%A7%E5%A4%A7-%E7%AD%BE%E5%90%88%E5%90%8C-%E5%B0%B1%E4%B8%8A%E6%B3%95%E5%A4%A7%E5%A4%A7/id1103204022?uo=4",
+        "attribution": "法大大。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "bilingual",
+      "layout": "standalone",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "rendered",
+        "channel": "app-store"
+      }
+    }
+  ]
+}

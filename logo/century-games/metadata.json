@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 3,
+  "id": "century-games",
+  "name": "点点互动",
+  "aliases": [],
+  "website": "https://www.centurygames.com/",
+  "identity": {
+    "nameZh": "点点互动",
+    "nameEn": "Century Games",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://www.centurygames.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "wordmark-white.svg",
+  "assets": [
+    {
+      "file": "wordmark-white.svg",
+      "label": "反白英文双行字标",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "dark",
+      "source": "https://www.centurygames.com/wp-content/uploads/2024/01/logo.svg",
+      "sourcePage": "https://www.centurygames.com/",
+      "sha256": "62e2cb7b742f6d63e909d09423d29160a9a7c670fdd3958c2216227a316feadd",
+      "bytes": 421888,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.centurygames.com/",
+        "attribution": "点点互动。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "usageWarnings": [
+        "内嵌位图，放大后清晰度受限。"
+      ]
+    },
+    {
+      "file": "wordmark-black.png",
+      "label": "黑色英文双行字标",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://www.centurygames.com/wp-content/uploads/2024/01/century-games-新版logo黑色-1.png",
+      "sourcePage": "https://www.centurygames.com/",
+      "sha256": "f48a6d371794fb9254937ca083c3b95cce28a054219c29479489b722f0282cd4",
+      "bytes": 3186,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.centurygames.com/",
+        "attribution": "点点互动。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "官网原生小尺寸文件，适合按原生像素或缩小使用。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 3,
+  "id": "mu-group",
+  "name": "凯越集团",
+  "aliases": [
+    "MU Group"
+  ],
+  "identity": {
+    "nameZh": "凯越集团",
+    "nameEn": "MU Group",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.mugroup.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.mugroup.com/",
+  "entityType": "company",
+  "categories": [
+    "供应链"
+  ],
+  "defaultAsset": "logo.webp",
+  "assets": [
+    {
+      "file": "logo.webp",
+      "label": "彩色英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.mugroup.com/wp-content/uploads/thegem/logos/logo_1e126272b92989a12dbff64653e1b239_3x.webp",
+      "sourcePage": "https://www.mugroup.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "b3d37abd626d64eb67f82ba14dd2f70743ae15cc2791ddac9d3d667b0fd4fb15",
+      "bytes": 4922,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.mugroup.com/",
+        "attribution": "凯越集团。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

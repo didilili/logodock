@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 3,
+  "id": "boke",
+  "name": "波克",
+  "aliases": [],
+  "identity": {
+    "nameZh": "波克",
+    "nameEn": "BOKE",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.boke.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.boke.com/",
+  "entityType": "company",
+  "categories": [
+    "entertainment"
+  ],
+  "defaultAsset": "logo-square.png",
+  "assets": [
+    {
+      "file": "logo-square.png",
+      "label": "红底竖版英文",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "any",
+      "status": "current",
+      "source": "https://png.pookcdn.net/new_net/en/boke-logo.png",
+      "sourcePage": "https://www.boke.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "9d781352f8e94ad5f9161b736a028264795aa3b95f30ed8de178b6d49f73f921",
+      "bytes": 11378,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.boke.com/",
+        "attribution": "波克。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "wordmark-red.png",
+      "label": "红色英文",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://png.pookcdn.net/new_net/new_en/260316/logo.png",
+      "sourcePage": "https://www.boke.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "f760200e96da015adc5af0ea775946749b1f0a86f3f85afb355003d7baa3b1af",
+      "bytes": 3178,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.boke.com/",
+        "attribution": "波克。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

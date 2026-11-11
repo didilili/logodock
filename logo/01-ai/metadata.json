@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 3,
+  "id": "01-ai",
+  "name": "零一万物",
+  "aliases": [
+    "01.AI"
+  ],
+  "identity": {
+    "nameZh": "零一万物",
+    "nameEn": "01.AI",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.lingyiwanwu.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.lingyiwanwu.com/",
+  "entityType": "company",
+  "categories": [
+    "ai"
+  ],
+  "defaultAsset": "symbol.svg",
+  "assets": [
+    {
+      "file": "symbol.svg",
+      "label": "深绿方形英文标识",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "source": "https://www.lingyiwanwu.com/branding/favicon.0fef830a.svg",
+      "sourcePage": "https://www.lingyiwanwu.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "0fef830a02e6f471a076a8f765d26964f6de639fb5dd05c81db32211d5fd7c9c",
+      "bytes": 374,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.lingyiwanwu.com/",
+        "attribution": "零一万物。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "包含 01.AI 英文字样的方形标识。"
+      ]
+    },
+    {
+      "file": "logo.png",
+      "label": "白色中英字标",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.lingyiwanwu.com/branding/logo.fb7ccad7.png",
+      "sourcePage": "https://www.lingyiwanwu.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "fb7ccad7d4f25215602cb12c54429e1092287ba8f1280e9201d12746704bb389",
+      "bytes": 5089,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.lingyiwanwu.com/",
+        "attribution": "零一万物。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

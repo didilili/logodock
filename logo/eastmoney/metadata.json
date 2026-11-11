@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 3,
+  "id": "eastmoney",
+  "name": "东方财富",
+  "aliases": [],
+  "identity": {
+    "nameZh": "东方财富",
+    "nameEn": "EASTMONEY",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.eastmoney.com/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "2025 年年度报告公司名称与英文简称",
+        "url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-03-20/c33776ee-9f3e-4c48-9a86-ad6d441ada46.PDF",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "website": "https://www.eastmoney.com/",
+  "entityType": "company",
+  "categories": [
+    "金融"
+  ],
+  "defaultAsset": "logo-bilingual.png",
+  "assets": [
+    {
+      "file": "logo-bilingual.png",
+      "label": "公司中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://about.eastmoney.com/static/images/logo.png",
+      "sourcePage": "https://about.eastmoney.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "392faff7cffeb7753ea5b079218e99ce7134cd85af71f993b5eb817191c34ff8",
+      "bytes": 5828,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://about.eastmoney.com/",
+        "attribution": "东方财富。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网公司介绍页原稿，图稿高度50像素，适合小尺寸屏幕使用。"
+      ]
+    },
+    {
+      "file": "logo-portal-url.png",
+      "label": "门户页头含网址",
+      "variant": "logo",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://g1.dfcfw.com/g4/202407/20240704095807.png",
+      "sourcePage": "https://www.eastmoney.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header"
+      },
+      "sha256": "bd3cc1e5bbd9e1a9d89416440349ff34a8ab4e3d5384f88a1cf2279e2846319b",
+      "bytes": 13586,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.eastmoney.com/",
+        "attribution": "东方财富，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-11"
+      },
+      "qualityNotes": [
+        "白色不透明背景，含口号及“本站易记网址18.com.cn”说明。"
+      ],
+      "usageWarnings": [
+        "原生 211 × 103 像素，含细小文字，适合原生尺寸或缩小使用。"
+      ]
+    }
+  ]
+}

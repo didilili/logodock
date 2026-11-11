@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 3,
+  "id": "lanyou-tech",
+  "name": "联友科技",
+  "aliases": [
+    "LAN-YOU TECHNOLOGY"
+  ],
+  "identity": {
+    "nameZh": "联友科技",
+    "nameEn": "LAN-YOU TECHNOLOGY",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.szlanyou.com/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "英文官方站",
+        "url": "https://www.szlanyou.com/en/index.html",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.szlanyou.com/",
+  "entityType": "company",
+  "categories": [
+    "software"
+  ],
+  "defaultAsset": "logo-footer.png",
+  "assets": [
+    {
+      "file": "logo-footer.png",
+      "label": "红蓝中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.szlanyou.com/uploadfiles/image/logo2.png?bG9nbzIucG5n",
+      "sourcePage": "https://www.szlanyou.com/en/index.html",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "7ce4f4a25e27ebe4a44983283efa81acb20f044bfdb215b8819195675abbadfd",
+      "bytes": 159456,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.szlanyou.com/",
+        "attribution": "联友科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

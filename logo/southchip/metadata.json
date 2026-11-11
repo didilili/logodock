@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 3,
+  "id": "southchip",
+  "name": "南芯",
+  "aliases": [
+    "SOUTHCHIP"
+  ],
+  "identity": {
+    "nameZh": "南芯",
+    "nameEn": "SOUTHCHIP",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.southchip.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.southchip.com/",
+  "entityType": "company",
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "logo-nav.png",
+  "assets": [
+    {
+      "file": "logo-nav.png",
+      "label": "彩色英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.southchip.com/logo-nav.webp",
+      "sourcePage": "https://www.southchip.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "72a23c7bf7850b4fc849ffc4ae0eb3fd4970c4402d8d1c48fba1e790fd44b069",
+      "bytes": 7912,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.southchip.com/",
+        "attribution": "南芯。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-footer.png",
+      "label": "白色英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.southchip.com/logo-footer.webp",
+      "sourcePage": "https://www.southchip.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "ab0785bee4303c45959fb105ddda0ceb5516ee3f537a20e82aafd0c0350ae7df",
+      "bytes": 4746,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.southchip.com/",
+        "attribution": "南芯。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

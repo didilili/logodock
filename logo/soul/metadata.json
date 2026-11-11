@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 3,
+  "id": "soul",
+  "name": "Soul",
+  "aliases": [],
+  "identity": {
+    "nameZh": null,
+    "nameEn": "Soul",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.soulapp.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.soulapp.cn/",
+  "entityType": "company",
+  "categories": [
+    "social-media"
+  ],
+  "defaultAsset": "logo-brand.png",
+  "assets": [
+    {
+      "file": "logo-brand.png",
+      "label": "英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://www.soulapp.cn/_next/static/media/img-logo-black-new.b846e323.png",
+      "sourcePage": "https://www.soulapp.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "67bc3818d39ff2392cd5e0eb251091398cc93b1007eabe1282745e9dec3375df",
+      "bytes": 5730,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.soulapp.cn/",
+        "attribution": "Soul。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-white.png",
+      "label": "反白英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "dark",
+      "status": "current",
+      "source": "https://www.soulapp.cn/_next/static/media/img-logo-new.60c09211.png",
+      "sourcePage": "https://www.soulapp.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "a5cab139cd7fcd2e48d83abeaa12fe4620cbb5b47491cf0ff4fdc89a1ba8a782",
+      "bytes": 5740,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.soulapp.cn/",
+        "attribution": "Soul。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

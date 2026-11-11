@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 3,
+  "id": "cmb-bank",
+  "name": "招商银行",
+  "aliases": [
+    "招银",
+    "CHINA MERCHANTS BANK"
+  ],
+  "identity": {
+    "nameZh": "招商银行",
+    "nameEn": "CHINA MERCHANTS BANK",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.cmbchina.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.cmbchina.com/",
+  "entityType": "company",
+  "categories": [
+    "金融"
+  ],
+  "defaultAsset": "logo.png",
+  "assets": [
+    {
+      "file": "logo.png",
+      "label": "一网通竖版组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "any",
+      "source": "https://wwwcdn.cmbimg.cn/Images/logo.png",
+      "sourcePage": "https://www.cmbchina.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "8ef0aa09b7c8a66e7ea715db4b72b10a1d44f7792ef2f057a27cf02d4f85a2fd",
+      "bytes": 10283,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.cmbchina.com/",
+        "attribution": "招商银行。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网小尺寸原件，适合按原生像素取用。"
+      ]
+    },
+    {
+      "file": "portal-horizontal.png",
+      "label": "一网通英文横版组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://english.cmbchina.com/umi.3b6b67ae.css",
+      "sourcePage": "https://english.cmbchina.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "c4b69cbcf4fcd421b42ca312b280ea1bbeeb3c2b9ba89078697abff1911debb0",
+      "bytes": 6359,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://english.cmbchina.com/",
+        "attribution": "招商银行。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "英文一网通门户组合，包含一网通标识及We Are Here Just For You标语，白色不透明背景。"
+      ]
+    }
+  ]
+}

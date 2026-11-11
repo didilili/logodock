@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 3,
+  "id": "qiyunfang",
+  "name": "启云方",
+  "aliases": [
+    "QiYUNFANG"
+  ],
+  "identity": {
+    "nameZh": "启云方",
+    "nameEn": "QiYUNFANG",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.qiyunfang.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.qiyunfang.com/",
+  "entityType": "company",
+  "categories": [
+    "software"
+  ],
+  "defaultAsset": "logo.png",
+  "assets": [
+    {
+      "file": "logo.png",
+      "label": "红黑中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://50002009.s21i.huaweicloudsite.cn/4/ABUIABAEGAAgkL_91gYo9NLkmwIw0Bk4iAk.png",
+      "sourcePage": "https://www.qiyunfang.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "4c734ecde19906d0414bc6660c03092839ed9e9dabcd93a7704d7cf0256906d9",
+      "bytes": 60777,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.qiyunfang.com/",
+        "attribution": "启云方。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

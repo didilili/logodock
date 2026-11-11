@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 3,
+  "id": "netease-leihuo",
+  "name": "网易雷火",
+  "aliases": [],
+  "website": "https://leihuo.163.com/",
+  "identity": {
+    "nameZh": "网易雷火",
+    "nameEn": "THUNDER FIRE",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://leihuo.163.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "organization",
+  "categories": [],
+  "defaultAsset": "logo-brand-image.png",
+  "assets": [
+    {
+      "file": "logo-brand-image.png",
+      "label": "事业群品牌图",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://leihuo.res.netease.com/pc/zt/20190225162541/img/share_57c5f3c6.jpg",
+      "sourcePage": "https://leihuo.163.com/",
+      "sha256": "0d5d252b1bc08feefa0016e58ee6e487d7a98de4814fec810da19673e95014fb",
+      "bytes": 102710,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://leihuo.163.com/",
+        "attribution": "网易雷火。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "bilingual",
+      "layout": "vertical",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "官网当前分享品牌图，原件含蓝色纹理背景与事业群全称。来源以jpg命名，实际文件签名为PNG。"
+      ]
+    }
+  ],
+  "parentId": "netease"
+}

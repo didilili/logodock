@@ -1,0 +1,717 @@
+{
+  "schemaVersion": 3,
+  "id": "ping-an",
+  "name": "中国平安",
+  "aliases": [
+    "平安集团",
+    "Ping An Group",
+    "平安保险"
+  ],
+  "identity": {
+    "nameZh": "中国平安",
+    "nameEn": "Ping An",
+    "legalNames": [
+      {
+        "name": "中国平安保险（集团）股份有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://www.pingan.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
+    "sources": [
+      {
+        "label": "集团中文官网",
+        "url": "https://www.pingan.com/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "集团2022品牌升级说明",
+        "url": "https://group.pingan.com/media/perspectives/brand-refresh.html",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.pingan.com/",
+  "entityType": "company",
+  "categories": [
+    "金融"
+  ],
+  "defaultAsset": "logo.svg",
+  "assets": [
+    {
+      "file": "logo.svg",
+      "label": "彩色中英横版组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://img2.pingan.com/app_series/pingancn/assets/img/logo_nav.svg",
+      "sourcePage": "https://www.pingan.cn/about/material-lib.shtml",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "e6c0d17f1a5f74edc8247c350d191aa8ccc75b38d64f6c61523e39986b6f4436",
+      "bytes": 22447,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.pingan.cn/about/material-lib.shtml",
+        "attribution": "中国平安保险（集团）股份有限公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "集团官网声明，未经许可不得复制、转载或摘编。"
+      }
+    },
+    {
+      "file": "logo-horizontal.svg",
+      "label": "无标语彩色中英横版组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://pa18-pweb.pingan.com/node-pc/gl/official/component/index-footer/img/footer-logo-842d51b430.svg",
+      "sourcePage": "https://www.pingan.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "5e859ca12e179187ec8b5102780d727fb362d1664ecc1de1cc2e7433f7ba024f",
+      "bytes": 12901,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.pingan.com/",
+        "attribution": "中国平安保险（集团）股份有限公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "集团官网声明，未经许可不得复制、转载或摘编。"
+      }
+    },
+    {
+      "file": "logo-zh-orange-bg.png",
+      "label": "橙底白色中文组合",
+      "variant": "wordmark",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "any",
+      "source": "https://finserve.pingan.com/uploadfiles/fileData/webuploadfile/application/2023/0315/14/1635890966735847424.zip",
+      "sourcePage": "https://finserve.pingan.com/media-library",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "1cc65a72b2710c7aea9a2d51aaa6178949406ab8c62c1df41d05f7f214c533d3",
+      "bytes": 86862,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://finserve.pingan.com/media-library",
+        "attribution": "中国平安保险（集团）股份有限公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "集团官网声明，未经许可不得复制、转载或摘编。"
+      },
+      "qualityNotes": [
+        "橙色不透明背景，保留官方画布及安全空间。"
+      ]
+    },
+    {
+      "file": "logo-zh.png",
+      "label": "彩色中文组合",
+      "variant": "wordmark",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://finserve.pingan.com/uploadfiles/fileData/webuploadfile/application/2023/0315/14/1635890966735847424.zip",
+      "sourcePage": "https://finserve.pingan.com/media-library",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "7a5e3c3b9e13c4f1e721a21be39ced3e2b4017d26d83702d3ffd68cf95ddd52a",
+      "bytes": 76932,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://finserve.pingan.com/media-library",
+        "attribution": "中国平安保险（集团）股份有限公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "集团官网声明，未经许可不得复制、转载或摘编。"
+      },
+      "qualityNotes": [
+        "保留官方画布及安全空间。"
+      ]
+    },
+    {
+      "file": "logo-zh-white.png",
+      "label": "白色中文组合",
+      "variant": "wordmark",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://finserve.pingan.com/uploadfiles/fileData/webuploadfile/application/2023/0315/14/1635890966735847424.zip",
+      "sourcePage": "https://finserve.pingan.com/media-library",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "f5bdf53efdc3e07805cd41fabb29ceb2a9ed2149a5299066280ee5cf15dfc512",
+      "bytes": 76982,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://finserve.pingan.com/media-library",
+        "attribution": "中国平安保险（集团）股份有限公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "集团官网声明，未经许可不得复制、转载或摘编。"
+      },
+      "qualityNotes": [
+        "保留官方画布及安全空间。"
+      ]
+    },
+    {
+      "file": "logo-tagline-horizontal-orange-bg.png",
+      "label": "橙底白色横版宣传语组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "any",
+      "source": "https://finserve.pingan.com/uploadfiles/fileData/webuploadfile/application/2023/0315/14/1635890966735847424.zip",
+      "sourcePage": "https://finserve.pingan.com/media-library",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "f587e33aa1d7093370cbe704606265365450a55be604b8d63b471000b0d33499",
+      "bytes": 319783,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://finserve.pingan.com/media-library",
+        "attribution": "中国平安保险（集团）股份有限公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "集团官网声明，未经许可不得复制、转载或摘编。"
+      },
+      "qualityNotes": [
+        "橙色不透明背景，保留官方画布及安全空间。"
+      ]
+    },
+    {
+      "file": "logo-tagline-horizontal-white.png",
+      "label": "白色横版宣传语组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://finserve.pingan.com/uploadfiles/fileData/webuploadfile/application/2023/0315/14/1635890966735847424.zip",
+      "sourcePage": "https://finserve.pingan.com/media-library",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "3dce231a9537f64faae60acb499f01eda4c718b5cd923a0e898220fb78947ab1",
+      "bytes": 260571,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://finserve.pingan.com/media-library",
+        "attribution": "中国平安保险（集团）股份有限公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "集团官网声明，未经许可不得复制、转载或摘编。"
+      },
+      "qualityNotes": [
+        "保留官方画布及安全空间。"
+      ]
+    },
+    {
+      "file": "logo-tagline-horizontal.png",
+      "label": "彩色横版宣传语组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://finserve.pingan.com/uploadfiles/fileData/webuploadfile/application/2023/0315/14/1635890966735847424.zip",
+      "sourcePage": "https://finserve.pingan.com/media-library",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "736e39ac84ce5fddea896a2b10e170661a328b6bd5bd7482a491df728b5424b5",
+      "bytes": 269303,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://finserve.pingan.com/media-library",
+        "attribution": "中国平安保险（集团）股份有限公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "集团官网声明，未经许可不得复制、转载或摘编。"
+      },
+      "qualityNotes": [
+        "保留官方画布及安全空间。"
+      ]
+    },
+    {
+      "file": "logo-tagline-vertical.png",
+      "label": "彩色竖版宣传语组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "light",
+      "source": "https://finserve.pingan.com/uploadfiles/fileData/webuploadfile/application/2023/0315/14/1635890966735847424.zip",
+      "sourcePage": "https://finserve.pingan.com/media-library",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "fdaa2888398d016fb449394948a095f6d2a252b5d99aa7c16543ffc4ff113da1",
+      "bytes": 188197,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://finserve.pingan.com/media-library",
+        "attribution": "中国平安保险（集团）股份有限公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "集团官网声明，未经许可不得复制、转载或摘编。"
+      },
+      "qualityNotes": [
+        "保留官方画布及安全空间。"
+      ]
+    },
+    {
+      "file": "logo-tagline-vertical-white.png",
+      "label": "白色竖版宣传语组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "vertical",
+      "color": "white",
+      "background": "dark",
+      "source": "https://finserve.pingan.com/uploadfiles/fileData/webuploadfile/application/2023/0315/14/1635890966735847424.zip",
+      "sourcePage": "https://finserve.pingan.com/media-library",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "5d3fb2c6aba405e7a0465aa814c25709acff7452e87e21149bd5f16e8862cf1c",
+      "bytes": 175101,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://finserve.pingan.com/media-library",
+        "attribution": "中国平安保险（集团）股份有限公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "集团官网声明，未经许可不得复制、转载或摘编。"
+      },
+      "qualityNotes": [
+        "保留官方画布及安全空间。"
+      ]
+    },
+    {
+      "file": "logo-tagline-vertical-orange-bg.png",
+      "label": "橙底白色竖版宣传语组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "vertical",
+      "color": "white",
+      "background": "any",
+      "source": "https://finserve.pingan.com/uploadfiles/fileData/webuploadfile/application/2023/0315/14/1635890966735847424.zip",
+      "sourcePage": "https://finserve.pingan.com/media-library",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "ee007fc7ecb702e07d8f74bb4b1642a6d3689e8951bc36d839065e6c1ac25871",
+      "bytes": 226770,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://finserve.pingan.com/media-library",
+        "attribution": "中国平安保险（集团）股份有限公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "集团官网声明，未经许可不得复制、转载或摘编。"
+      },
+      "qualityNotes": [
+        "橙色不透明背景，保留官方画布及安全空间。"
+      ]
+    },
+    {
+      "file": "logo-orange-bg.png",
+      "label": "橙底白色中英横版组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "any",
+      "source": "https://finserve.pingan.com/uploadfiles/fileData/webuploadfile/application/2023/0315/14/1635890966735847424.zip",
+      "sourcePage": "https://finserve.pingan.com/media-library",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "c263afe4852526919f8f9e2dd3c71755eef1974b590499e87d71da3081caf56b",
+      "bytes": 142267,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://finserve.pingan.com/media-library",
+        "attribution": "中国平安保险（集团）股份有限公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "集团官网声明，未经许可不得复制、转载或摘编。"
+      },
+      "qualityNotes": [
+        "橙色不透明背景，保留官方画布及安全空间。"
+      ]
+    },
+    {
+      "file": "logo-white.png",
+      "label": "白色中英横版组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://finserve.pingan.com/uploadfiles/fileData/webuploadfile/application/2023/0315/14/1635890966735847424.zip",
+      "sourcePage": "https://finserve.pingan.com/media-library",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "201191b2accf58e9b8ec922ecd7087055042f85b624b92587e0d1f7755e912d5",
+      "bytes": 109196,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://finserve.pingan.com/media-library",
+        "attribution": "中国平安保险（集团）股份有限公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "集团官网声明，未经许可不得复制、转载或摘编。"
+      },
+      "qualityNotes": [
+        "保留官方画布及安全空间。"
+      ]
+    },
+    {
+      "file": "logo-vertical-orange-bg.png",
+      "label": "橙底白色中英竖版组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "vertical",
+      "color": "white",
+      "background": "any",
+      "source": "https://finserve.pingan.com/uploadfiles/fileData/webuploadfile/application/2023/0315/14/1635890966735847424.zip",
+      "sourcePage": "https://finserve.pingan.com/media-library",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "98a80a2d8a2c820ee6e5b082a77cdc9a1e8e5b75c5c36f61c3018def546637f5",
+      "bytes": 108457,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://finserve.pingan.com/media-library",
+        "attribution": "中国平安保险（集团）股份有限公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "集团官网声明，未经许可不得复制、转载或摘编。"
+      },
+      "qualityNotes": [
+        "橙色不透明背景，保留官方画布及安全空间。"
+      ]
+    },
+    {
+      "file": "logo-vertical.png",
+      "label": "彩色中英竖版组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "light",
+      "source": "https://finserve.pingan.com/uploadfiles/fileData/webuploadfile/application/2023/0315/14/1635890966735847424.zip",
+      "sourcePage": "https://finserve.pingan.com/media-library",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "0cab40c7ea89f933eb8819cab96ef4d9c43bd2fa12095fea2ff3a008482535e7",
+      "bytes": 93295,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://finserve.pingan.com/media-library",
+        "attribution": "中国平安保险（集团）股份有限公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "集团官网声明，未经许可不得复制、转载或摘编。"
+      },
+      "qualityNotes": [
+        "保留官方画布及安全空间。"
+      ]
+    },
+    {
+      "file": "logo-vertical-white.png",
+      "label": "白色中英竖版组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "vertical",
+      "color": "white",
+      "background": "dark",
+      "source": "https://finserve.pingan.com/uploadfiles/fileData/webuploadfile/application/2023/0315/14/1635890966735847424.zip",
+      "sourcePage": "https://finserve.pingan.com/media-library",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "2100c44f863730879b9f36c7b1b02f73d246a0d5bb2f764d8f93b5045c9c6264",
+      "bytes": 94136,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://finserve.pingan.com/media-library",
+        "attribution": "中国平安保险（集团）股份有限公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "集团官网声明，未经许可不得复制、转载或摘编。"
+      },
+      "qualityNotes": [
+        "保留官方画布及安全空间。"
+      ]
+    },
+    {
+      "file": "logo-en-orange-bg.png",
+      "label": "橙底白色英文组合",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "any",
+      "source": "https://finserve.pingan.com/uploadfiles/fileData/webuploadfile/application/2023/0315/14/1635890966735847424.zip",
+      "sourcePage": "https://finserve.pingan.com/media-library",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "2fc842389324e7baff584c66009e8ed613acfcb149468e5fb02efa55c0dca26d",
+      "bytes": 104715,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://finserve.pingan.com/media-library",
+        "attribution": "中国平安保险（集团）股份有限公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "集团官网声明，未经许可不得复制、转载或摘编。"
+      },
+      "qualityNotes": [
+        "橙色不透明背景，保留官方画布及安全空间。"
+      ]
+    },
+    {
+      "file": "logo-en.png",
+      "label": "彩色英文组合",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://finserve.pingan.com/uploadfiles/fileData/webuploadfile/application/2023/0315/14/1635890966735847424.zip",
+      "sourcePage": "https://finserve.pingan.com/media-library",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "e4122d44f3c9115d759276fe659345e2abe1b6535de50edfd4e7142597291da7",
+      "bytes": 91436,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://finserve.pingan.com/media-library",
+        "attribution": "中国平安保险（集团）股份有限公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "集团官网声明，未经许可不得复制、转载或摘编。"
+      },
+      "qualityNotes": [
+        "保留官方画布及安全空间。"
+      ]
+    },
+    {
+      "file": "logo-en-white.png",
+      "label": "白色英文组合",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://finserve.pingan.com/uploadfiles/fileData/webuploadfile/application/2023/0315/14/1635890966735847424.zip",
+      "sourcePage": "https://finserve.pingan.com/media-library",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "bb7fff6ac4b816d4518d93734a3eabe4539ebba6bb3cd0a2df83e64c8bb6aa19",
+      "bytes": 93456,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://finserve.pingan.com/media-library",
+        "attribution": "中国平安保险（集团）股份有限公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "集团官网声明，未经许可不得复制、转载或摘编。"
+      },
+      "qualityNotes": [
+        "保留官方画布及安全空间。"
+      ]
+    }
+  ],
+  "sourceFiles": [
+    {
+      "file": "logo-zh-master.ai",
+      "label": "中文组合源文件",
+      "assetFiles": [
+        "logo-zh-orange-bg.png",
+        "logo-zh.png",
+        "logo-zh-white.png"
+      ],
+      "source": "https://finserve.pingan.com/uploadfiles/fileData/webuploadfile/application/2023/0315/14/1635890966735847424.zip",
+      "sourcePage": "https://finserve.pingan.com/media-library",
+      "sha256": "ea9bcaa2451428cf5f6153965e975652d8ea68229da2036dac6dabd5f3fc9e9b",
+      "bytes": 1141490,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://finserve.pingan.com/media-library",
+        "attribution": "中国平安保险（集团）股份有限公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "集团官网声明，未经许可不得复制、转载或摘编。"
+      }
+    },
+    {
+      "file": "logo-tagline-master.ai",
+      "label": "宣传语组合源文件",
+      "assetFiles": [
+        "logo-tagline-horizontal-orange-bg.png",
+        "logo-tagline-horizontal-white.png",
+        "logo-tagline-horizontal.png",
+        "logo-tagline-vertical.png",
+        "logo-tagline-vertical-white.png",
+        "logo-tagline-vertical-orange-bg.png"
+      ],
+      "source": "https://finserve.pingan.com/uploadfiles/fileData/webuploadfile/application/2023/0315/14/1635890966735847424.zip",
+      "sourcePage": "https://finserve.pingan.com/media-library",
+      "sha256": "ebeca9b52f9d67b1129fce16fed9b5c497d88e8c77292d7acf7869f996bfb011",
+      "bytes": 1330942,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://finserve.pingan.com/media-library",
+        "attribution": "中国平安保险（集团）股份有限公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "集团官网声明，未经许可不得复制、转载或摘编。"
+      }
+    },
+    {
+      "file": "logo-horizontal-master.ai",
+      "label": "中英横版组合源文件",
+      "assetFiles": [
+        "logo.svg",
+        "logo-orange-bg.png",
+        "logo-white.png"
+      ],
+      "source": "https://finserve.pingan.com/uploadfiles/fileData/webuploadfile/application/2023/0315/14/1635890966735847424.zip",
+      "sourcePage": "https://finserve.pingan.com/media-library",
+      "sha256": "c9bd3f887eb24e8cfdb95c15bfba8b7644c1562dba2e9e7fea9fef2fc185050f",
+      "bytes": 1147552,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://finserve.pingan.com/media-library",
+        "attribution": "中国平安保险（集团）股份有限公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "集团官网声明，未经许可不得复制、转载或摘编。"
+      }
+    },
+    {
+      "file": "logo-vertical-master.ai",
+      "label": "中英竖版组合源文件",
+      "assetFiles": [
+        "logo-vertical-orange-bg.png",
+        "logo-vertical.png",
+        "logo-vertical-white.png"
+      ],
+      "source": "https://finserve.pingan.com/uploadfiles/fileData/webuploadfile/application/2023/0315/14/1635890966735847424.zip",
+      "sourcePage": "https://finserve.pingan.com/media-library",
+      "sha256": "8c9f4c5317d7c135c62a1e0dc32237205bf8a9232e0eb85c1ae2a05f74e3e670",
+      "bytes": 1150932,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://finserve.pingan.com/media-library",
+        "attribution": "中国平安保险（集团）股份有限公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "集团官网声明，未经许可不得复制、转载或摘编。"
+      }
+    },
+    {
+      "file": "logo-en-master.ai",
+      "label": "英文组合源文件",
+      "assetFiles": [
+        "logo-en-orange-bg.png",
+        "logo-en.png",
+        "logo-en-white.png"
+      ],
+      "source": "https://finserve.pingan.com/uploadfiles/fileData/webuploadfile/application/2023/0315/14/1635890966735847424.zip",
+      "sourcePage": "https://finserve.pingan.com/media-library",
+      "sha256": "5c68b46204d2203c21f2ffe57e0cbb10a2acbb716513a3a4965c57d70729d416",
+      "bytes": 1149240,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://finserve.pingan.com/media-library",
+        "attribution": "中国平安保险（集团）股份有限公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "集团官网声明，未经许可不得复制、转载或摘编。"
+      }
+    }
+  ]
+}

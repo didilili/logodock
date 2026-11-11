@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 3,
+  "id": "yuanbao",
+  "name": "腾讯元宝",
+  "aliases": [
+    "元宝"
+  ],
+  "identity": {
+    "nameZh": "腾讯元宝",
+    "nameEn": "Yuanbao",
+    "legalNames": [
+      {
+        "name": "深圳市腾讯计算机系统有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://yuanbao.tencent.com/download",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
+    "sources": [
+      {
+        "label": "官方产品介绍及下载中心运营主体",
+        "url": "https://yuanbao.tencent.com/download",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "腾讯官方英文产品名称",
+        "url": "https://static.www.tencent.com/uploads/2024/08/14/027889ef78b4ed2b83337dd4a7c2ffef.pdf",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "腾讯发行的App Store应用",
+        "url": "https://apps.apple.com/cn/app/id6480446430",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "Tencent Mobility Limited发行的Google Play应用",
+        "url": "https://play.google.com/store/apps/details?id=com.tencent.hunyuan.app.chat",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://yuanbao.tencent.com/",
+  "entityType": "product",
+  "categories": [
+    "ai"
+  ],
+  "defaultAsset": "app-icon-flat.png",
+  "assets": [
+    {
+      "file": "app-icon-flat.png",
+      "label": "平面应用图标",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "qualityNotes": [
+        "Google Play发行图标，原生512×512，保留平面绿白图形、白色圆角底板及透明四角。"
+      ],
+      "status": "current",
+      "source": "https://play-lh.googleusercontent.com/WKBS1cNEHV3cPRthiPphc9C7eoyFYecjRqiKjJvfNntfh6SOYPx1eYcpZFaNbZXusOYt6qey6nSjm4znlZJ-pQ=s0-br30",
+      "sourcePage": "https://play.google.com/store/apps/details?id=com.tencent.hunyuan.app.chat",
+      "sha256": "8e637bbbb55b10039713ed11f65f6d3eb57753359ebb8872d79645876a3f597e",
+      "bytes": 18406,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "app-store"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://play.google.com/store/apps/details?id=com.tencent.hunyuan.app.chat",
+        "attribution": "腾讯元宝。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "app-icon-dimensional.jpg",
+      "label": "立体效果应用图标",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "qualityNotes": [
+        "App Store发行图标，原生512×512，包含绿白图形的立体边缘和投影效果，保留原始白色方形画布。"
+      ],
+      "status": "current",
+      "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ff/76/85/ff76854f-116c-ceb7-9a14-892db4fe82e6/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+      "sourcePage": "https://apps.apple.com/cn/app/id6480446430",
+      "sha256": "4bebda102cfe0605dc761525af3adbe9de6d1f8b667d9416fd9b449948880df0",
+      "bytes": 28468,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "app-store"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://apps.apple.com/cn/app/id6480446430",
+        "attribution": "腾讯元宝。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ],
+  "parentId": "tencent"
+}

@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 3,
+  "id": "asiainfo-security",
+  "name": "亚信安全",
+  "aliases": [],
+  "website": "https://www.asiainfo-sec.com/",
+  "entityType": "company",
+  "identity": {
+    "nameZh": "亚信安全",
+    "nameEn": "ASIAINFO SECURITY",
+    "legalNames": [
+      {
+        "name": "亚信安全科技股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.sse.com.cn/star/market/stocklist/info/company/index.shtml?COMPANY_CODE=688225",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "name": "ASIAINFO SECURITY TECHNOLOGIES CO.,LTD.",
+        "language": "en",
+        "role": "company",
+        "source": "https://www.sse.com.cn/star/market/stocklist/info/company/index.shtml?COMPANY_CODE=688225",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
+    "sources": [
+      {
+        "label": "品牌官网",
+        "url": "https://www.asiainfo-sec.com/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "上交所科创板公司详情",
+        "url": "https://www.sse.com.cn/star/market/stocklist/info/company/index.shtml?COMPANY_CODE=688225",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "categories": [
+    "enterprise-software"
+  ],
+  "defaultAsset": "logo-chinese-official.png",
+  "assets": [
+    {
+      "file": "logo-chinese-official.png",
+      "label": "中文组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.asiainfo-sec.com/web/images/logo.png",
+      "sourcePage": "https://www.asiainfo-sec.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "e9cbd5f547cb0a1d5bc2e844bccdc4529053dd6012ab2c046d92678455a3e340",
+      "bytes": 7785,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.asiainfo-sec.com/",
+        "attribution": "亚信安全，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-white.png",
+      "label": "白色中文导览字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.asiainfo-sec.com/web/images/guide-logo.png",
+      "sourcePage": "https://www.asiainfo-sec.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "eb444c2572878a3e7b94dc999f7c6bdd2a2452a80912873b5afe0b2b1a21d42b",
+      "bytes": 8031,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.asiainfo-sec.com/",
+        "attribution": "亚信安全，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网导览使用的中文白字稿，原生 330×70 像素。"
+      ]
+    }
+  ]
+}

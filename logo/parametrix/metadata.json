@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 3,
+  "id": "parametrix",
+  "name": "超参数科技",
+  "aliases": [
+    "超参数"
+  ],
+  "identity": {
+    "nameZh": "超参数科技",
+    "nameEn": "Parametrix.ai",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.parametrix.ai/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.parametrix.ai/",
+  "entityType": "company",
+  "categories": [
+    "ai"
+  ],
+  "defaultAsset": "logo-white.png",
+  "assets": [
+    {
+      "file": "logo-white.png",
+      "label": "反白英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://www.parametrix.ai/assets/logo-BNYPeY9e.png",
+      "sourcePage": "https://www.parametrix.ai/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "5df1f45ba395da200266b8a3eed186c89ff937756fec9076aa85a66880d0eab4",
+      "bytes": 4704,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.parametrix.ai/",
+        "attribution": "超参数。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

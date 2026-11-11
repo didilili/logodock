@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 3,
+  "id": "three-k-games",
+  "name": "3K游戏",
+  "aliases": [
+    "3K 游戏"
+  ],
+  "identity": {
+    "nameZh": "3K游戏",
+    "nameEn": "FingerTango",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.3k.com/joinUs.html",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.3k.com/joinUs.html",
+  "entityType": "company",
+  "categories": [
+    "entertainment"
+  ],
+  "defaultAsset": "logo-brand.png",
+  "assets": [
+    {
+      "file": "logo-brand.png",
+      "label": "中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://yxfile.3k.com/2020/11/18/upload_ite99ztn8f904zvc6bc9ximadn2vr69w.png",
+      "sourcePage": "https://www.3k.com/joinUs.html",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "739e45a2a6d94f768baa0e246594c3d1a23ce96eca11be0b8a18aed8ba602781",
+      "bytes": 2705,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.3k.com/joinUs.html",
+        "attribution": "3K 游戏。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-white.png",
+      "label": "反白中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://www.3k.com/img/footer-logo.ee12466.png",
+      "sourcePage": "https://www.3k.com/joinUs.html",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "cf929b92988c61fd1a26d51fc22769c60a05df189b019af72b12a1a5506463c7",
+      "bytes": 3123,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.3k.com/joinUs.html",
+        "attribution": "3K 游戏。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

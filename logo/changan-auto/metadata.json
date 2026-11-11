@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 3,
+  "id": "changan-auto",
+  "name": "长安汽车",
+  "aliases": [
+    "CHANGAN"
+  ],
+  "identity": {
+    "nameZh": "长安汽车",
+    "nameEn": "CHANGAN",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.changan.com.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.changan.com.cn/",
+  "entityType": "company",
+  "categories": [
+    "automotive"
+  ],
+  "defaultAsset": "logo-home.png",
+  "assets": [
+    {
+      "file": "logo-home.png",
+      "label": "白色英文字标",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.changan.com.cn/img/logo.fc392719.png",
+      "sourcePage": "https://www.changan.com.cn/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "6169bd2e562b1ab9247b2412dbba5efc836c6742402cf29e37ca44bafd70874f",
+      "bytes": 4421,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.changan.com.cn/",
+        "attribution": "长安汽车。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网原生尺寸稿，适合按原生像素取用。"
+      ]
+    }
+  ]
+}

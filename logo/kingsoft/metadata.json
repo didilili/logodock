@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 3,
+  "id": "kingsoft",
+  "name": "金山软件",
+  "aliases": [],
+  "website": "https://www.kingsoft.com/",
+  "identity": {
+    "nameZh": "金山软件",
+    "nameEn": "KINGSOFT",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://www.kingsoft.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "logo-bilingual.png",
+  "assets": [
+    {
+      "file": "logo-bilingual.png",
+      "label": "中英组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://www.kingsoft.com/img/kslogo.fff9df6a.png",
+      "sourcePage": "https://www.kingsoft.com/",
+      "sha256": "764c33d7ad1f4c1a4598ec02d3f235d0e3af2460a4c64c0d7170e776cdcad12c",
+      "bytes": 27609,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.kingsoft.com/",
+        "attribution": "金山软件。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    }
+  ]
+}

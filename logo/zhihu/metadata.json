@@ -80,7 +80,7 @@
       "variant": "wordmark",
       "status": "current",
       "language": "zh",
-      "layout": "vertical",
+      "layout": "horizontal",
       "color": "brand",
       "background": "light",
       "source": "https://ir.zhihu.com/media/zuodh3gq/logo-new.svg",

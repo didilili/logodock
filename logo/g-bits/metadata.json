@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 3,
+  "id": "g-bits",
+  "name": "吉比特",
+  "aliases": [],
+  "website": "https://www.g-bits.com/zh/",
+  "identity": {
+    "nameZh": "吉比特",
+    "nameEn": "G-bits",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://www.g-bits.com/zh/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "logo-bilingual.svg",
+  "assets": [
+    {
+      "file": "logo-bilingual.svg",
+      "label": "中英组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://gbitsofficalweb.g-bits.com/gbt/20230714/111dbd74cacf534deea30d3c532cd9a5.svg",
+      "sourcePage": "https://www.g-bits.com/zh/",
+      "sha256": "c6326aca511b551383625a0b5625db9354acb5099d5bc058bbbd44a3b20bb097",
+      "bytes": 5844,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.g-bits.com/zh/",
+        "attribution": "吉比特。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    }
+  ]
+}

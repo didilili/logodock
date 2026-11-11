@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 3,
+  "id": "sinolink-securities",
+  "name": "国金证券",
+  "aliases": [],
+  "website": "https://www.gjzq.com.cn/main/index.html",
+  "identity": {
+    "nameZh": "国金证券",
+    "nameEn": "SINOLINK SECURITIES",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://www.gjzq.com.cn/main/index.html",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "logo-bilingual-tagline.png",
+  "assets": [
+    {
+      "file": "logo-bilingual-tagline.png",
+      "label": "中英组合与标语",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://www.gjzq.com.cn/static/main/img/footer/logo.png",
+      "sourcePage": "https://www.gjzq.com.cn/main/index.html",
+      "sha256": "0967b0ecbe4c66f4223c78f7bc34e71d60cfeebae45def3dff4d0b04949e7302",
+      "bytes": 17098,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.gjzq.com.cn/main/index.html",
+        "attribution": "国金证券。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    }
+  ]
+}

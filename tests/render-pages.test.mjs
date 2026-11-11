@@ -31,10 +31,10 @@ async function filesBelow(directory, relative = '') {
   return files.sort();
 }
 
-test('production output includes the home, changelog and all 59 independent detail pages', async () => {
+test('production output includes the home, changelog and all 236 independent detail pages', async () => {
   assert.equal(
     catalog.brands.length,
-    59,
+    236,
     'Update this inventory deliberately when entries change.',
   );
   const files = await filesBelow(output);
@@ -119,8 +119,11 @@ test('static index, source metadata and every original file keep their paths and
     }
     active += brand.assets.length;
   }
-  assert.equal(originals, 215);
-  assert.equal(active, 215);
+  assert.equal(
+    originals,
+    catalog.brands.reduce((count, brand) => count + brand.assets.length, 0),
+  );
+  assert.equal(active, originals);
 });
 
 test('each detail keeps downloads, brand names, sources and rights without exposing maintenance records', async () => {
@@ -190,6 +193,12 @@ test('detail hydration contains only the requested brand, not a serialized whole
   for (const brand of catalog.brands) {
     const html = await readOutput(`logo/${brand.id}/index.html`);
     assert.ok(!html.includes('id="catalog-data"'), `${brand.id}: retired full catalog script`);
+    if (brand.parentId) {
+      assert.match(
+        html,
+        new RegExp(`class="parent-brand\\b[^"]*"[\\s\\S]*?href="[^"?#]*logo/${brand.parentId}/"`),
+      );
+    }
     for (const other of catalog.brands.filter((item) => item.id !== brand.id)) {
       assert.ok(
         !html.includes(other.assets[0].sha256),

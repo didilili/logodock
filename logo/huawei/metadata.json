@@ -115,6 +115,95 @@
       "qualityNotes": [
         "完整花瓣图形与HUAWEI字标。"
       ]
+    },
+    {
+      "file": "logo-horizontal-header.png",
+      "label": "渐变横版组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header",
+        "pageTitle": "Huawei Media Resources"
+      },
+      "source": "https://www.huawei.com/-/media/hcomponent-header/1.0.1.20260908162100/component/img/huawei_logo.png",
+      "sourcePage": "https://www.huawei.com/en/media-center/multimedia",
+      "sha256": "492e58a2680a4f4607185e21d55183f0d2ac976b8f4737512a495672d31e4070",
+      "bytes": 12719,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.huawei.com/en/media-center/multimedia",
+        "attribution": "华为，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-11"
+      },
+      "qualityNotes": [
+        "适合网页页头等小尺寸使用。"
+      ]
+    },
+    {
+      "file": "logo-flat-horizontal-official.svg",
+      "label": "扁平横版组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://consumer.huawei.com/etc/designs/huawei-cbg-site/clientlib-campaign-v4/common-v4/images/logo.svg",
+      "sourcePage": "https://consumer.huawei.com/cn/",
+      "sha256": "3559ddfc61f5b93a44e65fd769367a4d23437efb5069768274ec31bef19966a1",
+      "bytes": 1801,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://consumer.huawei.com/cn/",
+        "attribution": "华为，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-11"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header",
+        "pageTitle": "华为消费者业务官网"
+      }
+    },
+    {
+      "file": "logo-flat-white-horizontal-official.png",
+      "label": "扁平红白横版组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "dark",
+      "source": "https://consumer.huawei.com/etc/designs/huawei-cbg-site/clientlib-campaign-v4/common-v4/images/logo-dark.svg#image_0",
+      "sourcePage": "https://consumer.huawei.com/cn/",
+      "sha256": "8fd2084b77f055223e7f4182d5da0e41bf5dc62886df4ce4b5e52ef815f2c22f",
+      "bytes": 78404,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://consumer.huawei.com/cn/",
+        "attribution": "华为，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-11"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "pageTitle": "华为消费者业务官网"
+      },
+      "qualityNotes": [
+        "官网深色页头 SVG 内嵌的原始 PNG，保留画布留白。"
+      ]
     }
   ]
 }

@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 3,
+  "id": "midea",
+  "name": "美的",
+  "aliases": [
+    "Midea"
+  ],
+  "identity": {
+    "nameZh": "美的",
+    "nameEn": "Midea",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.midea.com.cn/zh",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.midea.com.cn/zh",
+  "entityType": "company",
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "logo.png",
+  "assets": [
+    {
+      "file": "logo.png",
+      "label": "蓝色英文字标",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://cn-res.midea.com/content/dam/mideacn-aem/test/logo-1x.png",
+      "sourcePage": "https://www.midea.com.cn/zh",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "18226c897f1469094cbb784cf475463a880e26a6bf62606a123637122e1cea29",
+      "bytes": 4932,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.midea.com.cn/zh",
+        "attribution": "美的。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网小尺寸原图，适合按原生像素取用。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 3,
+  "id": "imou",
+  "name": "华橙",
+  "aliases": [],
+  "identity": {
+    "nameZh": "华橙",
+    "nameEn": "Imou",
+    "legalNames": [
+      {
+        "name": "杭州华橙网络科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.imou.com/cn/privacy",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.imou.com/cn/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "华橙招聘官网",
+        "url": "https://job.imou.com/jobs",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方开放平台对华橙与 Imou 的名称定义",
+        "url": "https://open.imoulife.com/book/zh/08-platform/09.oem-app-service.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "website": "https://www.imou.com/cn/",
+  "entityType": "company",
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "wordmark-imou-white.png",
+  "assets": [
+    {
+      "file": "wordmark-imou-white.png",
+      "label": "Imou乐橙反白字标",
+      "variant": "wordmark",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://www.imou.com/cn/#embedded-imou-header",
+      "sourcePage": "https://www.imou.com/cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "d32076830d126b588dd5ae5935598d67b6b7964ed903bdff3cb7a000b21bcb44",
+      "bytes": 3226,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.imou.com/cn/",
+        "attribution": "华橙。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "华橙网络旗下 Imou 乐橙品牌字标。"
+      ],
+      "usageWarnings": [
+        "图稿为华橙网络旗下 Imou 乐橙品牌标识，适用于对应品牌。"
+      ]
+    },
+    {
+      "file": "wordmark-imou-orange.png",
+      "label": "橙色中英字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://file.imou.com/s3/s3/f50f45d2-82e1-4dea-8238-211520a61eb6.png",
+      "sourcePage": "https://www.imou.com/cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "透明背景，乐橙中英字标。"
+      ],
+      "sha256": "5aee1804dab872168f7c475e9026547bd3bf4297cb9e9f1c305e615d9078d1c2",
+      "bytes": 17985,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.imou.com/cn/",
+        "attribution": "华橙。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-11"
+      }
+    }
+  ]
+}

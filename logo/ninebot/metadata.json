@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 3,
+  "id": "ninebot",
+  "name": "九号公司",
+  "aliases": [
+    "Segway-Ninebot"
+  ],
+  "identity": {
+    "nameZh": "九号公司",
+    "nameEn": "Segway-Ninebot",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "九号公司官方介绍",
+        "url": "https://ninebot.com/explore/about-us.html",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "公司官方品牌升级声明",
+        "url": "https://www.prnewswire.com/news-releases/segway-ninebot-brand-upgrade-300576298.html",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://ninebot.com/",
+  "entityType": "company",
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "symbol-black.svg",
+  "assets": [
+    {
+      "file": "symbol-black.svg",
+      "label": "黑色圆形飞人",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "black",
+      "background": "light",
+      "status": "current",
+      "source": "https://ninebot.com/etc.clientlibs/segway-ninebot/clientlibs/clientlib-base/img/resources/favicon_black.svg",
+      "sourcePage": "https://ninebot.com/explore/about-us.html",
+      "sha256": "38693177304a7893f0d5447b688a9ca69b40263397202f5d05d493b724bd0b50",
+      "bytes": 1143,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "pageTitle": "九号公司介绍"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://ninebot.com/explore/about-us.html",
+        "attribution": "九号公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网现用集团圆形飞人路径矢量，保留180×180原始画布与透明镂空。"
+      ]
+    },
+    {
+      "file": "symbol-white.svg",
+      "label": "反白圆形飞人",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://ninebot.com/etc.clientlibs/segway-ninebot/clientlibs/clientlib-base/img/resources/favicon_white.svg",
+      "sourcePage": "https://ninebot.com/explore/about-us.html",
+      "sha256": "e9d0f26e322a0a40ba056a03702fe10df9871f5ab30855c8741971a9f6b4384e",
+      "bytes": 1104,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "pageTitle": "九号公司介绍"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://ninebot.com/explore/about-us.html",
+        "attribution": "九号公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网现用集团圆形飞人路径矢量，保留180×180原始画布与透明镂空。"
+      ]
+    },
+    {
+      "file": "wordmark-ninebot-header.png",
+      "label": "Ninebot 九号字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "source": "https://ninebot.com/content/dam/segway-ninebot/general/general/icon/ninebot_logo_new.png",
+      "sourcePage": "https://ninebot.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ],
+      "sha256": "f646f0952fb26e661d7c77c2a8473b3fa1a07a6f54ddf98d2cef1dfa1b09afa6",
+      "bytes": 5547,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://ninebot.com/",
+        "attribution": "九号公司。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-11"
+      },
+      "usageWarnings": [
+        "适合原生尺寸或缩小使用。",
+        "适用于 Ninebot 九号业务品牌。"
+      ],
+      "display": "alternative"
+    }
+  ]
+}

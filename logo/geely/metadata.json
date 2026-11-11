@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 3,
+  "id": "geely",
+  "name": "吉利",
+  "aliases": [],
+  "website": "https://www.geely.com/",
+  "identity": {
+    "nameZh": "吉利",
+    "nameEn": "GEELY",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://www.geely.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "logo-black-horizontal.svg",
+  "assets": [
+    {
+      "file": "logo-black-horizontal.svg",
+      "label": "黑色横版",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://www.geely.com/#Header.fields.blacklogo",
+      "sourcePage": "https://www.geely.com/",
+      "sha256": "7691b99cba625d7f312a9c478e8a8fd1a5e90f432c1737241dc8cfc2670f9007",
+      "bytes": 2648,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.geely.com/",
+        "attribution": "吉利。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "black",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "官网公开页面数据中的原始SVG字符串，保留路径、填色与原画布。"
+      ]
+    },
+    {
+      "file": "logo-white-horizontal.svg",
+      "label": "反白横版",
+      "variant": "logo",
+      "status": "current",
+      "background": "dark",
+      "source": "https://www.geely.com/#Header.fields.logo",
+      "sourcePage": "https://www.geely.com/",
+      "sha256": "2f20a1a74febbc443dc566feba1573c77f2935bbd633c8909bc9ed5e9d4af4ea",
+      "bytes": 2648,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.geely.com/",
+        "attribution": "吉利。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "官网公开页面数据中的原始SVG字符串，保留路径、填色与原画布。"
+      ]
+    },
+    {
+      "file": "logo-black-vertical.svg",
+      "label": "黑色竖版",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://www.geely.com/#Footer.fields.logo",
+      "sourcePage": "https://www.geely.com/",
+      "sha256": "72a0d1a728f1e5be5c2e49dcda31b9dde567eb5c63388d6fd66ff07eee472b91",
+      "bytes": 6260,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.geely.com/",
+        "attribution": "吉利。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "en",
+      "layout": "vertical",
+      "color": "black",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "官网公开页面数据中的原始SVG字符串，保留路径、填色与原画布。"
+      ]
+    }
+  ]
+}

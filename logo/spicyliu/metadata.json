@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 3,
+  "id": "spicyliu",
+  "name": "刘文祥麻辣烫",
+  "aliases": [],
+  "identity": {
+    "nameZh": "刘文祥麻辣烫",
+    "nameEn": "SPICY LIU",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官网页脚中英文品牌名称",
+        "url": "https://www.spicyliu.com/",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "website": "https://www.spicyliu.com/",
+  "entityType": "company",
+  "categories": [
+    "餐饮"
+  ],
+  "defaultAsset": "logo.png",
+  "assets": [
+    {
+      "file": "logo.png",
+      "label": "刘文祥人物图形",
+      "variant": "icon",
+      "language": "zh",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.spicyliu.com/images/logo.png?v=20260925a",
+      "sourcePage": "https://www.spicyliu.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "be416ea5d5607a47545762b62c015bad563b0c259ebe35f4b873219f159cfd4b",
+      "bytes": 77984,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.spicyliu.com/",
+        "attribution": "刘文祥麻辣烫。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

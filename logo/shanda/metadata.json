@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 3,
+  "id": "shanda",
+  "name": "盛大",
+  "aliases": [],
+  "website": "https://shanda.com/",
+  "entityType": "company",
+  "identity": {
+    "nameZh": "盛大",
+    "nameEn": "Shanda",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "品牌官网",
+        "url": "https://shanda.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "categories": [
+    "internet"
+  ],
+  "defaultAsset": "icon-color-official.png",
+  "assets": [
+    {
+      "file": "icon-color-official.png",
+      "label": "彩色图形",
+      "variant": "icon",
+      "status": "current",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "source": "https://framerusercontent.com/images/aMkqrKiRmZTuVKueCR3xb7hWC4.png",
+      "sourcePage": "https://shanda.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "c3021f474141bd679e6b0cd13421969f61b62de9813c647e54c5c7f70a740bcf",
+      "bytes": 7501,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://shanda.com/",
+        "attribution": "盛大，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-english-horizontal-color-official.svg",
+      "label": "彩色英文横版组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://brand.shanda.com/files/Shanda_logos_En_Horizontal.zip#Shanda_Brandmark_Horizontal_DBL.svg",
+      "sourcePage": "https://brand.shanda.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "12202918a9cbf3b3e0ede12dc30887bbdf93b512046ded1b2edfca62484a52aa",
+      "bytes": 18938,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://brand.shanda.com/",
+        "attribution": "盛大，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-11",
+        "notes": "官方品牌页要求不编辑、变形、改色或重组标志，避免造成品牌混淆。许可及署名条件仍待核实。"
+      },
+      "qualityNotes": [
+        "透明背景，保留原始画布及四周留白。"
+      ]
+    },
+    {
+      "file": "logo-english-horizontal-white-official.svg",
+      "label": "红白英文横版组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "dark",
+      "source": "https://brand.shanda.com/files/Shanda_logos_En_Horizontal.zip#Shanda_Brandmark_Horizontal_WL.svg",
+      "sourcePage": "https://brand.shanda.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "314f7389a7df18212fef492e5d13a4db3300a97a81796d8cdf123435e55cbee6",
+      "bytes": 18938,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://brand.shanda.com/",
+        "attribution": "盛大，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-11",
+        "notes": "官方品牌页要求不编辑、变形、改色或重组标志，避免造成品牌混淆。许可及署名条件仍待核实。"
+      },
+      "qualityNotes": [
+        "透明背景，保留原始画布及四周留白。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 3,
+  "id": "dtstack",
+  "name": "袋鼠云",
+  "aliases": [],
+  "website": "https://www.dtstack.com/",
+  "identity": {
+    "nameZh": "袋鼠云",
+    "nameEn": "DTSTACK",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://www.dtstack.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "symbol-brand.svg",
+  "assets": [
+    {
+      "file": "logo-bilingual.svg",
+      "label": "中英组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://www.dtstack.com/_astro/logo_2731cb4cbb_Z1AgNp.svg",
+      "sourcePage": "https://www.dtstack.com/",
+      "sha256": "fcd390988a282cb85b3bd7b2f76423cee16a52f7ba3188519022c8b536cdd2df",
+      "bytes": 15848,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dtstack.com/",
+        "attribution": "袋鼠云。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    },
+    {
+      "file": "logo-bilingual-white.svg",
+      "label": "反白中英组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "dark",
+      "source": "https://www.dtstack.com/_astro/logo_30e725fa8e_1wQieY.svg",
+      "sourcePage": "https://www.dtstack.com/",
+      "sha256": "a296671d678b5f1cdfa489a94cd2888bf55df01ae134fb34024f59ceda0183ed",
+      "bytes": 15630,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dtstack.com/",
+        "attribution": "袋鼠云。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    },
+    {
+      "file": "symbol-brand.svg",
+      "label": "蓝色独立图形",
+      "variant": "icon",
+      "status": "current",
+      "background": "any",
+      "source": "https://www.dtstack.com/_astro/logo_2731cb4cbb_Z1AgNp.svg",
+      "sourcePage": "https://www.dtstack.com/",
+      "sha256": "5f6b1f33100aa2db19f58b7a34fedd8cc471cddfde6361bd22196f5e5cc33d59",
+      "bytes": 7007,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.dtstack.com/",
+        "attribution": "袋鼠云。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "originalAsset": "logo-bilingual.svg",
+        "originalSha256": "fcd390988a282cb85b3bd7b2f76423cee16a52f7ba3188519022c8b536cdd2df"
+      },
+      "qualityNotes": [
+        "从已登记官方组合标保留独立图形路径，方形长边贴边，短边居中，额外边距为零。"
+      ]
+    }
+  ]
+}

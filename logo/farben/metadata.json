@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 3,
+  "id": "farben",
+  "name": "法本信息",
+  "aliases": [],
+  "website": "https://farben.com.cn/",
+  "identity": {
+    "nameZh": "法本信息",
+    "nameEn": "Farben",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://farben.com.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "wordmark-blue.svg",
+  "assets": [
+    {
+      "file": "wordmark-blue.svg",
+      "label": "蓝色英文",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://farben.com.cn/static/upload/uploadfiles/logo1.svg",
+      "sourcePage": "https://farben.com.cn/",
+      "sha256": "c55a1ebb70eaa64241ffe1bb9f1eaa9d1437867a07242aad8fc0286948bf9fd2",
+      "bytes": 4201,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://farben.com.cn/",
+        "attribution": "法本信息。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    },
+    {
+      "file": "wordmark-white.svg",
+      "label": "反白英文",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "dark",
+      "source": "https://farben.com.cn/static/upload/uploadfiles/logo.svg",
+      "sourcePage": "https://farben.com.cn/",
+      "sha256": "557c82f16e927fecea7f233323a85ed6fdcf5353425ae855930817259619c050",
+      "bytes": 4199,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://farben.com.cn/",
+        "attribution": "法本信息。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    }
+  ]
+}

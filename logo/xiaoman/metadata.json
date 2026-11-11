@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 3,
+  "id": "xiaoman",
+  "name": "小满科技",
+  "aliases": [],
+  "website": "https://www.xiaoman.cn/",
+  "entityType": "company",
+  "identity": {
+    "nameZh": "小满科技",
+    "nameEn": "OKKI",
+    "legalNames": [
+      {
+        "name": "深圳市小满科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.xiaoman.cn/about.html",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "name": "Shenzhen Xiaoman Technology Co. Ltd.",
+        "language": "en",
+        "role": "company",
+        "source": "https://apps.apple.com/cn/app/okki/id1092357844?uo=4",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
+    "sources": [
+      {
+        "label": "品牌官网",
+        "url": "https://www.xiaoman.cn/join.html",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方公司介绍及品牌更名说明",
+        "url": "https://www.xiaoman.cn/news/320.html",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方 App Store 开发者记录",
+        "url": "https://apps.apple.com/cn/app/okki/id1092357844?uo=4",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "categories": [
+    "enterprise-software"
+  ],
+  "defaultAsset": "icon-appstore.jpg",
+  "assets": [
+    {
+      "file": "wordmark-black-official.png",
+      "label": "黑色OKKI字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "source": "https://www.xiaoman.cn/web/bocstatic/web/img/logo.png?v=v42",
+      "sourcePage": "https://www.xiaoman.cn/join.html",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "ae071100d0ebfde2ec74ebb16c6ebfd65f1a75fdd405952d8f52a398befecf18",
+      "bytes": 1160,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.xiaoman.cn/join.html",
+        "attribution": "小满科技，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "wordmark-white-official.png",
+      "label": "白色OKKI字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.xiaoman.cn/web/bocstatic/web/img/botlogo2.png?v=v42",
+      "sourcePage": "https://www.xiaoman.cn/join.html",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "28638ef3fdb9b09d2431e381001b7aa2c8130b8150e276af748d1ce9615e07e2",
+      "bytes": 1143,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.xiaoman.cn/join.html",
+        "attribution": "小满科技，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "icon-appstore.jpg",
+      "label": "OKKI 蓝底应用图标",
+      "variant": "icon",
+      "status": "current",
+      "language": "en",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/46/b5/37/46b5375d-8ed6-fc35-42de-2efd34b1b3b0/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+      "sourcePage": "https://apps.apple.com/cn/app/okki/id1092357844?uo=4",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "app-store"
+      },
+      "sha256": "03516bf62fe8f8390961cd06cf420f57b2b298142617de8892a54d5fceb43aff",
+      "bytes": 24045,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://apps.apple.com/cn/app/okki/id1092357844?uo=4",
+        "attribution": "小满科技，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官方 App Store 的 512×512 像素应用图标，含蓝色渐变底和白色 OKKI 字标。"
+      ]
+    }
+  ]
+}

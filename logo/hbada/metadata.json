@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 3,
+  "id": "hbada",
+  "name": "黑白调",
+  "aliases": [],
+  "website": "https://hbada.com/",
+  "identity": {
+    "nameZh": "黑白调",
+    "nameEn": "HBADA",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://hbada.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "wordmark.png",
+  "assets": [
+    {
+      "file": "wordmark.png",
+      "label": "英文",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://cdn.shopify.com/s/files/1/0552/3626/4128/files/HBADA_LOGO_horizotal.png?v=1764123277",
+      "sourcePage": "https://hbada.com/",
+      "sha256": "558df45447840e24373173019d800e35a556859e64e6ac6da885d4dea6cbe712",
+      "bytes": 23372,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://hbada.com/",
+        "attribution": "黑白调。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "black",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "原件含较多透明留白和白色字标底板。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 3,
+  "id": "yuanyou-games",
+  "name": "乐享元游",
+  "aliases": [],
+  "identity": {
+    "nameZh": "乐享元游",
+    "nameEn": null,
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.yyxxgames.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.yyxxgames.com/",
+  "entityType": "company",
+  "categories": [
+    "entertainment"
+  ],
+  "defaultAsset": "logo.png",
+  "assets": [
+    {
+      "file": "logo.png",
+      "label": "元游信息组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.yyxxgames.com/images/logo.png",
+      "sourcePage": "https://www.yyxxgames.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "e553a0562801597c426ae7e81b4f1f3a072311dc2f2dd2a84b8f05b5a7628e0d",
+      "bytes": 10201,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.yyxxgames.com/",
+        "attribution": "乐享元游。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网小尺寸原图，适合按原生像素取用。"
+      ]
+    }
+  ]
+}

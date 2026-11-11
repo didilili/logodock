@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 3,
+  "id": "duxiaoman",
+  "name": "度小满",
+  "aliases": [],
+  "website": "https://www.duxiaoman.com/",
+  "identity": {
+    "nameZh": "度小满",
+    "nameEn": "Du Xiaoman",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://www.duxiaoman.com/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官网英文品牌用名",
+        "url": "https://www.duxiaoman.com/careers",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "亚足联官方合作公告",
+        "url": "https://www.the-afc.com/en/more/afc_news.html/news/afc-and-du-xiaoman-technology-announce-new-global-supporter-partnership",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "logo-zh.png",
+  "assets": [
+    {
+      "file": "logo-zh.png",
+      "label": "中文组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://plusjrmallstatic.bj.bcebos.com/wfe/official-website/logo1.png",
+      "sourcePage": "https://www.duxiaoman.com/",
+      "sha256": "b990e870167da6d858d64e15073105cb8eb9b41615cffa364cfa8c3111bcf011",
+      "bytes": 2461,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.duxiaoman.com/",
+        "attribution": "度小满。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    },
+    {
+      "file": "logo-white.png",
+      "label": "反白中文组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "dark",
+      "source": "https://www.duxiaoman.com/static/fe-duxiaoman/img/white-logo.d0f48bb3.png",
+      "sourcePage": "https://www.duxiaoman.com/",
+      "sha256": "e5eb2a7e3a5e22e17e36d4de3dc4aa048a864a7f16b7d27a7f394a0f4ec13763",
+      "bytes": 4266,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.duxiaoman.com/",
+        "attribution": "度小满。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    }
+  ]
+}

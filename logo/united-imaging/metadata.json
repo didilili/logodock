@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 3,
+  "id": "united-imaging",
+  "name": "联影",
+  "aliases": [
+    "United Imaging"
+  ],
+  "identity": {
+    "nameZh": "联影",
+    "nameEn": "United Imaging",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.united-imaging.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.united-imaging.com/",
+  "entityType": "company",
+  "categories": [
+    "医疗设备"
+  ],
+  "defaultAsset": "logo-zh.png",
+  "assets": [
+    {
+      "file": "logo-zh.png",
+      "label": "中文组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.united-imaging.com/-/media/uih/logo/logo.png",
+      "sourcePage": "https://www.united-imaging.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "f1d7ac8f73e1a124b9bb27d8cd48149c61167c894f6a7ea9a6ec3d7cabea62d4",
+      "bytes": 11982,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.united-imaging.com/",
+        "attribution": "联影。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-en.png",
+      "label": "英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.united-imaging.com/-/media/uih/logo/logo/logo-en.png",
+      "sourcePage": "https://www.united-imaging.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "5f60bfeca4eca01b4c2c9ff5b3f98ea67a77e72b5e8988e1f51c11bc9c42f058",
+      "bytes": 2895,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.united-imaging.com/",
+        "attribution": "联影。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "symbol.png",
+      "label": "深青色图形",
+      "variant": "icon",
+      "language": "en",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.united-imaging.com/-/media/uih/logo/logo-pure.png",
+      "sourcePage": "https://www.united-imaging.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "7bbe13157cd474764ee9579a42ee2b8bf279751d54e664c7c6deb8c8f58f22bb",
+      "bytes": 2054,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.united-imaging.com/",
+        "attribution": "联影。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "图形由 U 与 I 字母构成。"
+      ]
+    }
+  ]
+}

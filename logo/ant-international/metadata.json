@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 3,
+  "id": "ant-international",
+  "name": "蚂蚁国际",
+  "aliases": [],
+  "identity": {
+    "nameZh": "蚂蚁国际",
+    "nameEn": "Ant International",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.ant-intl.com/cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.ant-intl.com/cn/",
+  "entityType": "company",
+  "categories": [
+    "金融"
+  ],
+  "defaultAsset": "logo-brand.svg",
+  "assets": [
+    {
+      "file": "logo-brand.svg",
+      "label": "彩色英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://cdn.marmot-cloud.com/storage/intl_website/2025/11/18/Ys73XZ4/logo-nav-antintl-color.svg",
+      "sourcePage": "https://www.ant-intl.com/cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "3458f3438b09606f2fe83be6e2cd54e0feb7a713abc0633ce0935cb03c2b8aaa",
+      "bytes": 11538,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.ant-intl.com/cn/",
+        "attribution": "蚂蚁国际。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-white.svg",
+      "label": "反白英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://cdn.marmot-cloud.com/storage/intl_website/2025/11/18/TuMKh9G/logo-nav-antintl-white.svg",
+      "sourcePage": "https://www.ant-intl.com/cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "3411bbe80968ebcab2e5c0b69609dba1ee2730b7a3127a9705ef8c8454aaedd0",
+      "bytes": 8897,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.ant-intl.com/cn/",
+        "attribution": "蚂蚁国际。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "symbol-brand.svg",
+      "label": "彩色图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://cdn.marmot-cloud.com/storage/intl_website/2025/11/18/Ys73XZ4/logo-nav-antintl-color.svg",
+      "sourcePage": "https://www.ant-intl.com/cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "originalAsset": "logo-brand.svg",
+        "originalSha256": "3458f3438b09606f2fe83be6e2cd54e0feb7a713abc0633ce0935cb03c2b8aaa"
+      },
+      "sha256": "a22c32ac412ae75bb5e986149535233681c6ca9c640036b14245832338e4c1ad",
+      "bytes": 6102,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.ant-intl.com/cn/",
+        "attribution": "蚂蚁国际。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "从同品牌原始 SVG 提取图形，方形画布长边贴边，短边居中，额外边距为零。"
+      ]
+    }
+  ]
+}

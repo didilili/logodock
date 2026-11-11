@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 3,
+  "id": "haidilao",
+  "name": "海底捞",
+  "aliases": [],
+  "identity": {
+    "nameZh": "海底捞",
+    "nameEn": "Haidilao",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.haidilao.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.haidilao.com/",
+  "entityType": "company",
+  "categories": [
+    "餐饮"
+  ],
+  "defaultAsset": "logo-bilingual.svg",
+  "assets": [
+    {
+      "file": "logo-bilingual.svg",
+      "label": "中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://www.haidilao.com/static/img/logo_en.d046b51a.svg",
+      "sourcePage": "https://www.haidilao.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "ea86474e8dafd125a4e85ff05e9984ad6bddc63e6e2572b3bd99c24de8d3f034",
+      "bytes": 19319,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.haidilao.com/",
+        "attribution": "海底捞。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

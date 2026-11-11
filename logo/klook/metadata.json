@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 3,
+  "id": "klook",
+  "name": "客路",
+  "aliases": [
+    "Klook"
+  ],
+  "identity": {
+    "nameZh": "客路",
+    "nameEn": "Klook",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.klook.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.klook.com/",
+  "entityType": "company",
+  "categories": [
+    "旅游"
+  ],
+  "defaultAsset": "logo-rgb-official.png",
+  "assets": [
+    {
+      "file": "logo-rgb-official.png",
+      "label": "彩色橙字英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://drive.usercontent.google.com/download?id=1AwtxJmZVk0PeNaUQoj0Due8B7KR2Ccjs&export=download",
+      "sourcePage": "https://drive.google.com/drive/folders/1G0HL-c1hHTvZ0BERVdfRP05c0cNYkJdS",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library",
+        "pageTitle": "Klook Press Assets Rebrand · Klook Icon / PNG"
+      },
+      "sha256": "1b887026c519bf746849d7c0dafff4a382f2e36630fde95315c87ab4f89264e4",
+      "bytes": 17085,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.prnewswire.com/news-releases/klook-rebrands-signaling-the-transformation-of-its-business-to-power-a-new-future-of-travel-301492309.html",
+        "attribution": "Klook，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-11",
+        "notes": "Klook 官方新闻稿所链接的品牌重塑媒体素材包。官方公开提供下载，仓库再分发授权及具体使用条件尚未核实。"
+      },
+      "qualityNotes": [
+        "透明背景，RGB 配色。"
+      ]
+    }
+  ]
+}

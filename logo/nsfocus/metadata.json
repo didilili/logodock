@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 3,
+  "id": "nsfocus",
+  "name": "绿盟科技",
+  "aliases": [
+    "NSFOCUS"
+  ],
+  "identity": {
+    "nameZh": "绿盟科技",
+    "nameEn": "NSFOCUS",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.nsfocus.com.cn/html/7/11/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.nsfocus.com.cn/html/7/11/",
+  "entityType": "company",
+  "categories": [
+    "software"
+  ],
+  "defaultAsset": "logo.png",
+  "assets": [
+    {
+      "file": "logo.png",
+      "label": "白色英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.nsfocus.com.cn/statics/fer2/upimg/logo.png",
+      "sourcePage": "https://www.nsfocus.com.cn/html/7/11/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "fb11fb09248a11aba4c072c7a2fe950f8384bb462838810972b0dfe07583bf56",
+      "bytes": 7532,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.nsfocus.com.cn/html/7/11/",
+        "attribution": "绿盟科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网小尺寸原图，适合按原生像素取用。"
+      ]
+    }
+  ]
+}

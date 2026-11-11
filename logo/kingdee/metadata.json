@@ -80,6 +80,36 @@
       "usageWarnings": [
         "SVG 内嵌 1492 × 506 PNG，放大后仍受原始位图像素限制。"
       ]
+    },
+    {
+      "file": "logo-color-chinese-header.png",
+      "label": "彩色中文横版",
+      "variant": "logo",
+      "status": "current",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.kingdee.com/r/cms/www/default/2025Assets/img2025/logo.png",
+      "sourcePage": "https://www.kingdee.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header"
+      },
+      "qualityNotes": [
+        "透明背景，保留画布留白，有效图稿约 8502 × 3978 像素。"
+      ],
+      "sha256": "85f504349689e44d42687ed817cb8d07e8fca9e8e1553f2fe5e8104cc701fa64",
+      "bytes": 523495,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.kingdee.com/",
+        "attribution": "金蝶。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-11"
+      }
     }
   ]
 }

@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 3,
+  "id": "eaton",
+  "name": "伊顿",
+  "aliases": [
+    "伊顿电气"
+  ],
+  "identity": {
+    "nameZh": "伊顿",
+    "nameEn": "Eaton",
+    "legalNames": [
+      {
+        "name": "Eaton Corporation plc",
+        "language": "en",
+        "role": "group",
+        "source": "https://www.eaton.com/us/en-us/company/news-insights/media-resources.html",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
+    "sources": [
+      {
+        "label": "官方品牌身份来源",
+        "url": "https://www.eaton.com/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方媒体页与现用品牌图稿",
+        "url": "https://origin-login.eaton.com/in/en-us/company/news-insights/media-resources.html",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.eaton.com/",
+  "entityType": "company",
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "wordmark-blue.png",
+  "assets": [
+    {
+      "file": "wordmark-blue.png",
+      "label": "官方蓝色英文",
+      "source": "https://origin-login.eaton.com/content/dam/eaton/global/logos/eaton-logo-mobile.png",
+      "sourcePage": "https://origin-login.eaton.com/in/en-us/company/news-insights/media-resources.html",
+      "sha256": "97b1a14991845052ceeff9dfcd963ab9f25a64f8a8abe7d755aec752bbdd9686",
+      "bytes": 3726,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://origin-login.eaton.com/in/en-us/company/news-insights/media-resources.html",
+        "attribution": "Eaton。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "Eaton 标志为注册商标。官方媒体页要求使用 Logo 及取得可复制图稿前联系 media@eaton.com。遵守官方规范的留白、最小尺寸及配色要求。"
+      },
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    },
+    {
+      "file": "logo-slogan-blue.png",
+      "label": "蓝色英文及口号",
+      "source": "https://origin-login.eaton.com/content/dam/eaton/global/logos/eaton-logo-small.png",
+      "sourcePage": "https://origin-login.eaton.com/in/en-us/company/news-insights/media-resources.html",
+      "sha256": "95ecaaa683aab48663eb33ec06f8a1ea797ac2da8698359f54f71fad720e5ef6",
+      "bytes": 2964,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://origin-login.eaton.com/in/en-us/company/news-insights/media-resources.html",
+        "attribution": "Eaton。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "Eaton 标志为注册商标。官方媒体页要求使用 Logo 及取得可复制图稿前联系 media@eaton.com。遵守官方规范的留白、最小尺寸及配色要求。"
+      },
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "官网原生 181×57 PNG，包含 Powering Business Worldwide 口号，适合原生尺寸的小型网页展示。"
+      ],
+      "usageWarnings": [
+        "口号字高较小，扩大展示及印刷前应向 Eaton 索取对应母稿。"
+      ]
+    },
+    {
+      "file": "logo-slogan-white.png",
+      "label": "反白英文及口号",
+      "source": "https://origin-login.eaton.com/content/dam/eaton/global/logos/eaton-logo-white-small.png",
+      "sourcePage": "https://origin-login.eaton.com/in/en-us/company/news-insights/media-resources.html",
+      "sha256": "d1cd0e130494537bef50097afcc171dee724f1d6a14b73b7ac309d2fd73c1eca",
+      "bytes": 3625,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://origin-login.eaton.com/in/en-us/company/news-insights/media-resources.html",
+        "attribution": "Eaton。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "Eaton 标志为注册商标。官方媒体页要求使用 Logo 及取得可复制图稿前联系 media@eaton.com。遵守官方规范的留白、最小尺寸及配色要求。"
+      },
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "官网原生 181×57 PNG，包含 Powering Business Worldwide 口号，适合原生尺寸的小型网页展示。"
+      ],
+      "usageWarnings": [
+        "口号字高较小，扩大展示及印刷前应向 Eaton 索取对应母稿。"
+      ]
+    }
+  ],
+  "sourceFiles": [
+    {
+      "file": "channel-partner-guidelines-2024.pdf",
+      "label": "2024渠道合作伙伴品牌规范",
+      "source": "https://origin-login.eaton.com/content/dam/eaton/company/policies-and-statements/eaton-channel-partner-graphic-guidelines.pdf",
+      "sourcePage": "https://origin-login.eaton.com/in/en-us/company/news-insights/media-resources.html",
+      "sha256": "9a7b577daf303344fe33f93eae2700ab57f881cfd5d94e59266f5d29e63d29b4",
+      "bytes": 13247632,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://origin-login.eaton.com/in/en-us/company/news-insights/media-resources.html",
+        "attribution": "Eaton。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "Eaton 标志为注册商标。规范中的授权合作伙伴身份标识仅供已建立协议关系的渠道伙伴使用，使用不得转让。普通 Logo 使用及可复制图稿需联系 media@eaton.com。"
+      },
+      "assetFiles": [
+        "wordmark-blue.png",
+        "logo-slogan-blue.png",
+        "logo-slogan-white.png"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 3,
+  "id": "sany",
+  "name": "三一重工",
+  "aliases": [],
+  "website": "https://www.sany.com.cn/",
+  "entityType": "company",
+  "identity": {
+    "nameZh": "三一重工",
+    "nameEn": "SANY",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌信息",
+        "url": "https://www.sany.com.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "categories": [
+    "industrial-automation",
+    "hardware"
+  ],
+  "defaultAsset": "logo-bilingual-official.png",
+  "assets": [
+    {
+      "file": "logo-bilingual-official.png",
+      "label": "中英横版组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.sany.com.cn/img/index/8.png",
+      "sourcePage": "https://www.sany.com.cn/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "8afb4b60630f1d7c5a93779bbcfae6ae28b5733e45b633bfddca274bb34ab320",
+      "bytes": 5647,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.sany.com.cn/",
+        "attribution": "三一重工，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-english-square-official.png",
+      "label": "英文方形组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.sany.com.cn/img/favicon.ico",
+      "sourcePage": "https://www.sany.com.cn/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "eaa5fcaddf8a344bb8fddacb468c79b0500fd5b7e0b69e3a0cd2b55d746a3c18",
+      "bytes": 24399,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.sany.com.cn/",
+        "attribution": "三一重工，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "原生PNG，保留来源提供的方形构图。"
+      ]
+    }
+  ]
+}

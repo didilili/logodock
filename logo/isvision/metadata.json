@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 3,
+  "id": "isvision",
+  "name": "易思维",
+  "aliases": [],
+  "identity": {
+    "nameZh": "易思维",
+    "nameEn": "ISV",
+    "legalNames": [
+      {
+        "name": "易思维（杭州）科技股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.isv-tech.com/aboutus/l/en-us.html",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
+    "sources": [
+      {
+        "label": "官方品牌身份来源",
+        "url": "https://www.isv-tech.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.isv-tech.com/",
+  "entityType": "company",
+  "categories": [
+    "industrial-automation"
+  ],
+  "defaultAsset": "logo-bilingual.png",
+  "assets": [
+    {
+      "file": "logo-bilingual.png",
+      "label": "中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://www.isv-tech.com/themes/simpleboot3/public/assets/images/logo1.png",
+      "sourcePage": "https://www.isv-tech.com/",
+      "sha256": "905ada6bd231975bd6a9cdc44b7e7d4c3c3dedb6226b32e93b526d5af3a6fedc",
+      "bytes": 4752,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.isv-tech.com/",
+        "attribution": "易思维。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-white.png",
+      "label": "反白中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://www.isv-tech.com/themes/simpleboot3/public/assets/images/logo.png",
+      "sourcePage": "https://www.isv-tech.com/",
+      "sha256": "07742e0199ae39a099f3dc8130567c4411c9942dd4c9f31f79e2af41524384c7",
+      "bytes": 4327,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.isv-tech.com/",
+        "attribution": "易思维。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

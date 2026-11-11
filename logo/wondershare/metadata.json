@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 3,
+  "id": "wondershare",
+  "name": "万兴科技",
+  "aliases": [],
+  "website": "https://www.wondershare.cn/",
+  "entityType": "company",
+  "identity": {
+    "nameZh": "万兴科技",
+    "nameEn": "Wondershare",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌信息",
+        "url": "https://www.wondershare.cn/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方品牌信息",
+        "url": "https://www.wondershare.de/news/media-assets.html",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "categories": [
+    "software"
+  ],
+  "defaultAsset": "logo-english-black-official.svg",
+  "assets": [
+    {
+      "file": "logo-english-black-official.svg",
+      "label": "黑色英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "vertical",
+      "color": "black",
+      "background": "light",
+      "source": "https://neveragain.allstatics.com/2019/assets/icon/logo/wondershare-vertical.svg",
+      "sourcePage": "https://www.wondershare.de/news/media-assets.html",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "5617ce652a9005e4ee884a285359c9ff8b037d2619c34e274a52dd50f9761d55",
+      "bytes": 5588,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.wondershare.de/news/media-assets.html",
+        "attribution": "万兴科技，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-english-white-official.svg",
+      "label": "白色英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "vertical",
+      "color": "white",
+      "background": "dark",
+      "source": "https://neveragain.allstatics.com/2019/assets/icon/logo/wondershare-vertical-white.svg",
+      "sourcePage": "https://www.wondershare.de/news/media-assets.html",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "5838ef07a015006b48b8e9d0a099ee6cabec295589e1b8bfc66a701a48357967",
+      "bytes": 5594,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.wondershare.de/news/media-assets.html",
+        "attribution": "万兴科技，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "symbol-black-official.svg",
+      "label": "黑色图形 · 原始画布",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "black",
+      "background": "light",
+      "source": "https://neveragain.allstatics.com/2019/assets/icon/logo/wondershare-square.svg",
+      "sourcePage": "https://www.wondershare.de/news/media-assets.html",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "24084588f88caba63c40715662c78c031f298aa3cc59ca5f0f6671539acaec6a",
+      "bytes": 673,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.wondershare.de/news/media-assets.html",
+        "attribution": "万兴科技，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "symbol-white-official.svg",
+      "label": "白色图形 · 原始画布",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "white",
+      "background": "dark",
+      "source": "https://neveragain.allstatics.com/2019/assets/icon/logo/wondershare-square-white.svg",
+      "sourcePage": "https://www.wondershare.de/news/media-assets.html",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "68195931a829d2e0aa5159536c769c036c1b908c406e598c95d9e45edc6806af",
+      "bytes": 679,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.wondershare.de/news/media-assets.html",
+        "attribution": "万兴科技，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-bilingual-slogan-white-official.svg",
+      "label": "白色中英口号组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "vertical",
+      "color": "white",
+      "background": "dark",
+      "source": "https://neveragain.allstatics.com/2019/assets/icon/logo/wondershare-zh-slogan-vertical-white.svg",
+      "sourcePage": "https://www.wondershare.cn/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "6d6c2d39a251b531eb2bd95d17e66141099e398946c2f2a954268ca55ff19f25",
+      "bytes": 36098,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.wondershare.cn/",
+        "attribution": "万兴科技，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "symbol-black-square-extracted.svg",
+      "label": "黑色图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "black",
+      "background": "light",
+      "source": "https://neveragain.allstatics.com/2019/assets/icon/logo/wondershare-square.svg",
+      "sourcePage": "https://www.wondershare.de/news/media-assets.html",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "brand-library",
+        "originalAsset": "symbol-black-official.svg",
+        "originalSha256": "24084588f88caba63c40715662c78c031f298aa3cc59ca5f0f6671539acaec6a"
+      },
+      "sha256": "319ad7b170897827cdcaf4cde947d11aaaf93ca1ec729448d974fd81ea739856",
+      "bytes": 734,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.wondershare.de/news/media-assets.html",
+        "attribution": "万兴科技，商标及其他权利归相应权利人。 图形提取由LogoDock完成。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "透明背景，长边贴边，短边居中补齐方形画布。"
+      ]
+    },
+    {
+      "file": "symbol-white-square-extracted.svg",
+      "label": "白色图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "white",
+      "background": "dark",
+      "source": "https://neveragain.allstatics.com/2019/assets/icon/logo/wondershare-square-white.svg",
+      "sourcePage": "https://www.wondershare.de/news/media-assets.html",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "brand-library",
+        "originalAsset": "symbol-white-official.svg",
+        "originalSha256": "68195931a829d2e0aa5159536c769c036c1b908c406e598c95d9e45edc6806af"
+      },
+      "sha256": "2c7ae2a402436a1ad63084ef0ac9bcb55a476a82a6a8147cbe59bc48dbb12dfd",
+      "bytes": 740,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.wondershare.de/news/media-assets.html",
+        "attribution": "万兴科技，商标及其他权利归相应权利人。 图形提取由LogoDock完成。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "透明背景，长边贴边，短边居中补齐方形画布。"
+      ]
+    },
+    {
+      "file": "logo-bilingual-horizontal-stock-official.svg",
+      "label": "黑色中英股票代码组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "source": "https://www.wondershare.cn/images/images2025/header/header-brand-logo.svg",
+      "sourcePage": "https://www.wondershare.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header"
+      },
+      "sha256": "08969ac24744ae9508587e14f99bb22265f7dce5ab3077a77975510b81e14cd9",
+      "bytes": 18564,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.wondershare.cn/",
+        "attribution": "万兴科技，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-11"
+      },
+      "qualityNotes": [
+        "透明背景，含股票代码 300624.SZ。"
+      ]
+    }
+  ],
+  "artworks": [
+    {
+      "id": "symbol-black",
+      "label": "黑色图形",
+      "files": [
+        "symbol-black-official.svg",
+        "symbol-black-square-extracted.svg"
+      ],
+      "defaultAsset": "symbol-black-square-extracted.svg"
+    },
+    {
+      "id": "symbol-white",
+      "label": "白色图形",
+      "files": [
+        "symbol-white-official.svg",
+        "symbol-white-square-extracted.svg"
+      ],
+      "defaultAsset": "symbol-white-square-extracted.svg"
+    }
+  ]
+}

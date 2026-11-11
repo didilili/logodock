@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 3,
+  "id": "autohome",
+  "name": "汽车之家",
+  "aliases": [],
+  "identity": {
+    "nameZh": "汽车之家",
+    "nameEn": "Autohome",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.autohome.com.cn/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方投资者关系英文介绍",
+        "url": "https://ir.autohome.com.cn/",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "website": "https://www.autohome.com.cn/",
+  "entityType": "company",
+  "categories": [
+    "automotive",
+    "internet"
+  ],
+  "defaultAsset": "wordmark-blue.png",
+  "assets": [
+    {
+      "file": "wordmark-blue.png",
+      "label": "蓝色中文",
+      "variant": "wordmark",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://z.autoimg.cn/fe/auto-header/images/logo.png",
+      "sourcePage": "https://www.autohome.com.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "812f6f5f8229240f486a07ec34050e32346f44e82d66276026c56387cfbf5a33",
+      "bytes": 5179,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.autohome.com.cn/",
+        "attribution": "汽车之家。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

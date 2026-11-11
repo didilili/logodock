@@ -55,6 +55,38 @@
         "attribution": "高德。许可及署名条件待核实。",
         "reviewedAt": "2026-11-09"
       }
+    },
+    {
+      "file": "logo-map-horizontal.png",
+      "label": "地图中文横版",
+      "variant": "logo",
+      "status": "current",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://webapi.amap.com/theme/v2.0/logo@2x.png",
+      "sourcePage": "https://www.amap.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "2b3609912e697b8a770631cc078039e9691967312ae437e5959ba15d5a5cccce",
+      "bytes": 4379,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.amap.com/",
+        "attribution": "高德，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-11"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ],
+      "usageWarnings": [
+        "细小字标边缘受像素限制，适合原生尺寸或缩小使用。"
+      ]
     }
   ]
 }

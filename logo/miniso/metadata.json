@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 3,
+  "id": "miniso",
+  "name": "名创优品",
+  "aliases": [
+    "MINISO"
+  ],
+  "identity": {
+    "nameZh": "名创优品",
+    "nameEn": "MINISO",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.miniso.com/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方品牌标识释义",
+        "url": "https://www.miniso.com/brand/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方门店应用发行商记录",
+        "url": "https://apps.apple.com/cn/app/miniso%E7%A7%BB%E5%8A%A8%E5%8A%A9%E6%89%8B/id6468981157?uo=4",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.miniso.com/",
+  "entityType": "company",
+  "categories": [
+    "零售"
+  ],
+  "defaultAsset": "logo.png",
+  "assets": [
+    {
+      "file": "wink.png",
+      "label": "Wink笑脸图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "source": "https://www.miniso.cn/vancheerfile/images/2024/3/2024030912337300.png",
+      "sourcePage": "https://www.miniso.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "c2c3db667f749fb24c989bdb6c5bff2bdc462011f02b133a393c6b32cca5d849",
+      "bytes": 3307,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.miniso.com/",
+        "attribution": "名创优品。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网小尺寸原图，适合按原生像素取用。"
+      ]
+    },
+    {
+      "file": "logo.png",
+      "label": "红色购物袋标识",
+      "variant": "logo",
+      "language": "en",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.miniso.com/vancheerfile/images/2024/3/20240309123353006.png",
+      "sourcePage": "https://www.miniso.com/brand/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "0cbb19b6afdb14af68567bf26e43a560d2020f1ab7fdb321744389d2922cd5e2",
+      "bytes": 5997,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.miniso.com/brand/",
+        "attribution": "名创优品，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "icon-mobile-assistant.jpg",
+      "label": "移动助手应用图标",
+      "variant": "icon",
+      "language": "bilingual",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/69/a5/13/69a51332-bfc0-6d3a-ce61-404ff405fa06/AppIcon-0-0-1x_U007emarketing-0-8-0-sRGB-85-220.png/512x512bb.jpg",
+      "sourcePage": "https://apps.apple.com/cn/app/miniso%E7%A7%BB%E5%8A%A8%E5%8A%A9%E6%89%8B/id6468981157?uo=4",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "app-store"
+      },
+      "sha256": "6008bc455710827c0fb69a0a64b60c5a13644e786ff966fd56a044a68a934082",
+      "bytes": 41957,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://apps.apple.com/cn/app/miniso%E7%A7%BB%E5%8A%A8%E5%8A%A9%E6%89%8B/id6468981157?uo=4",
+        "attribution": "名创优品，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      },
+      "usageWarnings": [
+        "官方门店应用图标，含“移动助手”字样，采用该应用原稿的红色配色。"
+      ],
+      "display": "alternative"
+    },
+    {
+      "file": "logo-horizontal-us-official.svg",
+      "label": "美国站横版组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://static.wixstatic.com/shapes/d5da94_6b44155b7ed54d7b81bdf7e999bf479a.svg",
+      "sourcePage": "https://www.miniso-us.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header"
+      },
+      "qualityNotes": [
+        "透明背景，保留画布留白。"
+      ],
+      "usageWarnings": [
+        "美国站使用稿，红色为 #d93832，与全球官网袋形版本的红色不同。"
+      ],
+      "sha256": "fc0edc899db2cf4f3b1ad6ae34f6a58dd4d665920659ccba730d1e8792668ff9",
+      "bytes": 6190,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.miniso-us.com/",
+        "attribution": "名创优品。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-11"
+      }
+    }
+  ]
+}

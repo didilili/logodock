@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 3,
+  "id": "fantuan",
+  "name": "饭团外卖",
+  "aliases": [],
+  "website": "https://www.fantuan.ca/",
+  "identity": {
+    "nameZh": "饭团外卖",
+    "nameEn": "Fantuan",
+    "legalNames": [
+      {
+        "name": "Just Order Enterprise Corp",
+        "language": "en",
+        "role": "operating-company",
+        "source": "https://apps.apple.com/ca/app/fantuan-delivery-%E9%A5%AD%E5%9B%A2%E5%A4%96%E5%8D%96/id1218697769?uo=4",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
+    "sources": [
+      {
+        "label": "官方应用商店",
+        "url": "https://apps.apple.com/ca/app/fantuan-delivery-%E9%A5%AD%E5%9B%A2%E5%A4%96%E5%8D%96/id1218697769?uo=4",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "icon-appstore.jpg",
+  "assets": [
+    {
+      "file": "icon-appstore.jpg",
+      "label": "饭团外卖应用图标",
+      "variant": "icon",
+      "status": "current",
+      "background": "any",
+      "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7c/74/91/7c7491a6-e0eb-83bd-9891-6aaec8a51fef/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/512x512bb.jpg",
+      "sourcePage": "https://apps.apple.com/ca/app/fantuan-delivery-%E9%A5%AD%E5%9B%A2%E5%A4%96%E5%8D%96/id1218697769?uo=4",
+      "sha256": "83b67b1a9ab5e7599c58a5bb369522e0d2848e1afe14ad3c9c207dea063dc224",
+      "bytes": 18542,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://apps.apple.com/ca/app/fantuan-delivery-%E9%A5%AD%E5%9B%A2%E5%A4%96%E5%8D%96/id1218697769?uo=4",
+        "attribution": "饭团外卖。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "rendered",
+        "channel": "app-store"
+      },
+      "qualityNotes": [
+        "官方饭团外卖应用图标，青绿色不透明背景。"
+      ]
+    },
+    {
+      "file": "logo-english-horizontal.png",
+      "label": "英文组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://cdn-static-web.fantuan.ca/_next/static/public/f633a7b95c46ec18/images/brand/fantuan-logo-primary.png",
+      "sourcePage": "https://www.fantuan.ca/en-US/about",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header"
+      },
+      "sha256": "3c6b0653ef358a3beb046e8f572dbb19d7cde8ffb3175f4dcb51bd6302fc529f",
+      "bytes": 79173,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.fantuan.ca/en-US/about",
+        "attribution": "饭团外卖，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-11"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ]
+    }
+  ]
+}

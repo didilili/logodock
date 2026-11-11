@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 3,
+  "id": "vitco",
+  "name": "远见聚众",
+  "aliases": [
+    "重庆远见"
+  ],
+  "identity": {
+    "nameZh": "远见聚众",
+    "nameEn": "VITCO NEXUS",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.vitco.cn/web/contact.html",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.vitco.cn/web/contact.html",
+  "entityType": "company",
+  "categories": [
+    "enterprise-software"
+  ],
+  "defaultAsset": "logo-vertical.png",
+  "assets": [
+    {
+      "file": "logo-vertical.png",
+      "label": "竖版中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://www.vitco.cn/images/yj_logo.png",
+      "sourcePage": "https://www.vitco.cn/web/contact.html",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "d9a8a9cb905f2061ee9e16ce9cb470e5eb0936b1ed434d0c58d519387b233fde",
+      "bytes": 6947,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.vitco.cn/web/contact.html",
+        "attribution": "重庆远见。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "不透明白底，含画布留白。"
+      ]
+    },
+    {
+      "file": "wordmark-english-footer-official.png",
+      "label": "灰色英文字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "monochrome",
+      "background": "light",
+      "source": "https://www.vitco.cn/images/footer_logo.png",
+      "sourcePage": "https://www.vitco.cn/web/contact.html",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "footer"
+      },
+      "sha256": "783002f7b8d079a3aaae8155d8835230592e1323ca4c1055b16e82829255fb27",
+      "bytes": 2521,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.vitco.cn/web/contact.html",
+        "attribution": "远见聚众，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-11"
+      },
+      "qualityNotes": [
+        "透明背景，可见字标约 112 × 12 像素。"
+      ],
+      "usageWarnings": [
+        "放大后小字和边缘清晰度受限。"
+      ]
+    }
+  ]
+}

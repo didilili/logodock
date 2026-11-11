@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 3,
+  "id": "biren",
+  "name": "壁仞科技",
+  "aliases": [],
+  "identity": {
+    "nameZh": "壁仞科技",
+    "nameEn": "BIRENTECH",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.birentech.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.birentech.com/",
+  "entityType": "company",
+  "categories": [
+    "hardware",
+    "ai"
+  ],
+  "defaultAsset": "symbol-square.svg",
+  "assets": [
+    {
+      "file": "symbol-original.svg",
+      "label": "蓝色图形原始画布",
+      "variant": "icon",
+      "language": "en",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://www.birentech.com/v-509f88f/_next/static/media/hero-logo-blue.382f0223.svg",
+      "sourcePage": "https://www.birentech.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "199efc6bcf51b3df023aed9615d1f88c9f6c378989bdc8e23ae30c087ff3211e",
+      "bytes": 5022,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.birentech.com/",
+        "attribution": "壁仞科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网动画用原始大画布，图形居中且留白较多。"
+      ],
+      "display": "alternative"
+    },
+    {
+      "file": "symbol-square.svg",
+      "label": "蓝色B图形",
+      "variant": "icon",
+      "language": "en",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://www.birentech.com/v-509f88f/_next/static/media/hero-logo-blue.382f0223.svg",
+      "sourcePage": "https://www.birentech.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "originalAsset": "symbol-original.svg",
+        "originalSha256": "199efc6bcf51b3df023aed9615d1f88c9f6c378989bdc8e23ae30c087ff3211e"
+      },
+      "sha256": "d758f1fea038c736a6ffe9d51306a5697c2bf1a7cf2f171d10ecc3ef783b8e46",
+      "bytes": 5338,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.birentech.com/",
+        "attribution": "壁仞科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "从同品牌原始 SVG 提取图形，方形画布长边贴边，短边居中，额外边距为零。"
+      ]
+    },
+    {
+      "file": "logo-bilingual-color-horizontal.svg",
+      "label": "彩色中英横版",
+      "variant": "logo",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "dark",
+      "source": "https://www.birentech.com/#nav-logo_svg",
+      "sourcePage": "https://www.birentech.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header"
+      },
+      "sha256": "a5cb427d77feea7ebfc3ca42c7eed3558d0e09bb7b710806051e16e5c6c99173",
+      "bytes": 15542,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.birentech.com/",
+        "attribution": "壁仞科技，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-11"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ]
+    },
+    {
+      "file": "logo-bilingual-white-horizontal.svg",
+      "label": "反白中英横版",
+      "variant": "logo",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://www.birentech.com/#logo-white_svg",
+      "sourcePage": "https://www.birentech.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "footer"
+      },
+      "sha256": "0d0a342fa22c69cf898d56ed8b49ddb18f1d1fa6c3d030b35d59049fd3ae6c3b",
+      "bytes": 22018,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.birentech.com/",
+        "attribution": "壁仞科技，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-11"
+      },
+      "qualityNotes": [
+        "透明背景。"
+      ]
+    }
+  ],
+  "artworks": [
+    {
+      "id": "blue-symbol",
+      "label": "蓝色B图形",
+      "files": [
+        "symbol-original.svg",
+        "symbol-square.svg"
+      ],
+      "defaultAsset": "symbol-square.svg"
+    }
+  ]
+}

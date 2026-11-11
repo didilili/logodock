@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 3,
+  "id": "huolala",
+  "name": "货拉拉",
+  "aliases": [
+    "Lalamove"
+  ],
+  "website": "https://www.huolala.cn/",
+  "identity": {
+    "nameZh": "货拉拉",
+    "nameEn": "Huolala",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://www.huolala.cn/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方全球招聘资料中的中英文品牌对应",
+        "url": "https://www.lalamove.com/hubfs/Lalamove%20Global%20Trainee%20Program_2025-1.pdf",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "官方可持续发展报告中的地域品牌关系",
+        "url": "https://www.lalamove.com/hubfs/Lalamove%20Website%202020/Sustainability/Lalamove%E9%A6%96%E4%BB%BD%E5%8F%AF%E6%8C%81%E7%BA%8C%E7%99%BC%E5%B1%95%E5%A0%B1%E5%91%8A%202022.pdf",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "wordmark-zh.png",
+  "assets": [
+    {
+      "file": "wordmark-zh.png",
+      "label": "橙色中文",
+      "variant": "wordmark",
+      "status": "current",
+      "background": "light",
+      "source": "https://static.huolala.cn/image/6d692332329d964c419e6e9216e5916801dd7f20.png",
+      "sourcePage": "https://www.huolala.cn/",
+      "sha256": "14a3405b1c4dae5bc949566b786d448c5e7f5fffb9034aeb896827b7f34a7ba8",
+      "bytes": 2346,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.huolala.cn/",
+        "attribution": "货拉拉。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    }
+  ]
+}

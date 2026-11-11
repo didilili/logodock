@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 3,
+  "id": "bluemedia",
+  "name": "蓝标传媒",
+  "aliases": [
+    "BlueMedia"
+  ],
+  "identity": {
+    "nameZh": "蓝标传媒",
+    "nameEn": "BlueMedia",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://bluemediagroup.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://bluemediagroup.cn/",
+  "entityType": "company",
+  "categories": [
+    "营销服务"
+  ],
+  "defaultAsset": "logo-color.png",
+  "assets": [
+    {
+      "file": "logo-color.png",
+      "label": "彩色中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://bluemediagroup.cn/img/Bluemedia.png",
+      "sourcePage": "https://bluemediagroup.cn/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "009e68a47e189a6085ce6804207c2e3a2f3255b8d0582f95c105f05f1941231d",
+      "bytes": 46325,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://bluemediagroup.cn/",
+        "attribution": "蓝标传媒。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "透明画布留白较多，有效图稿约1366 × 378像素。"
+      ]
+    },
+    {
+      "file": "logo.svg",
+      "label": "白色中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://bluemediagroup.cn/img/BlueMedia-logo.svg",
+      "sourcePage": "https://bluemediagroup.cn/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "f50b490a26e44a6ce851f99430f731389e0865cfe4a1e317e5508acf036d80d8",
+      "bytes": 7657,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://bluemediagroup.cn/",
+        "attribution": "蓝标传媒。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

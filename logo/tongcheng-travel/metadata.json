@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 3,
+  "id": "tongcheng-travel",
+  "name": "同程旅行",
+  "aliases": [],
+  "website": "https://www.tongchengir.com/",
+  "identity": {
+    "nameZh": "同程旅行",
+    "nameEn": "Tongcheng Travel",
+    "legalNames": [
+      {
+        "name": "Tongcheng Travel Holdings Limited",
+        "language": "en",
+        "role": "group",
+        "source": "https://www.tongchengir.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.tongchengir.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "logo-zh.png",
+  "assets": [
+    {
+      "file": "logo-zh.png",
+      "label": "紫金中文组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://www.tongchengir.com/media/2aqlzq4b/logo-footer.png",
+      "sourcePage": "https://www.tongchengir.com/",
+      "sha256": "f7ed43a369950bbbea19292da64f08090e545e0d62a370ce16164f3717ea9109",
+      "bytes": 13713,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.tongchengir.com/",
+        "attribution": "同程旅行。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "qualityNotes": [
+        "官网原生小尺寸位图，适合按原生像素或缩小使用。"
+      ]
+    }
+  ]
+}

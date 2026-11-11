@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 3,
+  "id": "spirit-ai",
+  "name": "千寻智能",
+  "aliases": [
+    "Spirit AI"
+  ],
+  "identity": {
+    "nameZh": "千寻智能",
+    "nameEn": "Spirit AI",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://docs.spirit-ai.com/zh",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://docs.spirit-ai.com/zh",
+  "entityType": "company",
+  "categories": [
+    "ai"
+  ],
+  "defaultAsset": "logo-zh.png",
+  "assets": [
+    {
+      "file": "logo-zh.png",
+      "label": "深色中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://docs.spirit-ai.com/logo-zh-dark.png",
+      "sourcePage": "https://docs.spirit-ai.com/zh",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "4974004452c184d5490ad3d81bae2aefd54d62e5edf8c45825c9454ecb611935",
+      "bytes": 43639,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://docs.spirit-ai.com/zh",
+        "attribution": "千寻智能。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-zh-white.png",
+      "label": "白色中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "source": "https://docs.spirit-ai.com/logo-zh-light.png",
+      "sourcePage": "https://docs.spirit-ai.com/zh",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "cf8737013b41de0e640c144cd97e7f639f5e2d67c4cca02b07b9feea95a20b41",
+      "bytes": 39487,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://docs.spirit-ai.com/zh",
+        "attribution": "千寻智能。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

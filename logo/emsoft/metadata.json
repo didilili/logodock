@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 3,
+  "id": "emsoft",
+  "name": "英迈软件",
+  "aliases": [],
+  "identity": {
+    "nameZh": "英迈软件",
+    "nameEn": "EMSOFT",
+    "legalNames": [
+      {
+        "name": "福建英迈软件有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.emsoft.com.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
+    "sources": [
+      {
+        "label": "官方品牌身份来源",
+        "url": "https://www.emsoft.com.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.emsoft.com.cn/",
+  "entityType": "company",
+  "categories": [
+    "enterprise-software"
+  ],
+  "defaultAsset": "logo-bilingual.png",
+  "assets": [
+    {
+      "file": "logo-bilingual.png",
+      "label": "中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://www.emsoft.com.cn/#/#embedded-image-0",
+      "sourcePage": "https://www.emsoft.com.cn/#/",
+      "sha256": "cf846632caa3aa471e84f8f47cc32812c17e325e66b9f4d5eed97a349ae5b7d3",
+      "bytes": 5750,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.emsoft.com.cn/#/",
+        "attribution": "英迈软件。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-white.png",
+      "label": "反白中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://www.emsoft.com.cn/#/#embedded-image-78",
+      "sourcePage": "https://www.emsoft.com.cn/#/",
+      "sha256": "ecf7b370c5aa6596a2db4efa2aab286dfede2308c931a99a27326b5d0c50196e",
+      "bytes": 5762,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.emsoft.com.cn/#/",
+        "attribution": "英迈软件。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

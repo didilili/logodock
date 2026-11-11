@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 3,
+  "id": "whalecloud",
+  "name": "浩鲸",
+  "aliases": [],
+  "website": "https://www.iwhalecloud.com/",
+  "identity": {
+    "nameZh": "浩鲸",
+    "nameEn": "Whale Cloud",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://www.iwhalecloud.com/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方英文公司介绍",
+        "url": "https://online.iwhalecloud.com/about-us",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "logo-zh.png",
+  "assets": [
+    {
+      "file": "logo-zh.png",
+      "label": "中文组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://www.iwhalecloud.com/upload/202110/1634010748.png",
+      "sourcePage": "https://www.iwhalecloud.com/",
+      "sha256": "2bc61b1f777b0e77f5441c8041117f5b54088dd1bb246fa522788b4c10286b20",
+      "bytes": 29098,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.iwhalecloud.com/",
+        "attribution": "浩鲸。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 3,
+  "id": "metax",
+  "name": "沐曦",
+  "aliases": [
+    "MetaX"
+  ],
+  "identity": {
+    "nameZh": "沐曦",
+    "nameEn": "MetaX",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.metax-tech.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.metax-tech.com/",
+  "entityType": "company",
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "logo.svg",
+  "assets": [
+    {
+      "file": "logo.svg",
+      "label": "彩色中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.metax-tech.com/img/logo.svg",
+      "sourcePage": "https://www.metax-tech.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "1e510d42aea196f5b2a7299bbc3734d2edaa65c3a9d2ad47b21682dd452d0085",
+      "bytes": 3291,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.metax-tech.com/",
+        "attribution": "沐曦。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-white.svg",
+      "label": "彩色白字组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "dark",
+      "source": "https://www.metax-tech.com/img/bs.svg",
+      "sourcePage": "https://www.metax-tech.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "b4d4633947aea83a70d46ced862d8712f9ccb4290179e420e42c6b5fb51b7f5f",
+      "bytes": 3288,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.metax-tech.com/",
+        "attribution": "沐曦。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

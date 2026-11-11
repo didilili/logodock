@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 3,
+  "id": "funplus",
+  "name": "趣加",
+  "aliases": [
+    "FunPlus"
+  ],
+  "identity": {
+    "nameZh": "趣加",
+    "nameEn": "FunPlus",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://funplus.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://funplus.com/",
+  "entityType": "company",
+  "categories": [
+    "entertainment"
+  ],
+  "defaultAsset": "logo.svg",
+  "assets": [
+    {
+      "file": "logo.svg",
+      "label": "橙色英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://funplus.com/",
+      "sourcePage": "https://funplus.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "8ee0270eb13af099f62aa34c8a99b45e898e8c2b23b00c0092d1b3721ccfdd37",
+      "bytes": 5476,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://funplus.com/",
+        "attribution": "趣加（FunPlus）。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "symbol.svg",
+      "label": "橙色图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "light",
+      "source": "https://funplus.com/",
+      "sourcePage": "https://funplus.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "originalAsset": "logo.svg",
+        "originalSha256": "8ee0270eb13af099f62aa34c8a99b45e898e8c2b23b00c0092d1b3721ccfdd37"
+      },
+      "sha256": "8c70254db06ec02d432758b4dd697c39e82a515ad16d896e42949d5879ad0c52",
+      "bytes": 2548,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://funplus.com/",
+        "attribution": "趣加（FunPlus）。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "方形透明画布，长边贴边，短边居中，额外边距为零。"
+      ]
+    }
+  ]
+}

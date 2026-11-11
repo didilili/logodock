@@ -145,7 +145,7 @@ test('catalog transparency searches return the matching downloadable files', asy
         'logo-english-orange-background.jpg',
       ],
     ],
-    ['金蝶 透明', ['logo-color-english-official.svg']],
+    ['金蝶 透明', ['logo-color-chinese-header.png', 'logo-color-english-official.svg']],
     ['小红书 红底', ['wordmark-capsule-official.svg', 'wordmark-rounded-google-play.png']],
     ['小红书 透明', ['wordmark-capsule-official.svg', 'wordmark-rounded-google-play.png']],
   ]) {
@@ -165,7 +165,7 @@ test('shortened catalog labels preserve language, shape, layout and color search
   for (const [id, query, count] of [
     ['tencent', '腾讯 中英', 3],
     ['tencent', '腾讯 英文', 12],
-    ['yonyou', '用友 英文', 2],
+    ['yonyou', '用友 英文', 3],
     ['alibaba', '阿里巴巴 橙色', 2],
     ['codeberg', 'codeberg 图标 白色', 1],
     ['minimax', 'minimax 竖版', 1],

@@ -1,0 +1,357 @@
+{
+  "schemaVersion": 3,
+  "id": "youzan",
+  "name": "有赞",
+  "aliases": [],
+  "identity": {
+    "nameZh": "有赞",
+    "nameEn": "YOUZAN",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌身份来源",
+        "url": "https://www.youzan.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.youzan.com/",
+  "entityType": "company",
+  "categories": [
+    "e-commerce",
+    "enterprise-software"
+  ],
+  "defaultAsset": "logo-zh-brand.png",
+  "assets": [
+    {
+      "file": "logo-zh-brand.png",
+      "label": "中文红黑组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://file.yzcdn.cn/upload_files/yz-file/2021/04/30/lpG1OiKsEuyPzfKBJYlFFuIrhmQP.zip?attname=%E6%9C%89%E8%B5%9E%E5%93%81%E7%89%8C%E7%89%A9%E6%96%99.zip",
+      "sourcePage": "https://www.youzan.com/cms/article/15806.html",
+      "sha256": "b4fb047e057057e579d931cdb1f9f257f5ed0b66b22fd4fd69c89b23e6ca3ae9",
+      "bytes": 202987,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.youzan.com/cms/article/15806.html",
+        "attribution": "有赞。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "使用前需向有赞申请书面授权，并遵守授权期限、范围及品牌规范，禁止变形。"
+      },
+      "qualityNotes": [
+        "品牌包原始大画布，包含透明留白。"
+      ]
+    },
+    {
+      "file": "logo-zh-red-white.png",
+      "label": "中文红白组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "dark",
+      "status": "current",
+      "source": "https://file.yzcdn.cn/upload_files/yz-file/2021/04/30/lpG1OiKsEuyPzfKBJYlFFuIrhmQP.zip?attname=%E6%9C%89%E8%B5%9E%E5%93%81%E7%89%8C%E7%89%A9%E6%96%99.zip",
+      "sourcePage": "https://www.youzan.com/cms/article/15806.html",
+      "sha256": "adb826886a3a20ba889e2ffce65289345571ad5b2c76f9b55842cd4f0862716d",
+      "bytes": 194405,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.youzan.com/cms/article/15806.html",
+        "attribution": "有赞。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "使用前需向有赞申请书面授权，并遵守授权期限、范围及品牌规范，禁止变形。"
+      },
+      "qualityNotes": [
+        "品牌包原始大画布，包含透明留白。"
+      ]
+    },
+    {
+      "file": "logo-zh-white.png",
+      "label": "中文反白组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://file.yzcdn.cn/upload_files/yz-file/2021/04/30/lpG1OiKsEuyPzfKBJYlFFuIrhmQP.zip?attname=%E6%9C%89%E8%B5%9E%E5%93%81%E7%89%8C%E7%89%A9%E6%96%99.zip",
+      "sourcePage": "https://www.youzan.com/cms/article/15806.html",
+      "sha256": "17bb598458c84f2c360202758bde669e360e4d7e4cb355600cebe204baca9b53",
+      "bytes": 190800,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.youzan.com/cms/article/15806.html",
+        "attribution": "有赞。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "使用前需向有赞申请书面授权，并遵守授权期限、范围及品牌规范，禁止变形。"
+      },
+      "qualityNotes": [
+        "品牌包原始大画布，包含透明留白。"
+      ]
+    },
+    {
+      "file": "symbol-red.png",
+      "label": "红底拇指图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "status": "current",
+      "source": "https://file.yzcdn.cn/upload_files/yz-file/2021/04/30/lpG1OiKsEuyPzfKBJYlFFuIrhmQP.zip?attname=%E6%9C%89%E8%B5%9E%E5%93%81%E7%89%8C%E7%89%A9%E6%96%99.zip",
+      "sourcePage": "https://www.youzan.com/cms/article/15806.html",
+      "sha256": "27cee2a66b91e1b46dc9f0cb4effc879a434588627fb7e550c535d515a12e461",
+      "bytes": 227329,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.youzan.com/cms/article/15806.html",
+        "attribution": "有赞。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "使用前需向有赞申请书面授权，并遵守授权期限、范围及品牌规范，禁止变形。"
+      },
+      "qualityNotes": [
+        "品牌包原始大画布，包含透明留白。"
+      ]
+    },
+    {
+      "file": "symbol-white.png",
+      "label": "白底拇指图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "background": "any",
+      "status": "current",
+      "source": "https://file.yzcdn.cn/upload_files/yz-file/2021/04/30/lpG1OiKsEuyPzfKBJYlFFuIrhmQP.zip?attname=%E6%9C%89%E8%B5%9E%E5%93%81%E7%89%8C%E7%89%A9%E6%96%99.zip",
+      "sourcePage": "https://www.youzan.com/cms/article/15806.html",
+      "sha256": "209f2d5f1377aae4af2a62364b340e5a02161ac04b00e16bc1cef71a0a38b62e",
+      "bytes": 219400,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.youzan.com/cms/article/15806.html",
+        "attribution": "有赞。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "使用前需向有赞申请书面授权，并遵守授权期限、范围及品牌规范，禁止变形。"
+      },
+      "qualityNotes": [
+        "品牌包原始大画布，包含透明留白。"
+      ]
+    },
+    {
+      "file": "logo-en-brand.png",
+      "label": "英文红黑组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://file.yzcdn.cn/upload_files/yz-file/2021/04/30/lpG1OiKsEuyPzfKBJYlFFuIrhmQP.zip?attname=%E6%9C%89%E8%B5%9E%E5%93%81%E7%89%8C%E7%89%A9%E6%96%99.zip",
+      "sourcePage": "https://www.youzan.com/cms/article/15806.html",
+      "sha256": "876a3a698ecf601052d086ee30c237bcffc698b8aa7cac42d44a44d91b271e70",
+      "bytes": 157950,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.youzan.com/cms/article/15806.html",
+        "attribution": "有赞。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "使用前需向有赞申请书面授权，并遵守授权期限、范围及品牌规范，禁止变形。"
+      },
+      "qualityNotes": [
+        "品牌包原始大画布，包含透明留白。"
+      ]
+    },
+    {
+      "file": "logo-en-red-white.png",
+      "label": "英文红白组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "dark",
+      "status": "current",
+      "source": "https://file.yzcdn.cn/upload_files/yz-file/2021/04/30/lpG1OiKsEuyPzfKBJYlFFuIrhmQP.zip?attname=%E6%9C%89%E8%B5%9E%E5%93%81%E7%89%8C%E7%89%A9%E6%96%99.zip",
+      "sourcePage": "https://www.youzan.com/cms/article/15806.html",
+      "sha256": "fc5c492c5349170becc2a3b23ff9bd2f50c78b2b23fff2748a08a6be0c97ca12",
+      "bytes": 202376,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.youzan.com/cms/article/15806.html",
+        "attribution": "有赞。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "使用前需向有赞申请书面授权，并遵守授权期限、范围及品牌规范，禁止变形。"
+      },
+      "qualityNotes": [
+        "品牌包原始大画布，包含透明留白。"
+      ]
+    },
+    {
+      "file": "logo-en-white.png",
+      "label": "英文白底图形组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "dark",
+      "status": "current",
+      "source": "https://file.yzcdn.cn/upload_files/yz-file/2021/04/30/lpG1OiKsEuyPzfKBJYlFFuIrhmQP.zip?attname=%E6%9C%89%E8%B5%9E%E5%93%81%E7%89%8C%E7%89%A9%E6%96%99.zip",
+      "sourcePage": "https://www.youzan.com/cms/article/15806.html",
+      "sha256": "2f09658fc5476f3f8f90c596ffa46fa0c098137a841bfd9f75013f71752c3cbf",
+      "bytes": 151659,
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.youzan.com/cms/article/15806.html",
+        "attribution": "有赞。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "使用前需向有赞申请书面授权，并遵守授权期限、范围及品牌规范，禁止变形。"
+      },
+      "qualityNotes": [
+        "品牌包原始大画布，包含透明留白。"
+      ]
+    }
+  ],
+  "sourceFiles": [
+    {
+      "file": "logo-zh.ai",
+      "label": "中文标识设计稿",
+      "assetFiles": [
+        "logo-zh-brand.png",
+        "logo-zh-red-white.png",
+        "logo-zh-white.png"
+      ],
+      "source": "https://file.yzcdn.cn/upload_files/yz-file/2021/04/30/lpG1OiKsEuyPzfKBJYlFFuIrhmQP.zip?attname=%E6%9C%89%E8%B5%9E%E5%93%81%E7%89%8C%E7%89%A9%E6%96%99.zip",
+      "sourcePage": "https://www.youzan.com/cms/article/15806.html",
+      "sha256": "42a579d6226396e5df36a1ec5ceec18b38219279f9d9e6938c6f7c23ed0bbcdc",
+      "bytes": 1496188,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.youzan.com/cms/article/15806.html",
+        "attribution": "有赞。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "使用前需向有赞申请书面授权，遵守品牌使用规范。"
+      }
+    },
+    {
+      "file": "symbol.ai",
+      "label": "图形标识设计稿",
+      "assetFiles": [
+        "symbol-red.png",
+        "symbol-white.png"
+      ],
+      "source": "https://file.yzcdn.cn/upload_files/yz-file/2021/04/30/lpG1OiKsEuyPzfKBJYlFFuIrhmQP.zip?attname=%E6%9C%89%E8%B5%9E%E5%93%81%E7%89%8C%E7%89%A9%E6%96%99.zip",
+      "sourcePage": "https://www.youzan.com/cms/article/15806.html",
+      "sha256": "16997807d6ff48d624e350491bc07229d1a876f477e8d505189c404a52253c5d",
+      "bytes": 1092209,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.youzan.com/cms/article/15806.html",
+        "attribution": "有赞。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "使用前需向有赞申请书面授权，遵守品牌使用规范。"
+      }
+    },
+    {
+      "file": "logo-en.ai",
+      "label": "英文标识设计稿",
+      "assetFiles": [
+        "logo-en-brand.png",
+        "logo-en-red-white.png",
+        "logo-en-white.png"
+      ],
+      "source": "https://file.yzcdn.cn/upload_files/yz-file/2021/04/30/lpG1OiKsEuyPzfKBJYlFFuIrhmQP.zip?attname=%E6%9C%89%E8%B5%9E%E5%93%81%E7%89%8C%E7%89%A9%E6%96%99.zip",
+      "sourcePage": "https://www.youzan.com/cms/article/15806.html",
+      "sha256": "0517c393904c3c18cf42ddab0bbd525dc39938a4625176483d8b45970dd581bc",
+      "bytes": 1089011,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.youzan.com/cms/article/15806.html",
+        "attribution": "有赞。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "使用前需向有赞申请书面授权，遵守品牌使用规范。"
+      }
+    },
+    {
+      "file": "brand-guidelines-2021.pdf",
+      "label": "2021品牌标识手册",
+      "assetFiles": [
+        "logo-zh-brand.png",
+        "logo-zh-red-white.png",
+        "logo-zh-white.png",
+        "symbol-red.png",
+        "symbol-white.png",
+        "logo-en-brand.png",
+        "logo-en-red-white.png",
+        "logo-en-white.png"
+      ],
+      "source": "https://file.yzcdn.cn/upload_files/yz-file/2021/04/30/lpG1OiKsEuyPzfKBJYlFFuIrhmQP.zip?attname=%E6%9C%89%E8%B5%9E%E5%93%81%E7%89%8C%E7%89%A9%E6%96%99.zip",
+      "sourcePage": "https://www.youzan.com/cms/article/15806.html",
+      "sha256": "11788018c832fc0467994a217999c092fe6bb1a3f116a51b440157b07b0217ce",
+      "bytes": 1435560,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.youzan.com/cms/article/15806.html",
+        "attribution": "有赞。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "使用前需向有赞申请书面授权，遵守品牌使用规范。"
+      }
+    }
+  ]
+}

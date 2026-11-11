@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 3,
+  "id": "stepfun",
+  "name": "阶跃星辰",
+  "aliases": [],
+  "website": "https://www.stepfun.com/",
+  "identity": {
+    "nameZh": "阶跃星辰",
+    "nameEn": "StepFun",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://www.stepfun.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "symbol-black.svg",
+  "assets": [
+    {
+      "file": "logo-black.svg",
+      "label": "黑色英文组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://www.stepfun.com/assets/logo-B0FsyLQP.svg",
+      "sourcePage": "https://www.stepfun.com/",
+      "sha256": "9e74bcc70b672a5050a5553d918878bf0dd80f30dab59b0e0175c9b5d548e35c",
+      "bytes": 7937,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.stepfun.com/",
+        "attribution": "阶跃星辰。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "en",
+      "layout": "horizontal",
+      "color": "black",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    },
+    {
+      "file": "symbol-black.svg",
+      "label": "黑色独立图形",
+      "variant": "icon",
+      "status": "current",
+      "background": "light",
+      "source": "https://www.stepfun.com/assets/logo-B0FsyLQP.svg",
+      "sourcePage": "https://www.stepfun.com/",
+      "sha256": "99f587dce519539d6289832be036e3eb5bd6a0919ac7ffd287b8a7ca8f2152a9",
+      "bytes": 487,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.stepfun.com/",
+        "attribution": "阶跃星辰。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "none",
+      "layout": "standalone",
+      "color": "black",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "originalAsset": "logo-black.svg",
+        "originalSha256": "9e74bcc70b672a5050a5553d918878bf0dd80f30dab59b0e0175c9b5d548e35c"
+      },
+      "qualityNotes": [
+        "从已登记官方组合标保留独立图形路径，方形长边贴边，短边居中，额外边距为零。"
+      ]
+    }
+  ]
+}

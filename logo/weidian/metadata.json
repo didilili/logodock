@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 3,
+  "id": "weidian",
+  "name": "微店",
+  "aliases": [],
+  "identity": {
+    "nameZh": "微店",
+    "nameEn": "Weidian",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.weidian.com/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方英文隐私声明中的平台名称",
+        "url": "https://vmspub.weidian.com/gaia/84552/9e4531ef.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "website": "https://www.weidian.com/",
+  "entityType": "company",
+  "categories": [
+    "e-commerce"
+  ],
+  "defaultAsset": "wordmark-zh.png",
+  "assets": [
+    {
+      "file": "wordmark-zh.png",
+      "label": "中文品牌字标",
+      "variant": "wordmark",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://si.geilicdn.com/img-7e7f000001729350f0470a21a21b-unadjust_120_64.png",
+      "sourcePage": "https://www.weidian.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "16f3e0759388dead9904059bf4dc41986ecb17159ccd199c69d78d130bc2d212",
+      "bytes": 3624,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.weidian.com/",
+        "attribution": "微店。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "wordmark-white.png",
+      "label": "反白中文品牌字标",
+      "variant": "wordmark",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://si.geilicdn.com/img-04810000017272ecbf3d0a2166a4-unadjust_120_64.png",
+      "sourcePage": "https://www.weidian.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "bab00627e3ad3ae8cc91159238830f76923ed74ae38bbf5fcbf21bb7639c5c14",
+      "bytes": 2814,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.weidian.com/",
+        "attribution": "微店。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 3,
+  "id": "jfzt",
+  "name": "九方智投",
+  "aliases": [],
+  "identity": {
+    "nameZh": "九方智投",
+    "nameEn": null,
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.9fzt.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.9fzt.com/",
+  "entityType": "company",
+  "categories": [
+    "金融"
+  ],
+  "defaultAsset": "logo-with-tagline.png",
+  "assets": [
+    {
+      "file": "logo-with-tagline.png",
+      "label": "中文组合与口号",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://uploads.9fzt.com/production/jfztgw/assets/img/newIndex/logo.png",
+      "sourcePage": "https://www.9fzt.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "02c0a878e9bba64c00d63b1872aa3758b8cce2c243022e2a2fe2241934424958",
+      "bytes": 21593,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.9fzt.com/",
+        "attribution": "九方智投。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

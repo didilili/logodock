@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 3,
+  "id": "boomingtech",
+  "name": "不鸣科技",
+  "aliases": [],
+  "identity": {
+    "nameZh": "不鸣科技",
+    "nameEn": "BOOMINGTECH",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.boomingtech.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.boomingtech.com/",
+  "entityType": "company",
+  "categories": [
+    "entertainment"
+  ],
+  "defaultAsset": "logo-white.png",
+  "assets": [
+    {
+      "file": "logo-white.png",
+      "label": "反白英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://www.boomingtech.com/img/common/logo_white.png",
+      "sourcePage": "https://www.boomingtech.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "1e765a241a80e0be342e4ac5d0161071a960e19f2fb31529a9f82fbbf1334de1",
+      "bytes": 5122,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.boomingtech.com/",
+        "attribution": "不鸣科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-brand.png",
+      "label": "彩色英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "dark",
+      "status": "current",
+      "source": "https://www.boomingtech.com/img/common/logo_color.png",
+      "sourcePage": "https://www.boomingtech.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "8ec6cd879c88ebb278853eb17b500afa73d85b24f5068413b4fa18bd41d23a8e",
+      "bytes": 8657,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.boomingtech.com/",
+        "attribution": "不鸣科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

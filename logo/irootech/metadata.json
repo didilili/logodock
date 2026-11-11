@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 3,
+  "id": "irootech",
+  "name": "树根科技",
+  "aliases": [
+    "树根互联",
+    "三一树根"
+  ],
+  "website": "https://www.irootech.com/",
+  "entityType": "company",
+  "identity": {
+    "nameZh": "树根科技",
+    "nameEn": "IROOTECH",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌信息",
+        "url": "https://www.irootech.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "categories": [
+    "enterprise-software",
+    "industrial-automation"
+  ],
+  "defaultAsset": "logo-bilingual-black-official.png",
+  "assets": [
+    {
+      "file": "logo-bilingual-black-official.png",
+      "label": "中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "vertical",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.irootech.com/vancheerfile/images/2025/3/20250328144138386.png",
+      "sourcePage": "https://www.irootech.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "ae0210b3ca84223e84e98427f40ad2cd297fb6de4ce666e303f3ec3473f735e4",
+      "bytes": 10156,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.irootech.com/",
+        "attribution": "树根科技，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "wordmark-en-header-original.png",
+      "label": "英文横字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://en.irootech.com/Public/Uploads/uploadfile/images/20231227/logo02.svg#%E5%9B%BE%E5%B1%82_1",
+      "sourcePage": "https://en.irootech.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "placement": "header"
+      },
+      "qualityNotes": [
+        "透明背景，来自官网 SVG 内嵌的原始 PNG。"
+      ],
+      "sha256": "4d08f647e5942c3910c476af42805dd673083e1592f196a86c91191ca00e849f",
+      "bytes": 13497,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://en.irootech.com/",
+        "attribution": "树根科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-11"
+      }
+    }
+  ]
+}

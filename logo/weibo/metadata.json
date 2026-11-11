@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 3,
+  "id": "weibo",
+  "name": "微博",
+  "aliases": [],
+  "website": "https://weibo.com/",
+  "identity": {
+    "nameZh": "微博",
+    "nameEn": "Weibo",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://apps.apple.com/cn/app/%E5%BE%AE%E5%8D%9A/id350962117?uo=4",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "icon-appstore.jpg",
+  "assets": [
+    {
+      "file": "icon-appstore.jpg",
+      "label": "应用图标",
+      "variant": "icon",
+      "status": "current",
+      "background": "any",
+      "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/45/56/6e/45566e38-bcb0-f50f-0adc-eabee4b0a948/WeiboAppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+      "sourcePage": "https://apps.apple.com/cn/app/%E5%BE%AE%E5%8D%9A/id350962117?uo=4",
+      "sha256": "582bd23459553a0ceafae4fbaf0a96c100056d1e0aa3642cfd82098ae82bcd24",
+      "bytes": 29241,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://apps.apple.com/cn/app/%E5%BE%AE%E5%8D%9A/id350962117?uo=4",
+        "attribution": "微博。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "none",
+      "layout": "standalone",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "rendered",
+        "channel": "app-store"
+      }
+    },
+    {
+      "file": "logo-chinese-horizontal-official.svg",
+      "label": "彩色中文横版组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://h5.sinaimg.cn/upload/447/2017/10/12/logo_pc.svg",
+      "sourcePage": "https://c.weibo.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "d875d45082abea563ac870663657e22ff1ef45fbfdbad4da00ed727f2c16ca5c",
+      "bytes": 6077,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://c.weibo.cn/",
+        "attribution": "微博，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-11"
+      },
+      "qualityNotes": [
+        "透明背景，方形画布上下留白较多。"
+      ]
+    }
+  ]
+}

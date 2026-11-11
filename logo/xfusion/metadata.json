@@ -1,0 +1,323 @@
+{
+  "schemaVersion": 3,
+  "id": "xfusion",
+  "name": "超聚变",
+  "aliases": [],
+  "identity": {
+    "nameZh": "超聚变",
+    "nameEn": "xFusion",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.xfusion.com/en",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.xfusion.com/en",
+  "entityType": "company",
+  "categories": [
+    "hardware"
+  ],
+  "defaultAsset": "wordmark-brand.png",
+  "assets": [
+    {
+      "file": "wordmark-brand.png",
+      "label": "红黑英文",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://www.xfusion.com/backapi/rest/v1/materialCenter/downloadMaterialCenter?url=xfusion-logo&lan=cn",
+      "sourcePage": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "edd456d30fb144c869c276911fb8734944310a152ade2e9330c4eb6b7731491e",
+      "bytes": 352404,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+        "attribution": "超聚变。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "wordmark-red-white.png",
+      "label": "红白英文",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "dark",
+      "status": "current",
+      "source": "https://www.xfusion.com/backapi/rest/v1/materialCenter/downloadMaterialCenter?url=xfusion-logo&lan=cn",
+      "sourcePage": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "d9c52e9b36906e61afc9eb7ca957521c9bfc27e0627165216dd3eb6404340cbb",
+      "bytes": 97338,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+        "attribution": "超聚变。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "wordmark-white.png",
+      "label": "反白英文",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://www.xfusion.com/backapi/rest/v1/materialCenter/downloadMaterialCenter?url=xfusion-logo&lan=cn",
+      "sourcePage": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "9be34c39af39a4de2e0ef0a00c1e7c276a425665865a4dcbfeee05b912b2336d",
+      "bytes": 42307,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+        "attribution": "超聚变。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "wordmark-black.jpg",
+      "label": "黑色英文",
+      "variant": "wordmark",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "status": "current",
+      "source": "https://www.xfusion.com/backapi/rest/v1/materialCenter/downloadMaterialCenter?url=xfusion-logo&lan=cn",
+      "sourcePage": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "ad893d22f4ce665e029c2a60cb8b1ed20ea82f5be9df3c7d77e3fdacae183d2b",
+      "bytes": 451938,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+        "attribution": "超聚变。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-slogan-zh-2022.png",
+      "label": "2022中文口号组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "historical",
+      "source": "https://www.xfusion.com/backapi/rest/v1/materialCenter/downloadMaterialCenter?url=xfusion-logo&lan=cn",
+      "sourcePage": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "7671b0b047364bc24e2e41ff5c6b1ac65ea0182cfa217017d8a5b09a08b0efed",
+      "bytes": 128654,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+        "attribution": "超聚变。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官方2022源文件包中的口号组合，包含画布留白。"
+      ]
+    },
+    {
+      "file": "logo-slogan-en-2022.png",
+      "label": "2022英文口号组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "historical",
+      "source": "https://www.xfusion.com/backapi/rest/v1/materialCenter/downloadMaterialCenter?url=xfusion-logo&lan=cn",
+      "sourcePage": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "brand-library"
+      },
+      "sha256": "176fb1b0f6da792c1cb0d54378e9d98c2d472a641d5537638fc3625e555fa062",
+      "bytes": 127246,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+        "attribution": "超聚变。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官方2022源文件包中的口号组合，包含画布留白。"
+      ]
+    }
+  ],
+  "sourceFiles": [
+    {
+      "file": "wordmark-rgb.ai",
+      "label": "红黑 RGB 屏幕稿",
+      "assetFiles": [
+        "wordmark-brand.png"
+      ],
+      "source": "https://www.xfusion.com/backapi/rest/v1/materialCenter/downloadMaterialCenter?url=xfusion-logo&lan=cn",
+      "sourcePage": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+      "sha256": "3468e832f3fe4014f82e56f29f5554f4cd304aab3d2309a4a568dceb45f5fbe7",
+      "bytes": 160516,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+        "attribution": "超聚变。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "印刷稿采用 CMYK，屏幕取用 RGB 稿。标志红专色为 PANTONE 485C。"
+      }
+    },
+    {
+      "file": "wordmark-cmyk.ai",
+      "label": "红黑 CMYK 印刷稿",
+      "assetFiles": [
+        "wordmark-brand.png"
+      ],
+      "source": "https://www.xfusion.com/backapi/rest/v1/materialCenter/downloadMaterialCenter?url=xfusion-logo&lan=cn",
+      "sourcePage": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+      "sha256": "5c5e9623e874b1f7f7c938a049fc80f63db1b5408a6221705c0d557ed1217c59",
+      "bytes": 154899,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+        "attribution": "超聚变。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "印刷稿采用 CMYK，屏幕取用 RGB 稿。标志红专色为 PANTONE 485C。"
+      }
+    },
+    {
+      "file": "wordmark-red-white-rgb.ai",
+      "label": "红白 RGB 屏幕稿",
+      "assetFiles": [
+        "wordmark-red-white.png"
+      ],
+      "source": "https://www.xfusion.com/backapi/rest/v1/materialCenter/downloadMaterialCenter?url=xfusion-logo&lan=cn",
+      "sourcePage": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+      "sha256": "c50e4d043fd8fec1baa6e26d06d32ac7da8283a26d4d8b272c2b5e2a0b610c4b",
+      "bytes": 153748,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+        "attribution": "超聚变。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "印刷稿采用 CMYK，屏幕取用 RGB 稿。标志红专色为 PANTONE 485C。"
+      }
+    },
+    {
+      "file": "wordmark-red-white-cmyk.ai",
+      "label": "红白 CMYK 印刷稿",
+      "assetFiles": [
+        "wordmark-red-white.png"
+      ],
+      "source": "https://www.xfusion.com/backapi/rest/v1/materialCenter/downloadMaterialCenter?url=xfusion-logo&lan=cn",
+      "sourcePage": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+      "sha256": "b6259d1a30cb1151a87c5a8a4f3858348d78a7e5243d5836b010d58aa24378f4",
+      "bytes": 147935,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+        "attribution": "超聚变。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "印刷稿采用 CMYK，屏幕取用 RGB 稿。标志红专色为 PANTONE 485C。"
+      }
+    },
+    {
+      "file": "wordmark-white.ai",
+      "label": "纯白设计稿",
+      "assetFiles": [
+        "wordmark-white.png"
+      ],
+      "source": "https://www.xfusion.com/backapi/rest/v1/materialCenter/downloadMaterialCenter?url=xfusion-logo&lan=cn",
+      "sourcePage": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+      "sha256": "56a74b03e0aa4e3b7c522b96a5c2fd6c856096485cc2e2259cf11c73b93bbec0",
+      "bytes": 992590,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+        "attribution": "超聚变。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "印刷稿采用 CMYK，屏幕取用 RGB 稿。标志红专色为 PANTONE 485C。"
+      }
+    },
+    {
+      "file": "wordmark-black-rgb.ai",
+      "label": "黑色 RGB 屏幕稿",
+      "assetFiles": [
+        "wordmark-black.jpg"
+      ],
+      "source": "https://www.xfusion.com/backapi/rest/v1/materialCenter/downloadMaterialCenter?url=xfusion-logo&lan=cn",
+      "sourcePage": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+      "sha256": "0179d4d9a254d51692a5878860abdbc61f10878f5cfebe53e6a0d695e8b10e01",
+      "bytes": 172094,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+        "attribution": "超聚变。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "印刷稿采用 CMYK，屏幕取用 RGB 稿。标志红专色为 PANTONE 485C。"
+      }
+    },
+    {
+      "file": "wordmark-black-cmyk.ai",
+      "label": "黑色 CMYK 印刷稿",
+      "assetFiles": [
+        "wordmark-black.jpg"
+      ],
+      "source": "https://www.xfusion.com/backapi/rest/v1/materialCenter/downloadMaterialCenter?url=xfusion-logo&lan=cn",
+      "sourcePage": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+      "sha256": "5bc5a9406cacd4480f14c2d6edfe527acf4b6851d012e98d2005e12af98a3113",
+      "bytes": 161136,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.xfusion.com/static/cn/resource/xfusion-logo",
+        "attribution": "超聚变。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10",
+        "notes": "印刷稿采用 CMYK，屏幕取用 RGB 稿。标志红专色为 PANTONE 485C。"
+      }
+    }
+  ]
+}

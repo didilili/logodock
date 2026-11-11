@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 3,
+  "id": "cyriex",
+  "name": "思锐卓远",
+  "aliases": [],
+  "website": "https://www.cyriex.com/",
+  "entityType": "company",
+  "identity": {
+    "nameZh": "思锐卓远",
+    "nameEn": "CyRiex",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "品牌官网",
+        "url": "https://www.cyriex.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "categories": [
+    "enterprise-software",
+    "industrial-automation"
+  ],
+  "defaultAsset": "logo-wide-brand.png",
+  "assets": [
+    {
+      "file": "logo-bilingual-official.png",
+      "label": "中英组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.cyriex.com/images/black_logo_mini.png",
+      "sourcePage": "https://www.cyriex.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "65881e805d0e8ef06c8b565a3757b407246a8ddb7c46a685c077bf828ca75e90",
+      "bytes": 11795,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.cyriex.com/",
+        "attribution": "思锐卓远，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-wide-brand.png",
+      "label": "宽式中英品牌组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.cyriex.com/images/black_logo.png",
+      "sourcePage": "https://www.cyriex.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "1e86fb6ceec1f5cd8944b06636ab822100d2094f41d8bf19af88178f78442178",
+      "bytes": 16709,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.cyriex.com/",
+        "attribution": "思锐卓远，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "原生 450×120 像素，保留官网横式组合原稿及图形内的小号中文。"
+      ]
+    },
+    {
+      "file": "logo-wide-white.png",
+      "label": "宽式中英反白组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "dark",
+      "source": "https://www.cyriex.com/images/white_logo.png",
+      "sourcePage": "https://www.cyriex.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "a68b419e13d8cacf0ba7b7975602f2fd32f5ff764aa4410901c0ca0a27512b39",
+      "bytes": 17021,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.cyriex.com/",
+        "attribution": "思锐卓远，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "原生 450×120 像素，保留官网横式组合原稿及图形内的小号中文。"
+      ]
+    }
+  ]
+}

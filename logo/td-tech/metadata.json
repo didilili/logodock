@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 3,
+  "id": "td-tech",
+  "name": "鼎桥",
+  "aliases": [],
+  "website": "https://www.td-tech.com/",
+  "identity": {
+    "nameZh": "鼎桥",
+    "nameEn": "TDTECH",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方英文站",
+        "url": "https://www.td-tech.com/en/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "logo-bilingual.svg",
+  "assets": [
+    {
+      "file": "logo-bilingual.svg",
+      "label": "中英组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://www-cdn.td-tech.com/en-web/client/img/logo.7eb9a60.svg",
+      "sourcePage": "https://www.td-tech.com/en/",
+      "sha256": "e62dbf98b7e70e98d18f8c2199395019da50beae3af2be160de24c15b2b0b28e",
+      "bytes": 5198,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.td-tech.com/en/",
+        "attribution": "鼎桥。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    }
+  ]
+}

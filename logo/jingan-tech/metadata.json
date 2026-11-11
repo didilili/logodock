@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 3,
+  "id": "jingan-tech",
+  "name": "靖安科技",
+  "aliases": [
+    "JING-AN TECHNOLOGY"
+  ],
+  "identity": {
+    "nameZh": "靖安科技",
+    "nameEn": "JING-AN TECHNOLOGY",
+    "legalNames": [
+      {
+        "name": "杭州靖安科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://career.sustech.edu.cn/detail/online?id=3625479",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
+    "sources": [
+      {
+        "label": "企业申请发布的官方校园招聘",
+        "url": "https://career.sustech.edu.cn/detail/online?id=3625479",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.jing-an.com/",
+  "entityType": "company",
+  "categories": [
+    "ai"
+  ],
+  "defaultAsset": "logo-bilingual.png",
+  "assets": [
+    {
+      "file": "logo-bilingual.png",
+      "label": "黑底白色中英组合",
+      "variant": "logo",
+      "language": "bilingual",
+      "layout": "vertical",
+      "color": "white",
+      "background": "any",
+      "source": "https://o.bysjy.com.cn/new_govern/2026/company/1791540213-7166.png",
+      "sourcePage": "https://career.sustech.edu.cn/detail/online?id=3625479",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website",
+        "pageTitle": "杭州靖安科技2027届校园招聘"
+      },
+      "qualityNotes": [
+        "黑色不透明背景。"
+      ],
+      "sha256": "5f7fee905712aede9b5610dc8b2ee92ccb6230c864757f4e10e7d6d69bffba95",
+      "bytes": 42195,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://career.sustech.edu.cn/detail/online?id=3625479",
+        "attribution": "靖安科技。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

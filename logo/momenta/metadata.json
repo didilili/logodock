@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 3,
+  "id": "momenta",
+  "name": "Momenta",
+  "aliases": [],
+  "identity": {
+    "nameZh": null,
+    "nameEn": "Momenta",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌与名称来源",
+        "url": "https://www.momenta.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.momenta.cn/",
+  "entityType": "company",
+  "categories": [
+    "ai",
+    "automotive"
+  ],
+  "defaultAsset": "logo-brand.png",
+  "assets": [
+    {
+      "file": "logo-brand.png",
+      "label": "蓝黑组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "status": "current",
+      "source": "https://www.momenta.cn/images/Momenta_Logo.png",
+      "sourcePage": "https://www.momenta.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "6db903e216eff0cd17ba495ea9c0e6587c680708f59b988f6ebc3487558280dc",
+      "bytes": 6394,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.momenta.cn/",
+        "attribution": "Momenta。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-white.svg",
+      "label": "反白组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://www.momenta.cn/images/Momenta_Logo_white.svg",
+      "sourcePage": "https://www.momenta.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "017caa1076a6c3b30ced6205fa22d6851dcd3270af657ce573e0f65d7e742b99",
+      "bytes": 5660,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.momenta.cn/",
+        "attribution": "Momenta。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "symbol-white.svg",
+      "label": "反白M图形",
+      "variant": "icon",
+      "language": "en",
+      "layout": "standalone",
+      "color": "white",
+      "background": "dark",
+      "status": "current",
+      "source": "https://www.momenta.cn/images/Momenta_Logo_white.svg",
+      "sourcePage": "https://www.momenta.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "extracted",
+        "channel": "website",
+        "originalAsset": "logo-white.svg",
+        "originalSha256": "017caa1076a6c3b30ced6205fa22d6851dcd3270af657ce573e0f65d7e742b99"
+      },
+      "sha256": "aa8b1313a6a94cf947a831a64296ff16d353d733e1cb6c8289c75b4998c59060",
+      "bytes": 599,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.momenta.cn/",
+        "attribution": "Momenta。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "从同品牌原始 SVG 提取图形，方形画布长边贴边，短边居中，额外边距为零。"
+      ]
+    }
+  ]
+}

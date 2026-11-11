@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 3,
+  "id": "capitalonline",
+  "name": "首都在线",
+  "aliases": [
+    "首云"
+  ],
+  "website": "https://www.capitalonline.net.cn/",
+  "entityType": "company",
+  "identity": {
+    "nameZh": "首都在线",
+    "nameEn": "Capitalonline",
+    "legalNames": [
+      {
+        "name": "北京首都在线科技股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.capitalonline.net.cn/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "name": "Capitalonline Data Service Co., Ltd",
+        "language": "en",
+        "role": "company",
+        "source": "https://www.capitalonline.net.cn/",
+        "reviewedAt": "2026-11-10"
+      }
+    ],
+    "sources": [
+      {
+        "label": "品牌官网",
+        "url": "https://www.capitalonline.net.cn/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "2025 年年度报告公司名称与英文简称",
+        "url": "https://static.cninfo.com.cn/finalpage/2026-03-20/1225019832.PDF",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "categories": [
+    "enterprise-software"
+  ],
+  "defaultAsset": "logo-gray.svg",
+  "assets": [
+    {
+      "file": "logo-brand.png",
+      "label": "首云组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://www.capitalonline.net.cn/templets/default/icon/logo_header.png",
+      "sourcePage": "https://www.capitalonline.net.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "1d185f46a5c0d854a9b43bf43254c1ee8e7e1a2d6df70468dd70c5ccff2b2f03",
+      "bytes": 5604,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.capitalonline.net.cn/",
+        "attribution": "首都在线，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "logo-gray.svg",
+      "label": "灰色首云矢量组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "monochrome",
+      "background": "any",
+      "source": "https://www.capitalonline.net.cn/#cds-logo",
+      "sourcePage": "https://www.capitalonline.net.cn/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "8d26cd75ac19d5afe21ffa799d4536178972f96bdc607ce9c8b3a3c05e874bf8",
+      "bytes": 8820,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.capitalonline.net.cn/",
+        "attribution": "首都在线，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      },
+      "qualityNotes": [
+        "官网页脚内嵌的原始路径 SVG，保留灰色原稿。"
+      ]
+    }
+  ]
+}

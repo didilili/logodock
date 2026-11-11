@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 3,
+  "id": "celbot-ai",
+  "name": "璇溟科技",
+  "aliases": [
+    "深圳璇溟科技有限公司"
+  ],
+  "website": "https://www.celbot-ai.com/",
+  "entityType": "company",
+  "identity": {
+    "nameZh": "璇溟科技",
+    "nameEn": "CELBOT",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "品牌官网",
+        "url": "https://www.celbot-ai.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "categories": [
+    "ai",
+    "hardware"
+  ],
+  "defaultAsset": "logo-chinese-black-official.png",
+  "assets": [
+    {
+      "file": "logo-chinese-black-official.png",
+      "label": "黑色中文组合",
+      "variant": "logo",
+      "status": "current",
+      "language": "zh",
+      "layout": "vertical",
+      "color": "black",
+      "background": "any",
+      "source": "https://www.celbot-ai.com/logo.png",
+      "sourcePage": "https://www.celbot-ai.com/",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "b110ff48819a8b0b0905cecb152de3a31680dc579d4653aaf5a15c6ba8f8e58f",
+      "bytes": 99029,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.celbot-ai.com/",
+        "attribution": "璇溟科技，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

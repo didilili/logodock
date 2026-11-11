@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 3,
+  "id": "huaqin",
+  "name": "华勤",
+  "aliases": [],
+  "website": "https://www.huaqin.com/",
+  "identity": {
+    "nameZh": "华勤",
+    "nameEn": "Huaqin",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方网站",
+        "url": "https://www.huaqin.com/",
+        "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方英文品牌网站",
+        "url": "https://en.huaqin.com/",
+        "reviewedAt": "2026-11-11"
+      }
+    ]
+  },
+  "entityType": "company",
+  "categories": [],
+  "defaultAsset": "logo-zh.png",
+  "assets": [
+    {
+      "file": "logo-zh.png",
+      "label": "蓝金中文组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "light",
+      "source": "https://www.huaqin.com/uploads/images/20250213/e3a953e4608c462fdd3a8e7a764f130b.png",
+      "sourcePage": "https://www.huaqin.com/",
+      "sha256": "3b20926b3400a72eab4315032791ddca808f32d2e8e186858f1941dd50f887f6",
+      "bytes": 3963,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.huaqin.com/",
+        "attribution": "华勤。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "brand",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    },
+    {
+      "file": "logo-white.svg",
+      "label": "反白中文组合",
+      "variant": "logo",
+      "status": "current",
+      "background": "dark",
+      "source": "https://www.huaqin.com/uploads/images/20221228/6e8e25552ca42f1bb65e4f4bd04089e0.svg",
+      "sourcePage": "https://www.huaqin.com/",
+      "sha256": "8177a3cc057a74f1d21aaaa594caa8d15aa9f28678300ecb3aa28b31ff297273",
+      "bytes": 4887,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.huaqin.com/",
+        "attribution": "华勤。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      },
+      "language": "bilingual",
+      "layout": "horizontal",
+      "color": "white",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      }
+    }
+  ]
+}

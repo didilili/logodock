@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 3,
+  "id": "sungrow",
+  "name": "阳光电源",
+  "aliases": [],
+  "website": "https://www.sungrowpower.com/us/en",
+  "entityType": "company",
+  "identity": {
+    "nameZh": "阳光电源",
+    "nameEn": "SUNGROW",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "品牌官网",
+        "url": "https://www.sungrowpower.com/us/en",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "categories": [
+    "industrial-automation"
+  ],
+  "defaultAsset": "wordmark-orange-official.svg",
+  "assets": [
+    {
+      "file": "wordmark-orange-official.svg",
+      "label": "橙色英文字标",
+      "variant": "wordmark",
+      "status": "current",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "brand",
+      "background": "light",
+      "source": "https://official-oversears-file.sungrowpower.com/website/_next/static/media/logo.84e5bb0c.svg",
+      "sourcePage": "https://www.sungrowpower.com/us/en",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "df2fdc7585179fa68fe62ca15f14c2ea1a0e9086477c3718c7bad265b3244727",
+      "bytes": 4868,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.sungrowpower.com/us/en",
+        "attribution": "阳光电源，商标及其他权利归相应权利人。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}

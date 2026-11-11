@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 3,
+  "id": "li-auto",
+  "name": "理想",
+  "aliases": [
+    "Li Auto"
+  ],
+  "identity": {
+    "nameZh": "理想",
+    "nameEn": "Li Auto",
+    "legalNames": [],
+    "sources": [
+      {
+        "label": "官方品牌来源",
+        "url": "https://www.lixiang.com/",
+        "reviewedAt": "2026-11-10"
+      }
+    ]
+  },
+  "website": "https://www.lixiang.com/",
+  "entityType": "company",
+  "categories": [
+    "automotive"
+  ],
+  "defaultAsset": "symbol.svg",
+  "assets": [
+    {
+      "file": "symbol.svg",
+      "label": "黑色图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "black",
+      "background": "light",
+      "source": "https://p.ampmake.com/fed/tmp/egg-multipart-tmp/fed-server-api/2025/07/10/09/92d2ec5c-dbab-4ebc-9229-a3ca185cc967.svg",
+      "sourcePage": "https://www.lixiang.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "e9d65590c73dcb46abc911cd0fe729a83287a787f0d60713c1ad088020cc3c7e",
+      "bytes": 800,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.lixiang.com/",
+        "attribution": "理想。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "symbol-white.svg",
+      "label": "白色图形",
+      "variant": "icon",
+      "language": "none",
+      "layout": "standalone",
+      "color": "white",
+      "background": "dark",
+      "source": "https://p.ampmake.com/fed/tmp/egg-multipart-tmp/fed-server-api/2025/07/10/09/01b87d68-288e-48c3-9a2e-4414c2828584.svg",
+      "sourcePage": "https://www.lixiang.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "0638fbf864608db2566f926bd1ca033041674991c46d02d10dc9bdbbcbbca073",
+      "bytes": 781,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.lixiang.com/",
+        "attribution": "理想。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "wordmark-zh.svg",
+      "label": "中文组合",
+      "variant": "logo",
+      "language": "zh",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "source": "https://p.ampmake.com/fed/m01/asset-1907/image2.0/logo/logo-text-black.31a241fd.svg",
+      "sourcePage": "https://www.lixiang.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "5bc7e5477502258aec1fb92d9c0910ce5f00e872943a8383dd3d1026b4a92283",
+      "bytes": 1884,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.lixiang.com/",
+        "attribution": "理想。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    },
+    {
+      "file": "wordmark-en.svg",
+      "label": "英文组合",
+      "variant": "logo",
+      "language": "en",
+      "layout": "horizontal",
+      "color": "black",
+      "background": "light",
+      "source": "https://p.ampmake.com/fed/m01/asset-1907/image2.0/logo/logo-text-black-en.ae9837b0.svg",
+      "sourcePage": "https://www.lixiang.com/",
+      "status": "current",
+      "provenance": {
+        "sourceType": "official",
+        "processing": "original",
+        "channel": "website"
+      },
+      "sha256": "ae3b2184df37edd4248c4d1e87687583c0d96dc4ecda607047e81c16f8f5d52c",
+      "bytes": 2057,
+      "rights": {
+        "status": "unverified",
+        "license": "许可未核实",
+        "reference": "https://www.lixiang.com/",
+        "attribution": "理想。许可及署名条件待核实。",
+        "reviewedAt": "2026-11-10"
+      }
+    }
+  ]
+}
