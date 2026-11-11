@@ -83,6 +83,95 @@ test('preserves canonical Inkscape export metadata without enabling other editor
     await assert.rejects((await file(svg('<path/>', attributes))).inspect(), /SVG/);
 });
 
+test('preserves the inert Figma passthrough export style and rejects other blend values', async (t) => {
+  const file = await input(t);
+  for (const body of [
+    '<g style="mix-blend-mode:passthrough"><path d="M0 0h8v8z"/></g>',
+    '<style>.mark{mix-blend-mode:passthrough;fill:#ff6400}</style><path class="mark"/>',
+  ]) {
+    const data = svg(body);
+    const { path, inspect } = await file(data);
+    assert.deepEqual((await inspect()).buffer, Buffer.from(data));
+    assert.deepEqual(await readFile(path), Buffer.from(data));
+  }
+  for (const value of [
+    'multiply',
+    'passthrough normal',
+    'url(https://example.com/a)',
+    'var(--mode)',
+  ])
+    await assert.rejects(
+      (await file(svg(`<path style="mix-blend-mode:${value}"/>`))).inspect(),
+      /SVG/,
+    );
+});
+
+test('preserves bounded mask compositing styles without changing source bytes', async (t) => {
+  const file = await input(t);
+  for (const value of ['luminance', 'alpha']) {
+    const data = svg(`<mask id="m" style="mask-type:${value}"><path fill="white"/></mask>`);
+    const { path, inspect } = await file(data);
+    assert.deepEqual((await inspect()).buffer, Buffer.from(data));
+    assert.deepEqual(await readFile(path), Buffer.from(data));
+  }
+  for (const value of ['none', 'luminance alpha', 'url(#m)', 'var(--mask)'])
+    await assert.rejects((await file(svg(`<mask style="mask-type:${value}"/>`))).inspect(), /SVG/);
+});
+
+test('preserves static enable-background attributes with the same value safety as CSS', async (t) => {
+  const file = await input(t);
+  const data = svg('<path d="M0 0h8v8z"/>', 'enable-background="new -15.167 0 1000.636 1000.678"');
+  const { path, inspect } = await file(data);
+  assert.deepEqual((await inspect()).buffer, Buffer.from(data));
+  assert.deepEqual(await readFile(path), Buffer.from(data));
+  for (const value of ['url(https://example.com/a)', 'var(--box)', 'expression(alert(1))'])
+    await assert.rejects(
+      (await file(svg('<path/>', `enable-background="${value}"`))).inspect(),
+      /SVG/,
+    );
+});
+
+test('preserves bounded Wix drawing metadata and rejects active or unknown attributes', async (t) => {
+  const file = await input(t);
+  const data = svg(
+    '<path data-color="1" d="M0 0h8v8z"/>',
+    'data-bbox="138.1 136.44 3561.98 702.55" data-type="color"',
+  );
+  const { path, inspect } = await file(data);
+  assert.deepEqual((await inspect()).buffer, Buffer.from(data));
+  assert.deepEqual(await readFile(path), Buffer.from(data));
+  for (const attributes of [
+    'data-bbox="0 0 8"',
+    'data-bbox="0 0 8 8 8"',
+    'data-bbox="url(https://example.com/a)"',
+    'data-type="url(https://example.com/a)"',
+    'data-type="unexpected"',
+    'data-color="url(#paint)"',
+    'data-color="1 2"',
+    'data-href="https://example.com/a"',
+    'data-type="color" onload="alert(1)"',
+    'xlink:data-type="color"',
+  ])
+    await assert.rejects((await file(svg('<path/>', attributes))).inspect(), /SVG/);
+});
+
+test('preserves local references to numeric-leading SVG IDs without enabling remote URLs', async (t) => {
+  const file = await input(t);
+  const data = svg(
+    '<defs><clipPath id="740dd621-0741"><path d="M0 0h8v8z"/></clipPath><path id="123" d="M0 0h8v8z"/></defs><g clip-path="url(#740dd621-0741)"><use href="#123"/></g>',
+  );
+  const { path, inspect } = await file(data);
+  assert.deepEqual((await inspect()).buffer, Buffer.from(data));
+  assert.deepEqual(await readFile(path), Buffer.from(data));
+  for (const body of [
+    '<use href="https://example.com/#123"/>',
+    '<use href="#123 extra"/>',
+    '<path clip-path="url(https://example.com/#123)"/>',
+    '<path clip-path="url(#123) extra"/>',
+  ])
+    await assert.rejects((await file(svg(body))).inspect(), /SVG/);
+});
+
 test('preserves bounded editor grid and license metadata without changing original bytes', async (t) => {
   const file = await input(t);
   const data = svg(

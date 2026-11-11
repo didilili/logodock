@@ -23,7 +23,7 @@ const svgAttributes = words(
     'gradientUnits gradientTransform spreadMethod offset stop-color stop-opacity fx fy fr ' +
     'patternUnits patternContentUnits patternTransform text-anchor dominant-baseline alignment-baseline ' +
     'font-family font-size font-weight font-style letter-spacing word-spacing dx dy rotate textLength ' +
-    'lengthAdjust startOffset method spacing overflow vector-effect shape-rendering color ' +
+    'lengthAdjust startOffset method spacing overflow vector-effect shape-rendering color enable-background ' +
     'role aria-label aria-labelledby aria-describedby aria-hidden focusable data-name',
 );
 const cssProperties = words(
@@ -32,7 +32,7 @@ const cssProperties = words(
     'display visibility stop-color stop-opacity text-anchor dominant-baseline alignment-baseline ' +
     'font-family font-size font-weight font-style letter-spacing word-spacing overflow vector-effect ' +
     'shape-rendering color enable-background font-variant font-stretch line-height -inkscape-font-specification paint-order ' +
-    'font-variation-settings font-variant-ligatures font-variant-caps font-variant-numeric font-variant-east-asian',
+    'font-variation-settings font-variant-ligatures font-variant-caps font-variant-numeric font-variant-east-asian mix-blend-mode mask-type',
 );
 const normalFontProperties = words(
   'font-variation-settings font-variant-ligatures font-variant-caps ' +
@@ -62,10 +62,16 @@ const metadataElements = {
   cc: words('Work Agent license License permits'),
   dc: words('title format type creator description date publisher rights source'),
 };
-const fragment = /^#[A-Za-z_][A-Za-z0-9_.:-]*$/;
-const localUrl = /^url\(\s*#[A-Za-z_][A-Za-z0-9_.:-]*\s*\)$/i;
+const fragment = /^#[A-Za-z0-9_][A-Za-z0-9_.:-]*$/;
+const localUrl = /^url\(\s*#[A-Za-z0-9_][A-Za-z0-9_.:-]*\s*\)$/i;
 const identifier = '[A-Za-z_][A-Za-z0-9_-]*';
 const number = '[+-]?(?:\\d+(?:\\.\\d*)?|\\.\\d+)(?:[eE][+-]?\\d+)?';
+// Wix exports these non-rendering drawing hints alongside its original paths.
+const drawingMetadata = new Map([
+  ['data-bbox', new RegExp(`^${number}(?:[ ,]+${number}){3}$`)],
+  ['data-type', /^color$/],
+  ['data-color', /^[1-9]\d*$/],
+]);
 const cssToken = new RegExp(
   `^(?:${identifier}|${number}(?:%|px|pt|pc|in|cm|mm|q|em|ex|ch|rem|vw|vh|vmin|vmax)?|#[a-fA-F0-9]{3,8})$`,
 );
@@ -85,6 +91,11 @@ function cssValue(property, value, reject) {
   value = value.trim();
   if (normalFontProperties.has(property) && value.toLowerCase() !== 'normal')
     reject('CSS font setting is outside the static subset');
+  // Figma emits this inert value, which browsers ignore while retaining the original SVG bytes.
+  if (property === 'mix-blend-mode' && value.toLowerCase() !== 'passthrough')
+    reject('CSS blend mode is outside the static subset');
+  if (property === 'mask-type' && !['luminance', 'alpha'].includes(value.toLowerCase()))
+    reject('CSS mask type is outside the static subset');
   if (/url\s*\(/i.test(value)) {
     if (!['fill', 'stroke', 'clip-path', 'mask'].includes(property) || !localUrl.test(value))
       reject('external or complex CSS references are forbidden');
@@ -278,6 +289,11 @@ export function checkSvg(buffer, context) {
       }
       if (name === 'style') {
         declarations(value, reject);
+        continue;
+      }
+      const metadataPattern = !uri && drawingMetadata.get(name);
+      if (metadataPattern) {
+        if (!metadataPattern.test(value)) reject(`attribute ${name} has unsupported metadata`);
         continue;
       }
       if (!svgAttributes.has(name)) reject(`attribute ${name} is outside the static subset`);
