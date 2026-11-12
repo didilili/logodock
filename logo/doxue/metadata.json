@@ -7,12 +7,25 @@
   "identity": {
     "nameZh": "都学网",
     "nameEn": null,
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "都学网络科技（北京）有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.doxue.com/cms/page/about",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",
         "url": "https://www.doxue.com/index",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方公司身份资料",
+        "url": "https://www.doxue.com/cms/page/about",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

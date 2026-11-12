@@ -16,7 +16,14 @@
         "language": "zh",
         "role": "group",
         "source": "https://www.pingan.com/",
-        "reviewedAt": "2026-11-10"
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "Ping An Insurance (Group) Company of China, Ltd.",
+        "language": "en",
+        "role": "group",
+        "source": "https://www.pingan.com/",
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [
@@ -41,8 +48,8 @@
   "assets": [
     {
       "file": "logo.svg",
-      "label": "彩色中英横版组合",
-      "variant": "logo",
+      "label": "彩色中英横版字标",
+      "variant": "wordmark",
       "language": "bilingual",
       "layout": "horizontal",
       "color": "brand",
@@ -68,8 +75,8 @@
     },
     {
       "file": "logo-horizontal.svg",
-      "label": "无标语彩色中英横版组合",
-      "variant": "logo",
+      "label": "无标语彩色中英横版字标",
+      "variant": "wordmark",
       "language": "bilingual",
       "layout": "horizontal",
       "color": "brand",
@@ -95,7 +102,7 @@
     },
     {
       "file": "logo-zh-orange-bg.png",
-      "label": "橙底白色中文组合",
+      "label": "橙底白色中文字标",
       "variant": "wordmark",
       "language": "zh",
       "layout": "horizontal",
@@ -125,7 +132,7 @@
     },
     {
       "file": "logo-zh.png",
-      "label": "彩色中文组合",
+      "label": "彩色中文字标",
       "variant": "wordmark",
       "language": "zh",
       "layout": "horizontal",
@@ -155,7 +162,7 @@
     },
     {
       "file": "logo-zh-white.png",
-      "label": "白色中文组合",
+      "label": "白色中文字标",
       "variant": "wordmark",
       "language": "zh",
       "layout": "horizontal",
@@ -185,8 +192,8 @@
     },
     {
       "file": "logo-tagline-horizontal-orange-bg.png",
-      "label": "橙底白色横版宣传语组合",
-      "variant": "logo",
+      "label": "橙底白色横版宣传语字标",
+      "variant": "wordmark",
       "language": "bilingual",
       "layout": "horizontal",
       "color": "white",
@@ -215,8 +222,8 @@
     },
     {
       "file": "logo-tagline-horizontal-white.png",
-      "label": "白色横版宣传语组合",
-      "variant": "logo",
+      "label": "白色横版宣传语字标",
+      "variant": "wordmark",
       "language": "bilingual",
       "layout": "horizontal",
       "color": "white",
@@ -245,8 +252,8 @@
     },
     {
       "file": "logo-tagline-horizontal.png",
-      "label": "彩色横版宣传语组合",
-      "variant": "logo",
+      "label": "彩色横版宣传语字标",
+      "variant": "wordmark",
       "language": "bilingual",
       "layout": "horizontal",
       "color": "brand",
@@ -275,8 +282,8 @@
     },
     {
       "file": "logo-tagline-vertical.png",
-      "label": "彩色竖版宣传语组合",
-      "variant": "logo",
+      "label": "彩色竖版宣传语字标",
+      "variant": "wordmark",
       "language": "bilingual",
       "layout": "vertical",
       "color": "brand",
@@ -305,8 +312,8 @@
     },
     {
       "file": "logo-tagline-vertical-white.png",
-      "label": "白色竖版宣传语组合",
-      "variant": "logo",
+      "label": "白色竖版宣传语字标",
+      "variant": "wordmark",
       "language": "bilingual",
       "layout": "vertical",
       "color": "white",
@@ -335,8 +342,8 @@
     },
     {
       "file": "logo-tagline-vertical-orange-bg.png",
-      "label": "橙底白色竖版宣传语组合",
-      "variant": "logo",
+      "label": "橙底白色竖版宣传语字标",
+      "variant": "wordmark",
       "language": "bilingual",
       "layout": "vertical",
       "color": "white",
@@ -365,8 +372,8 @@
     },
     {
       "file": "logo-orange-bg.png",
-      "label": "橙底白色中英横版组合",
-      "variant": "logo",
+      "label": "橙底白色中英横版字标",
+      "variant": "wordmark",
       "language": "bilingual",
       "layout": "horizontal",
       "color": "white",
@@ -395,8 +402,8 @@
     },
     {
       "file": "logo-white.png",
-      "label": "白色中英横版组合",
-      "variant": "logo",
+      "label": "白色中英横版字标",
+      "variant": "wordmark",
       "language": "bilingual",
       "layout": "horizontal",
       "color": "white",
@@ -425,8 +432,8 @@
     },
     {
       "file": "logo-vertical-orange-bg.png",
-      "label": "橙底白色中英竖版组合",
-      "variant": "logo",
+      "label": "橙底白色中英竖版字标",
+      "variant": "wordmark",
       "language": "bilingual",
       "layout": "vertical",
       "color": "white",
@@ -455,8 +462,8 @@
     },
     {
       "file": "logo-vertical.png",
-      "label": "彩色中英竖版组合",
-      "variant": "logo",
+      "label": "彩色中英竖版字标",
+      "variant": "wordmark",
       "language": "bilingual",
       "layout": "vertical",
       "color": "brand",
@@ -485,8 +492,8 @@
     },
     {
       "file": "logo-vertical-white.png",
-      "label": "白色中英竖版组合",
-      "variant": "logo",
+      "label": "白色中英竖版字标",
+      "variant": "wordmark",
       "language": "bilingual",
       "layout": "vertical",
       "color": "white",
@@ -515,7 +522,7 @@
     },
     {
       "file": "logo-en-orange-bg.png",
-      "label": "橙底白色英文组合",
+      "label": "橙底白色英文字标",
       "variant": "wordmark",
       "language": "en",
       "layout": "horizontal",
@@ -545,7 +552,7 @@
     },
     {
       "file": "logo-en.png",
-      "label": "彩色英文组合",
+      "label": "彩色英文字标",
       "variant": "wordmark",
       "language": "en",
       "layout": "horizontal",
@@ -575,7 +582,7 @@
     },
     {
       "file": "logo-en-white.png",
-      "label": "白色英文组合",
+      "label": "白色英文字标",
       "variant": "wordmark",
       "language": "en",
       "layout": "horizontal",

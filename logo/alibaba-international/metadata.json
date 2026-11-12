@@ -17,11 +17,16 @@
         "label": "阿里巴巴官方业务介绍",
         "url": "https://www.alibabagroup.com/en-US/about-alibaba-businesses",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "阿里巴巴2026年20-F业务组织与高德归属",
+        "url": "https://data.alibabagroup.com/ir_filings/SEC/BABA/000119312526231755/baba-20260331.htm",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
   "website": "https://aidc-jobs.alibaba.com/",
-  "entityType": "company",
+  "entityType": "organization",
   "categories": [
     "cross-border-commerce"
   ],
@@ -29,10 +34,10 @@
   "assets": [
     {
       "file": "wordmark-bilingual.svg",
-      "label": "中英文字标识",
+      "label": "中英双行字标",
       "variant": "wordmark",
       "language": "bilingual",
-      "layout": "horizontal",
+      "layout": "vertical",
       "color": "brand",
       "background": "light",
       "status": "current",
@@ -86,5 +91,6 @@
         "带 Careers 招聘用途字样，细节受原生像素限制。"
       ]
     }
-  ]
+  ],
+  "parentId": "alibaba"
 }

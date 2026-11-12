@@ -8,7 +8,15 @@
   "identity": {
     "nameZh": "岚图",
     "nameEn": "VOYAH",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "岚图汽车科技股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.voyah.com.cn/index.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
@@ -92,11 +100,12 @@
         "reference": "https://apps.apple.com/cn/app/%E5%B2%9A%E5%9B%BE%E6%B1%BD%E8%BD%A6-%E4%B8%AD%E5%9B%BD%E9%AB%98%E7%AB%AF%E6%96%B0%E8%83%BD%E6%BA%90%E6%B1%BD%E8%BD%A6%E9%A2%86%E5%AF%BC%E8%80%85/id1550056350?uo=4",
         "attribution": "岚图，商标及其他权利归相应权利人。",
         "reviewedAt": "2026-11-10"
-      }
+      },
+      "usage": "app-icon"
     },
     {
       "file": "logo-chinese-black.png",
-      "label": "黑色中文横式组合",
+      "label": "黑色中文横版组合",
       "variant": "logo",
       "language": "zh",
       "layout": "horizontal",
@@ -122,7 +131,7 @@
     },
     {
       "file": "logo-chinese-white.png",
-      "label": "白色中文横式组合",
+      "label": "白色中文横版组合",
       "variant": "logo",
       "language": "zh",
       "layout": "horizontal",
@@ -148,7 +157,7 @@
     },
     {
       "file": "logo-english-black.png",
-      "label": "黑色英文横式组合",
+      "label": "黑色英文横版组合",
       "variant": "logo",
       "language": "en",
       "layout": "horizontal",

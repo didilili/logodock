@@ -6,12 +6,25 @@
   "identity": {
     "nameZh": null,
     "nameEn": "Moka",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "北京希瑞亚斯科技有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://www.mokahr.com/about",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://www.mokahr.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官网产品隐私政策明确Moka服务受托处理者完整名称",
+        "url": "https://www.mokahr.com/about",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

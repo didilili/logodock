@@ -8,12 +8,25 @@
   "identity": {
     "nameZh": "挚文集团",
     "nameEn": "Hello Group",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "Hello Group Inc.",
+        "language": "en",
+        "role": "group",
+        "source": "https://ir.hellogroup.com/static-files/b4957be5-38aa-4697-917d-23c391afb69e",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://www.hellogroup.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "2025年度20-F列明注册人全称及其控股公司角色",
+        "url": "https://ir.hellogroup.com/static-files/b4957be5-38aa-4697-917d-23c391afb69e",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

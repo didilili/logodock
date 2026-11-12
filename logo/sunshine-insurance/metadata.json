@@ -6,7 +6,15 @@
   "identity": {
     "nameZh": "阳光保险",
     "nameEn": "Sunshine Insurance Group",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "阳光保险集团股份有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://m.sinosig.com/protocol/CPZTGRZ01.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",

@@ -6,7 +6,15 @@
   "identity": {
     "nameZh": "微店",
     "nameEn": "Weidian",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "北京口袋时尚科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.weidian.com/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",

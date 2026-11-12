@@ -6,7 +6,15 @@
   "identity": {
     "nameZh": "元气森林",
     "nameEn": "CHI FOREST",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "元气森林（北京）食品科技集团有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://www.yuanqisenlin.com/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官网首页英文品牌名称",

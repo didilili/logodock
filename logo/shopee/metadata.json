@@ -5,7 +5,15 @@
   "identity": {
     "nameZh": "虾皮",
     "nameEn": "Shopee",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "Shopee Singapore Private Limited",
+        "language": "en",
+        "role": "operating-company",
+        "source": "https://help.shopee.sg/portal/4/article/77149-Shopee-Privacy-Policy",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "Shopee 官方招聘站（品牌身份与现用图稿）",

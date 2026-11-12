@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
   "id": "tencent-music",
-  "name": "腾讯音乐娱乐集团",
+  "name": "腾讯音乐",
   "aliases": [
     "腾讯音乐",
     "TME",
@@ -14,18 +14,38 @@
   ],
   "identity": {
     "nameZh": "腾讯音乐娱乐集团",
-    "nameEn": "Tencent Music Entertainment Group",
-    "legalNames": [],
-    "sources": [
+    "nameEn": "Tencent Music",
+    "legalNames": [
       {
-        "label": "腾讯音乐集团官网",
-        "url": "https://www.tencentmusic.com/",
-        "reviewedAt": "2026-11-09"
+        "name": "腾讯音乐娱乐（深圳）有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.tencentmusic.com/",
+        "reviewedAt": "2026-11-11"
       },
+      {
+        "name": "Tencent Music Entertainment Group",
+        "language": "en",
+        "role": "group",
+        "source": "https://ir.tencentmusic.com/FAQs",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
+    "sources": [
       {
         "label": "腾讯音乐官方投资者关系",
         "url": "https://ir.tencentmusic.com/",
         "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "官网标题使用腾讯音乐 / Tencent Music (TME)，页脚列境内公司全称",
+        "url": "https://www.tencentmusic.com/",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "官方公告明确将 Tencent Music 和 TME 用作集团简称",
+        "url": "https://ir.tencentmusic.com/2021-05-17-Tencent-Music-and-Sony-Music-Entertainment-Sign-Multi-Year-Extension-of-Digital-Distribution-Agreement",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -94,11 +114,11 @@
     },
     {
       "file": "wordmark-bilingual-white-official.png",
-      "label": "白色中英字标",
+      "label": "白色中英双行字标",
       "variant": "wordmark",
       "status": "current",
       "language": "bilingual",
-      "layout": "horizontal",
+      "layout": "vertical",
       "color": "white",
       "background": "dark",
       "source": "https://www.tencentmusic.com/img/header-logo-txt.fe0fce7d.png",

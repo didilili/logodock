@@ -6,7 +6,15 @@
   "identity": {
     "nameZh": null,
     "nameEn": "Soul",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "上海任意门科技有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://www.soulapp.cn/about",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
@@ -16,7 +24,7 @@
     ]
   },
   "website": "https://www.soulapp.cn/",
-  "entityType": "company",
+  "entityType": "product",
   "categories": [
     "social-community"
   ],

@@ -7,7 +7,22 @@
   "identity": {
     "nameZh": "金山办公",
     "nameEn": "KINGSOFT OFFICE",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "北京金山办公软件股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://static.cninfo.com.cn/finalpage/2026-08-20/1225482678.PDF",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "Beijing Kingsoft Office Software, Inc.",
+        "language": "en",
+        "role": "company",
+        "source": "https://static.cninfo.com.cn/finalpage/2026-08-20/1225482678.PDF",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",
@@ -18,6 +33,11 @@
         "label": "公司页与官网页头公司标",
         "url": "https://www.wps.cn/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "2026年半年度报告列明上市公司全称与金山软件控股股东关系",
+        "url": "https://static.cninfo.com.cn/finalpage/2026-08-20/1225482678.PDF",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -84,5 +104,6 @@
         "保留官方组合标中的K图形路径与三种填色，方形长边贴边，短边居中，额外边距为零。"
       ]
     }
-  ]
+  ],
+  "parentId": "kingsoft"
 }

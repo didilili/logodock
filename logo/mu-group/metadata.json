@@ -8,12 +8,25 @@
   "identity": {
     "nameZh": "凯越集团",
     "nameEn": "MU Group",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "Market Union Co., Ltd.",
+        "language": "en",
+        "role": "operating-company",
+        "source": "https://www.mugroup.com/privacy-policy/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://www.mugroup.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官网隐私政策定义MU Group对应的业务数据控制公司，范围涵盖客户合作伙伴及员工等",
+        "url": "https://www.mugroup.com/privacy-policy/",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

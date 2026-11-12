@@ -6,12 +6,20 @@
   "identity": {
     "nameZh": "佰聆数据",
     "nameEn": null,
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "佰聆数据股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.brilliant-solution.com/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://www.brilliant-solution.com/",
-        "reviewedAt": "2026-11-10"
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

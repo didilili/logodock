@@ -8,7 +8,15 @@
   "identity": {
     "nameZh": "雷鸣比特",
     "nameEn": "Thunderbit",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "Thunderbit Inc.",
+        "language": "en",
+        "role": "company",
+        "source": "https://thunderbit.com/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",

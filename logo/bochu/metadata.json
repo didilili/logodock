@@ -8,12 +8,20 @@
   "identity": {
     "nameZh": "柏楚电子",
     "nameEn": "BOCHU",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "上海柏楚电子科技股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.bochu.com/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://www.bochu.com/",
-        "reviewedAt": "2026-11-10"
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -78,7 +86,7 @@
     },
     {
       "file": "logo-vertical.png",
-      "label": "竖版英文组合",
+      "label": "英文竖版组合",
       "variant": "logo",
       "language": "en",
       "layout": "vertical",

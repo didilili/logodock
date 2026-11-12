@@ -7,7 +7,15 @@
   "identity": {
     "nameZh": "华盛通",
     "nameEn": "VBrokers",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "深圳市时代华盛网络科技有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://www.hstong.com/hk/about/privacy-policy",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",
@@ -23,10 +31,15 @@
         "label": "官方应用商店英文名称",
         "url": "https://play.google.com/store/apps/details?id=com.huasheng.stock.gg&hl=en",
         "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "平台隐私政策明确华盛通产品及服务提供公司，券商开户及交易另有服务主体",
+        "url": "https://www.hstong.com/hk/about/privacy-policy",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
-  "entityType": "company",
+  "entityType": "product",
   "categories": [
     "securities-investment"
   ],

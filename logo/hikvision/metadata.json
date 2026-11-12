@@ -7,12 +7,25 @@
   "identity": {
     "nameZh": "海康威视",
     "nameEn": "HIKVISION",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "杭州海康威视数字技术股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://static.cninfo.com.cn/finalpage/enpage/002415_1.pdf",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",
         "url": "https://iberia.hikvision.com/es/hikcentral",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "公司公开披露的业务概况列明完整公司名称及官网",
+        "url": "https://static.cninfo.com.cn/finalpage/enpage/002415_1.pdf",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

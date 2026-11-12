@@ -6,12 +6,25 @@
   "identity": {
     "nameZh": "比孚信息科技",
     "nameEn": "Bizfocus",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "上海比孚信息科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://bizfocus.cn/about.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://bizfocus.cn/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方公司身份资料",
+        "url": "https://bizfocus.cn/about.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -24,10 +37,10 @@
   "assets": [
     {
       "file": "logo-bilingual.svg",
-      "label": "中英组合",
-      "variant": "logo",
+      "label": "中英双行字标",
+      "variant": "wordmark",
       "language": "bilingual",
-      "layout": "horizontal",
+      "layout": "vertical",
       "color": "brand",
       "background": "dark",
       "status": "current",

@@ -8,7 +8,15 @@
   "identity": {
     "nameZh": "浦发银行",
     "nameEn": "SPD BANK",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "上海浦东发展银行股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://news.spdb.com.cn/investor_relation/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",

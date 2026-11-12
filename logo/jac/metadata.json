@@ -7,12 +7,32 @@
   "identity": {
     "nameZh": "江淮汽车",
     "nameEn": "JAC GROUP",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "安徽江淮汽车集团股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.jac.com.cn/u/cms/www/202602/13165347s8os.pdf",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "Anhui Jianghuai Automobile Group Corp.,Ltd.",
+        "language": "en",
+        "role": "company",
+        "source": "https://www.jac.com.cn/u/cms/www/202602/13165347s8os.pdf",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",
         "url": "https://www.jac.com.cn/rczp/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官网2026年上市公告书列明发行人中英文全称及江淮汽车证券简称",
+        "url": "https://www.jac.com.cn/u/cms/www/202602/13165347s8os.pdf",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -24,7 +44,7 @@
   "assets": [
     {
       "file": "wordmark-bilingual.png",
-      "label": "江汽集团中英组合",
+      "label": "江汽集团中英字标",
       "variant": "wordmark",
       "status": "current",
       "background": "light",

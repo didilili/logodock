@@ -8,12 +8,25 @@
   "identity": {
     "nameZh": "思锐卓远",
     "nameEn": "CyRiex",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "青岛思锐卓远信息技术有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.cyriex.com/about/about.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "品牌官网",
         "url": "https://www.cyriex.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方公司身份资料",
+        "url": "https://www.cyriex.com/about/about.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

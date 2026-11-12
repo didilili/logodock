@@ -7,7 +7,15 @@
   "identity": {
     "nameZh": "度小满",
     "nameEn": "Du Xiaoman",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "重庆度小满信息技术有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://app.duxiaoman.com/static/wfe/protocot/personalInformationSharingList.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",
@@ -22,6 +30,11 @@
       {
         "label": "亚足联官方合作公告",
         "url": "https://www.the-afc.com/en/more/afc_news.html/news/afc-and-du-xiaoman-technology-announce-new-global-supporter-partnership",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "官方公司身份资料",
+        "url": "https://app.duxiaoman.com/static/wfe/protocot/personalInformationSharingList.html",
         "reviewedAt": "2026-11-11"
       }
     ]

@@ -11,8 +11,8 @@
         "name": "广州多益网络股份有限公司",
         "language": "zh",
         "role": "company",
-        "source": "https://www.duoyi.com/",
-        "reviewedAt": "2026-11-10"
+        "source": "https://www.duoyigroup.cn/news/news_28731.shtm",
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [
@@ -25,6 +25,11 @@
         "label": "多益集团官方英文介绍",
         "url": "https://www.duoyigroup.cn/dycommerce/en/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "多益集团官方公司主体自述",
+        "url": "https://www.duoyigroup.cn/news/news_28731.shtm",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

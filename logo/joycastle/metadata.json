@@ -8,12 +8,25 @@
   "identity": {
     "nameZh": "乐堡互娱",
     "nameEn": "JoyCastle",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "北京乐堡互娱科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://career.muc.edu.cn/front/zpxx.jspa?channelId=764&tid=31007",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://www.joycastle.mobi/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "企业在高校就业网发布的招聘资料列明完整单位名称、官网与HR同域邮箱",
+        "url": "https://career.muc.edu.cn/front/zpxx.jspa?channelId=764&tid=31007",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

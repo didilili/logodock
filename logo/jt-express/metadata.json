@@ -1,17 +1,39 @@
 {
   "schemaVersion": 4,
   "id": "jt-express",
-  "name": "极兔",
-  "aliases": [],
+  "name": "极兔速递",
+  "aliases": [
+    "极兔"
+  ],
   "identity": {
-    "nameZh": "极兔",
+    "nameZh": "极兔速递",
     "nameEn": "J&T Express",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "極兔速遞環球有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://ir.jtexpress.com/media/v3bin1l1/jt-express_%E5%91%98%E5%B7%A5%E5%A4%9A%E5%85%83%E5%8C%96%E6%94%BF%E7%AD%96-%E8%8B%B1%E6%96%87-1.pdf",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "J&T Global Express Limited",
+        "language": "en",
+        "role": "group",
+        "source": "https://ir.jtexpress.com/media/v3bin1l1/jt-express_%E5%91%98%E5%B7%A5%E5%A4%9A%E5%85%83%E5%8C%96%E6%94%BF%E7%AD%96-%E8%8B%B1%E6%96%87-1.pdf",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://www.jtexpress.com.cn/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方员工多元化政策封面明确开曼注册集团中英文全称",
+        "url": "https://ir.jtexpress.com/media/v3bin1l1/jt-express_%E5%91%98%E5%B7%A5%E5%A4%9A%E5%85%83%E5%8C%96%E6%94%BF%E7%AD%96-%E8%8B%B1%E6%96%87-1.pdf",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

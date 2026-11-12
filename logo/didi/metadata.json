@@ -15,8 +15,8 @@
         "name": "DiDi Global Inc.",
         "language": "en",
         "role": "group",
-        "source": "https://ir.didiglobal.com/static-files/f1804651-ad87-4bcf-9053-2b80f643a372",
-        "reviewedAt": "2026-11-07"
+        "source": "https://ir.didiglobal.com/",
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [
@@ -29,6 +29,11 @@
         "label": "滴滴2025年20-F（2026-04-13提交）",
         "url": "https://ir.didiglobal.com/static-files/f1804651-ad87-4bcf-9053-2b80f643a372",
         "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "官方投资者关系公司资料",
+        "url": "https://ir.didiglobal.com/",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

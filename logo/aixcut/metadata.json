@@ -1,22 +1,50 @@
 {
   "schemaVersion": 4,
   "id": "aixcut",
-  "name": "构序智能",
+  "name": "Aixcut",
   "aliases": [],
   "website": "https://aixcut.cn/",
   "identity": {
-    "nameZh": "构序智能",
+    "nameZh": null,
     "nameEn": "Aixcut",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "上海构序科技有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://aixcut.cn/privacy",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",
         "url": "https://aixcut.cn/",
-        "reviewedAt": "2026-11-10"
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "Aixcut官网隐私主体声明（审阅稿）",
+        "url": "https://aixcut.cn/privacy",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "Aixcut官网服务条款主体声明（审阅稿）",
+        "url": "https://aixcut.cn/terms",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "上海政府官方调研报道",
+        "url": "https://www.shanghai.gov.cn/nw15343/20251223/fd2666afe5c24c4f95226066366939f6.html",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "劳动报创始人现场访谈与Aixcut演示",
+        "url": "https://www.51ldb.com/shsldb/zc/content/019fa1ca217ec001000066d533acd97d.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
-  "entityType": "company",
+  "entityType": "product",
   "categories": [
     "creative-software"
   ],

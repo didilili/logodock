@@ -7,12 +7,25 @@
   "identity": {
     "nameZh": "华顺信安",
     "nameEn": "HuaShun XinAn",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "北京华顺信安科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://huashunxinan.net/about",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",
         "url": "https://huashunxinan.net/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官网公司简介明确完整公司名称",
+        "url": "https://huashunxinan.net/about",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

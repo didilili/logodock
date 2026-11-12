@@ -8,12 +8,32 @@
   "identity": {
     "nameZh": "中国工商银行",
     "nameEn": "ICBC",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "中国工商银行股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.icbc.com.cn/en/page/721853227590254635.html",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "Industrial and Commercial Bank of China Limited",
+        "language": "en",
+        "role": "company",
+        "source": "https://www.icbc.com.cn/en/page/721853227590254635.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://www.icbc.com.cn/ICBC/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官网股份制改制公告明确中英文法定全称及品牌简称",
+        "url": "https://www.icbc.com.cn/en/page/721853227590254635.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

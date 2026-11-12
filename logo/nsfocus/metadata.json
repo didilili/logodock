@@ -8,12 +8,32 @@
   "identity": {
     "nameZh": "绿盟科技",
     "nameEn": "NSFOCUS",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "绿盟科技集团股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://static.cninfo.com.cn/finalpage/2026-08-26/1225504606.PDF",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "NSFOCUS Technologies Group Co., Ltd.",
+        "language": "en",
+        "role": "company",
+        "source": "https://static.cninfo.com.cn/finalpage/2026-08-26/1225504606.PDF",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://www.nsfocus.com.cn/html/7/11/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "2026年半年度报告公司简介列明公司中英文全称",
+        "url": "https://static.cninfo.com.cn/finalpage/2026-08-26/1225504606.PDF",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

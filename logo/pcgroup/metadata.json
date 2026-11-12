@@ -7,12 +7,25 @@
   "identity": {
     "nameZh": "太平洋网络",
     "nameEn": "PCGROUP",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "Pacific Online Limited",
+        "language": "en",
+        "role": "group",
+        "source": "https://www1.pconline.com.cn/corp/pdf/20250411e_25653_AD_2_pconline.pdf",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://corp.pconline.com.cn/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官网股东大会通知以公司完整英文名称签发",
+        "url": "https://www1.pconline.com.cn/corp/pdf/20250411e_25653_AD_2_pconline.pdf",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

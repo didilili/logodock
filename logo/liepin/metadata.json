@@ -6,7 +6,22 @@
   "identity": {
     "nameZh": "猎聘",
     "nameEn": "Liepin",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "同道獵聘集團",
+        "language": "zh",
+        "role": "group",
+        "source": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042801526_c.pdf",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "Tongdao Liepin Group",
+        "language": "en",
+        "role": "group",
+        "source": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042801526_c.pdf",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
@@ -16,6 +31,11 @@
       {
         "label": "官方品牌介绍中的中英文名称",
         "url": "https://ir.liepin.com/knowledge",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "发行人2026年股东通知信列明开曼注册集团中英文全称",
+        "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042801526_c.pdf",
         "reviewedAt": "2026-11-11"
       }
     ]

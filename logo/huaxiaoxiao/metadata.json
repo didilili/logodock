@@ -7,7 +7,15 @@
   "identity": {
     "nameZh": "花小小新疆炒米粉",
     "nameEn": null,
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "北京四有青年餐饮管理有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://huaxx.cn/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",

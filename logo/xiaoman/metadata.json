@@ -14,14 +14,14 @@
         "language": "zh",
         "role": "company",
         "source": "https://www.xiaoman.cn/about.html",
-        "reviewedAt": "2026-11-10"
+        "reviewedAt": "2026-11-11"
       },
       {
-        "name": "Shenzhen Xiaoman Technology Co. Ltd.",
+        "name": "Shenzhen Xiaoman Technology Co., Ltd.",
         "language": "en",
         "role": "company",
-        "source": "https://apps.apple.com/cn/app/okki/id1092357844?uo=4",
-        "reviewedAt": "2026-11-10"
+        "source": "https://www.okki.com/privacy-policy",
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [
@@ -102,7 +102,7 @@
     {
       "file": "icon-appstore.jpg",
       "label": "OKKI 蓝底应用图标",
-      "variant": "icon",
+      "variant": "wordmark",
       "status": "current",
       "language": "en",
       "layout": "standalone",
@@ -126,7 +126,8 @@
       },
       "qualityNotes": [
         "官方 App Store 的 512×512 像素应用图标，含蓝色渐变底和白色 OKKI 字标。"
-      ]
+      ],
+      "usage": "app-icon"
     }
   ]
 }

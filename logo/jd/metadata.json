@@ -73,7 +73,7 @@
     },
     {
       "file": "icon-google-play-official.png",
-      "label": "应用图标（Google Play）",
+      "label": "应用图标",
       "variant": "icon",
       "language": "none",
       "layout": "standalone",
@@ -99,7 +99,8 @@
         "reference": "https://play.google.com/store/apps/details?id=com.jingdong.app.mall&hl=zh",
         "attribution": "京东。许可及署名条件待核实。",
         "reviewedAt": "2026-11-10"
-      }
+      },
+      "usage": "app-icon"
     },
     {
       "file": "logo-en-ir-official.png",

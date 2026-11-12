@@ -8,12 +8,25 @@
   "identity": {
     "nameZh": "元戎启行",
     "nameEn": "DEEPROUTE.AI",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "深圳元戎启行科技有限公司",
+        "language": "zh",
+        "role": "website-operator",
+        "source": "https://www.deeproute.ai/news-detail/729212176703557",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://www.deeproute.ai/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "元戎启行官网隐私主体声明",
+        "url": "https://www.deeproute.ai/news-detail/729212176703557",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

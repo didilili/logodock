@@ -8,7 +8,15 @@
   "identity": {
     "nameZh": "宇视科技",
     "nameEn": "uniview",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "浙江宇视科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://cn.uniview.com/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",

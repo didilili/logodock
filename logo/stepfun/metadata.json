@@ -7,7 +7,15 @@
   "identity": {
     "nameZh": "阶跃星辰",
     "nameEn": "StepFun",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "上海阶跃星辰智能科技股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://platform.stepfun.com/legal/user-agreement.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",

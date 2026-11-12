@@ -6,12 +6,32 @@
   "identity": {
     "nameZh": "宁波银行",
     "nameEn": "Bank of Ningbo",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "宁波银行股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.nbcb.com.cn/about_nbcb/information_diclosure/periodic_report/202604/W020260427623779586889.pdf",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "BANK OF NINGBO CO.,LTD.",
+        "language": "en",
+        "role": "company",
+        "source": "https://www.nbcb.com.cn/about_nbcb/information_diclosure/periodic_report/202604/W020260427623779586889.pdf",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://www.nbcb.com.cn/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方公开披露公司资料",
+        "url": "https://www.nbcb.com.cn/about_nbcb/information_diclosure/periodic_report/202604/W020260427623779586889.pdf",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

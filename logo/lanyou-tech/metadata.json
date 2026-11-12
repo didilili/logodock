@@ -8,7 +8,15 @@
   "identity": {
     "nameZh": "联友科技",
     "nameEn": "LAN-YOU TECHNOLOGY",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "深圳联友科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.szlanyou.com/AboutAssociates/index.aspx",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
@@ -19,6 +27,11 @@
         "label": "英文官方站",
         "url": "https://www.szlanyou.com/en/index.html",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官网公司介绍明确深圳联友科技有限公司成立及经营情况",
+        "url": "https://www.szlanyou.com/AboutAssociates/index.aspx",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

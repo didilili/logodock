@@ -1,19 +1,29 @@
 {
   "schemaVersion": 4,
   "id": "changhong",
-  "name": "四川长虹",
-  "aliases": [],
+  "name": "长虹",
+  "aliases": [
+    "四川长虹"
+  ],
   "website": "https://cn.changhong.com/",
   "entityType": "company",
   "identity": {
-    "nameZh": "四川长虹",
+    "nameZh": "长虹",
     "nameEn": "CHANGHONG",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "四川长虹电器股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://cn.changhong.com/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "品牌官网",
         "url": "https://cn.changhong.com/",
-        "reviewedAt": "2026-11-10"
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

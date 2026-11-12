@@ -9,18 +9,35 @@
     "nameEn": "FADADA",
     "legalNames": [
       {
+        "name": "深圳法大大网络科技有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://legal.fadada.com/policy/1597793752477609984",
+        "reviewedAt": "2026-11-11"
+      },
+      {
         "name": "Shenzhen Fadada Network Technology Co., Ltd",
         "language": "en",
         "role": "operating-company",
         "source": "https://apps.apple.com/cn/app/%E6%B3%95%E5%A4%A7%E5%A4%A7-%E7%AD%BE%E5%90%88%E5%90%8C-%E5%B0%B1%E4%B8%8A%E6%B3%95%E5%A4%A7%E5%A4%A7/id1103204022?uo=4",
-        "reviewedAt": "2026-11-10"
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [
       {
         "label": "官方应用商店",
         "url": "https://apps.apple.com/cn/app/%E6%B3%95%E5%A4%A7%E5%A4%A7-%E7%AD%BE%E5%90%88%E5%90%8C-%E5%B0%B1%E4%B8%8A%E6%B3%95%E5%A4%A7%E5%A4%A7/id1103204022?uo=4",
-        "reviewedAt": "2026-11-10"
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "官方公司身份资料",
+        "url": "https://www.fadada.com/about",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "现行官方隐私政策确认产品服务主体",
+        "url": "https://legal.fadada.com/policy/1597793752477609984",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -54,7 +71,8 @@
         "sourceType": "official",
         "processing": "rendered",
         "channel": "app-store"
-      }
+      },
+      "usage": "app-icon"
     }
   ]
 }

@@ -8,12 +8,25 @@
   "identity": {
     "nameZh": "联宝科技",
     "nameEn": "LCFC",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "联宝（合肥）电子科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.lcfc.com.cn/CompanyProfile/index.aspx",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://www.lcfc.com.cn/index.aspx",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官网公司简介明确联宝科技全称及联想集团控股子公司关系",
+        "url": "https://www.lcfc.com.cn/CompanyProfile/index.aspx",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -26,8 +39,8 @@
   "assets": [
     {
       "file": "logo.png",
-      "label": "红色中英组合",
-      "variant": "logo",
+      "label": "中英字标",
+      "variant": "wordmark",
       "language": "bilingual",
       "layout": "horizontal",
       "color": "brand",
@@ -50,5 +63,6 @@
         "reviewedAt": "2026-11-10"
       }
     }
-  ]
+  ],
+  "parentId": "lenovo"
 }

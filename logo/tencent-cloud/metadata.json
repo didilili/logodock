@@ -6,12 +6,25 @@
   "identity": {
     "nameZh": "腾讯云",
     "nameEn": "Tencent Cloud",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "腾讯云计算（北京）有限责任公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://cloud.tencent.com/document/product/301/1967",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://cloud.tencent.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "腾讯云官网关于页明确腾讯集团云计算品牌",
+        "url": "https://cloud.tencent.com/about/",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -108,5 +121,6 @@
   ],
   "topics": [
     "developer-ecosystem"
-  ]
+  ],
+  "parentId": "tencent"
 }

@@ -11,7 +11,15 @@
   "identity": {
     "nameZh": "小鹏",
     "nameEn": "XPENG",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "广州小鹏汽车科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.xiaopeng.com/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "小鹏中国官网",
@@ -37,7 +45,7 @@
       "label": "黑色图形 · 原始画布",
       "variant": "icon",
       "status": "current",
-      "language": "none",
+      "language": "en",
       "layout": "standalone",
       "color": "black",
       "background": "light",
@@ -66,7 +74,7 @@
       "label": "白色图形 · 原始画布",
       "variant": "icon",
       "status": "current",
-      "language": "none",
+      "language": "en",
       "layout": "standalone",
       "color": "white",
       "background": "dark",
@@ -122,7 +130,7 @@
       "label": "黑色图形",
       "variant": "icon",
       "status": "current",
-      "language": "none",
+      "language": "en",
       "layout": "standalone",
       "color": "black",
       "background": "light",
@@ -155,7 +163,7 @@
       "label": "白色图形",
       "variant": "icon",
       "status": "current",
-      "language": "none",
+      "language": "en",
       "layout": "standalone",
       "color": "white",
       "background": "dark",

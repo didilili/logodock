@@ -1,17 +1,25 @@
 {
   "schemaVersion": 4,
   "id": "bailongma-yunxing",
-  "name": "白龙马云行科技",
+  "name": "白龙马云行",
   "aliases": [],
   "identity": {
-    "nameZh": "白龙马云行科技",
+    "nameZh": "白龙马云行",
     "nameEn": null,
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "北京白龙马云行科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.bailongma.com/about",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://www.bailongma.com/about",
-        "reviewedAt": "2026-11-10"
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

@@ -14,7 +14,7 @@
         "language": "zh",
         "role": "company",
         "source": "https://www.yaowutech.com/news/yaowu-tech-company-profile/",
-        "reviewedAt": "2026-11-10"
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [
@@ -35,9 +35,9 @@
   "assets": [
     {
       "file": "icon-small-official.png",
-      "label": "小尺寸独立图形",
+      "label": "蓝底 Y 字母图形",
       "variant": "icon",
-      "language": "none",
+      "language": "en",
       "layout": "standalone",
       "color": "brand",
       "background": "any",

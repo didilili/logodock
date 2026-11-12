@@ -8,7 +8,15 @@
   "identity": {
     "nameZh": "名创优品",
     "nameEn": "MINISO",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "MINISO Group Holding Limited",
+        "language": "en",
+        "role": "group",
+        "source": "https://ir.miniso.com/FAQs",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
@@ -24,6 +32,11 @@
         "label": "官方门店应用发行商记录",
         "url": "https://apps.apple.com/cn/app/miniso%E7%A7%BB%E5%8A%A8%E5%8A%A9%E6%89%8B/id6468981157?uo=4",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方投资者常见问题明确上市集团全称及MINISO旗舰品牌关系",
+        "url": "https://ir.miniso.com/FAQs",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -92,7 +105,7 @@
     {
       "file": "icon-mobile-assistant.jpg",
       "label": "移动助手应用图标",
-      "variant": "icon",
+      "variant": "wordmark",
       "language": "bilingual",
       "layout": "standalone",
       "color": "brand",
@@ -117,7 +130,8 @@
       "usageWarnings": [
         "官方门店应用图标，含“移动助手”字样，采用该应用原稿的红色配色。"
       ],
-      "display": "alternative"
+      "display": "alternative",
+      "usage": "app-icon"
     },
     {
       "file": "logo-horizontal-us-official.svg",

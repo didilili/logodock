@@ -7,7 +7,15 @@
   "identity": {
     "nameZh": "微博",
     "nameEn": "Weibo",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "Weibo Corporation",
+        "language": "en",
+        "role": "group",
+        "source": "https://weibocorporation.gcs-web.com/static-files/d610d69d-4d50-4a5f-961b-4eb872971de9",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
@@ -46,7 +54,8 @@
         "sourceType": "official",
         "processing": "rendered",
         "channel": "app-store"
-      }
+      },
+      "usage": "app-icon"
     },
     {
       "file": "logo-chinese-horizontal-official.svg",

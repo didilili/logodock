@@ -8,12 +8,32 @@
   "identity": {
     "nameZh": "美图",
     "nameEn": "Meitu",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "美圖公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://corp-static.meitu.com/corp-new/20250818/2025081800527%28E%29.pdf",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "Meitu, Inc.",
+        "language": "en",
+        "role": "group",
+        "source": "https://corp-static.meitu.com/corp-new/20250818/2025081800527%28E%29.pdf",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://www.meitu.com/zh",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "公司官网中期业绩公告列明开曼注册公司中英文名称",
+        "url": "https://corp-static.meitu.com/corp-new/20250818/2025081800527%28E%29.pdf",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

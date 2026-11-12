@@ -8,7 +8,15 @@
   "identity": {
     "nameZh": "清微智能",
     "nameEn": "TsingMicro",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "北京清微智能科技股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.zhangye.gov.cn/zsj/dzdt/gzdt/202609/t20260915_1586453.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "清微智能官方来源",
@@ -83,9 +91,9 @@
     },
     {
       "file": "icon-official.svg",
-      "label": "独立图形",
+      "label": "红底白色 T 字母图形",
       "variant": "icon",
-      "language": "none",
+      "language": "en",
       "layout": "standalone",
       "color": "brand",
       "background": "any",

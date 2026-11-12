@@ -6,7 +6,15 @@
   "identity": {
     "nameZh": "小天才",
     "nameEn": "imoo",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "广东小天才科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.okii.com/about/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",

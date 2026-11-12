@@ -6,7 +6,15 @@
   "identity": {
     "nameZh": "平安健康保险",
     "nameEn": "Ping An Health Insurance",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "平安健康保险股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://pingan.com.cn/about/cn/health.jsp",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
@@ -16,6 +24,11 @@
       {
         "label": "平安健康保险官网英文版",
         "url": "https://health.pingan.com/health_new/en",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "平安集团官网公司简介明确全称及中国平安旗下专业健康保险公司关系",
+        "url": "https://pingan.com.cn/about/cn/health.jsp",
         "reviewedAt": "2026-11-11"
       }
     ]
@@ -29,8 +42,8 @@
   "assets": [
     {
       "file": "logo.png",
-      "label": "平安健康保险组合",
-      "variant": "logo",
+      "label": "平安健康保险字标",
+      "variant": "wordmark",
       "language": "bilingual",
       "layout": "horizontal",
       "color": "brand",
@@ -56,7 +69,7 @@
     {
       "file": "logo-white-header.png",
       "label": "白色横版",
-      "variant": "logo",
+      "variant": "wordmark",
       "status": "current",
       "language": "bilingual",
       "layout": "horizontal",
@@ -86,5 +99,6 @@
         "reviewedAt": "2026-11-11"
       }
     }
-  ]
+  ],
+  "parentId": "ping-an"
 }

@@ -6,12 +6,32 @@
   "identity": {
     "nameZh": "海底捞",
     "nameEn": "Haidilao",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "海底捞国际控股有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://static.cninfo.com.cn/finalpage/2026-04-24/1225181161.PDF",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "Haidilao International Holding Ltd.",
+        "language": "en",
+        "role": "group",
+        "source": "https://static.cninfo.com.cn/finalpage/2026-04-24/1225181161.PDF",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://www.haidilao.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "2025年度报告封面明确上市集团中英文全称",
+        "url": "https://static.cninfo.com.cn/finalpage/2026-04-24/1225181161.PDF",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

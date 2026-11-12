@@ -8,7 +8,22 @@
   "identity": {
     "nameZh": "联影",
     "nameEn": "United Imaging",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "Shanghai United Imaging Healthcare Co., Ltd.",
+        "language": "en",
+        "role": "company",
+        "source": "https://www.united-imaging.com/en/investor-relations",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "上海联影医疗科技股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://global.united-imaging.com/zh-cn/about-united-imaging",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",

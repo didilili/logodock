@@ -8,12 +8,25 @@
   "identity": {
     "nameZh": "四维图新",
     "nameEn": "SeeWay.AI",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "北京四维图新科技股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.seewayai.com/about-us",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌信息",
         "url": "https://www.seewayai.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官网关于我们明确上市公司完整名称",
+        "url": "https://www.seewayai.com/about-us",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -24,8 +37,8 @@
   "assets": [
     {
       "file": "logo-bilingual-gradient-official.png",
-      "label": "渐变中英组合",
-      "variant": "logo",
+      "label": "渐变中英双行字标",
+      "variant": "wordmark",
       "language": "bilingual",
       "layout": "vertical",
       "color": "brand",
@@ -50,8 +63,8 @@
     },
     {
       "file": "logo-bilingual-white-official.png",
-      "label": "白色中英组合",
-      "variant": "logo",
+      "label": "白色中英双行字标",
+      "variant": "wordmark",
       "language": "bilingual",
       "layout": "vertical",
       "color": "white",

@@ -7,12 +7,25 @@
   "identity": {
     "nameZh": "袋鼠云",
     "nameEn": "DTSTACK",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "杭州玳数科技有限公司",
+        "language": "zh",
+        "role": "website-operator",
+        "source": "https://www.dtstack.com/zh-cn/privacy/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",
         "url": "https://www.dtstack.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方隐私政策主体资料",
+        "url": "https://www.dtstack.com/zh-cn/privacy/",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

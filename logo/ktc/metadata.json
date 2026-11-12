@@ -8,12 +8,25 @@
   "identity": {
     "nameZh": "康冠科技",
     "nameEn": "KTC",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "深圳市康冠科技股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.ktc.cn/intro.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://www.ktc.cn/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官网公司简介明确深圳市康冠科技股份有限公司",
+        "url": "https://www.ktc.cn/intro.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -26,8 +39,8 @@
   "assets": [
     {
       "file": "logo.png",
-      "label": "康冠科技组合",
-      "variant": "logo",
+      "label": "紫色中英字标与股票代码",
+      "variant": "wordmark",
       "language": "bilingual",
       "layout": "horizontal",
       "color": "brand",

@@ -8,12 +8,25 @@
   "identity": {
     "nameZh": "蓝标传媒",
     "nameEn": "BlueMedia",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "北京蓝色光标数字传媒科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://bluemediagroup.cn/page/newsDetails.php?id=15581",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://bluemediagroup.cn/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方公司身份资料",
+        "url": "https://bluemediagroup.cn/page/newsDetails.php?id=15581",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -26,10 +39,10 @@
   "assets": [
     {
       "file": "logo-color.png",
-      "label": "彩色中英组合",
-      "variant": "logo",
+      "label": "彩色中英双行字标",
+      "variant": "wordmark",
       "language": "bilingual",
-      "layout": "horizontal",
+      "layout": "vertical",
       "color": "brand",
       "background": "light",
       "source": "https://bluemediagroup.cn/img/Bluemedia.png",
@@ -55,10 +68,10 @@
     },
     {
       "file": "logo.svg",
-      "label": "白色中英组合",
-      "variant": "logo",
+      "label": "白色中英双行字标",
+      "variant": "wordmark",
       "language": "bilingual",
-      "layout": "horizontal",
+      "layout": "vertical",
       "color": "white",
       "background": "dark",
       "source": "https://bluemediagroup.cn/img/BlueMedia-logo.svg",

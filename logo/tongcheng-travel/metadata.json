@@ -12,8 +12,15 @@
         "name": "Tongcheng Travel Holdings Limited",
         "language": "en",
         "role": "group",
-        "source": "https://www.tongchengir.com/",
-        "reviewedAt": "2026-11-10"
+        "source": "https://www.tongchengir.com/media/rmamh2za/2021-annual-report.pdf",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "同程旅行控股有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://www.tongchengir.com/cn/financials/",
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [

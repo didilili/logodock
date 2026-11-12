@@ -8,12 +8,32 @@
   "identity": {
     "nameZh": "上海银行",
     "nameEn": "Bank of Shanghai",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "上海银行股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2024-09-28/601229_20240928_EAAX.pdf",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "Bank of Shanghai Co.,Ltd.",
+        "language": "en",
+        "role": "company",
+        "source": "https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2024-09-28/601229_20240928_EAAX.pdf",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "品牌官网",
         "url": "https://www.bosc.cn/zh/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方公开披露公司资料",
+        "url": "https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2024-09-28/601229_20240928_EAAX.pdf",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

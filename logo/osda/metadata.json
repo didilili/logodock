@@ -1,19 +1,33 @@
 {
   "schemaVersion": 4,
   "id": "osda",
-  "name": "欧达光电",
+  "name": "欧圣达",
   "aliases": [
-    "OSDA"
+    "OSDA",
+    "欧达光电"
   ],
   "identity": {
-    "nameZh": "欧达光电",
+    "nameZh": "欧圣达",
     "nameEn": "OSDA",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "宁波欧达光电有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://osdasol.com.cn/newdata/392.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://osdasol.com.cn/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官网公司新闻明确欧达光电公司全称及旗下欧圣达Osda品牌关系",
+        "url": "https://osdasol.com.cn/newdata/392.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

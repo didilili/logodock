@@ -12,7 +12,7 @@
         "language": "zh",
         "role": "operating-company",
         "source": "https://lf3-cdn-tos.draftstatic.com/obj/ies-hotsoon-draft/dcar_ecom/f944ac35-d37a-4b05-91e6-8fa2f776f9b2.html",
-        "reviewedAt": "2026-11-10"
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [
@@ -92,7 +92,8 @@
         "reference": "https://apps.apple.com/cn/app/%E6%87%82%E8%BD%A6%E5%B8%9D-%E9%80%89%E4%B9%B0%E6%96%B0%E8%BD%A6%E4%BA%8C%E6%89%8B%E8%BD%A6/id1232131998?uo=4",
         "attribution": "懂车帝。许可及署名条件待核实。",
         "reviewedAt": "2026-11-09"
-      }
+      },
+      "usage": "app-icon"
     },
     {
       "file": "icon-yellow-extracted.svg",

@@ -6,7 +6,15 @@
   "identity": {
     "nameZh": "东方财富",
     "nameEn": "EASTMONEY",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "东方财富信息股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-03-20/c33776ee-9f3e-4c48-9a86-ad6d441ada46.PDF",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",

@@ -6,12 +6,20 @@
   "identity": {
     "nameZh": "蚂蚁集团",
     "nameEn": "Ant Group",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "蚂蚁科技集团股份有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://www.antgroup.com/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "蚂蚁集团官方来源",
         "url": "https://www.antgroup.com/",
-        "reviewedAt": "2026-11-09"
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

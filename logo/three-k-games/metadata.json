@@ -8,7 +8,15 @@
   "identity": {
     "nameZh": "3K游戏",
     "nameEn": "FingerTango",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "上海游民网络科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.3k.com/aboutUs.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",

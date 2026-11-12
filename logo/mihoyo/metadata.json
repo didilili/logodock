@@ -6,12 +6,25 @@
   "identity": {
     "nameZh": "米哈游",
     "nameEn": "miHoYo",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "上海米哈游网络科技股份有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://webstatic.mihoyo.com/upload/static-resource/2021/05/10/9230623b606369d5c417ed6b734e4a4b_3754816754074954133.pdf",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://www.mihoyo.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方隐私政策明确米哈游产品服务签约公司，官网2023年公益公告亦使用同一公司全称",
+        "url": "https://webstatic.mihoyo.com/upload/static-resource/2021/05/10/9230623b606369d5c417ed6b734e4a4b_3754816754074954133.pdf",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

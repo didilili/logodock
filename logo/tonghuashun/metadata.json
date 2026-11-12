@@ -6,7 +6,22 @@
   "identity": {
     "nameZh": "同花顺",
     "nameEn": "Hithink RoyalFlush",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "浙江核新同花顺网络信息股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://ft.10jqka.com.cn/thsft/iFindService/CellPhone/information/privacy",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "Hithink RoyalFlush Information Network Co.,Ltd.",
+        "language": "en",
+        "role": "company",
+        "source": "https://notice.10jqka.com.cn/api/pdf/8e86d90c1bae11ac.pdf",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",

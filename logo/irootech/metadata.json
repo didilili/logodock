@@ -3,20 +3,32 @@
   "id": "irootech",
   "name": "树根科技",
   "aliases": [
-    "树根互联",
-    "三一树根"
+    "树根互联"
   ],
   "website": "https://www.irootech.com/",
   "entityType": "company",
   "identity": {
     "nameZh": "树根科技",
     "nameEn": "IROOTECH",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "树根互联股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.irootech.com/about/index.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌信息",
         "url": "https://www.irootech.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官网公司介绍明确树根互联股份有限公司简称树根科技",
+        "url": "https://www.irootech.com/about/index.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -27,8 +39,8 @@
   "assets": [
     {
       "file": "logo-bilingual-black-official.png",
-      "label": "中英组合",
-      "variant": "logo",
+      "label": "黑色中英双行字标",
+      "variant": "wordmark",
       "language": "bilingual",
       "layout": "vertical",
       "color": "brand",
@@ -53,7 +65,7 @@
     },
     {
       "file": "wordmark-en-header-original.png",
-      "label": "英文横字标",
+      "label": "英文横版字标",
       "variant": "wordmark",
       "status": "current",
       "language": "en",

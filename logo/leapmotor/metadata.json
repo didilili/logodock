@@ -8,12 +8,25 @@
   "identity": {
     "nameZh": "零跑汽车",
     "nameEn": "Leapmotor",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "Zhejiang Leapmotor Technology Co., Ltd.",
+        "language": "en",
+        "role": "company",
+        "source": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0605/2026060501734.pdf",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://leapmotor.cn/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "2026年度股东大会通函封面列明发行人全称",
+        "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0605/2026060501734.pdf",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

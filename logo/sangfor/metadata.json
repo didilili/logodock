@@ -6,7 +6,15 @@
   "identity": {
     "nameZh": "深信服",
     "nameEn": "SANGFOR",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "深信服科技股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.sangfor.com.cn/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "深信服官方来源",

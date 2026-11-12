@@ -8,12 +8,25 @@
   "identity": {
     "nameZh": "超参数科技",
     "nameEn": "Parametrix.ai",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "超参数科技（深圳）有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://gxj.sz.gov.cn/gkmlpt/content/10/10893/post_10893393.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://www.parametrix.ai/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "深圳市工信局企业调研公示明确超参数完整公司名称与游戏AI业务",
+        "url": "https://gxj.sz.gov.cn/gkmlpt/content/10/10893/post_10893393.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

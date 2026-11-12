@@ -7,12 +7,25 @@
   "identity": {
     "nameZh": "海尔",
     "nameEn": "Haier",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "海尔集团公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-03-28/29453f15-c8ce-49e8-ad62-1f5526129498.PDF",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",
         "url": "https://www.haier.com/careers/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "2026年度关联交易核查意见列明海尔集团公司的注册全称与统一社会信用代码",
+        "url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-03-28/29453f15-c8ce-49e8-ad62-1f5526129498.PDF",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

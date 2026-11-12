@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
   "id": "codeberg",
-  "name": "Codeberg e.V.",
+  "name": "Codeberg",
   "aliases": [
     "Codeberg"
   ],
@@ -14,7 +14,7 @@
         "language": "de",
         "role": "organization",
         "source": "https://docs.codeberg.org/getting-started/what-is-codeberg/",
-        "reviewedAt": "2026-11-07"
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [
@@ -27,6 +27,11 @@
         "label": "官方身份来源",
         "url": "https://codeberg.org/Codeberg/Design/raw/branch/main/README.md",
         "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "Codeberg 官方联系页登记协会全称",
+        "url": "https://docs.codeberg.org/contact/",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -146,7 +151,7 @@
     },
     {
       "file": "logo-horizontal-blue.png",
-      "label": "横版蓝色组合",
+      "label": "蓝色横版组合",
       "variant": "logo",
       "language": "en",
       "layout": "horizontal",
@@ -176,7 +181,7 @@
     },
     {
       "file": "logo-horizontal-white.png",
-      "label": "横版反白组合",
+      "label": "反白横版组合",
       "variant": "logo",
       "language": "en",
       "layout": "horizontal",

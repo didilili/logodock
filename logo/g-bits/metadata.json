@@ -7,12 +7,25 @@
   "identity": {
     "nameZh": "吉比特",
     "nameEn": "G-bits",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "厦门吉比特网络技术股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.g-bits.com/zh/about.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",
         "url": "https://www.g-bits.com/zh/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方公司身份资料",
+        "url": "https://www.g-bits.com/zh/about.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

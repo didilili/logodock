@@ -6,7 +6,15 @@
   "identity": {
     "nameZh": "去哪儿",
     "nameEn": "QUNAR",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "北京趣拿信息技术有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://user.qunar.com/rules.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "去哪儿官方来源",

@@ -1,14 +1,23 @@
 {
   "schemaVersion": 4,
   "id": "callnovo",
-  "name": "客诺信息技术",
+  "name": "客诺",
   "aliases": [
-    "Callnovo"
+    "Callnovo",
+    "客诺海服"
   ],
   "identity": {
-    "nameZh": "客诺信息技术",
+    "nameZh": "客诺",
     "nameEn": "Callnovo",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "深圳客诺信息技术有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.callnovocx.com/about-callnovo",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
@@ -19,6 +28,16 @@
         "label": "英文官方网站",
         "url": "https://callnovo.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方公司身份资料",
+        "url": "https://www.callnovocx.com/about-callnovo",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "Callnovo官网2026年展会报道的中文品牌用法",
+        "url": "https://www.callnovocx.com/callnovo-insights/blogs/2026-shenzhen-ccbec-callnovo-ai-multilingual-customer-service",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

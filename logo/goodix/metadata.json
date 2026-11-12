@@ -7,12 +7,25 @@
   "identity": {
     "nameZh": "汇顶科技",
     "nameEn": "GOODiX",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "深圳市汇顶科技股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.goodix.com/zh/legal_related/privacy_policy",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",
         "url": "https://www.goodix.com/zh/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官网隐私政策明确公司名称及网站运营关系",
+        "url": "https://www.goodix.com/zh/legal_related/privacy_policy",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

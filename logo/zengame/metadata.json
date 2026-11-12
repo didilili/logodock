@@ -6,7 +6,15 @@
   "identity": {
     "nameZh": "禅游科技",
     "nameEn": "ZEN GAME",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "禅游科技控股有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://ww.zen-game.com/about/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",

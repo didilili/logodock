@@ -1,19 +1,38 @@
 {
   "schemaVersion": 4,
   "id": "li-auto",
-  "name": "理想",
+  "name": "理想汽车",
   "aliases": [
-    "Li Auto"
+    "Li Auto",
+    "理想"
   ],
   "identity": {
-    "nameZh": "理想",
+    "nameZh": "理想汽车",
     "nameEn": "Li Auto",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "Li Auto Inc.",
+        "language": "en",
+        "role": "group",
+        "source": "https://ir.lixiang.com/system/files-encrypted/nasdaq_kms/assets/2026/04/10/6-28-41/2025%20Annual%20Report.pdf",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://www.lixiang.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "2025年度20-F封面列明注册人全称，并解释其控股公司角色",
+        "url": "https://ir.lixiang.com/system/files-encrypted/nasdaq_kms/assets/2026/04/10/6-28-41/2025%20Annual%20Report.pdf",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "官方投资者中文公司简介采用理想汽车，与Li Auto品牌保持同层级并保留行业识别",
+        "url": "https://ir.lixiang.com/zh-hant/corporate-profile",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -28,7 +47,7 @@
       "file": "symbol.svg",
       "label": "黑色图形",
       "variant": "icon",
-      "language": "none",
+      "language": "en",
       "layout": "standalone",
       "color": "black",
       "background": "light",
@@ -54,7 +73,7 @@
       "file": "symbol-white.svg",
       "label": "白色图形",
       "variant": "icon",
-      "language": "none",
+      "language": "en",
       "layout": "standalone",
       "color": "white",
       "background": "dark",

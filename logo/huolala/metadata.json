@@ -9,7 +9,15 @@
   "identity": {
     "nameZh": "货拉拉",
     "nameEn": "Huolala",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "深圳依时货拉拉科技有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://www.huolala.cn/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",

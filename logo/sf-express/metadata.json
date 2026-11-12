@@ -8,7 +8,15 @@
   "identity": {
     "nameZh": "顺丰速运",
     "nameEn": "SF Express",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "顺丰速运有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://ccsp-egmas-static.sf-express.com/sfoss/download/html/SF_PRIVACY_POLICY.html?v=20211225",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "顺丰速运官方来源",
@@ -51,7 +59,8 @@
         "reference": "https://apps.apple.com/cn/app/%E9%A1%BA%E4%B8%B0%E9%80%9F%E8%BF%90-%E5%BF%AB%E9%80%92%E6%9F%A5%E5%AF%84%E6%94%B6-%E4%B8%8D%E6%AD%A2%E6%98%AF%E5%BF%AB/id899529698?uo=4",
         "attribution": "顺丰速运。许可及署名条件待核实。",
         "reviewedAt": "2026-11-09"
-      }
+      },
+      "usage": "app-icon"
     },
     {
       "file": "icon-black-official.png",

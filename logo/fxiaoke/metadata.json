@@ -7,7 +7,15 @@
   "identity": {
     "nameZh": "纷享销客",
     "nameEn": "ShareCRM",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "北京易动纷享科技有限责任公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.fxiaoke.com/crm/about-2/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "中文官网与英文品牌站的关联",
@@ -22,6 +30,11 @@
       {
         "label": "官方英文帮助中心品牌介绍",
         "url": "https://help.sharecrm.com/28876/b697a/5f0c8",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "官方公司身份资料",
+        "url": "https://www.fxiaoke.com/crm/about-2/",
         "reviewedAt": "2026-11-11"
       }
     ]

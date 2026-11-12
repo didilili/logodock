@@ -6,7 +6,15 @@
   "identity": {
     "nameZh": "360",
     "nameEn": "360",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "三六零安全科技股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.360.cn/newslist/zxzx/360ysjsqlcghgAg.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "360官方来源",

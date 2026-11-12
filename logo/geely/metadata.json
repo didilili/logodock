@@ -7,12 +7,32 @@
   "identity": {
     "nameZh": "吉利",
     "nameEn": "GEELY",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "吉利汽车控股有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://www.geelyauto.com.hk/zh-cn/%E5%85%AC%E5%8F%B8%E7%AE%80%E4%BB%8B-2/",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "Geely Automobile Holdings Limited",
+        "language": "en",
+        "role": "group",
+        "source": "https://www.geelyauto.com.hk/zh-cn/%E5%85%AC%E5%8F%B8%E7%AE%80%E4%BB%8B-2/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",
         "url": "https://www.geely.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方公司身份资料",
+        "url": "https://www.geelyauto.com.hk/zh-cn/%E5%85%AC%E5%8F%B8%E7%AE%80%E4%BB%8B-2/",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

@@ -8,7 +8,15 @@
   "identity": {
     "nameZh": "盛大",
     "nameEn": "Shanda",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "Shanda Investment Group Limited",
+        "language": "en",
+        "role": "website-operator",
+        "source": "https://shanda.com/terms",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "品牌官网",

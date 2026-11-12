@@ -9,7 +9,15 @@
   "identity": {
     "nameZh": "宇树科技",
     "nameEn": "Unitree",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "宇树科技股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.unitree.com/cn/about",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",

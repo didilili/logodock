@@ -6,12 +6,25 @@
   "identity": {
     "nameZh": "蚂蚁国际",
     "nameEn": "Ant International",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "Ant International (Cayman) Holding Limited",
+        "language": "en",
+        "role": "website-operator",
+        "source": "https://www.ant-intl.com/en/privacy-policy/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://www.ant-intl.com/cn/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方隐私政策主体资料",
+        "url": "https://www.ant-intl.com/en/privacy-policy/",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

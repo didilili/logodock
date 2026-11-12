@@ -7,12 +7,25 @@
   "identity": {
     "nameZh": "多点数智",
     "nameEn": "DMALL",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "多点（深圳）数字科技有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://www.dmall.com/topic/termsService",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",
         "url": "https://www.dmall.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方服务协议主体资料",
+        "url": "https://www.dmall.com/topic/termsService",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

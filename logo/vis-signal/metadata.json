@@ -1,17 +1,24 @@
 {
   "schemaVersion": 4,
   "id": "vis-signal",
-  "name": "杭州可见信号科技",
-  "aliases": [],
+  "name": "可见信号",
+  "aliases": [
+    "杭州可见信号科技"
+  ],
   "website": "https://vis-signal.com/",
   "identity": {
-    "nameZh": "杭州可见信号科技",
+    "nameZh": "可见信号",
     "nameEn": "Visible Signals",
     "legalNames": [],
     "sources": [
       {
-        "label": "官网页脚中英文品牌名称",
+        "label": "现行官网以可见信号作常用品牌名",
         "url": "https://vis-signal.com/",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "官网关于页与页脚中英文品牌名",
+        "url": "https://vis-signal.com/about",
         "reviewedAt": "2026-11-11"
       }
     ]

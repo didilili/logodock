@@ -1,30 +1,31 @@
 {
   "schemaVersion": 4,
   "id": "alibaba",
-  "name": "阿里巴巴集团",
+  "name": "阿里巴巴",
   "aliases": [
     "阿里巴巴",
     "Alibaba Group",
     "Alibaba Group Holding Limited",
-    "阿里巴巴集团控股有限公司"
+    "阿里巴巴集团控股有限公司",
+    "阿里巴巴集团"
   ],
   "identity": {
-    "nameZh": "阿里巴巴集团",
-    "nameEn": "Alibaba Group",
+    "nameZh": "阿里巴巴",
+    "nameEn": "Alibaba",
     "legalNames": [
       {
         "name": "阿里巴巴集团控股有限公司",
         "language": "zh",
         "role": "group",
         "source": "https://home.alibabagroup.com/zh-CN/document-2026456290057781248",
-        "reviewedAt": "2026-11-07"
+        "reviewedAt": "2026-11-11"
       },
       {
         "name": "Alibaba Group Holding Limited",
         "language": "en",
         "role": "group",
-        "source": "https://www.alibabagroup.com/en-US/resource-logos",
-        "reviewedAt": "2026-11-07"
+        "source": "https://www.alibabagroup.com/en-US/document-2003564382071554048",
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [
@@ -36,7 +37,17 @@
       {
         "label": "官方2026年6月季度业绩公告",
         "url": "https://home.alibabagroup.com/zh-CN/document-2026456290057781248",
-        "reviewedAt": "2026-11-07"
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "集团官方2026年年度报告发布公告及公司全称",
+        "url": "https://www.alibabagroup.com/en-US/document-2003564382071554048",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "阿里巴巴2026年6月季度业绩公告的官方常用简称",
+        "url": "https://data.alibabagroup.com/ecms-files/1532295521/fa5d65fc-9b3e-4e82-a8fc-4ce1c3e2c407/Alibaba%20Group%20Announces%20June%20Quarter%202026%20Results.pdf",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -49,7 +60,7 @@
   "assets": [
     {
       "file": "wordmark-orange.svg",
-      "label": "英文",
+      "label": "橙色英文字标",
       "variant": "wordmark",
       "status": "current",
       "background": "light",
@@ -76,7 +87,7 @@
     },
     {
       "file": "wordmark-orange-chinese.svg",
-      "label": "中文",
+      "label": "橙色中文字标",
       "variant": "wordmark",
       "status": "current",
       "background": "light",

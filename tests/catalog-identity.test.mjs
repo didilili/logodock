@@ -291,7 +291,11 @@ test('repository retains all 236 entities, precise identities and asset caveats'
   assert.equal(baiduPaw.display, 'alternative');
   assert.match(baiduPaw.usageWarnings.join(' '), /13mm/);
   assert.deepEqual(byId.git.identity.legalNames, []);
-  assert.equal(byId.bytedance.identity.legalNames[0].role, 'website-operator');
+  assert.ok(
+    byId.bytedance.identity.legalNames.some(
+      (entry) => entry.role === 'group' && entry.name === 'ByteDance Ltd.',
+    ),
+  );
   assert.ok(byId['trip-com'].identity.legalNames.some((n) => n.role === 'website-operator'));
   assert.ok(byId.zhipu.identity.legalNames.some((n) => n.name === 'Z.AI Co., Ltd.'));
   const senseTime = byId.sensetime.assets[0];

@@ -8,7 +8,15 @@
   "identity": {
     "nameZh": "优博讯",
     "nameEn": "UROVO",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "深圳市优博讯科技股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.urovo.com/about.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "品牌官网",
@@ -24,8 +32,8 @@
   "assets": [
     {
       "file": "logo-bilingual-blue-official.png",
-      "label": "蓝色中英组合",
-      "variant": "logo",
+      "label": "蓝色中英字标",
+      "variant": "wordmark",
       "status": "current",
       "language": "bilingual",
       "layout": "horizontal",
@@ -53,8 +61,8 @@
     },
     {
       "file": "logo-bilingual-white-official.png",
-      "label": "白色中英组合",
-      "variant": "logo",
+      "label": "白色中英字标",
+      "variant": "wordmark",
       "status": "current",
       "language": "bilingual",
       "layout": "horizontal",

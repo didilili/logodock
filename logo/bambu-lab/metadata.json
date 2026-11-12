@@ -7,12 +7,25 @@
   "identity": {
     "nameZh": "拓竹",
     "nameEn": "Bambu Lab",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "深圳拓竹科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://cdn1.bambulab.com/trust-center/file/ISMS_UKAS.pdf",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://github.com/bambulab/BambuStudio",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "拓竹官方信任中心ISO认证主体",
+        "url": "https://cdn1.bambulab.com/trust-center/file/ISMS_UKAS.pdf",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

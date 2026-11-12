@@ -6,7 +6,15 @@
   "identity": {
     "nameZh": "汽车之家",
     "nameEn": "Autohome",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "Autohome Inc.",
+        "language": "en",
+        "role": "group",
+        "source": "https://ir.autohome.com.cn/about-us/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
@@ -16,6 +24,11 @@
       {
         "label": "官方投资者关系英文介绍",
         "url": "https://ir.autohome.com.cn/",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "官方投资者关系公司资料",
+        "url": "https://ir.autohome.com.cn/about-us/",
         "reviewedAt": "2026-11-11"
       }
     ]

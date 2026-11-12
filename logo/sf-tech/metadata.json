@@ -8,7 +8,15 @@
   "identity": {
     "nameZh": "顺丰科技",
     "nameEn": "SF Technology",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "顺丰科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.sf-tech.com.cn/about",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "品牌官网",

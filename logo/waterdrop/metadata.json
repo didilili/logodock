@@ -14,7 +14,7 @@
         "language": "en",
         "role": "company",
         "source": "https://ir.waterdrop-inc.com/",
-        "reviewedAt": "2026-11-10"
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [
@@ -40,10 +40,10 @@
   "assets": [
     {
       "file": "logo-bilingual-small-official.png",
-      "label": "白字蓝底组合",
-      "variant": "logo",
+      "label": "蓝底白字中英双行字标",
+      "variant": "wordmark",
       "language": "bilingual",
-      "layout": "horizontal",
+      "layout": "vertical",
       "color": "brand",
       "background": "any",
       "source": "https://cloud-image.shuiditech.com/waterdrop-inc/logo/wd_logo_1.png",
@@ -66,10 +66,10 @@
     },
     {
       "file": "logo-bilingual-white-background-official.png",
-      "label": "蓝字白底组合",
-      "variant": "logo",
+      "label": "白底蓝字中英双行字标",
+      "variant": "wordmark",
       "language": "bilingual",
-      "layout": "horizontal",
+      "layout": "vertical",
       "color": "brand",
       "background": "any",
       "source": "https://cloud-image.shuiditech.com/waterdrop-inc/water_logo1.png",

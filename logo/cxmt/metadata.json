@@ -6,12 +6,25 @@
   "identity": {
     "nameZh": "长鑫存储",
     "nameEn": "CXMT",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "长鑫科技集团股份有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://www.cxmt.com/about.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://www.cxmt.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方公司身份资料",
+        "url": "https://www.cxmt.com/about.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

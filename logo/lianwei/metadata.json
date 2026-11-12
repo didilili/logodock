@@ -10,12 +10,25 @@
   "identity": {
     "nameZh": "联蔚数科",
     "nameEn": "LIANWEI",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "上海联蔚数字科技集团股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.lianwei.com.cn/about/company-profile",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "品牌官网",
         "url": "https://www.lianwei.com.cn/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "公司介绍及股份制改制沿革与官网完整署名对应",
+        "url": "https://www.lianwei.com.cn/about/company-profile",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

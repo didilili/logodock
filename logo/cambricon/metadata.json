@@ -7,12 +7,25 @@
   "identity": {
     "nameZh": "寒武纪",
     "nameEn": "Cambricon",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "中科寒武纪科技股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.cambricon.com/index.php?m=content&c=index&a=lists&catid=157",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",
         "url": "https://www.cambricon.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方公司身份资料",
+        "url": "https://www.cambricon.com/index.php?m=content&c=index&a=lists&catid=157",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -40,7 +53,7 @@
         "reviewedAt": "2026-11-10"
       },
       "language": "bilingual",
-      "layout": "horizontal",
+      "layout": "vertical",
       "color": "other",
       "provenance": {
         "sourceType": "official",
@@ -74,7 +87,7 @@
         "reviewedAt": "2026-11-10"
       },
       "language": "bilingual",
-      "layout": "horizontal",
+      "layout": "vertical",
       "color": "white",
       "provenance": {
         "sourceType": "official",
@@ -92,7 +105,7 @@
       "variant": "wordmark",
       "status": "current",
       "language": "bilingual",
-      "layout": "horizontal",
+      "layout": "vertical",
       "color": "brand",
       "background": "light",
       "source": "https://www.cambricon.com/uploadfile/poster/%E5%AF%92%E6%AD%A6%E7%BA%AA-LOGO.zip#PNG",

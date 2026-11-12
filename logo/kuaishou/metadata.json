@@ -129,11 +129,12 @@
       },
       "qualityNotes": [
         "四角透明。"
-      ]
+      ],
+      "usage": "app-icon"
     },
     {
       "file": "logo-chinese-horizontal-color.png",
-      "label": "横版中文组合",
+      "label": "中文横版组合",
       "variant": "logo",
       "language": "zh",
       "layout": "horizontal",
@@ -163,7 +164,7 @@
     },
     {
       "file": "logo-chinese-horizontal-dark-background.png",
-      "label": "横版深底中文组合",
+      "label": "深底中文横版组合",
       "variant": "logo",
       "language": "zh",
       "layout": "horizontal",
@@ -193,7 +194,7 @@
     },
     {
       "file": "logo-chinese-horizontal-orange-background.png",
-      "label": "横版橙底中文组合",
+      "label": "橙底中文横版组合",
       "variant": "logo",
       "language": "zh",
       "layout": "horizontal",
@@ -223,7 +224,7 @@
     },
     {
       "file": "logo-chinese-vertical-color.png",
-      "label": "竖版中文组合",
+      "label": "中文竖版组合",
       "variant": "logo",
       "language": "zh",
       "layout": "vertical",
@@ -253,7 +254,7 @@
     },
     {
       "file": "logo-chinese-vertical-dark-background.png",
-      "label": "竖版深底中文组合",
+      "label": "深底中文竖版组合",
       "variant": "logo",
       "language": "zh",
       "layout": "vertical",
@@ -283,7 +284,7 @@
     },
     {
       "file": "logo-chinese-vertical-orange-background.png",
-      "label": "竖版橙底中文组合",
+      "label": "橙底中文竖版组合",
       "variant": "logo",
       "language": "zh",
       "layout": "vertical",

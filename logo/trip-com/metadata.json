@@ -16,21 +16,21 @@
         "language": "en",
         "role": "group",
         "source": "https://investors.trip.com/",
-        "reviewedAt": "2026-11-07"
+        "reviewedAt": "2026-11-11"
       },
       {
         "name": "携程集团有限公司",
         "language": "zh",
         "role": "group",
-        "source": "https://investors.trip.com/zh-hans/news-releases/news-release-details/tripcom-group-limited-reports-unaudited-fourth-quarter-and-5/",
-        "reviewedAt": "2026-11-07"
+        "source": "https://investors.trip.com/zh-hans/news-releases/news-release-details/tripcom-group-limited-reports-unaudited-second-quarter-and-4",
+        "reviewedAt": "2026-11-11"
       },
       {
         "name": "Trip.com Travel Singapore Pte. Ltd.",
         "language": "en",
         "role": "website-operator",
         "source": "https://group.trip.com/",
-        "reviewedAt": "2026-11-07"
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [

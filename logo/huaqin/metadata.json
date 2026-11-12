@@ -7,7 +7,15 @@
   "identity": {
     "nameZh": "华勤",
     "nameEn": "Huaqin",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "华勤技术股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.huaqin.com/about/company",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",
@@ -17,6 +25,11 @@
       {
         "label": "官方英文品牌网站",
         "url": "https://en.huaqin.com/",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "官网公司介绍明确华勤技术股份有限公司",
+        "url": "https://www.huaqin.com/about/company",
         "reviewedAt": "2026-11-11"
       }
     ]

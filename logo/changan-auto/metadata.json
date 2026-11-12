@@ -8,12 +8,20 @@
   "identity": {
     "nameZh": "长安汽车",
     "nameEn": "CHANGAN",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "重庆长安汽车股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.changan.com.cn/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://www.changan.com.cn/",
-        "reviewedAt": "2026-11-10"
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

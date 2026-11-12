@@ -8,12 +8,32 @@
   "identity": {
     "nameZh": "快商通",
     "nameEn": "KRISTON.AI",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "厦门快商通科技股份有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://www.kuaishang.cn/ksprivacy_policy.html",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "厦门快商通信息技术有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://www.kuaishang.cn/ksprivacy_policy.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://www.kuaishang.cn/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官网隐私政策明确快商通包含两家服务公司及其子公司",
+        "url": "https://www.kuaishang.cn/ksprivacy_policy.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

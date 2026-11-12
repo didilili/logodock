@@ -2,9 +2,7 @@
   "schemaVersion": 4,
   "id": "celbot-ai",
   "name": "璇溟科技",
-  "aliases": [
-    "深圳璇溟科技有限公司"
-  ],
+  "aliases": [],
   "website": "https://www.celbot-ai.com/",
   "entityType": "company",
   "identity": {
@@ -15,7 +13,17 @@
       {
         "label": "品牌官网",
         "url": "https://www.celbot-ai.com/",
-        "reviewedAt": "2026-11-10"
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "璇溟科技官方关于我们（主体全称待确认）",
+        "url": "https://www.celbot-ai.com/#/about",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "璇溟科技官方联系渠道",
+        "url": "https://www.celbot-ai.com/#/contact",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

@@ -8,12 +8,25 @@
   "identity": {
     "nameZh": "沐瞳科技",
     "nameEn": "MOONTON",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "上海沐瞳科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://cn.moonton.com/about/index.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://cn.moonton.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官网关于我们明确上海沐瞳科技有限公司",
+        "url": "https://cn.moonton.com/about/index.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

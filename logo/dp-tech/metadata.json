@@ -8,12 +8,25 @@
   "identity": {
     "nameZh": "深势科技",
     "nameEn": "DP Technology",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "北京深势科技股份有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://hermite.dp.tech/tutorial/docs/contract/terms_of_use/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "品牌官网",
         "url": "https://www.dp.tech/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方服务协议主体资料",
+        "url": "https://hermite.dp.tech/tutorial/docs/contract/terms_of_use/",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

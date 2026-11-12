@@ -10,12 +10,30 @@
   "identity": {
     "nameZh": "九云数智",
     "nameEn": null,
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "上海九云数智科技开发有限责任公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://stcsm.sh.gov.cn/cmsres/f8/f82b6b28b12e43ecb63e1b13d06804cc/bd4685683d5dfee89933e8b8b4515a60.pdf",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "品牌官网",
         "url": "https://www.9yundata.com/about-us.html",
-        "reviewedAt": "2026-11-10"
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "上海市科委官方企业认定名单",
+        "url": "https://stcsm.sh.gov.cn/cmsres/f8/f82b6b28b12e43ecb63e1b13d06804cc/bd4685683d5dfee89933e8b8b4515a60.pdf",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "企业招聘主页的品牌主体声明",
+        "url": "https://m.zhipin.com/companys/8ac5c3f7b32f1d7a03dz2d-7EVM~.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

@@ -7,12 +7,30 @@
   "identity": {
     "nameZh": "哈啰",
     "nameEn": "Hello",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "上海哈啰普惠科技有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://m.hellobike.com/h5-activity/latest/activity20221122033723361101.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",
         "url": "https://www.hello-inc.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "哈啰官方App登记提供者与开发者均为该公司，并列统一社会信用代码",
+        "url": "https://apps.apple.com/cn/app/id1165227346",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "官方平台服务协议确认运营主体",
+        "url": "https://m.hellobike.com/h5-activity/latest/activity20221122033723361101.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -50,8 +68,8 @@
     },
     {
       "file": "icon-app.webp",
-      "label": "应用图标",
-      "variant": "icon",
+      "label": "蓝底白字应用图标",
+      "variant": "wordmark",
       "status": "current",
       "background": "any",
       "source": "https://www.hello-inc.com/assets/images/logo-hellobike.webp",
@@ -72,7 +90,8 @@
         "sourceType": "official",
         "processing": "original",
         "channel": "website"
-      }
+      },
+      "usage": "app-icon"
     }
   ]
 }

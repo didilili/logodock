@@ -7,12 +7,25 @@
   "identity": {
     "nameZh": "金山软件",
     "nameEn": "KINGSOFT",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "Kingsoft Corporation Limited",
+        "language": "en",
+        "role": "group",
+        "source": "https://static.cninfo.com.cn/finalpage/2026-08-20/1225482678.PDF",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",
         "url": "https://www.kingsoft.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "金山办公2026年半年度报告明确定义金山软件为开曼注册上市公司及控股股东",
+        "url": "https://static.cninfo.com.cn/finalpage/2026-08-20/1225482678.PDF",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

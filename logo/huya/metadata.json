@@ -6,12 +6,25 @@
   "identity": {
     "nameZh": "虎牙",
     "nameEn": "huya",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "HUYA Inc.",
+        "language": "en",
+        "role": "company",
+        "source": "https://ir.huya.com/Company-Profile",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://www.huya.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方投资者公司简介明确上市公司全称",
+        "url": "https://ir.huya.com/Company-Profile",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

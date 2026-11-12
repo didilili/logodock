@@ -6,12 +6,25 @@
   "identity": {
     "nameZh": "波克",
     "nameEn": "BOKE",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "波克科技集团有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://m.boke.com/about.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://www.boke.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方公司身份资料",
+        "url": "https://m.boke.com/about.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

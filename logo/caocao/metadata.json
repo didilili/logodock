@@ -5,13 +5,31 @@
   "aliases": [],
   "identity": {
     "nameZh": "曹操出行",
-    "nameEn": "caocao",
-    "legalNames": [],
+    "nameEn": "CaoCao",
+    "legalNames": [
+      {
+        "name": "杭州优行科技有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://www.caocao.com.cn/legal/privacy",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://www.caocao.com.cn/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "曹操出行2026年个人信息保护及隐私政策",
+        "url": "https://www.caocao.com.cn/legal/privacy",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "曹操出行官方2026年英文公告的品牌简称与拼写",
+        "url": "https://ir.caocao.com.cn/en/information-disclosure/company-news/caocao-teams-up-with-doubao-to-launch-ai-ride-hailing-service-with-initial-rollout-in-beijing-hangzhou-and-suzhou/",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

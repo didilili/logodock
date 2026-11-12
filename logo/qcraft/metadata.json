@@ -8,7 +8,15 @@
   "identity": {
     "nameZh": "轻舟智航",
     "nameEn": "QCRAFT",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "北京轻舟智航智能技术有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.qcraft.ai/cn/cookie-policy",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",

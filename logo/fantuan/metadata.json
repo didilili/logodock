@@ -12,15 +12,20 @@
         "name": "Just Order Enterprise Corp",
         "language": "en",
         "role": "operating-company",
-        "source": "https://apps.apple.com/ca/app/fantuan-delivery-%E9%A5%AD%E5%9B%A2%E5%A4%96%E5%8D%96/id1218697769?uo=4",
-        "reviewedAt": "2026-11-10"
+        "source": "https://apis3.fantuan.ca/html/PrivacyPolicy.html",
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [
       {
         "label": "官方应用商店",
         "url": "https://apps.apple.com/ca/app/fantuan-delivery-%E9%A5%AD%E5%9B%A2%E5%A4%96%E5%8D%96/id1218697769?uo=4",
-        "reviewedAt": "2026-11-10"
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "官方加拿大隐私政策确认网站与应用运营主体",
+        "url": "https://apis3.fantuan.ca/html/PrivacyPolicy.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -57,7 +62,8 @@
       },
       "qualityNotes": [
         "官方饭团外卖应用图标，青绿色不透明背景。"
-      ]
+      ],
+      "usage": "app-icon"
     },
     {
       "file": "logo-english-horizontal.png",

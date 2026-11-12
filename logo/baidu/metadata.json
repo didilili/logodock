@@ -12,7 +12,7 @@
         "language": "en",
         "role": "group",
         "source": "https://ir.baidu.com/",
-        "reviewedAt": "2026-11-10"
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [
@@ -25,6 +25,11 @@
         "label": "百度官方媒体资源库",
         "url": "https://home.baidu.com/media_resource/",
         "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "官方投资者关系公司资料",
+        "url": "https://ir.baidu.com/",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -97,7 +102,8 @@
         "reference": "https://apps.apple.com/cn/app/%E7%99%BE%E5%BA%A6-ai%E6%99%BA%E8%83%BD%E6%90%9C%E7%B4%A2/id382201985?uo=4",
         "attribution": "百度。许可及署名条件待核实。",
         "reviewedAt": "2026-11-09"
-      }
+      },
+      "usage": "app-icon"
     },
     {
       "file": "icon-blue-brand-library.jpg",

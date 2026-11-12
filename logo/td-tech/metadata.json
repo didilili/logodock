@@ -7,7 +7,15 @@
   "identity": {
     "nameZh": "鼎桥",
     "nameEn": "TDTECH",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "鼎桥通信技术有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.td-tech.com/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方英文站",

@@ -1,12 +1,22 @@
 {
   "schemaVersion": 4,
   "id": "amap",
-  "name": "高德",
-  "aliases": [],
+  "name": "高德地图",
+  "aliases": [
+    "高德"
+  ],
   "identity": {
-    "nameZh": "高德",
+    "nameZh": "高德地图",
     "nameEn": "Amap",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "北京高德图强科技有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://cache.amap.com/h5/h5/publish/238/index.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "高德官方来源",
@@ -17,11 +27,26 @@
         "label": "阿里巴巴集团官方资源页中的高德英文名称",
         "url": "https://www.alibabagroup.com/en-US/resource-logos",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "高德地图用户协议的产品名称与运营主体",
+        "url": "https://wb.amap.com/doc/agreement.html",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "高德现行隐私权政策",
+        "url": "https://cache.amap.com/h5/h5/publish/238/index.html",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "阿里巴巴2026年20-F的高德业务归属",
+        "url": "https://data.alibabagroup.com/ir_filings/SEC/BABA/000119312526231755/baba-20260331.htm",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
   "website": "https://www.amap.com/",
-  "entityType": "company",
+  "entityType": "product",
   "categories": [
     "auto-information"
   ],
@@ -54,7 +79,8 @@
         "reference": "https://apps.apple.com/cn/app/%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE-%E9%AB%98%E5%BE%B7%E6%89%93%E8%BD%A6-%E5%AF%BC%E8%88%AA%E5%85%AC%E4%BA%A4%E5%9C%B0%E9%93%81%E5%87%BA%E8%A1%8C/id461703208?uo=4",
         "attribution": "高德。许可及署名条件待核实。",
         "reviewedAt": "2026-11-09"
-      }
+      },
+      "usage": "app-icon"
     },
     {
       "file": "logo-map-horizontal.png",
@@ -88,5 +114,6 @@
         "细小字标边缘受像素限制，适合原生尺寸或缩小使用。"
       ]
     }
-  ]
+  ],
+  "parentId": "alibaba"
 }

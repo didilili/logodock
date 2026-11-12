@@ -6,12 +6,25 @@
   "identity": {
     "nameZh": "壁仞科技",
     "nameEn": "BIRENTECH",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "上海壁仞科技股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.birentech.com/privacy-policy/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://www.birentech.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方隐私政策主体资料",
+        "url": "https://www.birentech.com/privacy-policy/",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

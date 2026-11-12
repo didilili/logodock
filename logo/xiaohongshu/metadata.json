@@ -8,7 +8,15 @@
   "identity": {
     "nameZh": "小红书",
     "nameEn": "Xiaohongshu",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "行吟信息科技（上海）有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://agree.xiaohongshu.com/h5/terms/ZXXY20230306001/-1",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "小红书官方关于我们",
@@ -68,11 +76,11 @@
     },
     {
       "file": "wordmark-rounded-google-play.png",
-      "label": "红底白字圆角应用标识",
+      "label": "红底白字圆角应用图标",
       "variant": "wordmark",
       "status": "current",
       "language": "zh",
-      "layout": "horizontal",
+      "layout": "standalone",
       "color": "brand",
       "background": "any",
       "provenance": {
@@ -95,7 +103,8 @@
         "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。适用范围限于相同“小红书”三字及简单几何底形。"
       },
       "sha256": "d9510f568a4e2149db9ed0bee63347254ce172e0ddfebf31661f0fa6356c3d94",
-      "bytes": 11188
+      "bytes": 11188,
+      "usage": "app-icon"
     }
   ]
 }

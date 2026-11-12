@@ -6,7 +6,15 @@
   "identity": {
     "nameZh": "老虎国际",
     "nameEn": "Tiger Brokers",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "UP Fintech Holding Limited",
+        "language": "en",
+        "role": "group",
+        "source": "https://ir.itigerup.com/investor-resources/investor-faqs/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",

@@ -7,7 +7,15 @@
   "identity": {
     "nameZh": "浩鲸",
     "nameEn": "Whale Cloud",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "浩鲸云计算科技股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.iwhalecloud.com/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",

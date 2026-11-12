@@ -10,11 +10,11 @@
     "nameEn": "ByteDance",
     "legalNames": [
       {
-        "name": "Bytedance Ltd",
+        "name": "ByteDance Ltd.",
         "language": "en",
-        "role": "website-operator",
-        "source": "https://lf3-static.bytednsdoc.com/obj/eden-cn/shjpmmv_ljuhklafi/ljhwZthlaukjlkulzlp/files/PrivacyPolicy_ByteDance.com.pdf",
-        "reviewedAt": "2026-11-07"
+        "role": "group",
+        "source": "https://www.supremecourt.gov/opinions/24pdf/24-656_ca7d.pdf",
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [
@@ -27,6 +27,11 @@
         "label": "官网页脚隐私政策（2021-03-16版）",
         "url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/shjpmmv_ljuhklafi/ljhwZthlaukjlkulzlp/files/PrivacyPolicy_ByteDance.com.pdf",
         "reviewedAt": "2026-11-07"
+      },
+      {
+        "label": "美国最高法院判决的ByteDance集团主体记载",
+        "url": "https://www.supremecourt.gov/opinions/24pdf/24-656_ca7d.pdf",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

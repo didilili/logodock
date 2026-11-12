@@ -8,7 +8,15 @@
   "identity": {
     "nameZh": "新东方",
     "nameEn": "New Oriental",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "New Oriental Education & Technology Group Inc.",
+        "language": "en",
+        "role": "group",
+        "source": "https://investor.neworiental.org/news-releases/news-release-details/new-oriental-announces-filing-annual-report-form-20-f-fiscal-11",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "品牌官网",
@@ -19,6 +27,11 @@
         "label": "官方英文公司介绍",
         "url": "https://www.neworiental.org/english/who/201507/8213540.html",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "公司2026年年报提交公告明确上市集团完整英文名称",
+        "url": "https://investor.neworiental.org/news-releases/news-release-details/new-oriental-announces-filing-annual-report-form-20-f-fiscal-11",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

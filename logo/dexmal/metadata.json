@@ -9,12 +9,25 @@
   "identity": {
     "nameZh": "原力灵机",
     "nameEn": "DEXMAL",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "原力灵机（重庆）智能科技股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.dexmal.com/legal/privacy-policy",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://www.dexmal.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方隐私政策主体资料",
+        "url": "https://www.dexmal.com/legal/privacy-policy",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -108,7 +121,7 @@
     },
     {
       "file": "wordmark-bilingual-white.png",
-      "label": "白色中英字标组合",
+      "label": "白色中英字标",
       "variant": "wordmark",
       "language": "bilingual",
       "layout": "vertical",
@@ -243,7 +256,7 @@
     },
     {
       "file": "wordmark-bilingual.png",
-      "label": "黑色中英字标组合",
+      "label": "黑色中英字标",
       "variant": "wordmark",
       "language": "bilingual",
       "layout": "vertical",

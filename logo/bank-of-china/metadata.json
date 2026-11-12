@@ -6,12 +6,32 @@
   "identity": {
     "nameZh": "中国银行",
     "nameEn": "Bank of China",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "中国银行股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://pic.bankofchina.com/bocappd/report/202509/P020250925611331522208.pdf",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "BANK OF CHINA LIMITED",
+        "language": "en",
+        "role": "company",
+        "source": "https://pic.bankofchina.com/bocappd/report/202509/P020250925611331522208.pdf",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://www.boc.cn/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "中国银行章程第三条公司中英文全称",
+        "url": "https://pic.bankofchina.com/bocappd/report/202509/P020250925611331522208.pdf",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

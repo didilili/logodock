@@ -6,7 +6,15 @@
   "identity": {
     "nameZh": "超聚变",
     "nameEn": "xFusion",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "超聚变数字技术股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.xfusion.com/cn/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",

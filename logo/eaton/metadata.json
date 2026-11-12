@@ -13,8 +13,8 @@
         "name": "Eaton Corporation plc",
         "language": "en",
         "role": "group",
-        "source": "https://www.eaton.com/us/en-us/company/news-insights/media-resources.html",
-        "reviewedAt": "2026-11-10"
+        "source": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-reports-record-third-quarter-2026-results.html",
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [
@@ -27,6 +27,11 @@
         "label": "官方媒体页与现用品牌图稿",
         "url": "https://origin-login.eaton.com/in/en-us/company/news-insights/media-resources.html",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方公司身份资料",
+        "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-reports-record-third-quarter-2026-results.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

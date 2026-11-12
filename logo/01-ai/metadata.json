@@ -8,12 +8,25 @@
   "identity": {
     "nameZh": "零一万物",
     "nameEn": "01.AI",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "北京零一万物科技有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://platform.lingyiwanwu.com/useragreement",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://www.lingyiwanwu.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方服务协议主体资料",
+        "url": "https://platform.lingyiwanwu.com/useragreement",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -26,7 +39,7 @@
   "assets": [
     {
       "file": "symbol.svg",
-      "label": "深绿方形英文标识",
+      "label": "深绿底英文字标",
       "variant": "wordmark",
       "language": "en",
       "layout": "standalone",

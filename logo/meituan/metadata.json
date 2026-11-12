@@ -46,7 +46,7 @@
   "assets": [
     {
       "file": "logo-chinese-official.png",
-      "label": "中文组合",
+      "label": "中文横版组合",
       "variant": "logo",
       "status": "current",
       "background": "light",
@@ -77,7 +77,7 @@
     },
     {
       "file": "logo-bilingual-commons.png",
-      "label": "中英组合",
+      "label": "中英横版组合",
       "variant": "logo",
       "status": "current",
       "background": "light",
@@ -104,7 +104,7 @@
     },
     {
       "file": "wordmark-rounded-google-play.png",
-      "label": "圆角应用字标",
+      "label": "圆角应用图标",
       "variant": "wordmark",
       "status": "current",
       "background": "any",
@@ -131,7 +131,8 @@
       },
       "qualityNotes": [
         "四角透明。"
-      ]
+      ],
+      "usage": "app-icon"
     }
   ]
 }

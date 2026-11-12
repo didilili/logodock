@@ -8,16 +8,24 @@
   "identity": {
     "nameZh": "腾娱互动",
     "nameEn": "TENG YU",
-    "legalNames": [],
-    "sources": [
+    "legalNames": [
       {
-        "label": "官方招聘页品牌标识",
-        "url": "https://zhaotalent-tenyu.ihr.tencent-cloud.com/tenant/",
+        "name": "深圳市腾娱互动科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://zhaotalent-tenyu.ihr.tencent-cloud.com/tenant/",
         "reviewedAt": "2026-11-11"
-      },
+      }
+    ],
+    "sources": [
       {
         "label": "官方招聘页中英品牌原图",
         "url": "https://zhaotalent-tenyu.ihr.tencent-cloud.com/tenant/imgs/logo.png",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "官方招聘页明确腾娱公司全称及腾讯旗下子公司关系",
+        "url": "https://zhaotalent-tenyu.ihr.tencent-cloud.com/tenant/",
         "reviewedAt": "2026-11-11"
       }
     ]
@@ -57,5 +65,6 @@
         "含“腾讯子公司招聘”字样，适用于招聘场景。"
       ]
     }
-  ]
+  ],
+  "parentId": "tencent"
 }

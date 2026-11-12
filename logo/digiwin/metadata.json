@@ -2,17 +2,32 @@
   "schemaVersion": 4,
   "id": "digiwin",
   "name": "鼎捷数智",
-  "aliases": [],
+  "aliases": [
+    "鼎捷软件股份有限公司"
+  ],
   "website": "https://www.digiwin.com/",
   "identity": {
     "nameZh": "鼎捷数智",
     "nameEn": "Digiwin",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "鼎捷数智股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.digiwin.com/portal/article/index/id/734/cid/160.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",
         "url": "https://www.digiwin.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方公司身份资料",
+        "url": "https://www.digiwin.com/portal/article/index/id/734/cid/160.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

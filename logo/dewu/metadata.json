@@ -6,7 +6,22 @@
   "identity": {
     "nameZh": "得物",
     "nameEn": "POIZON",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "上海得物信息集团有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://www.dewu.com/privacy.html",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "Shanghai Dewu Information Group Co., Ltd.",
+        "language": "en",
+        "role": "operating-company",
+        "source": "https://www.dewu.com/privacy.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "得物官方来源",
@@ -22,6 +37,11 @@
         "label": "得物官网关联的官方招聘页与国际品牌名称",
         "url": "https://poizon.jobs.feishu.cn/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方隐私政策主体资料",
+        "url": "https://www.dewu.com/privacy.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

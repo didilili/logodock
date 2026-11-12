@@ -6,7 +6,29 @@
   "identity": {
     "nameZh": "有赞",
     "nameEn": "YOUZAN",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "杭州有赞科技有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://www.youzan.com/intro/statement",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "有赞科技有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://www.youzan.com/intro/statement",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "Youzan Technology Limited",
+        "language": "en",
+        "role": "group",
+        "source": "https://www.youzan.com/intro/statement",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌身份来源",

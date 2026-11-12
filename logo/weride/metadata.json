@@ -7,7 +7,15 @@
   "identity": {
     "nameZh": "文远知行",
     "nameEn": "WeRide",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "WeRide Inc.",
+        "language": "en",
+        "role": "group",
+        "source": "https://ir.weride.ai/static-files/4060845c-dde2-4130-bd1b-42725590a2ea",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",

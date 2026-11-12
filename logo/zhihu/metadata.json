@@ -15,8 +15,8 @@
         "name": "Zhihu Inc.",
         "language": "en",
         "role": "company",
-        "source": "https://ir.zhihu.com/",
-        "reviewedAt": "2026-11-10"
+        "source": "https://ir.zhihu.com/en/corporate-information/",
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [
@@ -45,7 +45,7 @@
   "assets": [
     {
       "file": "wordmark-rounded-google-play.png",
-      "label": "圆角应用字标",
+      "label": "圆角应用图标",
       "variant": "wordmark",
       "status": "current",
       "background": "any",
@@ -72,11 +72,12 @@
       },
       "qualityNotes": [
         "四角透明。"
-      ]
+      ],
+      "usage": "app-icon"
     },
     {
       "file": "wordmark-slogan-official.svg",
-      "label": "中文口号组合",
+      "label": "中文口号字标",
       "variant": "wordmark",
       "status": "current",
       "language": "zh",

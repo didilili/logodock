@@ -128,7 +128,8 @@
       },
       "status": "current",
       "sha256": "21740d9b8b5695baaed1fb9dc5d338e8bc49c0730609032d9a7d138388e687dd",
-      "bytes": 23888
+      "bytes": 23888,
+      "usage": "app-icon"
     },
     {
       "file": "icon-black-extracted.svg",

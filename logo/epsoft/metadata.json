@@ -8,12 +8,25 @@
   "identity": {
     "nameZh": "网新软件",
     "nameEn": "INSIGMA",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "浙江浙大网新软件产业集团有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://www.epsoft.com.cn/web/about.htm",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "品牌官网",
         "url": "https://www.epsoft.com.cn/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方公司身份资料",
+        "url": "https://www.epsoft.com.cn/web/about.htm",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -25,10 +38,10 @@
     {
       "file": "logo-bilingual-official.png",
       "label": "中英双行字标",
-      "variant": "logo",
+      "variant": "wordmark",
       "status": "current",
       "language": "bilingual",
-      "layout": "horizontal",
+      "layout": "vertical",
       "color": "brand",
       "background": "light",
       "source": "https://www.epsoft.com.cn//websitefiles/AppContent/2023/10/13/202310131600440207.png",

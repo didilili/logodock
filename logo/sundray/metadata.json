@@ -10,7 +10,15 @@
   "identity": {
     "nameZh": "信锐技术",
     "nameEn": "SUNDRAY",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "深圳市信锐网科技术有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.sundray.com.cn/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌信息",

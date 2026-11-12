@@ -12,8 +12,15 @@
         "name": "Vitasoy International Holdings Ltd.",
         "language": "en",
         "role": "group",
-        "source": "https://www.vitasoy.com/contact-us/",
-        "reviewedAt": "2026-11-10"
+        "source": "https://www.vitasoy.com/wp-content/uploads/2024/11/Vitasoy_press-release_202425-interim_TC.pdf",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "維他奶國際集團有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://www.vitasoy.com/zh-hant/%E8%81%AF%E7%B9%AB%E6%88%91%E5%80%91/",
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [

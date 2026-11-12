@@ -6,11 +6,24 @@
   "identity": {
     "nameZh": "平安科技",
     "nameEn": "Ping An Technology",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "平安科技（深圳）有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://cg.pingan.com.cn/staticPage/privacyProtocol.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "平安科技官网英文版（EN 切换）",
         "url": "https://tech.pingan.com/",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "快乐平安隐私政策明确服务运营及SDK提供公司，并指向平安科技官网",
+        "url": "https://cg.pingan.com.cn/staticPage/privacyProtocol.html",
         "reviewedAt": "2026-11-11"
       }
     ]
@@ -24,8 +37,8 @@
   "assets": [
     {
       "file": "logo.png",
-      "label": "平安科技组合",
-      "variant": "logo",
+      "label": "平安科技字标",
+      "variant": "wordmark",
       "language": "bilingual",
       "layout": "horizontal",
       "color": "brand",

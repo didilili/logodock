@@ -6,12 +6,20 @@
   "identity": {
     "nameZh": "比亚迪",
     "nameEn": "BYD",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "比亚迪股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.bydglobal.com/cn",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://www.bydglobal.com/cn",
-        "reviewedAt": "2026-11-10"
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

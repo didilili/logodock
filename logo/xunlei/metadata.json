@@ -6,7 +6,22 @@
   "identity": {
     "nameZh": "迅雷",
     "nameEn": "Xunlei",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "深圳市迅雷网络技术有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://m.xunlei.com/about/?st=contact",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "Xunlei Limited",
+        "language": "en",
+        "role": "group",
+        "source": "https://ir.xunlei.com/corporate-profile",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",

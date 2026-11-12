@@ -8,12 +8,25 @@
   "identity": {
     "nameZh": "趣加",
     "nameEn": "FunPlus",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "FunPlus International AG",
+        "language": "en",
+        "role": "operating-company",
+        "source": "https://funplus.com/terms-conditions/en/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://funplus.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方服务协议主体资料",
+        "url": "https://funplus.com/terms-conditions/en/",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

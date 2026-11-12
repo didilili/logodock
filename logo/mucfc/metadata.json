@@ -8,7 +8,15 @@
   "identity": {
     "nameZh": "招联",
     "nameEn": "MUCFC",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "招联消费金融股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.chinamoney.com.cn/dqs/cm-s-notice-query/fileDownLoad.do?contentId=3323575&mode=save&priority=0",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
@@ -18,6 +26,11 @@
       {
         "label": "招联官网英文介绍",
         "url": "https://www.mucfc.com/en/",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "2025年度审计报告列明招联消费金融现完整公司名称及股份制变更",
+        "url": "https://www.chinamoney.com.cn/dqs/cm-s-notice-query/fileDownLoad.do?contentId=3323575&mode=save&priority=0",
         "reviewedAt": "2026-11-11"
       }
     ]

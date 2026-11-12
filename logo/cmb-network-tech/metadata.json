@@ -8,12 +8,25 @@
   "identity": {
     "nameZh": "招银网络科技",
     "nameEn": "CMB NETWORK TECHNOLOGY",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "招银网络科技（深圳）有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://s3gw.cmbchina.com/lb5001-cmbweb-prd-1255000097/cmbir/20250829/1f3c19b6-baef-4c3d-bd0e-ecef79d556fd.pdf",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://cmbnt.cmbchina.com/home.html",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方公司身份资料",
+        "url": "https://s3gw.cmbchina.com/lb5001-cmbweb-prd-1255000097/cmbir/20250829/1f3c19b6-baef-4c3d-bd0e-ecef79d556fd.pdf",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

@@ -7,12 +7,25 @@
   "identity": {
     "nameZh": "黑白调",
     "nameEn": "HBADA",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "杭州黑白调科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.heibaidiao.com/Honor",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",
         "url": "https://hbada.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官网2025年质量管理体系认证证书清晰列明获证公司全称，有效期至2028年7月",
+        "url": "https://www.heibaidiao.com/Honor",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

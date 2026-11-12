@@ -5,13 +5,31 @@
   "aliases": [],
   "identity": {
     "nameZh": "安恒信息",
-    "nameEn": "DAS-security",
-    "legalNames": [],
+    "nameEn": "DAS-Security",
+    "legalNames": [
+      {
+        "name": "杭州安恒信息技术股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.dbappsecurity.com.cn/about/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://www.dbappsecurity.com.cn/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方公司身份资料",
+        "url": "https://www.dbappsecurity.com.cn/about/",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "安恒信息官网与数码港签约公告的官方英文品牌拼写",
+        "url": "https://www.dbappsecurity.com.cn/content/details4756_55294.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

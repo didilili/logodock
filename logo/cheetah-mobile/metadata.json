@@ -8,12 +8,25 @@
   "identity": {
     "nameZh": "猎豹移动",
     "nameEn": "Cheetah Mobile",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "Cheetah Mobile Inc.",
+        "language": "en",
+        "role": "group",
+        "source": "https://ir.cmcm.com/index.php",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://www.cmcm.com/zh-CN/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方投资者关系公司资料",
+        "url": "https://ir.cmcm.com/index.php",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

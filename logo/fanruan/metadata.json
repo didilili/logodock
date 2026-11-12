@@ -11,15 +11,15 @@
         "name": "帆软软件有限公司",
         "language": "zh",
         "role": "company",
-        "source": "https://www.fanruan.com/download/",
-        "reviewedAt": "2026-11-10"
+        "source": "https://www.fanruan.com/privacy",
+        "reviewedAt": "2026-11-11"
       },
       {
         "name": "FanRuan Software Co., Ltd.",
         "language": "en",
         "role": "company",
         "source": "https://www.fanruan.com/en/about-us",
-        "reviewedAt": "2026-11-10"
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [
@@ -27,6 +27,16 @@
         "label": "帆软官方来源",
         "url": "https://www.fanruan.com/",
         "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "官方隐私政策主体资料",
+        "url": "https://www.fanruan.com/privacy",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "官方公司身份资料",
+        "url": "https://www.fanruan.com/en/about-us",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

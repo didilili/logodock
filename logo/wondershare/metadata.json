@@ -8,7 +8,22 @@
   "identity": {
     "nameZh": "万兴科技",
     "nameEn": "Wondershare",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "万兴科技集团股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.wondershare.cn/about/investor/",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "Wondershare Technology Group Co.,Ltd",
+        "language": "en",
+        "role": "company",
+        "source": "https://www.wondershare.cn/about/investor/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌信息",

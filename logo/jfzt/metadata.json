@@ -6,12 +6,25 @@
   "identity": {
     "nameZh": "九方智投",
     "nameEn": null,
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "上海九方云智能科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.9fzt.com/introduce.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://www.9fzt.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官网公司介绍明确完整公司名称、九方智投简称及九方智投控股旗下子品牌关系",
+        "url": "https://www.9fzt.com/introduce.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

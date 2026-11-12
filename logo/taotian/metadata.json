@@ -14,6 +14,11 @@
         "label": "淘天集团官方来源",
         "url": "https://talent.taotian.com/",
         "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "阿里巴巴官方公告明确淘天为集团全资拥有的业务集团",
+        "url": "https://www.alibabagroup.com/zh-HK/document-1596257223028244480",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -53,5 +58,6 @@
         "reviewedAt": "2026-11-09"
       }
     }
-  ]
+  ],
+  "parentId": "alibaba"
 }

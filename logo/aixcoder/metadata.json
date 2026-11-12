@@ -7,12 +7,20 @@
   "identity": {
     "nameZh": "硅心科技",
     "nameEn": "aiXcoder",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "北京硅心科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.aixcoder.com/zh/about",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",
         "url": "https://www.aixcoder.com/zh/about",
-        "reviewedAt": "2026-11-10"
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

@@ -6,12 +6,25 @@
   "identity": {
     "nameZh": "车300",
     "nameEn": null,
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "南京三百云信息科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.che300.com/about",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://www.che300.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方公司身份资料",
+        "url": "https://www.che300.com/about",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

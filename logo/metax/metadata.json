@@ -8,12 +8,25 @@
   "identity": {
     "nameZh": "沐曦",
     "nameEn": "MetaX",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "沐曦集成电路（上海）股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.metax-tech.com/about.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://www.metax-tech.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官网公司介绍明确完整股份公司名称",
+        "url": "https://www.metax-tech.com/about.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

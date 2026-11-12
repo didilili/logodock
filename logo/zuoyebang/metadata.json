@@ -8,7 +8,15 @@
   "identity": {
     "nameZh": "作业帮",
     "nameEn": "Zuoyebang",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "广州极目未来文化科技有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://www.zuoyebang.com/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "作业帮官方来源",
@@ -85,7 +93,8 @@
         "reference": "https://apps.apple.com/cn/app/%E4%BD%9C%E4%B8%9A%E5%B8%AE-%E4%B8%AD%E5%B0%8F%E5%AD%A6%E5%AE%B6%E9%95%BF%E4%BD%9C%E4%B8%9A%E6%A3%80%E6%9F%A5%E5%92%8Cai%E4%BC%B4%E5%AD%A6%E8%BE%85%E5%AF%BC%E5%B7%A5%E5%85%B7/id803781859?uo=4",
         "attribution": "作业帮。许可及署名条件待核实。",
         "reviewedAt": "2026-11-09"
-      }
+      },
+      "usage": "app-icon"
     },
     {
       "file": "logo-compact-official.png",

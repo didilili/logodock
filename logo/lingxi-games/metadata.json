@@ -8,7 +8,15 @@
   "identity": {
     "nameZh": "灵犀互娱",
     "nameEn": "LINGXIGAMES",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "广州灵犀互动娱乐有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.lingxigames.com/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",

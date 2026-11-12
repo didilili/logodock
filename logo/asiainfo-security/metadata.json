@@ -2,7 +2,10 @@
   "schemaVersion": 4,
   "id": "asiainfo-security",
   "name": "亚信安全",
-  "aliases": [],
+  "aliases": [
+    "亚信安全科技股份有限公司",
+    "ASIAINFO SECURITY TECHNOLOGIES CO.,LTD."
+  ],
   "website": "https://www.asiainfo-sec.com/",
   "entityType": "company",
   "identity": {
@@ -10,18 +13,11 @@
     "nameEn": "ASIAINFO SECURITY",
     "legalNames": [
       {
-        "name": "亚信安全科技股份有限公司",
+        "name": "亚信智能科技集团股份有限公司",
         "language": "zh",
         "role": "company",
-        "source": "https://www.sse.com.cn/star/market/stocklist/info/company/index.shtml?COMPANY_CODE=688225",
-        "reviewedAt": "2026-11-10"
-      },
-      {
-        "name": "ASIAINFO SECURITY TECHNOLOGIES CO.,LTD.",
-        "language": "en",
-        "role": "company",
-        "source": "https://www.sse.com.cn/star/market/stocklist/info/company/index.shtml?COMPANY_CODE=688225",
-        "reviewedAt": "2026-11-10"
+        "source": "https://www.asiainfo.com/zh_cn/content_5165.html",
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [
@@ -34,6 +30,11 @@
         "label": "上交所科创板公司详情",
         "url": "https://www.sse.com.cn/star/market/stocklist/info/company/index.shtml?COMPANY_CODE=688225",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "2026-11-09官方公司更名公告",
+        "url": "https://www.asiainfo.com/zh_cn/content_5165.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

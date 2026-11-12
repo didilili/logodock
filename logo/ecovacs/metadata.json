@@ -8,12 +8,20 @@
   "identity": {
     "nameZh": "科沃斯",
     "nameEn": "ECOVACS",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "科沃斯机器人股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.ecovacsgroup.com/about-us",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://www.ecovacsgroup.com/about-us",
-        "reviewedAt": "2026-11-10"
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

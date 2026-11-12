@@ -14,15 +14,15 @@
         "name": "维沃移动通信有限公司",
         "language": "zh",
         "role": "operating-company",
-        "source": "https://mobile.vivo.com/",
-        "reviewedAt": "2026-11-07"
+        "source": "https://www.vivo.com.cn/about-vivo/privacy-policy.html",
+        "reviewedAt": "2026-11-11"
       },
       {
         "name": "vivo Mobile Communication Co., Ltd.",
         "language": "en",
         "role": "operating-company",
         "source": "https://www.vivo.com/qa/en/activity/about-us",
-        "reviewedAt": "2026-11-07"
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [

@@ -8,12 +8,32 @@
   "identity": {
     "nameZh": "影石",
     "nameEn": "Insta360",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "影石创新科技股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://static.cninfo.com.cn/finalpage/2025-06-10/1223826572.PDF",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "Arashi Vision Inc.",
+        "language": "en",
+        "role": "company",
+        "source": "https://static.cninfo.com.cn/finalpage/2025-06-10/1223826572.PDF",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌身份来源",
         "url": "https://www.insta360.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "上市公告书封面列明公司中英文全称",
+        "url": "https://static.cninfo.com.cn/finalpage/2025-06-10/1223826572.PDF",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

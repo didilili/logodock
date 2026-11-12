@@ -8,12 +8,25 @@
   "identity": {
     "nameZh": "智驾新程",
     "nameEn": "neueHCT",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "智驾新程（上海）智能科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.neuehct.auto/policy",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://www.neuehct.auto/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官网隐私政策明确智驾新程完整公司名称及数据处理责任",
+        "url": "https://www.neuehct.auto/policy",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

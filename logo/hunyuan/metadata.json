@@ -8,12 +8,25 @@
   "identity": {
     "nameZh": "腾讯混元",
     "nameEn": "Hunyuan",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "深圳市腾讯计算机系统有限公司",
+        "language": "zh",
+        "role": "website-operator",
+        "source": "https://rule.tencent.com/rule/202504280005",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌信息",
         "url": "https://hunyuan.tencent.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "腾讯混元官网用户服务协议明确官网服务主体",
+        "url": "https://rule.tencent.com/rule/202504280005",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

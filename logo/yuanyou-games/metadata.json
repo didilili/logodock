@@ -2,16 +2,36 @@
   "schemaVersion": 4,
   "id": "yuanyou-games",
   "name": "乐享元游",
-  "aliases": [],
+  "aliases": [
+    "YUANYOU"
+  ],
   "identity": {
     "nameZh": "乐享元游",
-    "nameEn": null,
-    "legalNames": [],
+    "nameEn": "YUANYOU GAMEMETA",
+    "legalNames": [
+      {
+        "name": "海南元游信息技术有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.yyxxgames.com/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://www.yyxxgames.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官网公司介绍及现行双语品牌标识",
+        "url": "https://www.yyxxgames.com/introduction.html",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "官网现行乐享元游 / YUANYOU GAMEMETA 标识原图",
+        "url": "https://yuyoadmin.yyxxgame.com/upload/yyxxgame/20260821/8895da30b21a0e5dcf88459809a553b7.png",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

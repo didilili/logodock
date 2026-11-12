@@ -8,12 +8,32 @@
   "identity": {
     "nameZh": "美的",
     "nameEn": "Midea",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "美的集团股份有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://www.midea.com.cn/content/dam/mideacn-aem/%E6%8A%95%E8%B5%84%E8%80%85%E5%85%B3%E7%B3%BB/2025%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf.coredownload.inline.pdf",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "Midea Group Co., Ltd.",
+        "language": "en",
+        "role": "group",
+        "source": "https://www.midea.com.cn/content/dam/mideacn-aem/%E6%8A%95%E8%B5%84%E8%80%85%E5%85%B3%E7%B3%BB/2025%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf.coredownload.inline.pdf",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://www.midea.com.cn/zh",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官网2025年度报告公司信息明确美的集团中英文全称",
+        "url": "https://www.midea.com.cn/content/dam/mideacn-aem/%E6%8A%95%E8%B5%84%E8%80%85%E5%85%B3%E7%B3%BB/2025%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf.coredownload.inline.pdf",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

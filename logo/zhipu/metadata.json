@@ -18,14 +18,14 @@
         "language": "zh",
         "role": "company",
         "source": "https://www.zhipuai.cn/zh/about",
-        "reviewedAt": "2026-11-07"
+        "reviewedAt": "2026-11-11"
       },
       {
         "name": "Z.AI Co., Ltd.",
         "language": "en",
         "role": "company",
         "source": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0714/2026071400984.pdf",
-        "reviewedAt": "2026-11-07"
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [
@@ -50,7 +50,7 @@
   "assets": [
     {
       "file": "icon-monochrome-commons.png",
-      "label": "Z.ai 方形图标",
+      "label": "Z.ai 方形字母图形",
       "variant": "icon",
       "status": "current",
       "background": "any",
@@ -66,7 +66,7 @@
         "reviewedAt": "2026-11-07",
         "notes": "版权依据采用所引 Wikimedia Commons 具体文件页的 PD-textlogo 第三方公共领域判定，图库分发依据限于该判定。商标权及其他使用限制保留，使用不得暗示官方背书。不同法域的原创性门槛可能不同。本图为 chat.z.ai 方形图标，使用时须与智谱公司横版组合标识区分。"
       },
-      "language": "none",
+      "language": "en",
       "layout": "standalone",
       "color": "monochrome",
       "provenance": {

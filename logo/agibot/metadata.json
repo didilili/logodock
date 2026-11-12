@@ -8,25 +8,30 @@
     "nameEn": "AGIBOT",
     "legalNames": [
       {
+        "name": "智元创新（上海）科技股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.agibot.com.cn/about_Zhiyuan",
+        "reviewedAt": "2026-11-11"
+      },
+      {
         "name": "AGIBOT Innovation (Shanghai) Technology Co., Ltd.",
         "language": "en",
         "role": "company",
         "source": "https://www.agibot.com/",
-        "reviewedAt": "2026-11-10"
-      },
-      {
-        "name": "智元创新（上海）科技股份有限公司",
-        "language": "zh",
-        "role": "company",
-        "source": "https://www.agibot.com.cn/about/167.html",
-        "reviewedAt": "2026-11-10"
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [
       {
         "label": "智元机器人官方来源",
         "url": "https://www.agibot.com/",
-        "reviewedAt": "2026-11-09"
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "官方公司身份资料",
+        "url": "https://www.agibot.com.cn/about_Zhiyuan",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -152,7 +157,8 @@
         "reference": "https://apps.apple.com/cn/app/agibot-go/id6745000316?uo=4",
         "attribution": "智元机器人。许可及署名条件待核实。",
         "reviewedAt": "2026-11-09"
-      }
+      },
+      "usage": "app-icon"
     }
   ],
   "topics": [

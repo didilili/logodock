@@ -12,7 +12,7 @@
         "language": "zh",
         "role": "group",
         "source": "https://www.asiainfo.com/zh_cn/about.html",
-        "reviewedAt": "2026-11-10"
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [
@@ -20,6 +20,11 @@
         "label": "亚信科技官方来源",
         "url": "https://www.asiainfo.com/zh_cn/index.html",
         "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "官方公司身份资料",
+        "url": "https://www.asiainfo.com/zh_cn/about.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

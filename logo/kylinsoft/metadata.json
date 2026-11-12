@@ -8,12 +8,25 @@
   "identity": {
     "nameZh": "麒麟软件",
     "nameEn": "Kylinsoft",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "麒麟软件有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.kylinos.cn/about/company/index.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://www.kylinos.cn/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官网公司介绍明确麒麟软件有限公司及CEC归属",
+        "url": "https://www.kylinos.cn/about/company/index.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

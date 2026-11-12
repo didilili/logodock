@@ -6,12 +6,37 @@
   "identity": {
     "nameZh": "网易云音乐",
     "nameEn": "NetEase Cloud Music",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "NetEase Cloud Music Inc.",
+        "language": "en",
+        "role": "group",
+        "source": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0924/2026092400333.pdf",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "網易雲音樂股份有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://www1.hkexnews.hk/listedco/listconews/sehk/2024/1122/2024112200616.pdf",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://music.163.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "2026中期报告说明公司现名、投资控股公司角色及NetEase Inc为直接及最终控股公司",
+        "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0924/2026092400333.pdf",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "官方更名后股票简称公告列明已变更的公司中英文现名",
+        "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2024/1122/2024112200616.pdf",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -108,5 +133,6 @@
         "从同品牌原始 SVG 提取图形，方形画布长边贴边，短边居中，额外边距为零。"
       ]
     }
-  ]
+  ],
+  "parentId": "netease"
 }

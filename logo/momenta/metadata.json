@@ -6,12 +6,25 @@
   "identity": {
     "nameZh": null,
     "nameEn": "Momenta",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "魔门塔（苏州）科技有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://jdjyw.jlu.edu.cn/portal/company/details?id=8579",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://www.momenta.cn/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "企业在高校就业网登记完整单位名称，单位网址与Momenta官网一致，简介明确其自动驾驶业务",
+        "url": "https://jdjyw.jlu.edu.cn/portal/company/details?id=8579",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

@@ -6,7 +6,15 @@
   "identity": {
     "nameZh": "转转",
     "nameEn": "Zhuanzhuan",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "北京转转精神科技有限责任公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://m.zhuanzhuan.com/platform/zzapppages/zzothers/xieyi.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",

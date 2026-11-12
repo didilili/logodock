@@ -14,7 +14,7 @@
         "language": "en",
         "role": "group",
         "source": "https://ir.vip.com/news-releases/news-release-details/vipshop-reports-unaudited-second-quarter-2026-financial-results",
-        "reviewedAt": "2026-11-10"
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [
@@ -39,7 +39,7 @@
   "assets": [
     {
       "file": "wordmark-slogan-official.png",
-      "label": "含口号中文组合",
+      "label": "含口号中文字标",
       "variant": "wordmark",
       "language": "zh",
       "layout": "horizontal",

@@ -6,12 +6,25 @@
   "identity": {
     "nameZh": "阿里云",
     "nameEn": "Alibaba Cloud",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "阿里云计算有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201902141711_54837.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://www.aliyun.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "阿里云官网协议明确为阿里巴巴集团成员公司",
+        "url": "https://dashi.aliyun.com/agreement/join",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -107,5 +120,6 @@
   ],
   "topics": [
     "developer-ecosystem"
-  ]
+  ],
+  "parentId": "alibaba"
 }

@@ -9,7 +9,22 @@
   "identity": {
     "nameZh": "汇川技术",
     "nameEn": "INOVANCE",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "深圳市汇川技术股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/f7c90182-8398-4804-99ce-35ee69f366bf.PDF",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "Shenzhen Inovance Technology Co.,Ltd",
+        "language": "en",
+        "role": "company",
+        "source": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/f7c90182-8398-4804-99ce-35ee69f366bf.PDF",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "汇川技术官方网站",
@@ -20,6 +35,11 @@
         "label": "汇川全球官网（页头原图来源）",
         "url": "https://www.inovance.com/global",
         "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "2026年半年度报告释义明确汇川技术与公司全称对应",
+        "url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/f7c90182-8398-4804-99ce-35ee69f366bf.PDF",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

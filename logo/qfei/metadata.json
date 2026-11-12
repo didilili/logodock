@@ -6,7 +6,15 @@
   "identity": {
     "nameZh": "智书企飞",
     "nameEn": null,
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "上海智书企飞软件技术有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.qfei.cn/about/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",

@@ -8,12 +8,39 @@
   "identity": {
     "nameZh": "客路",
     "nameEn": "Klook",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "深圳市客路网络科技有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://www.klook.cn/zh-CN/conditions/",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "深圳雄狮天下旅行社有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://www.klook.cn/zh-CN/conditions/",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "深圳市趣游玩旅行社有限公司",
+        "language": "zh",
+        "role": "operating-company",
+        "source": "https://www.klook.cn/zh-CN/conditions/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://www.klook.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "使用条款第一条明确中国站运营公司及提供具体旅行服务的关联公司",
+        "url": "https://www.klook.cn/zh-CN/conditions/",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

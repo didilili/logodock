@@ -8,7 +8,15 @@
   "identity": {
     "nameZh": "晓多科技",
     "nameEn": "Xiaoduo",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "成都晓多科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.xiaoduoai.com/",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "品牌官网",

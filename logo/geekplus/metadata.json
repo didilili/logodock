@@ -7,12 +7,37 @@
   "identity": {
     "nameZh": "极智嘉",
     "nameEn": "Geek+",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "北京极智嘉科技股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.geekplus.com/cn/privacy-policy",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "Geek+ Technology Co., Ltd.",
+        "language": "en",
+        "role": "company",
+        "source": "https://www.geekplus.com/resources/news/ipo-interim-results?hs_amp=true",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",
         "url": "https://www.geekplus.com/en",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "极智嘉官网隐私主体声明",
+        "url": "https://www.geekplus.com/cn/privacy-policy",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "label": "极智嘉官方上市业绩稿中英文全称",
+        "url": "https://www.geekplus.com/resources/news/ipo-interim-results?hs_amp=true",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

@@ -13,8 +13,8 @@
         "name": "广州视源电子科技股份有限公司",
         "language": "zh",
         "role": "company",
-        "source": "https://www.cvte.com/",
-        "reviewedAt": "2026-11-10"
+        "source": "https://www.cvte.com/page/company-info",
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [
@@ -22,6 +22,11 @@
         "label": "视源股份官方来源",
         "url": "https://www.cvte.com/",
         "reviewedAt": "2026-11-09"
+      },
+      {
+        "label": "官方公司身份资料",
+        "url": "https://www.cvte.com/page/company-info",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -34,7 +39,7 @@
   "assets": [
     {
       "file": "wordmark-bilingual-official.png",
-      "label": "中英组合",
+      "label": "中英字标",
       "variant": "wordmark",
       "language": "bilingual",
       "layout": "horizontal",

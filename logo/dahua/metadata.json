@@ -7,12 +7,25 @@
   "identity": {
     "nameZh": "大华",
     "nameEn": "Dahua",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "浙江大华技术股份有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.dahuatech.com/about/company.html",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方网站",
         "url": "https://www.dahuatech.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "官方公司身份资料",
+        "url": "https://www.dahuatech.com/about/company.html",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -24,8 +37,8 @@
   "assets": [
     {
       "file": "logo-bilingual.png",
-      "label": "中英组合",
-      "variant": "logo",
+      "label": "中英字标",
+      "variant": "wordmark",
       "status": "current",
       "background": "light",
       "source": "https://www.dahuatech.com/bocweb/web/img/logo.png",
@@ -51,8 +64,8 @@
     },
     {
       "file": "logo-bilingual-white.png",
-      "label": "反白中英组合",
-      "variant": "logo",
+      "label": "反白中英字标",
+      "variant": "wordmark",
       "status": "current",
       "background": "dark",
       "source": "https://www.dahuatech.com/bocweb/web/img/logo_white.png",

@@ -8,7 +8,22 @@
   "identity": {
     "nameZh": "九号公司",
     "nameEn": "Segway-Ninebot",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "九号有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://static.cninfo.com.cn/finalpage/2026-08-11/1225466718.PDF",
+        "reviewedAt": "2026-11-11"
+      },
+      {
+        "name": "Ninebot Limited",
+        "language": "en",
+        "role": "group",
+        "source": "https://static.cninfo.com.cn/finalpage/2026-08-11/1225466718.PDF",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "九号公司官方介绍",
@@ -19,6 +34,11 @@
         "label": "公司官方品牌升级声明",
         "url": "https://www.prnewswire.com/news-releases/segway-ninebot-brand-upgrade-300576298.html",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "2026年半年度报告释义列明公司中英文全称与九号公司证券简称",
+        "url": "https://static.cninfo.com.cn/finalpage/2026-08-11/1225466718.PDF",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

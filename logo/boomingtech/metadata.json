@@ -6,12 +6,25 @@
   "identity": {
     "nameZh": "不鸣科技",
     "nameEn": "BOOMINGTECH",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "不鸣科技（杭州）有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://www.career.zju.edu.cn/jyxt/sczp/zpztgl/ckZpgwXq.zf?zpxxbh=3F0E0807FB9CC51DE0653A68DD0E9B18",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌与名称来源",
         "url": "https://www.boomingtech.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "浙江大学就业平台企业招聘声明",
+        "url": "https://www.career.zju.edu.cn/jyxt/sczp/zpztgl/ckZpgwXq.zf?zpxxbh=3F0E0807FB9CC51DE0653A68DD0E9B18",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

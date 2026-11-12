@@ -17,14 +17,14 @@
         "language": "zh",
         "role": "company",
         "source": "https://www.yonyou.com/about/company.html",
-        "reviewedAt": "2026-11-07"
+        "reviewedAt": "2026-11-11"
       },
       {
         "name": "Yonyou Network Technology Co., Ltd.",
         "language": "en",
         "role": "company",
-        "source": "https://www.yonyou.com.hk/about-us/",
-        "reviewedAt": "2026-11-07"
+        "source": "https://static.cninfo.com.cn/finalpage/2025-06-07/1223801800.PDF",
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [
@@ -112,11 +112,11 @@
     },
     {
       "file": "wordmark-bilingual-red-gray-official.png",
-      "label": "红灰中英字标",
+      "label": "红灰中英双行字标",
       "variant": "wordmark",
       "status": "current",
       "language": "bilingual",
-      "layout": "horizontal",
+      "layout": "vertical",
       "color": "brand",
       "background": "light",
       "source": "https://www.yonyou.com/assets/images/version26/logo.png",

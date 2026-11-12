@@ -8,12 +8,25 @@
   "identity": {
     "nameZh": "巨人网络",
     "nameEn": "Giant Network",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "巨人网络集团股份有限公司",
+        "language": "zh",
+        "role": "group",
+        "source": "https://static.cninfo.com.cn/finalpage/2026-04-27/1225190388.PDF",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "官方品牌来源",
         "url": "https://www.ztgame.com/",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "巨人网络2025年年度报告摘要",
+        "url": "https://static.cninfo.com.cn/finalpage/2026-04-27/1225190388.PDF",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },

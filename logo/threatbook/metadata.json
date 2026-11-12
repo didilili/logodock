@@ -8,7 +8,15 @@
   "identity": {
     "nameZh": "微步在线",
     "nameEn": "ThreatBook",
-    "legalNames": [],
+    "legalNames": [
+      {
+        "name": "北京微步在线科技有限公司",
+        "language": "zh",
+        "role": "company",
+        "source": "https://passport.threatbook.cn/private",
+        "reviewedAt": "2026-11-11"
+      }
+    ],
     "sources": [
       {
         "label": "品牌官网",

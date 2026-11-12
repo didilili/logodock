@@ -13,8 +13,8 @@
         "name": "深圳市腾讯计算机系统有限公司",
         "language": "zh",
         "role": "operating-company",
-        "source": "https://yuanbao.tencent.com/download",
-        "reviewedAt": "2026-11-10"
+        "source": "https://rule.tencent.com/rule/202403110001",
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [
@@ -37,6 +37,11 @@
         "label": "Tencent Mobility Limited发行的Google Play应用",
         "url": "https://play.google.com/store/apps/details?id=com.tencent.hunyuan.app.chat",
         "reviewedAt": "2026-11-10"
+      },
+      {
+        "label": "元宝现行用户服务协议明确运营主体",
+        "url": "https://rule.tencent.com/rule/202403110001",
+        "reviewedAt": "2026-11-11"
       }
     ]
   },
@@ -74,7 +79,8 @@
         "reference": "https://play.google.com/store/apps/details?id=com.tencent.hunyuan.app.chat",
         "attribution": "腾讯元宝。许可及署名条件待核实。",
         "reviewedAt": "2026-11-10"
-      }
+      },
+      "usage": "app-icon"
     },
     {
       "file": "app-icon-dimensional.jpg",
@@ -103,7 +109,8 @@
         "reference": "https://apps.apple.com/cn/app/id6480446430",
         "attribution": "腾讯元宝。许可及署名条件待核实。",
         "reviewedAt": "2026-11-10"
-      }
+      },
+      "usage": "app-icon"
     }
   ],
   "parentId": "tencent",

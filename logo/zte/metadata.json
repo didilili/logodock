@@ -15,16 +15,16 @@
       {
         "name": "中兴通讯股份有限公司",
         "language": "zh",
-        "role": "operating-company",
+        "role": "company",
         "source": "https://www.zte.com.cn/content/dam/zte-site/investorrelations/cn_annual_report/2025%E5%B9%B4%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf",
-        "reviewedAt": "2026-11-07"
+        "reviewedAt": "2026-11-11"
       },
       {
         "name": "ZTE Corporation",
         "language": "en",
-        "role": "operating-company",
+        "role": "company",
         "source": "https://www.zte.com.cn/content/dam/zte-site/investorrelations/cn_annual_report/2025%E5%B9%B4%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf",
-        "reviewedAt": "2026-11-07"
+        "reviewedAt": "2026-11-11"
       }
     ],
     "sources": [
