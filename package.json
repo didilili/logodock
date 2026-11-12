@@ -39,7 +39,8 @@
   },
   "dependencies": {
     "bits-ui": "2.20.6",
-    "saxes": "6.0.0"
+    "saxes": "6.0.0",
+    "svelte-sonner": "1.2.3"
   },
   "devDependencies": {
     "@commitlint/cli": "21.2.4",

@@ -1,42 +1,100 @@
 <script module lang="ts">
+  import type { CopyResult } from './CopyFeedback.svelte';
+
   export interface CopyMenuItem {
     id: string;
     label: string;
     hint?: string;
     disabled?: boolean;
-    onselect: () => void | Promise<void>;
+    onselect: () => CopyResult | void | Promise<CopyResult | void>;
   }
 </script>
 
 <script lang="ts">
+  import { onDestroy } from 'svelte';
+  import CopyStateIcon from './CopyStateIcon.svelte';
   import { DropdownMenu } from 'bits-ui';
+  import Icon from './Icon.svelte';
 
   let {
     id,
     items,
     disabled = false,
-    busy = false,
+    busyLabel = '复制中',
     label = '复制',
     ariaLabel,
     brandId,
+    getRevision,
     class: className = '',
   }: {
     id?: string;
     items: CopyMenuItem[];
     disabled?: boolean;
-    busy?: boolean;
+    busyLabel?: string;
     label?: string;
     ariaLabel?: string;
     brandId?: string;
+    getRevision?: () => number | undefined;
     class?: string;
   } = $props();
   let trigger = $state<HTMLButtonElement | null>(null);
+  let phase = $state<'idle' | 'pending' | 'success' | 'error'>('idle');
+  let outcome = $state<CopyResult>();
+  let startedRevision = $state<number>();
+  let request = 0;
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  let active = true;
+  const copyState = $derived(
+    (startedRevision !== undefined && getRevision?.() !== startedRevision) ||
+      (outcome && !outcome.isCurrent())
+      ? 'idle'
+      : phase,
+  );
+  const displayedLabel = $derived(
+    { idle: label, pending: busyLabel, success: '已复制', error: '失败' }[copyState],
+  );
 
-  function select(item: CopyMenuItem) {
+  async function select(item: CopyMenuItem) {
+    const current = ++request;
+    clearTimeout(timer);
+    outcome = undefined;
+    startedRevision = undefined;
+    phase = 'pending';
     // CopyFeedback records this focus target before opening a manual fallback.
     trigger?.focus({ preventScroll: true });
-    void item.onselect();
+    try {
+      const operation = item.onselect();
+      startedRevision = getRevision?.();
+      const result = await operation;
+      if (!active || current !== request) return;
+      outcome = result || undefined;
+      if (!result || result.status === 'stale' || !result.isCurrent()) {
+        phase = 'idle';
+        return;
+      }
+      phase = result.status === 'copied' ? 'success' : 'error';
+    } catch {
+      if (!active || current !== request) return;
+      if (startedRevision !== undefined && getRevision?.() !== startedRevision) {
+        phase = 'idle';
+        startedRevision = undefined;
+        return;
+      }
+      phase = 'error';
+    }
+    timer = setTimeout(() => {
+      if (current !== request) return;
+      phase = 'idle';
+      outcome = undefined;
+      startedRevision = undefined;
+    }, 2000);
   }
+
+  onDestroy(() => {
+    active = false;
+    request += 1;
+    clearTimeout(timer);
+  });
 
   function preserveExternalFocus(event: Event) {
     const active = document.activeElement;
@@ -54,42 +112,23 @@
   <DropdownMenu.Trigger
     {id}
     data-copy-brand={brandId}
+    data-copy-state={copyState}
     bind:ref={trigger}
     disabled={disabled || items.length === 0}
-    aria-busy={busy}
+    aria-busy={copyState === 'pending'}
     aria-label={ariaLabel || label || '复制标识'}
     class={['copy-menu-trigger', className]}
+    title={copyState === 'success'
+      ? '已复制'
+      : copyState === 'error'
+        ? '复制失败，请重试'
+        : undefined}
   >
-    {#if busy}
-      <svg
-        class="copy-spinner"
-        width="16"
-        height="16"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.6"
-        aria-hidden="true"
-        ><circle cx="12" cy="12" r="9" opacity="0.25" /><path
-          d="M12 3a9 9 0 0 1 9 9"
-          stroke-linecap="round"
-        /></svg
-      >
-    {:else}<svg
-        width="16"
-        height="16"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.6"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        aria-hidden="true"
-        ><rect x="8" y="8" width="12" height="13" rx="2" /><path
-          d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"
-        /></svg
-      >{/if}
-    {#if label}<span>{busy ? '正在复制…' : label}</span>{/if}
+    <CopyStateIcon state={copyState} />
+    {#if label}
+      <span class="copy-menu-label">{displayedLabel}</span>
+      <span class="copy-menu-chevron"><Icon name="chevron-down" size={12} /></span>
+    {/if}
   </DropdownMenu.Trigger>
   <DropdownMenu.Portal>
     <DropdownMenu.Content
@@ -116,18 +155,15 @@
 </DropdownMenu.Root>
 
 <style>
-  .copy-spinner {
-    animation: copy-spin 800ms linear infinite;
+  .copy-menu-chevron {
+    flex-shrink: 0;
   }
-  @keyframes copy-spin {
-    to {
-      transform: rotate(360deg);
-    }
+  .copy-menu-label {
+    min-width: 3em;
+    text-align: center;
   }
-  @media (prefers-reduced-motion: reduce) {
-    .copy-spinner {
-      animation: none;
-    }
+  .copy-menu-chevron {
+    display: inline-flex;
   }
   :global(.copy-menu-trigger) {
     display: inline-flex;
@@ -156,7 +192,7 @@
     cursor: default;
   }
   :global(.copy-menu-content) {
-    z-index: 60;
+    z-index: 90;
     width: 228px;
     max-width: calc(100vw - 24px);
     max-height: var(--bits-dropdown-menu-content-available-height, calc(100vh - 24px));

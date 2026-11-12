@@ -1,8 +1,17 @@
 import { expect, test, type Page } from '@playwright/test';
 import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
+import { assetDownloadName } from '../../src/lib/catalog-presentation.mjs';
 
 const catalog = JSON.parse(await readFile(new URL('../../index.json', import.meta.url), 'utf8'));
+
+function fileDetails(page: Page) {
+  return page.locator('.preview-dialog[role="dialog"]');
+}
+
+function copyToast(page: Page) {
+  return page.locator('[data-sonner-toast]:not([data-removed="true"]) [data-title]');
+}
 
 async function recordCopies(page: Page) {
   await page.addInitScript(() => {
@@ -35,6 +44,7 @@ async function recordCopies(page: Page) {
 }
 
 async function chooseCopy(page: Page, kind: string, trigger = '#detail-copy-menu') {
+  if (trigger === '#detail-copy-menu') await expect(fileDetails(page)).toBeVisible();
   await page.locator(trigger).click();
   await page.getByRole('menu').locator(`[data-copy-kind="${kind}"]`).click();
 }
@@ -56,7 +66,7 @@ test('directory image copy uses the displayed PNG original', async ({ page }) =>
   expect(createHash('sha256').update(png).digest('hex')).toBe(
     createHash('sha256').update(original).digest('hex'),
   );
-  await expect(page.locator('#action-status')).toContainText('华为 原始 PNG 图片');
+  await expect(copyToast(page)).toContainText('华为 原始 PNG 图片');
 });
 
 for (const format of ['SVG', 'JPG', 'WEBP']) {
@@ -69,19 +79,21 @@ for (const format of ['SVG', 'JPG', 'WEBP']) {
       entry.file.toUpperCase().endsWith(`.${format}`),
     );
     await page.goto(`/logo/${brand.id}/?asset=${encodeURIComponent(asset.file)}`);
-    await expect(page.locator('#detail-copy-menu')).toBeEnabled();
-    await expect(page.locator('#detail-image')).toHaveJSProperty('complete', true);
-    const source = await page.locator('#detail-image').evaluate((image: HTMLImageElement) => ({
-      width: image.naturalWidth,
-      height: image.naturalHeight,
-    }));
+    await expect(fileDetails(page).locator('#detail-copy-menu')).toBeEnabled();
+    await expect(fileDetails(page).locator('#detail-image')).toHaveJSProperty('complete', true);
+    const source = await fileDetails(page)
+      .locator('#detail-image')
+      .evaluate((image: HTMLImageElement) => ({
+        width: image.naturalWidth,
+        height: image.naturalHeight,
+      }));
     await chooseCopy(page, 'image');
     const png = await copiedPng(page);
     expect(png.subarray(0, 8).toString('hex')).toBe('89504e470d0a1a0a');
     const scale = format === 'SVG' ? 2048 / Math.max(source.width, source.height) : 1;
     expect(png.readUInt32BE(16)).toBe(Math.max(1, Math.round(source.width * scale)));
     expect(png.readUInt32BE(20)).toBe(Math.max(1, Math.round(source.height * scale)));
-    await expect(page.locator('#action-status')).toContainText(`由 ${format} 生成`);
+    await expect(copyToast(page)).toContainText(`由 ${format} 生成`);
     const dimensions = await page.evaluate(
       async (bytes) => {
         const image = await createImageBitmap(
@@ -98,7 +110,7 @@ for (const format of ['SVG', 'JPG', 'WEBP']) {
 test('SVG copy submits before source loading and exposes its pending state', async ({ page }) => {
   await recordCopies(page);
   await page.goto('/logo/alibaba/?asset=wordmark-orange.svg');
-  await expect(page.locator('#detail-copy-menu')).toBeEnabled();
+  await expect(fileDetails(page).locator('#detail-copy-menu')).toBeEnabled();
   let release!: () => void;
   const gate = new Promise<void>((resolve) => (release = resolve));
   await page.route('**/wordmark-orange.svg', async (route) => {
@@ -108,12 +120,18 @@ test('SVG copy submits before source loading and exposes its pending state', asy
   try {
     await chooseCopy(page, 'svg');
     await expect.poll(() => page.evaluate('window.__clipboardAudit.started')).toBe(true);
-    await expect(page.locator('#detail-copy-menu')).toHaveAttribute('aria-busy', 'true');
-    await expect(page.locator('#action-status')).toHaveText('正在复制 SVG 源码…');
+    await expect(fileDetails(page).locator('#detail-copy-menu')).toHaveAttribute(
+      'aria-busy',
+      'true',
+    );
+    await expect(copyToast(page)).toHaveText('正在复制 SVG 源码…');
     release();
     await expect.poll(() => page.evaluate('window.__clipboardAudit.texts[0]')).toMatch(/<svg\b/);
-    await expect(page.locator('#detail-copy-menu')).toHaveAttribute('aria-busy', 'false');
-    await expect(page.locator('#action-status')).toHaveText('已复制SVG 源码。');
+    await expect(fileDetails(page).locator('#detail-copy-menu')).toHaveAttribute(
+      'aria-busy',
+      'false',
+    );
+    await expect(copyToast(page)).toHaveText('已复制SVG 源码。');
   } finally {
     release();
   }
@@ -121,25 +139,29 @@ test('SVG copy submits before source loading and exposes its pending state', asy
 
 test('image copy failure persists and retries from the recovery actions', async ({ page }) => {
   await recordCopies(page);
+  await page.clock.install();
   await page.goto('/logo/huawei/?asset=wordmark-dark-2018.png');
-  await expect(page.locator('#detail-copy-menu')).toBeEnabled();
+  await expect(fileDetails(page).locator('#detail-copy-menu')).toBeEnabled();
   await page.evaluate('window.__clipboardAudit.reject = true');
   await chooseCopy(page, 'image');
   const recovery = page.getByRole('group', { name: '复制失败后的操作' });
   await expect(recovery).toBeVisible();
+  const brand = catalog.brands.find((entry: { id: string }) => entry.id === 'huawei');
+  const asset = brand.assets.find(
+    (entry: { file: string }) => entry.file === 'wordmark-dark-2018.png',
+  );
   await expect(recovery.getByRole('link', { name: '下载原图' })).toHaveAttribute(
     'download',
-    'huawei-wordmark-dark-2018.png',
+    assetDownloadName(brand, asset),
   );
-  await page.clock.install();
   await page.clock.fastForward(5000);
   await expect(recovery).toBeVisible();
   await page.evaluate('window.__clipboardAudit.reject = false');
   await recovery.getByRole('button', { name: '重试复制' }).click();
   await copiedPng(page);
   await expect(recovery).toHaveCount(0);
-  await expect(page.locator('#action-status')).toHaveText('已复制原始 PNG 图片。');
-  await expect(page.locator('#detail-copy-menu')).toBeFocused();
+  await expect(copyToast(page)).toHaveText('已复制原始 PNG 图片。');
+  await expect(fileDetails(page).locator('#detail-copy-menu')).toBeFocused();
 });
 
 test('SVG source failure offers recovery and copying its address restores focus', async ({
@@ -147,18 +169,21 @@ test('SVG source failure offers recovery and copying its address restores focus'
 }) => {
   await recordCopies(page);
   await page.goto('/logo/alibaba/?asset=wordmark-orange.svg');
-  await expect(page.locator('#detail-copy-menu')).toBeEnabled();
+  await expect(fileDetails(page).locator('#detail-copy-menu')).toBeEnabled();
   await page.route('**/wordmark-orange.svg', (route) =>
     route.request().resourceType() === 'fetch' ? route.abort('failed') : route.continue(),
   );
   await chooseCopy(page, 'svg');
   const recovery = page.getByRole('group', { name: '复制失败后的操作' });
   await expect(recovery).toBeVisible();
-  await expect(page.locator('#detail-copy-menu')).toHaveAttribute('aria-busy', 'false');
+  await expect(fileDetails(page).locator('#detail-copy-menu')).toHaveAttribute(
+    'aria-busy',
+    'false',
+  );
   await expect(page.locator('#action-status')).toContainText('SVG 源码未能加载');
   await recovery.getByRole('button', { name: '复制图片地址' }).click();
-  await expect(page.locator('#action-status')).toHaveText('已复制图片地址。');
-  await expect(page.locator('#detail-copy-menu')).toBeFocused();
+  await expect(copyToast(page)).toHaveText('已复制图片地址。');
+  await expect(fileDetails(page).locator('#detail-copy-menu')).toBeFocused();
   await expect
     .poll(() => page.evaluate('window.__clipboardAudit.texts[0]'))
     .toBe(new URL('/logo/alibaba/wordmark-orange.svg', page.url()).href);
@@ -169,7 +194,7 @@ test('unsupported image copying stays visible with an explanation', async ({ pag
     Object.defineProperty(globalThis, 'ClipboardItem', { configurable: true, value: undefined }),
   );
   await page.goto('/logo/huawei/?asset=wordmark-dark-2018.png');
-  await page.locator('#detail-copy-menu').click();
+  await fileDetails(page).locator('#detail-copy-menu').click();
   const imageCopy = page.getByRole('menu').locator('[data-copy-kind="image"]');
   await expect(imageCopy).toBeVisible();
   await expect(imageCopy).toBeDisabled();

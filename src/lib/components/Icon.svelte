@@ -5,6 +5,7 @@
     menu: ['M4 6h16M4 12h16M4 18h16'],
     filter: ['M4 6h16M7 12h10M10 18h4'],
     'chevron-right': ['m9 6 6 6-6 6'],
+    'chevron-down': ['m6 9 6 6 6-6'],
     copy: ['M8 8h12v13H8zM15 8V3H3v13h5'],
     code: ['m8 5-6 7 6 7m8-14 6 7-6 7M14 3l-4 18'],
     download: ['M12 3v12m-4-4 4 4 4-4M5 16v4h14v-4'],

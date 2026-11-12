@@ -1,20 +1,28 @@
 <script lang="ts">
-  import { onDestroy, onMount } from 'svelte';
-  import { DropdownMenu, Popover } from 'bits-ui';
+  import { onMount, tick } from 'svelte';
+  import { Dialog, RadioGroup, Toggle, Tooltip } from 'bits-ui';
   import type { Brand } from '../types';
   import type { CopyFeedbackApi } from './CopyFeedback.svelte';
-  import CopyField from './CopyField.svelte';
-  import CopyMenu from './CopyMenu.svelte';
+  import FilterSelect from './ui/FilterSelect.svelte';
+  import Disclosure from './ui/Disclosure.svelte';
+  import { languageLabels, layoutLabels, colorLabels } from '../asset-taxonomy.mjs';
   import Icon from './Icon.svelte';
-  import SourceInfo from './SourceInfo.svelte';
+  import AssetPreview from './AssetPreview.svelte';
+  import AssetActions from './AssetActions.svelte';
+  import AppToaster from './AppToaster.svelte';
+  import AssetReferences from './AssetReferences.svelte';
+  import { directoryPreviewBounds } from '../catalog-preview.mjs';
   import {
     assetFormat,
-    assetLabel,
+    assetAttributes,
+    matchingBrands,
     assetDisplayLabel,
+    assetDescription,
     assetWarnings,
   } from '../catalog-presentation.mjs';
   import {
     artworkGroups,
+    artworkDetailLabel,
     primaryArtworkGroups,
     alternativeArtworkGroups,
     isAlternativeArtwork,
@@ -30,8 +38,6 @@
     sourceLabel,
     sourceInformation,
   } from '../catalog-display.mjs';
-  import { canCopyPngImage } from '../clipboard-image.mjs';
-  import { renderSvgPng } from '../svg-export';
 
   type Asset = Brand['assets'][number];
   type Artwork = ReturnType<typeof artworkGroups>[number];
@@ -42,13 +48,26 @@
     sourceCommit: string;
     basePath: string;
     pageUrl: string;
+    directoryContext?: string[];
+    matchingOnly?: boolean;
+    onChangeVersionScope: (value: boolean) => void;
     backgroundChoice?: PreviewBackground;
+    versionFilters?: { language: string; layout: string; color: string };
+    matchingFiles?: string[];
+    previewOpen?: boolean;
+    previewOrigin?: string;
+    cardFiles?: Record<string, string>;
+    preferredFormat?: string;
+    moreVersionsOpen?: boolean;
+    alternativeVersionsOpen?: boolean;
+    onClosePreview: () => void;
     sourceDetailsOpen?: boolean;
+    designFilesOpen?: boolean;
     feedback?: CopyFeedbackApi;
     assetHref: (file: string) => string;
     shareHref: (file: string) => string;
     onSelectAsset: (event: MouseEvent, file: string) => void;
-    onBackgroundChange: (value: PreviewBackground) => void;
+    onBackgroundChange: (value: PreviewBackground | undefined) => void;
   }
   let {
     brand,
@@ -56,8 +75,21 @@
     sourceCommit,
     basePath,
     pageUrl,
+    directoryContext = [],
+    matchingOnly = true,
+    onChangeVersionScope,
     backgroundChoice,
+    versionFilters = $bindable({ language: '', layout: '', color: '' }),
+    matchingFiles,
+    previewOpen = $bindable(false),
+    previewOrigin = $bindable(''),
+    cardFiles = $bindable({}),
+    preferredFormat,
+    moreVersionsOpen = $bindable(false),
+    alternativeVersionsOpen = $bindable(false),
+    onClosePreview,
     sourceDetailsOpen = $bindable(true),
+    designFilesOpen = $bindable(false),
     feedback,
     assetHref,
     shareHref,
@@ -65,34 +97,66 @@
     onBackgroundChange,
   }: Props = $props();
 
+  let density = $state(1);
+  let compactPreview = $state(false);
+  let fullCanvas = $state(false);
+  let fileOptionsOpen = $derived(asset.display === 'alternative');
+  let previewStatus = $state('');
+  let failedFiles = $state<string[]>([]);
+  let dimensions = $state<{ file: string; width: number; height: number }>();
+  let gallery: HTMLElement;
   const backgroundOptions = [
+    { value: 'auto', label: '适配' },
     { value: 'light', label: '浅色' },
     { value: 'dark', label: '深色' },
     { value: 'transparent', label: '棋盘格' },
   ] as const;
-  let canCopyImage = $state(false);
-  let previewStatus = $state('');
-  let dimensions = $state<{ file: string; width: number; height: number }>();
-  let density = $state(1);
-  let exporting = $state(false);
-  let previewImage: HTMLImageElement | undefined;
-  let downloadLink: HTMLAnchorElement | undefined;
-  let alive = true;
-
+  const versionFilterFields = [
+    { key: 'language', label: '版本语言', all: '全部语言', labels: languageLabels },
+    { key: 'layout', label: '版本排布', all: '全部排布', labels: layoutLabels },
+    { key: 'color', label: '版本配色', all: '全部配色', labels: colorLabels },
+  ] as const;
+  const filteredBrand: Brand | undefined = $derived(
+    matchingBrands(
+      [
+        {
+          ...brand,
+          assets: brand.assets.filter(
+            (item) => !matchingFiles || matchingFiles.includes(item.file),
+          ),
+        },
+      ],
+      versionFilters,
+    )[0],
+  );
+  const artworks = $derived(filteredBrand ? primaryArtworkGroups(filteredBrand) : []);
+  const alternativeArtworks = $derived(
+    filteredBrand ? alternativeArtworkGroups(filteredBrand) : [],
+  );
+  const hasVersionFilters = $derived(
+    Boolean(versionFilters.language || versionFilters.layout || versionFilters.color),
+  );
+  const totalVersions = $derived(artworkGroups(brand).length);
+  const selectionOutsideResults = $derived(
+    !filteredBrand?.assets.some((item) => item.file === asset.file),
+  );
+  const largeVersionSet = $derived(totalVersions >= 8);
+  const visibleArtworks = $derived(largeVersionSet ? artworks.slice(0, 6) : artworks);
+  const moreArtworks = $derived(largeVersionSet ? artworks.slice(6) : []);
+  const hasColorVariants = $derived(new Set(brand.assets.map((item) => item.color)).size > 1);
+  const artwork = $derived(selectedArtwork(brand, asset)!);
   const path = $derived(`${basePath}/${assetPath(asset)}`);
   const format = $derived(assetFormat(asset));
-  const copying = $derived(feedback?.pending(path) ?? false);
-  const artworks = $derived(primaryArtworkGroups(brand));
-  const alternativeArtworks = $derived(alternativeArtworkGroups(brand));
-  const artwork = $derived(selectedArtwork(brand, asset)!);
+  const alt = $derived(`${brand.name} ${assetDescription(asset)}`);
+  const background = $derived(backgroundChoice ?? (asset.background === 'dark' ? 'dark' : 'light'));
+  const previewBounds = $derived(directoryPreviewBounds(asset));
+  const currentAttributes = $derived(attributesFor(artwork, asset).join(' · '));
+  const warnings = $derived(assetWarnings(asset));
   const originalAsset = $derived(
     brand.assets.find((entry) => entry.file === asset.provenance.originalAsset),
   );
   const sourceFiles = $derived(artworkSourceFiles(brand, asset));
   const sourceInfo = $derived(sourceInformation([asset, ...sourceFiles]));
-  const canGeneratePng = $derived(
-    format === 'SVG' && !artwork.assets.some((item) => assetFormat(item) === 'PNG'),
-  );
   const formatChoices = $derived(
     [...new Set(artwork.assets.map(assetFormat))].map((value) => ({
       format: value,
@@ -100,21 +164,13 @@
     })),
   );
   const fileAlternatives = $derived(artwork.assets.filter((item) => assetFormat(item) === format));
-  const alt = $derived(`${brand.name} ${assetLabel(asset)}`);
-  const background = $derived(backgroundChoice ?? (asset.background === 'dark' ? 'dark' : 'light'));
-  const warnings = $derived(assetWarnings(asset));
   const rasterSize = $derived(dimensions && dimensions.file === asset.file ? dimensions : asset);
-  const rasterWidth = $derived(
-    format === 'SVG' || !rasterSize.width || !rasterSize.height
-      ? undefined
-      : `${rasterSize.width / density}px`,
-  );
-  const rasterHeight = $derived(
-    format === 'SVG' || !rasterSize.width || !rasterSize.height
-      ? undefined
-      : `${rasterSize.height / density}px`,
-  );
   const info = $derived(fileInfo({ ...asset, width: rasterSize.width, height: rasterSize.height }));
+  $effect(() => {
+    if (!previewOpen) return;
+    if (moreArtworks.some((item) => item.id === artwork.id)) moreVersionsOpen = true;
+    if (isAlternativeArtwork(artwork)) alternativeVersionsOpen = true;
+  });
   const links = $derived.by(() => {
     if (pageUrl)
       return resourceLinks({
@@ -133,17 +189,84 @@
     };
   });
 
-  function external(value?: string) {
-    return /^https:\/\/[^\s\\]+$/i.test(value || '') ? value : '#';
-  }
-  function sourceUrl() {
-    return new URL(path, pageUrl || location.href).href;
-  }
-  function artworkLabel(item: Artwork) {
-    return item.assets.length > 1 ? item.label : assetDisplayLabel(item.defaultAsset);
+  function attributesFor(item: Artwork, file = item.defaultAsset) {
+    const label = assetDisplayLabel(file);
+    return [
+      ...new Set(
+        [assetAttributes(file), artworkDetailLabel(item, file)]
+          .filter(Boolean)
+          .flatMap((value) => value.split(' · '))
+          .filter(
+            (attribute) =>
+              attribute !== colorLabels.brand &&
+              attribute !== brand.name &&
+              !(file.usage === 'app-icon' && attribute === '图形标') &&
+              !label.includes(attribute) &&
+              (hasColorVariants ||
+                attribute !== colorLabels[file.color as keyof typeof colorLabels]),
+          ),
+      ),
+    ];
   }
   function artworkFile(item: Artwork) {
-    return item.id === artwork.id ? asset : preferredArtworkAsset(item, format);
+    return (
+      item.assets.find((candidate) => candidate.file === cardFiles[item.id]) ??
+      preferredArtworkAsset(item, preferredFormat)
+    );
+  }
+  function selectCardFile(event: MouseEvent, item: Artwork, file: string) {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)
+      return;
+    event.preventDefault();
+    feedback?.reset();
+    cardFiles[item.id] = file;
+  }
+  function openPreview(event: MouseEvent, file: string) {
+    if (
+      event.button === 0 &&
+      !event.metaKey &&
+      !event.ctrlKey &&
+      !event.shiftKey &&
+      !event.altKey
+    ) {
+      if (!previewOpen) previewOrigin = (event.currentTarget as HTMLElement).id;
+      previewOpen = true;
+    }
+    onSelectAsset(event, file);
+  }
+  function restorePreviewFocus(event: Event) {
+    event.preventDefault();
+    if (previewOpen) return;
+    const target = [
+      ...(gallery?.querySelectorAll<HTMLAnchorElement>('[data-selection-kind="artwork"]') ?? []),
+    ].find(
+      (link) =>
+        link.dataset.selectAsset === asset.file || link.dataset.selectArtwork === artwork.id,
+    );
+    const focusTarget = [
+      document.getElementById(previewOrigin),
+      target,
+      gallery?.querySelector<HTMLElement>('.artwork-visual'),
+      gallery?.querySelector<HTMLElement>('button'),
+      gallery,
+    ].find((element) => element?.getClientRects().length);
+    focusTarget?.focus({ preventScroll: true });
+  }
+  async function openDesignFiles() {
+    designFilesOpen = true;
+    await tick();
+    const scroller = document.querySelector<HTMLElement>('.preview-dialog-body');
+    const files = document.getElementById('design-files');
+    if (scroller && files)
+      scroller.scrollTo({
+        top:
+          scroller.scrollTop +
+          files.getBoundingClientRect().top -
+          scroller.getBoundingClientRect().top -
+          12,
+        behavior: 'smooth',
+      });
+    document.getElementById('design-files-trigger')?.focus({ preventScroll: true });
   }
   function imageLoaded(event: Event) {
     const image = event.currentTarget as HTMLImageElement;
@@ -151,1198 +274,1029 @@
     if (format !== 'SVG' && image.naturalWidth)
       dimensions = { file: asset.file, width: image.naturalWidth, height: image.naturalHeight };
   }
-
-  async function downloadGeneratedPng() {
-    if (!canGeneratePng || !feedback || exporting) return;
-    const controller = feedback;
-    const token = controller.reset();
-    // Copying can replace the toast while this export still belongs to the
-    // current keyed workspace. Selection changes destroy it and cancel export.
-    const isCurrent = () => alive;
-    const size = 2048;
-    exporting = true;
-    try {
-      const result = await renderSvgPng(sourceUrl(), size, isCurrent);
-      if (!result || !isCurrent()) return;
-      const pngUrl = URL.createObjectURL(result.blob);
-      const link = document.createElement('a');
-      link.href = pngUrl;
-      link.download = `${brand.id}-${asset.file.replace(/\.svg$/i, '')}-export-${size}.png`;
-      link.click();
-      setTimeout(() => URL.revokeObjectURL(pngUrl), 10000);
-      if (controller.isCurrent(token))
-        await controller.show(
-          `已下载 ${result.width} × ${result.height} px PNG（由 SVG 生成 · 长边 ${size}px）。`,
-        );
-    } catch {
-      if (isCurrent() && controller.isCurrent(token))
-        await controller.show('PNG 生成未完成，请下载原始 SVG 后重试。');
-    } finally {
-      exporting = false;
-    }
-  }
-
-  function restoreDownloadFocus(event: Event) {
-    if (!exporting) return;
-    event.preventDefault();
-    downloadLink?.focus({ preventScroll: true });
-  }
-
-  function copyImage() {
-    return feedback?.copyImage({
-      url: sourceUrl(),
-      format,
-      downloadName: `${brand.id}-${asset.file}`,
-    });
-  }
-
-  function copySvg() {
-    return feedback?.copySvg({
-      url: sourceUrl(),
-      downloadName: `${brand.id}-${asset.file}`,
-    });
-  }
-
-  const copyItems = $derived([
-    {
-      id: 'image',
-      label: '复制图片',
-      hint: !canCopyImage
-        ? '浏览器不支持'
-        : format === 'PNG'
-          ? '原始 PNG'
-          : format === 'SVG'
-            ? 'PNG · 长边 2048px'
-            : 'PNG · 原始尺寸',
-      disabled: !canCopyImage || copying,
-      onselect: copyImage,
-    },
-    ...(format === 'SVG'
-      ? [{ id: 'svg', label: 'SVG 源码', hint: '原始代码', disabled: copying, onselect: copySvg }]
-      : []),
-    {
-      id: 'current',
-      label: '图片地址',
-      hint: '当前原文件的地址',
-      onselect: () => feedback?.copy(links.current, '图片地址'),
-    },
-    {
-      id: 'markdown',
-      label: 'Markdown 引用',
-      hint: links.fixed ? '固定版本链接' : '当前文件链接',
-      onselect: () => feedback?.copy(links.markdown, 'Markdown 引用'),
-    },
-    {
-      id: 'html',
-      label: 'HTML 代码',
-      hint: links.fixed ? '固定版本链接' : '当前文件链接',
-      onselect: () => feedback?.copy(links.html, 'HTML 代码'),
-    },
-    ...(links.fixed
-      ? [
-          {
-            id: 'fixed',
-            label: '固定版本地址',
-            hint: '当前版本原件',
-            onselect: () => feedback?.copy(links.fixed || '', '固定版本地址'),
-          },
-        ]
-      : []),
-    {
-      id: 'share',
-      label: '素材分享地址',
-      hint: '含当前选择',
-      onselect: () => feedback?.copy(shareHref(asset.file), '素材分享地址'),
-    },
-  ]);
-
   onMount(() => {
     const updateDensity = () => (density = window.devicePixelRatio || 1);
+    const media = window.matchMedia('(max-width: 720px)');
+    const updatePreviewSize = () => (compactPreview = media.matches);
     updateDensity();
+    updatePreviewSize();
     window.addEventListener('resize', updateDensity);
-    canCopyImage = canCopyPngImage(navigator.clipboard, globalThis.ClipboardItem);
-    if (format !== 'SVG' && previewImage?.complete && previewImage.naturalWidth) {
-      dimensions = {
-        file: asset.file,
-        width: previewImage.naturalWidth,
-        height: previewImage.naturalHeight,
-      };
-    }
-    return () => window.removeEventListener('resize', updateDensity);
-  });
-  onDestroy(() => {
-    alive = false;
+    media.addEventListener('change', updatePreviewSize);
+    return () => {
+      window.removeEventListener('resize', updateDensity);
+      media.removeEventListener('change', updatePreviewSize);
+    };
   });
 </script>
 
-{#snippet artworkOption(item: Artwork)}
-  {@const file = artworkFile(item)}
-  <a
-    class="variant-option"
-    href={assetHref(file.file)}
-    data-select-artwork={item.id}
-    data-select-asset={file.file}
-    data-selection-kind="artwork"
-    aria-current={item.id === artwork.id ? 'true' : 'false'}
-    onclick={(event) => onSelectAsset(event, file.file)}
+{#snippet backgroundControls(name: string)}
+  <RadioGroup.Root
+    class="preview-controls"
+    aria-label="预览背景"
+    orientation="horizontal"
+    {name}
+    value={backgroundChoice ?? 'auto'}
+    onValueChange={(value) =>
+      onBackgroundChange(value === 'auto' ? undefined : (value as PreviewBackground))}
   >
-    <span
-      class="variant-thumb"
-      data-background={item.defaultAsset.background === 'dark' ? 'dark' : 'light'}
-      ><img
-        src={`${basePath}/${assetPath(item.defaultAsset)}`}
-        alt=""
-        width="52"
-        height="36"
-        loading="lazy"
-      /></span
-    >
-    <span class="variant-label"
-      >{artworkLabel(item)}<small
-        >{[...new Set(item.assets.map(assetFormat))].join(' / ')}{item.defaultAsset.status ===
-        'historical'
-          ? ' · 历史'
-          : ''}{isAlternativeArtwork(item) ? ' · 备选' : ''}</small
-      ></span
-    ><span class="variant-check" aria-hidden="true">✓</span>
-  </a>
+    {#each backgroundOptions as option (option.value)}
+      <RadioGroup.Item class="preview-background-option" value={option.value}>
+        <span class="background-swatch" data-swatch={option.value}></span><span>{option.label}</span
+        >
+      </RadioGroup.Item>
+    {/each}
+  </RadioGroup.Root>
 {/snippet}
 
-<div class="asset-main">
-  <section class="preview-column" aria-label="标识预览">
-    <div class="preview-stage">
-      <div
-        class="detail-canvas"
-        id="detail-canvas"
-        data-background={background}
-        data-variant={asset.variant}
-      >
-        <img
-          id="detail-image"
-          bind:this={previewImage}
-          src={path}
-          {alt}
-          width="640"
-          height="360"
-          style:--raster-width={rasterWidth}
-          style:--raster-height={rasterHeight}
-          data-native-size={format !== 'SVG' && !rasterWidth ? 'unknown' : undefined}
-          decoding="async"
-          onload={imageLoaded}
+{#snippet artworkCard(item: Artwork, index: number)}
+  {@const file = artworkFile(item)}
+  {@const attributes = attributesFor(item, file)}
+  {@const choices = [...new Set(item.assets.map(assetFormat))]}
+  {@const notices = assetWarnings(file)}
+  {@const cardId = `artwork-${index}-${item.id.replace(/[^a-z0-9-]/gi, '-')}`}
+  <article class="artwork-card" data-artwork={item.id}>
+    <!-- eslint-disable svelte/no-navigation-without-resolve -- Selection preserves the current detail URL and directory context. -->
+    <a
+      id={`${cardId}-preview`}
+      class="artwork-visual variant-option"
+      href={assetHref(file.file)}
+      data-select-artwork={item.id}
+      data-select-asset={file.file}
+      data-selection-kind="artwork"
+      aria-label={`查看 ${brand.name} ${assetDescription(file)} ${assetFormat(file)} 文件详情`}
+      onclick={(event) => openPreview(event, file.file)}
+      data-background={backgroundChoice ?? (file.background === 'dark' ? 'dark' : 'light')}
+    >
+      {#if failedFiles.includes(file.file)}
+        <span class="preview-error">预览未能加载<span>查看文件详情</span></span>
+      {:else}
+        <AssetPreview
+          asset={file}
+          src={`${basePath}/${assetPath(file)}`}
+          maxWidth={totalVersions === 1 ? 420 : 300}
+          maxHeight={totalVersions === 1 ? 180 : 128}
+          {density}
+          loading={index < 6 ? 'eager' : 'lazy'}
           onerror={() => {
-            previewStatus = '预览未能加载，请尝试下载原始文件。';
+            failedFiles = [...failedFiles, file.file];
           }}
         />
-      </div>
-      <div class="preview-bottom">
-        <div class="preview-heading">
-          <span class="preview-label" aria-hidden="true">预览背景</span>
-          <Popover.Root>
-            <Popover.Trigger class="preview-help" aria-label="预览背景说明">
-              <svg
-                viewBox="0 0 24 24"
-                width="16"
-                height="16"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.6"
-                stroke-linecap="round"
-                aria-hidden="true"
-                ><circle cx="12" cy="12" r="9" /><path d="M12 11v6m0-10h.01" /></svg
-              >
-            </Popover.Trigger>
-            <Popover.Portal>
-              <Popover.Content
-                class="preview-help-content"
-                role="dialog"
-                aria-label="预览背景说明"
-                side="top"
-                align="start"
-                sideOffset={8}
-                collisionPadding={12}>背景仅用于预览，下载保留原始文件。</Popover.Content
-              >
-            </Popover.Portal>
-          </Popover.Root>
-        </div>
-        <fieldset class="preview-controls">
-          <legend>预览背景</legend>
-          {#each backgroundOptions as option (option.value)}
-            <label title={option.label}
-              ><input
-                type="radio"
-                name="preview-background"
-                value={option.value}
-                checked={background === option.value}
-                onchange={() => onBackgroundChange(option.value)}
-              /><span class="background-swatch" data-swatch={option.value}></span><span
-                >{option.label}</span
-              ></label
-            >
-          {/each}
-        </fieldset>
-      </div>
-    </div>
-    <p class="preview-status" id="preview-status" role="status" aria-live="polite">
-      {previewStatus}
-    </p>
-  </section>
-  <div class="asset-controls">
-    <section class="asset-action-panel" aria-label="取用当前文件">
-      <div class="file-meta">
-        <p class="file-info" id="detail-fileinfo">
-          {info}{#if asset.display === 'alternative'}<span>备选文件</span>{/if}
-        </p>
+      {/if}
+    </a>
+    <!-- eslint-enable svelte/no-navigation-without-resolve -->
+    <div class="artwork-caption">
+      <div class="artwork-caption-heading">
+        <h3>{assetDisplayLabel(file)}</h3>
+        <!-- eslint-disable svelte/no-navigation-without-resolve -- Opens this registered file's detail route. -->
         <a
-          id="detail-source-link"
-          href={external(asset.sourcePage)}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={`查看来源，${sourceLabel(asset)}`}
-          >{sourceLabel(asset)}<Icon name="external" size={14} /></a
+          id={`${cardId}-details`}
+          class="file-details-link"
+          href={assetHref(file.file)}
+          data-select-artwork={item.id}
+          data-select-asset={file.file}
+          data-selection-kind="artwork"
+          aria-label={`查看 ${brand.name} ${assetDescription(file)} ${assetFormat(file)} 文件详情`}
+          onclick={(event) => openPreview(event, file.file)}
+          >文件详情<Icon name="chevron-right" size={13} /></a
         >
+        <!-- eslint-enable svelte/no-navigation-without-resolve -->
       </div>
-      {#if asset.qualityNotes?.length}
-        <p class="asset-description">{asset.qualityNotes.join(' ')}</p>
-      {/if}
-      {#if warnings.length}<ul class="asset-warnings">
-          {#each warnings as note (note)}<li>{note}</li>{/each}
-        </ul>{/if}
-      <div class="download-actions">
-        <div class="download-button" class:has-options={canGeneratePng}>
-          <a
-            class="button button-primary"
-            id="download-link"
-            bind:this={downloadLink}
-            href={path}
-            download={`${brand.id}-${asset.file}`}><Icon name="download" />下载 {format}</a
-          >
-          {#if canGeneratePng}
-            <DropdownMenu.Root>
-              <DropdownMenu.Trigger
-                id="download-options"
-                class="button button-primary download-options-trigger"
-                aria-label="选择下载格式"
-                disabled={!feedback || exporting}
-                aria-busy={exporting}
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  width="16"
-                  height="16"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.6"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg
-                >
-              </DropdownMenu.Trigger>
-              <DropdownMenu.Portal>
-                <DropdownMenu.Content
-                  class="download-menu-content"
-                  data-download-menu-content=""
-                  align="end"
-                  sideOffset={6}
-                  collisionPadding={12}
-                  onCloseAutoFocus={restoreDownloadFocus}
-                >
-                  <DropdownMenu.Item
-                    class="download-menu-item"
-                    data-download-kind="png"
-                    textValue="下载 PNG"
-                    onSelect={downloadGeneratedPng}
-                  >
-                    <span>下载 PNG</span><small>由 SVG 生成 · 长边 2048px</small>
-                  </DropdownMenu.Item>
-                </DropdownMenu.Content>
-              </DropdownMenu.Portal>
-            </DropdownMenu.Root>
-          {/if}
-        </div>
-        <CopyMenu
-          id="detail-copy-menu"
-          items={copyItems}
-          busy={copying}
-          disabled={!feedback}
-          ariaLabel="复制当前标识"
-          class="detail-copy-trigger"
-        />
-      </div>
-      {#if exporting}<p class="download-status" role="status">正在生成 PNG…</p>{/if}
-    </section>
-    <section class="version-section" aria-label="选择标识">
-      {#if artworks.length > 1 || alternativeArtworks.length}
-        <div class="section-heading">
-          <h2>选择标识</h2>
-          <span>{artworks.length} 项</span>
-        </div>
-        <div class="variant-list" aria-label="标识样式">
-          {#each artworks as item (item.id)}
-            {@render artworkOption(item)}
+      {#if attributes.length}<p class="artwork-attributes">{attributes.join(' · ')}</p>{/if}
+      {#if totalVersions === 1}<p class="single-file-meta">{fileInfo(file)}</p>{/if}
+      {#if choices.length > 1}
+        <nav class="card-formats" aria-label={`${assetDisplayLabel(file)} 文件格式`}>
+          {#each choices as choice (choice)}
+            {@const candidate =
+              choice === assetFormat(file) ? file : preferredArtworkAsset(item, choice)}
+            <!-- eslint-disable svelte/no-navigation-without-resolve -- Selects a registered file within the current artwork. -->
+            <a
+              href={assetHref(candidate.file)}
+              data-select-asset={candidate.file}
+              data-selection-kind="format"
+              aria-current={choice === assetFormat(file) ? 'true' : undefined}
+              onclick={(event) => selectCardFile(event, item, candidate.file)}>{choice}</a
+            >
+            <!-- eslint-enable svelte/no-navigation-without-resolve -->
           {/each}
-        </div>
-      {:else}<h2 class="asset-title">{artworkLabel(artwork)}</h2>{/if}
-      {#if alternativeArtworks.length}
-        <details class="artwork-alternatives" open={isAlternativeArtwork(artwork)}>
-          <summary>更多版本 <span>{alternativeArtworks.length} 项</span></summary>
-          <div class="variant-list" aria-label="备选标识">
-            {#each alternativeArtworks as item (item.id)}
-              {@render artworkOption(item)}
-            {/each}
-          </div>
-        </details>
+        </nav>
       {/if}
-    </section>
-    {#if formatChoices.length > 1 || fileAlternatives.length > 1}
-      <section class="file-section" aria-label="文件选择">
-        {#if formatChoices.length > 1}
-          <fieldset class="format-choices">
-            <legend>文件格式</legend>
-            <div class="format-option-list">
-              {#each formatChoices as item (item.format)}
-                <a
-                  class="format-option"
-                  href={assetHref(item.asset.file)}
-                  data-select-asset={item.asset.file}
-                  data-selection-kind="format"
-                  aria-current={item.format === format ? 'true' : 'false'}
-                  onclick={(event) => onSelectAsset(event, item.asset.file)}
-                  >{item.format}{#if item.asset.display === 'alternative'}<small>备选</small
-                    >{/if}</a
-                >
-              {/each}
-            </div>
-          </fieldset>
-        {/if}
-        {#if fileAlternatives.length > 1}
-          <details class="file-options" open={asset.display === 'alternative'}>
-            <summary>更多文件</summary>
-            <div class="file-option-list">
-              {#each fileAlternatives as item (item.file)}
-                <a
-                  class="file-option"
-                  href={assetHref(item.file)}
-                  data-select-asset={item.file}
-                  data-selection-kind="file"
-                  aria-current={item.file === asset.file ? 'true' : 'false'}
-                  onclick={(event) => onSelectAsset(event, item.file)}
-                  ><span
-                    >{assetDisplayLabel(item)}{item.display === 'alternative'
-                      ? ' · 备选'
-                      : ''}</span
-                  ><small>{provenanceLabel(item)} · {fileInfo(item)}</small></a
-                >
-              {/each}
-            </div>
-          </details>
-        {/if}
-      </section>
-    {/if}
-    {#if sourceFiles.length}
-      <section class="source-files" aria-label="原生设计文件">
-        <h2>原生设计文件</h2>
-        <ul>
-          {#each sourceFiles as entry (entry.file)}
-            <li data-source-file={entry.file}>
-              <a
-                class="source-file-download"
-                href={`${basePath}/${assetPath(entry)}`}
-                download={`${brand.id}-${entry.file}`}
-                ><span>{entry.label}</span><span
-                  >下载 {assetFormat(entry)}<Icon name="download" size={14} /></span
-                ></a
-              >
-              <div class="source-file-meta">
-                <span>{fileInfo(entry)}</span>
-              </div>
-            </li>
-          {/each}
-        </ul>
-      </section>
-    {/if}
-    <details class="resource-details source-details" bind:open={sourceDetailsOpen}>
-      <summary
-        >来源与使用说明{#if sourceInfo.attributions.length}<span>需署名</span>{/if}</summary
-      >
-      <div class="source-fields">
-        {#if originalAsset}
-          <dl class="source-list original-source">
-            <dt>原始素材</dt>
-            <dd>
-              <a
-                href={assetHref(originalAsset.file)}
-                data-original-asset={originalAsset.file}
-                data-selection-kind="artwork"
-                onclick={(event) => onSelectAsset(event, originalAsset.file)}
-                >{assetDisplayLabel(originalAsset)}</a
-              >
-            </dd>
-          </dl>
-        {/if}
-        <SourceInfo information={sourceInfo} licenseId="detail-license-link" />
-      </div>
-    </details>
-  </div>
-</div>
-
-<div class="detail-extras">
-  <details class="resource-details embed-details">
-    <summary>嵌入代码</summary>
-    <div class="resource-fields">
-      <CopyField
-        id="current-address"
-        label="图片地址"
-        value={links.current}
-        oncopy={(value, label) => feedback?.copy(value, label)}
-      />
-      {#if links.fixed}<CopyField
-          id="fixed-address"
-          label="固定版本地址"
-          value={links.fixed}
-          oncopy={(value, label) => feedback?.copy(value, label)}
-        />
-        <p class="link-hint" id="snippet-hint">嵌入代码使用固定版本。</p>{/if}
-      <CopyField
-        id="html-example"
-        label="HTML"
-        value={links.html}
-        multiline
-        oncopy={(value, label) => feedback?.copy(value, label)}
-      />
-      <CopyField
-        id="markdown-example"
-        label="Markdown"
-        value={links.markdown}
-        multiline
-        oncopy={(value, label) => feedback?.copy(value, label)}
-      />
+      {#if notices.length}<p class="card-warning">{notices.join(' · ')}</p>{/if}
     </div>
-  </details>
-</div>
+    <div class="artwork-actions">
+      {#key file.file}
+        <AssetActions
+          {brand}
+          asset={file}
+          {sourceCommit}
+          {basePath}
+          {pageUrl}
+          {feedback}
+          {shareHref}
+          id={cardId}
+        />
+      {/key}
+    </div>
+  </article>
+{/snippet}
+
+<section
+  class="asset-gallery"
+  class:single-artwork={totalVersions === 1}
+  aria-label="标识素材"
+  tabindex="-1"
+  bind:this={gallery}
+>
+  <div class="gallery-heading">
+    <h2>标识素材</h2>
+    {@render backgroundControls('gallery-background')}
+  </div>
+  {#if directoryContext.length}
+    <div class="directory-context">
+      <p>当前筛选 <span>{directoryContext.join(' · ')}</span></p>
+      <RadioGroup.Root
+        class="version-range"
+        aria-label="版本范围"
+        orientation="horizontal"
+        value={matchingOnly ? 'matching' : 'all'}
+        onValueChange={(value) => onChangeVersionScope(value === 'matching')}
+      >
+        <RadioGroup.Item value="matching">匹配版本</RadioGroup.Item>
+        <RadioGroup.Item value="all">全部版本</RadioGroup.Item>
+      </RadioGroup.Root>
+    </div>
+  {/if}
+  {#if largeVersionSet}
+    <div class="version-filters" aria-label="筛选当前品牌版本">
+      {#each versionFilterFields as field (field.key)}
+        <FilterSelect
+          id={`version-${field.key}-filter`}
+          label={field.label}
+          value={versionFilters[field.key]}
+          options={[
+            { value: '', label: field.all },
+            ...Object.entries(field.labels).map(([value, label]) => ({ value, label })),
+          ]}
+          onchange={(value) => {
+            versionFilters[field.key] = value;
+          }}
+        />
+      {/each}
+      {#if hasVersionFilters}<button
+          type="button"
+          class="version-reset"
+          onclick={() => {
+            versionFilters = { language: '', layout: '', color: '' };
+          }}>清除版本筛选</button
+        >{/if}
+    </div>
+  {/if}
+  {#if !filteredBrand}
+    <p class="version-empty" role="status">当前条件下没有匹配版本，可调整筛选或查看全部版本。</p>
+  {:else}
+    <div class="artwork-grid" aria-label="标识版本">
+      {#each visibleArtworks as item, index (item.id)}{@render artworkCard(item, index)}{/each}
+    </div>
+    {#if moreArtworks.length}
+      <Disclosure
+        class="artwork-more"
+        triggerClass="artwork-more-trigger"
+        bind:open={moreVersionsOpen}
+      >
+        {#snippet trigger()}其余 {moreArtworks.length} 个版本<Icon
+            name="chevron-down"
+            size={14}
+          />{/snippet}
+        <div class="artwork-grid" aria-label="更多标识版本">
+          {#each moreArtworks as item, index (item.id)}{@render artworkCard(item, index + 6)}{/each}
+        </div>
+      </Disclosure>
+    {/if}
+    {#if alternativeArtworks.length}
+      <Disclosure
+        class="artwork-alternatives"
+        triggerClass="artwork-alternatives-trigger"
+        bind:open={alternativeVersionsOpen}
+      >
+        {#snippet trigger()}其他可用版本 <span>{alternativeArtworks.length}</span>{/snippet}
+        <div class="artwork-grid" aria-label="备选标识">
+          {#each alternativeArtworks as item, index (item.id)}{@render artworkCard(
+              item,
+              index + artworks.length,
+            )}{/each}
+        </div>
+      </Disclosure>
+    {/if}
+  {/if}
+</section>
+
+<Dialog.Root
+  bind:open={previewOpen}
+  onOpenChange={(open) => {
+    if (!open) onClosePreview();
+  }}
+>
+  <Dialog.Portal>
+    <Dialog.Overlay class="asset-dialog-overlay" />
+    <Dialog.Content
+      class="preview-dialog"
+      aria-describedby={undefined}
+      preventScroll
+      trapFocus
+      onCloseAutoFocus={restorePreviewFocus}
+    >
+      <div class="asset-dialog-heading">
+        <Dialog.Title level={2}>{brand.name} · {assetDescription(asset)} · {format}</Dialog.Title>
+        <Dialog.Close class="icon-button" aria-label="关闭文件详情">×</Dialog.Close>
+      </div>
+      <div class="preview-dialog-body">
+        <section class="preview-stage" aria-label="标识预览">
+          <div
+            class="detail-canvas"
+            id="detail-canvas"
+            data-background={background}
+            data-variant={asset.variant}
+            data-usage={asset.usage}
+          >
+            <AssetPreview
+              {asset}
+              src={path}
+              {alt}
+              id="detail-image"
+              {fullCanvas}
+              {density}
+              maxWidth={600}
+              maxHeight={compactPreview ? 180 : 300}
+              onload={imageLoaded}
+              onerror={() => {
+                previewStatus = '预览未能加载，请尝试下载原始文件。';
+              }}
+            />
+          </div>
+          <div class="preview-bottom">
+            {@render backgroundControls('preview-background')}
+            {#if previewBounds}<Toggle.Root
+                class="preview-view-toggle"
+                aria-label="显示完整画布"
+                bind:pressed={fullCanvas}>完整画布</Toggle.Root
+              >{/if}
+          </div>
+          <p class="preview-hint">背景仅用于预览，下载保留原始文件。</p>
+          {#if previewStatus}<p class="preview-status" role="status">{previewStatus}</p>{/if}
+        </section>
+        <section class="asset-controls" aria-label="文件详情">
+          {#if selectionOutsideResults}<p class="selection-notice">
+              此文件位于当前筛选范围之外。
+            </p>{/if}
+          <div class="current-version">
+            <h3>{assetDisplayLabel(asset)}</h3>
+            {#if currentAttributes}<p>{currentAttributes}</p>{/if}
+            <p class="current-file-name">{asset.file}</p>
+          </div>
+          {#if formatChoices.length > 1}
+            <fieldset class="format-choices">
+              <legend>文件格式</legend>
+              <div class="format-option-list">
+                {#each formatChoices as item (item.format)}
+                  <!-- eslint-disable svelte/no-navigation-without-resolve -- Uses the current resolved detail URL. -->
+                  <a
+                    class="format-option"
+                    href={assetHref(item.asset.file)}
+                    data-select-asset={item.asset.file}
+                    data-selection-kind="format"
+                    aria-current={item.format === format ? 'true' : undefined}
+                    onclick={(event) => onSelectAsset(event, item.asset.file)}>{item.format}</a
+                  >
+                  <!-- eslint-enable svelte/no-navigation-without-resolve -->
+                {/each}
+              </div>
+            </fieldset>
+          {/if}
+          {#if fileAlternatives.length > 1}
+            <Disclosure
+              class="file-options"
+              triggerClass="file-options-trigger"
+              bind:open={fileOptionsOpen}
+            >
+              {#snippet trigger()}更多文件{/snippet}
+              <div class="file-option-list">
+                {#each fileAlternatives as item (item.file)}
+                  <!-- eslint-disable svelte/no-navigation-without-resolve -- Uses the current resolved detail URL. -->
+                  <a
+                    class="file-option"
+                    href={assetHref(item.file)}
+                    data-select-asset={item.file}
+                    data-selection-kind="file"
+                    aria-current={item.file === asset.file ? 'true' : undefined}
+                    onclick={(event) => onSelectAsset(event, item.file)}
+                  >
+                    <span>{assetDescription(item)}</span><small
+                      >{provenanceLabel(item)} · {fileInfo(item)}</small
+                    ></a
+                  >
+                  <!-- eslint-enable svelte/no-navigation-without-resolve -->
+                {/each}
+              </div>
+            </Disclosure>
+          {/if}
+          <div class="file-meta">
+            <p id="detail-fileinfo">
+              {info}{#if asset.display === 'alternative'}
+                · 备选文件{/if}
+            </p>
+            <Tooltip.Root>
+              <Tooltip.Trigger id="detail-source-link">
+                {#snippet child({ props })}
+                  <a {...props} href={asset.sourcePage} target="_blank" rel="noopener noreferrer"
+                    >来源<Icon name="external" size={13} /></a
+                  >
+                {/snippet}
+              </Tooltip.Trigger>
+              <Tooltip.Portal>
+                <Tooltip.Content class="utility-tooltip" role="tooltip" sideOffset={6}>
+                  {sourceLabel(asset)}
+                </Tooltip.Content>
+              </Tooltip.Portal>
+            </Tooltip.Root>
+          </div>
+          {#if asset.qualityNotes?.length}<p class="asset-description">
+              {asset.qualityNotes.join(' ')}
+            </p>{/if}
+          {#if warnings.length}<ul class="asset-warnings">
+              {#each warnings as note (note)}<li>{note}</li>{/each}
+            </ul>{/if}
+          <AssetActions
+            {brand}
+            {asset}
+            {sourceCommit}
+            {basePath}
+            {pageUrl}
+            {feedback}
+            {shareHref}
+            id="detail"
+            primary
+          />
+          {#if sourceFiles.length}<button
+              type="button"
+              class="design-files-link"
+              onclick={openDesignFiles}
+            >
+              设计源文件 <span>{sourceFiles.length} 个文件</span><Icon
+                name="chevron-right"
+                size={14}
+              /></button
+            >{/if}
+        </section>
+        <div class="preview-references">
+          <AssetReferences
+            {brand}
+            {asset}
+            {basePath}
+            {links}
+            {sourceFiles}
+            {sourceInfo}
+            {originalAsset}
+            bind:sourceDetailsOpen
+            bind:designFilesOpen
+            {feedback}
+            {assetHref}
+            onSelectAsset={openPreview}
+          />
+        </div>
+      </div>
+      <AppToaster scope="file-detail" />
+    </Dialog.Content>
+  </Dialog.Portal>
+</Dialog.Root>
 
 <style>
-  .asset-main {
-    display: grid;
-    grid-template-columns: minmax(0, 1.04fr) minmax(0, 1fr);
-    align-items: start;
-    gap: 40px;
-  }
-  .preview-column,
-  .asset-controls {
+  .asset-gallery {
     min-width: 0;
   }
-  .preview-stage {
-    overflow: hidden;
+  .gallery-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  h2 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .artwork-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    gap: 20px;
+    align-items: start;
+  }
+  .artwork-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: 100%;
     border: 1px solid var(--line);
-    border-radius: 8px;
+    border-radius: 10px;
+    overflow: hidden;
     background: var(--paper);
   }
-  .detail-canvas {
-    display: grid;
-    place-items: center;
-    height: 300px;
-    padding: 38px;
+  .artwork-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 184px;
+    padding: 24px;
     background: #f7f8fa;
+    text-decoration: none;
   }
+  .artwork-visual[data-background='dark'],
   .detail-canvas[data-background='dark'] {
     background: #22262c;
   }
+  .artwork-visual[data-background='transparent'],
   .detail-canvas[data-background='transparent'] {
     background-color: #fff;
-    background-image: conic-gradient(#e7e9ed 25%, transparent 0 50%, #e7e9ed 0 75%, transparent 0);
+    background-image:
+      linear-gradient(45deg, #e9ecf0 25%, transparent 25%),
+      linear-gradient(-45deg, #e9ecf0 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #e9ecf0 75%),
+      linear-gradient(-45deg, transparent 75%, #e9ecf0 75%);
     background-size: 16px 16px;
+    background-position:
+      0 0,
+      0 8px,
+      8px -8px,
+      -8px 0;
   }
-  .detail-canvas img {
-    display: block;
+  .artwork-visual:focus-visible {
+    outline-offset: -4px;
+  }
+  .artwork-caption {
+    display: grid;
+    gap: 5px;
+    padding: 16px 16px 12px;
+  }
+  .artwork-caption h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+  .artwork-caption-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .file-details-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    flex-shrink: 0;
+    min-height: 36px;
+    margin-block: -6px;
+    color: var(--muted);
+    font-size: 12px;
+    text-decoration: none;
+  }
+  .file-details-link:hover {
+    color: var(--accent);
+  }
+  .artwork-attributes {
+    margin: 0;
+    color: var(--ink);
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
+  .artwork-actions {
+    margin-top: auto;
+    padding: 0 16px 16px;
+  }
+  .card-formats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+  }
+  .card-formats a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 36px;
+    padding: 5px 10px;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    color: var(--muted);
+    font-size: 12px;
+    text-decoration: none;
+  }
+  .card-formats a[aria-current='true'] {
+    color: var(--ink);
+    background: var(--surface);
+  }
+  .card-warning {
+    margin: 3px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  .preview-error {
+    display: grid;
+    gap: 7px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--ink);
+  }
+  .preview-error span {
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .single-artwork .artwork-visual {
+    height: 240px;
+    padding: 36px;
+  }
+  .single-artwork .artwork-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+  .single-artwork .artwork-visual {
+    grid-row: 1 / 3;
+  }
+  .single-artwork .artwork-caption {
+    align-self: end;
+    padding: 24px 24px 12px;
+  }
+  .single-artwork .artwork-actions {
+    align-self: start;
+    margin-top: 0;
+    padding: 0 24px 24px;
+  }
+  .single-file-meta {
+    margin: 3px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  :global(.artwork-more) {
+    margin-top: 20px;
+  }
+  :global(.artwork-more-trigger) {
     width: 100%;
-    height: 100%;
-    max-width: var(--raster-width, 100%);
-    max-height: min(224px, var(--raster-height, 224px));
-    object-fit: contain;
+    background: var(--paper);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 10px 16px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    color: var(--ink);
+    font-size: 13px;
+    cursor: pointer;
+    list-style: none;
   }
-  .detail-canvas[data-variant='icon'] img {
-    width: 150px;
-    height: 150px;
-    max-width: min(80%, var(--raster-width, 150px));
+  :global(.artwork-more-trigger::-webkit-details-marker) {
+    display: none;
   }
-  .detail-canvas img[data-native-size='unknown'] {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 224px;
+  :global(.artwork-more[data-state='open'] > .artwork-more-trigger) {
+    margin-bottom: 20px;
   }
-  .detail-canvas[data-variant='icon'] img[data-native-size='unknown'] {
-    max-width: min(80%, 150px);
-    max-height: 150px;
+  :global(.artwork-more[data-state='open'] > .artwork-more-trigger svg) {
+    transform: rotate(180deg);
+  }
+  :global(.artwork-alternatives) {
+    margin-top: 24px;
+  }
+  :global(.artwork-alternatives-trigger) {
+    width: 100%;
+    padding: 0;
+    border: 0;
+    color: var(--ink);
+    text-align: start;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  :global(.artwork-alternatives-trigger span) {
+    color: var(--muted);
+    font-size: 12px;
+  }
+  .directory-context {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+  .directory-context p {
+    margin: 0;
+    color: var(--muted);
+  }
+  .directory-context p span {
+    color: var(--ink);
+  }
+  .directory-context :global(.version-range) {
+    display: flex;
+    gap: 4px;
+  }
+  .directory-context :global(button),
+  .version-reset {
+    min-height: 36px;
+    padding: 7px 10px;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    background: var(--paper);
+    color: var(--muted);
+    font: inherit;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .directory-context :global(button[data-state='checked']) {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-soft);
+  }
+  .version-filters {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: end;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .version-reset {
+    justify-self: start;
+    grid-column: 1 / -1;
+  }
+  .version-empty {
+    padding: 32px 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--muted);
+  }
+  .selection-notice {
+    margin: 0;
+    padding: 10px 12px;
+    background: var(--surface);
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  :global(.preview-controls) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  :global(.preview-background-option) {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 0;
+    min-height: 36px;
+    padding: 7px 8px;
+    border-radius: 5px;
+    color: var(--muted);
+    font-size: 12px;
+    cursor: pointer;
+  }
+  :global(.preview-background-option[data-state='checked']) {
+    background: var(--surface);
+    color: var(--ink);
+  }
+  :global(.preview-background-option:focus-visible) {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  .background-swatch {
+    width: 11px;
+    height: 11px;
+    border: 1px solid #9ba5b3;
+    border-radius: 50%;
+    background: #fff;
+  }
+  .background-swatch[data-swatch='auto'] {
+    background: linear-gradient(90deg, #fff 50%, #22262c 50%);
+  }
+  .background-swatch[data-swatch='dark'] {
+    background: #22262c;
+  }
+  .background-swatch[data-swatch='transparent'] {
+    background: repeating-conic-gradient(#bbc2cb 0% 25%, #fff 0% 50%) 50% / 6px 6px;
+  }
+  :global(.asset-dialog-overlay) {
+    position: fixed;
+    inset: 0;
+    z-index: 70;
+    background: #10182080;
+  }
+  :global(.preview-dialog) {
+    position: fixed;
+    z-index: 75;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    width: min(1120px, calc(100vw - 48px));
+    max-height: calc(100dvh - 48px);
+    border-radius: 12px;
+    background: var(--paper);
+    color: var(--ink);
+    box-shadow: 0 20px 80px #09132130;
+    outline: none;
+  }
+  :global(.asset-dialog-heading) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 64px;
+    padding: 12px 24px;
+    border-bottom: 1px solid var(--line);
+    flex-shrink: 0;
+  }
+  :global(.asset-dialog-heading h2) {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 600;
+  }
+  :global(.asset-dialog-heading .icon-button) {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+  .preview-dialog-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: 28px;
+    padding: 24px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    min-height: 0;
+  }
+  .preview-references {
+    grid-column: 1 / -1;
+    min-width: 0;
+  }
+  .preview-stage {
+    min-width: 0;
+  }
+  .detail-canvas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    height: 360px;
+    padding: 24px;
+    border-radius: 7px;
+    background: #f7f8fa;
   }
   .preview-bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 8px;
-    min-height: 62px;
-    padding: 8px 14px;
-    border-top: 1px solid var(--line);
-  }
-  .preview-label {
-    color: var(--muted);
-    font-size: 12px;
-    white-space: nowrap;
-  }
-  .preview-heading {
-    display: flex;
-    align-items: center;
-  }
-  .preview-heading :global(.preview-help) {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    min-height: 40px;
-    padding: 0;
-    border: 0;
-    border-radius: 5px;
-    background: transparent;
-    color: var(--muted);
-    cursor: pointer;
-  }
-  .preview-heading :global(.preview-help:hover) {
-    background: var(--hover);
-    color: var(--ink);
-  }
-  :global(.preview-help-content) {
-    z-index: 50;
-    max-width: min(260px, calc(100vw - 24px));
-    padding: 12px;
-    border: 1px solid var(--line);
-    border-radius: 6px;
-    background: var(--paper);
-    color: var(--ink);
-    box-shadow: 0 8px 28px #15264312;
-    font-size: 12px;
-    line-height: 1.65;
-  }
-  .preview-controls {
-    display: flex;
-    align-items: center;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 3px;
-    min-width: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
+    padding-top: 12px;
   }
-  .preview-controls legend {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-  }
-  .preview-controls label {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    min-height: 40px;
-    padding: 8px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    color: var(--muted);
-    font-size: 12px;
-    cursor: pointer;
-  }
-  .preview-controls label:has(input:checked) {
-    color: var(--accent, var(--focus));
-    border-color: var(--line-strong);
-    background: var(--accent-soft, var(--hover));
-  }
-  .preview-controls input {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    appearance: none;
+  :global(.preview-view-toggle) {
+    min-height: 36px;
+    padding: 7px 9px;
     border: 0;
     border-radius: 5px;
     background: transparent;
+    color: var(--muted);
+    font: inherit;
+    font-size: 12px;
     cursor: pointer;
   }
-  .background-swatch {
-    width: 14px;
-    height: 14px;
-    flex: 0 0 auto;
-    border: 1px solid #b8bec7;
-    border-radius: 50%;
-    background: #fff;
+  :global(.preview-view-toggle:hover) {
+    background: var(--surface);
+    color: var(--ink);
   }
-  .background-swatch[data-swatch='dark'] {
-    background: #22262c;
+  :global(.preview-view-toggle[data-state='on']) {
+    background: var(--accent-soft);
+    color: var(--accent);
   }
-  .background-swatch[data-swatch='transparent'] {
-    background: conic-gradient(#cbd0d7 25%, #fff 0 50%, #cbd0d7 0 75%, #fff 0);
-    background-size: 6px 6px;
-  }
+  .preview-hint,
   .preview-status {
-    margin-top: 9px;
+    margin: 10px 0 0;
     color: var(--muted);
     font-size: 12px;
-    line-height: 1.6;
-  }
-  .preview-status:empty {
-    display: none;
+    line-height: 1.7;
   }
   .asset-controls {
-    display: grid;
-    gap: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    min-width: 0;
   }
-  .version-section {
-    order: 1;
-  }
-  .file-section {
-    order: 2;
-  }
-  .asset-action-panel {
-    order: 3;
-  }
-  .source-files {
-    order: 4;
-  }
-  .source-details {
-    order: 5;
-  }
-  .source-files h2 {
-    margin-bottom: 8px;
-    color: var(--muted);
-    font-size: 13px;
+  .current-version h3 {
+    margin: 0;
+    font-size: 20px;
     font-weight: 600;
   }
-  .source-files ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  .source-files li + li {
-    margin-top: 12px;
-  }
-  .source-file-download {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    min-height: 36px;
+  .current-version p {
+    margin: 6px 0 0;
+    color: var(--muted);
     font-size: 13px;
+    line-height: 1.7;
+  }
+  .current-version .current-file-name {
+    font-size: 12px;
     overflow-wrap: anywhere;
   }
-  .source-file-download > span:last-child {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    flex: 0 0 auto;
-  }
-  .source-file-meta {
+  .file-meta {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px 12px;
-  }
-  .source-file-meta {
-    color: var(--muted);
+    align-items: center;
+    gap: 8px 12px;
     font-size: 12px;
-    line-height: 1.8;
-    overflow-wrap: anywhere;
+    color: var(--muted);
   }
-  .section-heading {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 10px;
+  .file-meta p {
+    margin: 0;
   }
-  .section-heading h2,
-  .format-choices legend {
+  .file-meta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    min-height: 36px;
+    color: var(--muted);
+    text-underline-offset: 3px;
+  }
+  .asset-description {
+    margin: 0;
     color: var(--muted);
     font-size: 13px;
-    font-weight: 600;
+    line-height: 1.75;
+    overflow-wrap: anywhere;
   }
-  .section-heading > span {
-    color: var(--muted);
-    font-size: 12px;
-  }
-  .asset-title {
+  .asset-warnings {
     margin: 0;
-    color: var(--ink);
-    font-size: 16px;
-    line-height: 1.6;
-    font-weight: 600;
-    overflow-wrap: anywhere;
-  }
-  .variant-list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
-  }
-  .artwork-alternatives {
-    margin-top: 10px;
-  }
-  .artwork-alternatives > summary {
-    width: fit-content;
-    min-height: 42px;
-    padding-block: 10px;
-    color: var(--muted);
+    padding: 10px 12px 10px 28px;
+    background: var(--surface);
+    border-radius: 5px;
     font-size: 12px;
-    cursor: pointer;
-  }
-  .artwork-alternatives > summary > span {
-    margin-left: 6px;
-  }
-  .variant-option {
-    position: relative;
-    display: grid;
-    grid-template-columns: 44px minmax(0, 1fr) 10px;
-    align-items: center;
-    gap: 9px;
-    min-width: 0;
-    min-height: 66px;
-    padding: 9px;
-    border: 1px solid var(--line);
-    border-radius: 6px;
-    color: var(--muted);
-    text-decoration: none;
-    font-size: 12px;
-  }
-  .variant-option:hover {
-    border-color: var(--line-strong);
-  }
-  .variant-option[aria-current='true'] {
-    border-color: var(--accent, var(--focus));
-    color: var(--accent, var(--focus));
-    background: var(--accent-soft, var(--hover));
-  }
-  .variant-thumb {
-    display: grid;
-    place-items: center;
-    width: 44px;
-    height: 40px;
-    padding: 4px;
-    border-radius: 4px;
-    background: #f7f8fa;
-  }
-  .variant-thumb[data-background='dark'] {
-    background: #22262c;
-  }
-  .variant-thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-  .variant-label {
-    min-width: 0;
-    overflow-wrap: anywhere;
-    line-height: 1.6;
-  }
-  .variant-label small {
-    display: block;
-    margin-top: 2px;
-    color: var(--muted);
-    font-size: 12px;
-  }
-  .variant-check {
-    visibility: hidden;
-    color: var(--accent, var(--focus));
-    font-size: 12px;
-  }
-  .variant-option[aria-current='true'] .variant-check {
-    visibility: visible;
+    line-height: 1.75;
   }
   .format-choices {
-    min-width: 0;
-    margin: 0;
     padding: 0;
+    margin: 0;
     border: 0;
   }
   .format-choices legend {
-    margin-bottom: 12px;
-    padding: 0;
+    margin-bottom: 8px;
+    color: var(--muted);
+    font-size: 12px;
   }
   .format-option-list {
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 7px;
+    gap: 6px;
   }
   .format-option {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
-    min-width: 62px;
-    min-height: 42px;
-    padding: 9px 13px;
+    min-height: 40px;
+    padding: 8px 12px;
     border: 1px solid var(--line);
     border-radius: 5px;
     color: var(--muted);
     font-size: 13px;
-    font-weight: 400;
     text-decoration: none;
   }
-  .format-option:hover {
-    border-color: var(--line-strong);
-  }
-  .format-option small {
-    font-size: 11px;
-  }
   .format-option[aria-current='true'] {
-    border-color: var(--accent, var(--focus));
-    color: var(--accent, var(--focus));
-    background: var(--accent-soft, var(--hover));
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-soft);
   }
-  .file-options {
-    margin-top: 8px;
-    color: var(--muted);
+  :global(.file-options) {
     font-size: 12px;
+    color: var(--muted);
   }
-  .file-options > summary {
-    width: fit-content;
-    min-height: 42px;
-    padding-block: 10px;
+  :global(.file-options-trigger) {
+    border: 0;
+    padding-inline: 0;
+    color: var(--muted);
+    font: inherit;
+    min-height: 36px;
+    padding-block: 8px;
     cursor: pointer;
   }
   .file-option-list {
     display: grid;
     gap: 6px;
-    margin-top: 5px;
   }
   .file-option {
     display: grid;
     gap: 4px;
-    min-height: 54px;
-    padding: 10px 12px;
+    padding: 10px;
     border: 1px solid var(--line);
     border-radius: 5px;
     text-decoration: none;
   }
   .file-option[aria-current='true'] {
-    border-color: var(--accent, var(--focus));
-    color: var(--accent, var(--focus));
-  }
-  .file-option:hover {
-    background: var(--hover);
+    border-color: var(--accent);
+    color: var(--accent);
   }
   .file-option small {
     color: var(--muted);
     font-size: 12px;
   }
-  .file-meta {
+  .design-files-link {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    column-gap: 12px;
-    margin-top: 3px;
-  }
-  #detail-source-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    min-height: 40px;
-    max-width: 100%;
-    padding-inline: 4px;
-    border-radius: 4px;
-    color: var(--muted);
-    font-size: 12px;
-    text-decoration-color: var(--line-strong);
-    text-underline-offset: 3px;
-    overflow-wrap: anywhere;
-  }
-  #detail-source-link:hover {
-    color: var(--ink);
-  }
-  .file-info {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 7px 10px;
-    margin: 0;
-    color: var(--muted);
-    font-size: 12px;
-    font-variant-numeric: tabular-nums;
-  }
-  .file-info > span {
-    padding-left: 10px;
-    border-left: 1px solid var(--line);
-  }
-  .asset-description {
-    margin: 8px 0 0;
-    color: var(--muted);
-    font-size: 12px;
-    line-height: 1.65;
-    overflow-wrap: anywhere;
-  }
-  .asset-action-panel .asset-warnings {
-    margin: 12px 0 0;
-    padding: 9px 12px 9px 26px;
-    font-size: 12px;
-    line-height: 1.65;
-  }
-  .download-actions {
-    display: grid;
-    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
     gap: 8px;
-    margin-top: 12px;
-  }
-  .download-button > a,
-  .download-actions :global(.detail-copy-trigger) {
-    width: 100%;
-    min-width: 0;
-    min-height: 46px;
-    padding: 10px 14px;
-    font-size: 13px;
-  }
-  .download-button {
-    display: flex;
-    min-width: 0;
-  }
-  .download-button > a {
-    flex: 1;
-  }
-  .download-button.has-options > a {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-  .download-button :global(.download-options-trigger) {
-    flex: 0 0 44px;
-    min-height: 46px;
-    padding: 0;
-    border-left-color: color-mix(in srgb, var(--on-accent) 25%, var(--accent));
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-  .download-button :global(.download-options-trigger:disabled) {
-    cursor: default;
-  }
-  :global(.download-menu-content) {
-    z-index: 60;
-    max-width: calc(100vw - 24px);
-    max-height: var(--bits-dropdown-menu-content-available-height, calc(100vh - 24px));
-    overflow-y: auto;
-    padding: 5px;
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    background: var(--paper);
+    min-height: 40px;
+    padding: 8px 0;
+    border: 0;
+    background: transparent;
     color: var(--ink);
-    box-shadow:
-      0 8px 32px #17223524,
-      0 2px 5px #1722350a;
-    outline: none;
-  }
-  :global(.download-menu-item) {
-    display: grid;
-    gap: 3px;
-    min-height: 44px;
-    padding: 8px 10px;
-    border-radius: 4px;
+    font: inherit;
     font-size: 13px;
-    line-height: 1.5;
-    cursor: pointer;
-    outline: none;
-    user-select: none;
-  }
-  :global(.download-menu-item[data-highlighted]) {
-    background: var(--hover);
-    color: var(--focus);
-  }
-  :global(.download-menu-item small),
-  .download-status {
-    color: var(--muted);
-    font-size: 12px;
-  }
-  .download-status {
-    margin-top: 8px;
-  }
-  .resource-details > summary {
-    min-height: 44px;
-    padding-block: 12px;
-    color: var(--muted);
-    font-size: 13px;
+    text-align: start;
     cursor: pointer;
   }
-  .source-details {
-    margin-top: 0;
-  }
-  .source-details summary > span {
-    margin-left: 8px;
-    padding: 2px 6px;
-    border-radius: 3px;
-    color: var(--muted);
-    background: var(--surface);
+  .design-files-link span {
+    margin-left: auto;
     font-size: 12px;
-  }
-  .source-fields {
-    padding-block: 10px 16px;
-  }
-  .source-list {
-    display: grid;
-    grid-template-columns: 62px minmax(0, 1fr);
-    gap: 12px;
-    margin: 0;
-    font-size: 13px;
-  }
-  .source-list dt {
     color: var(--muted);
-  }
-  .source-list dd {
-    min-width: 0;
-    margin: 0;
-    overflow-wrap: anywhere;
-  }
-  .source-list a {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-  }
-  .original-source {
-    margin-bottom: 12px;
-  }
-  .detail-extras {
-    margin-top: 38px;
-  }
-  .detail-extras > details {
-    min-width: 0;
-    border-top: 1px solid var(--line);
-  }
-  .resource-fields {
-    display: grid;
-    gap: 16px;
-    padding-block: 12px 18px;
-  }
-  .link-hint {
-    margin-top: -6px;
-    color: var(--muted);
-    font-size: 12px;
-  }
-  @media (max-width: 980px) and (min-width: 721px) {
-    .asset-main {
-      gap: 26px;
-    }
-    .detail-canvas {
-      padding: 26px;
-    }
-    .variant-option {
-      grid-template-columns: 36px minmax(0, 1fr);
-      gap: 7px;
-      padding: 8px;
-    }
-    .variant-thumb {
-      width: 36px;
-    }
-    .variant-check {
-      position: absolute;
-      top: 3px;
-      right: 5px;
-    }
   }
   @media (max-width: 720px) {
-    .asset-main {
-      display: flex;
-      flex-direction: column;
+    :global(.preview-dialog) {
+      width: calc(100vw - 24px);
+      max-height: calc(100dvh - 24px);
+    }
+    :global(.asset-dialog-heading) {
+      min-height: 56px;
+      padding: 8px 16px;
+    }
+    .preview-dialog-body {
+      grid-template-columns: minmax(0, 1fr);
       gap: 20px;
-    }
-    .asset-controls {
-      display: contents;
-    }
-    .preview-column {
-      width: 100%;
+      padding: 16px;
     }
     .detail-canvas {
-      height: 168px;
+      height: 240px;
       padding: 24px;
     }
-    .detail-canvas img {
-      max-height: min(120px, var(--raster-height, 120px));
+    .asset-controls {
+      gap: 14px;
     }
-    .detail-canvas img[data-native-size='unknown'] {
-      max-height: 120px;
+    .version-filters {
+      gap: 8px;
     }
-    .detail-canvas[data-variant='icon'] img {
-      width: 98px;
-      height: 98px;
+    .gallery-heading {
+      align-items: start;
+      flex-direction: column;
+      gap: 8px;
     }
-    .detail-canvas[data-variant='icon'] img[data-native-size='unknown'] {
-      width: auto;
-      height: auto;
-      max-width: min(80%, 98px);
-      max-height: 98px;
-    }
-    .preview-bottom {
-      min-height: 54px;
-      padding: 6px 10px;
-    }
-    .preview-controls {
-      gap: 1px;
-    }
-    .preview-controls label {
+    :global(.preview-background-option) {
       min-height: 40px;
-      padding: 7px;
-      gap: 4px;
-    }
-    .preview-label {
-      font-size: 12px;
-    }
-    .asset-action-panel {
-      order: 1;
-      width: 100%;
-    }
-    .version-section {
-      order: 2;
-      width: 100%;
-    }
-    .file-section {
-      order: 3;
-      width: 100%;
-    }
-    .source-details {
-      order: 4;
-      width: 100%;
-    }
-    .variant-option {
-      grid-template-columns: 38px minmax(0, 1fr);
-      min-height: 68px;
-      gap: 7px;
-      padding: 8px;
-    }
-    .variant-thumb {
-      width: 38px;
-      height: 38px;
-    }
-    .variant-check {
-      position: absolute;
-      top: 4px;
-      right: 5px;
-      font-size: 12px;
-    }
-    .download-actions {
-      margin-top: 12px;
-    }
-    .download-button > a,
-    .download-actions :global(.detail-copy-trigger) {
-      padding-inline: 10px;
-    }
-    .detail-extras {
-      margin-top: 24px;
+      padding-inline: 9px;
     }
   }
-  @media (max-width: 360px) {
-    .preview-label {
-      display: none;
-    }
-    .preview-bottom {
-      justify-content: center;
-    }
-    .variant-list {
+  @media (max-width: 560px) {
+    .artwork-grid {
       grid-template-columns: minmax(0, 1fr);
+      gap: 16px;
+    }
+    .artwork-visual {
+      height: 180px;
+    }
+    .single-artwork .artwork-visual {
+      height: 220px;
+      padding: 24px;
+    }
+    .single-artwork .artwork-card {
+      display: flex;
+    }
+    .single-artwork .artwork-caption {
+      align-self: stretch;
+      padding: 16px 16px 12px;
+    }
+    .single-artwork .artwork-actions {
+      align-self: stretch;
+      padding: 0 16px 16px;
     }
   }
 </style>

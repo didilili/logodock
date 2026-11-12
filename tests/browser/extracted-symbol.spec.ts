@@ -1,6 +1,7 @@
 import { expect, test } from '@playwright/test';
 import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
+import { assetDownloadName } from '../../src/lib/catalog-presentation.mjs';
 
 const metadata = JSON.parse(
   await readFile(new URL('../../logo/nio/metadata.json', import.meta.url), 'utf8'),
@@ -15,9 +16,14 @@ for (const width of [1280, 390]) {
   }) => {
     await page.setViewportSize({ width, height: 1000 });
     await page.goto('/logo/nio/?asset=icon-black-extracted.svg');
-    const image = page.locator('.preview-stage img');
+    const dialog = page.locator('.preview-dialog[role="dialog"]');
+    await expect(dialog).toBeVisible();
+    const image = dialog.locator('#detail-image');
     await expect(image).toHaveAttribute('src', /icon-black-extracted\.svg$/);
-    await expect(page.locator('#detail-source-link')).toContainText('图形提取版');
+    await dialog.locator('#detail-source-link').focus();
+    await expect(page.getByRole('tooltip')).toHaveText('官网页面用图 · 图形提取版');
+    await dialog.locator('#download-link').focus();
+    await expect(page.getByRole('tooltip')).toBeHidden();
     const bounds = await image.evaluate(async (element) => {
       const image = element as HTMLImageElement;
       await image.decode();
@@ -54,25 +60,33 @@ for (const width of [1280, 390]) {
     ).toBe(symbol.sha256);
     const downloadEvent = page.waitForEvent('download');
     await page.locator('#download-link').click();
-    expect((await downloadEvent).suggestedFilename()).toBe('nio-icon-black-extracted.svg');
-    const sources = page.locator('.source-details');
-    await expect(sources).toHaveJSProperty('open', true);
+    expect((await downloadEvent).suggestedFilename()).toBe(assetDownloadName(metadata, symbol));
+    const sources = dialog.locator('.source-details');
+    await expect(sources).toHaveAttribute('data-state', 'open');
+    await sources.locator('[data-resource-trigger="source"]').click();
+    await expect(sources).toHaveAttribute('data-state', 'closed');
+    await sources.locator('[data-resource-trigger="source"]').click();
+    await expect(sources).toHaveAttribute('data-state', 'open');
     const original = sources.locator('[data-original-asset]');
-    await expect(original).toHaveText('黑色英文组合');
+    await expect(original).toHaveText('英文组合标 · 横向 · 黑色');
     await expect(original).toHaveAttribute('data-original-asset', symbol.provenance.originalAsset);
     await original.focus();
     await original.press('Enter');
     await expect(image).toHaveAttribute('src', /logo-black-english-official\.svg$/);
-    await expect(page.locator('#detail-source-link')).toHaveText('官网页面用图');
+    await dialog.locator('#detail-source-link').focus();
+    await expect(page.getByRole('tooltip')).toHaveText('官网页面用图');
+    await dialog.locator('#download-link').focus();
+    await expect(page.getByRole('tooltip')).toBeHidden();
     const focused = page.locator(':focus');
     await expect(focused).toBeVisible();
-    expect(
-      await focused.evaluate(
-        (element, file) =>
-          element.id === 'download-link' || element.getAttribute('data-select-asset') === file,
-        symbol.provenance.originalAsset,
-      ),
-    ).toBe(true);
+    expect(await focused.evaluate((element) => Boolean(element.closest('.preview-dialog')))).toBe(
+      true,
+    );
+    await page.keyboard.press('Escape');
+    await expect(dialog).toBeHidden();
+    await expect(
+      page.locator(`.artwork-visual[data-select-asset="${symbol.provenance.originalAsset}"]`),
+    ).toBeFocused();
     expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)).toBe(
       false,
     );
@@ -102,9 +116,11 @@ for (const width of [1280, 390]) {
     expect(extractedSymbols.length).toBeGreaterThanOrEqual(22);
     for (const asset of extractedSymbols) {
       await page.goto(`/logo/${asset.brandId}/?asset=${asset.file}`);
-      const image = page.locator('.preview-stage img');
+      const dialog = page.locator('.preview-dialog[role="dialog"]');
+      await expect(dialog).toBeVisible();
+      const image = dialog.locator('#detail-image');
       await expect(image).toHaveAttribute('src', `/logo/${asset.brandId}/${asset.file}`);
-      await expect(page.locator('#detail-source-link')).toContainText('图形提取版');
+      await expect(dialog.locator('.source-category')).toContainText('图形提取版');
       const response = await page.request.get(`/logo/${asset.brandId}/${asset.file}`);
       const bytes = await response.body();
       expect(createHash('sha256').update(bytes).digest('hex')).toBe(asset.sha256);
@@ -152,10 +168,14 @@ for (const width of [1280, 390]) {
       expect(Math.abs(geometry.top - (255 - geometry.bottom))).toBeLessThanOrEqual(1);
       const download = page.waitForEvent('download');
       await page.locator('#download-link').click();
-      expect((await download).suggestedFilename()).toBe(`${asset.brandId}-${asset.file}`);
+      expect((await download).suggestedFilename()).toBe(
+        assetDownloadName({ id: asset.brandId }, asset),
+      );
       const sources = page.locator('.source-details');
-      if (!(await sources.evaluate((element) => (element as HTMLDetailsElement).open)))
-        await sources.locator('summary').click();
+      const sourceTrigger = sources.locator('[data-resource-trigger="source"]');
+      if ((await sourceTrigger.getAttribute('aria-expanded')) !== 'true')
+        await sourceTrigger.click();
+      await expect(sourceTrigger).toHaveAttribute('aria-expanded', 'true');
       const original = sources.locator('[data-original-asset]');
       await expect(original).toHaveAttribute(
         'data-original-asset',

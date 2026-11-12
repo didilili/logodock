@@ -1,8 +1,50 @@
 import { expect, test, type Page } from '@playwright/test';
 import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
+import { assetDownloadName } from '../../src/lib/catalog-presentation.mjs';
 
 const catalog = JSON.parse(await readFile(new URL('../../index.json', import.meta.url), 'utf8'));
+
+const activeToast = '[data-sonner-toast]:not([data-removed="true"])';
+
+function fileDialog(page: Page) {
+  return page.locator('.preview-dialog[role="dialog"]');
+}
+
+async function closeFileDetails(page: Page) {
+  const dialog = fileDialog(page);
+  await dialog.getByRole('button', { name: '关闭文件详情', exact: true }).click();
+  await expect(dialog).toBeHidden();
+  await expect.poll(() => new URL(page.url()).searchParams.has('asset')).toBe(false);
+}
+
+async function openFileDetails(page: Page, file?: string) {
+  const dialog = fileDialog(page);
+  if (await dialog.isVisible()) {
+    if (!file || new URL(page.url()).searchParams.get('asset') === file) return;
+    await closeFileDetails(page);
+    await expect(dialog).toBeHidden();
+  }
+  await expect(page.locator('.asset-gallery .copy-menu-trigger').first()).toBeEnabled();
+  const allVersions = page.getByRole('radio', { name: '全部版本', exact: true });
+  if (
+    file &&
+    !(await page.locator(`.file-details-link[data-select-asset="${file}"]`).count()) &&
+    (await allVersions.isVisible())
+  )
+    await allVersions.click();
+  for (const selector of ['.artwork-more', '.artwork-alternatives']) {
+    const disclosure = page.locator(selector);
+    if ((await disclosure.count()) && (await disclosure.getAttribute('data-state')) === 'closed')
+      await disclosure.locator(':scope > button').click();
+  }
+  const trigger = file
+    ? page.locator(`.file-details-link[data-select-asset="${file}"]`)
+    : page.locator('.file-details-link').first();
+  await trigger.click();
+  await expect(dialog).toBeVisible();
+  await expect(dialog.locator('#detail-copy-menu')).toBeEnabled();
+}
 
 const removedSources = [
   ['trip-com', 'wordmark-color.svg'],
@@ -35,26 +77,37 @@ function canonicalUrl(value: string) {
   return url.href;
 }
 
+function downloadName(id: string, file: string) {
+  const brand = catalog.brands.find((item: { id: string }) => item.id === id);
+  const asset = brand.assets.find((item: { file: string }) => item.file === file);
+  return assetDownloadName(brand, asset);
+}
+
 async function chooseFilter(page: Page, id: string, label: string) {
   if (id === 'format-filter') {
     await page
-      .getByRole('group', { name: '文件格式', exact: true })
-      .getByRole('button', { name: label, exact: true })
+      .getByRole('radiogroup', { name: '文件格式', exact: true })
+      .getByRole('radio', { name: label, exact: true })
       .click();
     await expect(page.locator('#extra-filter-panel')).toBeHidden();
     await expect(page.locator('#more-filters-trigger')).toHaveAttribute('aria-expanded', 'false');
     return;
   }
-  const moreFilters = page.locator('#more-filters-trigger');
-  if ((await moreFilters.getAttribute('aria-expanded')) !== 'true') {
-    await moreFilters.click();
-    await expect(page.locator('#shape-filter')).toBeFocused();
-  }
-  await expect(page.getByRole('dialog', { name: '更多筛选', exact: true })).toBeVisible();
   const trigger = page.locator(`#${id}`);
+  if (!(await trigger.isVisible())) {
+    const moreFilters = page.locator('#more-filters-trigger');
+    if ((await moreFilters.getAttribute('aria-expanded')) !== 'true') {
+      await moreFilters.click();
+      await expect(page.locator('#type-filter')).toBeFocused();
+    }
+    await expect(page.getByRole('dialog', { name: '筛选', exact: true })).toBeVisible();
+  }
   await expect(trigger).toHaveAttribute('role', 'combobox');
   await trigger.click();
   await page.getByRole('option', { name: label, exact: true }).click();
+  await expect(page.getByRole('listbox')).toBeHidden();
+  await page.keyboard.press('Escape');
+  await expect(page.locator('#extra-filter-panel')).toBeHidden();
 }
 
 type CopyKind = 'current' | 'svg' | 'image' | 'share' | 'html' | 'markdown';
@@ -99,26 +152,28 @@ async function expectLastCopy(page: Page, value: string) {
 }
 
 for (const width of [1280, 390]) {
-  test(`directory covers keep summaries, actions and filtering aligned at ${width}px`, async ({
+  test(`directory covers keep brand links, actions and filtering aligned at ${width}px`, async ({
     page,
   }) => {
     await page.setViewportSize({ width, height: 1000 });
     await recordTextCopies(page);
     await page.goto('/');
     await expect(page.locator('#theme-toggle')).toBeEnabled();
-    for (const [id, file, count] of [
-      ['dongchedi', 'logo-chinese-official.svg', 3],
-      ['bytedance', 'logo-bilingual-color-official.svg', 7],
-      ['nio', 'logo-black-english-official.svg', 5],
+    for (const [id, file] of [
+      ['dongchedi', 'logo-chinese-official.svg'],
+      ['bytedance', 'logo-bilingual-color-official.svg'],
+      ['nio', 'logo-black-english-official.svg'],
     ]) {
       const card = page.locator(`.brand-card[data-brand="${id}"]`);
       await expect(card.locator('.brand-art img')).toHaveAttribute('src', `/logo/${id}/${file}`);
       await expect(card.locator('.card-download')).toHaveAttribute('href', `/logo/${id}/${file}`);
-      await expect(card.locator('.card-materials')).toContainText(`${count} 份素材`);
-      await expect(card.locator('.card-materials')).toHaveAttribute(
-        'href',
-        (await card.locator('[data-brand-link]').getAttribute('href'))!,
-      );
+      await expect(card.locator('.brand-link')).toHaveCount(1);
+      await expect(card.locator('.brand-link .brand-identity h2')).toBeVisible();
+      await expect(
+        card.locator(
+          '.card-materials, .card-asset-label, .card-asset-attributes, .brand-type, .card-parent',
+        ),
+      ).toHaveCount(0);
       const detail = new URL(
         (await card.locator('[data-brand-link]').getAttribute('href'))!,
         page.url(),
@@ -133,8 +188,11 @@ for (const width of [1280, 390]) {
     );
     const download = page.waitForEvent('download');
     await card.locator('.card-download').click();
-    expect((await download).suggestedFilename()).toBe('dongchedi-logo-chinese-official.svg');
-    await card.locator('.card-materials').click();
+    expect((await download).suggestedFilename()).toBe(
+      downloadName('dongchedi', 'logo-chinese-official.svg'),
+    );
+    await card.locator('.brand-link').click();
+    await openFileDetails(page, 'logo-chinese-official.svg');
     await expect(page.locator('#detail-image')).toHaveAttribute(
       'src',
       '/logo/dongchedi/logo-chinese-official.svg',
@@ -144,13 +202,11 @@ for (const width of [1280, 390]) {
       'src',
       '/logo/dongchedi/icon-appstore.jpg',
     );
-    await expect(card.locator('.card-materials')).toContainText('1 份素材');
     await page.goto('/?q=懂车帝%20logo-chinese-official.svg');
     await expect(card.locator('.brand-art img')).toHaveAttribute(
       'src',
       '/logo/dongchedi/logo-chinese-official.svg',
     );
-    await expect(card.locator('.card-materials')).toContainText('1 份素材');
     expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)).toBe(
       false,
     );
@@ -163,7 +219,6 @@ test('card previews keep Codeberg color variants at a consistent icon size', asy
   for (const file of ['icon-blue.svg', 'icon-white.svg']) {
     await page.goto(`/?q=${encodeURIComponent(`Codeberg ${file}`)}`);
     await expect(page.locator('#theme-toggle')).toBeEnabled();
-    await expect(card.locator('.card-materials')).toContainText('1 份素材');
     const image = card.locator('.brand-art img');
     await expect(image).toHaveAttribute('src', `/logo/codeberg/${file}`);
     await image.evaluate((element: HTMLImageElement) => element.decode());
@@ -202,16 +257,14 @@ test('small raster detail previews stay within the available pixels at each disp
       expect(pixels.naturalWidth).toBe(92);
       expect(pixels.width * pixels.density).toBeLessThanOrEqual(pixels.naturalWidth + 1);
       expect(pixels.height * pixels.density).toBeLessThanOrEqual(pixels.naturalHeight + 1);
-      await page
-        .locator(
-          '.version-section > .variant-list [data-select-asset="wordmark-blue-official.png"]',
-        )
-        .click();
+      await openFileDetails(page, 'wordmark-blue-official.png');
       await expect(image).toHaveAttribute('src', /wordmark-blue-official\.png$/);
       await expect
         .poll(() => image.evaluate((element) => element.getBoundingClientRect().width))
         .toBeGreaterThan(200);
       await page.goBack();
+      await expect(fileDialog(page)).toBeHidden();
+      await openFileDetails(page, 'wordmark-blue-header-official.png');
       await expect(image).toHaveAttribute('src', /wordmark-blue-header-official\.png$/);
       await expect
         .poll(() =>
@@ -229,32 +282,37 @@ test('primary artwork choices keep source alternatives out of the main list whil
 }) => {
   await page.goto('/logo/zte/');
   await expect(page.locator('#theme-toggle')).toBeEnabled();
-  const primary = page.locator('.version-section > .variant-list [data-select-artwork]');
-  await expect(primary).toHaveCount(2);
-  await expect(page.locator('#download-link')).toHaveAttribute(
+  await expect(page.locator('.artwork-grid[aria-label="标识版本"] .artwork-card')).toHaveCount(2);
+  const primary = page.locator('.artwork-card').filter({
+    has: page.locator('.file-details-link[data-select-asset="wordmark-blue-official.png"]'),
+  });
+  await expect(primary.locator('a[download]')).toHaveAttribute(
     'href',
     /wordmark-blue-official\.png$/,
   );
-  const alternatives = page.locator('details.artwork-alternatives');
-  await expect(alternatives).toHaveJSProperty('open', false);
-  await alternatives.locator('summary').click();
-  await expect(alternatives.locator('[data-select-artwork]')).toHaveCount(1);
-  await alternatives.locator('[data-select-asset="wordmark-blue-header-official.png"]').click();
-  await expect(alternatives).toHaveJSProperty('open', true);
-  await expect(alternatives.locator('[aria-current="true"]')).toHaveAttribute(
-    'data-select-asset',
-    'wordmark-blue-header-official.png',
+  const alternatives = page.locator('.artwork-alternatives');
+  await expect(alternatives).toHaveAttribute('data-state', 'closed');
+  await alternatives.locator('.artwork-alternatives-trigger').click();
+  await expect(alternatives.locator('.artwork-card')).toHaveCount(1);
+  await alternatives
+    .locator('.file-details-link[data-select-asset="wordmark-blue-header-official.png"]')
+    .click();
+  const dialog = fileDialog(page);
+  await expect(dialog.locator('#detail-image')).toHaveAttribute(
+    'src',
+    /wordmark-blue-header-official\.png$/,
   );
-  await expect(page.locator('.asset-action-panel')).toContainText('92 × 44');
-  await expect(page.locator('.asset-action-panel')).toContainText('#008ED3');
-  await expect(page.locator('.asset-action-panel')).toContainText('低分辨率原图');
+  await expect(dialog).toContainText('92 × 44');
+  await expect(dialog).toContainText('#008ED3');
+  await expect(dialog).toContainText('低分辨率原图');
   await page.reload();
-  await expect(page.locator('#theme-toggle')).toBeEnabled();
-  await expect(alternatives).toHaveJSProperty('open', true);
-  await expect(alternatives.locator('[aria-current="true"]')).toHaveAttribute(
-    'data-select-asset',
-    'wordmark-blue-header-official.png',
+  await expect(dialog.locator('#detail-image')).toHaveAttribute(
+    'src',
+    /wordmark-blue-header-official\.png$/,
   );
+  await closeFileDetails(page);
+  await expect(alternatives).toHaveAttribute('data-state', 'open');
+  await expect(alternatives.locator('.file-details-link')).toBeFocused();
 });
 
 test('removed source files leave selection, search and format filters and their former URLs return 404', async ({
@@ -300,11 +358,11 @@ test('removed file selections fall back to the brand default without a replaceme
     });
     if (legacy) query.set('brand', 'minimax');
     await page.goto(`${legacy ? '/' : '/logo/minimax/'}?${query}#preview`);
-    await expect(page.locator('#detail-copy-menu')).toBeEnabled();
-    await expect(page.locator('#download-link')).toHaveAttribute(
-      'href',
-      /\/logo\/minimax\/logo-gradient-horizontal\.png$/,
-    );
+    await expect(page.locator('.asset-gallery .copy-menu-trigger').first()).toBeEnabled();
+    await expect(fileDialog(page)).toHaveCount(0);
+    await expect(
+      page.locator('.artwork-card a[download][href="/logo/minimax/logo-gradient-horizontal.png"]'),
+    ).toHaveCount(1);
     const result = new URL(page.url());
     expect(result.pathname).toBe('/logo/minimax/');
     expect(result.searchParams.get('q')).toBe('minimax');
@@ -331,11 +389,16 @@ test('legacy brand links use the directory preference only when no file is reque
     const query = new URLSearchParams({ brand: 'minimax', q: 'minimax' });
     if (requested !== undefined) query.set('asset', requested);
     await page.goto(`/?${query}`);
-    await expect(page.locator('#detail-copy-menu')).toBeEnabled();
-    await expect(page.locator('#download-link')).toHaveAttribute(
-      'href',
-      new RegExp(`/logo/minimax/${expected.replaceAll('.', '\\.')}$`),
-    );
+    await expect(page.locator('.asset-gallery .copy-menu-trigger').first()).toBeEnabled();
+    await expect(
+      page.locator(`.artwork-card a[download][href="/logo/minimax/${expected}"]`),
+    ).toHaveCount(1);
+    if (expected === 'logo-gradient-horizontal.png') await expect(fileDialog(page)).toHaveCount(0);
+    else
+      await expect(fileDialog(page).locator('#download-link')).toHaveAttribute(
+        'href',
+        `/logo/minimax/${expected}`,
+      );
     const result = new URL(page.url());
     expect(result.pathname).toBe('/logo/minimax/');
     expect(result.searchParams.get('asset')).toBe(
@@ -362,11 +425,19 @@ test('an explicit alternative search keeps the standard-color source and disclos
     /wordmark-blue-header-official\.png$/,
   );
   await card.locator('.brand-link').click();
+  await openFileDetails(page, 'wordmark-blue-header-official.png');
   await expect(page.locator('#detail-image')).toHaveAttribute(
     'src',
     /wordmark-blue-header-official\.png$/,
   );
-  await expect(page.locator('details.artwork-alternatives')).toHaveJSProperty('open', true);
+  await expect(fileDialog(page).locator('#detail-fileinfo')).toContainText('备选文件');
+  await closeFileDetails(page);
+  await expect(page.locator('.directory-context')).toBeVisible();
+  await openFileDetails(page, 'wordmark-blue-header-official.png');
+  await expect(page.locator('#download-link')).toHaveAttribute(
+    'href',
+    /wordmark-blue-header-official\.png$/,
+  );
 });
 
 test('industry navigation expands without selection, deduplicates parents and searches aliases', async ({
@@ -429,8 +500,12 @@ test('industry topics intersect formats and survive detail navigation and reload
   await expect(card.locator('.card-download')).toHaveAttribute('href', /\.svg$/);
   const directory = page.url();
   await card.locator('.brand-link').click();
-  await expect(page.locator('#detail-copy-menu')).toBeEnabled();
+  await expect(page.locator('.asset-gallery .copy-menu-trigger').first()).toBeEnabled();
   expect(new URL(page.url()).searchParams.get('topic')).toBe('ai');
+  if (await fileDialog(page).isVisible()) {
+    await closeFileDetails(page);
+    await expect(fileDialog(page)).toBeHidden();
+  }
   await page.locator('#back-directory').click();
   await expect(page).toHaveURL((url) => canonicalUrl(url.href) === canonicalUrl(directory));
   await page.reload();
@@ -452,11 +527,11 @@ test('search and file filters survive detail navigation, browser back and a relo
   await page.locator('.category-sidebar [data-expand="technology"]').click();
   await page.locator('.category-sidebar [data-category="developer-tools"]').click();
   await page.getByRole('searchbox', { name: '搜索 Logo' }).fill('Git');
-  await chooseFilter(page, 'shape-filter', '图形');
+  await chooseFilter(page, 'shape-filter', '图形标');
   await chooseFilter(page, 'format-filter', 'SVG');
   await chooseFilter(page, 'type-filter', '产品');
   await expect(page.locator('#brand-grid .brand-card')).toHaveCount(1);
-  await expect(page.locator('#result-count')).toContainText('1 个结果');
+  await expect(page.locator('#result-count')).toContainText('1 个品牌');
   const directory = page.url();
   expect(new URL(directory).searchParams.get('q')).toBe('Git');
   expect(new URL(directory).searchParams.get('shape')).toBe('icon');
@@ -490,6 +565,10 @@ test('search and file filters survive detail navigation, browser back and a relo
   );
   await expect(page.locator('#brand-grid .brand-card')).toHaveCount(1);
   await page.locator('[data-brand-link="git"]').click();
+  if (await fileDialog(page).isVisible()) {
+    await closeFileDetails(page);
+    await expect(fileDialog(page)).toBeHidden();
+  }
   await page.locator('#back-directory').click();
   await expect(page).toHaveURL((url) => canonicalUrl(url.href) === canonicalUrl(directory));
   await expect(page.locator('#brand-grid .brand-card')).toHaveCount(1);
@@ -503,16 +582,20 @@ test('legacy brand links retain valid file selections and directory filters', as
   ]) {
     await page.goto(`/?brand=alibaba&asset=${requested}&q=alibaba&category=internet&format=SVG`);
     await expect(page).toHaveURL(/\/logo\/alibaba\//);
-    await expect(page.locator('#detail-copy-menu')).toBeEnabled();
+    await expect(page.locator('.asset-gallery .copy-menu-trigger').first()).toBeEnabled();
+    if (requested === 'missing.svg') await expect(fileDialog(page)).toHaveCount(0);
+    else await expect(fileDialog(page).locator('#detail-copy-menu')).toBeEnabled();
     const url = new URL(page.url());
     expect(url.searchParams.has('brand')).toBe(false);
     expect(url.searchParams.get('q')).toBe('alibaba');
     expect(url.searchParams.get('category')).toBe('internet');
     expect(url.searchParams.get('format')).toBe('SVG');
-    await expect(page.locator('#download-link')).toHaveAttribute(
-      'href',
-      new RegExp(`/logo/alibaba/${expected.replaceAll('.', '\\.')}$`),
-    );
+    if (requested !== 'missing.svg')
+      await expect(fileDialog(page).locator('#download-link')).toHaveAttribute(
+        'href',
+        `/logo/alibaba/${expected}`,
+      );
+    else await expect(page.locator('.asset-gallery')).toBeVisible();
     const back = new URL(
       await page.locator('#back-directory').evaluate((element: HTMLAnchorElement) => element.href),
     );
@@ -541,7 +624,7 @@ test('deep-linked variants and denied clipboard access retain the selected origi
     'href',
     /\/logo\/git\/logo-white\.svg$/,
   );
-  await page.locator('[data-select-asset="logo-color.svg"]').click();
+  await openFileDetails(page, 'logo-color.svg');
   await expect(page).toHaveURL(/asset=logo-color\.svg/);
   await expect(page.locator('#detail-image')).toHaveAttribute(
     'src',
@@ -568,14 +651,16 @@ test('deep-linked variants and denied clipboard access retain the selected origi
   await page.locator('#dismiss-feedback').click();
   await expect(page.locator('#detail-copy-menu')).toBeFocused();
   await page.goBack();
+  await expect(fileDialog(page)).toBeHidden();
+  await page.goForward();
   await expect(page.locator('#detail-image')).toHaveAttribute(
     'src',
-    /\/logo\/git\/logo-white\.svg$/,
+    /\/logo\/git\/logo-color\.svg$/,
   );
   await page.reload();
   await expect(page.locator('#detail-image')).toHaveAttribute(
     'src',
-    /\/logo\/git\/logo-white\.svg$/,
+    /\/logo\/git\/logo-color\.svg$/,
   );
 });
 
@@ -590,7 +675,7 @@ test('completing a pending copy after switching artwork cannot show stale succes
       value: { writeText: () => new Promise<void>((resolve) => pending.push(resolve)) },
     });
   });
-  await page.goto('/logo/alibaba/');
+  await page.goto('/logo/alibaba/?asset=logo-chinese-horizontal-official.png');
   await expect(page.locator('#theme-toggle')).toBeEnabled();
   await chooseCopy(page, 'current');
   await expect
@@ -600,7 +685,7 @@ test('completing a pending copy after switching artwork cannot show stale succes
       ),
     )
     .toBe(1);
-  await page.locator('[data-select-asset="wordmark-orange-chinese.svg"]').click();
+  await openFileDetails(page, 'wordmark-orange-chinese.svg');
   await expect(page.locator('#detail-image')).toHaveAttribute(
     'src',
     /\/logo\/alibaba\/wordmark-orange-chinese\.svg$/,
@@ -614,10 +699,10 @@ test('completing a pending copy after switching artwork cannot show stale succes
     );
   });
   await expect(page.locator('#copy-feedback')).toBeHidden();
-  await expect(page.locator('#action-status')).toHaveText('');
+  await expect(page.locator(activeToast)).toHaveCount(0);
 });
 
-test('reselecting the current variant resets a pending export and discards its late result', async ({
+test('closing and reopening the current file discards a pending export result', async ({
   page,
 }) => {
   let releaseSource!: () => void;
@@ -634,7 +719,7 @@ test('reselecting the current variant resets a pending export and discards its l
     await route.continue();
   });
   try {
-    await page.goto('/logo/git/');
+    await page.goto('/logo/git/?asset=icon-orange.svg');
     await expect(page.locator('#theme-toggle')).toBeEnabled();
     await choosePngDownload(page);
     await expect.poll(() => sourceRequested).toBe(true);
@@ -654,7 +739,8 @@ test('reselecting the current variant resets a pending export and discards its l
         return { background: style.backgroundColor, border: style.borderColor };
       }),
     ).toEqual(disabledPaint);
-    await page.locator('[data-select-asset="icon-orange.svg"]').click();
+    await closeFileDetails(page);
+    await openFileDetails(page, 'icon-orange.svg');
     await expect(page.locator('#download-options')).toBeEnabled();
     const sourceResponse = page.waitForResponse(
       (response) =>
@@ -740,8 +826,9 @@ for (const scenario of [
       await route.continue();
     });
     try {
-      await page.goto('/logo/git/');
+      await page.goto('/logo/git/?asset=icon-orange.svg');
       await expect(page.locator('#theme-toggle')).toBeEnabled();
+      if (scenario.kind === 'html') await page.locator('[data-resource-trigger="embed"]').click();
       const copiedValue =
         scenario.kind === 'share'
           ? page.url()
@@ -754,7 +841,9 @@ for (const scenario of [
       await expect.poll(() => sourceRequested).toBe(true);
       await expect(page.locator('#download-options')).toBeDisabled();
       await chooseCopy(page, scenario.kind);
-      await expect(page.locator('#action-status')).toHaveText(scenario.message);
+      await expect(page.locator(scenario.denied ? '#action-status' : activeToast)).toHaveText(
+        scenario.message,
+      );
       if (scenario.denied) await expect(page.locator('#manual-address')).toHaveValue(copiedValue);
       else await expectLastCopy(page, copiedValue);
 
@@ -766,7 +855,9 @@ for (const scenario of [
         const downloadPromise = page.waitForEvent('download', { timeout: 3_000 });
         releaseSource();
         const download = await downloadPromise;
-        expect(download.suggestedFilename()).toBe('git-icon-orange-export-2048.png');
+        expect(download.suggestedFilename()).toBe(
+          downloadName('git', 'icon-orange.svg').replace(/\.svg$/i, '-export-2048.png'),
+        );
         const path = testInfo.outputPath('export-after-copy.png');
         await download.saveAs(path);
         const bytes = await readFile(path);
@@ -781,7 +872,9 @@ for (const scenario of [
         ).toEqual([2048, 2048]);
         await expect(page.locator('#download-options')).toBeEnabled();
       }
-      await expect(page.locator('#action-status')).toHaveText(scenario.message);
+      await expect(page.locator(scenario.denied ? '#action-status' : activeToast)).toHaveText(
+        scenario.message,
+      );
       if (scenario.denied) {
         const manual = page.locator('#manual-address');
         await expect(manual).toBeVisible();
@@ -810,7 +903,9 @@ test('the SVG-only download menu generates a decodable PNG at the original aspec
   const downloadPromise = page.waitForEvent('download');
   await choosePngDownload(page);
   const download = await downloadPromise;
-  expect(download.suggestedFilename()).toBe('git-logo-color-export-2048.png');
+  expect(download.suggestedFilename()).toBe(
+    downloadName('git', 'logo-color.svg').replace(/\.svg$/i, '-export-2048.png'),
+  );
   const path = testInfo.outputPath('git-export-2048.png');
   await download.saveAs(path);
   const bytes = await readFile(path);
@@ -846,7 +941,7 @@ test('the SVG-only download menu generates a decodable PNG at the original aspec
   expect(image.transparent).toBeGreaterThan(image.width * image.height * 0.1);
   expect(image.painted).toBeGreaterThan(image.width * image.height * 0.05);
   expect(image.cornerAlpha).toBe(0);
-  await expect(page.locator('#action-status')).toContainText(
+  await expect(page.locator(activeToast)).toContainText(
     `已下载 ${image.width} × ${image.height} px PNG（由 SVG 生成 · 长边 2048px）`,
   );
 });
@@ -862,26 +957,33 @@ test('format buttons and extra filters work by keyboard and theme survives narro
   await page.keyboard.press('/');
   await expect(page.locator('#search')).toBeFocused();
   const format = page
-    .getByRole('group', { name: '文件格式', exact: true })
-    .getByRole('button', { name: 'SVG', exact: true });
+    .getByRole('radiogroup', { name: '文件格式', exact: true })
+    .getByRole('radio', { name: 'SVG', exact: true });
   await format.focus();
   await format.press('Enter');
-  await expect(format).toHaveAttribute('aria-pressed', 'true');
+  await expect(format).toHaveAttribute('aria-checked', 'true');
   expect(new URL(page.url()).searchParams.get('format')).toBe('SVG');
   await page.locator('#more-filters-trigger').focus();
   await page.keyboard.press('Enter');
-  await expect(page.getByRole('dialog', { name: '更多筛选', exact: true })).toBeVisible();
-  await expect(page.locator('#shape-filter')).toBeFocused();
+  await expect(page.getByRole('dialog', { name: '筛选', exact: true })).toBeVisible();
   const type = page.locator('#type-filter');
-  await type.focus();
-  await type.press('ArrowDown');
-  await expect(page.getByRole('listbox')).toBeVisible();
-  await page.keyboard.press('End');
-  await page.keyboard.press('Enter');
-  await expect(page.getByRole('listbox')).toBeHidden();
   await expect(type).toBeFocused();
-  await expect(page.locator('#extra-filter-panel')).toBeVisible();
+  await type.press('Enter');
+  await expect(page.getByRole('option', { name: '全部类型', exact: true })).toHaveAttribute(
+    'data-highlighted',
+    '',
+  );
+  await page.keyboard.press('ArrowDown');
+  await page.keyboard.press('ArrowDown');
+  await expect(page.getByRole('option', { name: '产品', exact: true })).toHaveAttribute(
+    'data-highlighted',
+    '',
+  );
+  await page.keyboard.press('Enter');
+  await expect(type).toHaveText('产品');
   expect(new URL(page.url()).searchParams.get('type')).toBe('product');
+  await page.keyboard.press('Escape');
+  await expect(page.locator('#more-filters-trigger')).toBeFocused();
   await page.getByRole('button', { name: '切换到深色主题' }).click();
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
   await page.locator('#search').fill('Git');
@@ -894,7 +996,7 @@ test('format buttons and extra filters work by keyboard and theme survives narro
   );
 });
 
-test('card material summaries open details while preview, download and copied address share the cover', async ({
+test('card brand links open details while preview, download and copied address share the cover', async ({
   page,
 }) => {
   await recordTextCopies(page);
@@ -906,23 +1008,22 @@ test('card material summaries open details while preview, download and copied ad
   const address = new URL(`/logo/alibaba/${file}`, page.url()).href;
   await expect(card.locator('.brand-art img')).toHaveAttribute('src', `/logo/alibaba/${file}`);
   await expect(card.locator('.card-download')).toHaveAttribute('href', `/logo/alibaba/${file}`);
-  await expect(card.locator('.card-download')).toHaveAttribute('download', `alibaba-${file}`);
-  await expect(card.locator('.card-materials')).toContainText('6 份素材');
+  await expect(card.locator('.card-download')).toHaveAttribute(
+    'download',
+    downloadName('alibaba', file),
+  );
   const detailHref = (await card.locator('[data-brand-link]').getAttribute('href'))!;
-  await expect(card.locator('.card-materials')).toHaveAttribute('href', detailHref);
   const detail = new URL(detailHref, page.url());
   expect(detail.searchParams.has('asset')).toBe(false);
   expect(detail.searchParams.get('q')).toBe('阿里巴巴');
   await chooseCopy(page, 'current', card.locator('[data-copy-brand="alibaba"]'));
   await expectLastCopy(page, address);
   expect(page.url()).toBe(directory);
-  await card.locator('.card-materials').focus();
+  await card.locator('.brand-link').focus();
   await page.keyboard.press('Enter');
+  await openFileDetails(page, file);
   await expect(page.locator('#detail-image')).toHaveAttribute('src', `/logo/alibaba/${file}`);
-  const chineseWordmark = page.locator(
-    '.version-section > .variant-list [data-select-asset="wordmark-orange-chinese.svg"]',
-  );
-  await chineseWordmark.click();
+  await openFileDetails(page, 'wordmark-orange-chinese.svg');
   await expect(page.locator('#detail-image')).toHaveAttribute(
     'src',
     /\/wordmark-orange-chinese\.svg$/,
@@ -931,6 +1032,10 @@ test('card material summaries open details while preview, download and copied ad
     'href',
     /\/wordmark-orange-chinese\.svg$/,
   );
+  if (await fileDialog(page).isVisible()) {
+    await closeFileDetails(page);
+    await expect(fileDialog(page)).toBeHidden();
+  }
   await page.locator('#back-directory').click();
   await expect(page).toHaveURL(directory);
   await expect(page.locator('#search')).toHaveValue('阿里巴巴');
@@ -955,11 +1060,11 @@ test('reviewed horizontal covers share their selected file with details, downloa
     await expect(card.locator('.brand-art img')).toHaveAttribute('src', path);
     await expect(card.locator('.card-download')).toHaveAttribute('href', path);
     const detailHref = (await card.locator('[data-brand-link]').getAttribute('href'))!;
-    await expect(card.locator('.card-materials')).toHaveAttribute('href', detailHref);
-    expect(new URL(detailHref, page.url()).searchParams.get('asset')).toBe(file);
+    expect(new URL(detailHref, page.url()).searchParams.get('selected')).toBe(file);
     await chooseCopy(page, 'current', card.locator('[data-copy-brand]'));
     await expectLastCopy(page, new URL(path, page.url()).href);
-    await card.locator('.card-materials').click();
+    await card.locator('.brand-link').click();
+    await openFileDetails(page, file);
     await expect(page.locator('#detail-image')).toHaveAttribute('src', path);
   }
 });
@@ -967,6 +1072,7 @@ test('reviewed horizontal covers share their selected file with details, downloa
 test('changing a file filter discards a pending SVG copy from the previous cover', async ({
   page,
 }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
   await recordTextCopies(page);
   let releaseSource!: () => void;
   const sourceGate = new Promise<void>((resolve) => {
@@ -985,6 +1091,9 @@ test('changing a file filter discards a pending SVG copy from the previous cover
     const card = page.locator('.brand-card[data-brand="alibaba"]');
     await chooseCopy(page, 'svg', card.locator('[data-copy-brand="alibaba"]'));
     await expect.poll(() => sourceRequested).toBe(true);
+    const copy = card.locator('.card-copy');
+    await expect(copy).toHaveAttribute('aria-busy', 'true');
+    expect(await copy.evaluate((element) => element.scrollWidth <= element.clientWidth)).toBe(true);
     await page.locator('#format-filter [data-format="PNG"]').click();
     await expect(card.locator('.brand-art img')).toHaveAttribute(
       'src',
@@ -1007,7 +1116,7 @@ test('changing a file filter discards a pending SVG copy from the previous cover
       await page.evaluate(() => (window as unknown as { __copiedTexts: string[] }).__copiedTexts),
     ).toEqual([]);
     await expect(page.locator('#copy-feedback')).toBeHidden();
-    await expect(page.locator('#action-status')).toHaveText('');
+    await expect(page.locator(activeToast)).toHaveCount(0);
   } finally {
     releaseSource();
   }
@@ -1050,7 +1159,6 @@ test('opening category drawer discards pending copy feedback', async ({ page }) 
       'src',
       '/logo/alibaba/wordmark-orange.svg',
     );
-    await expect(card.locator('.card-materials')).toContainText('1 份素材');
     await chooseCopy(page, 'svg', copyTrigger);
     await expect.poll(() => sourceRequested).toBe(true);
     await categoryTrigger.click();
@@ -1072,7 +1180,7 @@ test('opening category drawer discards pending copy feedback', async ({ page }) 
         ),
     );
     await expect(page.locator('#copy-feedback')).toBeHidden();
-    await expect(page.locator('#action-status')).toHaveText('');
+    await expect(page.locator(activeToast)).toHaveCount(0);
     await expect(drawer).toBeVisible();
     await expect
       .poll(() => drawer.evaluate((element) => element.contains(document.activeElement)))
@@ -1089,10 +1197,15 @@ test('opening category drawer discards pending copy feedback', async ({ page }) 
     await expect(page.locator('#manual-address')).toHaveValue(
       new URL('/logo/alibaba/wordmark-orange.svg', page.url()).href,
     );
+    const recovery = page.getByRole('dialog', { name: '复制未完成', exact: true });
+    await expect(recovery).toBeVisible();
+    await page.keyboard.press('Escape');
+    await expect(recovery).toBeHidden();
+    await expect(copyTrigger).toBeFocused();
     await categoryTrigger.click();
     await expect(drawer).toBeVisible();
     await expect(page.locator('#copy-feedback')).toBeHidden();
-    await expect(page.locator('#action-status')).toHaveText('');
+    await expect(page.locator(activeToast)).toHaveCount(0);
     await expect
       .poll(() => drawer.evaluate((element) => element.contains(document.activeElement)))
       .toBe(true);
@@ -1105,13 +1218,11 @@ test('opening category drawer discards pending copy feedback', async ({ page }) 
   }
 });
 
-test('PNG filtering limits covers, material counts and downloads to available PNG originals', async ({
-  page,
-}) => {
+test('PNG filtering limits covers and downloads to available PNG originals', async ({ page }) => {
   await page.goto('/?format=PNG');
   await expect(page.locator('#theme-toggle')).toBeEnabled();
   await expect(page.locator('#format-filter [data-format="PNG"]')).toHaveAttribute(
-    'aria-pressed',
+    'aria-checked',
     'true',
   );
   const images = page.locator('#brand-grid .brand-card img');
@@ -1122,16 +1233,15 @@ test('PNG filtering limits covers, material counts and downloads to available PN
   expect(wrongFormats).toEqual([]);
   const nio = page.locator('.brand-card[data-brand="nio"]');
   await expect(nio.locator('.brand-art img')).toHaveAttribute('src', /\/icon-turquoise-app\.png$/);
-  await expect(nio.locator('.card-materials')).toContainText('1 份素材');
   await expect(nio.locator('.card-download')).toHaveAttribute('href', /\/icon-turquoise-app\.png$/);
   const alibaba = page.locator('.brand-card[data-brand="alibaba"]');
   await expect(alibaba.locator('.brand-art img')).toHaveAttribute(
     'src',
     /\/logo-chinese-horizontal-official\.png$/,
   );
-  await expect(alibaba.locator('.card-materials')).toContainText('4 份素材');
   await expect(page.locator('.brand-card[data-brand="xiaomi"]')).toHaveCount(0);
   await nio.locator('[data-brand-link]').click();
+  await openFileDetails(page, 'icon-turquoise-app.png');
   await expect(page.locator('#detail-image')).toHaveAttribute('src', /\/icon-turquoise-app\.png$/);
   expect(new URL(page.url()).searchParams.get('format')).toBe('PNG');
 });
@@ -1162,10 +1272,7 @@ test('mobile category drawer and copy menu support keyboard use while original d
   await expect(drawer).toBeHidden();
   await expect(categoryTrigger).toBeFocused();
   await page.locator('[data-brand-link="alibaba"]').click();
-  await expect(page.locator('#detail-copy-menu')).toBeEnabled();
-  await page
-    .locator('.version-section > .variant-list [data-select-asset="wordmark-orange.svg"]')
-    .click();
+  await openFileDetails(page, 'wordmark-orange.svg');
   await expect(page.locator('#detail-image')).toHaveAttribute('src', /\/wordmark-orange\.svg$/);
   const download = page.locator('#download-link');
   await expect(download).toBeInViewport();
@@ -1193,6 +1300,10 @@ test('mobile category drawer and copy menu support keyboard use while original d
   await page.keyboard.press('Escape');
   await expect(menu).toBeHidden();
   await expect(copyTrigger).toBeFocused();
+  if (await fileDialog(page).isVisible()) {
+    await closeFileDetails(page);
+    await expect(fileDialog(page)).toBeHidden();
+  }
   await page.locator('#back-directory').click();
   expect(new URL(page.url()).searchParams.get('category')).toBe('internet-platforms');
   await expect(page.locator('.directory-title h1')).toHaveText('综合互联网');
@@ -1267,28 +1378,30 @@ test('without JavaScript the static home, source disclosure and original downloa
       'href',
       '/logo/dongchedi/',
     );
-    await page.locator('.brand-card[data-brand="alibaba"] .card-materials').click();
+    await page.locator('.brand-card[data-brand="alibaba"] .brand-link').click();
     await expect(page).toHaveURL(/\/logo\/alibaba\/$/);
     await expect(
-      page.getByRole('heading', { name: '阿里巴巴集团', exact: true, level: 1 }),
+      page.getByRole('heading', { name: '阿里巴巴', exact: true, level: 1 }),
     ).toBeVisible();
-    await expect(page.locator('.legal-names')).toHaveCount(0);
-    const sources = page
-      .locator('details')
-      .filter({ has: page.locator('summary').filter({ hasText: /^来源与使用说明/ }) });
+    const sources = page.locator('.noscript-sources');
     await expect(sources).toHaveJSProperty('open', true);
     await expect(
-      page.locator('a[href="https://www.alibabagroup.com/en-US/resource-logos"]').first(),
+      sources.locator('a[href="https://www.alibabagroup.com/en-US/resource-logos"]').first(),
     ).toBeVisible();
-    await expect(page.locator('#download-link')).toHaveAttribute(
+    const card = page.locator('.artwork-card').filter({
+      has: page.locator(
+        '.file-details-link[data-select-asset="logo-chinese-horizontal-official.png"]',
+      ),
+    });
+    const link = card.locator('a[download]');
+    await expect(link).toHaveAttribute(
       'href',
-      /\/logo\/alibaba\/logo-chinese-horizontal-official\.png$/,
+      '/logo/alibaba/logo-chinese-horizontal-official.png',
     );
     const downloadPromise = page.waitForEvent('download');
-    await page.locator('#download-link').click();
-    const download = await downloadPromise;
+    await link.click();
     const path = testInfo.outputPath('original.png');
-    await download.saveAs(path);
+    await (await downloadPromise).saveAs(path);
     const original = await readFile(
       new URL('../../logo/alibaba/logo-chinese-horizontal-official.png', import.meta.url),
     );
@@ -1297,11 +1410,10 @@ test('without JavaScript the static home, source disclosure and original downloa
         .update(await readFile(path))
         .digest('hex'),
     ).toBe(createHash('sha256').update(original).digest('hex'));
-    await expect(page.locator('[data-select-asset="wordmark-orange-chinese.svg"]')).toHaveAttribute(
-      'href',
-      /\/logo\/alibaba\/wordmark-orange-chinese\.svg$/,
-    );
-    await expect(page.locator('.variant-list [data-select-artwork]')).toHaveCount(6);
+    await expect(
+      page.locator('.file-details-link[data-select-asset="wordmark-orange-chinese.svg"]'),
+    ).toHaveAttribute('href', /\/logo\/alibaba\/wordmark-orange-chinese\.svg$/);
+    await expect(page.locator('.artwork-card')).toHaveCount(6);
     await expect(page.locator('.format-option')).toHaveCount(0);
     await expect(page.locator('a[href$="/wordmark-orange.png"]')).toHaveCount(0);
     await expect(page.locator('#download-options')).toHaveCount(0);
@@ -1313,27 +1425,34 @@ test('without JavaScript the static home, source disclosure and original downloa
         await expect(page.locator(`[data-select-asset="${file}"]`)).toHaveCount(0);
         await expect(page.locator(`a[href$="/${file}"]`)).toHaveCount(0);
       }
-      await expect(page.locator('#download-link')).toBeVisible();
+      await expect(page.locator('.asset-gallery a[download]').first()).toBeVisible();
     }
   } finally {
     await context.close();
   }
 });
 
-test('details show sources by default and preserve attribution, restrictions and embed copying', async ({
+test('details disclose sources on request and preserve attribution, restrictions and embed copying', async ({
   page,
 }) => {
   await recordTextCopies(page);
-  await page.goto('/logo/iqiyi/');
+  await page.goto('/logo/iqiyi/?asset=wordmark-green.svg');
   await expect(page.locator('#theme-toggle')).toBeEnabled();
-  await expect(page.getByRole('link', { name: /下载.*SVG/ })).toBeVisible();
+  await expect(fileDialog(page).locator('#download-link')).toBeVisible();
   await expect(page.getByText('品牌与主体信息', { exact: true })).toHaveCount(0);
   await expect(page.getByText(/No copyright attribution required/)).toHaveCount(0);
   await expect(page.getByText(/保存该文件页提供的 SVG 原始字节/)).toHaveCount(0);
-  const sources = page
-    .locator('details')
-    .filter({ has: page.locator('summary').filter({ hasText: /^来源与使用说明/ }) });
-  await expect(sources).toHaveJSProperty('open', true);
+  const sources = page.locator('.source-details');
+  await expect(sources.locator('[data-resource-trigger="source"]')).toHaveAttribute(
+    'aria-expanded',
+    'true',
+  );
+  await sources.locator('[data-resource-trigger="source"]').click();
+  await expect(sources.locator('[data-resource-trigger="source"]')).toHaveAttribute(
+    'aria-expanded',
+    'false',
+  );
+  await sources.locator('[data-resource-trigger="source"]').click();
   await expect(
     sources.getByRole('link', { name: 'Commons 公共领域判定', exact: true }),
   ).toHaveCount(1);
@@ -1342,8 +1461,11 @@ test('details show sources by default and preserve attribution, restrictions and
   ).toBeVisible();
 
   const embed = page.locator('.embed-details');
-  await expect(embed).toHaveJSProperty('open', false);
-  await embed.locator('summary').click();
+  await expect(embed.locator('[data-resource-trigger="embed"]')).toHaveAttribute(
+    'aria-expanded',
+    'false',
+  );
+  await embed.locator('[data-resource-trigger="embed"]').click();
   for (const id of ['html-example', 'markdown-example']) {
     const value = await page.locator(`#${id}`).inputValue();
     expect(value).toContain('/logo/iqiyi/wordmark-green.svg');
@@ -1357,18 +1479,19 @@ test('details show sources by default and preserve attribution, restrictions and
       .toBe(value);
   }
 
-  await page.goto('/logo/git/');
-  const gitSources = page
-    .locator('details')
-    .filter({ has: page.locator('summary').filter({ hasText: /^来源与使用说明/ }) });
-  await expect(gitSources.locator('summary')).toContainText('需署名');
-  await expect(gitSources).toHaveJSProperty('open', true);
+  await page.goto('/logo/git/?asset=icon-orange.svg');
+  const gitSources = page.locator('.source-details');
+  await expect(gitSources.locator('[data-resource-trigger="source"]')).toContainText('需署名');
+  await expect(gitSources.locator('[data-resource-trigger="source"]')).toHaveAttribute(
+    'aria-expanded',
+    'true',
+  );
   await expect(gitSources.getByText(/Git Logo by Jason Long/)).toBeVisible();
   await page.goto('/logo/gitlab/?asset=icon-legacy.png');
   await expect(
-    page.locator('.asset-warnings').getByText('仅限非商业用途', { exact: true }),
+    fileDialog(page).locator('.asset-warnings').getByText('仅限非商业用途', { exact: true }),
   ).toBeVisible();
-  await expect(page.getByText(/历史素材，不代表现行标识/)).toBeVisible();
+  await expect(fileDialog(page).getByText(/历史素材，不代表现行标识/)).toBeVisible();
 });
 
 test('SVG artwork offers original and generated downloads while links retain the selected source', async ({
@@ -1377,13 +1500,18 @@ test('SVG artwork offers original and generated downloads while links retain the
   await recordTextCopies(page);
   await page.goto('/logo/alibaba/?asset=wordmark-orange.svg&q=阿里巴巴&format=SVG');
   await expect(page.locator('#theme-toggle')).toBeEnabled();
-  const choices = page.locator('.variant-list [data-select-artwork]');
+  await closeFileDetails(page);
+  await page.getByRole('radio', { name: '全部版本', exact: true }).click();
+  const choices = page.locator('.artwork-card');
   await expect(choices).toHaveCount(6);
-  const english = page.locator('[data-select-artwork="file:wordmark-orange.svg"]');
+  const english = page.locator(
+    '.file-details-link[data-select-artwork="file:wordmark-orange.svg"]',
+  );
   await expect(english).toHaveCount(1);
-  await expect(page.locator('.variant-list img')).toHaveCount(6);
+  await expect(page.locator('.artwork-card img')).toHaveCount(6);
   const artworkId = await english.getAttribute('data-select-artwork');
-  await expect(english).toHaveAttribute('aria-current', 'true');
+  await english.click();
+  expect(new URL(page.url()).searchParams.get('asset')).toBe('wordmark-orange.svg');
   await expect(page.locator('.format-option')).toHaveCount(0);
   await expect(page.locator('#detail-image')).toHaveAttribute('src', /\/wordmark-orange\.svg$/);
   await expect(page.locator('#download-link')).toHaveAttribute('href', /\/wordmark-orange\.svg$/);
@@ -1402,7 +1530,7 @@ test('SVG artwork offers original and generated downloads while links retain the
   expect(new URL(share).searchParams.get('q')).toBe('阿里巴巴');
 
   const embed = page.locator('.embed-details');
-  await embed.locator('summary').click();
+  await embed.locator('[data-resource-trigger="embed"]').click();
   await expect(page.locator('#current-address')).toHaveValue(currentAddress);
   for (const id of ['html-example', 'markdown-example']) {
     const value = await page.locator(`#${id}`).inputValue();
@@ -1413,7 +1541,7 @@ test('SVG artwork offers original and generated downloads while links retain the
   const downloadPromise = page.waitForEvent('download');
   await page.locator('#download-link').click();
   const download = await downloadPromise;
-  expect(download.suggestedFilename()).toBe('alibaba-wordmark-orange.svg');
+  expect(download.suggestedFilename()).toBe(downloadName('alibaba', 'wordmark-orange.svg'));
   const path = testInfo.outputPath('alibaba-original.svg');
   await download.saveAs(path);
   const original = await readFile(
@@ -1429,7 +1557,9 @@ test('SVG artwork offers original and generated downloads while links retain the
   const generatedDownloadPromise = page.waitForEvent('download');
   await choosePngDownload(page);
   const generatedDownload = await generatedDownloadPromise;
-  expect(generatedDownload.suggestedFilename()).toBe('alibaba-wordmark-orange-export-2048.png');
+  expect(generatedDownload.suggestedFilename()).toBe(
+    downloadName('alibaba', 'wordmark-orange.svg').replace(/\.svg$/i, '-export-2048.png'),
+  );
   const generatedPath = testInfo.outputPath('alibaba-generated.png');
   await generatedDownload.saveAs(generatedPath);
   const generated = await readFile(generatedPath);
@@ -1440,10 +1570,9 @@ test('SVG artwork offers original and generated downloads while links retain the
   await expect(page.locator('#download-link')).toHaveAttribute('href', /\/wordmark-orange\.svg$/);
   await expect(page.locator('#detail-image')).toHaveAttribute('src', /\/wordmark-orange\.svg$/);
   await expect(page.locator('#current-address')).toHaveValue(currentAddress);
-  await expect(page.locator('.variant-list [aria-current="true"]')).toHaveAttribute(
-    'data-select-artwork',
-    artworkId!,
-  );
+  await expect(
+    page.locator(`.file-details-link[data-select-artwork="${artworkId}"]`),
+  ).toHaveAttribute('data-select-asset', 'wordmark-orange.svg');
   await chooseCopy(page, 'svg');
   await expect
     .poll(() =>
@@ -1454,7 +1583,7 @@ test('SVG artwork offers original and generated downloads while links retain the
   expect(new URL(page.url()).searchParams.get('format')).toBe('SVG');
   await chooseCopy(page, 'current');
   await expectLastCopy(page, currentAddress);
-  await page.locator('[data-select-asset="wordmark-orange-chinese.svg"]').click();
+  await openFileDetails(page, 'wordmark-orange-chinese.svg');
   await expect(page.locator('#detail-image')).toHaveAttribute(
     'src',
     /\/wordmark-orange-chinese\.svg$/,
@@ -1465,11 +1594,12 @@ test('SVG artwork offers original and generated downloads while links retain the
     /\/wordmark-orange-chinese\.svg$/,
   );
   await page.goBack();
+  await expect(fileDialog(page)).toBeHidden();
+  await openFileDetails(page, 'wordmark-orange.svg');
   await expect(page.locator('#detail-image')).toHaveAttribute('src', /\/wordmark-orange\.svg$/);
-  await expect(page.locator('.variant-list [aria-current="true"]')).toHaveAttribute(
-    'data-select-artwork',
-    artworkId!,
-  );
+  await expect(
+    page.locator(`.file-details-link[data-select-artwork="${artworkId}"]`),
+  ).toHaveAttribute('data-select-asset', 'wordmark-orange.svg');
 });
 
 test('PNG generation follows the selected PNG-only or SVG-only artwork', async ({ page }) => {
@@ -1488,7 +1618,7 @@ test('PNG generation follows the selected PNG-only or SVG-only artwork', async (
   await page.goto('/logo/nio/?asset=icon-turquoise-app.png');
   await expect(page.locator('#theme-toggle')).toBeEnabled();
   await expect(page.locator('#download-options')).toHaveCount(0);
-  await page.locator('[data-select-asset="logo-black-english-official.svg"]').click();
+  await openFileDetails(page, 'logo-black-english-official.svg');
   await expect(page.locator('#download-link')).toHaveAttribute(
     'href',
     /\/logo-black-english-official\.svg$/,
@@ -1498,7 +1628,7 @@ test('PNG generation follows the selected PNG-only or SVG-only artwork', async (
   await page.goto('/logo/alibaba/?asset=wordmark-orange.svg');
   await expect(page.locator('#theme-toggle')).toBeEnabled();
   await expect(page.locator('#download-options')).toBeEnabled();
-  await page.locator('[data-select-asset="wordmark-orange-chinese.svg"]').click();
+  await openFileDetails(page, 'wordmark-orange-chinese.svg');
   await expect(page.locator('#download-link')).toHaveAttribute(
     'href',
     /\/wordmark-orange-chinese\.svg$/,
@@ -1559,10 +1689,12 @@ for (const denied of [false, true]) {
     await expect(page.locator('#theme-toggle')).toBeEnabled();
     await expect(page.locator('.export-details, #copy-png-image')).toHaveCount(0);
     await chooseCopy(page, 'image');
-    await expect(page.locator('#action-status')).toHaveText(
+    await expect(page.locator(denied ? '#action-status' : activeToast)).toHaveText(
       denied ? '无法复制图片，请重试。' : '已复制原始 PNG 图片。',
     );
-    await expect(page.locator('#detail-copy-menu')).toBeFocused();
+    if (denied)
+      await expect(page.getByRole('button', { name: '重试复制', exact: true })).toBeFocused();
+    else await expect(page.locator('#detail-copy-menu')).toBeFocused();
     await expect(page.locator('#download-link')).toHaveAttribute(
       'href',
       /\/wordmark-dark-2018\.png$/,
@@ -1599,34 +1731,33 @@ test('artwork choices retain distinct designs and colors after redundant formats
     ['iflytek', 6],
     ['xiaomi', 2],
     ['zhipu', 5],
-    ['lenovo', 0],
+    ['lenovo', 1],
     ['meituan', 3],
     ['minimax', 4],
     ['yonyou', 3],
     ['zte', 2],
   ] as const) {
     await page.goto(`/logo/${id}/`);
+    await expect(page.locator('.asset-gallery .copy-menu-trigger').first()).toBeEnabled();
     await expect(
-      page.locator('.version-section > .variant-list [data-select-artwork]'),
+      page.locator(
+        '.artwork-grid[aria-label="标识版本"] .artwork-card, .artwork-grid[aria-label="更多标识版本"] .artwork-card',
+      ),
       `${id}: retain meaningful visual choices`,
     ).toHaveCount(count);
   }
   await page.goto('/logo/codeberg/?asset=icon-white.png');
-  await expect(page.locator('#theme-toggle')).toBeEnabled();
+  await expect(fileDialog(page)).toHaveCount(0);
+  await expect(page.locator('[data-select-asset="icon-white.png"]')).toHaveCount(0);
+  await openFileDetails(page, 'icon-blue.svg');
   await expect(page.locator('#download-link')).toHaveAttribute('href', /\/icon-blue\.svg$/);
   await expect(page.locator('#detail-canvas')).toHaveAttribute('data-background', 'light');
-  await expect(page.locator('[data-select-asset="icon-white.png"]')).toHaveCount(0);
-
   await page.goto('/logo/codeberg/?asset=icon-white.svg');
-  await expect(page.locator('#theme-toggle')).toBeEnabled();
   await expect(page.locator('#download-link')).toHaveAttribute('href', /\/icon-white\.svg$/);
   await expect(page.locator('#detail-canvas')).toHaveAttribute('data-background', 'dark');
   await page.reload();
   await expect(page.locator('#download-link')).toHaveAttribute('href', /\/icon-white\.svg$/);
-  await expect(page.locator('.variant-list [aria-current="true"]')).toHaveAttribute(
-    'data-select-asset',
-    'icon-white.svg',
-  );
+  expect(new URL(page.url()).searchParams.get('asset')).toBe('icon-white.svg');
   await expect(page.locator('#detail-canvas')).toHaveAttribute('data-background', 'dark');
 });
 
@@ -1635,39 +1766,29 @@ test('Tencent color choices retain their original files and sources without the 
 }) => {
   await recordTextCopies(page);
   await page.goto('/logo/tencent/');
-  await expect(page.locator('#theme-toggle')).toBeEnabled();
-  await expect(page.locator('.variant-list [data-select-artwork]')).toHaveCount(12);
-  await expect(page.locator('#download-link')).toHaveAttribute(
-    'href',
-    /\/wordmark-blue-official\.png$/,
-  );
-  await expect(page.locator('#detail-fileinfo')).toContainText('2953 × 889');
-  await expect(page.locator('.format-option')).toHaveCount(0);
-  const sources = page.locator('.source-details');
-  await expect(sources).toHaveJSProperty('open', true);
-  await expect(
-    sources.locator('a[href="https://www.tencent.com/zh-cn/newsroom/media-resources/"]'),
-  ).toBeVisible();
-
-  await expect(page.locator('details.file-options')).toHaveCount(0);
+  await expect(page.locator('.asset-gallery .copy-menu-trigger').first()).toBeEnabled();
+  await page.locator('.artwork-more-trigger').click();
+  await expect(page.locator('.artwork-card')).toHaveCount(12);
   await expect(page.locator('[data-select-asset="wordmark-blue.png"]')).toHaveCount(0);
   await expect(page.locator('a[href$="/wordmark-blue.png"]')).toHaveCount(0);
   const files = [
+    ['wordmark-blue-official.png', 'light', '01_Tencent_Standard-Logo.png'],
     ['wordmark-black-official.png', 'light', '01_Tencent_Logo_Black.png'],
     ['wordmark-white-official.png', 'dark', '01_Tencent_Logo_Reverse-type.png'],
-    ['wordmark-blue-official.png', 'light', '01_Tencent_Standard-Logo.png'],
   ] as const;
   for (const [file, background, sourceFile] of files) {
-    await page.locator(`.variant-list [data-select-asset="${file}"]`).click();
-    await expect(page.locator('.variant-list [aria-current="true"]')).toHaveAttribute(
-      'data-select-asset',
-      file,
+    await openFileDetails(page, file);
+    const dialog = fileDialog(page);
+    await expect(dialog.locator('#detail-image')).toHaveAttribute('src', `/logo/tencent/${file}`);
+    await expect(dialog.locator('#download-link')).toHaveAttribute('href', `/logo/tencent/${file}`);
+    await expect(dialog.locator('#detail-canvas')).toHaveAttribute('data-background', background);
+    await expect(dialog.locator('#detail-fileinfo')).toContainText('2953 × 889');
+    await expect(dialog.locator('.format-option, .file-options')).toHaveCount(0);
+    const sources = dialog.locator('.source-details');
+    await expect(sources.locator('[data-resource-trigger="source"]')).toHaveAttribute(
+      'aria-expanded',
+      'true',
     );
-    await expect(page.locator('#detail-image')).toHaveAttribute('src', `/logo/tencent/${file}`);
-    await expect(page.locator('#download-link')).toHaveAttribute('href', `/logo/tencent/${file}`);
-    await expect(page.locator('#detail-canvas')).toHaveAttribute('data-background', background);
-    await expect(page.locator('#detail-fileinfo')).toContainText('2953 × 889');
-    if ((await sources.getAttribute('open')) === null) await sources.locator('summary').click();
     await expect(
       sources.locator(`a[href="https://www.tencent.com/wp-content/uploads/2022/12/${sourceFile}"]`),
     ).toBeVisible();
@@ -1678,12 +1799,11 @@ test('Tencent color choices retain their original files and sources without the 
     await expectLastCopy(page, new URL(`/logo/tencent/${file}`, page.url()).href);
   }
   await page.goBack();
-  await expect(page.locator('#download-link')).toHaveAttribute(
-    'href',
-    /\/wordmark-white-official\.png$/,
-  );
+  await expect(fileDialog(page)).toBeHidden();
+  await expect(page.locator('.asset-gallery')).toBeVisible();
   await page.goto('/logo/tencent/?asset=wordmark-blue.png');
-  await expect(page.locator('#theme-toggle')).toBeEnabled();
+  await expect(fileDialog(page)).toHaveCount(0);
+  await openFileDetails(page, 'wordmark-blue-official.png');
   await expect(page.locator('#download-link')).toHaveAttribute(
     'href',
     /\/wordmark-blue-official\.png$/,

@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test';
 import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import type { Catalog } from '../../src/lib/types';
-import { artworkGroups } from '../../src/lib/catalog-artworks.mjs';
+import { artworkGroups, isAlternativeArtwork } from '../../src/lib/catalog-artworks.mjs';
 import { assetPath } from '../../src/lib/resource-links.mjs';
 
 const catalog = JSON.parse(
@@ -20,21 +20,41 @@ test('native design downloads follow artwork changes with shared source and usag
     await expect(page.locator('#theme-toggle')).toBeEnabled();
     let downloaded = false;
     for (const artwork of artworkGroups(brand)) {
-      const option = page.locator(`[data-select-artwork="${artwork.id}"]`);
-      if (await option.count()) {
-        if (!(await option.isVisible()))
-          await page.locator('.artwork-alternatives > summary').click();
-        await option.click();
+      const dialog = page.locator('.preview-dialog[role="dialog"]');
+      if (await dialog.isVisible()) {
+        await dialog.getByRole('button', { name: '关闭文件详情', exact: true }).click();
+        await expect(dialog).toBeHidden();
+        await expect.poll(() => new URL(page.url()).searchParams.has('asset')).toBe(false);
       }
+      const gallery = page.getByRole('region', { name: '标识素材', exact: true });
+      await expect(gallery.locator('.copy-menu-trigger').first()).toBeEnabled();
+      const card = gallery.locator(`.artwork-card[data-artwork="${artwork.id}"]`);
+      if (!(await card.isVisible())) {
+        const disclosure = gallery.locator(
+          isAlternativeArtwork(artwork) ? '.artwork-alternatives-trigger' : '.artwork-more-trigger',
+        );
+        await expect(disclosure).toHaveAttribute('aria-expanded', 'false');
+        await disclosure.click();
+        await expect(disclosure).toHaveAttribute('aria-expanded', 'true');
+      }
+      await card.locator('.file-details-link').click();
+      await expect(dialog).toBeVisible();
+      await expect(dialog.locator('#detail-copy-menu')).toBeEnabled();
       const files = artwork.assets.map((asset) => asset.file);
       const attachments = (brand.sourceFiles ?? []).filter((entry) =>
         entry.assetFiles.some((file) => files.includes(file)),
       );
-      const section = page.getByRole('region', { name: '原生设计文件', exact: true });
+      const section = dialog.getByRole('region', { name: '原生设计文件', exact: true });
       if (!attachments.length) {
         await expect(section).toHaveCount(0);
         continue;
       }
+      const designFiles = section.locator('#design-files');
+      const designTrigger = designFiles.locator('[data-resource-trigger="design"]');
+      if ((await designTrigger.getAttribute('aria-expanded')) !== 'true')
+        await designTrigger.click();
+      await expect(designTrigger).toHaveAttribute('aria-expanded', 'true');
+      await expect(designFiles).toHaveAttribute('data-state', 'open');
       await expect(section.locator('[data-source-file]')).toHaveCount(attachments.length);
       for (const entry of attachments) {
         const item = section.locator(`[data-source-file="${entry.file}"]`);
@@ -61,9 +81,11 @@ test('native design downloads follow artwork changes with shared source and usag
           downloaded = true;
         }
       }
-      const sources = page.locator('.source-details');
-      if (!(await sources.evaluate((element) => (element as HTMLDetailsElement).open)))
-        await sources.locator('summary').click();
+      const sources = dialog.locator('.source-details');
+      const sourceTrigger = sources.locator('[data-resource-trigger="source"]');
+      if ((await sourceTrigger.getAttribute('aria-expanded')) !== 'true')
+        await sourceTrigger.click();
+      await expect(sourceTrigger).toHaveAttribute('aria-expanded', 'true');
       const hrefs = await sources
         .locator('a[href^="https://"]')
         .evaluateAll((links) => links.map((link) => link.getAttribute('href')));
@@ -93,7 +115,9 @@ test('all native originals remain available with JavaScript disabled', async ({
       const fallback = page.locator('noscript details').filter({ hasText: '全部原生设计文件下载' });
       await fallback.locator('summary').click();
       await expect(page.getByText(/许可未核实|许可已确认/)).toHaveCount(0);
-      const hrefs = await fallback
+      const sources = page.locator('noscript .noscript-sources');
+      await expect(sources).toHaveJSProperty('open', true);
+      const hrefs = await sources
         .locator('a[href^="https://"]')
         .evaluateAll((links) => links.map((link) => link.getAttribute('href')));
       expect(new Set(hrefs).size).toBe(hrefs.length);
@@ -102,7 +126,7 @@ test('all native originals remain available with JavaScript disabled', async ({
       for (const notes of new Set(
         brand.sourceFiles!.map((entry) => entry.rights.notes).filter(Boolean),
       ))
-        await expect(fallback.getByText(notes!, { exact: true })).toHaveCount(1);
+        await expect(sources.getByText(notes!, { exact: true })).toHaveCount(1);
       for (const entry of brand.sourceFiles ?? []) {
         const link = fallback.locator(`a[download="${brand.id}-${entry.file}"]`);
         await expect(link).toBeVisible();
@@ -126,7 +150,12 @@ test('named licenses retain attribution and concrete use restrictions', async ({
   const asset = brand.assets.find((entry) => entry.file === 'icon-legacy.png')!;
   await page.goto(`/logo/${brand.id}/?asset=${asset.file}`);
   const sources = page.locator('.source-details');
-  await expect(sources).toHaveJSProperty('open', true);
+  await expect(page.locator('.preview-dialog[role="dialog"]')).toBeVisible();
+  await expect(sources).toHaveAttribute('data-state', 'open');
+  await sources.locator('[data-resource-trigger="source"]').click();
+  await expect(sources).toHaveAttribute('data-state', 'closed');
+  await sources.locator('[data-resource-trigger="source"]').click();
+  await expect(sources).toHaveAttribute('data-state', 'open');
   await expect(
     sources.getByRole('link', { name: asset.rights.license, exact: true }),
   ).toHaveAttribute('href', asset.rights.reference);

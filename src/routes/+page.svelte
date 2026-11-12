@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount, tick } from 'svelte';
+  import { RadioGroup } from 'bits-ui';
   import { pushState, replaceState } from '$app/navigation';
   import { resolve } from '$app/paths';
   import BrandCard from '#lib/components/BrandCard.svelte';
@@ -12,6 +13,13 @@
   import ActionButton from '#lib/components/ActionButton.svelte';
   import type { Asset, Brand } from '#lib/types.ts';
   import { identityNames, shapeLabels } from '#lib/catalog-display.mjs';
+  import {
+    usageLabels,
+    layoutLabels,
+    languageLabels,
+    colorLabels,
+    statusLabels,
+  } from '#lib/asset-taxonomy.mjs';
   import {
     defaultAsset,
     directoryAsset,
@@ -26,6 +34,7 @@
     categoryLabels,
     topicOptions,
     topicLabels,
+    assetDownloadName,
   } from '#lib/catalog-presentation.mjs';
   import { resourceLinks, assetPath } from '#lib/resource-links.mjs';
   import { canCopyPngImage } from '#lib/clipboard-image.mjs';
@@ -33,7 +42,44 @@
   const base = resolve('/').replace(/\/$/, '');
   let { data } = $props();
   let brands: Brand[] = $derived(sortCatalogBrands(data.brands));
-  let filters = $state({ q: '', category: '', topic: '', type: '', format: '', shape: '' });
+  const emptyFilters = {
+    q: '',
+    category: '',
+    topic: '',
+    type: '',
+    format: '',
+    shape: '',
+    usage: '',
+    layout: '',
+    language: '',
+    color: '',
+    status: '',
+  };
+  let filters = $state({ ...emptyFilters });
+  type FilterKey = Exclude<keyof typeof emptyFilters, 'q'>;
+  const panelFilters = [
+    { key: 'type', label: '品牌类型', all: '全部类型', labels: entityLabels },
+    { key: 'usage', label: '用途', all: '全部用途', labels: usageLabels },
+    {
+      key: 'shape',
+      label: '标识构成',
+      all: '全部构成',
+      labels: { ...shapeLabels, 'pure-icon': '纯图形（无文字）' },
+    },
+    { key: 'layout', label: '排布', all: '全部排布', labels: layoutLabels },
+    { key: 'language', label: '文字语言', all: '全部语言', labels: languageLabels },
+    { key: 'color', label: '配色', all: '全部配色', labels: colorLabels },
+    { key: 'status', label: '版本', all: '全部版本', labels: statusLabels },
+  ] as const;
+  const filterLabels: Record<string, Record<string, string>> = {
+    shape: { ...shapeLabels, 'pure-icon': '纯图形（无文字）' },
+    usage: usageLabels,
+    layout: layoutLabels,
+    language: languageLabels,
+    color: colorLabels,
+    status: statusLabels,
+  };
+  const hasPanelFilters = $derived(panelFilters.some((field) => Boolean(filters[field.key])));
   let matches: Brand[] = $derived(matchingBrands(brands, filters));
   let options = $derived(filterOptions(brands));
   let categories = $derived(
@@ -62,12 +108,14 @@
       {
         key: 'shape' as const,
         value: filters.shape,
-        label: shapeLabels[filters.shape as keyof typeof shapeLabels],
+        label: filterLabels.shape[filters.shape],
       },
+      ...(['usage', 'layout', 'language', 'color', 'status'] as const).map((key) => ({
+        key,
+        value: filters[key],
+        label: filterLabels[key][filters[key]],
+      })),
     ].filter((item) => item.value),
-  );
-  let shapes: Asset['variant'][] = $derived(
-    [...new Set(brands.flatMap((brand) => brand.assets.map((asset) => asset.variant)))].sort(),
   );
   let ready = $state(false);
   let searchInput: HTMLInputElement;
@@ -97,7 +145,7 @@
     // eslint-disable-next-line svelte/prefer-svelte-reactivity -- A temporary URL builder, not component state.
     const params = new URLSearchParams();
     for (const [key, value] of Object.entries(filters)) if (value) params.set(key, value);
-    if (asset.file !== brand.defaultAsset) params.set('asset', asset.file);
+    if (asset.file !== brand.defaultAsset) params.set('selected', asset.file);
     return base + '/logo/' + encodeURIComponent(brand.id) + '/' + (params.size ? '?' + params : '');
   }
   function updateHistory(replace = false) {
@@ -105,10 +153,11 @@
     const url = directoryUrl(location.href, filters);
     url.searchParams.delete('brand');
     url.searchParams.delete('asset');
+    url.searchParams.delete('selected');
     // eslint-disable-next-line svelte/no-navigation-without-resolve -- Based on the resolved current URL; changes filters only.
     if (url.href !== location.href) (replace ? replaceState : pushState)(url, {});
   }
-  function changeFilter(key: 'category' | 'topic' | 'type' | 'shape' | 'format', value: string) {
+  function changeFilter(key: FilterKey, value: string) {
     filters[key] = value;
     typing = false;
     updateHistory();
@@ -117,7 +166,7 @@
   function reset(all = true) {
     filters.q = '';
     if (all) {
-      filters.category = filters.topic = filters.type = filters.format = filters.shape = '';
+      filters = { ...emptyFilters };
       categoryQuery = '';
     }
     typing = false;
@@ -133,16 +182,14 @@
     if (!controller) return;
     const options = {
       url: new URL(base + '/' + assetPath(asset), location.origin).href,
-      downloadName: `${brand.id}-${asset.file}`,
+      downloadName: assetDownloadName(brand, asset),
       label: identityNames(brand).primary,
     };
     if (kind === 'image') {
-      await controller.copyImage({ ...options, format: assetFormat(asset) });
-      return;
+      return controller.copyImage({ ...options, format: assetFormat(asset) });
     }
     if (kind === 'svg') {
-      await controller.copySvg(options);
-      return;
+      return controller.copySvg(options);
     }
     const links = resourceLinks({
       asset,
@@ -151,7 +198,7 @@
       sourceCommit: data.sourceCommit,
     });
     const labels = { current: '图片地址', html: 'HTML 代码', markdown: 'Markdown 引用' };
-    await controller.copy(links[kind], identityNames(brand).primary + ' ' + labels[kind]);
+    return controller.copy(links[kind], identityNames(brand).primary + ' ' + labels[kind]);
   }
   onMount(() => {
     ready = true;
@@ -259,7 +306,7 @@
           onblur={() => {
             typing = false;
           }}
-          placeholder="搜索品牌名称或域名…"
+          placeholder="搜索品牌、域名或版本，如 腾讯 英文 横向…"
           autocomplete="off"
           spellcheck="false"
         />
@@ -295,63 +342,61 @@
       <div class="directory-title">
         <h1>{filters.q ? '搜索结果' : selectedCategory}</h1>
         <p class="result-count" id="result-count" role="status" aria-live="polite">
-          {matches.length}<span class="sr-only">&nbsp;个结果</span>
+          {matches.length}<span class="sr-only">&nbsp;个品牌</span>
         </p>
       </div>
       <div class="catalog-filters">
-        <div class="format-filter" id="format-filter" role="group" aria-label="文件格式">
+        <RadioGroup.Root
+          class="format-filter"
+          id="format-filter"
+          aria-label="文件格式"
+          orientation="horizontal"
+          value={filters.format || '__all__'}
+          onValueChange={(value) => changeFilter('format', value === '__all__' ? '' : value)}
+        >
           {#each [{ value: '', label: '全部格式' }, ...options.formats.map( (value: string) => ({ value, label: value }) )] as option (option.value)}
-            <button
-              type="button"
-              data-format={option.value}
-              aria-pressed={filters.format === option.value}
-              onclick={() => changeFilter('format', option.value)}>{option.label}</button
+            <RadioGroup.Item value={option.value || '__all__'} data-format={option.value}
+              >{option.label}</RadioGroup.Item
             >
           {/each}
-        </div>
-        <FilterPopover
-          bind:open={extraFiltersOpen}
-          active={Boolean(filters.type || filters.shape)}
-          disabled={!ready}
-        >
-          <div>
-            <span>Logo 形式</span><FilterSelect
-              id="shape-filter"
-              label="Logo 形式"
-              value={filters.shape}
-              options={[
-                { value: '', label: '全部形式' },
-                ...shapes.map((value) => ({ value, label: shapeLabels[value] || value })),
-              ]}
-              onchange={(value) => changeFilter('shape', value)}
-            />
+        </RadioGroup.Root>
+        <FilterPopover bind:open={extraFiltersOpen} active={hasPanelFilters} disabled={!ready}>
+          <div class="directory-filter-panel">
+            <div class="directory-filter-fields">
+              {#each panelFilters as field (field.key)}
+                <div class="directory-filter-field">
+                  <label for={`${field.key}-filter`}>{field.label}</label>
+                  <FilterSelect
+                    id={`${field.key}-filter`}
+                    label={field.label}
+                    value={filters[field.key]}
+                    options={[
+                      { value: '', label: field.all },
+                      ...Object.entries(field.labels).map(([value, label]) => ({ value, label })),
+                    ]}
+                    onchange={(value) => changeFilter(field.key, value)}
+                  />
+                </div>
+              {/each}
+            </div>
+            <div class="directory-filter-actions">
+              <ActionButton
+                id="clear-filters"
+                variant="text"
+                size="sm"
+                disabled={!hasPanelFilters && !filters.format}
+                onclick={() => {
+                  for (const field of panelFilters) filters[field.key] = '';
+                  filters.format = '';
+                  typing = false;
+                  updateHistory();
+                }}>清除筛选</ActionButton
+              >
+              <ActionButton variant="secondary" size="sm" onclick={() => (extraFiltersOpen = false)}
+                >完成</ActionButton
+              >
+            </div>
           </div>
-          <div>
-            <span>收录类型</span><FilterSelect
-              id="type-filter"
-              label="收录类型"
-              value={filters.type}
-              options={[
-                { value: '', label: '全部类型' },
-                ...options.types.map((value: keyof typeof entityLabels) => ({
-                  value,
-                  label: entityLabels[value],
-                })),
-              ]}
-              onchange={(value) => changeFilter('type', value)}
-            />
-          </div>
-          <ActionButton
-            id="clear-filters"
-            variant="text"
-            size="sm"
-            hidden={!(filters.type || filters.shape || filters.format)}
-            onclick={() => {
-              filters.type = filters.format = filters.shape = '';
-              typing = false;
-              updateHistory();
-            }}>重置筛选</ActionButton
-          >
         </FilterPopover>
       </div>
     </div>
@@ -379,6 +424,7 @@
             basePath={base}
             href={hrefFor(brand)}
             oncopy={copyBrand}
+            getRevision={() => feedback?.currentRevision()}
             {canCopyImage}
             copying={feedback?.pending(base + '/' + assetPath(directoryAsset(brand, filters.q))) ??
               false}
@@ -390,7 +436,7 @@
       <div class="empty-state" id="empty-state" hidden={matches.length > 0}>
         <Icon name="search" />
         <h2>没有找到匹配的 Logo</h2>
-        <p>换个关键词，或清除筛选试试。</p>
+        <p>可以移除上方某个筛选条件，或调整关键词。</p>
         <ActionButton variant="primary" id="reset-search" onclick={() => reset()}
           >清除搜索与筛选</ActionButton
         >
@@ -408,3 +454,72 @@
 </div>
 
 <CopyFeedback bind:this={feedback} />
+
+<style>
+  :global(.extra-filter-panel:has(.directory-filter-panel)) {
+    width: min(480px, calc(100vw - 32px));
+  }
+  .directory-filter-panel {
+    display: grid;
+    gap: 18px;
+  }
+  .directory-filter-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 16px;
+  }
+  .directory-filter-field {
+    display: grid;
+    gap: 6px;
+    min-width: 0;
+  }
+  .directory-filter-field label {
+    color: var(--muted);
+    font-size: var(--type-caption);
+  }
+  .directory-filter-field :global(.filter-trigger) {
+    width: 100%;
+    min-height: 40px;
+    min-width: 0;
+    text-align: left;
+  }
+  .directory-filter-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+  }
+  .directory-filter-actions :global(.text-button) {
+    width: auto;
+    margin-top: 0;
+  }
+  @media (max-width: 720px) {
+    .catalog-toolbar {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 8px;
+    }
+    .catalog-filters {
+      display: contents;
+    }
+    :global(.format-filter) {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      flex-wrap: wrap;
+    }
+    .catalog-filters :global(.more-filters) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    .directory-filter-fields {
+      gap: 12px;
+    }
+  }
+  @media (max-width: 359px) {
+    .directory-filter-fields {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>

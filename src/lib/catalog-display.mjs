@@ -14,7 +14,8 @@ export function brandRoute(brand, root = './') {
 export function identityNames(brand) {
   const zh = brand.identity?.nameZh;
   const en = brand.identity?.nameEn;
-  return { primary: zh || en || brand.name, secondary: zh && en && zh !== en ? en : '' };
+  const primary = brand.name || zh || en || '';
+  return { primary, secondary: en && en !== primary ? en : '' };
 }
 export function websiteDomain(brand) {
   try {
@@ -151,4 +152,11 @@ export function sourceInformation(entries) {
   };
 }
 
-export const shapeLabels = { icon: '图形', wordmark: '文字', logo: '图文组合' };
+export {
+  shapeLabels,
+  usageLabels,
+  layoutLabels,
+  languageLabels,
+  colorLabels,
+  statusLabels,
+} from './asset-taxonomy.mjs';

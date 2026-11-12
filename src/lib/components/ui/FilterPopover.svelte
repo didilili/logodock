@@ -35,10 +35,10 @@
       id="more-filters-trigger"
       bind:ref={trigger}
       class="more-filters-trigger"
-      aria-label="更多筛选"
+      aria-label="筛选"
       {disabled}
     >
-      <Icon name="filter" /><span>更多筛选</span>
+      <Icon name="filter" /><span>筛选</span>
       {#if active}<i aria-label="已启用筛选"></i>{/if}
     </Popover.Trigger>
     <Popover.Portal>
@@ -47,7 +47,7 @@
         bind:ref={content}
         class="extra-filter-panel"
         role="dialog"
-        aria-label="更多筛选"
+        aria-label="筛选"
         align="end"
         sideOffset={8}
         collisionPadding={12}

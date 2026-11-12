@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { Collapsible } from 'bits-ui';
   import { untrack } from 'svelte';
   import { categoryDefinitions, filterCategoryOptions } from '../../catalog-taxonomy.mjs';
   import type { CategoryOption } from '../../types';
@@ -35,8 +36,8 @@
     });
   });
 
-  function toggle(id: string) {
-    expanded = expanded.includes(id) ? expanded.filter((value) => value !== id) : [...expanded, id];
+  function setExpanded(id: string, open: boolean) {
+    expanded = open ? [...new Set([...expanded, id])] : expanded.filter((value) => value !== id);
   }
 </script>
 
@@ -75,25 +76,29 @@
     {#each visible as category (category.id)}
       {#if category.children?.length}
         {@const open = Boolean(query.trim()) || expanded.includes(category.id)}
-        <div class="category-branch">
+        <Collapsible.Root
+          class="category-branch"
+          bind:open={
+            () => Boolean(query.trim()) || expanded.includes(category.id),
+            (value) => setExpanded(category.id, value)
+          }
+          {disabled}
+        >
           <div class="category-parent">
             {@render choice(category)}
-            <button
-              type="button"
+            <Collapsible.Trigger
               class="category-expand"
               data-expand={category.id}
               aria-label={`${open ? '收起' : '展开'}${category.label}`}
-              aria-expanded={open}
-              {disabled}
-              onclick={() => toggle(category.id)}><Icon name="chevron-right" size={14} /></button
+              ><Icon name="chevron-right" size={14} /></Collapsible.Trigger
             >
           </div>
-          <div class="category-children" hidden={!open}>
+          <Collapsible.Content class="category-children">
             {#each category.children as child (child.id)}
               {@render choice(child, true)}
             {/each}
-          </div>
-        </div>
+          </Collapsible.Content>
+        </Collapsible.Root>
       {:else}
         {@render choice(category)}
       {/if}

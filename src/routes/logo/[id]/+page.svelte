@@ -11,5 +11,5 @@
   <meta name="description" content={`查看${names.primary}${names.secondary ? ` ${names.secondary}` : ''}的 ${data.brand.assets.length} 份 Logo 素材、原始格式、来源与使用说明，并下载原图。`} />
 </svelte:head>
 {#key data.brand.id}
-  <BrandDetail brand={data.brand} parent={data.parent} sourceCommit={data.sourceCommit} basePath={base} />
+  <BrandDetail brand={data.brand} parent={data.parent} relatedBrands={data.children} sourceCommit={data.sourceCommit} basePath={base} />
 {/key}

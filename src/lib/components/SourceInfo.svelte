@@ -8,66 +8,107 @@
   }
   let { information, licenseId }: Props = $props();
 
+  type Information = Props['information'];
+  interface SourceGroup {
+    key: string;
+    files: string[];
+    links: Information['links'];
+    attributions: Information['attributions'];
+    notes: Information['notes'];
+  }
+
+  const groups = $derived.by(() => {
+    // eslint-disable-next-line svelte/prefer-svelte-reactivity -- A temporary lookup rebuilt for each derived value.
+    const byFiles = new Map<string, SourceGroup>();
+    const groupFor = (files: string[], allowSharedScope = false) => {
+      const key = JSON.stringify([...files].sort());
+      let group = byFiles.get(key);
+      if (!group && allowSharedScope)
+        group = [...byFiles.values()].find((entry) =>
+          files.every((file) => entry.files.includes(file)),
+        );
+      if (!group) {
+        group = { key, files, links: [], attributions: [], notes: [] };
+        byFiles.set(key, group);
+      }
+      return group;
+    };
+    for (const link of information.links) groupFor(link.files).links.push(link);
+    for (const attribution of information.attributions)
+      groupFor(attribution.files, true).attributions.push(attribution);
+    for (const note of information.notes) groupFor(note.files, true).notes.push(note);
+    return [...byFiles.values()];
+  });
+
   function external(value: string) {
     return /^https:\/\/[^\s\\]+$/i.test(value) ? value : '#';
   }
 </script>
 
-<dl class="source-list">
-  {#each information.links as link (link.url)}
-    <dt>{link.kind}</dt>
-    <dd>
-      <a
-        id={link.primaryLicense ? licenseId : undefined}
-        href={external(link.url)}
-        target="_blank"
-        rel="external noopener noreferrer">{link.label}<Icon name="external" size={13} /></a
-      >
-      {#if link.description}<small class="source-context">{link.description}</small>{/if}
-      {#if link.files.length < information.fileCount}
-        <small class="source-context">{link.files.join('、')}</small>
-      {/if}
-      {#each link.licenses as license (license.label)}
-        {#if link.licenses.length > 1 || license.files.length < link.files.length}
-          <small class="source-context">{license.files.join('、')} · {license.label}</small>
+{#each groups as group (group.key)}
+  <section class="source-group">
+    {#if information.fileCount > 1 && group.files.length < information.fileCount}
+      <h3 class="file-scope">{group.files.join('、')}</h3>
+    {/if}
+    {#if group.links.length}
+      <ul class="source-list">
+        {#each group.links as link (link.url)}
+          <li>
+            <a
+              id={link.primaryLicense ? licenseId : undefined}
+              href={external(link.url)}
+              target="_blank"
+              title={link.kind}
+              rel="external noopener noreferrer">{link.label}<Icon name="external" size={13} /></a
+            >
+            {#if link.description}<small class="source-context">{link.description}</small>{/if}
+            {#each link.licenses as license (license.label)}
+              {#if link.licenses.length > 1 || license.files.length < link.files.length}
+                <small class="source-context">{license.files.join('、')} · {license.label}</small>
+              {/if}
+            {/each}
+          </li>
+        {/each}
+      </ul>
+    {/if}
+    {#each group.attributions as attribution (attribution.text)}
+      <div class="attribution">
+        <h3>署名</h3>
+        {#if attribution.files.length < group.files.length}
+          <p class="statement-scope">{attribution.files.join('、')}</p>
         {/if}
-      {/each}
-    </dd>
-  {/each}
-</dl>
-{#each information.attributions as attribution (attribution.text)}
-  <div class="attribution">
-    <h2>署名</h2>
-    {#if attribution.files.length < information.fileCount}
-      <p class="file-scope">{attribution.files.join('、')}</p>
-    {/if}
-    <p>{attribution.text}</p>
-  </div>
-{/each}
-{#each information.notes as note (note.text)}
-  <div class="usage-note">
-    {#if note.files.length < information.fileCount}
-      <p class="file-scope">{note.files.join('、')}</p>
-    {/if}
-    <p>{note.text}</p>
-  </div>
+        <p>{attribution.text}</p>
+      </div>
+    {/each}
+    {#each group.notes as note (note.text)}
+      <div class="usage-note">
+        {#if note.files.length < group.files.length}
+          <p class="statement-scope">{note.files.join('、')}</p>
+        {/if}
+        <p>{note.text}</p>
+      </div>
+    {/each}
+  </section>
 {/each}
 
 <style>
   .source-list {
-    display: grid;
-    grid-template-columns: 62px minmax(0, 1fr);
-    gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+    padding: 0;
     margin: 0;
-    font-size: 13px;
+    font-size: var(--type-small);
+    list-style: none;
   }
-  dt {
-    color: var(--muted);
-  }
-  dd {
+  .source-list li {
     min-width: 0;
-    margin: 0;
     overflow-wrap: anywhere;
+  }
+  .source-group + .source-group {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
   }
   a {
     display: inline-flex;
@@ -75,33 +116,37 @@
     gap: 5px;
   }
   .attribution {
-    margin-top: 18px;
-    padding: 12px;
-    border: 1px solid var(--line);
-    border-radius: 5px;
+    margin-top: 10px;
   }
-  h2 {
-    margin-bottom: 5px;
-    font-size: 13px;
+  h3 {
+    margin-bottom: 4px;
+    color: var(--ink);
+    font-size: var(--type-small);
     font-weight: 600;
+    line-height: 1.6;
   }
   .usage-note {
-    margin-top: 14px;
+    margin-top: 8px;
   }
   .source-context {
     display: block;
     margin-top: 3px;
     color: var(--muted);
-    font-size: 12px;
+    font-size: var(--type-caption);
   }
   p {
     color: var(--muted);
-    font-size: 12px;
-    line-height: 1.8;
+    font-size: var(--type-small);
+    line-height: 1.7;
     overflow-wrap: anywhere;
   }
   .file-scope {
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+  .statement-scope {
     margin-bottom: 3px;
     color: var(--ink);
+    font-size: var(--type-caption);
   }
 </style>
