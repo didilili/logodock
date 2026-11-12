@@ -44,6 +44,22 @@ test('HTML and Markdown examples escape names and prefer the fixed address when 
   assert.ok(links.html.includes(links.fixed));
   assert.ok(links.markdown.includes('\\[Test\\]'));
   assert.ok(links.markdown.includes(links.fixed));
+  const complete = resourceLinks({
+    asset: {
+      ...asset,
+      variant: 'logo',
+      language: 'zh',
+      layout: 'vertical',
+      color: 'brand',
+      label: '中文竖版组合标（含口号）',
+    },
+    brand,
+    baseUrl: 'https://example.com/',
+    sourceCommit: commit,
+  });
+  for (const text of [complete.html, complete.markdown]) {
+    assert.ok(text.includes('中文组合标 · 上下排列 · （含口号）'));
+  }
 });
 
 test('copy reports unsupported or rejected clipboard access without losing the text', async () => {

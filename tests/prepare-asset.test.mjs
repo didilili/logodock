@@ -54,6 +54,7 @@ test('prepare-asset creates an isolated draft with exact bytes and pending manua
   assert.equal(draft.assets[0].language, 'none');
   assert.equal(draft.assets[0].layout, 'standalone');
   assert.equal(draft.assets[0].color, 'brand');
+  assert.equal(Object.hasOwn(draft.assets[0], 'usage'), false);
   assert.deepEqual(draft.assets[0].provenance, { sourceType: '', processing: '' });
   assert.equal(draft.defaultAsset, 'source.svg');
   assert.deepEqual(draft.categories, ['developer-tools']);
@@ -70,6 +71,21 @@ test('prepare-asset creates an isolated draft with exact bytes and pending manua
   await writeFile(join(root, 'logo/sample/source.svg'), svg);
   await writeFile(join(root, 'logo/sample/metadata.json'), JSON.stringify(draft));
   await assert.rejects(loadCatalog(root), /Invalid catalog:/);
+});
+
+test('prepare-asset accepts explicit reviewed app usage without making it the default', async (t) => {
+  const root = await workspace(t);
+  const input = join(root, 'source.svg');
+  const output = join(root, 'app-draft');
+  await writeFile(input, svg);
+  const run = spawnSync(
+    process.execPath,
+    [cli, input, '--id', 'sample', '--name', 'Sample', '--output', output, '--usage', 'app-icon'],
+    { encoding: 'utf8' },
+  );
+  assert.equal(run.status, 0, run.stderr);
+  const draft = JSON.parse(await readFile(join(output, 'metadata.json'), 'utf8'));
+  assert.equal(draft.assets[0].usage, 'app-icon');
 });
 
 test('prepare-asset never overwrites, validates image content and gives readable usage errors', async (t) => {

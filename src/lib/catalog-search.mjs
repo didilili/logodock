@@ -13,14 +13,22 @@ const processingLabels = {
   rendered: '渲染',
   extracted: '图形提取版',
 };
-const shapeLabels = { icon: '图形 图标', wordmark: '文字 字标', logo: '组合标识' };
+const shapeLabels = {
+  icon: '图形 图标 图形标 独立图形 独立符号',
+  wordmark: '文字 字标',
+  logo: '组合标识 图文组合',
+};
 const languageLabels = {
   none: '无字',
   zh: '中文',
   en: '英文',
   bilingual: '中英 中英文 中文 英文',
 };
-const layoutLabels = { standalone: '独立', horizontal: '横版 横向', vertical: '竖版 竖向' };
+const layoutLabels = {
+  standalone: '独立',
+  horizontal: '横版 横向',
+  vertical: '竖版 竖向 上下排列',
+};
 const fileColorLabels = {
   orange: '橙色',
   red: '红色',
@@ -62,9 +70,16 @@ export function matchingAssets(brand, query) {
       [
         asset.file,
         asset.label,
+        assetDisplayLabel(asset),
+        assetAttributes(asset),
+        usageLabels[asset.usage],
+        asset.color,
+        colorLabels[asset.color],
         asset.rights?.license,
         asset.variant,
         shapeLabels[asset.variant],
+        asset.variant === 'icon' && asset.language === 'en' ? '字母符号' : '',
+        asset.variant === 'icon' && asset.language !== 'none' ? '文字符号' : '',
         languageLabels[asset.language],
         layoutLabels[asset.layout],
         ...asset.file
@@ -101,3 +116,4 @@ export function filterBrands(brands, query) {
     .sort((a, b) => b.score - a.score || a.index - b.index)
     .map((match) => match.brand);
 }
+import { assetAttributes, assetDisplayLabel, colorLabels, usageLabels } from './asset-taxonomy.mjs';

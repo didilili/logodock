@@ -1,6 +1,16 @@
 /** @typedef {import('./types').Asset} Asset */
 /** @typedef {import('./types').Brand} Brand */
 /** @typedef {import('./types').ArtworkGroup} ArtworkGroup */
+import { assetDisplayLabel, assetDetailLabel, artworkDisplayLabel } from './asset-taxonomy.mjs';
+
+/** Preserve both reviewed group details and differences in the chosen file. */
+export function artworkDetailLabel(artwork, asset = artwork.defaultAsset) {
+  const groupDetail = assetDetailLabel({ ...asset, label: artwork.label });
+  const fileDetail = assetDetailLabel(asset);
+  return [groupDetail, groupDetail.includes(fileDetail) ? '' : fileDetail]
+    .filter(Boolean)
+    .join(' · ');
+}
 
 /** Pick a fallback only among files already reviewed as one artwork.
  * Explicit reviewed defaults always take precedence over this ranking.
@@ -31,7 +41,7 @@ export function isAlternativeArtwork(group) {
  * @param {(asset: Asset) => string} [labelForAsset]
  * @returns {ArtworkGroup[]}
  */
-export function artworkGroups(brand, labelForAsset = (asset) => asset.label) {
+export function artworkGroups(brand, labelForAsset = assetDisplayLabel) {
   const membership = new Map(
     (brand.artworks ?? []).flatMap((artwork) => artwork.files.map((file) => [file, artwork])),
   );
@@ -57,7 +67,12 @@ export function artworkGroups(brand, labelForAsset = (asset) => asset.label) {
       preferred.find((item) => item.file === artwork.defaultAsset) ??
       preferred.find((item) => item.file === brand.defaultAsset) ??
       bestAvailableAsset(preferred);
-    groups.push({ id: artwork.id, label: artwork.label, assets, defaultAsset });
+    groups.push({
+      id: artwork.id,
+      label: artworkDisplayLabel(defaultAsset, artwork.label),
+      assets,
+      defaultAsset,
+    });
   }
   return groups.sort(
     (a, b) =>

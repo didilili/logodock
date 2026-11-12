@@ -2,6 +2,21 @@ import { filterBrands, matchingAssets, sortBrands } from './catalog-search.mjs';
 import { artworkGroups } from './catalog-artworks.mjs';
 import { brandPriorities } from './catalog-order.mjs';
 import { directoryCover } from './catalog-preview.mjs';
+import { assetFacetLabels, directoryFilterKeys, shapeLabels } from './asset-taxonomy.mjs';
+export {
+  assetDisplayLabel,
+  assetDescription,
+  assetDetailLabel,
+  assetAttributes,
+  assetDownloadName,
+  shapeLabels,
+  usageLabels,
+  layoutLabels,
+  languageLabels,
+  colorLabels,
+  statusLabels,
+  directoryFilterKeys,
+} from './asset-taxonomy.mjs';
 import {
   categoryOptions,
   topicOptions,
@@ -18,8 +33,6 @@ export function sortCatalogBrands(brands) {
       (brandPriorities.get(b.id) ?? Number.MAX_SAFE_INTEGER),
   );
 }
-const variantLabels = { icon: '图形标识', wordmark: '文字标识', logo: '组合标识' };
-
 export function assetFormat(asset) {
   return asset.file.split('.').pop().toUpperCase();
 }
@@ -43,26 +56,7 @@ export function directoryAsset(brand, query = '') {
 }
 
 export function assetLabel(asset) {
-  return asset.label || variantLabels[asset.variant] || asset.variant;
-}
-
-export function assetDisplayLabel(asset) {
-  // Format and provenance have dedicated places in the interface.
-  return assetLabel(asset)
-    .replace(/\s*[（(](?:Commons (?:原件|渲染)|官方\s*(?:(?:内嵌)?原生 PNG|SVG|原件))[）)]/gi, '')
-    .replace(/[（(]官方透明 PNG[）)]/gi, '（透明）')
-    .replace(/\s*·\s*([^·]+)$/u, (suffix, description) => {
-      const detail = description
-        .replace(/^(?:官方 Brand World|官方官网(?:页头)?|官方素材包|Commons)\s*/iu, '')
-        .replace(/^官方(?=高清透明(?:\s|$))/u, '')
-        .replace(/\b(?:SVG|PNG|JPEG|JPG)\b/gi, '')
-        .replace(/\s*原件\s*$/u, '')
-        .replace(/\s+/g, ' ')
-        .trim();
-      if (detail === description) return suffix;
-      return detail ? ` · ${detail}` : '';
-    })
-    .trim();
+  return asset.label || shapeLabels[asset.variant] || asset.variant;
 }
 
 export function assetWarnings(asset) {
@@ -90,7 +84,19 @@ export function filterOptions(brands) {
 
 export function matchingBrands(
   brands,
-  { q = '', type = '', format = '', shape = '', category = '', topic = '' } = {},
+  {
+    q = '',
+    type = '',
+    format = '',
+    shape = '',
+    usage = '',
+    layout = '',
+    language = '',
+    color = '',
+    status = '',
+    category = '',
+    topic = '',
+  } = {},
 ) {
   const available = sortCatalogBrands(brands)
     .filter((brand) => !type || brand.entityType === type)
@@ -99,7 +105,16 @@ export function matchingBrands(
     .map((brand) => {
       const eligible = brand.assets.filter(
         (asset) =>
-          (!format || assetFormat(asset) === format) && (!shape || asset.variant === shape),
+          (!format || assetFormat(asset) === format) &&
+          (!shape ||
+            (shape === 'pure-icon'
+              ? asset.variant === 'icon' && asset.language === 'none'
+              : asset.variant === shape)) &&
+          (!usage || asset.usage === usage) &&
+          (!layout || asset.layout === layout) &&
+          (!language || asset.language === language) &&
+          (!color || asset.color === color) &&
+          (!status || asset.status === status),
       );
       const assets = matchingAssets({ ...brand, assets: eligible }, q);
       // Keep reviewed artwork declarations intact; artworkGroups intersects members.
@@ -111,9 +126,14 @@ export function matchingBrands(
 
 export function readDirectoryState(url, brands) {
   const params = new URL(url).searchParams;
+  const facetValue = (key) => {
+    const value = params.get(key) || '';
+    return Object.hasOwn(assetFacetLabels[key], value) ? value : '';
+  };
   const options = filterOptions(brands);
   const shapes = [
     ...new Set(brands.flatMap((brand) => brand.assets.map((asset) => asset.variant))),
+    'pure-icon',
   ];
   const type = params.get('type') || '';
   const format = params.get('format') || '';
@@ -131,6 +151,11 @@ export function readDirectoryState(url, brands) {
     type: options.types.includes(type) ? type : '',
     format: options.formats.includes(format) ? format : '',
     shape: shapes.includes(shape) ? shape : '',
+    usage: facetValue('usage'),
+    layout: facetValue('layout'),
+    language: facetValue('language'),
+    color: facetValue('color'),
+    status: facetValue('status'),
     category: availableCategories.some((option) => option.id === category) ? category : '',
     topic: topicOptions(brands).some((option) => option.id === topic) ? topic : '',
   };
@@ -138,7 +163,7 @@ export function readDirectoryState(url, brands) {
 
 export function directoryUrl(baseUrl, state) {
   const url = new URL(baseUrl);
-  for (const key of ['q', 'type', 'format', 'shape', 'category', 'topic']) {
+  for (const key of directoryFilterKeys) {
     if (state[key])
       url.searchParams.set(key, key === 'category' ? normalizeCategory(state[key]) : state[key]);
     else url.searchParams.delete(key);

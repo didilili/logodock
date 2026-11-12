@@ -91,6 +91,30 @@ test('catalog preserves usage warnings separately from ordinary quality notes', 
   assert.deepEqual(asset.qualityNotes, qualityNotes);
 });
 
+test('reviewed app usage survives serialization while older records keep usage absent', async (t) => {
+  const root = await fixture(t);
+  assert.equal(Object.hasOwn((await loadCatalog(root)).brands[0].assets[0], 'usage'), false);
+  await mutate(root, (metadata) => {
+    metadata.assets[0].usage = 'app-icon';
+    metadata.assets[0].variant = 'wordmark';
+    metadata.assets[0].language = 'zh';
+  });
+  const asset = JSON.parse(JSON.stringify(await loadCatalog(root))).brands[0].assets[0];
+  assert.equal(asset.usage, 'app-icon');
+  assert.equal(asset.variant, 'wordmark');
+  assert.equal(asset.language, 'zh');
+});
+
+test('catalog rejects unregistered app usage values and incorrect types', async (t) => {
+  for (const usage of ['avatar', 'app', '', null, [], 42]) {
+    const root = await fixture(t);
+    await mutate(root, (metadata) => {
+      metadata.assets[0].usage = usage;
+    });
+    await assert.rejects(loadCatalog(root), /usage/);
+  }
+});
+
 test('usage warnings remain optional for existing quality notes and accept an empty list', async (t) => {
   const root = await fixture(t);
   await mutate(root, (metadata) => {

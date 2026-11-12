@@ -169,6 +169,7 @@ test('shortened catalog labels preserve language, shape, layout and color search
     ['alibaba', '阿里巴巴 橙色', 2],
     ['codeberg', 'codeberg 图标 白色', 1],
     ['minimax', 'minimax 竖版', 1],
+    ['minimax', 'minimax 上下排列', 1],
   ]) {
     const brand = catalog.find((item) => item.id === id);
     assert.equal(search.matchingAssets(brand, query).length, count, query);
@@ -178,4 +179,13 @@ test('shortened catalog labels preserve language, shape, layout and color search
     search.matchingAssets(alibaba, '阿里巴巴 中文 png').map((asset) => asset.file),
     ['logo-chinese-horizontal-official.png', 'logo-chinese-vertical-official.png'],
   );
+  for (const [query, files] of [
+    ['阿里巴巴 中文组合标 横向', ['logo-chinese-horizontal-official.png']],
+    ['阿里巴巴 中文 横版', ['logo-chinese-horizontal-official.png', 'wordmark-orange-chinese.svg']],
+  ]) {
+    assert.deepEqual(
+      search.matchingAssets(alibaba, query).map((asset) => asset.file),
+      files,
+    );
+  }
 });

@@ -8,6 +8,7 @@ const provenanceFields = metadataSchema.$defs.provenance.properties;
 const enumOptions = [
   ['entity-type', metadataSchema.properties.entityType],
   ['variant', assetFields.variant],
+  ['usage', assetFields.usage],
   ['status', assetFields.status],
   ['background', assetFields.background],
   ['language', assetFields.language],
@@ -132,6 +133,7 @@ async function createDraft(config) {
         file,
         label: config.label ?? 'Original asset',
         variant: config.variant,
+        ...(config.usage ? { usage: config.usage } : {}),
         status: config.status,
         background: config.background,
         language: config.language,

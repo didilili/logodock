@@ -1,3 +1,5 @@
+import { assetDescription } from './catalog-presentation.mjs';
+
 export function assetPath(asset) {
   const path = String(asset.path || '');
   if (
@@ -42,7 +44,7 @@ export function resourceLinks({ asset, brand, baseUrl, sourceCommit }) {
   const current = new URL(path, baseUrl).href;
   const fixed = fixedAssetUrl(asset, sourceCommit);
   const address = fixed || current;
-  const alt = `${brand.name} ${asset.label || 'Logo'}`;
+  const alt = `${brand.name} ${assetDescription(asset) || 'Logo'}`;
   return {
     current,
     fixed,

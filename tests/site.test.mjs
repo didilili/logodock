@@ -221,6 +221,11 @@ test('directory URL state round-trips only available filters without adding a br
     type: 'company',
     shape: 'icon',
     format: 'SVG',
+    usage: '',
+    layout: '',
+    language: '',
+    color: '',
+    status: '',
     category: '',
     topic: '',
   };
@@ -231,6 +236,18 @@ test('directory URL state round-trips only available filters without adding a br
   assert.deepEqual(readDirectoryState(url, available), state);
   assert.deepEqual(
     readDirectoryState('https://example.com/?shape=fake&type=bad&format=EXE', available),
-    { q: '', type: '', format: '', shape: '', category: '', topic: '' },
+    {
+      q: '',
+      type: '',
+      format: '',
+      shape: '',
+      category: '',
+      topic: '',
+      usage: '',
+      layout: '',
+      language: '',
+      color: '',
+      status: '',
+    },
   );
 });

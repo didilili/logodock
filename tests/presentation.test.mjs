@@ -4,6 +4,7 @@ import test from 'node:test';
 import { sourceInformation } from '../src/lib/catalog-display.mjs';
 
 const presentation = () => import('../src/lib/catalog-presentation.mjs');
+const emptyAssetFacets = { usage: '', layout: '', language: '', color: '', status: '' };
 
 test('shared source information keeps distinct licenses and deduplicates matching conditions', () => {
   const entry = {
@@ -484,6 +485,7 @@ test('directory URLs preserve industry and topic and canonicalize legacy industr
   sample[0].categories = ['consumer-electronics'];
   sample[0].topics = ['ai'];
   const state = {
+    ...emptyAssetFacets,
     q: '动物园',
     type: 'company',
     format: 'PNG',
@@ -514,6 +516,7 @@ test('legacy AI category links migrate to the cross-industry topic without losin
   const url = new URL('https://example.com/?category=ai&q=壁仞&type=company&format=SVG&other=1');
   const state = readDirectoryState(url, catalog);
   assert.deepEqual(state, {
+    ...emptyAssetFacets,
     q: '壁仞',
     type: 'company',
     format: 'SVG',
@@ -649,6 +652,7 @@ test('small horizontal bitmaps warn even when their long edge exceeds 256 pixels
 test('directory URL state round-trips with query and filters and rejects absent categories', async () => {
   const { directoryUrl, readDirectoryState } = await presentation();
   const directory = {
+    ...emptyAssetFacets,
     q: '动物园 旧版',
     category: 'developer-tools',
     topic: '',
@@ -735,7 +739,8 @@ test('usage warnings keep the first occurrence when metadata already warns about
 });
 
 test('short version titles retain meaningful differences and leave original metadata intact', async () => {
-  const { assetDisplayLabel, assetLabel, assetFormat } = await presentation();
+  const { assetDisplayLabel, assetDetailLabel, assetAttributes, assetLabel, assetFormat } =
+    await presentation();
   const cases = [
     ['2022 绿色中英文字标 · SVG（Commons 原件）', '2022 绿色中英文字标'],
     ['绿色中英文文字标识 · PNG（Commons 渲染）', '绿色中英文文字标识'],
@@ -772,7 +777,7 @@ test('short version titles retain meaningful differences and leave original meta
     for (const asset of brand.assets) {
       const label = assetDisplayLabel(asset).trim();
       assert.ok(label, `${brand.id}/${asset.file} still has a version title`);
-      const version = `${assetFormat(asset)}: ${label}`;
+      const version = `${assetFormat(asset)}: ${label} | ${assetAttributes(asset)} | ${assetDetailLabel(asset)}`;
       assert.ok(
         !versions.has(version),
         `${brand.id}/${asset.file} needs a distinct title within the same format`,

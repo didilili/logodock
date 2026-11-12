@@ -273,6 +273,7 @@ async function readAsset(asset, folder, id) {
     file,
     label: asset.label,
     variant: asset.variant,
+    ...(asset.usage === undefined ? {} : { usage: asset.usage }),
     status: asset.status,
     ...(asset.display === undefined ? {} : { display: asset.display }),
     background: asset.background,
@@ -338,7 +339,7 @@ function readArtworks(artworks, assets, context) {
         members.every((member) => member.display === 'alternative'),
       `${context}.${artwork.id}.defaultAsset must select a primary member when one exists`,
     );
-    for (const key of ['variant', 'language', 'layout', 'color', 'status']) {
+    for (const key of ['variant', 'usage', 'language', 'layout', 'color', 'status']) {
       requireValue(
         members.every((member) => member[key] === members[0][key]),
         `${context}.${artwork.id}: members must share ${key}`,

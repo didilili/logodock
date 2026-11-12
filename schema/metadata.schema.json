@@ -179,6 +179,11 @@
           "enum": ["icon", "wordmark", "logo"],
           "default": "icon"
         },
+        "usage": {
+          "type": "string",
+          "enum": ["app-icon"],
+          "description": "Optional reviewed application-icon use. Independent of composition and acquisition channel. Omitted when unreviewed or not applicable."
+        },
         "status": {
           "type": "string",
           "enum": ["current", "historical"],

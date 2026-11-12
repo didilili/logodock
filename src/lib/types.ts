@@ -4,6 +4,7 @@ export interface Asset {
   label: string;
   path: string;
   variant: 'icon' | 'wordmark' | 'logo';
+  usage?: 'app-icon';
   status: 'current' | 'historical';
   display?: 'primary' | 'alternative';
   background: 'light' | 'dark' | 'any';
@@ -89,6 +90,13 @@ export interface Brand {
 export interface Catalog {
   schemaVersion: number;
   brands: Brand[];
+}
+export interface BrandReference {
+  id: string;
+  name: string;
+  defaultAsset: string;
+  entityType: Brand['entityType'];
+  identity: Pick<Brand['identity'], 'nameZh' | 'nameEn'>;
 }
 export interface CategoryOption {
   id: string;

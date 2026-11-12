@@ -143,7 +143,7 @@ test('a fallback representation favors vector and larger current files without o
 });
 
 test('grouping leaves source records untouched and allows UI labels for singleton files', async () => {
-  const { artworkGroups } = await grouping();
+  const { artworkGroups, artworkDetailLabel } = await grouping();
   const brand = sample();
   const snapshot = JSON.stringify(brand);
   Object.freeze(brand.assets);
@@ -153,6 +153,16 @@ test('grouping leaves source records untouched and allows UI labels for singleto
   assert.equal(groups[0].label, '蓝色标识');
   assert.equal(JSON.stringify(brand), snapshot);
   assert.equal(groups[0].assets[0], brand.assets[0]);
+  assert.equal(typeof artworkDetailLabel, 'function');
+  const defaultAsset = assetMetadata({ label: '方形图形' });
+  assert.equal(artworkDetailLabel({ label: '图形标 · 绿色', defaultAsset }), '绿色 · 方形');
+  assert.equal(
+    artworkDetailLabel({
+      label: '图形标 · 蓝色B',
+      defaultAsset: { ...defaultAsset, label: '蓝色B图形' },
+    }),
+    '蓝色B',
+  );
 });
 
 async function fixture(t, change = () => {}) {
@@ -242,6 +252,7 @@ test('catalog rejects ambiguous or dangling artwork membership and defaults', as
       ['layout', 'horizontal'],
       ['color', 'white'],
       ['status', 'historical'],
+      ['usage', 'app-icon'],
     ].map(([key, value]) => (m) => {
       m.assets[1][key] = value;
     }),
